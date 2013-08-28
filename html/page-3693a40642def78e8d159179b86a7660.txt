@@ -1,0 +1,93 @@
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title></title>
+    <!--<link rel="shortcut icon" href="favicon.ico" />-->
+    
+<link type="text/css" rel="stylesheet" media="screen" href="Styles/Site.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+
+
+        $("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
+
+        $("#topnav li").each(function () { //For each list item...
+            var linkText = $(this).find("a").html(); //Find the text inside of the a tag
+            $(this).find("span").show().html(linkText); //Add the text in the span tag
+        });
+
+        $("#topnav li").hover(function () {	//On hover...
+            $(this).find("span").stop().animate({
+                marginTop: "-40" //Find the span tag and move it up 40 pixels
+            }, 250);
+        }, function () { //On hover out...
+            $(this).find("span").stop().animate({
+                marginTop: "0" //Move the span back to its original state (0px)
+            }, 250);
+        });
+
+
+    });
+</script>
+</head>
+<body>
+    
+    <div id="pageBackground" class="region">
+       
+        <div id="page">
+        <div id="containerBackground" class="region">
+    	    	<div id="container">
+            <div id="header" class="region">
+                <div id="logo" class="region">
+                </div>
+                <div id="title" class="region">
+                   
+                </div>
+                <div class="loginDisplay">  
+                </div> 
+                </div>
+                <div id="navigation" class="region">
+                    <ul id="topnav" class="v2">
+		<li><span style="display: inline; margin-top: 0px; ">Home</span><a href="index.html">Home</a></li>
+		<li><span style="display: inline; ">Images</span><a href="images.html">Images</a></li>
+        <li><span style="display: inline; ">Contact Us</span><a href="contact.html">Contact Us</a></li>
+
+	</ul>
+                </div>
+            
+            <div id="main" class="region">
+                <h1>Contact Us</h1>
+                <p>Cross Auto Body and Towing Inc.<br />
+                8810 Maple Rd.<br />
+                Edwardsville, IL  62025
+<br />
+                618-656-3328
+ <br /><br />
+ 
+                Email: <a href="mailto:CrossTow@MadisonTelCo.com?Subject=Cross Auto Body and Towing">CrossTow@MadisonTelCo.com</a>
+ <br /><br />
+ 
+                Office Hours: Mon-Fri   8-5<br />
+                Sat: 9-12<br /> 
+                Sun: Closed
+ <br /><br />
+                Towing services are 24 hours/7 days a week</p>
+ 
+                <p><strong>Services offered:</strong> Auto body repair and painting, Mechanical repair- everything from oil changes to engine replacement, Roadside assistance- tire changes, jumpstarts, lockouts, and towing.</p>
+            </div>
+            <div class="clear">
+            </div>
+        
+        <div id="footer" class="region">
+        <p>Â© 2012 Cross Auto Body and Towing Inc. All rights reserved.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

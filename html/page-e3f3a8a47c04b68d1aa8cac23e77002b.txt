@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!--[if IE]>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<![endif]-->
+                
+        
+                <title>Off road vehicles in Sri Lanka | Dimo Lanka</title>
+            
+        
+        
+		
+		<meta name="description" content="" />
+		
+		<link rel="shortcut icon" href="/tata/templates/tata-index/favicon.ico" />		
+		<link href="/tata/templates/tata-index/css/style.css" rel="stylesheet" media="screen" />
+        <script type="text/javascript"> window.onerror = function(){return true;} </script>
+        
+        <!--[if lte IE 7]>
+			<link href="/tata/templates/tata-index/css/ie7.css" rel="stylesheet" media="screen" />
+		<![endif]-->
+		<!--[if lte IE 8]>
+			<link href="/tata/templates/tata-index/css/ie8.css" rel="stylesheet" media="screen" />
+		<![endif]--> 
+        
+        <!--[if lt IE 6]> 
+<div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> 
+<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+</a>
+</div>
+ <![endif]-->
+        
+
+		<link rel="stylesheet" type="text/css" href="/tata/templates/tata-index/css/jquery.fancybox-1.3.4.css" media="screen" />
+
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script  src="/tata/templates/tata-index/js/jquery.kwicks-1.5.1.js"></script>
+<!--home page slide   -->  
+<script type="text/javascript">
+ 	$().ready(function() {
+ 	$('#accordion-slider').kwicks({
+ 	max : 960,
+ 	spacing : 0,
+	event : 'click'  		
+	
+ 	});
+	
+	// $('#accordion-slider > li').click(
+                   // function () {
+                    //    var $this = $(this);
+                     //   $('.description',$this).stop(true,true).fadeIn(500);
+                    //},
+                   // function () {
+                   //     var $this = $(this);
+                   //     $('.description',$this).stop(true,true).fadeOut(500);
+                   // }
+               // );
+	
+});
+</script>
+
+<script  src="/tata/js/jquery.js"></script>
+<script type="text/javascript" src="/tata/templates/tata-index/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="/tata/templates/tata-index/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="/tata/templates/tata-index/js/jquery.aw-showcase.js"></script>
+
+<script type="text/javascript" src="/tata/templates/tata-index/js/CreateHTML5Elements.js"></script>	
+
+<script type="text/javascript" src="/tata/templates/tata-index/js/jquery.sudoSlider.js"></script>
+
+	
+	<script type="text/javascript">
+		$(document).ready(function(){	
+		    var sudoSlider = $("#slider").sudoSlider({ 
+				fade: true,
+				auto:true,
+				prevNext:false
+		   });
+		   
+		    var sudoSlider = $("#testimoni").sudoSlider({ 
+				numeric:true,
+				auto:true,
+				prevNext:false
+		   });
+		   
+		    var sudoSlider = $("#application").sudoSlider({ 
+				numeric:true,
+				auto:true,
+				prevNext:false
+		   });
+		   
+		   //model feature and applications
+				$(".model-detail").hide(); //Hide all content
+				$("ul.model-tab li:first").addClass("active").show(); //Activate first tab
+				$(".model-detail:first").show(); //Show first tab content
+				
+				//On Click Event
+				$("ul.model-tab li").click(function() {
+					$("ul.model-tab li").removeClass("active"); //Remove any "active" class
+					$(this).addClass("active"); //Add "active" class to selected tab
+					$(".model-detail").hide(); //Hide all tab content
+					var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+					$(activeTab).fadeIn(); //Fade in the active content
+					return false;
+				});
+				
+				//more vehicle drop down
+				 $(".slidingDiv").hide();
+					$(".more-vehicles").show();					
+					$('.more-vehicles').click(function(){
+					$(".slidingDiv").slideToggle();
+					});
+					
+				//popup fancy box
+				$(".popup").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'elastic',
+				'transitionOut'		: 'elastic',
+				'onStart'	:	function() {
+					$("div#panel, div#m-panel, div#r-panel").slideDown("slow");
+					}
+				});	
+				
+			
+					
+					 //dealer network tabs
+					$(".dealer-details_content").hide(); //Hide all content
+					$("ul.dealer-alphabet li:first").addClass("active").show(); 
+					$(".dealer-details_content:first").show(); 
+					
+					$("ul.dealer-alphabet li").click(function() {
+						$("ul.dealer-alphabet li").removeClass("active"); 
+						$(this).addClass("active"); 
+						$(".dealer-details_content").hide(); 
+						var activeTab = $(this).find("a").attr("href"); 
+						$(activeTab).fadeIn(); 
+						return false;
+					});	
+					
+					
+				
+			});
+	</script>
+
+		<!-- beloow JavaScript only for gallery -->
+        
+    <script type="text/javascript">
+            $(function() {
+				//the loading image
+				var $loader		= $('#st_loading');
+				//the ul element 
+				var $list		= $('#st_nav');
+				//the current image being shown
+				var $currImage 	= $('#st_main').children('img:first');
+				
+				//let's load the current image 
+				//and just then display the navigation menu
+				$('<img>').load(function(){
+					$loader.hide();
+					$currImage.fadeIn(3000);
+					//slide out the menu
+					setTimeout(function(){
+						$list.animate({'left':'0px'},500);
+					},
+					1000);
+				}).attr('src',$currImage.attr('src'));
+				
+				//calculates the width of the div element 
+				//where the thumbs are going to be displayed
+				buildThumbs();
+				
+				function buildThumbs(){
+					$list.children('li.album').each(function(){
+						var $elem 			= $(this);
+						var $thumbs_wrapper = $elem.find('.st_thumbs_wrapper');
+						var $thumbs 		= $thumbs_wrapper.children(':first');
+						//each thumb has 180px and we add 3 of margin
+						var finalW 			= $thumbs.find('img').length * 183;
+						$thumbs.css('width',finalW + 'px');
+						//make this element scrollable
+						makeScrollable($thumbs_wrapper,$thumbs);
+					});
+				}
+				
+				//clicking on the menu items (up and down arrow)
+				//makes the thumbs div appear, and hides the current 
+				//opened menu (if any)
+				$list.find('.st_arrow_down').live('click',function(){
+					var $this = $(this);
+					hideThumbs();
+					$this.addClass('st_arrow_up').removeClass('st_arrow_down');
+					var $elem = $this.closest('li');
+					$elem.addClass('current').animate({'height':'170px'},200);
+					var $thumbs_wrapper = $this.parent().next();
+					$thumbs_wrapper.show(200);
+				});
+				$list.find('.st_arrow_up').live('click',function(){
+					var $this = $(this);
+					$this.addClass('st_arrow_down').removeClass('st_arrow_up');
+					hideThumbs();
+				});
+				
+				//clicking on a thumb, replaces the large image
+				$list.find('.st_thumbs img').bind('click',function(){
+					var $this = $(this);
+					$loader.show();
+					$('<img class="st_preview"/>').load(function(){
+						var $this = $(this);
+						var $currImage = $('#st_main').children('img:first');
+						$this.insertBefore($currImage);
+						$loader.hide();
+						$currImage.fadeOut(2000,function(){
+							$(this).remove();
+						});
+					}).attr('src',$this.attr('alt'));
+				}).bind('mouseenter',function(){
+					$(this).stop().animate({'opacity':'1'});
+				}).bind('mouseleave',function(){
+					$(this).stop().animate({'opacity':'0.4'});
+				});
+				
+				//function to hide the current opened menu
+				function hideThumbs(){
+					$list.find('li.current')
+						 .animate({'height':'50px'},400,function(){
+							$(this).removeClass('current');
+						 })
+						 .find('.st_thumbs_wrapper')
+						 .hide(200)
+						 .andSelf()
+						 .find('.st_link span')
+						 .addClass('st_arrow_down')
+						 .removeClass('st_arrow_up');
+				}
+
+				//makes the thumbs div scrollable
+				//on mouse move the div scrolls automatically
+				function makeScrollable($outer, $inner){
+					var extra 			= 800;
+					//Get menu width
+					var divWidth = $outer.width();
+					//Remove scrollbars
+					$outer.css({
+						overflow: 'hidden'
+					});
+					//Find last image in container
+					var lastElem = $inner.find('img:last');
+					$outer.scrollLeft(0);
+					//When user move mouse over menu
+					$outer.unbind('mousemove').bind('mousemove',function(e){
+						var containerWidth = lastElem[0].offsetLeft + lastElem.outerWidth() + 2*extra;
+						var left = (e.pageX - $outer.offset().left) * (containerWidth-divWidth) / divWidth - extra;
+						$outer.scrollLeft(left);
+					});
+				}
+            });
+    </script>	
+    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32549714-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+	<body >
+	<!--[if lte IE 6]><script src="/tata/templates/tata-index/ie6/warning.js"></script><script>window.onload=function(){e("templates/tata-index/js/ie6/")}</script><![endif]-->
+		<div id="wrapper">
+			
+			<!--Header-->
+			<header>
+            	<div class="left-header">
+                	<a href="/tata/index.php" class="logo">
+						
+					</a>
+                	<div class="tatalogo">
+                    <img src="/tata/templates/tata-index/images/dimo-logo.png" width="97" height="41" alt="DIMO" />
+                    </div>
+                    
+                    <nav id="main-menu">                    	
+						<!-- <ul>
+						
+						
+							<li><a href="/commercial-vehicles">commercial vehicles</a></li>
+							<li><a href="/passeneger-vehicles">passenger vehicles  </a></li>
+                            <li><a href="/after-sales">after sales </a></li>
+                            <li><a href="/dimo-tata-story">Dimo-tata story </a></li>
+                            <li><a href="/contact">Contact </a></li>
+							
+						</ul> -->
+                        
+<ul class="menu">
+<li class="item-101"><a href="/tata/" >Home</a></li><li class="item-102 current active parent"><a href="/tata/commercial-vehicles" >commercial vehicles</a></li><li class="item-103 parent"><a href="/tata/passenger-vehicles" >passenger vehicles</a></li><li class="item-104 parent"><a href="/tata/after-sales" >After Sales</a></li><li class="item-105"><a href="/tata/dimo-tata-story" >dimo-tata story</a></li><li class="item-106"><a href="/tata/contact" >contact</a></li></ul>
+				
+					</nav>
+                </div><!--/ left-header-->
+                
+				<div class="right-header">
+                	<a href="http://www.dimolanka.com" target="_blank" class="cor-link">Corporate site <span class="character">]</span></a>
+                	<nav id="second-menu">                    	
+						<ul>
+							<li><a href="/tata/lacate-dealers">Branches</a></li>
+							<li><a href="/tata/tata-gallery ">Gallery</a></li>
+							
+						</ul>
+                        <!--<input name="" type="text" class="search">
+                        <input name="" type="button" class="go" value="GO">	-->
+						
+						<form action="/tata/sitesearch" method="post" class="search-area"> 	
+                    	<input name="searchtext" type="text" class="search">
+						<input id="submitf" type="submit" name="submit" class="go" value="GO"> 
+						</form>
+						
+						
+                       			
+					</nav>
+                     <img src="/tata/templates/tata-index/images/road-assist.png" width="275" height="40" alt=""  >	
+                </div><!--/ right-header-->                    
+			</header>
+			<!--/Header-->
+			
+            <div id="wrap-up" class="inner" >			
+				<h1>Commercial Vehicles & Off road vehicles</h1>
+                <nav id="second-main-menu">                    	
+                   
+				   <ul>
+                        <li class="select"><a href="/tata/commercial-vehicles">overview</a></li>
+						                        <li ><a href="/tata/commercial-vehicles/commercial-vehicle-models?id=1">Small Commercial Vehicles</a></li>
+                        <!-- <li class="select"><a href="#">Some Commercial Vehicle   </a></li> -->
+                                                <li ><a href="/tata/commercial-vehicles/commercial-vehicle-models?id=2">Pick-ups</a></li>
+                        <!-- <li class="select"><a href="#">Some Commercial Vehicle   </a></li> -->
+                                                <li ><a href="/tata/commercial-vehicles/commercial-vehicle-models?id=3">Light and Intermediate Commercial Vehicles </a></li>
+                        <!-- <li class="select"><a href="#">Some Commercial Vehicle   </a></li> -->
+                                                <li ><a href="/tata/commercial-vehicles/commercial-vehicle-models?id=4">Medium & Heavy Commercial Vehicles</a></li>
+                        <!-- <li class="select"><a href="#">Some Commercial Vehicle   </a></li> -->
+                                                <li ><a href="/tata/commercial-vehicles/commercial-vehicle-models?id=5">Vans</a></li>
+                        <!-- <li class="select"><a href="#">Some Commercial Vehicle   </a></li> -->
+                                                <li ><a href="/tata/commercial-vehicles/commercial-vehicle-models?id=6">Buses</a></li>
+                        <!-- <li class="select"><a href="#">Some Commercial Vehicle   </a></li> -->
+                                            </ul>
+				</nav><!--/ second-main-menu -->
+				<section id="slider">                       
+					                        
+						<ul> 
+							<li><img src="http://www.dimolanka.com/tata/images/c-prima-banner.jpg" alt="" width="940" height="312"/></li>
+                            <li><img src="http://www.dimolanka.com/tata/images/c-tata-busbanner.jpg" alt="" width="940" height="312"/></li>
+                            <li><img src="http://www.dimolanka.com/tata/images/c-batta-banner.jpg" alt="" width="940" height="312"/></li>
+                            <li><img src="http://www.dimolanka.com/tata/images/c-xenon-banner.jpg" alt="" width="940" height="312"/></li>
+                            <li><img src="http://www.dimolanka.com/tata/images/c-winger-banner.jpg" alt="" width="940" height="312"/></li>			
+                        </ul>
+                </section><!--/ slider -->
+                
+                <section class="cv-left-area">
+                	<section class="vehicle">
+					
+										
+					
+                    	<div class="category-box">
+                            <a href="/tata/commercial-vehicles/commercial-vehicle-models/tata-vehicle?id=27">
+                           		<img src="/tata/images/batti-thumb.jpg" width="161" height="112" alt="" >
+                            	<h3>DIMO Batti</h3>
+                            	<span>655,000.00 <small>LKR</small></span>
+                            	<p></p>
+                            </a>
+                        </div>
+										
+					
+                    	<div class="category-box">
+                            <a href="/tata/commercial-vehicles/commercial-vehicle-models/tata-vehicle?id=59">
+                           		<img src="/tata/images/tata_pics/Batta EX2 thumb.png" width="161" height="112" alt="" >
+                            	<h3>DIMO Batta EX2</h3>
+                            	<span>899,000/- <small></small></span>
+                            	<p>LKR</p>
+                            </a>
+                        </div>
+										
+					
+                    	<div class="category-box">
+                            <a href="/tata/commercial-vehicles/commercial-vehicle-models/tata-vehicle?id=1">
+                           		<img src="/tata/images/pickuo-207diex.jpg" width="161" height="112" alt="" >
+                            	<h3>207 DI Ex</h3>
+                            	<span> 2,530,000 <small>LKR</small></span>
+                            	<p></p>
+                            </a>
+                        </div>
+										
+					
+                    	<div class="category-box">
+                            <a href="/tata/commercial-vehicles/commercial-vehicle-models/tata-vehicle?id=30">
+                           		<img src="/tata/images/batta-thumb.jpg" width="161" height="112" alt="" >
+                            	<h3>DIMO Batta </h3>
+                            	<span>810,000<small>LKR</small></span>
+                            	<p></p>
+                            </a>
+                        </div>
+										
+					
+                    	<div class="category-box">
+                            <a href="/tata/commercial-vehicles/commercial-vehicle-models/tata-vehicle?id=16">
+                           		<img src="/tata/images/lpt1109-thumb.jpg" width="161" height="112" alt="" >
+                            	<h3>LPT 1109</h3>
+                            	<span> 2,535,000.00 <small>LKR</small></span>
+                            	<p>Upwards</p>
+                            </a>
+                        </div>
+										
+					
+                    	<div class="category-box">
+                            <a href="/tata/commercial-vehicles/commercial-vehicle-models/tata-vehicle?id=26">
+                           		<img src="/tata/images/lpt2516-thumb.jpg" width="161" height="112" alt="" >
+                            	<h3>LPK 2516 TC/38 </h3>
+                            	<span>5,650,000.00<small>LKR</small></span>
+                            	<p></p>
+                            </a>
+                        </div>
+				  		
+						<!--/ category-box-->	
+                        
+                        <article class="wysiwyg dimo-sales">
+						                     
+		<h2>DIMO-TATA Commercial Vehicle Sales</h2>
+<p>TATA Motors is India's largest and among the worlds’ top five medium and heavy commercial manufacturers. The largest range of commercial vehicle models is available thus providing a wide variety of commercial transport solutions for every application. From 600 KGs SCVs to 40 ton prime movers and buses that can seat 16 people to as many as 67,from Tippers to Special Purpose Vehicles, to 6x4 and 4x4 off-road vehicles – DIMO provides the entire gamut of TATA vehicles.</p>
+<p>DIMO’s network has been established in key strategic locations to facilitate all its customers across Sri Lanka with the best possible services at all times with as little inconvenience as possible.</p>
+<p> </p>
+                        	</article><!--/ wysiwyg -->                    
+                    </section>
+                
+                </section><!--/cv-left-area-->
+                
+                <section class="cv-right-area">
+                	<section class="testimonial">
+                    	<div id="testimoni">						
+						        
+
+
+         <ul>
+<li>
+<p>I always recommend TATA vehicles for any transportation requirement for anyone who wishes to develop their business. Every year I purchase more than 20 TATA vehicles. </p>
+<span>W.D.R. Jayaratne Samarakoon </span> <small>Proprietor, WDR Samarakoon & Sons PVT. LTD.</small></li>
+<li>
+<p>I have no doubt of sending my TATA fleet of vehicles all around the country, because I know that DIMO 24 hour road side assistance is there to look after my TATA vehicle if anything goes wrong.</p>
+<span>DR. PRASHANTHA PERERA </span> <small>General Manager, AITKEN SPENCE TRAVELS (PVT) LTD.</small></li>
+</ul>
+                        </div>
+                    </section><!--/ testimonial-->
+                    
+                    <section class="promotions">
+					                     
+		<a href="http://www.dimolanka.com/tata/">
+		<img src="http://www.dimolanka.com/tata/" width="333" height="194" alt="" >
+		</a>
+		<a href="http://www.dimolanka.com/tata/commercial-vehicle-promos/promo2">
+        <img src="http://www.dimolanka.com/tata/images/commercial-promo2.jpg" width="332" height="175" alt="" >
+		</a>                    
+                    </section>
+                
+                </section><!--/cv-left-area-->
+                
+			</div>	<!--/wrap-up-->
+			
+			
+		</div><!--/Wrapper--> 
+ <footer >
+				<div class="footer">
+				<section id="footer_left">
+                	
+                    <a href="http://www.facebook.com/DimoSriLanka" target="_blank"><small>Join us on </small><img src="/tata/images/fb.png"  alt="face book" width="16" height="16"></a>
+                    
+				</section>
+				
+				
+				<section id="footer_right">
+					<nav>
+                    	<ul>
+                            
+                            <li><a href="http://www.dimolanka.com/news/?page_id=12">Newsletter</a></li>
+                            <li><a href="/tata/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="/tata/accessibility">Accessibility</a></li>
+                            <li><a href="http://www.dimolanka.com/sitemap.xml">Site Map</a></li>
+                            <li><a href="/tata/legal-terms">Legal Terms</a></li> 
+							
+
+						</ul>
+						<!-- -->
+					</nav>
+										
+						<div class="copyright_content">
+                        	<img src="/tata/images/dimo_footer_logo.jpg" alt="DIMO"  />
+							&copy; DIMO 2012. All Rights Reserved.<span>Designed by :<a href="http://pyxle.net" target="_blank">Pyxle</a></span>
+                            
+						</div>
+				</section><!--/footer_right section -->
+               </div>
+			</footer><!--/footer-->
+
+	</body>
+	
+
+
+	
+	<script>	
+$(document).ready(function() {
+
+	//alert('test');
+	//alert(102);
+    //var pathname = $(location).attr('href');
+	//var urls = $(this).attr('title');
+	var pathname=document.location.href;
+	//alert(pathname);
+    var str = $("p").text();
+	//alert(str);
+	var title=$(".breadcrum .vehiclesearch").text();
+	//alert(title);
+	
+	
+	//var pathname='test';
+	//alert(pathname);
+    //var str ='test';
+	//alert(str);
+	//var title='test';
+	
+	
+	console.log(pathname);
+	console.log(str);
+	console.log(title);
+	
+	str =  str.replace(/[^a-zA-Z 0-9]+/g,'');
+	
+	var itemsarray=pathname+"###"+str+"###"+title;
+	//alert(itemsarray);
+	//var itemsarray=itemsarray;
+	//alert(str);
+	//alert(title);
+	
+	$.ajax({  
+type: "POST",  
+url: "/tata/ajaxsearch",  
+data: "sercharray=" + itemsarray ,
+	success: function(msg){  
+
+	//alert(msg);
+		if(msg == 1)
+		{ 
+
+		}  
+
+
+		else  
+		{  
+
+		}  
+
+
+	} //end of sussess
+});//$.ajax end 
+ 
+});
+
+</script>
+	
+	
+</html>

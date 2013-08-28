@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Subaru Legacy Wagon Lease and Loan Offers</title>
+	<meta name="Description" content="Select a model year and style to see instant auto lease and loan payments">
+	<meta name="Keywords" content="Subaru Legacy Wagon lease, Subaru Legacy Wagon financing">	
+
+<script>
+  <!--
+
+  var quotewindow = "none";
+  var aryImages = new Array(12);
+
+  aryImages[0] = "images/topnav_aboutus_0.gif";
+  aryImages[1] = "images/topnav_aboutus_1.gif";
+  aryImages[2] = "images/topnav_additionalresources_0.gif";
+  aryImages[3] = "images/topnav_additionalresources_1.gif";
+  aryImages[4] = "images/topnav_autolease101_0.gif";
+  aryImages[5] = "images/topnav_autolease101_1.gif";
+  aryImages[6] = "images/topnav_comparepayments_0.gif";
+  aryImages[7] = "images/topnav_theadvantage_0.gif";
+  aryImages[8] = "images/topnav_theadvantage_1.gif";
+  aryImages[9] = "images/topnav_divider.gif";
+  aryImages[10] = "images/branding_bottom.gif";
+  aryImages[11] = "images/branding_top.gif";
+
+
+  for (i=0; i < aryImages.length; i++) {
+    var preload = new Image();
+    preload.src = aryImages[i];
+  }
+
+  var NS;
+  var IE;
+  var PC;
+  var MAC;
+
+  if(document.all) {
+  	NS = false;
+  	IE = true;
+  } else {
+  	NS = true;
+  	IE = false;
+  }
+
+  if(navigator.platform.indexOf("Win32") != -1) {
+  	PC = true;
+  	MAC = false;
+  } else {
+  	PC = false;
+  	MAC = true;
+  }
+
+  var LayerObject = (document.layers)? true:false;
+  var DocumentObject = (document.all)? true:false;
+
+
+  if (IE) {
+  	if (PC) {
+  		document.write('<LINK rel="stylesheet" type="text/css" href="style_pcie.css" title="style1">');
+  	} else {
+  		document.write('<LINK rel="stylesheet" type="text/css" href="style_macie.css" title="style1">');
+  	}
+
+  } else {
+  	if (PC) {
+  		document.write('<LINK rel="stylesheet" type="text/css" href="style_pcns.css" title="style1">');
+  	} else {
+  		document.write('<LINK rel="stylesheet" type="text/css" href="style_macns.css" title="style1">');
+  	}
+  }
+var isNN = (navigator.appName.indexOf("Netscape")!=-1);
+function autoTab(input,len, e) {
+var keyCode = (isNN) ? e.which : e.keyCode;
+var filter = (isNN) ? [0,8,9] : [0,8,9,16,17,18,37,38,39,40,46];
+if(input.value.length >= len && !containsElement(filter,keyCode)) {
+input.value = input.value.slice(0, len);
+input.form[(getIndex(input)+1) % input.form.length].focus();
+}
+function containsElement(arr, ele) {
+var found = false, index = 0;
+while(!found && index < arr.length)
+if(arr[index] == ele)
+found = true;
+else
+index++;
+return found;
+}
+function getIndex(input) {
+var index = -1, i = 0, found = false;
+while (i < input.form.length && index == -1)
+if (input.form[i] == input)index = i;
+else i++;
+return index;
+}
+return true;
+}
+function replaceChars(entry,source) {
+
+out = ","; <!-- replace this
+
+add = ""; <!-- with this
+
+temp = "" + entry; <!-- temporary holder
+
+
+
+while (temp.indexOf(out)>-1) {
+
+pos= temp.indexOf(out);
+
+temp = "" + (temp.substring(0, pos) + add +
+
+temp.substring((pos + out.length), temp.length));
+
+}
+
+source.value = temp;
+
+}
+
+  function randomRange(inMin,inMax) {
+    var min = 0, max = 0;
+    if (inMin) min = inMin;
+    if (inMax) max = inMax;
+    if (min > max) {
+      var swop = min
+      min = max
+      max = swop
+    }
+    return min + Math.floor(Math.random() * (max - min + 1))
+  }
+
+  function LoadHomePhoto() {
+    document["homephoto"].src = "images/homephoto_0" + randomRange(1,8) + ".jpg";
+  }
+  function Certify(URL) {
+    popupWin = window.open(URL, 'Participant', 'location,scrollbars,width=450,height=300')
+    window.top.name = 'opener';
+  }
+
+
+var loopCounter = 0;
+var quotewindow;
+
+function openQuoteModule(quotesrc, quotetype, framed) {
+	var zipcode;
+	if (document.compare && quotesrc=="1") {
+		if (document.compare.ZipCode.value) {
+			zipcode=document.compare.ZipCode.value;
+		} else {
+			alert("Please enter a zip code.");
+			document.compare.ZipCode.select();
+			document.compare.ZipCode.focus();
+			return false;
+		}
+	} else {
+		zipcode='';
+	}
+
+	if (!quotetype) quotetype=0;
+	window.location = 'leasequotes.php?ID=LeaseCompare&QuoteType=' + quotetype + '&ZipCode=' + zipcode + '&framed=' + framed;
+		// window.quotewindow = window.open('http://www.leasecompare.com/quotes/index.php?ID=LeaseCompare&QuoteType=' + quotetype + '&ZipCode=' + zipcode, 'lcquotes', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=610,height=510');
+		// setTimeout("lookForPopUp()",2000);
+
+
+}
+
+function lookForPopUp(){
+ if (window.quotewindow.closed){
+	window.location = "http://www.leasecompare.com/quotes/index.php?ID=LeaseCompare";
+ }
+}
+
+
+function showDisclosure(mileage,residual,mf,penalty,purchopt,secdep,dispfee,total) {
+	hidediv=0;
+	document.form1.mileage.value=mileage + ' total miles';
+	document.form1.residual.value='$'+ residual;
+	document.form1.mf.value=mf;
+	document.form1.penalty.value=penalty;
+	document.form1.purchopt.value='$' + purchopt;
+	document.form1.secdep.value=secdep;
+	document.form1.dispfee.value=dispfee;
+	document.form1.total.value=total;
+	document.all.disclosure.style.visibility = 'visible';
+	document.all.details.style.visibility = 'hidden';
+}
+
+var hidediv;
+function fun1()
+    {
+    	hidediv=1;
+        window.setTimeout('hideDetails()', 1000);
+    }
+
+function hideDetails() {
+	if (hidediv==1) {
+		document.all.disclosure.style.visibility = 'hidden';
+		document.all.details.style.visibility = 'visible';
+	}
+}
+  //-->
+</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://www.driveitnow.net/javascript/din_include.cm.js"></script>						
+	<script type="text/javascript" src="http://www.driveitnow.net/javascript/din_functions.cm.js "></script>
+</head>
+
+<body bgcolor="#000000" topmargin="0">
+ <center>
+  <table border="0" width="723" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="723" colspan="2"><map name="logomap"><area href="http://www.leasecompare.com" shape="rect" coords="14, 11, 60, 20"></map><img border="0" src="images/branding_top.gif" usemap="#logomap" alt="LeaseCompare.com"><a href="http://www.leasecompare.com/lease_quotes.php"><img border="0" src="images/topnav_comparepayments_0.gif" alt="Compare Car Lease Payments"></a><img border="0" src="images/topnav_divider.gif"><a href="http://www.leasecompare.com/advantage.php"><img border="0" alt="The Car Leasing Advantage" src="images/topnav_theadvantage_0.gif"></a><img border="0" src="images/topnav_divider.gif"><a href="http://www.leasecompare.com/autolease101_1.php"><img border="0" alt="Auto Lease 101" src="images/topnav_autolease101_0.gif"></a><img border="0" src="images/topnav_divider.gif"><a href="http://www.leasecompare.com/resources.php"><img border="0" alt="Auto Leasing Resources" src="images/topnav_additionalresources_0.gif"></a><img border="0" src="images/topnav_divider.gif"><a href="http://www.leasecompare.com/aboutus.php"><img border="0" alt="About LeaseCompare.com" src="images/topnav_aboutus_0.gif"></a></td>
+    </tr>
+    <tr>
+      <td width="523"><map name="logomap2"><area href="http://www.leasecompare.com" shape="rect" coords="12, 1, 222, 37"></map><img border="0" src="images/branding_bottom_left.gif" usemap="#logomap2" alt="Saving money feels good."></td>
+	  <td width="200"><img border="0" src="images/branding_bottom_right.gif" alt="Saving money feels good."></td>
+    </tr>
+    <tr height="7">
+      <td width="100%" bgcolor="#FFFFFF" colspan="2"></td>
+    </tr>
+  </table>
+  
+
+  
+
+<script>
+	function showModels(year) {
+		document.getElementById(year).style.display == 'none' ? document.getElementById(year).style.display = 'block' : document.getElementById(year).style.display = 'none'; 
+		document.getElementById(year).style.display == 'block' ? document.getElementById(year + '_img').src = 'images/minus_icon.gif' : document.getElementById(year + '_img').src = 'images/plus_icon.gif'; 
+		
+	}
+</script>
+
+<table border="0" width="723"  cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+	<tr>
+		<td width="723" colspan="2"><img src="/images/hdr_quote_1px.gif" border="0" height="27" width="12"><a href="http://www.leasecompare.com/lease_faq.php" target="_blank"><img src="/images/hdr_quote_faq.gif" border="0"></a><img src="/images/hdr_quote_div.gif" border="0"><a href="http://www.leasecompare.com/car_leasing_forum/forum.php" target="_blank"><img src="/images/hdr_quote_forums.gif" border="0"></a><img src="/images/hdr_quote_div.gif" border="0"><a href="http://www.leasecompare.com/aboutus.php" target="_blank"><img src="/images/hdr_quote_contact.gif" border="0"></a><img src="/images/hdr_quote_div.gif" border="0"><a href="http://www.leasecompare.com/howitworks_express.php" target="_blank"><img src="/images/hdr_quote_how.gif" border="0"></a><img src="/images/hdr_quote_div.gif" border="0"><a href="http://www.leasecompare.com/why_lease.php" target="_blank""><img src="/images/hdr_quote_why.gif" border="0"></a><img src="/images/hdr_quote_div.gif" border="0"><img src="/images/hdr_quote_1px.gif" border="0" height="27" width="218"><img src="/images/hdr_quote_phone.gif" border="0"></td>
+    </tr>
+    <tr>
+      	<td width="559" valign="middle" align="left" style="border-right: 1px solid #999999;" bgcolor="#EDEDE2">
+      		<table width="100%">
+      			<tr>
+      				<td width="50%" align="left">
+      					<p style="margin-left:16;"><font class="vtext" style="font-size:12px; color:#333333;"><strong>Vehicle Selection</strong></font></p>
+      				</td>
+      				<td width="50%" align="right" valign="middle"><p style="margin-right:17;margin-top:3"><script language="javascript" src="/livehelp/livehelp_js.php?relative=Y&amp;department=1&amp;pingtimes=60"></script></td>
+      			</tr>
+      		</table>        	
+      	</td>
+      	<td width="163" valign="top" align="left"><img src="images/sidebar_quote_testimonials.gif" border="0"></td>
+    </tr>
+    <tr>
+      	<td width="559" align="left" valign="top" style="border-right: 1px solid #999999;">
+			<div style="margin-left:16; margin-top: 5;text-align:left;margin-bottom:10;"><font class="vtext2">Select a model year and style to see instant auto lease and loan payments.</div>
+			<div style="margin-left:16; margin-top: 5;text-align:left;margin-bottom:10;"><font class="vtext2"><a href="quick_quotes.php"><strong>Makes</a> > <a href="quick_quotes.php?show_make=Subaru"><strong>Subaru</a> > Legacy Wagon</strong></div>
+      		<div style="margin-left:20px;margin-top:15px;margin-bottom:15px;">
+      			<table cellpadding="0" cellspacing="0" border="0">
+		      								<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('2002');"><img src="images/plus_icon.gif" border="0" valign="top" id="2002_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('2002');"><font class="smalltext2"><strong>2002</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="2002">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1285&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr GT Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1295&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr GT Man.</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1335&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr L Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1350&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr L Man.</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1375&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1400&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback Auto w/All Weather Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1450&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback H6 L.L. Bean Edition</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1460&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback H6 VDC</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1515&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback Ltd Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1525&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback Ltd Man.</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1540&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback Man.</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2002&MakeID=780&ModelID=4610&StyleID=1545&vehicle=2002+Subaru+Legacy+Wagon">2002 Subaru Legacy Wagon   5dr Outback Man. w/All Weather Pkg</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('2001');"><img src="images/plus_icon.gif" border="0" valign="top" id="2001_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('2001');"><font class="smalltext2"><strong>2001</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="2001">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1280&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr GT Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1305&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr GT Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1330&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr L Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1360&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr L Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1410&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Auto w/GB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1420&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Auto w/GL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1430&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Auto w/RB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1440&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Auto w/RL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1445&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback H6 L.L. Bean Edition</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1455&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback H6 VDC</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1510&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Ltd Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1535&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Ltd Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1575&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Manual w/GB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1585&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Manual w/GL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1595&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Manual w/RB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2001&MakeID=780&ModelID=4610&StyleID=1605&vehicle=2001+Subaru+Legacy+Wagon">2001 Subaru Legacy Wagon   5dr Outback Manual w/RL Equip</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('2000');"><img src="images/plus_icon.gif" border="0" valign="top" id="2000_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('2000');"><font class="smalltext2"><strong>2000</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="2000">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1245&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Brighton Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1260&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Brighton Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1275&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr GT Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1300&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr GT Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1325&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr L Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1355&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr L Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1405&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Auto w/GB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1415&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Auto w/GL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1425&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Auto w/RB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1435&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Auto w/RL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1505&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Ltd Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1530&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Ltd Manual</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1570&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Manual w/GB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1580&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Manual w/GL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1590&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Manual w/RB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=2000&MakeID=780&ModelID=4610&StyleID=1600&vehicle=2000+Subaru+Legacy+Wagon">2000 Subaru Legacy Wagon   5dr Outback Manual w/RL Equip</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1999');"><img src="images/plus_icon.gif" border="0" valign="top" id="1999_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1999');"><font class="smalltext2"><strong>1999</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1999">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1235&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr 2.5 GT Auto DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1240&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr 2.5 GT Manual DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1255&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Brighton Auto XA Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1270&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Brighton Manual XA Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1315&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr L 30th Auto DB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1320&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr L 30th Manual DB Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1345&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr L Auto DQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1370&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr L Manual DQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1380&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Auto 2.5L OL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1385&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Auto 2.5L OW Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1490&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Ltd 30th Auto 2.5L BK</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1495&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Ltd 30th Auto 2.5L RL</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1500&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Ltd 30th Manual 2.5L RL</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1550&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Manual 2.5L OL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1999&MakeID=780&ModelID=4610&StyleID=1555&vehicle=1999+Subaru+Legacy+Wagon">1999 Subaru Legacy Wagon   5dr Outback Manual 2.5L OW Equip</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1998');"><img src="images/plus_icon.gif" border="0" valign="top" id="1998_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1998');"><font class="smalltext2"><strong>1998</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1998">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1250&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Brighton Auto XA Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1265&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Brighton Manual XA Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1290&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr GT Auto DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1310&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr GT Manual DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1340&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr L Auto DQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1365&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr L Manual DQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1390&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Auto OL Cold Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1395&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Auto OW Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1465&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Limited Auto RL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1470&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Limited Manual RL Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1475&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Ltd 30th Ann Auto B1 Eq</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1480&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Ltd 30th Ann Auto w/Mnr</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1485&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Ltd 30th Ann Man B1 Eq</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1520&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Ltd Auto w/Dual Mnrf BK</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1560&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Manual OL Cold Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1565&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Outback Manual OW Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1998&MakeID=780&ModelID=4610&StyleID=1610&vehicle=1998+Subaru+Legacy+Wagon">1998 Subaru Legacy Wagon   5dr Postal RHD Auto PA Equip</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1997');"><img src="images/plus_icon.gif" border="0" valign="top" id="1997_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1997');"><font class="smalltext2"><strong>1997</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1997">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1870&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn GT Auto 2.5L DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1875&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn GT Manual 2.5L DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1890&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn L Auto DQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1895&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn L Manual 2.2L DQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1925&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn LSi Auto 2.5L TR Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1940&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Outback Auto OL Cold Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1945&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Outback Auto OW</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1950&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Outback Auto TL Limited</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1955&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Outback Manual OL Cold Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1960&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Outback Manual OW</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1965&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Outback Manual TL Limited</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1980&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn Postal RHD Auto 2.2L</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1985&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn XA Brighton Auto 2.2L</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1997&MakeID=780&ModelID=4610&StyleID=1990&vehicle=1997+Subaru+Legacy+Wagon">1997 Subaru Legacy Wagon   5dr Wgn XA Brighton Manual 2.2L</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1996');"><img src="images/plus_icon.gif" border="0" valign="top" id="1996_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1996');"><font class="smalltext2"><strong>1996</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1996">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1855&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn Brighton Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1860&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn Brighton Manual AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1865&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn GT Auto 2.5L AWD DA Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1880&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn L Auto AWD DQ Equip w/ABS</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1885&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn L Auto AWD PQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1900&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn L Manual AWD DQ Equip w/ABS</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1905&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn L Manual AWD PQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1910&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn L Manual PQ Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1915&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn LS Auto AWD DY Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1920&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn LSi Auto 2.5L AWD TR Equip</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1930&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn OL Outback Auto 2.5L AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1935&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn OL Outback Manual AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1970&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn OW Outback Auto 2.5L AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1996&MakeID=780&ModelID=4610&StyleID=1975&vehicle=1996+Subaru+Legacy+Wagon">1996 Subaru Legacy Wagon   5dr Wgn OW Outback Manual AWD</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1995');"><img src="images/plus_icon.gif" border="0" valign="top" id="1995_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1995');"><font class="smalltext2"><strong>1995</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1995">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1655&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/DQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1670&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/PQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1685&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto AWD LS w/DY Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1700&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto AWD Lsi w/TR Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1725&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto L w/DQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1730&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto L w/PQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1735&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Auto L w/RN Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1775&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Brighton Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1780&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Brighton Manual AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1815&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Manual AWD L w/DQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1820&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Manual AWD L w/PQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1825&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Manual L w/PQ Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1830&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Outback Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1995&MakeID=780&ModelID=4610&StyleID=1835&vehicle=1995+Subaru+Legacy+Wagon">1995 Subaru Legacy Wagon   5dr Wagon Outback Manual AWD</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1994');"><img src="images/plus_icon.gif" border="0" valign="top" id="1994_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1994');"><font class="smalltext2"><strong>1994</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1994">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1620&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon 5-Spd AWD L w/HW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1630&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon 5-Spd AWD L w/RW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1635&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon 5-Spd AWD L w/SW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1640&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon 5-Spd FWD L w/HW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1645&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon 5-Spd L w/SW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1660&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/HW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1675&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/RW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1680&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/YW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1690&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto AWD LS w/LM Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1695&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto AWD Lsi w/LD Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1705&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto AWD Touring w/RM Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1710&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto FWD L w/HW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1715&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto FWD L w/RW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1720&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto FWD LS w/LM Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1740&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Auto L w/YW Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1745&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon AWD 5-Spd  Alpine Sport w/RC Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1750&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon AWD 5-Spd GT w/RC Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1755&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon AWD 5-Spd Outdoor w/HC Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1760&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon AWD Auto  Alpine Sport w/RC Equipment</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1765&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon AWD Auto GT w/RC Equipment Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1770&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon AWD Auto Outdoor w/HC Pkg</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1840&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Sun Sport 5-Spd FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1994&MakeID=780&ModelID=4610&StyleID=1845&vehicle=1994+Subaru+Legacy+Wagon">1994 Subaru Legacy Wagon   5dr Wagon Sun Sport Auto FWD</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1993');"><img src="images/plus_icon.gif" border="0" valign="top" id="1993_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1993');"><font class="smalltext2"><strong>1993</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1993">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1005&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr L Sedan 25th Anniversary Special Edition FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1015&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan L 5-Spd AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1020&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan L 5-Spd FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1030&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan L Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1035&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan L Auto FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1105&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan LS Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1110&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan LS Auto FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1125&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan LSi Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1135&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan Sport 5-Spd AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1145&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   4dr Sedan Sport Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1615&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon 5-Spd AWD L w/ABS</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1625&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon 5-Spd AWD L w/o ABS</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1650&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/ABS</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1665&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon Auto AWD L w/o ABS</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1785&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon L 25th Anniversary Special Edition AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1790&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon L 5-Spd FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1795&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon L Auto FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1800&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon LS Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1805&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon LS Auto FWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1810&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon LSi Auto AWD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1993&MakeID=780&ModelID=4610&StyleID=1850&vehicle=1993+Subaru+Legacy+Wagon">1993 Subaru Legacy Wagon   5dr Wagon Touring Auto AWD</a></div>
+																				</div> 							
+								</td>
+							</tr>
+													<tr>
+								<td width="13" valign="top">
+									<div style="margin: 3px"><a href="javascript:showModels('1991');"><img src="images/plus_icon.gif" border="0" valign="top" id="1991_img"></a></div>
+								</td>
+								<td>
+									<div class="smalltext2" style="margin-left:5px;margin:3px;" valign="top"><a href="javascript:showModels('1991');"><font class="smalltext2"><strong>1991</strong></font></a></div>
+									<div style="display:none;margin-top:5px;margin-bottom:5px;" id="1991">
+																					<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1010&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1025&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1040&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1045&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1050&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ ABS 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1055&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ ABS 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1060&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ ABS Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1065&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ ABS Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1070&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1075&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan L+ Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1080&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LS ABS 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1085&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LS ABS 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1090&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LS ABS Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1095&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LS ABS w/LT PKG</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1100&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LS ABS w/NT PKG</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1115&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LSi Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1120&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan LSi Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1130&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan Sport 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1140&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Sedan Sport Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1150&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1155&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1160&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1165&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1170&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1175&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1180&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ ABS 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1185&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ ABS 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1190&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ ABS Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1195&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ ABS Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1200&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1205&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon L+ Auto 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1210&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon LS ABS 5-Spd</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1215&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon LS ABS 5-Spd 4WD</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1220&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon LS ABS Auto</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1225&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon LS ABS w/LT PKG</a></div>
+																							<div class="smalltext2" style="margin-left:5px;margin-top:3px;" valign="top"><a href="quick_lease_quotes.php?ModelYear=1991&MakeID=780&ModelID=4610&StyleID=1230&vehicle=1991+Subaru+Legacy+Wagon">1991 Subaru Legacy Wagon   4dr Wagon LS ABS w/NT PKG</a></div>
+																				</div> 							
+								</td>
+							</tr>
+								      	</table>
+      		</div>
+		</td>
+      	<td width="163" align="left" valign="top">
+
+				      	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				      		<tr>
+				      			<td width="100%" bgcolor="#FAFAFA">
+									<div style="margin-left:14;margin-right:14;margin-top:10;margin-bottom:10;">
+										<font class="smalltext2"><div style="padding:10px;">&quot;Service was prompt, efficient and friendly. The easiest lease transaction we've had so far! Thank you!&quot;<BR><BR>Guillermo & Sandra Dupleich,<br>Issaquah, WA</div></font>
+									</div>
+								</td>
+							</tr>
+				      		<tr>
+				      			<td width="100%" style="border-top: 1px solid #999999" bgcolor="#FAFAFA">
+									<div style="margin-left:14;margin-right:14;margin-top:10;margin-bottom:10;">
+										<font class="smalltext2"><div style="padding:10px;">&quot;Personnel on phone  very kind and helpful. Your people were always interested in helping me move forward.&quot;<BR><BR>David King,<br>Chanute, KS</div></font>
+									</div>
+								</td>
+							</tr>			
+						</table> 
+						<div style="padding:12px;"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FLeaseComparecom%2F157391544297787&amp;layout=button_count&amp;show_faces=false&amp;width=140&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:21px;" allowTransparency="true"></iframe></div> 							      		      	  		
+
+	   	</td>
+	</tr>    
+</table>
+
+ 
+  <table border="0" width="723"  cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border-top: 1px solid #999999;">   
+    <tr>
+      <td width="317" valign="top" align="left" style="border-right: 1px solid #999999;border-bottom: 1px solid #999999;">
+
+		
+      </td>
+	  <td width="406" style="border-bottom: 1px solid #999999;" valign="top">
+
+	</td>
+    </tr>
+    <tr>
+      <td valign="middle" align="left" style="border-bottom: 1px solid #999999;" colspan="2">
+      	<div style="padding-left:30px;">
+      	<table cellpadding="0" cellspacing="0" border="0">
+		 <tr>
+		   <td width="50"><img src="images/acslogo.gif" border="0" alt="ACS has been helping customers save money on their auto lease since 1998"></td>
+		   <td width="381"><font class="footnote">&nbsp;LeaseCompare.com is a service of  Automobile Consumer Services, Inc. </font></td>
+		   <td width="240" align="right"><font class="footnote">&nbsp;Saving customers time and money since 1989.</font></td>
+		 </tr>
+		</table>
+		</div>
+      </td>
+    </tr>
+    <tr height="25">
+      <td valign="top" align="left">&nbsp;</td>
+      <td valign="top" align="left">&nbsp;</td>
+
+    </tr>
+  </table>
+ <table border="0" width="723"  cellpadding="0" bgcolor="#FFFFFF" cellspacing="0" align="center">
+    <tr>
+      <td width="170" valign="top" align="left">
+        <p style="margin-left: 10"><font class="footnote">
+        <a href="http://www.leasecompare.com"><font color="#0033CC"><u>LeaseCompare.com</u><font color="#000000"></a><br>6249 Stewart Road<br>Cincinnati, Ohio, 45227, USA<br>513.527.7700&nbsp;&nbsp;
+        800.223.4882<br><a href="aboutus.php">Contact Us</a></font></p>
+      </td>
+      <td width="435" valign="top" align="center">
+      	<font class="footnote">
+      		<a href="http://www.leasecompare.com/lease_quotes.php"><font color="#0033CC"><u>Compare Car Lease Payments</u><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.leasecompare.com/advantage.php"><font color="#0033CC"><u>The LeaseCompare.com Advantage</u><font color="#000000"></a><br>
+      		<a href="http://www.leasecompare.com/autolease101_1.php"><font color="#0033CC"><u>Auto Lease 101</u><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.leasecompare.com/resources.php"><font color="#0033CC"><u>Leasing Resources</u><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.leasecompare.com/quick_quotes.php"><font color="#0033CC"><u>Quick Lease Quotes</u><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.leasecompare.com/commercial_leasing_quotes.php"><font color="#0033CC"><u>Commercial Truck Leasing</u><font color="#000000"></a><br>
+      		<a href="http://www.leasecompare.com/aboutus.php"><font color="#0033CC"><u>About&nbsp;LeaseCompare.com</u><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.leasecompare.com/used_car_lease_quotes.php"><font color="#0033CC"><u>Used Car Leasing</u><font color="#000000"></a><br><a href="http://www.swapalease.com"><font color="#0033CC"><u>Lease Assumptions</u><font color="#000000"></a><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="exotic_lease_quotes.php"><font color="#0033CC"><u>Exotic Highline Car Leasing</u><font color="#000000"></a><font color="#000000"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.leasecompare.com/sitemap.php"><font color="#0033CC"><u>Site Map</u><font color="#000000"></a><br>
+      		<br><font class="footnote">Copyright &copy; 2000 - 2013 <a href="http://www.acscorp.com" target="_blank">Automobile Consumer Services, Inc.</a> | <a href="javascript:void(0)" onClick="window.open('http://www.leasecompare.com/privacy.php', 'lcprivacy', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=507,height=550')"><font color="#0033CC"><u>Privacy Policy</u><font color="#000000"></a></td>
+      <td width="118" valign="top" align="right"><div style="padding-right:15px;">
+		<a title="Automobile Consumer Services, Inc. BBB Business Review" href="http://www.bbb.org/cincinnati/business-reviews/auto-renting-and-leasing/automobile-consumer-services-inc-in-cincinnati-oh-14000087/#bbbonlineclick"><img alt="Automobile Consumer Services, Inc. BBB Business Review" style="border: 0;height:80px;" src="http://seal-cincinnati.bbb.org/seals/blue-seal-63-134-automobile-consumer-services-inc-14000087.png" /></a>
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="3" height="8"><font class="footnote">&nbsp;</td>
+    </tr>
+  </table>
+  </center>
+  	<style>
+	#flyout {
+    width: 250px;
+    height: 245px;
+    background:url('http://www.leasecompare.com/images/flyout_bg.png');
+    text-align:left;
+	}
+	</style>
+	<div id="flyout">
+		<div style="width:190px;padding:15px;" class="smalltext">
+			<div style="padding-top:10px;"><strong>Getting pre-qualified for vehicle financing has never been easier.</strong></div>		
+			<div style="padding-top:15px;">Get instant pre-qualified lease and loan offers, based on your actual credit, on a new or used car you've found or on a new car you'd like us to find for you. </div>
+			<div style="padding-top:15px;"><a href="#" onclick="drive_it_now('3851','',$('#updateZipCode').val(),$('#updatePurchasePrice').val(),$('#updateMSRP').val(),'','','','','','',$('#updateOdometer').val(),'','','','','','','','','','text',$('#updateChromeStyleID').val(),$('#updateDownPayment').val());return(false);"><img src="images/button_prequalified.png" border="0"></a></div>
+		</div>
+	</div>
+	<script>
+	$.fn.flyout = function(options) {
+	    var el = this;
+	    var edge = options.edge || 30;
+	    el.css({
+	        position : "absolute",
+	        top : "30px",
+	        left : -1 * (el.width() - edge)
+	    });
+	    el.click(function () {
+	        $(this).animate({left : "0px"}); 
+	    });
+	    el.mouseleave(function () {
+	        $(this).animate({left : -1 * (el.width() - edge) });
+	    });
+	}
+
+    $("#flyout").flyout({"edge" : "30"});
+
+	</script>	
+	  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+ </script>
+ <script type="text/javascript">
+ _uacct = "UA-1252696-1";
+ urchinTracker();
+ </script>
+
+</body>
+
+</html>
+
+
+
+
+

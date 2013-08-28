@@ -1,0 +1,5097 @@
+
+
+
+
+	
+	
+	
+		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+	
+
+
+
+
+
+
+
+
+<html>
+
+
+
+
+
+ 
+
+
+
+
+
+<!-- Added tag lib in head.jsp by Victor on Jun 11, 07 -->
+
+<!-- Added tag lib in head.jsp by Victor on Jun 11, 07 -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<head>
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="-1">	
+	<META name="Expire" CONTENT="Now">		
+	<META name="viewport" CONTENT="width=1024"/> 
+
+<!--  S29048: Embed Pinterest verification  -->
+
+
+
+
+
+
+
+	
+		<meta NAME="keywords" CONTENT="Auto Roadside Service Terms &amp; Conditions">
+		<meta NAME="description" CONTENT="Auto Roadside Service Terms &amp; Conditions">	
+
+
+
+	
+		<META NAME="robots" content="follow,index">
+	
+
+
+	    <META name="p:domain_verify" content="b95ffc40c64bfc38206ae66dd4282ed8"/>
+ 
+		<META NAME="abstract" CONTENT="Rogers offers Wireless, Cable TV, Hi-Speed Internet and Home Phone services for home and business.">
+		<META NAME="copyright" content="All content presented in this domain may not be used by third parties without the prior written consent of Rogers Communications Inc.">			
+		<META HTTP-EQUIV="Content-Language" CONTENT="EN">
+		<meta name="PRODCAT" content="wireless">
+				
+		<meta name="DOCUMENTCOUNTRYCODE" content="ca"> 
+		<META NAME="author" CONTENT="Rogers Communications Inc.">
+		<META NAME="distribution" CONTENT="Global">
+		<META NAME="revisit-after" CONTENT="1 days">
+		<META NAME="robots" content="follow,index">
+		
+
+<!-- ADDED BY ROGERS.COM SSR RELEASE 1 - END -->		
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/web/resources/js/common_itsp.js" type="text/javascript"></script>
+
+ <script type="text/javascript">
+	var currLineCode = "";
+	var inputPostalCode = "";
+	var currTargetUrl = "";
+	var shoppingLastName = "";
+	var shoppingPostalCode = "";
+	var shoppingStreetNum="";
+	var shoppingAptNum="";
+	var shoppingProvince="";
+	var shoppingCity="";
+	var sessionShoppingProvince="";
+	var sessionShoppingCity="";
+		
+	
+	
+	if(shoppingProvince==""){
+		shoppingProvince = "ON";
+	}
+	
+	
+
+	
+	function showProductInCartBox(){
+		showLayerWindow(document.getElementById('_productInCartBox'));
+	}
+	
+	function showAddressNotEqualBox(){
+		showLayerWindow(document.getElementById('_addressNotEqualMsg'));
+	}
+			
+	function setBoxMessage(tagetUrl, productLine){
+			if(productLine=="H"){
+				var title = "Rogers Home Phone Service availability";
+				var desc = "To ensure that Rogers Home Phone is available in your area, please enter the postal code where you will be using your service.";
+				
+				if(tagetUrl.indexOf("LD_ORDER")!=-1 ||tagetUrl.indexOf("ldrecotool")!=-1){
+					title="Rogers LONG DISTANCE Service availability";
+					desc="To ensure that Rogers Long Distance is available in your area, please enter the postal code where you will be using your service.";				
+				}
+				document.getElementById("h1_RogersServiceavailability").innerHTML=title;
+				document.getElementById("p_Toensurethatyougettherightproducts").innerHTML=desc;
+			}
+			else if(productLine=="I"){
+				var title = "Rogers Hi-Speed Internet Service Availability";
+				var desc = "To ensure that Rogers Hi-Speed Internet is available in your area, please enter the postal code where you will be using your service.";	
+				if(tagetUrl.indexOf("ips")!=-1){
+					title = "Rogers Internet Phone Service availability";
+					desc = "To ensure that Internet Phone Service is available in your area, please enter the postal code where you will be using your service.";
+				}
+				else if(tagetUrl.indexOf("portable")!=-1){
+					title = "Rogers Portable Internet Service Availability";
+					desc = "To ensure that Portable Internet Service is available in your area, please enter the postal code where you will be using your service.";
+				}
+				else if(tagetUrl.indexOf("dialUp")!=-1){
+					title = "Rogers Dial-up Internet Service Availability";
+					desc = "To ensure that Dial-up Internet Service is available in your area, please enter the postal code where you will be using your service.";
+				}
+				document.getElementById("h1_RogersServiceavailability").innerHTML=title;
+				document.getElementById("p_Toensurethatyougettherightproducts").innerHTML=desc;
+			}	
+		}
+		//productLine:  H-Home phone  I-Internet W-wireless P-PTV
+	function orderProductWithServiceAbilityCheck(tagetUrl, productId, productLine,unPopUp)
+	    {
+          var pCode = "";
+          var apCode="";	
+        	currLineCode = productLine;
+        	currTargetUrl = tagetUrl;
+        	
+			document.getElementById('_targetUrl').value=tagetUrl;
+			document.getElementById('_productId').value=productId;
+			document.getElementById('_productLine').value=productLine;
+			document.getElementById('_postalCode2').value='';
+
+			document.getElementById('_boxServiceCheck2').style.display='none'; 
+			document.getElementById('_boxServiceCheck3').style.display='none'; 
+			//serviceCheckForm.productID.value=productID;
+		
+			if (apCode != "null"&&apCode != ""&&unPopUp=="unPopUp"){ 
+				
+				document.getElementById('_postalCode2').value=apCode;  
+				document.getElementById('_frmAvailCheck2').submit();  
+         		return true;
+            }
+			scroll(0,0);
+			document.getElementById('_boxServiceCheck1').style.display='block'; 
+			document.getElementById('_postalCodeForm').style.display='block'; 
+			document.getElementById('_addressForm').style.display='none'; 
+			
+			setBoxMessage(tagetUrl, productLine);
+			
+			//centerDiv(document.getElementById('_boxServiceCheck1'));
+			showLayerWindow(document.getElementById('_boxServiceCheck1'));
+			return false;
+		
+		}
+		
+		
+	function a_orderProductWithServiceAbilityCheck(tagetUrl, productId, productLine)
+	    {
+		    document.getElementById("h1_RogersServiceavailability").innerHTML="Rogers Hi-Speed Internet Service Availability";
+		    document.getElementById("addProductFromDifferentAddress").innerHTML="You must use the same address information to order this product, as you used to order the other products currently in your cart.";
+		    document.getElementById("Whatwouldyouliketodo").innerHTML="Please modify the address information or select one of the options below.";
+		    
+         	var pCode = "";
+        	currLineCode = productLine;
+        	currTargetUrl = tagetUrl;
+        	
+			document.getElementById('a_targetUrl').value=tagetUrl;
+			document.getElementById('a_productId').value=productId;
+			document.getElementById('a_productLine').value=productLine;
+			document.getElementById('a_postalCode2').value="";
+			document.getElementById('a_txtStreetName').value="";
+			if (currTargetUrl.indexOf("hispeedCableBuyFlow")!=-1){
+				document.getElementById('a_postalCode2').readOnly = true;
+				//document.getElementById('a_txtStreetName').readOnly=true;
+			}
+			document.getElementById('a_txtProvince').value=sessionShoppingProvince;			
+			document.getElementById('a_txtCity').value=sessionShoppingCity;
+				
+			
+			document.getElementById('_boxServiceCheck2').style.display='none'; 
+			document.getElementById('_boxServiceCheck3').style.display='none'; 
+			//serviceCheckForm.productID.value=productID;
+			
+//			if (pCode != "null"){ 
+//				document.getElementById('_frmAvailCheck2').submit();  
+//         		return true;
+//          }
+			scroll(0,0);
+			document.getElementById('_boxServiceCheck1').style.display='block'; 
+			document.getElementById('_postalCodeForm').style.display='none'; 
+			document.getElementById('_addressForm').style.display='block'; 
+			//centerDiv(document.getElementById('_boxServiceCheck1'));
+			showLayerWindow(document.getElementById('_boxServiceCheck1'));
+			return false;
+		}
+		
+	function _boxServiceCheck1Close(){
+		//document.getElementById('_boxServiceCheck1').style.display='none'; 
+		hideLayerWindow(document.getElementById('_boxServiceCheck1'));
+	}
+ 	function _boxNoServiceClose(){
+ 		document.getElementById('_boxNoService').style.display='none';
+ 	}
+
+	function orderHomePhoneProduct(tagetUrl, productId){
+		orderProductWithServiceAbilityCheck(tagetUrl, productId, "H");
+	}
+	
+	function orderInternetProduct(tagetUrl, productId){
+		orderProductWithServiceAbilityCheck(tagetUrl, productId, "I");
+	}	
+	
+	function orderInternetProductUnPop(tagetUrl, productId){
+		orderProductWithServiceAbilityCheck(tagetUrl, productId, "I", "unPopUp");
+	}
+	
+	function orderHomePhoneProductUnPop(tagetUrl, productId){
+		orderProductWithServiceAbilityCheck(tagetUrl, productId, "H", "unPopUp");
+	}
+	
+	function orderHispeedProduct(tagetUrl, productId){
+		a_orderProductWithServiceAbilityCheck(tagetUrl, productId, "I");
+	}
+	function orderPTVProduct(tagetUrl, productId){
+		a_orderProductWithServiceAbilityCheck(tagetUrl, productId, "P");
+	}		
+	function getOrderPromotionURL(promotionId, promotionType, productId){
+		var targetUrl = "null";
+		if(targetUrl=="" || targetUrl=="null"){
+			return "";
+		}
+		
+		if(targetUrl.indexOf("?")==-1)
+			targetUrl+="?";
+		targetUrl+="&promotionId="+promotionId+"&promotionType="+promotionType+"&productCode="+productId;
+		return targetUrl;
+	}
+	
+	function orderHPPromotion(promotionId, promotionType, productId){
+		var targetUrl = "/web/link/hpOrderPromotion?";//getOrderPromotionURL(promotionId, promotionType, productId);
+		targetUrl+="&promotionId="+promotionId+"&promotionType="+promotionType+"&productCode="+productId;
+		orderHomePhoneProduct(targetUrl, productId);
+	}
+
+	function orderHPPromotionUnPop(promotionId, promotionType, productId){
+		var targetUrl = "/web/link/hpOrderPromotion?";//getOrderPromotionURL(promotionId, promotionType, productId);
+		targetUrl+="&promotionId="+promotionId+"&promotionType="+promotionType+"&productCode="+productId;
+		orderHomePhoneProductUnPop(targetUrl, productId);
+	}	
+	
+	function orderHPPromotionUnPop(promotionId, promotionType, productId, contractCode){
+		var targetUrl = "/web/link/hpOrderPromotion?";//getOrderPromotionURL(promotionId, promotionType, productId);		
+		targetUrl+="&promotionId="+promotionId+"&promotionType="+promotionType+"&productCode="+productId+"&contractCode="+contractCode;
+		orderHomePhoneProductUnPop(targetUrl, productId);
+	}	
+	
+		
+	function orderLDPromotion(promotionId, promotionType, productId){
+		var targetUrl = "/web/link/ldOrderPromotion?";
+		targetUrl+="&promotionId="+promotionId+"&promotionType="+promotionType+"&productCode="+productId;
+		orderHomePhoneProduct(targetUrl, productId);
+	}
+	
+	function orderIPSPromotion(promotionId, promotionType, productId){
+		var targetUrl = "/web/link/ipsOrderPromotion?";
+		targetUrl+="&promotionId="+promotionId+"&promotionType="+promotionType+"&productCode="+productId;
+		orderInternetProduct(targetUrl, productId);
+	}	
+	
+	function openHiSpeedPromotionPage(serviceCodes, promotionUrls){
+		var targetUrl = "/web/link/openPromotionPage?";
+		targetUrl+="&_serviceCode="+serviceCodes+"&_promotionUrl="+encodeURIComponent(promotionUrls)+"&_productLine=I";
+		orderInternetProduct(targetUrl,"");
+	}
+	
+	function openRecomendationToolPage(serviceCodes, promotionUrls){
+		var targetUrl = "/web/link/openPromotionPage?";
+		targetUrl+="&_serviceCode="+serviceCodes+"&_promotionUrl="+encodeURIComponent(promotionUrls)+"&_productLine=I";				
+		orderInternetProduct(targetUrl,"");
+	}
+		
+	function _submitValid()
+	{
+		var empty = true;
+		var provinceCode = "KLMNP";
+		var sessionProvince="ON"
+		
+		_errorMsgClose();
+		
+		var obj = null;
+		if (document.getElementById('_postalCodeForm').style.display=='block'){
+			obj = document.getElementById("_postalCode2");
+		}else{
+			obj = document.getElementById("a_postalCode2");
+		}
+		
+		var pc = obj.value;
+		
+		pc=trimSpaces(pc).toUpperCase();
+		
+		inputPostalCode = pc;
+
+		if(pc!="" && postcodevalidate("ca",pc))	{
+			var sameSessionProvince = provinceEqual(sessionProvince,pc);
+			var sameShoppingProvince = provinceEqual(shoppingProvince,pc);
+  			if(sameSessionProvince && sameShoppingProvince){ //added wireless province
+  				return true;
+ 			}else{
+				
+				if(!sameShoppingProvince && !empty){
+					_boxServiceCheck1Close();
+	 				showAddressNotEqualBox();
+					return false;
+				}
+				if(!sameSessionProvince && empty){
+	 				document.getElementById('_boxServiceCheck4').style.display='block'; 
+					return false;
+				}
+				
+ 				return true;
+ 			}	 					
+	 	}
+	 	else{	 	
+		 	if (pc==""){	 	
+			 	document.getElementById('_boxServiceCheck3').style.display='block'; 
+			 	
+		  	}else {
+		  		document.getElementById('_boxServiceCheck2').style.display='block'; 
+		  	}
+		 	
+		 	obj.value='';
+		 	obj.focus();
+		  	return false;
+	 	}
+	
+	}	
+	
+
+	function _errorMsgClose(){
+		document.getElementById('_boxServiceCheck2').style.display='none';
+		document.getElementById('_boxServiceCheck3').style.display='none';
+		document.getElementById('_boxServiceCheck4').style.display='none';
+	}
+	
+	function _cableAddressCheck(){
+		var retu = false;
+		if(_submitValid()){
+
+			var checkPackage=false;
+			var inBrowseFlow=false;
+
+			if(currLineCode=="H" && (currTargetUrl.indexOf("hpBrowseFlow")!=-1 ))
+				inBrowseFlow=true;
+
+			if(currLineCode=="H" && (currTargetUrl.indexOf("HPH_ORDER")!=-1 || currTargetUrl.indexOf("hpOrderPromotion")!=-1) && "false" == "true")//check HP package
+				checkPackage=true;
+
+			if(currLineCode=="H" && currTargetUrl.indexOf("hprecotool")!=-1 && "false" == "true")//check HP reco tool 
+				checkPackage=true;
+
+			if(currLineCode=="I" && (currTargetUrl.indexOf("ipsBuyFlowBegin")!=-1 || currTargetUrl.indexOf("ipsOrderPromotion")!=-1 || currTargetUrl.indexOf("ipsCheckServiceabilityByPostalCode")!=-1) && "false" == "true")//check IPS package
+				checkPackage=true;
+			
+			if(currLineCode=="I" && currTargetUrl.indexOf("dialUpServiceBegin")!=-1 && "false" == "true")//check IPS package
+				checkPackage=true;	
+			if(currLineCode=="I" && currTargetUrl.indexOf("portableBuyFlowBegin")!=-1 && "false" == "true")//check portable package
+				checkPackage=true;	
+			if(currLineCode=="I" && currTargetUrl.indexOf("hispeedDSLBuyFlow")!=-1 && "false" == "true")//check DSL package
+				checkPackage=true;	
+			 
+			 
+			 var linkCableBuyflow=false;
+			 var hispeedCableAddressEqual = false;
+			 if(currLineCode=="I" && currTargetUrl.indexOf("hispeedCableBuyFlow")!=-1){
+			 	 linkCableBuyflow=true;
+			  	
+			  	var inputLastName=getCompareString(document.getElementById("a_txtLastName").value);
+			  	var inputStreetNum=getCompareString(document.getElementById("a_txtStreetNum").value);
+			  	var inputAptNum=getCompareString(document.getElementById("a_txtAptNum").value);
+			 	hispeedCableAddressEqual=(shoppingLastName==''||getCompareString(shoppingLastName)==getCompareString(inputLastName))
+			 			&&(shoppingStreetNum==''||shoppingStreetNum==inputStreetNum)
+			 			&&(shoppingAptNum==''||shoppingAptNum== inputAptNum)
+			 			&&(getCompareString(inputPostalCode)==getCompareString(shoppingPostalCode)
+			 		);	
+			 	
+			  }
+			  
+			_boxServiceCheck1Close();  
+
+			if(shoppingPostalCode=="null" || shoppingPostalCode=="")
+				retu = true;
+			else if(inBrowseFlow)
+				retu = true;
+			else{ 
+				if(linkCableBuyflow && hispeedCableAddressEqual && false){
+					showProductInCartBox();
+					retu = false;
+				}else if(linkCableBuyflow && !hispeedCableAddressEqual && false){
+					showAddressNotEqualBox();
+					retu = false;
+				}else if( getCompareString(inputPostalCode)==getCompareString(shoppingPostalCode) && checkPackage==true){	
+					showProductInCartBox();
+					retu = false;			
+				}else if(inputPostalCode!=shoppingPostalCode ){
+					showAddressNotEqualBox();
+					retu = false;
+				}else{
+					retu = true;
+				}
+			}
+			
+			if(retu){
+				var productLine = "";
+				if(currLineCode=="H")
+					productLine = "Homephonoe";
+				else if(currLineCode=="I")
+					productLine = "Internet";
+				else
+					productLine = "Unknown";
+				
+				//Added by Victor on July 05, 2007 for coremetrics
+				//cmCreateManualLinkClickTag('','ServiceabilityCheck:'+productLine);
+				
+//Coremetrics tag added by Nenad P. on March 10, 2008
+  				
+			}
+			return retu;
+		}
+		
+		return false;
+
+	} 
+//Script for auto tab for phone numbers
+// Request no 191 WO # 1679
+var isNN = (navigator.appName.indexOf("Netscape")!=-1);
+
+function autoTab(input,len, e) {
+  var keyCode = (isNN) ? e.which : e.keyCode; 
+  var filter = (isNN) ? [0,8,9] : [0,8,9,16,17,18,37,38,39,40,46];
+  if(input.value.length >= len && !containsElement(filter,keyCode)) {
+    input.value = input.value.slice(0, len);
+    input.form[(getIndex(input)+1) % input.form.length].focus();
+  }
+  function containsElement(arr, ele) {
+    var found = false, index = 0;
+    while(!found && index < arr.length)
+    if(arr[index] == ele)
+    found = true;
+    else
+    index++;
+    return found;
+  }
+function getIndex(input) {
+    var index = -1, i = 0, found = false;
+    while (i < input.form.length && index == -1)
+    if (input.form[i] == input)index = i;
+    else i++;
+    return index;
+  }
+  return true;
+}
+
+</script> 
+
+
+
+
+		
+	
+
+
+<title>Rogers.com - Auto Roadside Service Terms &amp;amp; Conditions</title><link rel="stylesheet" type="text/css" href="/web/framework/skins/rogersRedesign/css/RS_redesign_skin_FW.css"><link rel="stylesheet" type="text/css" href="/web/resources/css/RS_resources.css"><script src="/web/framework/skins/rogersRedesign/js/RS_Redesign_common_min.js" type="text/javascript"></script><script src="/web/resources/js/PCI_tokenization_min.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="/web/framework/skins/rogersRedesign/leftnav/css/styles-leftnav.css">
+
+
+ 
+
+
+
+
+
+<!-- Added tag lib in head.jsp by Victor on Jun 11, 07 -->
+
+<!-- Added tag lib in head.jsp by Victor on Jun 11, 07 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="rogers fav icon" href="/web/resources/images/favicon.ico">
+	</head>		
+	<!-- Added import js tag in head.jsp by Victor on Jun 26, 07 -->
+<!-- Commented import js tag in head.jsp by Nenad on April 16, 2008 -->	
+<!-- coreMetrics:importCMJS/ -->
+	<!-- Added import js tag in head.jsp by Victor on Jun 26, 07 -->
+
+
+
+
+<body
+        
+        class="bea-portal-body"
+        
+        onload="initSkin();"
+        
+    ><div class="bea-portal-body-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Added tag lib in header.jsp by Victor on Jun 11, 07 -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Below code is added to include this CSS only for Content pages. -->
+
+	<link rel="stylesheet" href="/cms/css/stylesRR.css" type="text/css">
+
+<!-- Added tag lib in header.jsp by Victor on Jun 11, 07 -->
+<!-- WIP 33067 - to bring focus to top  -->
+<a name="changeFocus"><input type="hidden" name="changeFocus" value="0"/></a>
+
+
+
+
+
+	<!--   Google Tag Tracking -->
+	
+
+
+
+
+
+ 
+ 	
+<!-- jQuery - appear -->
+<script type="text/javascript" src="/cms/js/jqueryPlugins/appear/jquery.appear-1.1.1.js"></script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TDBP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TDBP');</script>
+<!-- End Google Tag Manager -->
+ 
+	
+	<!-- Added import js tag in header.jsp by Nenad on April 16, 2008 -->
+	<!--IMPORT COREMETRICS JS FILES-->
+<script  src="/web/resources/js/corematrics/coremetrics_common_min.js" type="text/javascript"></script>
+    
+	
+<!-- Commented script references in cmHeader.jsp by Nenad on April 16, 2008 -->	
+<!-- BEGIN COREMETRICS SUPPORT -->
+<!--
+<head>
+<script src="/resources/js/corematrics/v40/eluminate.js" type="text/javascript"></script>
+<script src="/resources/js/corematrics/v40/techprops.js" type="text/javascript"></script>
+<script src="/resources/js/corematrics/cmdatatagutils.js" type="text/javascript"></script>
+-->
+<!-- production only setting  -->
+<script type="text/javascript">
+<!--
+
+    cmSetProduction();
+    
+//-->
+</script>
+<!--
+</head>
+-->
+<!-- END COREMETRICS -->
+	
+	<!-- Div for the entire header code values are retrieved from the .portal file that this header is attached to -->
+	<div
+		
+		class="bea-portal-body-header"
+		>
+
+
+
+ <!--  COREMETRICS REGISTRATION VIEW TAG/PAGE ELEMENT TAG START - THIS TAG IS ENABLED ONLY WHEN THE USER SUCCESSFULLY SIGNS IN -->
+				
+	 
+	 <!-- BEGIN COREMETRICS SUPPORT -->
+<script type="text/javascript">
+<!--
+	cmCreatePageElementTag("Sign In","ELEMET CATEGORY NOT GENERATED");
+//-->
+</script>
+<!-- END COREMETRICS SUPPORT -->
+
+
+<!--  COREMETRICS REGISTRATION VIEW TAG/PAGE ELEMENT TAG END - THIS TAG IS ENABLED ONLY WHEN THE USER SUCCESSFULLY SIGNS IN -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Added tag lib in header.jsp by Victor on Jun 11, 07 -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Below code is added to include this CSS only for Content pages. -->
+
+	<link rel="stylesheet" href="/cms/css/stylesRR.css" type="text/css">
+
+<!-- Added tag lib in header.jsp by Victor on Jun 11, 07 -->
+<!-- WIP 33067 - to bring focus to top  -->
+<a name="changeFocus"><input type="hidden" name="changeFocus" value="0"/></a>
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+		
+		<input type="hidden" name="_NeedPopup" id="_NeedPopup" value="false">
+			
+    <a name="AlertBoxTopAnchor"></a>
+ 
+ </div>
+      
+
+ 				
+					
+
+<script type="text/javascript" src="/cms/js/jquery.badBrowser.js"></script>
+
+
+<style type="text/css">
+#browserWarning, #browserWarningSimple {display: none; background-color: #fcfdde;width: 100%;border-top: solid 1px #000;border-bottom: solid 1px #000;text-align: center;padding:5px 0px 5px 0px; font-family: arial; font-size: 11px; text-align: left;}
+
+
+</style>
+
+<!-- Tulip changes - 14th September URGENT change -->
+<script type="text/javascript" src="/cms/train/trains/1/js/tulip_redirects.js"></script>
+
+<script type="text/javascript">
+if(tulipRedirectSwitch == "ON")
+{
+      var currentUrl = window.location.href.toUpperCase();
+
+      $.each(tulipBlockedURLs, function(index, value) 
+     { 
+        if(currentUrl.indexOf(value) != -1)
+       {
+          window.location=tulipRedirectURL;
+       }
+    });
+}
+</script>
+
+<div id="browserWarning">
+    <center>
+        <div style="width: 410px;">
+            <b style="font-size: 12px;">The version of Internet Explorer you are currently using is outdated.</b>
+            <br />
+            <br />You will still be able use our site, but certain new features may not work properly.
+            <br />We recommend that you upgrade your browser.
+            <br />
+            <br /><div style="text-align: left;">Just click on the below icons to download the latest version of Internet Explorer or any other browser of your choice.</div>
+            <br />
+            <table border="0" cellpadding="0" cellspacing="5" style="font-size: 9px; text-align: center;">
+                <tr align="center">
+                    <td><a href="http://www.microsoft.com/canada/windows/internet-explorer/oie9/default.aspx?wt.srch=1"><img src="/cms/images/en/Common/Logos/ie_y_70x60.jpg" height="60" width="70" alt="Internet Explorer" border="0"><br />Internet&nbsp;Explorer</a></td>
+                    <td width="2" height="100%" style="background-color: #ccc;"></td>
+                    <td><a href="http://www.mozilla.com/en-US/firefox/fx/"><img src="/cms/images/en/Common/Logos/ff_y_70x60.jpg" height="60" width="70" alt="Firefox" border="0"><br />Firefox</a></td>
+                    <td width="2" height="100%" style="background-color: #ccc;"></td>
+                    <td><a href="http://www.google.com/chrome/"><img src="/cms/images/en/Common/Logos/chrome_y_70x60.jpg" height="60" width="70" alt="Chrome" border="0"><br />Chrome</a></td>
+                    <td width="2" height="100%" style="background-color: #ccc;"></td>
+                    <td><a href="http://www.apple.com/safari/"><img src="/cms/images/en/Common/Logos/safari_y_70x60.jpg" height="60" width="70" alt="" border="0"><br />Safari</a></td>
+                    <td width="2" height="100%" style="background-color: #ccc;"></td>
+                    <td><a href="http://www.opera.com/"><img src="/cms/images/en/Common/Logos/opera_y_70x60.jpg" height="60" width="70" alt="" border="0"><br />Opera</a></td>
+                </tr>
+            </table>
+            <br /><center><a id="browserWarningClose" href="javascript: browserWarningClose();">[close]</a></center>
+        </div>
+    </center>
+</div>
+<div id='browserWarningSimple'>
+    <center>
+        Your browser is no longer supported. Please upgrade to
+        <a href='http://getfirefox.com' target='_blank'>FireFox</a>,
+        <a href="http://www.google.com/chrome/">Chrome</a>, 
+        <a href='http://www.apple.com/ca/safari/' target='_blank'>Safari</a>,
+        <a href='http://www.opera.com/download/' target='_blank'>Opera</a>
+        or the <a href='http://www.microsoft.com/canada/windows/internet-explorer/oie9/default.aspx?wt.srch=1' target='_blank'>latest version of Internet Explorer</a>.
+        [<a id='browserWarningCloseSimple' href="javascript: browserWarningCloseSimple();">close</a>]
+    </center>
+</div>
+
+
+
+				
+
+ 
+ <!--  COREMETRICS REGISTRATION VIEW TAG/PAGE ELEMENT TAG START - THIS TAG IS ENABLED ONLY WHEN THE USER SUCCESSFULLY SIGNS IN -->
+
+<!--  COREMETRICS REGISTRATION VIEW TAG/PAGE ELEMENT TAG END - THIS TAG IS ENABLED ONLY WHEN THE USER SUCCESSFULLY SIGNS IN -->
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-book-primary"
+        
+    >
+        
+
+
+
+
+
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			
+<script type="text/javaScript" language="javascript" src="/cms/foresee/foresee-trigger.js"></script>
+<style>
+#idDropDownNavSupport1, #idDropDownNavSupport2, #idDropDownNavSupport3, #idDropDownNavSupport4, #idDropDownNavSupport5, #idDropDownNavSupport6, #idDropDownNavSupport7, #idDropDownNavSupport8, #idDropDownNavSupport9, #idDropDownNavSupport10 {
+    margin-top: -11px;
+}
+.forseeSurveys-Feedback{
+background: url('/cms/images/foresee/feedback.png') no-repeat ;
+display:none;
+width: 30px;
+height: 118px;
+position: fixed;
+right:0px;
+vertical-align: baseline;
+z-index: 1677721;
+}
+.forseeSurveys-Feedback:hover{
+background: url('/cms/images/foresee/feedback_hover.png') no-repeat ;
+
+width: 40px;
+height: 118px;
+position: fixed;
+right:0px;
+vertical-align: baseline;
+cursor: pointer;
+}
+
+</style>
+<!-- feedback CSS ends here -->
+<!-- feedback script starts here -->
+<script>
+$(window).load(function(){
+	var distance = $(window).height()/2 - $("#forseeFeedback").height()/2;
+    $("#forseeFeedback").css("top", distance+'px');
+    $("#forseeFeedback").css('display','block');
+});
+$(window).resize(function(){
+	var distance = $(window).height()/2 - $("#forseeFeedback").height()/2;
+    $("#forseeFeedback").css("top", distance+'px');
+    $("#forseeFeedback").css("right", 0);
+    $("#forseeFeedback").css('display','block');
+});
+
+/* navigation hack start */
+$(document).ready(function() {
+	if(($("div#page").children("div#layout2ColsCheckout").length > 0 
+		|| $("div#page").children("div#layout3ColsCheckout").length > 0)
+		&& $("div#page").children("div#globalNav").length < 1) {
+		$("div#page").prepend($("div#tempGlobalNavWrapper").html());
+	}
+	if( $("div#page").children("div#layout3Cols").length > 0 && $("div#page").children("div#globalNav").length < 1) {
+		$("div#page").prepend($("div#tempGlobalNavConfirmWrapper").html());
+	}
+	if($("div#page").children("table").html() != null && ($("div#page").children("table:contains('Rogers.com is experiencing technical difficulties and is currently unavailable')").length > 0
+		|| $("div#page").children("table:contains('Nous sommes désolés. Nous éprouvons actuellement des difficultés techniques sur rogers.com : ')").length > 0)
+		&& $("div#page").children("div#globalNav").length < 1) {
+		$("div#page").prepend($("div#tempGlobalNavConfirmWrapper").html());
+	}
+});
+/* navigation hack End */
+
+</script>
+<a title="Provide feedback on this page" class="forseeSurveys-Feedback" id="forseeFeedback" href= "Javascript:void(0)" onclick="javascript:FSR.popFeedback()" style="display:none;"></a>
+
+
+
+<div id="tempGlobalNavWrapper" class="displayNone">
+	<div id="globalNav">
+	<div id="ptvTFNZone">
+	<div style="FLOAT: right"></div>
+	<div style="FLOAT: right"><img alt="Call to Order" src="/cms/images/Wireless_Badge.bmp"></div>
+	</div>
+	<div class="logo"><a href="/web/Rogers.portal?_nfpb=true&_pageLabel=Home"
+		legallinktype="notLegalLink"> <img border="0" src="/web/framework/skins/rogersRedesign/images/rogers/logo_rogers.gif"></a>
+	</div>
+	<div class="nav ShopSmmaryNav" id="checkoutTopNav"><span><a target="_blank" href="/contact/contactus_main.asp"
+		legallinktype="notLegalLink">Contact Us</a> </span>
+	
+	<div class="divider">&nbsp;</div>
+	
+	<span> <a href="/web/Rogers.portal?_nfpb=true&_pageLabel=checkout&_nfls=true&setLanguage=fr"
+		legallinktype="notLegalLink">Français</a> </span></div>
+	</div>
+</div>
+<div id="tempGlobalNavConfirmWrapper" class="displayNone">
+    <div id="globalNav">
+		<div class="logo"><a href="/web/Rogers.portal?_nfpb=true&_pageLabel=Home"> 
+			<img src="/web/framework/skins/rogersRedesign/images/rogers/logo_rogers.gif" border="0"></a>
+		</div>
+		<div id="checkoutTopNav" class="nav alignRight">
+			<span><a href="/web/Rogers.portal?_nfpb=true&_pageLabel=store_locator&customer_type=Residential" target="_blank">Find a Store</a></span>
+			<div class="divider">&nbsp;</div>
+			<span><a href="/web/Rogers.portal?_nfpb=true&_pageLabel=checkout&_nfls=true&setLanguage=fr" legallinktype="notLegalLink">Français</a></span>
+		</div>
+	</div>
+</div>
+
+	
+
+		
+			
+
+
+
+
+
+<!-- Id Added for CPL R413 -->
+<div id="horizontalDivider" style="position:absolute; width:100%; left:0px;top:86px;height:1px; border-bottom:2px solid #cccccc; overflow:hidden">&nbsp;</div>
+
+
+	
+	
+	
+		
+		
+		
+		<div style="padding-left: 14px; padding-right: 14px;" id="header-navigation">
+		<table cellspacing="0" cellpadding="0" style="vertical-align: top;" width="100%">
+			<tr>
+				<td align="right" style="padding-top: 0px;padding-right: 0px;" valign="top">
+				<div style="z-index:2147483647;">
+					<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=Home">
+						<img src="/web/framework/skins/rogersRedesign/images/rogers/rogers_logo_RR2.jpg" alt="Rogers" />
+					</a>
+					
+				</div>
+				</td>
+				<td valign="top" align="left" style="padding-left: 0px; vertical-align: top;">
+				<table cellspacing="0" cellpadding="0" border="0" width="835" style="vertical-align: top;">
+					<tr>
+						<td colspan="2" align="right" valign="middle" style="padding-right: 0px;">
+
+					   		<div class="CB-CON">
+					   			<div class="CB-Rounded-Selected"><a href="/web/Rogers.portal" style="color:#FFF">Residential</a></div>
+					   			<div class="CB-Rounded"><a href="/business?new">Business</a></div>
+					   			<div id="idTopNavLoyalty" class="CB-Rounded-Loyalty"></div>
+					   		</div>
+
+						 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- S8152 Start  -->
+
+
+<!-- S8152 End  -->
+
+
+
+<!--Removed to improve load time S16808
+<div id="liveChatSupport12" style="display:none;">
+<script type="text/javascript" src="http://www.rogershelp.com/customerserv/livechatsupport/index.php?source=12"></script>
+</div>
+-->
+
+	<script type="text/javascript">
+ 	function signOut(){
+ 		
+	   	if(document.getElementById('UnSavedMesgID')!=undefined){
+	       if(document.getElementById('UnSavedMesgID').style.display=='none') {
+	          document.getElementById('UnSavedMesgID').style.display='block';
+	          return false ;
+	       }
+	    }
+      
+      document.getElementById("signoutform").submit();
+	}
+
+	function clearUser(){
+		defaulttext = "Enter Username";
+		if (document.sign.USER.value == defaulttext){
+			document.sign.USER.value ="";
+			document.sign.USER.focus();
+		}
+		document.getElementById('password1').style.display='none';
+		if(document.getElementById('password2').style.display=='none'){
+			document.getElementById('password2').style.display='block';
+		}
+	}
+
+	function clearPassword(){
+		document.getElementById('password1').style.display='none';
+		if(document.getElementById('password2').style.display=='none'){
+		 	document.getElementById('password2').style.display='block';
+		}
+		document.sign.signinPassword.value="";
+		document.sign.signinPassword.focus();
+	}
+
+	function clearPassword2(){
+		document.sign.signinPassword.value="";
+		document.sign.signinPassword.focus();
+	}
+	
+	/* S7019 Start */	
+	var maintenanceWindowMessage = '';
+	
+	function handleKeyPress(e) {
+		var key = e.keyCode || e.which;
+		if (key == 13){
+			rememberName();
+		}
+	}
+	/* S7019 End */
+
+	/*
+	* Modified below method during S7019
+	*/
+	function rememberName(){
+		deleteCookie("SM_USERNOTFOUND", "", -1);
+		deleteCookie("SMTRYNO", "", -1);
+		var errHeader = document.getElementById("loginValidationErrHeader");
+		var errText = document.getElementById("loginValidationErrMsg");
+		var user=document.sign.USER.value;
+		var pass=document.sign.password.value;
+		var paramHeader, paramText;
+		if( user == "" || user == "Enter Username"
+		 	|| pass == ""){
+			paramHeader= "Sign in attempt was unsuccessful."
+			paramText= "You have entered an incorrect username/password, please try again.";
+			var _liveChatSupport12 = document.getElementById("liveChatSupport12").innerHTML;
+			//alert(_liveChatSupport12);
+			if(_liveChatSupport12 != ""){
+				_liveChatSupport12 = _liveChatSupport12.substring((_liveChatSupport12.indexOf("<B>")), _liveChatSupport12.length-1);
+				//alert(_liveChatSupport12);
+				paramText = paramText + "<br><br>" + "You have entered an incorrect username and/or password, please try again. " + _liveChatSupport12 + "";					
+			}			
+			showWindow(paramHeader,paramText);
+		} else {
+			if(maintenanceWindowMessage) {
+				tb_show('Note','#TB_inline?gcthack=0;height=100&amp;width=505&amp;inlineId=maintenanceWindow&isFromLoginModule=true','');
+			} else {
+				continueSignIn();
+			}
+		}
+	}
+	
+	/*
+	*	Added during S7019. Extracted method from rememberName()
+	*/
+	function continueSignIn() {
+		deleteCookie("SM_USERNOTFOUND", "", -1);
+		deleteCookie("SMTRYNO", "", -1);
+		var errHeader = document.getElementById("loginValidationErrHeader");
+		var errText = document.getElementById("loginValidationErrMsg");
+		var user=document.sign.USER.value;
+		var pass=document.sign.password.value;
+		var paramHeader, paramText;
+		
+		document.sign.USER.value = user.trim();
+		document.sign.password.value = pass.trim();
+		// the cookie is set at path web so that both header and sigin page can access this cookie
+		setCookieWithPath ( "userName", "/web/", user.trim(), 365 );
+		document.sign.submit();
+	}
+
+	var isFirstClick = true;
+	function closeWindow(){
+		document.getElementById('loginErrWindow').style.display='none';
+		document.sign.USER.focus();
+	}
+	function showWindow(obj1,obj2){
+		//document.getElementById("errorLoginHeader").innerHTML = obj1;
+		obj1= "<strong><span id='errorLoginHeader' class='loginError font12'>"+obj1+"</span></strong>";
+		document.getElementById("errorLoginText").innerHTML = obj2;
+		//tb_show('','/web/portlets/common/login/signinerror.jsp?keepThis=true&TB_iframe=true&height=150&width=570&mesHeader='+obj1.replace("'","%27")+'&mesText='+obj2.replace("'","%27"),'');
+		tb_show(obj1,'/web/portlets/common/login/signinerror.jsp?keepThis=true&TB_inline=true&inlineId=hiddenErrorContent&height=150&width=500','');
+
+		return false;
+	}
+</script>
+
+
+
+   <div id="topLoginSection" style="padding:0px;">
+   
+   		<div class="Login-CON" style="float:left;width:150px;text-align:left;">
+   		<div class="CB-CON">
+   			<div class="CB-Rounded" style="width:100px;text-align:left;">
+	   			<a href="https://www.rogers.com/web/RogersServices.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=MyRogers_Home" >Go to My Rogers</a>
+   			</div>
+   		</div>
+   		</div>
+   		
+   		
+   	
+   		<div style="clear:left;"></div>
+   		<!-- S7019 Start -->
+   		<div id="maintenanceWindow" style="display: none;">
+   			<div style="padding-top: 20px;">
+   				
+   			</div>
+   		</div>
+   		<!-- S7019 End -->
+   </div>
+
+	<div id="hiddenErrorContent" style="float:left; width:500px;height:124px;position:fixed;padding-top: 20px;display: none;" >
+              <div style="float:left; padding-top:5px;padding-left:37px;width:360px;height:35px;">
+                   <br /><br />
+        </div>
+        <div id="errorLoginText" class="loginError" style="float:left; padding-left:37px;width:440px;height:45px;">
+        </div>
+     </div>
+	<script type="text/javascript">
+	
+	/*S7019 Start*/
+	
+	
+	
+	/*S7019 End*/
+	
+	    var $loginModuleConflict = jQuery.noConflict();
+	$loginModuleConflict(document).ready( function() {
+		
+				var userNameCookie = getCookie("userName");
+				if (document.sign != null && document.sign.USER != null && userNameCookie != "" && userNameCookie != undefined) {
+					document.sign.USER.value=userNameCookie;
+				}
+				
+		
+		
+				deleteCookie("SMTRYNO", "", -1);
+		
+		});
+
+	</script>
+   
+
+						<div class="userOriginContainer" style="height: 40px;overflow:hidden;width:130px;margin-left:-45px"
+							id="topSectinUserOriginBar">
+						<div class="userOriginBar" style="width:130px;" id="userOriginBarId">
+						<a href="/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=GCT&amp;_nfls=true&amp;setLanguage=fr&amp;template=wireless-plans&amp;sub_template=auto_roadside_terms&amp;setProvince=ON"><strong> Français</strong></a> 
+						&nbsp;|&nbsp; 
+
+
+
+
+
+				 
+				<!-- Removed image elements from array --> 
+			 
+
+<script type="text/javascript">
+    var $j1 = jQuery.noConflict();
+	function onChangeProvince(obj){
+	var forcge=document.getElementById('_forceChange').value;
+	document.getElementById('setProvince').value=obj;
+		if(forcge=="1"){
+			$j1.get("/web/resources/service/changeProvince.jsp?province="+ obj, function(data){
+				document.pr.submit();
+			});
+		}
+		else
+		{
+   		    document.pr.method="post";
+			document.pr.submit();
+		}
+	 }
+<!-- New Province Popup window starts here-->
+
+var rPosNavCab;
+function showCabInfo(){
+	showPosNavCab(document.getElementById('navCab'));
+}
+function cabInfoClose(){
+	document.getElementById('navCabDrop').style.display='none';
+}
+function getPosNav(theObj){
+  x = y = 0;
+  h = theObj.offsetHeight;
+  w = theObj.offsetWidth;
+  while(theObj){
+    x += theObj.offsetLeft;
+    y += theObj.offsetTop;
+    theObj = theObj.offsetParent;
+  }
+  return {height:h,width:w,x:x,y:y}
+}
+function showPosNavCab(){
+	rPosNavCab = getPosNav(document.getElementById('popupReferencePoint'));	
+	var navCabDrop = document.getElementById('navCabDrop');
+	navCabDrop.style.display='block';
+	navCabDrop.style.top = rPosNavCab.y-20 + 'px';
+	navCabDrop.style.left = rPosNavCab.x-272 + 'px';
+}
+<!-- New Province Popup window ends here-->
+</script>
+
+
+<a href="#" style="cursor:pointer" onMouseOver="showPosNavCab(this)" id="navCab"><strong>ON</strong></a><div style="float: right;" id="popupReferencePoint"></div>
+
+
+<!--To display Province Popup Window -->
+ <div id="navCabDrop" class="white_testing" onMouseOver="showCabInfo()" onMouseOut="cabInfoClose()" onClick="cabInfoClose()" onMouseMove="showCabInfo()">
+   <div class="newProvinceSedondDiv">
+     <ul class="newProvincepopupList">
+       
+      		  <li><h1>SELECT A PROVINCE</h1></li>
+      	
+
+	    <li>
+		    <a href="javascript:onChangeProvince('AB')" name="AB" id="AB">&nbsp;&nbsp;Alberta</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('BC')" name="BC" id="BC">&nbsp;&nbsp;British Columbia</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('MB')" name="MB" id="MB">&nbsp;&nbsp;Manitoba</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('NB')" name="NB" id="NB">&nbsp;&nbsp;New Brunswick</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('NL')" name="NL" id="NL">&nbsp;&nbsp;Newfoundland and Labrador</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('NT')" name="NT" id="NT">&nbsp;&nbsp;Northwest Territories</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('NS')" name="NS" id="NS">&nbsp;&nbsp;Nova Scotia</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('NU')" name="NU" id="NU">&nbsp;&nbsp;Nunavut</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('ON')" name="ON" id="ON">&nbsp;&nbsp;Ontario</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('PE')" name="PE" id="PE">&nbsp;&nbsp;Prince Edward Island</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('QC')" name="QC" id="QC">&nbsp;&nbsp;Quebec</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('SK')" name="SK" id="SK">&nbsp;&nbsp;Saskatchewan</a>
+	 	</li>
+		
+	    <li>
+		    <a href="javascript:onChangeProvince('YT')" name="YT" id="YT">&nbsp;&nbsp;Yukon</a>
+	 	</li>
+		
+	</ul>
+ </div>
+</div>
+<form name="pr" id="pr" action="/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=GCT&amp;_nfls=true" method="post" style="display: inline">
+  <p>
+	<input type="hidden" name="_emptyCart" id="_emptyShoppingCart" value="0">
+	<input type="hidden" name="_forceChange" id="_forceChange" value="0">
+	<input type="hidden" name="setProvince" id="setProvince" value="">
+  </p>
+</form> </div>
+						<div class="dupfix">This is for IE6 dup text display fix</div>
+						</div>
+						</td>
+						<td style="width: 80px; height: 31px; padding-right: 10px; padding-left:5px">
+						<div>
+
+
+
+
+<link rel="stylesheet" href="/web/css/endeca.css" type="text/css">
+
+ 	<table border=0 cellspacing="0" cellpadding="0" style="height:19px; float:right;margin-left:2px" width="88" id="investor_search_height">
+		<tr>
+			 <td class="searchBoxContainer" width="21" style="width:21px; height:19px; background: url(/web/resources/images/searchbox_left.gif) repeat-x center left;">
+				&nbsp;
+			 </td>
+			 <td style="height:19px;width:60px; background: url(/web/resources/images/searchbox_bg.gif);" class="searchBoxContainer" id="searchBoxFastInternet">
+				 	<div id= "searchBoxFastInternetDiv">
+				 		<form action="/web/Rogers.portal?_nfpb=true&amp;_pageLabel=search" method="get" onSubmit="return EndecaSearch.validateSearch(this);">
+						  <p>
+							<input type="hidden" name="_nfpb" value="true"/>
+							<input type="hidden" name="_pageLabel" value="search"/>
+							<input id="Ntt" type="text" name="Ntt" value="Search" onClick="clickclear(this, 'Search')" onBlur="clickrecall(this,'Search')" class="searchbox">
+						  </p>
+						</form>
+				 	</div>
+			 </td>
+			<td width="7" style="height:19px; width:7px; background: url(/web/resources/images/searchbox_right.gif);" class="searchBoxContainer">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+
+<script type="text/javascript">
+      var $jac = jQuery.noConflict();
+      $jac(document).ready(function(){
+      	$jac("#Ntt").autocomplete("/web/suggest.jsp?_nfpb=true&_pageLabel=search", {minChars:3,highlight:false,selectFirst:false,max:25,width:200,leftoffset:40} );
+	  });
+  	  var $j = jQuery.noConflict();
+</script>
+	</div>
+						</td>
+					</tr>
+				</table>
+				
+				<table cellspacing="0" cellpadding="0" border="0" width="835" style="vertical-align: top; margin-top:12px; border-top:1px solid #EEEEEE">
+					<tr>
+						<td id="searchBoxBgIMG"
+							style="vertical-align: top; background: transparent url(/web/framework/skins/rogersRedesign/images/menu/menuBg_on.jpg) repeat-x scroll left top;">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<tr>
+								
+									
+										
+										
+										
+										
+											
+											
+											
+												
+												
+												
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('1','home.wirelessIMG', '/web/framework/skins/rogersRedesign/images/menu/en/wireless');
+									</script>     
+
+										
+											
+												
+													
+														
+														<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=WRLS_HOME" id="home.wireless"
+															style="float: left; height: 31px;"> <img id="home.wirelessIMG" name="home.wirelessIMG"
+															src="/web/framework/skins/rogersRedesign/images/menu/en/wireless_sel.png"
+															alt="WIRELESS" /> </a>
+													
+													
+												
+											
+											
+										</td>
+									
+										
+										
+										
+										
+											
+											
+											
+												
+												
+												
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('2','home.internetIMG', '/web/framework/skins/rogersRedesign/images/menu/en/internet');
+									</script>     
+
+										
+											
+												
+													
+													
+														
+															
+															
+																<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=INTER_LANDING" id="home.internet"
+																	style="float: left; height: 31px;"
+																	onMouseOver="MM_swapImage('home.internetIMG','','/web/framework/skins/rogersRedesign/images/menu/en/internet_sel.png');"
+																	onMouseOut="MM_swapImgRestore();"> <img id="home.internetIMG" name="home.internetIMG"
+																	src="/web/framework/skins/rogersRedesign/images/menu/en/internet_off.png"
+																	alt="INTERNET" /> </a>
+															
+														
+													
+												
+											
+											
+										</td>
+									
+										
+										
+										
+										
+											
+											
+											
+												
+												
+												
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('3','home.cabletvIMG', '/web/framework/skins/rogersRedesign/images/menu/en/cabletv');
+									</script>     
+
+										
+											
+												
+													
+													
+														
+															
+															
+																<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=PTV_Landing" id="home.cabletv"
+																	style="float: left; height: 31px;"
+																	onMouseOver="MM_swapImage('home.cabletvIMG','','/web/framework/skins/rogersRedesign/images/menu/en/cabletv_sel.png');"
+																	onMouseOut="MM_swapImgRestore();"> <img id="home.cabletvIMG" name="home.cabletvIMG"
+																	src="/web/framework/skins/rogersRedesign/images/menu/en/cabletv_off.png"
+																	alt="TV" /> </a>
+															
+														
+													
+												
+											
+											
+										</td>
+									
+										
+										
+										
+										
+											
+											
+											
+												
+												
+												
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('4','home.homephoneIMG', '/web/framework/skins/rogersRedesign/images/menu/en/homephone');
+									</script>     
+
+										
+											
+												
+													
+													
+														
+															
+															
+																<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=HPH_land" id="home.homephone"
+																	style="float: left; height: 31px;"
+																	onMouseOver="MM_swapImage('home.homephoneIMG','','/web/framework/skins/rogersRedesign/images/menu/en/homephone_sel.png');"
+																	onMouseOut="MM_swapImgRestore();"> <img id="home.homephoneIMG" name="home.homephoneIMG"
+																	src="/web/framework/skins/rogersRedesign/images/menu/en/homephone_off.png"
+																	alt="HOME PHONE" /> </a>
+															
+														
+													
+												
+											
+											
+										</td>
+									
+										
+										
+										
+										
+											
+											
+											
+												
+												
+												
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('5','home.securityIMG', '/web/framework/skins/rogersRedesign/images/menu/en/security');
+									</script>     
+
+										
+											
+												
+													
+													
+														
+															
+															
+																<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=SECURITY_LANDING" id="home.security"
+																	style="float: left; height: 31px;"
+																	onMouseOver="MM_swapImage('home.securityIMG','','/web/framework/skins/rogersRedesign/images/menu/en/security_sel.png');"
+																	onMouseOut="MM_swapImgRestore();"> <img id="home.securityIMG" name="home.securityIMG"
+																	src="/web/framework/skins/rogersRedesign/images/menu/en/security_off.png"
+																	alt="HOME MONITORING" /> </a>
+															
+														
+													
+												
+											
+											
+										</td>
+									
+										
+										
+										
+										
+											
+												
+												
+											
+											
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('6','home.cablebundlesIMG', '/web/framework/skins/rogersRedesign/images/menu/en/cablebundles');
+									</script>     
+
+										
+											
+												
+													
+													
+														
+															
+															
+																<a href="/web/content/bundles-landing" id="home.cablebundles"
+																	style="float: left; height: 31px;"
+																	onMouseOver="MM_swapImage('home.cablebundlesIMG','','/web/framework/skins/rogersRedesign/images/menu/en/cablebundles_sel.png');"
+																	onMouseOut="MM_swapImgRestore();"> <img id="home.cablebundlesIMG" name="home.cablebundlesIMG"
+																	src="/web/framework/skins/rogersRedesign/images/menu/en/cablebundles_off.png"
+																	alt="BUNDLES" /> </a>
+															
+														
+													
+												
+											
+											
+										</td>
+									
+										
+										
+										
+										
+											
+											
+											
+												
+												
+												
+											
+										
+										
+										
+										<td> <script type="text/javascript">
+										addButtonToArray('7','home.supportIMG', '/web/framework/skins/rogersRedesign/images/menu/en/support');
+									</script>     
+
+										
+											
+												
+													
+													
+														
+															
+															
+																<a href="http://www.rogers.com/web/Rogers.portal;jsessionid=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296?_nfpb=true&amp;_pageLabel=support_landing" id="home.support"
+																	style="float: left; height: 31px;"
+																	onMouseOver="MM_swapImage('home.supportIMG','','/web/framework/skins/rogersRedesign/images/menu/en/support_sel.png');"
+																	onMouseOut="MM_swapImgRestore();"> <img id="home.supportIMG" name="home.supportIMG"
+																	src="/web/framework/skins/rogersRedesign/images/menu/en/support_off.png"
+																	alt="SUPPORT" /> </a>
+															
+														
+													
+												
+											
+											
+										</td>
+									
+								
+
+								<script type="text/javascript">
+							addButtonToArray(-1,'searchBoxBgIMG', '/web/framework/skins/rogersRedesign/images/menu/menuBg');
+						</script>
+
+								
+							</tr>
+						</table>
+						</td>
+					</tr>
+					
+						
+						
+							<tr>
+								<td style="width: 835px;">
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+		
+			<div id="nav1home.wirelessDrop" class="white_testing" style="display: block; z-index: 1;">
+		
+		
+		 
+		<div class="menuDDVertical">
+					<ul>
+						
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+							<!-- Kept fixed line-height for IE6 fix -->
+								<li>
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless1" href="/web/content/Phones-Devices" class="menuSpacing" style="padding-left:12px; padding-right:12px;">											
+												Phones 							
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless2" href="/web/content/wireless_plan_landing" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Plans
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless3" href="/web/content/wireless_ron" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												<i>Rogers One Number&trade;</i>
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless4" href="/web/Rogers.portal?_nfpb=true&_pageLabel=AppsAddons" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Add-ons & Apps
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless6" href="https://www.orderrogers.ca/rocket?province=ON" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Mobile Internet
+										</a>
+									</div>
+								</li>
+							
+  							
+  							
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless7" href="/web/Rogers.portal?_nfpb=true&_pageLabel=AppsAddons&category=12" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Travel
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless8" href="/web/Rogers.portal?_nfpb=true&_pageLabel=WRLS_PREPAID_LANDING" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												<i>Pay As You Go&trade;</i>
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavWireless9" href="https://www.orderrogers.ca/sale/?province=ON" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Red Hot Deals
+										</a>
+									</div>
+								</li>
+							
+  							
+  							
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</div>
+				
+				</div>
+	
+	
+
+
+	
+		<script type="text/javascript">
+			$("#idTopNavWireless1").click(function(){
+				cmCreatePageElementTag("Phones", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless2").click(function(){
+				cmCreatePageElementTag("Plans", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless3").click(function(){
+				cmCreatePageElementTag("RON", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless4").click(function(){
+				cmCreatePageElementTag("Add-Ons", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless6").click(function(){
+				cmCreatePageElementTag("Mobile Internet", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless7").click(function(){
+				cmCreatePageElementTag("Travel", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless8").click(function(){
+				cmCreatePageElementTag("PAY GO", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idTopNavWireless9").click(function(){
+				cmCreatePageElementTag("Hot Deal", "Wireless Top Navigation");
+			  	window.location = $(this).attr("href");
+			});
+		
+			$("#idDropDownNavWireless1").click(function(){
+				cmCreatePageElementTag("Phones", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless2").click(function(){
+				cmCreatePageElementTag("Plans", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless3").click(function(){
+				cmCreatePageElementTag("RON", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless4").click(function(){
+				cmCreatePageElementTag("Add-Ons", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless5").click(function(){
+				cmCreatePageElementTag("Accessories", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless6").click(function(){
+				cmCreatePageElementTag("Mobile Internet", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless7").click(function(){
+				cmCreatePageElementTag("Travel", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless8").click(function(){
+				cmCreatePageElementTag("PAY GO", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+			$("#idDropDownNavWireless9").click(function(){
+				cmCreatePageElementTag("Hot Deal", "Wireless Dropdown");
+			  	window.location = $(this).attr("href");
+			});
+		</script>
+	
+
+								
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+
+
+	
+		
+			<div id="nav1home.internetDrop" class="white_testing" 
+					onMouseOut="MM_swapImgRestore(); HideMenuNew('home.internet');" 
+					onMouseOver="MM_swapImage('home.internetIMG','','/web/framework/skins/rogersRedesign/images/menu/en/internet_sel.png',0); showWireInfoNew('home.internet')" 
+					onMouseMove="MM_swapImage('home.internetIMG','','/web/framework/skins/rogersRedesign/images/menu/en/internet_sel.png',0); showWireInfoNew('home.internet')">    
+		
+		
+		 
+		<div class="menuDDVertical">
+					<ul>
+						
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+							<!-- Kept fixed line-height for IE6 fix -->
+								<li>
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavInternet1" href="/web/link/hispeedBrowseFlowDefaultPlans" class="menuSpacing" style="padding-left:12px; padding-right:12px;">											
+												Packages & Pricing							
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavInternet2" href="/web/content/wireless_ron" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												<i>Rogers One Number&trade;</i>
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavInternet3" href="https://www.orderrogers.ca/rocket/?province=ON" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Mobile Internet
+										</a>
+									</div>
+								</li>
+							
+  							
+  							
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavInternet4" href="/web/content/internet_security-features" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Online Protection 
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavInternet5" href="/web/content/techxpert" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												<i>Rogers TechXpert</i>
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</div>
+				
+				</div>
+	
+	
+
+
+	
+
+								
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+		
+			<div id="nav1home.cabletvDrop" class="white_testing" 
+					onMouseOut="MM_swapImgRestore(); HideMenuNew('home.cabletv');" 
+					onMouseOver="MM_swapImage('home.cabletvIMG','','/web/framework/skins/rogersRedesign/images/menu/en/cabletv_sel.png',0); showWireInfoNew('home.cabletv')" 
+					onMouseMove="MM_swapImage('home.cabletvIMG','','/web/framework/skins/rogersRedesign/images/menu/en/cabletv_sel.png',0); showWireInfoNew('home.cabletv')">    
+		
+		
+		 
+		<div class="menuDDVertical">
+					<ul>
+						
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+							<!-- Kept fixed line-height for IE6 fix -->
+								<li>
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV1" href="/web/link/ptvBrowsePackagesFlowBegin?forwardTo=landing" class="menuSpacing" style="padding-left:12px; padding-right:12px;">											
+												Packages & Pricing							
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV2" href="/web/Rogers.portal?_nfpb=true&_pageLabel=PTV_PROG_LANDING" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Channels
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV3" href="/web/Rogers.portal?_nfpb=true&_pageLabel=onDemandOverview" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												On Demand
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV4" href="/web/content/hdtv_revamp" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												HD TV
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV5" href="/web/content/personal-about/PPV" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Pay Per View 
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV6" href="/web/Rogers.portal?_nfpb=true&_pageLabel=cable_hardware_page" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Hardware
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavCableTV7" href="/web/Rogers.portal?_nfpb=true&_pageLabel=PTV_CABLE_PROMOTIONS" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Promotions
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</div>
+				
+				</div>
+	
+	
+
+
+	
+
+								
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+		
+			<div id="nav1home.homephoneDrop" class="white_testing" 
+					onMouseOut="MM_swapImgRestore(); HideMenuNew('home.homephone');" 
+					onMouseOver="MM_swapImage('home.homephoneIMG','','/web/framework/skins/rogersRedesign/images/menu/en/homephone_sel.png',0); showWireInfoNew('home.homephone')" 
+					onMouseMove="MM_swapImage('home.homephoneIMG','','/web/framework/skins/rogersRedesign/images/menu/en/homephone_sel.png',0); showWireInfoNew('home.homephone')">    
+		
+		
+		 
+		<div class="menuDDVertical">
+					<ul>
+						
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+							<!-- Kept fixed line-height for IE6 fix -->
+								<li>
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavHomephone1" href="/web/link/hpValuePlanFlow" class="menuSpacing" style="padding-left:12px; padding-right:12px;">											
+												Packages & Pricing							
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavHomephone2" href="/web/link/hpBrowseFlow?forwardTo=Feature" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Calling Features
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavHomephone3" href="/web/link/hpBrowseFlow?forwardTo=LDPlans" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Long Distance
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavHomephone4" href="/web/content/wirelesshomephone" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Wireless Home Phone
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</div>
+				
+				</div>
+	
+	
+
+
+	
+
+								
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+		
+			<div id="nav1home.securityDrop" class="white_testing" 
+					onMouseOut="MM_swapImgRestore(); HideMenuNew('home.security');" 
+					onMouseOver="MM_swapImage('home.securityIMG','','/web/framework/skins/rogersRedesign/images/menu/en/security_sel.png',0); showWireInfoNew('home.security')" 
+					onMouseMove="MM_swapImage('home.securityIMG','','/web/framework/skins/rogersRedesign/images/menu/en/security_sel.png',0); showWireInfoNew('home.security')">    
+		
+		
+		 
+		<div class="menuDDVertical">
+					<ul>
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</div>
+				
+				</div>
+	
+	
+
+
+	
+
+								
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+		
+			<div id="nav1home.cablebundlesDrop" class="white_testing" 
+					onMouseOut="MM_swapImgRestore(); HideMenuNew('home.cablebundles');" 
+					onMouseOver="MM_swapImage('home.cablebundlesIMG','','/web/framework/skins/rogersRedesign/images/menu/en/cablebundles_sel.png',0); showWireInfoNew('home.cablebundles')" 
+					onMouseMove="MM_swapImage('home.cablebundlesIMG','','/web/framework/skins/rogersRedesign/images/menu/en/cablebundles_sel.png',0); showWireInfoNew('home.cablebundles')">    
+		
+		
+		
+				</div>
+	
+	
+
+
+	
+
+								
+									
+									
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+
+
+	
+		
+			<div id="nav1home.supportDrop" class="white_testing" 
+					onMouseOut="MM_swapImgRestore(); HideMenuNew('home.support');" 
+					onMouseOver="MM_swapImage('home.supportIMG','','/web/framework/skins/rogersRedesign/images/menu/en/support_sel.png',0); showWireInfoNew('home.support')" 
+					onMouseMove="MM_swapImage('home.supportIMG','','/web/framework/skins/rogersRedesign/images/menu/en/support_sel.png',0); showWireInfoNew('home.support')">    
+		
+		
+		 
+		<div class="menuDDVertical">
+					<ul>
+						
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+							<!-- Kept fixed line-height for IE6 fix -->
+								<li>
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport1" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=1" class="menuSpacing" style="padding-left:12px; padding-right:12px;">											
+												Wireless							
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+							
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport2" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=4" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Home Phone
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport3" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=3" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												TV
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport4" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=2" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Internet 
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport5" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=5" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Smart Home Monitoring
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport6" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=6" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Billing & Payment
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport7" href="/web/content/moving-your-services" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Moving
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport8" href="/web/Rogers.portal?_nfpb=true&_pageLabel=support_landing&supportLOB=7" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Rogers First Rewards
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport9" href="/web/content/contactus" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Contact Us
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+							
+							
+							
+							
+							
+							
+							
+  							
+  							
+  							
+							 
+								<li style="border-left: 1px solid #7a0909;">
+									<div class="menuDDVertWrapper">
+										<a id="idTopNavSupport10" href="http://communityforums.rogers.com	" class="menuSpacing" style="padding-left:12px; padding-right:12px;">
+												Community Forums
+										</a>
+									</div>
+								</li>
+							 
+							 
+							
+						
+					</ul>
+				</div>
+				
+				</div>
+	
+	
+
+
+	
+
+								</td>
+							</tr>
+						
+					
+				</table>
+				</td>
+			</tr>
+		</table>
+		</div>
+	
+
+
+
+
+
+	
+
+
+<div style="border-bottom:1px solid #FFFF">
+
+
+
+
+
+
+
+
+
+<link rel="rogers fav icon" href="/web/resources/images/favicon.ico" >
+
+<div style="border-bottom:1px solid #FFFF">
+        
+        <div
+            class="bea-portal-book-primary-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-book-primary-page"
+        
+    >
+
+
+
+
+
+
+
+
+
+    
+    <table
+        
+        class="bea-portal-layout-grid"
+        
+        cellspacing="0"
+    >
+    
+        <tr>
+    
+            
+            <td id="grid00" class="bea-portal-layout-placeholder-container"
+                style="width:705"
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <table
+        
+        class="bea-portal-layout-flow"
+        
+        cellspacing="0"
+    >
+        <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+<div id="breadcrumb"></div>
+<script type="text/javascript">renderBreadcrumbs(["/web/Rogers.portal","Home","/web/Rogers.portal?_nfpb=true&_pageLabel=WRLS_book","Wireless","/web/content/wireless-plans","Plans & Essentials","/web/content/wireless-plans/essentials?content10=auto_roadside","Auto Roadside Service","","Terms &amp; Conditions",]);</script>
+
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<script type="text/javascript">
+			var isLoyaltyOnForMarket = false;
+		</script>
+		
+<div id="pageHeading">
+	<p>Auto Roadside Service Terms &amp; Conditions</p>
+</div>
+
+
+<!--
+<dcr.dcrname>templatedata\content_common\en_generic_type\data\ON_2007220859900</dcr.dcrname>
+-->
+
+		
+				
+		
+
+
+	
+
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-book"
+        
+    >
+        
+        
+        <div
+            class="bea-portal-book-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-book-page"
+        
+    >
+
+
+
+
+
+
+
+
+    
+    <table
+        
+        class="bea-portal-layout-grid"
+        
+        cellspacing="0"
+    >
+    
+        <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                style="width:258"
+            >
+            
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <table
+        
+        class="bea-portal-layout-flow"
+        
+        cellspacing="0"
+    >
+        <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+<span class="bea-portal-theme-leftnav">
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+	<div id="leftnav_SectionNav">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="EmbededLeftNav_SectionNav">
+	<ul>
+		
+			   			
+							<li>aaaa</li>						
+				  
+			   			
+							<li>bbbb</li>						
+				  
+			   			
+							<li>cccc</li>						
+				  
+	</ul>
+</div>
+
+				
+				
+	
+
+
+
+
+
+
+
+			
+	</div>
+
+
+</div>
+    </div>
+    
+
+</span>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+  
+	<div id="inqC2C2ImgContainer"></div>
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+    
+        </tr>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            </td>
+            
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                style="width:705"
+            >
+            
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <table
+        
+        class="bea-portal-layout-flow"
+        
+        cellspacing="0"
+    >
+        <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<script type="text/javascript">
+			var isLoyaltyOnForMarket = false;
+		</script>
+		
+<img src="/cms/images/spacer/blank_526.gif"/>
+
+
+<!--
+<dcr.dcrname>templatedata\content_common\en_generic_type\data\ON_2007220859900</dcr.dcrname>
+-->
+
+		
+				
+		
+
+
+	
+
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		<script type="text/javascript">
+			var isLoyaltyOnForMarket = false;
+		</script>
+		
+<b>Auto Roadside Service (Access and Premium Plan)</b><br>
+<br>
+Roadside Assistance is linked to your Rogers Wireless phone number. When calling for service, have your phone number ready. Once service is dispatched, the vehicle must be attended when service arrives. For the Premium Plan, the wireless device must be present at time of service as proof of membership. <br>
+<br>
+#AUTO (#2886) can be dialed in Canada (airtime and toll free) from your Rogers Wireless device. While in the United States or via landline, please dial 1-800-883-2113 toll free (airtime and roaming charges are additional if calling from your wireless device).<br>
+<br>
+Eligible vehicles for Auto Roadside Service are: any non-commercial motor car, truck or van with a gross vehicle weight not exceeding a one ton cargo rating but shall not include any motorcycle, snowmobile, farm tractor, farm or construction machine or any other vehicle not normally intended to be driven on public roads or highways.<br>
+<br>
+The 5 service calls included in the Premium Plan covers up to $50.00 CDN per each service incident. Any overages will be informed up-front and are the responsibility of the customer.<br>
+<br>
+There is a 72 hour processing period before a subscriber to the Premium Plan can take advantage of the included 5 service calls.<br>
+<br>
+Services covered by the program:<br>
+<br>
+<ul class="greyBullet">
+<li>Delivery of gasoline or diesel, to an Eligible Vehicle up to a maximum of 12 litres. The 12 litres are delivered free of charge with the Auto Roadside Premium Plan. The Eligible Vehicle must be out of fuel prior to the request for service.</li>
+
+<li>Lockout service or key replacement for an Eligible Vehicle, consisting of assistance in gaining entry into a Eligible Vehicle or in making a new key if one is lost, broken, or stolen.</li>
+
+<li>Removal of flat tire and replacement with customer provided spare for an Eligible Vehicle.</li>
+
+<li>Jump-start service for dead or depleted battery for an Eligible Vehicle.</li>
+
+<li>Towing service of an Eligible Vehicle to the destination of the customer&rsquo;s choice for any reason including, without limitation, mechanical failure, collision, road debris, or weather-related phenomena. Auto Roadside Access will also provide towing required as the result of vandalism (not included in the Auto Roadside Premium Plan).</li>
+
+<li>Extraction of an Eligible Vehicle from a physical hazard or encumbrance.</li>
+
+<li>Winching of an Eligible Vehicle that has slid from or otherwise left a road.</li>
+</ul>
+
+<br>
+For Auto Roadside Access, payment must be made at time of service request. Major credit cards are the accepted means of payment. Customers are responsible for all applicable taxes.<br>
+<br>
+The Roadside Assistance program for Rogers Wireless subscribers is provided by Asurion Roadside Assistance Services Inc. Asurion may be contacted by calling #AUTO (#2886) or 1-800-883-2113.<br>
+<br>
+Neither Asurion nor Rogers Wireless make any warranties as to actual response times on individual calls and are not responsible for service delays.<br>
+<br>
+Requests for services will be endeavoured to be responded in a timely fashion as weather and traffic conditions permit but no responsibility exists for service delays. No warranties are made to actual response times. An estimate of waiting time will be provided upon the service call.<br>
+<br>
+A &ldquo;Gone on Arrival&rdquo; fee of $20.00 USD or $25.00 CDN is applicable to the customer if a call for service is made and the customer is not present at the vehicle upon service response.<br>
+<br>
+For the Auto Roadside Access program, Asurion will make a reasonable attempt to find the lowest vendor price for services in the area where the services take place. If within seven days of a service event, the Subscriber submits a bona fide quote from a 2nd vendor who was able to provide the same services at a lower price on the occasion that the service was needed, Asurion will refund the customer 110% of the difference between the price paid for the services and the price quoted to the customer by the alternate vendor. To submit a valid quote that disputes receiving the best rate, please call #AUTO (#2886) or 1-800-883-2113 to speak with an auto roadside vendor representative.
+
+
+<!--
+<dcr.dcrname>templatedata\content_common\en_generic_type\data\ON_2007220859900</dcr.dcrname>
+-->
+
+		
+				
+		
+
+
+	
+
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+    
+        </tr>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            </td>
+            
+    
+
+        </tr>
+    
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+        </div>
+        
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+    
+        </tr>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</td>
+            
+    
+            
+            <td id="grid01" class="bea-portal-layout-placeholder-container"
+                style="width:258"
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <table
+        
+        class="bea-portal-layout-flow"
+        
+        cellspacing="0"
+    >
+        <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <head>
+	<script language="JavaScript" src="/web/resources/js/RS_common_jquery.js" type="text/javascript"></script>
+	
+	<!--  <script language="JavaScript" src="/web/resources/js/jquery.js" type="text/javascript"></script> -->
+	<!--  <script language="JavaScript" src="/web/resources/js/common.js" type="text/javascript"></script> -->
+	<script language="JavaScript" type="text/javascript">
+	<!--//
+	
+	//this is called onload
+	$(function () {
+		//set zoom property of toggle divs in rightNav section to give layout. This is to fix IE bug when you position divs relative
+		$("#signInForm").css("zoom", "1");
+		$("#help").css("zoom","1");
+		$("#shoppingCartWrapper").css("zoom", "1");
+		$("#shopWirelessWrapper").css("zoom", "1");
+		$("#shopHomePhoneWrapper").css("zoom", "1");
+		$("#shopInternetWrapper").css("zoom", "1");
+		$("#shopPTVWrapper").css("zoom", "1");
+		$("#looking").css("zoom", "1");		
+		$("generic_zone_11").css("zoom", "1");		
+		$("generic_zone_12").css("zoom", "1");		
+	})
+	
+	// array to hold heights of right nav sections
+	var nodeHeights = new Array();
+ 	//-->	
+	</script>   
+   
+    </head>
+    <div style="text-align: left; margin:0 auto">
+
+
+</div>
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+
+
+
+
+
+    
+    <div
+        
+        class="bea-portal-window"
+        
+        width="100%"
+    >
+        
+        
+<div
+            class="bea-portal-window-content"
+            
+        >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <head>
+	<script language="JavaScript" src="/web/resources/js/RS_common_jquery.js" type="text/javascript"></script>
+	
+	<!--  <script language="JavaScript" src="/web/resources/js/jquery.js" type="text/javascript"></script> -->
+	<!--  <script language="JavaScript" src="/web/resources/js/common.js" type="text/javascript"></script> -->
+	<script language="JavaScript" type="text/javascript">
+	<!--//
+	
+	//this is called onload
+	$(function () {
+		//set zoom property of toggle divs in rightNav section to give layout. This is to fix IE bug when you position divs relative
+		$("#signInForm").css("zoom", "1");
+		$("#help").css("zoom","1");
+		$("#shoppingCartWrapper").css("zoom", "1");
+		$("#shopWirelessWrapper").css("zoom", "1");
+		$("#shopHomePhoneWrapper").css("zoom", "1");
+		$("#shopInternetWrapper").css("zoom", "1");
+		$("#shopPTVWrapper").css("zoom", "1");
+		$("#looking").css("zoom", "1");		
+		$("generic_zone_11").css("zoom", "1");		
+		$("generic_zone_12").css("zoom", "1");		
+	})
+	
+	// array to hold heights of right nav sections
+	var nodeHeights = new Array();
+ 	//-->	
+	</script>   
+   
+    </head>
+    <div style="text-align: left; margin:0 auto">
+
+
+</div>
+
+
+
+
+
+
+</div>
+    </div>
+    
+
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+                  </tr>
+                    <tr>
+    
+            
+            <td class="bea-portal-layout-placeholder-container"
+                
+            >
+
+<div
+        
+        class="bea-portal-layout-placeholder"
+        
+>
+
+
+</div>
+</td>
+            
+    
+        </tr>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</td>
+            
+    
+        </tr>
+    
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+        </div>
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			
+		
+	
+	
+		
+	    
+	    
+		
+			
+				<div id="footerWrapper">
+				
+				
+
+
+
+
+
+
+
+
+
+
+		
+			
+					
+			
+<script type="text/javascript" src="/cms/js/common/legalPrint/jquery.print.js"></script>
+<link rel="stylesheet" type="text/css" href="/cms/css/common/legalPrint/legalLinkPrint.css"/>
+<script type="text/javascript" src="/cms/js/common/legalPrint/legalLinkPrint.js"></script>
+<a href="javascript:void(0)" class="legalLinkPrint">&nbsp;</a>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5986965-3']);
+  _gaq.push(['_setDomainName', 'rogers.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') 
+    + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+//Temporary Bandaid fix for lack of zone publishing ability. S15463: TA51917 andrew.donald 
+        if(location.href.indexOf("/web/content/CSR") > 0 || location.href.indexOf("NEW_GCT") > 0){
+            $("ul.bulletRed:first").remove();
+            $("ul.bulletRed").prepend("<li><a target='_blank' href='/cms/images/en/AboutRogers/CorporateSocialResponsibilty/pdf/2010_OmbudsmansReport.pdf'>Rogers 2010<br />Ombudsman's<br />Annual Report</a></li>");
+        }
+// End of Bandaid fix
+
+
+// S20537 - Start of DoubleClick Floodlight Tag -- andrew.donald
+	$('form#frmTemsAndCondAgreement div.checkoutFooterWrapper input#submitOrder').bind('click', function () {
+		axel = Math.random() + "";
+		a = axel * 10000000000000;
+		
+		//Motorola campaign
+		$('body').append('<iframe src="https://fls.doubleclick.net/activityi;src=2386429;type=razrb211;cat=motor978;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+	});
+
+// TEMP FIX - TO REMOVE TV PACKAGES - DAP1, DAP2, DAP3
+if(location.href.indexOf("/web/link/ptvBuyFlow") > 0){
+var i = 0;
+$('#ptvPackageForm .ptvPackagesDisplayBox').each(function(){
+    if (i == 2 || i == 3 || i == 4) {
+        //$('#ptvPackageForm .ptvPackagesDisplayBox').remove();        
+        $(this).remove();
+    }
+    i++;
+ });
+}
+// TEMP FIX - TO REMOVE TV PACKAGES - DAP1, DAP2, DAP3	 
+    });
+</script>
+
+<!-- S29247 Prod Temporary Fix for chat link. To be removed on Aug. 14 2013 -- Moe San -->
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+$('div#loginErrMsgHp.loginErrMsg a').click(function() {
+  var chatAnchor = $(this);
+  if(chatAnchor.text() == 'Live Chat service') {
+    $($(this).attr('href','http://www.rogershelp.com/chat'));
+  }
+}); 
+
+$('div#signInUnsuccessfulMessage .signerror a').click(function() {
+  var chatAnchor = $(this);
+  if(chatAnchor.text() == 'Live Chat service') {
+    $($(this).attr('href','http://www.rogershelp.com/chat'));
+  }
+});
+ 
+
+});
+
+</script>
+
+
+
+<style type="text/css">
+.footer-menu-divider {
+	padding:0px 6px 0px 6px;}
+</style>
+
+<div style="padding-top: 14px; padding-bottom: 60px; padding-left: 24px; padding-right: 24px;  vertical-align: middle;" id="footerLine1">
+
+    <div style="float: left; text-align: left; padding-top: 5px;">
+        <a class="greylink" href="/web/Rogers.portal?_nfpb=true&amp;_pageLabel=store_locator&amp;customer_type=Residential">Store Locator</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="/web/content/contactus">Contact Us</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="/web/Rogers.portal?_nfpb=true&amp;_pageLabel=IR_LANDING">Investor Relations</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="/web/content/CSR">Corporate Social Responsibility (CSR)</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="http://about.rogers.com">About Rogers</a>
+        <br>
+        <a class="greylink" href="/web/SITE_MAP.pg?customer_type=Residential">Site Map</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="/web/content/Privacy-CRTC">Privacy, CCTS &amp; CRTC</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="http://jobs.rogers.com/?utm_source=Rogerscorporate&utm_campaign=corpfooter" target="_blank">Careers</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="/web/content/support-terms">Terms &amp; Conditions</a><span class="footer-menu-divider">|</span>
+        <a class="greylink" href="/web/content/accessibility-services">Accessibility Services</a>
+    </div>
+
+    <div style="float:right; text-align: right; line-height: 20px;">
+        <img align="absmiddle" width="16" height="16" border="0" src="/cms/images/en/NewRogers/HomePage/S17129_icons_social.png" alt="Social@Rogers"> <a href="http://social.rogers.com/" target="_blank" class="greylink" onClick="cmCreatePageElementTag('Social_Rogers_Clicks','Global_Footer');">Social@Rogers</a>
+        <span class="footer-menu-divider">|</span>
+        <img align="absmiddle" width="16" height="16" border="0" src="/cms/images/en/NewRogers/HomePage/S17129_icons_redboard.png" alt="RedBoard"> <a href="http://redboard.rogers.com" target="_blank"class="greylink" onClick="cmCreatePageElementTag('Redboard_Clicks','Global_Footer');">RedBoard</a>
+        <br>
+        <a href="http://www.facebook.com/rogers" target="_blank" class="greylink" onClick="cmCreatePageElementTag('Facebook_Clicks','Global_Footer');"><img align="absmiddle" width="16" height="16" border="0" src="/cms/images/en/NewRogers/HomePage/S23917_icon_facebook.png" alt="Facebook"></a>
+        <span class="footer-menu-divider">|</span>
+        <a href="http://www.twitter.com/rogersbuzz" target="_blank" class="greylink" onClick="cmCreatePageElementTag('Twitter_Clicks','Global_Footer');"><img align="absmiddle" width="16" height="16" border="0" src="/cms/images/en/NewRogers/HomePage/S23917_icon_twitter.png" alt="Twitter"></a>
+        <span class="footer-menu-divider">|</span>
+        <a href="http://pinterest.com/rogerscanada/" target="_blank" class="greylink" onClick="cmCreatePageElementTag('Pinterest_Clicks','Global_Footer');"><img align="absmiddle" src="/cms/images/en/NewRogers/HomePage/S23917_icon_pinterest.png" alt="Pinterest" style="border:0;width:16px;height:16px;"></a>
+        <span class="footer-menu-divider">|</span>
+        <a href="https://plus.google.com/b/116490808592945718415/116490808592945718415/posts" target="_blank" class="greylink" onClick="cmCreatePageElementTag('Google_Clicks','Global_Footer');"><img align="absmiddle" src="/cms/images/en/NewRogers/HomePage/S23917_icon_google_plus.png" alt="Google+" style="border:0;width:16px;height:16px;"></a>
+    </div>
+
+</div> 
+
+		
+		
+		
+
+				
+				<div id="footerLine2">
+					&copy; 1995 - 2013 Rogers Communications 
+				</div>
+			</div>
+			
+			
+		
+
+
+
+
+<div id="blackOverlayID" class="black_overlay"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+<style type="text/css">
+	#_alertBox .contentArea{
+		float: none;
+		background-color: #FFFFFF;
+		padding-bottom: 15px;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	<!--
+	//Variables useful through site
+	//RogersPortalSettings getInstance()
+	
+	var your_rogers_com_english_domain_path='//your.rogers.com';
+	var your_rogers_com_french_domain_path='//votre.rogers.com';
+	
+	
+	function showCheckPromotionBox(promotionLink){
+		document.getElementById('_promotionLink').value=promotionLink;
+		showLayerWindow(document.getElementById('_boxServiceAbilityCheck'));
+	}
+
+	function _submitServiceAbilityForm(){
+
+		document.getElementById("_frmAvailCheck2").submit();
+	}
+
+	function a_submitServiceAbilityForm(){
+
+		document.getElementById("a_frmAvailCheck2").submit();
+	}
+
+	function _gotoTargetUrlAndRemovePackage(){
+		if (document.getElementById('_postalCodeForm').style.display=='block'){
+			document.getElementById('_action').value = "removePackage";
+			_submitServiceAbilityForm();
+		}else{
+			document.getElementById('a_action').value = "removePackage";
+			a_submitServiceAbilityForm();
+
+		}
+
+	}
+
+	function _gotoTargetUrlAndEmptyCart(){
+		if (document.getElementById('_postalCodeForm').style.display=='block'){
+			document.getElementById('_action').value = "emptyCart";
+			_submitServiceAbilityForm();
+		}else{
+			document.getElementById('a_action').value = "emptyCart";
+			a_submitServiceAbilityForm();
+		}
+
+	}
+
+	function getSelectedOption(field)
+	{
+			var value = "";
+			for (var i=0; i<field.length; i++)
+			{
+				if (field[i].checked == true)
+				{
+					value = field[i].value;
+				}
+			}
+			return value;
+	}
+
+	function onAddressNotEqualMsg(){
+		var choice = getSelectedOption(document._frmAddressNotEqualCheck.radPhoneCheck);
+
+		if(choice=="empty")
+			_gotoTargetUrlAndEmptyCart();
+		else if(choice=="proceed" || choice=="print")
+			window.location = "/web/link/showCart";
+		else if(choice=="cancel")
+			hideLayerWindow(document.getElementById('_addressNotEqualMsg'));
+	}
+
+	function onSelectShoppingCartMsg(){
+		var choice = getSelectedOption(document._frmAddressNotEqualCheck1.radPhoneCheck);
+
+		if(choice!="empty" && choice!="proceed")
+			return;
+
+		if(choice!="empty"){
+			//empty shopping cart & load cart
+			 $.get("/web/resources/service/emptyShoppingCart.jsp", function(data){
+			 	if(choice=="proceed")
+					window.location = "/web/link/showCart";
+				else if(choice=="print")
+					window.location = "/web/link/showCart";
+				else
+					window.location = "/web/Rogers.portal";
+			 });
+		}
+		else
+			window.location = "/web/link/showCart";
+	}
+	-->
+	</script>
+
+	<div id="AlertBox" style="display:none;position:absolute;z-index:10;top:300px;left:380px;padding:10px;"></div>
+
+	<!-- popup window for service promotion ability check -->
+	<div class="boxLayer" id="_boxServiceAbilityCheck" style="width:300px;display:none">
+		<div class="closeButton">
+			<a href="#" onclick="hideLayerWindow(document.getElementById('_boxServiceAbilityCheck')); return false;" class="popupClose">Close</a>
+		</div>
+		<div class="contentArea">
+			<h1>Rogers Service availability.</h1>
+			<p>
+				To ensure that you get the right products and services please enter your postal code.
+			</p>
+			<div class="sharedLineElements" >
+			<form id="frmServicePromotionAvailableCheck" action="/web/link/checkServicePromotionAbility" method="post">
+				<div class="sharedLineElements">
+					Postal code:
+					<input type="text" id="_postalCode" name="_postalCode" size="10" maxlength="7"/>
+					<input class="submit" id="submit" type="image" src="/web/resources/images/btn_submit.gif" alt="" onclick="document.getElementById('_boxServiceAbilityCheck').style.display='none';" />
+					<input type="hidden" id="_promotionLink" name="_promotionLink" value=""/>
+				</div>
+			</form>
+			</div>
+		</div>
+		<p></p>
+	</div>
+
+<!--First layer : Enter Postal code -->
+<div class="boxLayer" id="_boxServiceCheck1" style="width:320px;display:none">
+	<div class="closeButton"><a href="#" onclick="_boxServiceCheck1Close(); return false;" class="popupClose">Close</a></div>
+	<div class="contentArea">
+		<h1 id=h1_RogersServiceavailability>Rogers Service availability.</h1>
+
+
+		<div class="sharedLineElements" id="_postalCodeForm" style="width:300px;display:none" >
+			<p id=p_Toensurethatyougettherightproducts >
+				To ensure that you get the right products and services please enter your postal code.
+			</p>
+			<div style="width:300px;">
+					<div class="sharedLineElements" id="_boxServiceCheck2" style="display:none" >
+			 			<div class="errorMessage">Please enter a valid postal code.</div>
+					</div>
+					<div class="sharedLineElements" id="_boxServiceCheck3" style="display:none">
+			 			<div class="errorMessage">Please enter a postal code.</div>
+					</div>
+			</div>
+
+			<form id="_frmAvailCheck2" action="/web/link/checkPostalCode" onsubmit="return _cableAddressCheck()" >
+				<p>
+					Postal code:
+					<input type="text" id="_postalCode2" name="_postalCode"  maxlength="7"  onKeyDown="_errorMsgClose()" onclick="_errorMsgClose()" />
+					<input class="submit" id="submit" type="image" src="/web/resources/images/btn_submit.gif" alt=""  />
+
+					<input type="hidden"  id="_targetUrl" name="_targetUrl"/>
+					<input type="hidden"  id="_productId" name="_productId"/>
+					<input type="hidden"  id="_productLine" name="_productLine"/>
+					<input type="hidden"  id="_action" name="_action" value="removePackage"/>
+				</p>
+			</form>
+		</div>
+
+
+		<div id="_addressForm" style="width:300px;display:none" >
+			<form id="a_frmAvailCheck2" action="https://www.rogers.com/web/link/checkPostalCode">
+
+					<p>Please enter the address where you will be using your service.<br/><br/></p>
+
+					<div class="first" >
+						<label for="a_txtLastName">Last name:<br />
+						<input type="text" name="txtLastName" id="a_txtLastName" style="width:271px"/></label>
+					</div>
+					<div class="sharedLineElements">
+						<label for="a_txtStreetNum">Street #<br />
+						<input type="text" name="txtStreetNum" id="a_txtStreetNum" style="width:90px"/></label>
+						<label for="a_txtStreetName"  class="last" >Street name:<br />
+						<input type="text" name="txtStreetName" id="a_txtStreetName" style="width:165px"/></label>
+					</div>
+					<div class="sharedLineElements">
+						<label for="a_txtAptNum">Apt:<br />
+						<input type="text" name="txtAptNum" id="a_txtAptNum" style="width:90px"/></label>
+						<label for="a_postalCode2">Postal code:<br />
+						<input type="text" name="_postalCode" id="a_postalCode2"  maxlength="7"  style="width:75px"/></label>
+						<!-- for display purposes only, clicking submit will display the default box contents for an account that has been found -->
+						<input class="submit" id="submit" type="image" src="/web/resources/images/btn_submit.gif" alt="" onclick="return _cableAddressCheck()" />
+					</div>
+
+				<p>
+					<input type="hidden"  id="a_txtProvince" name="txtProvince"/>
+					<input type="hidden"  id="a_txtCity" name="txtCity"/>
+
+					<input type="hidden"  id="a_targetUrl" name="_targetUrl"/>
+					<input type="hidden"  id="a_productId" name="_productId"/>
+					<input type="hidden"  id="a_productLine" name="_productLine"/>
+					<input type="hidden"  id="a_action" name="_action" value="removePackage"/>
+				</p>
+			</form>
+		</div>
+
+		<div class="sharedLineElements" id="_boxServiceCheck9999" >
+ 			<div class="errorMessage"></div>
+		</div>
+
+		<div class="sharedLineElements" id="_boxServiceCheck999" style="display:none">
+ 			<div class="errorMessage"></div>
+		</div>
+
+		<div class="sharedLineElements" id="_boxServiceCheck4" style="display:none">
+ 			<br/>The postal code entered does not match your shopping province. Your shopping province will now be changed to match your postal code.
+				<br/><br/><label>Do you wish to continue?</label>
+				<input class="submit" id="no1" type="image" src="/web/resources/images/btn_no.gif" alt="Yes" onclick="_errorMsgClose()"/>
+				<input class="submit" id="yes1" type="image" src="/web/resources/images/btn_yes.gif" alt="No" onclick="javascript:_submitServiceAbilityForm()"/>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="boxLayer" id="_productInCartBox" style="display:none">
+	<div class="closeButton"><a href="#" onclick="hideLayerWindow(document.getElementById('_productInCartBox')); return false;" class="popupClose">Close</a></div>
+		<div class="contentArea">
+			<h1>Product already in cart</h1>
+			<p>
+				The product you've selected to order is already in your shopping cart.<p>
+				If you add this product, it will replace the original one and you will need to rebuild your package.
+			</p>
+			<p>
+				Do you wish to continue?
+			</p>
+				<table width="100%" ><tr align="center" >
+				<td style="width:50%" >
+						<input id="ok_btn" type="image" src="/web/resources/images/btn_yes.gif"
+						alt="Yes" 
+						onclick="_gotoTargetUrlAndRemovePackage(); return false;"
+						/>
+				</td>
+				<td style="width:50%" >
+						<input id="ok_btn" type="image" src="/web/resources/images/btn_no.gif"
+						alt="No" 
+						onclick="hideLayerWindow(document.getElementById('_productInCartBox')); return false;"
+						/>
+				</td></tr></table>
+		</div>
+</div>
+
+<div class="boxLayer" id="_addressNotEqualMsg"  style="width:400px;display:none">
+	<div class="closeButton"><a href="#" onclick="hideLayerWindow(document.getElementById('_addressNotEqualMsg')); return false;" class="popupClose">Close</a></div>
+	<div class="contentArea" >
+		<div class="boldText" id="addProductFromDifferentAddress">You already have a shopping cart. The product(s) you have selected to order must be added using the same address information associated with this original shopping cart.</div>
+		<br/>
+		<div class="boldText" id="Whatwouldyouliketodo">To proceed, please select one of the following options:</div>
+		<form name="_frmAddressNotEqualCheck" method="post" action="">
+			<div>
+				<div style="width:390px;padding-top:5px"><input type="radio" name="radPhoneCheck" id="radPhoneCheck1" value="empty" checked /> Empty my original cart and add the product(s) selected</div>
+				<div style="width:390px;padding-top:5px"><input type="radio" name="radPhoneCheck" id="radPhoneCheck2" value="proceed" /> Proceed to checkout with my original shopping cart</div>
+				<div style="width:390px;padding-top:5px"><input type="radio" name="radPhoneCheck" id="radPhoneCheck3" value="print" /> Print and/or e-mail my original shopping cart</div>
+				<div style="width:390px;padding-top:5px"><input type="radio" name="radPhoneCheck" id="radPhoneCheck4" value="cancel" /> Don't add these products and keep my original shopping cart</div>
+			</div>
+			<div><input class="submit" type="image" src="/web/resources/images/btn_submit.gif" alt=""
+						onclick="onAddressNotEqualMsg();return false" /></div>
+		</form>
+	</div>
+</div>
+
+
+<div class="boxLayer" id="_alertBox" style="display:none">
+	<div class="closeButton"><a href="#" onclick="javascript:closeAlert2(); return false;" class="popupClose">Close</a></div>
+		<div class="contentArea">
+			<h1></h1>
+			<p id="_alertBoxMessage"></p>
+				<table width="100%" ><tr align="center" >
+				<td style="width:100%" >
+						<input id="ok_btn" type="image" src="/web/resources/images/btn_ok.png" alt="Ok" 
+						onclick="javascript:closeAlert2(); return false;"
+						/>
+				</td><td>
+
+				</td></tr></table>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">document.title='Rogers.com - Auto Roadside Service Terms &amp; Conditions';</script>
+
+
+	<!-- Added page view tag in footer.jsp by Victor on Jun 11, 07 -->
+	<!-- BEGIN COREMETRICS SUPPORT -->
+<script type="text/javascript">
+<!--
+	cmCreatePageviewTag("ON:Home.Wireless.Plans_&_Essentials.Auto_Roadside_Service.Terms_&amp;_Conditions:EN","AutoGen:en:consumer:wireless");
+//-->
+</script>
+<!-- END COREMETRICS SUPPORT -->
+
+	<!-- Added  page view tag in footer.jsp by Victor on Jun 11, 07 -->
+
+
+
+
+
+<script type="text/javascript">
+
+	function showLightBox(blackObjId,lightBoxObjId,lightIconObjId,showOrNotObjId){
+
+		var browser=navigator.appName;
+		var maxheight=document.documentElement.clientHeight;
+
+		var maxwidth = document.documentElement.clientWidth;
+       /* var offsetWidth;
+        var offsetTop;
+		if (browser=='Netscape'){
+			offsetTop = document.body.scrollTop;
+		}else{
+			offsetTop = document.documentElement.scrollTop;
+		}
+		offsetWidth = document.body.scrollLeft;
+		*/
+		// calcualte width for black background
+		if(document.documentElement.clientWidth > document.body.scrollWidth){
+                maxheight = document.documentElement.clientWidth;
+        }else{
+                maxheight = document.documentElement.scrollWidth;
+		}
+		// calcualte height for black background
+
+        if(document.documentElement.clientHeight > document.body.scrollHeight){
+                maxheight = document.documentElement.clientHeight+15;
+        }else{
+                maxheight = document.documentElement.scrollHeight+15;
+		}
+
+		if(blackObjId!=null && lightBoxObjId!=null && showOrNotObjId !=null){
+			if(showOrNotObjId.value == 'true'){
+				blackObjId.style.display='block';
+				lightBoxObjId.style.display='block';
+				if(lightIconObjId!=null){
+					lightIconObjId.style.display='block';
+				}
+				blackObjId.style.height=maxheight;
+				blackObjId.style.width=maxwidth;
+			}
+		}
+	}
+
+	
+
+
+		var blackObj = document.getElementById('EmailBody1');
+		var lightBoxObj = document.getElementById('EmailThisPageFormID');
+		var lightIconObj = document.getElementById('EmailThisPageButtonID');
+		var showOrNotObj = document.getElementById('showLightBoxOrNotID');
+		showLightBox(blackObj,lightBoxObj,lightIconObj,showOrNotObj);
+		
+</script>
+
+
+
+	<script type="text/javascript">
+	function titleTailor() {
+		var currTitle = document.title;		
+		currTitle = currTitle.replace("Rogers.com - ","");
+		currTitle = currTitle.replace("Rogers.com ","");
+		currTitle = currTitle.replace("Rogers.com","");
+		if(currTitle.indexOf(" - Rogers ") == -1){
+			if(currTitle.trim().length == 0) {
+				currTitle = "Rogers" ;
+			}
+			else {
+				currTitle = currTitle + " - Rogers" ;
+			}
+			
+		}
+		document.title = currTitle;
+		
+	}
+	titleTailor();
+	</script>
+
+	
+	<!-- replace with the iframePing.jsp -->
+	
+		<iframe 	
+		
+			src="/sso/ping.asp?setLanguage=en&setProvince=ON&JSESSIONID=l2LvSdMLNv9vHMbbTG7pbpFjrttyLN1Q5ynZWgS85sJQ8XSyVLQY!-1399189296!1377651915541"
+		
+			name="MyIframeEn" width="0" height="0" marginheight="0" marginwidth="0"
+			frameborder="0" scrolling="no"> 
+		</iframe>
+		
+		
+		
+			<script type="text/javascript">
+				if (typeof document.body.style.maxHeight === "undefined"){	
+				window.attachEvent('onload',pngfix);
+				}
+			</script>
+		
+		
+			
+		<script type="text/javascript" src="/cms/ifx/js/jquery.ifx.min.js"></script>
+		<script type="text/javascript" src="/cms/ifx/js/ifx.min.js"></script>
+		<link type="text/css" rel="stylesheet" media="screen" href="/cms/ifx/css/ifx.css"/>
+		
+
+		
+	 
+
+    <!--   Adobe Tag Tracking -->
+	
+
+
+
+
+
+
+ 
+<!-- Adobe Digital Marketing Suite Tag Management cod Copyright 1996-2012 Adobe, Inc. All Rights Reserved More info available at http://www.adobe.com -->
+<script type="text/javascript" src="/cms/js/common/adobeTag/s_code.js"></script>
+<div id="oscTagManager" style="display:none;visibility:hidden;"></div>
+<div id="oscTemp" style="display:none;visibility:hidden;"></div>
+<script type="text/javascript">
+
+//<![CDATA[
+if(s_rc){
+	s_rc.pageName = ""
+	s_rc.server = ""
+	s_rc.channel = ""
+	s_rc.t()
+}
+//]]></script>
+<script type="text/javascript" src="/cms/js/common/adobeTag/s_code_a.js"></script>
+<!-- End Adobe Digital Marketing Suite Tag Management code -->
+ 
+				
+
+
+
+<div id="blackOverlayID" class="black_overlay"></div>
+
+
+
+
+
+
+
+        </div></body>
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Cummins Diesel Engines For Sale - DieselEngineMotor.Com</title>
+  <meta name="description" content="Diesel Engine Motor.com is for anyone who is buying or selling Cummins engines. If you are looking for new, used, rebuilt, or remanufactured Cummins engines or just parts for you own Cummins engine repairs, this site is for you.">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/aristo.css" type="text/css">
+<link rel="stylesheet" href="/css/dieselenginemotor.css" type="text/css">
+<script type="text/javascript" src="/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript">
+var ob = new Array("h2");
+function helpSort() {
+    $("#dialog-help-sort").dialog("open");
+}
+function updateLimit(mylimit) {
+    var str = "/manufacturers/index/Cummins/?nr=108&ob=h2&limit=" + mylimit;
+    location.href = str;
+}
+function updateArrows() {
+    var len = ob.length;
+    if (len == 0) {
+        return;
+    }
+    for (var i=0; i<len; i++) {
+        if (ob[i].match(/2/)) {
+            $("#" + ob[i]).attr("src", "/images/up-blink.gif");
+        } else if (ob[i].match(/1/)) {
+            $("#" + ob[i]).attr("src", "/images/down-blink.gif");
+        }
+    }
+}
+function arrowClicked(obid) {
+    var len = ob.length;
+    var ob_str = "ob=";
+    var removed = false;
+    var letter = obid.replace(/\d/, "");
+    var number = obid.replace(/[a-zA-Z]/g, "");
+    if (number == "1") {
+        var other_ob = letter + "2";
+    } else {
+        var other_ob = letter + "1";
+    }
+    for (var i=0; i<len; i++) {
+        if (ob[i] == obid) {
+            removed = true;
+            continue;
+        } else if (ob[i] == other_ob) {
+            ob[i] = obid;
+            removed = true;
+        }
+        ob_str = ob_str + ob[i] + ",";
+    }
+    if (removed) {
+        ob_str = ob_str.replace(/,$/, "");
+    } else {
+        ob_str = ob_str + obid;
+    }
+    var mylimit = document.getElementById("limit").value;
+    location.href = "/manufacturers/index/Cummins/?nr=108&limit=100&" + ob_str;
+}
+$(function() {
+    $(".linkButton").button();
+});
+$(document).ready(function() {
+    $("button").button();
+    if ($.browser.msie) {
+        $("#info-div").find(".ui-state-highlight").addClass("msie-padding");
+        $("#error-div").find(".ui-state-error").addClass("msie-padding");
+    } else {
+        $("#info-div").find(".ui-state-highlight").addClass("normal-padding");
+        $("#error-div").find(".ui-state-error").addClass("normal-padding");
+    }
+    $("#error-div .ui-icon").click(function() {
+        $("#error-div").hide();
+    });
+    $("#error-btn").click(function() {
+        $("#error-div").fadeOut("slow");
+    });
+    updateArrows();
+    $(".data-row td:not(:first-child)").click(function() {
+        location.href = $(this).parent().find("td").next().find("a").attr("href");
+    });
+    $(".data-row-odd td:not(:first-child)").click(function() {
+        location.href = $(this).parent().find("td").next().find("a").attr("href");
+    });
+    $(".links td").click(function() {
+        var newLink = $(this).find("a").attr("href");
+        location.href = newLink;
+    });
+    $("#dialog-help-sort").dialog({
+        autoOpen: false,
+        height: 'auto',
+        width: 500,
+        modal: true,
+        buttons: {
+            Close: function() {
+                $(this).dialog('close');
+            }
+        }
+    });
+});
+</script>
+</head>
+<body>
+<div style="width: 100%; padding: 10px 0px 0px 0px; text-align: center; background-color: #0066cc; border: #0066cc 1px solid;">
+<p style="text-align: center;"><img src="/images/diesel-engine-motor.jpg"></p>
+</div>
+<div id="main-menu">
+<table width="100%">
+<tr>
+<td>
+<span style="float: left;">
+<table>
+<tr>
+<td>
+<a class="linkButton red-button" href="/diesel/engines/?ob=m2,h2">Display Engines</a>
+</td>
+<td>
+<a class="linkButton green-button" href="/generator">Display Generators</a>
+</td>
+<td>
+<a class="linkButton yellow-button" href="/parts">Display Parts</a>
+</td>
+<td>
+<a class="linkButton red-button" href="/search">Search</a>
+</td>
+<td>
+<a class="linkButton red-button" href="/diesel/new_engine" rel="nofollow">Add Engines</a>
+</td>
+<td>
+</tr>
+</table>
+</span>
+<span style="float: right;">
+<table>
+<tr>
+<td>
+<a class="linkButton blue-button" href="/login">Login</a>
+</td>
+<td>
+<a class="linkButton blue-button" href="/users/register">New User</a>
+</td>
+</tr>
+</table>
+</span>
+</td>
+</tr>
+</table>
+</div>
+<div id="error-div" class="ui-widget" style="display: none;">
+<div class="ui-state-error ui-corner-all">
+<div class="ui-dialog-titlebar ui-corner-all ui-helper-clearfix" style="float: right">
+<a class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a>
+</div>
+<p><span class="ui-icon ui-icon-circle-check" style="float: left; margin-right: .3em;"></span>
+<span id="error-message" style="font-size: 0.8em;"></span>
+</div>
+</div>
+<div id="info-div" class="ui-widget" style="display: none;">
+<div class="ui-state-highlight ui-corner-all">
+<p><span class="ui-icon ui-icon-circle-check" style="float: left; margin-right: .3em;"></span>
+<span id="info-message" style="font-size: 0.8em;"></span>
+</div>
+</div>
+<div id="banner-container3" style="border-top: 1px solid #cccccc; padding: 0px;">
+<div id="banner-container2">
+<div id="banner-container1">
+<div id="banner-col1">
+<a href="http://www.dieselenginemotor.com/dems"><img src="/images/banner1d1.gif" border="0" alt="DEMS-1000 Digital Electronic Management System"></a>
+</div>
+<div id="banner-col2">
+<a href="http://www.dieselenginemotor.com/dems/demo.html"><img src="/images/banner1d2.gif" alt="DEMS-1000 Live Diesel Engine Demo"></a>
+</div>
+<div id="banner-col3">
+<a href="http://www.dieselenginemotor.com/diesel/engines/4428,1.html"><img src="/images/banner1d3.gif" alt=""></a>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align: center; position: relative; overflow: hidden; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; padding: 1px">
+<div id="navbar">
+<table border="1" width="100%">
+<tr>
+<td style="font-size: 90%">
+<a href="/">Diesel Engine Home</a>
+</td>
+<td style="font-size: 90%">
+<a href="http://www.arb.ca.gov/msprog/offroad/cert/cert.php" target="_blank">Tier Ratings</a>
+</td>
+<td style="font-size: 90%">
+<a href="/contact_us">Contact Us</a>
+</td>
+<td style="font-size: 90%">
+<a href="/kubota/engines">Kubota Engines</a>
+</td>
+<td style="font-size: 90%">
+<a href="/news">News and Blogs</a>
+</td>
+<td style="font-size: 90%">
+<a href="/links">Links</a>
+</td>
+<td style="font-size: 90%">
+<a href="/engineering">Engineering Data</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div style="width: 100%" class="listing-div">
+&nbsp;
+</div>
+</div>
+<div>
+<table width="100%">
+<tr>
+<td width="85%" valign="top">
+<table class="listing">
+<tr>
+<td colspan="12" style="border: none;">
+Not finding what you are looking for? Have dealers contact you about the engine
+you need! <a href="/leads">Click here</a> to get started.
+</td>
+</tr>
+<tr>
+<td colspan="12" style="background-color: #E7EEFA;" align="center">
+<center>
+<h3>Cummins Diesel Engines For Sale</h3>
+</center>
+<div style="width: 75%; text-align: left">
+<p>Here you will find Cummins diesel engines listed for sale or to buy. If Cummins prices are not listed, click on the engine you are interested in, and you will find the seller/buyer information to contact. </p>
+Clean, efficient, dependable and durable, Cummins diesel engines are found in nearly every type of vehicle and equipment on earth -- from emergency vehicles to 18-wheelers, berry pickers to 360-ton mining haul trucks. You'll also find Cummins engines everywhere there's water, with a full line of recreational and commercial marine diesels.</div>
+</td>
+</tr>
+<tr>
+<td colspan="12" style="text-align: center; background-color: #FFF09C;">
+<span style="float: left;">Sorted by: <b>Horsepower Ascending</b>
+<button onclick="helpSort();">How to Sort</button>
+</span>
+</td>
+</tr>
+<tr>
+<td colspan="12">
+&nbsp;<strong>1</strong>&nbsp;<a href="/manufacturers/index/Cummins/?nr=108&ob=h2&limit=100&amp;page_num=100">2</a>&nbsp;<a href="/manufacturers/index/Cummins/?nr=108&ob=h2&limit=100&amp;page_num=100">Next ></a>&nbsp;</td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<th>Item No</th>
+<th>Condition</th>
+<th>Model No/Fuel Type</th>
+<th>HP/KW @ RPM</th>
+<th>Cyl</th>
+<th>Price (USD)</th>
+<th>Engine Type</th>
+<th>Turbo?</th>
+<th>Total Hours</th>
+<th>Country</th>
+<th>State or Province</th>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('i2');" class="up_arrow" id="i2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('i1');" class="down_arrow" id="i1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('c2');" class="up_arrow" id="c2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('c1');" class="down_arrow" id="c1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('mn2');" class="up_arrow" id="mn2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('mn1');" class="down_arrow" id="mn1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('h2');" class="up_arrow" id="h2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('h1');" class="down_arrow" id="h1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('cy2');" class="up_arrow" id="cy2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('cy1');" class="down_arrow" id="cy1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('p2');" class="up_arrow" id="p2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('p1');" class="down_arrow" id="p1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('e2');" class="up_arrow" id="e2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('e1');" class="down_arrow" id="e1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('t2');" class="up_arrow" id="t2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('t1');" class="down_arrow" id="t1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('th2');" class="up_arrow" id="th2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('th1');" class="down_arrow" id="th1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('co2');" class="up_arrow" id="co2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('co1');" class="down_arrow" id="co1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+<th>
+<table width="100%">
+<tr>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('s2');" class="up_arrow" id="s2" src="/images/up.gif">
+</th>
+<th style="border: none;">
+<img class="image-link" onclick="arrowClicked('s1');" class="down_arrow" id="s1" src="/images/down.gif">
+</th>
+</tr>
+</table>
+</th>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/632">632</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>Ukraine</td>
+<td>Kherson</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 855SERIES Diesel Engine/876"><img src="/images/camera1.gif" border=0 title="Cummins 855SERIES Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 855SERIES Diesel Engine/876">876</a></td>
+<td>Good</td>
+<td>855SERIES<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>United States</td>
+<td>indiana</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins V555 Diesel Engine/970"><img src="/images/camera1.gif" border=0 title="Cummins V555 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins V555 Diesel Engine/970">970</a></td>
+<td>Core</td>
+<td>V555<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">4000.00</b></td>
+<td>Marine</td>
+<td>No</td>
+<td></td>
+<td>Canada</td>
+<td>BC</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins KTA2300 Diesel Engine/1061">1061</a></td>
+<td>Good</td>
+<td>KTA2300<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">23000.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>5784</td>
+<td>Canada</td>
+<td>ns</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1129">1129</a></td>
+<td>Good</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>IN</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 7 LITER Diesel Engine/1140">1140</a></td>
+<td>Good</td>
+<td>7 LITER<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>IN</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins L 10 Diesel Engine/1452">1452</a></td>
+<td>Good</td>
+<td>L 10<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Pa.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1490">1490</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>mn</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1648">1648</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>new jersey</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1654">1654</a></td>
+<td>Core</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">750.00</b></td>
+<td>Automotive</td>
+<td>No</td>
+<td></td>
+<td>United States</td>
+<td>Texas</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins NTC 300 Diesel Engine/1662">1662</a></td>
+<td>Rebuilt</td>
+<td>NTC 300<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">4500.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Ms</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1679">1679</a></td>
+<td>Excellent</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">5000.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>az</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2138">2138</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United Kingdom</td>
+<td></td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6BT Diesel Engine/2284">2284</a></td>
+<td>Rebuilt</td>
+<td>6BT<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6BTA Diesel Engine/2285">2285</a></td>
+<td>Rebuilt</td>
+<td>6BTA<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 4BT Diesel Engine/2286">2286</a></td>
+<td>Rebuilt</td>
+<td>4BT<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 4BTA Diesel Engine/2287">2287</a></td>
+<td>Rebuilt</td>
+<td>4BTA<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 4B Diesel Engine/2288">2288</a></td>
+<td>Rebuilt</td>
+<td>4B<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6B Diesel Engine/2289">2289</a></td>
+<td>Rebuilt</td>
+<td>6B<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 855 Diesel Engine/2290">2290</a></td>
+<td>Rebuilt</td>
+<td>855<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6CT Diesel Engine/2291">2291</a></td>
+<td>Rebuilt</td>
+<td>6CT<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>reconditioned</td>
+<td>Belgium</td>
+<td>LIMBURG</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2619"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2619">2619</a></td>
+<td>Rebuilt</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">6200.00</b></td>
+<td>Truck</td>
+<td>No</td>
+<td></td>
+<td>United States</td>
+<td>Spokane Washington</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2661"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2661">2661</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td>fujian</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2688"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2688">2688</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td></td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2754"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2754">2754</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>3,600 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td></td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2755"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2755">2755</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td></td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2770">2770</a></td>
+<td>Good</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2792"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2792">2792</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>3,600 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td></td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2852">2852</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td></td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2882"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2882">2882</a></td>
+<td>Parts Only</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Automotive</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td>fuhou</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 8.3 LPG Nat Engine/2897">2897</a></td>
+<td>Running When Pulled</td>
+<td>8.3<br>LPG/Nat</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">5500.00</b></td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>CA</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins VT1710 Diesel Engine/3082"><img src="/images/camera1.gif" border=0 title="Cummins VT1710 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins VT1710 Diesel Engine/3082">3082</a></td>
+<td>Excellent</td>
+<td>VT1710<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 12</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>1200 since last rebuild</td>
+<td>Canada</td>
+<td></td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/3201">3201</a></td>
+<td>Rebuilt</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">8000.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>AZ</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins DR25747RX LPG Nat Engine/3214"><img src="/images/camera1.gif" border=0 title="Cummins DR25747RX LPG/Nat Engine Image(s)" alt="LPG/Nat Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins DR25747RX LPG Nat Engine/3214">3214</a></td>
+<td>New</td>
+<td>DR25747RX<br>LPG/Nat</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">7500.00</b></td>
+<td>Industrial</td>
+<td>No</td>
+<td>0</td>
+<td>United States</td>
+<td>NJ</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 5.9 Diesel Engine/3838">3838</a></td>
+<td>Remanufactured</td>
+<td>5.9<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td>0</td>
+<td>United States</td>
+<td>Mi.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins L-10 Diesel Engine/3839">3839</a></td>
+<td>New</td>
+<td>L-10<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Mi.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 8.3 Diesel Engine/3840"><img src="/images/camera1.gif" border=0 title="Cummins 8.3 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 8.3 Diesel Engine/3840">3840</a></td>
+<td>Remanufactured</td>
+<td>8.3<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Mi.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins N-14 Diesel Engine/3842">3842</a></td>
+<td>New</td>
+<td>N-14<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Mi.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins M11 Diesel Engine/3843">3843</a></td>
+<td>Remanufactured</td>
+<td>M11<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Mi.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins L-10 Diesel Engine/4206"><img src="/images/camera1.gif" border=0 title="Cummins L-10 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins L-10 Diesel Engine/4206">4206</a></td>
+<td>Remanufactured</td>
+<td>L-10<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>FL.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 8.3 Diesel Engine/4207"><img src="/images/camera1.gif" border=0 title="Cummins 8.3 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 8.3 Diesel Engine/4207">4207</a></td>
+<td>Remanufactured</td>
+<td>8.3<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>FL.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins NTC-855 Diesel Engine/4208"><img src="/images/camera1.gif" border=0 title="Cummins NTC-855 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins NTC-855 Diesel Engine/4208">4208</a></td>
+<td>Remanufactured</td>
+<td>NTC-855<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>FL.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins N14 Diesel Engine/4209"><img src="/images/camera1.gif" border=0 title="Cummins N14 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins N14 Diesel Engine/4209">4209</a></td>
+<td>Remanufactured</td>
+<td>N14<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>FL.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins mll Diesel Engine/4210"><img src="/images/camera1.gif" border=0 title="Cummins mll Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins mll Diesel Engine/4210">4210</a></td>
+<td>Remanufactured</td>
+<td>mll<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>FL.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/4374">4374</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>Ar</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins B3.3 Diesel Engine/4748"><img src="/images/camera1.gif" border=0 title="Cummins B3.3 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins B3.3 Diesel Engine/4748">4748</a></td>
+<td>New</td>
+<td>B3.3<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">7500.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins QSB4.5 Diesel Engine/4844"><img src="/images/camera1.gif" border=0 title="Cummins QSB4.5 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins QSB4.5 Diesel Engine/4844">4844</a></td>
+<td>New</td>
+<td>QSB4.5<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">9650.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins QSB5.9 Diesel Engine/4796"><img src="/images/camera1.gif" border=0 title="Cummins QSB5.9 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins QSB5.9 Diesel Engine/4796">4796</a></td>
+<td>New</td>
+<td>QSB5.9<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">9950.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 855 BIG CAM Diesel Engine/4798"><img src="/images/camera1.gif" border=0 title="Cummins 855 BIG CAM Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 855 BIG CAM Diesel Engine/4798">4798</a></td>
+<td>New</td>
+<td>855 BIG CAM<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">3250.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins QSB5.9 Diesel Engine/4802"><img src="/images/camera1.gif" border=0 title="Cummins QSB5.9 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins QSB5.9 Diesel Engine/4802">4802</a></td>
+<td>New</td>
+<td>QSB5.9<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">8250.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins QSB6.7 Diesel Engine/4827"><img src="/images/camera1.gif" border=0 title="Cummins QSB6.7 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins QSB6.7 Diesel Engine/4827">4827</a></td>
+<td>New</td>
+<td>QSB6.7<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">11995.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 4BT Diesel Engine/4828"><img src="/images/camera1.gif" border=0 title="Cummins 4BT Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 4BT Diesel Engine/4828">4828</a></td>
+<td>New</td>
+<td>4BT<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">8295.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins QSB3.3T Diesel Engine/4829"><img src="/images/camera1.gif" border=0 title="Cummins QSB3.3T Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins QSB3.3T Diesel Engine/4829">4829</a></td>
+<td>New</td>
+<td>QSB3.3T<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">6495.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins QSL Diesel Engine/4836"><img src="/images/camera1.gif" border=0 title="Cummins QSL Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins QSL Diesel Engine/4836">4836</a></td>
+<td>New</td>
+<td>QSL<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">21695.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>CALL 4 SPECS</td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins QSB6.7 Diesel Engine/4917">4917</a></td>
+<td>New</td>
+<td>QSB6.7<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">11995.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins KT19 Diesel Engine/4938"><img src="/images/camera1.gif" border=0 title="Cummins KT19 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins KT19 Diesel Engine/4938">4938</a></td>
+<td>Good</td>
+<td>KT19<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">24995.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins KTA19 Diesel Engine/4947"><img src="/images/camera1.gif" border=0 title="Cummins KTA19 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins KTA19 Diesel Engine/4947">4947</a></td>
+<td>Good</td>
+<td>KTA19<br>Diesel</td>
+<td><b class="hp">0</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">29500.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>IL</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 6\\1 Diesel Engine/1225"><img src="/images/camera1.gif" border=0 title="Cummins 6\\1 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 6\\1 Diesel Engine/1225">1225</a></td>
+<td>New</td>
+<td>6\\1<br>Diesel</td>
+<td><b class="hp">6</b> @<br>600 RPM</td>
+<td>Inline 1</td>
+<td><b class="price">1350.00</b></td>
+<td>Agricultural</td>
+<td>No</td>
+<td>0</td>
+<td>United States</td>
+<td>Ok</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins  Diesel Engine/2837"><img src="/images/camera1.gif" border=0 title="Cummins  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/2837">2837</a></td>
+<td>New</td>
+<td><br>Diesel</td>
+<td><b class="hp">20</b> @<br>3,600 RPM</td>
+<td>V 2</td>
+<td>Call for Price</td>
+<td>Agricultural</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td>jiangsu</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 4BT3.9-C80 Diesel Engine/2439"><img src="/images/camera1.gif" border=0 title="Cummins 4BT3.9-C80 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 4BT3.9-C80 Diesel Engine/2439">2439</a></td>
+<td>New</td>
+<td>4BT3.9-C80<br>Diesel</td>
+<td><b class="hp">60</b> @<br>2,000 RPM</td>
+<td>Inline 4</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>China</td>
+<td>GuangDong</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins V-504 Diesel Engine/416"><img src="/images/camera1.gif" border=0 title="Cummins V-504 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins V-504 Diesel Engine/416">416</a></td>
+<td>Rebuilt</td>
+<td>V-504<br>Diesel</td>
+<td><b class="hp">150</b> @<br>2,100 RPM</td>
+<td>V 8</td>
+<td><b class="price">10700.00</b></td>
+<td>Industrial</td>
+<td>No</td>
+<td></td>
+<td>United States</td>
+<td>TEXAS</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 290 Diesel Engine/1426"><img src="/images/camera1.gif" border=0 title="Cummins 290 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 290 Diesel Engine/1426">1426</a></td>
+<td>Good</td>
+<td>290<br>Diesel</td>
+<td><b class="hp">172</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">3500.00</b></td>
+<td>Agricultural</td>
+<td>Yes</td>
+<td>unknown</td>
+<td>United States</td>
+<td>Arkansas</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6BTA 5.9L Diesel Engine/2978">2978</a></td>
+<td>Good</td>
+<td>6BTA 5.9L<br>Diesel</td>
+<td><b class="hp">180</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">2500.00</b></td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>NY</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 6BT   6BTA Diesel Engine/630"><img src="/images/camera1.gif" border=0 title="Cummins 6BT / 6BTA Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 6BT   6BTA Diesel Engine/630">630</a></td>
+<td>New</td>
+<td>6BT / 6BTA<br>Diesel</td>
+<td><b class="hp">190</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">4750.00</b></td>
+<td>Automotive</td>
+<td>Yes</td>
+<td>0</td>
+<td>United States</td>
+<td>CA</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 504 Diesel Engine/1837">1837</a></td>
+<td>Running When Pulled</td>
+<td>504<br>Diesel</td>
+<td><b class="hp">190</b> @<br>2,600 RPM</td>
+<td>V 8</td>
+<td><b class="price">2450.00</b></td>
+<td>Marine</td>
+<td>No</td>
+<td>4000</td>
+<td>United States</td>
+<td>n.y.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins V-555 Diesel Engine/417">417</a></td>
+<td>Rebuilt</td>
+<td>V-555<br>Diesel</td>
+<td><b class="hp">200</b> @<br>2,100 RPM</td>
+<td>V 8</td>
+<td><b class="price">11200.00</b></td>
+<td>Industrial</td>
+<td>No</td>
+<td></td>
+<td>United States</td>
+<td>TEXAS</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins V555 Diesel Engine/796">796</a></td>
+<td>Running When Pulled</td>
+<td>V555<br>Diesel</td>
+<td><b class="hp">210</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">2500.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>Canada</td>
+<td>BC</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6BT5.9M Diesel Engine/2453">2453</a></td>
+<td>Rebuilt</td>
+<td>6BT5.9M<br>Diesel</td>
+<td><b class="hp">210</b> @<br>2,600 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Marine</td>
+<td>Yes</td>
+<td>0 HRS SINCE REBUILT</td>
+<td>United States</td>
+<td>FL</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins ISB 6.7L Diesel Engine/2895">2895</a></td>
+<td>Excellent</td>
+<td>ISB 6.7L<br>Diesel</td>
+<td><b class="hp">220</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">10000.00</b></td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>Canada</td>
+<td>ALBERTA</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins L10 Diesel Engine/307"><img src="/images/camera1.gif" border=0 title="Cummins L10 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins L10 Diesel Engine/307">307</a></td>
+<td>Excellent</td>
+<td>L10<br>Diesel</td>
+<td><b class="hp">240</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">2950.00</b></td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>WI</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 8.3l cpl 893 Diesel Engine/875">875</a></td>
+<td>Excellent</td>
+<td>8.3l cpl 893<br>Diesel</td>
+<td><b class="hp">250</b> @<br>1,500 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">5600.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td>3400</td>
+<td>United States</td>
+<td>COLORADO</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 555 Diesel Engine/71"><img src="/images/camera1.gif" border=0 title="Cummins 555 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 555 Diesel Engine/71">71</a></td>
+<td>Good</td>
+<td>555<br>Diesel</td>
+<td><b class="hp">275</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">9000.00</b></td>
+<td>Marine</td>
+<td>Yes</td>
+<td>4500</td>
+<td>Canada</td>
+<td>On</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins N855-C Diesel Engine/2625">2625</a></td>
+<td>Needs Repair</td>
+<td>N855-C<br>Diesel</td>
+<td><b class="hp">280</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td><b class="price">2000.00</b></td>
+<td>Industrial</td>
+<td>No</td>
+<td></td>
+<td>Malaysia</td>
+<td>Sarawak</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins NT855 Diesel Engine/566">566</a></td>
+<td>Running When Pulled</td>
+<td>NT855<br>Diesel</td>
+<td><b class="hp">300</b> @<br>1,800 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Marine</td>
+<td>Yes</td>
+<td></td>
+<td>United Kingdom</td>
+<td></td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 8.3 Diesel Engine/898"><img src="/images/camera1.gif" border=0 title="Cummins 8.3 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 8.3 Diesel Engine/898">898</a></td>
+<td>New</td>
+<td>8.3<br>Diesel</td>
+<td><b class="hp">300</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>2</td>
+<td>United States</td>
+<td>INDIANA</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 903 Natural Diesel Engine/1838">1838</a></td>
+<td>Running When Pulled</td>
+<td>903 Natural<br>Diesel</td>
+<td><b class="hp">300</b> @<br>2,400 RPM</td>
+<td>V 8</td>
+<td><b class="price">2450.00</b></td>
+<td>Marine</td>
+<td>No</td>
+<td>3000</td>
+<td>United States</td>
+<td>n.y.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 903n Diesel Engine/1839">1839</a></td>
+<td>Rebuilt</td>
+<td>903n<br>Diesel</td>
+<td><b class="hp">300</b> @<br>2,400 RPM</td>
+<td>V 8</td>
+<td><b class="price">2200.00</b></td>
+<td>Marine</td>
+<td>No</td>
+<td>0</td>
+<td>United States</td>
+<td>n.y.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 8350 Diesel Engine/1650"><img src="/images/camera1.gif" border=0 title="Cummins 8350 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 8350 Diesel Engine/1650">1650</a></td>
+<td>Excellent</td>
+<td>8350<br>Diesel</td>
+<td><b class="hp">325</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">6000.00</b></td>
+<td>Automotive</td>
+<td>Yes</td>
+<td></td>
+<td>Canada</td>
+<td>QUEBEC</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 8350 Diesel Engine/1657"><img src="/images/camera1.gif" border=0 title="Cummins 8350 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 8350 Diesel Engine/1657">1657</a></td>
+<td>Excellent</td>
+<td>8350<br>Diesel</td>
+<td><b class="hp">325</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">5000.00</b></td>
+<td>Automotive</td>
+<td>Yes</td>
+<td></td>
+<td>Canada</td>
+<td>QUEBEC</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 6BTA M3 Diesel Engine/980">980</a></td>
+<td>Excellent</td>
+<td>6BTA M3<br>Diesel</td>
+<td><b class="hp">330</b> @<br>2,800 RPM</td>
+<td>Turbine 6</td>
+<td><b class="price">14000.00</b></td>
+<td>Marine</td>
+<td>Yes</td>
+<td>353</td>
+<td>United States</td>
+<td>fl</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins LTA10-330 Diesel Engine/2677">2677</a></td>
+<td>Rebuilt</td>
+<td>LTA10-330<br>Diesel</td>
+<td><b class="hp">330</b> @<br>1,800 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">4500.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>100 on rebuild</td>
+<td>Canada</td>
+<td>New Brunswick</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins isc Diesel Engine/2682"><img src="/images/camera1.gif" border=0 title="Cummins isc Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins isc Diesel Engine/2682">2682</a></td>
+<td>New</td>
+<td>isc<br>Diesel</td>
+<td><b class="hp">330</b> @<br>1,400 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">10000.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>ca</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins NTTA 855 G2 Diesel Engine/80">80</a></td>
+<td>Running When Pulled</td>
+<td>NTTA 855 G2<br>Diesel</td>
+<td><b class="hp">350</b> @<br>1,800 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">7500.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>8200</td>
+<td>United States</td>
+<td>or</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins 855 Diesel Engine/557">557</a></td>
+<td>Rebuilt</td>
+<td>855<br>Diesel</td>
+<td><b class="hp">350</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">4500.00</b></td>
+<td>Automotive</td>
+<td>Yes</td>
+<td></td>
+<td>Canada</td>
+<td>Sask.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1613">1613</a></td>
+<td>Good</td>
+<td><br>Diesel</td>
+<td><b class="hp">350</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>WV</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins  Diesel Engine/1614">1614</a></td>
+<td>Good</td>
+<td><br>Diesel</td>
+<td><b class="hp">350</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>WV</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins m-11 celect Diesel Engine/1749">1749</a></td>
+<td>Running When Pulled</td>
+<td>m-11 celect<br>Diesel</td>
+<td><b class="hp">350</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>ga</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins ISC350 Diesel Engine/3213"><img src="/images/camera1.gif" border=0 title="Cummins ISC350 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins ISC350 Diesel Engine/3213">3213</a></td>
+<td>Good</td>
+<td>ISC350<br>Diesel</td>
+<td><b class="hp">350</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">7500.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>OR</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins N14C Diesel Engine/72"><img src="/images/camera1.gif" border=0 title="Cummins N14C Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins N14C Diesel Engine/72">72</a></td>
+<td>Good</td>
+<td>N14C<br>Diesel</td>
+<td><b class="hp">380</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">8715.00</b></td>
+<td>Marine</td>
+<td>Yes</td>
+<td>2000</td>
+<td>Canada</td>
+<td>On</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins CPL 0205 Diesel Engine/957"><img src="/images/camera1.gif" border=0 title="Cummins CPL 0205 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins CPL 0205 Diesel Engine/957">957</a></td>
+<td>Running When Pulled</td>
+<td>CPL 0205<br>Diesel</td>
+<td><b class="hp">400</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Truck</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>PA</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins c695,400magn Diesel Engine/1168">1168</a></td>
+<td>New</td>
+<td>c695,400magn<br>Diesel</td>
+<td><b class="hp">400</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">8500.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td>n/a</td>
+<td>Canada</td>
+<td>Alberta</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins N-14 Diesel Engine/1836">1836</a></td>
+<td>Running When Pulled</td>
+<td>N-14<br>Diesel</td>
+<td><b class="hp">400</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">4900.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>n.y.</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins 903 Diesel Engine/345"><img src="/images/camera1.gif" border=0 title="Cummins 903 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins 903 Diesel Engine/345">345</a></td>
+<td>Running When Pulled</td>
+<td>903<br>Diesel</td>
+<td><b class="hp">425</b> @<br>2,100 RPM</td>
+<td>V 8</td>
+<td><b class="price">2000.00</b></td>
+<td>Military</td>
+<td>Yes</td>
+<td>0</td>
+<td>United States</td>
+<td>Ca.</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins ISM - 425 Diesel Engine/2674"><img src="/images/camera1.gif" border=0 title="Cummins ISM - 425 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins ISM - 425 Diesel Engine/2674">2674</a></td>
+<td>New</td>
+<td>ISM - 425<br>Diesel</td>
+<td><b class="hp">425</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">16000.00</b></td>
+<td>Truck</td>
+<td>Yes</td>
+<td>0</td>
+<td>United States</td>
+<td>Ar</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins DR6011RX Diesel Engine/1213">1213</a></td>
+<td>Rebuilt</td>
+<td>DR6011RX<br>Diesel</td>
+<td><b class="hp">430</b> @<br>2,600 RPM</td>
+<td>V 6</td>
+<td><b class="price">19975.00</b></td>
+<td>Marine</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>fl</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+&nbsp;
+</td>
+<td><a href="/diesel/engine/Cummins N14 CPL2592 Diesel Engine/778">778</a></td>
+<td>Running When Pulled</td>
+<td>N14 CPL2592<br>Diesel</td>
+<td><b class="hp">435</b> @<br>2,100 RPM</td>
+<td>V 6</td>
+<td>Call for Price</td>
+<td>Highway</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>OHIO</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins NTC475 Diesel Engine/27"><img src="/images/camera1.gif" border=0 title="Cummins NTC475 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins NTC475 Diesel Engine/27">27</a></td>
+<td>Excellent</td>
+<td>NTC475<br>Diesel</td>
+<td><b class="hp">475</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">5500.00</b></td>
+<td>Automotive</td>
+<td>Yes</td>
+<td>Low</td>
+<td>United States</td>
+<td>Tx</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins N14  Diesel Engine/1497"><img src="/images/camera1.gif" border=0 title="Cummins N14  Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins N14  Diesel Engine/1497">1497</a></td>
+<td>New</td>
+<td>N14 <br>Diesel</td>
+<td><b class="hp">475</b> @<br>1,800 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">18000.00</b></td>
+<td>Marine</td>
+<td>Yes</td>
+<td></td>
+<td>United States</td>
+<td>NC</td>
+</tr>
+<tr class="data-row-odd" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins N14 CELECT + Diesel Engine/897"><img src="/images/camera1.gif" border=0 title="Cummins N14 CELECT + Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins N14 CELECT + Diesel Engine/897">897</a></td>
+<td>New</td>
+<td>N14 CELECT +<br>Diesel</td>
+<td><b class="hp">525</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td>Call for Price</td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>2</td>
+<td>United States</td>
+<td>INDIANA</td>
+</tr>
+<tr class="data-row" title="Click for more details and seller's information">
+<td>
+<a href="/diesel/engine/images/Cummins KTA19 Diesel Engine/24"><img src="/images/camera1.gif" border=0 title="Cummins KTA19 Diesel Engine Image(s)" alt="Diesel Engine Image(s)"></a>
+</td>
+<td><a href="/diesel/engine/Cummins KTA19 Diesel Engine/24">24</a></td>
+<td>Rebuilt</td>
+<td>KTA19<br>Diesel</td>
+<td><b class="hp">575</b> @<br>2,100 RPM</td>
+<td>Inline 6</td>
+<td><b class="price">30750.00</b></td>
+<td>Industrial</td>
+<td>Yes</td>
+<td>0</td>
+<td>United States</td>
+<td>Tx</td>
+</tr>
+
+<tr>
+<td colspan="12">
+&nbsp;<strong>1</strong>&nbsp;<a href="/manufacturers/index/Cummins/?nr=108&ob=h2&limit=100&amp;page_num=100">2</a>&nbsp;<a href="/manufacturers/index/Cummins/?nr=108&ob=h2&limit=100&amp;page_num=100">Next ></a>&nbsp;</td>
+</tr>
+</table>
+
+</td>
+<td valign="top">
+<table class="listing">
+<tr>
+<td style="border: none;">
+Engines Per Page
+</td>
+<td style="border: none;">
+<select id="limit" name="limit" onchange="updateLimit(this.value);">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option selected value="100">100</option>
+</select>
+</td>
+</tr>
+</table>
+<table class="links" width="100%">
+<tr>
+<th>Categories</th>
+</tr>
+<tr>
+<td><a href="/categories/index/Agricultural/?ob=m2,h2">Agricultural Diesel Engine (34)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Aircraft/?ob=m2,h2">Aircraft Diesel Engine (0)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Antique/?ob=m2,h2">Antique Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Automotive/?ob=m2,h2">Automotive Diesel Engine (36)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Construction/?ob=m2,h2">Construction Diesel Engine (4)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Highway/?ob=m2,h2">Highway Diesel Engine (53)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Industrial/?ob=m2,h2">Industrial Diesel Engine (632)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Locomotive/?ob=m2,h2">Locomotive Diesel Engine (3)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Marine/?ob=m2,h2">Marine Diesel Engine (127)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Military/?ob=m2,h2">Military Diesel Engine (6)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Truck/?ob=m2,h2">Truck Diesel Engine (79)</a></td>
+</tr>
+<tr>
+<td><a href="/categories/index/Turbine/?ob=m2,h2">Turbine Diesel Engine (1)</a></td>
+</tr>
+</table>
+<table id="manufacturer_table" class="links" width="100%">
+<tr>
+<th>Manufacturers</th>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/ABC_engines/?ob=h2">ABC Diesel Engine (3)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Alco_engines/?ob=h2">Alco Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Allen_engines/?ob=h2">Allen Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Allis Chalmers_engines/?ob=h2">Allis Chalmers Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Baudouin_engines/?ob=h2">Baudouin Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/BMW_engines/?ob=h2">BMW Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Case_engines/?ob=h2">Case Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Caterpillar_engines/?ob=h2">Caterpillar Diesel Engine (108)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Chevrolet_engines/?ob=h2">Chevrolet Diesel Engine (4)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Cooper_engines/?ob=h2">Cooper Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Cummins_engines/?ob=h2">Cummins Diesel Engine (108)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/DAF_engines/?ob=h2">DAF Diesel Engine (80)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Daihatsu_engines/?ob=h2">Daihatsu Diesel Engine (4)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Detroit_engines/?ob=h2">Detroit Diesel Engine (84)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Deutz_engines/?ob=h2">Deutz Diesel Engine (65)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/EMD_engines/?ob=h2">EMD Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Ford_engines/?ob=h2">Ford Diesel Engine (34)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Gardner_engines/?ob=h2">Gardner Diesel Engine (8)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/General Electric_engines/?ob=h2">General Electric Diesel Engine (3)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/General Motors_engines/?ob=h2">General Motors Diesel Engine (17)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Guascor_engines/?ob=h2">Guascor Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Hallett_engines/?ob=h2">Hallett Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Hatz_engines/?ob=h2">Hatz Diesel Engine (7)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Hercules_engines/?ob=h2">Hercules Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Hino_engines/?ob=h2">Hino Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Honda_engines/?ob=h2">Honda Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/International_engines/?ob=h2">International Diesel Engine (28)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Isuzu_engines/?ob=h2">Isuzu Diesel Engine (9)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Iveco_engines/?ob=h2">Iveco Diesel Engine (7)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/John Deere_engines/?ob=h2">John Deere Diesel Engine (25)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Kelvin_engines/?ob=h2">Kelvin Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Kohler_engines/?ob=h2">Kohler Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Komatsu_engines/?ob=h2">Komatsu Diesel Engine (18)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Kubota_engines/?ob=h2">Kubota Diesel Engine (37)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Lister-Petter_engines/?ob=h2">Lister-Petter Diesel Engine (8)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Mack_engines/?ob=h2">Mack Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/MaK_engines/?ob=h2">MaK Diesel Engine (3)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Malloys_engines/?ob=h2">Malloys Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/MAN_engines/?ob=h2">MAN Diesel Engine (12)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/MarineDiesel USA_engines/?ob=h2">MarineDiesel USA Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Massey-Ferguson_engines/?ob=h2">Massey-Ferguson Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Mercedes_engines/?ob=h2">Mercedes Diesel Engine (64)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Mirrlees_engines/?ob=h2">Mirrlees Diesel Engine (3)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Mitsubishi_engines/?ob=h2">Mitsubishi Diesel Engine (4)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/MTU_engines/?ob=h2">MTU Diesel Engine (20)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/MWM_engines/?ob=h2">MWM Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/New Holland_engines/?ob=h2">New Holland Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Onan_engines/?ob=h2">Onan Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Perkins_engines/?ob=h2">Perkins Diesel Engine (52)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Rolls Royce_engines/?ob=h2">Rolls Royce Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Ruston_engines/?ob=h2">Ruston Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Scania_engines/?ob=h2">Scania Diesel Engine (54)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Stork Werkspoor_engines/?ob=h2">Stork Werkspoor Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Sulzer_engines/?ob=h2">Sulzer Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Toyota_engines/?ob=h2">Toyota Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Universal_engines/?ob=h2">Universal Diesel Engine (4)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/VM_engines/?ob=h2">VM Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Volkswagen_engines/?ob=h2">Volkswagen Diesel Engine (2)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Volvo_engines/?ob=h2">Volvo Diesel Engine (8)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Volvo Penta_engines/?ob=h2">Volvo Penta Diesel Engine (18)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Volvo/VW_engines/?ob=h2">Volvo/VW Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Wartsila_engines/?ob=h2">Wartsila Diesel Engine (4)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Westerbeke_engines/?ob=h2">Westerbeke Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/White_engines/?ob=h2">White Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Wisconsin_engines/?ob=h2">Wisconsin Diesel Engine (1)</a></td>
+</tr>
+<tr>
+<td><a href="/manufacturers/index/Yanmar_engines/?ob=h2">Yanmar Diesel Engine (28)</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<div style="border-top: 1px #cccccc solid;">
+<table class="listing" cellspacing="5">
+<tr><td><a href="/">DieselEngineMotor.Com Home</a></td>
+<td><a href="/generator">Generators</a></td>
+<td><a href="/parts">Parts</a></td>
+<td><a href="/privacy_policy">Privacy Policy</a></td></tr>
+</table>
+</div>
+<div class="site-info" style="border-top: none;">
+&copy; Copyright 2013 DieselEngineMotor.Com, Inc. All rights reserved.
+</div>
+<div id="dialog-help-sort" title="DieselEngineMotor.Com - Help: How to Sort" style="display: none;">
+<table class="listing">
+<tr>
+<td style="border: none; background-color: #E7EEFA;">
+<center><h2>How to Sort</h2></center>
+When sorting the diesel engine list, the first line will show what columns
+are being sorted and in what order.
+<p>
+<img src="/images/sortedline.gif">
+<p>
+You can sort multiple columns or just one column by clicking the green (<img src="/images/up.gif">) and red (<img src="/images/down.gif">) arrows.<br>
+If an arrow is blinking, then that is the direction the column is sorted.
+<p>
+In the following example, the Manufacturer and Horse Power columns are being
+sorted:
+<p>
+<table>
+<tr>
+<td colspan=15 style="background-color: #FFF09C;">
+Sorted by: <b>Manufacturer Ascending, HP/KW Ascending</b>
+</td>
+</tr>
+<tr>
+<th style="border-bottom: none;">&nbsp;</th>
+<th style="border-bottom: none;">Item<br>No</th>
+<th style="border-bottom: none;">Manufacturer</th>
+<th style="border-bottom: none;">Condition</th>
+<th style="border-bottom: none;">Model<br>Number</th>
+<th style="border-bottom: none;">HP/KW @ RPM</th>
+</tr>
+<tr>
+<th style="border-top: none">
+&nbsp;
+</th>
+<th style="border-top: none;">
+<table width=100%>
+<tr>
+<th style="border: none;"><img src="/images/up.gif"></a></th>
+<th style="border: none;"><img src="/images/down.gif"></a></th>
+</tr>
+</table>
+</th>
+<th style="border-top: none;">
+<table width=100%>
+<tr>
+<th style="border: none;"><img src="/images/up-blink.gif"></a></th>
+<th style="border: none;"><img src="/images/down.gif"></a></th>
+</tr>
+</table>
+</th>
+<th style="border-top: none;">
+<table width=100%>
+<tr>
+<th style="border: none;"><img src="/images/up.gif"></a></th>
+<th style="border: none;"><img src="/images/down.gif"></a></th>
+</tr>
+</table>
+</th>
+<th style="border-top: none;">
+<table width=100%>
+<tr>
+<th style="border: none;"><img src="/images/up.gif"></a></th>
+<th style="border: none;"><img src="/images/down.gif"></a></th>
+</tr>
+</table>
+</th>
+<th style="border-top: none;">
+<table width=100%>
+<tr>
+<th style="border: none;"><img src="/images/up-blink.gif"></a></th>
+<th style="border: none;"><img src="/images/down.gif"></a></th>
+</tr>
+</table>
+</th>
+</tr>
+</table>
+<p>
+To Cancel sorting, click on the blinking arrow, and the column will no longer
+be sorted.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

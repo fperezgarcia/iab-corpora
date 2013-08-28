@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaDescription" name="DESCRIPTION" content="Baltimore City&#39;s One-Stop Online Business Center" /><meta id="MetaKeywords" name="KEYWORDS" content="Baltimore, City, Business, One-Stop, Permits, Permit Applications, Permit, eOne-Stop, Businesses, Startup, Start-up, Start Up, Company, economy, economic recovery, technology, business permits" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2009 by DotNetNuke Corporation" /><meta id="MetaAuthor" name="AUTHOR" content="Baltimore City Business Center" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link href="/DependencyHandler.axd?s=L1BvcnRhbHMvX2RlZmF1bHQvZGVmYXVsdC5jc3M7L0Rlc2t0b3BNb2R1bGVzL0hUTUwvbW9kdWxlLmNzczsvRGVza3RvcE1vZHVsZXMvQWRtaW4vQ29uc29sZS9tb2R1bGUuY3NzOy9Qb3J0YWxzL19kZWZhdWx0L1NraW5zL0NPQldFQl9JbnRlcm5ldC9za2luLmNzczsvUG9ydGFscy9fZGVmYXVsdC9Ta2lucy9DT0JXRUJfSW50ZXJuZXQvY3NzL3JtX21lbnUuY3NzOy9Qb3J0YWxzL19kZWZhdWx0L1NraW5zL0NPQldFQl9JbnRlcm5ldC9jc3MvY2xhc3MubGlicmFyeS5jc3M7L1BvcnRhbHMvX2RlZmF1bHQvU2tpbnMvQ09CV0VCX0ludGVybmV0L05vIFJpZ2h0IENvbHVtbi5jc3M7L1BvcnRhbHMvX2RlZmF1bHQvQ29udGFpbmVycy9DT0JXRUJfSW50ZXJuZXQvY29udGFpbmVyLmNzczsvYnVzaW5lc3MvcG9ydGFsLmNzczsvRGVza3RvcE1vZHVsZXMvQ09CV0VCL0tleXdvcmRzX1NPL0NsaWVudFJlc291cmNlcy9zdHlsZXMuY3NzOy9hZG1pbi9Db250cm9sUGFuZWwvbW9kdWxlLmNzczsvUG9ydGFscy9fZGVmYXVsdC9Ta2lucy9fZGVmYXVsdC9XZWJDb250cm9sU2tpbi9EZWZhdWx0L0NvbWJvQm94LkRlZmF1bHQuY3NzOw&amp;t=Css&amp;cdv=1784" type="text/css" rel="stylesheet"/><script src="/DependencyHandler.axd?s=L1Jlc291cmNlcy9TaGFyZWQvU2NyaXB0cy9qcXVlcnkvanF1ZXJ5Lm1pbi5qczsvUmVzb3VyY2VzL1NoYXJlZC9TY3JpcHRzL2pxdWVyeS9qcXVlcnktdWkubWluLmpzOw&amp;t=Javascript&amp;cdv=1784" type="text/javascript"></script><!--[if IE 7]><link id="IE7Styles" rel="stylesheet" type="text/css" media="all" href="/Portals/_default/Skins/COBWEB_Internet/ie7.css" /><![endif]--><!--[if IE 6]><link id="IE6Styles" rel="stylesheet" type="text/css" media="all" href="/Portals/_default/Skins/COBWEB_Internet/ie6.css" /><![endif]--><meta name="google-site-verification" content="eVlKolmWLvoR7Anr_Eq35r8B6sG12-go4w19PbImsHE" /><link href="/Telerik.Web.UI.WebResource.axd?compress=1&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Web.UI%2c+Version%3d2011.3.1115.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3af0ea1c34-9d2c-42a1-84c3-49717427a593%3a92753c09%3a91f742eb%3aed2942d4" type="text/css" rel="stylesheet" /><title>
+	
+</title></head>
+<body id="Body">
+    
+    <form method="post" action="/" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwOTkyMDQ2OTQPZBYIZg8WAh4EVGV4dAV5PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRyYW5zaXRpb25hbC5kdGQiPmQCAg8WAh8ABUMgeG1sOmxhbmc9ImVuLVVTIiBsYW5nPSJlbi1VUyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiZAIED2QWDgIEDxYCHgdWaXNpYmxlaGQCBQ8WAh4HY29udGVudAUwQmFsdGltb3JlIENpdHkncyBPbmUtU3RvcCBPbmxpbmUgQnVzaW5lc3MgQ2VudGVyZAIGDxYCHwIFwAFCYWx0aW1vcmUsIENpdHksIEJ1c2luZXNzLCBPbmUtU3RvcCwgUGVybWl0cywgUGVybWl0IEFwcGxpY2F0aW9ucywgUGVybWl0LCBlT25lLVN0b3AsIEJ1c2luZXNzZXMsIFN0YXJ0dXAsIFN0YXJ0LXVwLCBTdGFydCBVcCwgQ29tcGFueSwgZWNvbm9teSwgZWNvbm9taWMgcmVjb3ZlcnksIHRlY2hub2xvZ3ksIGJ1c2luZXNzIHBlcm1pdHNkAgcPFgIfAgUoQ29weXJpZ2h0IDIwMDkgYnkgRG90TmV0TnVrZSBDb3Jwb3JhdGlvbmQCCA8WBB8CZB8BaGQCCQ8WAh8CBR5CYWx0aW1vcmUgQ2l0eSBCdXNpbmVzcyBDZW50ZXJkAgwPFgIfAgUNSU5ERVgsIEZPTExPV2QCBg9kFgICAQ9kFgICBw9kFgJmD2QWFAITD2QWAmYPZBYCZg8PFgIfAWhkFgYCAg8QZGQWAWZkAgMPDxYCHwFoZGQCBQ9kFgYCAQ9kFgICAQ9kFgJmD2QWAmYPZBYOAgsPZBYCAgMPEGRkFgBkAg0PZBYCAgMPEGRkFgBkAhEPZBYCZg8UKwACZGQWBGYPDxYEHghDc3NDbGFzcwUJcmNiSGVhZGVyHgRfIVNCAgJkZAIBDw8WBB8DBQlyY2JGb290ZXIfBAICZGQCFw8QZGQWAGQCHQ8QZGQWAGQCIQ8QZGQWAGQCJQ8QZGQWAGQCAw9kFgQCFw9kFgYCBw8QZGQWAGQCCw8QZGQWAGQCDQ8QZGQWAGQCGw9kFgYCBw8QZGQWAGQCCQ8QZGQWAGQCDQ8UKwACZGQWBGYPDxYEHwMFCXJjYkhlYWRlch8EAgJkZAIBDw8WBB8DBQlyY2JGb290ZXIfBAICZGQCBQ8PFgIfAWhkFgQCDQ8PFgIfAWhkZAIRD2QWAmYPEGRkFgBkAhUPZBYEAgIPFCsAAhQrAANkZGQQFgVmAgECAgIDAgQWBRQrAANkZGQUKwADZGRkFCsAA2RkZBQrAANkZGQUKwADZGRkDxYFZmZmZmYWAQVyVGVsZXJpay5XZWIuVUkuUmFkV2luZG93LCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDExLjMuMTExNS4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FgpmDxQrAANkZGRkAgEPFCsAA2RkZGQCAg8UKwADZGRkZAIDDxQrAANkZGRkAgQPFCsAA2RkZGQCBA8UKwACFCsAAg8WAh4QRXhwYW5kRWFzaW5nVHlwZQspdlRlbGVyaWsuV2ViLlVJLkFuaW1hdGlvblR5cGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTEuMy4xMTE1LjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQQZBAWAWYWARQrAAJkEBYBZhYBFCsAAmRkDxYBZhYBBXRUZWxlcmlrLldlYi5VSS5SYWRNZW51SXRlbSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxMS4zLjExMTUuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNA8WAWYWAQV0VGVsZXJpay5XZWIuVUkuUmFkTWVudUl0ZW0sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTEuMy4xMTE1LjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDRkZAIbD2QWAmYPDxYCHwFoZBYCAgkPZBYCAgEPEGRkFgBkAiMPDxYCHwFoZGQCJw8PFgIfAWhkZAIpD2QWBGYPFgIeBWNsYXNzBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLVBUR19MaW5rcyBEbm5Nb2R1bGUtMzM1NhYCAgEPZBYGAgEPDxYCHwFoZGQCAw9kFgICAg8WAh8BaGQCBQ9kFgICAQ8PZBYCHwYFHUROTk1vZHVsZUNvbnRlbnQgTW9kUFRHTGlua3NDFgICAQ9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIBFgICAQ9kFgQCAQ8PFgQeC05hdmlnYXRlVXJsBVxodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvSG9tZS90YWJpZC8xNzMzL2N0bC9FZGl0L21pZC8zMzU2L0l0ZW1JRC8xMTMxL0RlZmF1bHQuYXNweB8BaGQWAmYPDxYCHwFoZGQCAw8PFggfCAU0aHR0cDovL2J1c2luZXNzLmJhbHRpbW9yZWNpdHkuZ292L01heW9yc01lc3NhZ2UuYXNweB8DBQxwdGdMaW5rc0xpbmseBlRhcmdldAUFX3NlbGYfBAICZBYGZg8PFgQeCEltYWdlVXJsZR8BaGRkAgIPDxYCHwAFI0EgTGV0dGVyIEZyb20gIE1heW9yIFJhd2xpbmdzLUJsYWtlZGQCBA8PFgIfAGVkZAIBDxYCHwYFM0Rubk1vZHVsZSBEbm5Nb2R1bGUtRE5OQ29ycFJhem9ySG9zdCBEbm5Nb2R1bGUtMzI4NxYCAgEPZBYGAgEPDxYCHwFoZGQCAw9kFgICAg8WAh8BaGQCBQ9kFgICAQ8PZBYCHwYFJUROTk1vZHVsZUNvbnRlbnQgTW9kRE5OQ29ycFJhem9ySG9zdENkAi0PZBYGZg8WAh8GBStEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS0zNDI5FgICAQ9kFgJmD2QWAgIBDw9kFgIfBgUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQxYCAgEPZBYCAgQPFgIfAWhkAgEPFgIfBgUqRG5uTW9kdWxlIERubk1vZHVsZS1Db25zb2xlIERubk1vZHVsZS0zMzM4FgICAQ9kFgJmD2QWAgIBDw9kFgIfBgUcRE5OTW9kdWxlQ29udGVudCBNb2RDb25zb2xlQxYCAgEPZBYCZg8WAh4Fc3R5bGUFC3dpZHRoOjUxMXB4FggCAQ8QDxYCHwFoZA8WAmYCARYCEAULU21hbGwgSWNvbnMFCEljb25GaWxlZxAFC0xhcmdlIEljb25zBQ1JY29uRmlsZUxhcmdlZxYBAgFkAgMPEA8WAh8BaGQPFgJmAgEWAhAFC1NpbXBsZSBWaWV3BQRIaWRlZxAFDURldGFpbGVkIFZpZXcFBFNob3dnFgECAWQCBQ8WAh8BaGQCBw8WAh8HAgYWDGYPZBYCZg8VAfYCPGRpdj48YSBocmVmPSJodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvQnVzaW5lc3NHdWlkZXMvUmVzdGF1cmFudC5hc3B4Ij48aW1nIHNyYz0iL2ltYWdlcy9pY29uX3Vua25vd25fMTZweC5naWYiIGFsdD0iUmVzdGF1cmFudCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIvPjxpbWcgc3JjPSIvYnVzaW5lc3MvaW1hZ2VzL3Jlc3RhdXJhbnRfaWNvbl80OC5wbmciIGFsdD0iUmVzdGF1cmFudCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIvPjwvYT48aDM+UmVzdGF1cmFudDwvaDM+PGRpdj5BIGd1aWRlIHRvIGhlYWx0aCBpbnNwZWN0aW9ucywgb3V0ZG9vciBzZWF0aW5nLCBzZWF0aW5nIGNhcGFjaXR5ICYgbW9yZS48L2Rpdj48L2Rpdj5kAgEPZBYCZg8VAYIDPGRpdj48YSBocmVmPSJodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvQnVzaW5lc3NHdWlkZXMvQ2hpbGRDYXJlLmFzcHgiPjxpbWcgc3JjPSIvaW1hZ2VzL2ljb25fdW5rbm93bl8xNnB4LmdpZiIgYWx0PSJDaGlsZCBDYXJlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ii8+PGltZyBzcmM9Ii9idXNpbmVzcy9pbWFnZXMvZGF5Y2FyZV9pY29uXzQ4LnBuZyIgYWx0PSJDaGlsZCBDYXJlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ii8+PC9hPjxoMz5DaGlsZCBDYXJlPC9oMz48ZGl2PkEgZ3VpZGUgdG8gbGljZW5zaW5nLCBsaW5rcyB0byBzdGF0ZSBhbmQgZmVkZXJhbCByZWd1bGF0aW9ucywgYW5kIGNvZGUgYW5kIHNhZmV0eSBydWxlcy48L2Rpdj48L2Rpdj5kAgIPZBYCZg8VAZoDPGRpdj48YSBocmVmPSJodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvQnVzaW5lc3NHdWlkZXMvQmFyYmVyU2hvcFNhbG9uLmFzcHgiPjxpbWcgc3JjPSIvaW1hZ2VzL2ljb25fdW5rbm93bl8xNnB4LmdpZiIgYWx0PSJCYXJiZXIgU2hvcCAmIFNhbG9uIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ii8+PGltZyBzcmM9Ii9idXNpbmVzcy9pbWFnZXMvc2Fsb25faWNvbl80OC5wbmciIGFsdD0iQmFyYmVyIFNob3AgJiBTYWxvbiIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIvPjwvYT48aDM+QmFyYmVyIFNob3AgJiBTYWxvbjwvaDM+PGRpdj5BIGd1aWRlIHRvIGdldCB5b3Ugc3RhcnRlZCBpbiBzdHlsZSB3aXRoIGhlYWx0aCBwZXJtaXRzLCBsaWNlbnNlcyAmIGJhcmJlciBwb2xlcy48L2Rpdj48L2Rpdj5kAgMPZBYCZg8VAYEDPGRpdj48YSBocmVmPSJodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvQnVzaW5lc3NHdWlkZXMvQXV0b21vdGl2ZVJlcGFpci5hc3B4Ij48aW1nIHNyYz0iL2ltYWdlcy9pY29uX3Vua25vd25fMTZweC5naWYiIGFsdD0iQXV0b21vdGl2ZSBSZXBhaXIiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiLz48aW1nIHNyYz0iL2J1c2luZXNzL2ltYWdlcy9hdXRvbW90aXZlX2ljb25fNDgucG5nIiBhbHQ9IkF1dG9tb3RpdmUgUmVwYWlyIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ii8+PC9hPjxoMz5BdXRvbW90aXZlIFJlcGFpcjwvaDM+PGRpdj5BIGd1aWRlIHRvIGhhemFyZG91cyBtYXRlcmlhbCBwZXJtaXRzLCBjdXJiIGN1dHMgJiBtb3JlLjwvZGl2PjwvZGl2PmQCBA9kFgJmDxUBjAM8ZGl2PjxhIGhyZWY9Imh0dHA6Ly9idXNpbmVzcy5iYWx0aW1vcmVjaXR5Lmdvdi9CdXNpbmVzc0d1aWRlcy9SZXRhaWxhbmRHcm9jZXJ5LmFzcHgiPjxpbWcgc3JjPSIvaW1hZ2VzL2ljb25fdW5rbm93bl8xNnB4LmdpZiIgYWx0PSJSZXRhaWwgYW5kIEdyb2NlcnkiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiLz48aW1nIHNyYz0iL2J1c2luZXNzL2ltYWdlcy9yZXRhaWxfZ3JvY2VyeV9pY29uXzQ4LnBuZyIgYWx0PSJSZXRhaWwgYW5kIEdyb2NlcnkiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiLz48L2E+PGgzPlJldGFpbCBhbmQgR3JvY2VyeTwvaDM+PGRpdj5BIGd1aWRlIHRvIHNpZ25hZ2UsIGluY2VudGl2ZXMgYW5kIGxvY2F0aW9ucyBmb3IgeW91ciBzaG9wcy48L2Rpdj48L2Rpdj5kAgUPZBYCZg8VAf8CPGRpdj48YSBocmVmPSJodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvQnVzaW5lc3NHdWlkZXMvR3JlZW5CdXNpbmVzcy5hc3B4Ij48aW1nIHNyYz0iL2ltYWdlcy9pY29uX3Vua25vd25fMTZweC5naWYiIGFsdD0iR3JlZW4gQnVzaW5lc3MiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiLz48aW1nIHNyYz0iL2J1c2luZXNzL2ltYWdlcy9ncmVlbl9idXNpbmVzc19pY29uXzQ4LnBuZyIgYWx0PSJHcmVlbiBCdXNpbmVzcyIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIvPjwvYT48aDM+R3JlZW4gQnVzaW5lc3M8L2gzPjxkaXY+QSBndWlkZSB0byBzZXR0aW5nIHVwIGEgZ3JlZW4gYnVzaW5lc3MsIGlkZWFzIGFuZCBpbmZvcm1hdGlvbi48L2Rpdj48L2Rpdj5kAgIPFgIfBgUrRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtMzQzMBYCAgEPZBYGAgEPDxYCHwFoZGQCAw9kFgICAg8WAh8BaGQCBQ9kFgICAQ8PZBYCHwYFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTEMWAgIBD2QWAgIEDxYCHwFoZAIvD2QWAmYPFgIfBgUrRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtMzI3MRYCAgEPZBYGAgEPDxYCHwFoZGQCAw9kFgICAg8WAh8BaGQCBQ9kFgICAQ8PZBYCHwYFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTEMWAgIBD2QWAgIEDxYCHwFoZAIxDxYCHwYFDEROTkVtcHR5UGFuZWQCMw9kFgQCAw9kFgJmDw8WAh8BaGRkAgUPZBYCZg8PFgQfAAUFTG9naW4fCAVWaHR0cDovL2J1c2luZXNzLmJhbHRpbW9yZWNpdHkuZ292L0hvbWUvdGFiaWQvMTczMy9jdGwvTG9naW4vRGVmYXVsdC5hc3B4P3JldHVybnVybD0lMmYWAh4Hb25jbGljawWcAXJldHVybiBkbm5Nb2RhbC5zaG93KCdodHRwOi8vYnVzaW5lc3MuYmFsdGltb3JlY2l0eS5nb3YvSG9tZS90YWJpZC8xNzMzL2N0bC9Mb2dpbi9EZWZhdWx0LmFzcHg/cmV0dXJudXJsPSUyZiZwb3BVcD10cnVlJywvKnNob3dSZXR1cm4qL3RydWUsMzAwLDY1MCx0cnVlLCcnKWQYAwUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgkFH2RubiRVdGlsTWVudTEkUmFkV2luZG93TWFuYWdlcjEFGGRubiRVdGlsTWVudTEkcndGYWNlYm9vawUXZG5uJFV0aWxNZW51MSRyd1R3aXR0ZXIFFGRubiRVdGlsTWVudTEkcndEaWdnBRlkbm4kVXRpbE1lbnUxJHJ3RGVsaWNpb3VzBRtkbm4kVXRpbE1lbnUxJHJ3TW9yZU9wdGlvbnMFGmRubiRVdGlsTWVudTEkU2l0ZVV0aWxNZW51BRVkbm4kcmFkTUVOVTEkUmFkTWVudTEFG2RubiRyYWRNRU5VX0Zvb3RlciRSYWRNZW51MQUeZG5uJFJpYmJvbkJhciRFZGl0UGFnZSRTa2luTHN0DxQrAAJlZWQFGmRubiRSaWJib25CYXIkQWRkTW9kJGN0bDAyDxQrAAJlZWTT5KPoHa6mknEDdL9RfT5idF69Kg==" />
+</div>
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a89093640-ae6b-44c3-b8ea-010c934f8924%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2011.3.1115.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3af0ea1c34-9d2c-42a1-84c3-49717427a593%3a16e4e7cd%3a874f8ea2%3af7645509%3a24ee1bba%3af46195d3%3a19620875%3a490a9d4e%3abd8f85e4%3a5f39f986%3ae330518b%3a1e771326%3ac8618e41" type="text/javascript"></script>
+<script src="/js/dnn.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKvv7q5DgL+5PGyAgLR9YnYDozLmBsSSYUh72nIr86IXAGDcTNv" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+//]]>
+</script>
+
+        <script src="/DependencyHandler.axd?s=L1Jlc291cmNlcy9Db250cm9sUGFuZWwvQ29udHJvbFBhbmVsLmRlYnVnLmpzOy9kZXNrdG9wbW9kdWxlcy9hZG1pbi9jb25zb2xlL2pxdWVyeS5jb25zb2xlLmpzOy9EZXNrdG9wTW9kdWxlcy9DT0JXRUIvS2V5d29yZHNfU08vQ2xpZW50UmVzb3VyY2VzL3NjcmlwdHMuanM7L2pzL2Rubi5qcXVlcnkuanM7L1Jlc291cmNlcy9TaGFyZWQvU2NyaXB0cy9qcXVlcnkvanF1ZXJ5LmhvdmVySW50ZW50Lm1pbi5qczsvanMvZG5uLm1vZGFscG9wdXAuanM7L1BvcnRhbHMvX2RlZmF1bHQvU2tpbnMvQ09CV0VCX0ludGVybmV0L2pzL2pxdWVyeS9qcXVlcnkuaW5pdC5qczsvUG9ydGFscy9fZGVmYXVsdC9Ta2lucy9DT0JXRUJfSW50ZXJuZXQvanMvanF1ZXJ5L2pxdWVyeS5qcXVybC5qczsvUG9ydGFscy9fZGVmYXVsdC9Ta2lucy9DT0JXRUJfSW50ZXJuZXQvanMvc3dmb2JqZWN0L3N3Zm9iamVjdC5taW4uanM7L2pzL2RubmNvcmUuanM7L1BvcnRhbHMvX2RlZmF1bHQvU2tpbnMvQ09CV0VCX0ludGVybmV0L2pzL2xpYnJhcnkuanM7&amp;t=Javascript&amp;cdv=1784" type="text/javascript"></script>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2054500-1']);
+    _gaq.push(['_setDomainName', '.baltimorecity.gov']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<div id="wrapper">
+	
+    <div id="dnn_ControlPanel"></div>
+
+<div id="headerTopRight">
+    <a href="https://public.govdelivery.com/accounts/MDBALT/subscriber/new" target="_blank"><img src="/Portals/0/images/EmailSMSAlerts.png" alt="Sign up for Email/SMS Alerts" /></a>
+</div>
+
+    <div id="header">
+
+	<div id="mainHomeLink"><a class="mainHomeLink" href="http://www.baltimorecity.gov"><span class="offPage">Baltimore City Home</span></a></div>
+            
+        <div id="dnn_AccessPane">
+           <ul id="accessMenu" class="offPage">
+                <li><a href="#contentTop" class="iconLink skipNavLink">Skip Navigation</a></li>
+           </ul>
+
+           
+    <script type="text/javascript">
+        // For screen readers, focus on first child of menu
+        function UtilMenuClickHandler(sender,eventArgs) {eventArgs.get_item().focusFirstChild();}
+    </script>
+
+
+<div id="dnn_UtilMenu1_RadWindowManager1" style="z-index:10000;display:none;">
+	<!-- 2011.3.1115.35 --><div id="dnn_UtilMenu1_rwFacebook" style="display:none;">
+		<div id="dnn_UtilMenu1_rwFacebook_C">
+
+		</div><input id="dnn_UtilMenu1_rwFacebook_ClientState" name="dnn_UtilMenu1_rwFacebook_ClientState" type="hidden" />
+	</div><div id="dnn_UtilMenu1_rwTwitter" style="display:none;">
+		<div id="dnn_UtilMenu1_rwTwitter_C">
+
+		</div><input id="dnn_UtilMenu1_rwTwitter_ClientState" name="dnn_UtilMenu1_rwTwitter_ClientState" type="hidden" />
+	</div><div id="dnn_UtilMenu1_rwDigg" style="display:none;">
+		<div id="dnn_UtilMenu1_rwDigg_C">
+
+		</div><input id="dnn_UtilMenu1_rwDigg_ClientState" name="dnn_UtilMenu1_rwDigg_ClientState" type="hidden" />
+	</div><div id="dnn_UtilMenu1_rwDelicious" style="display:none;">
+		<div id="dnn_UtilMenu1_rwDelicious_C">
+
+		</div><input id="dnn_UtilMenu1_rwDelicious_ClientState" name="dnn_UtilMenu1_rwDelicious_ClientState" type="hidden" />
+	</div><div id="dnn_UtilMenu1_rwMoreOptions" style="display:none;">
+		<div id="dnn_UtilMenu1_rwMoreOptions_C">
+
+		</div><input id="dnn_UtilMenu1_rwMoreOptions_ClientState" name="dnn_UtilMenu1_rwMoreOptions_ClientState" type="hidden" />
+	</div><div id="dnn_UtilMenu1_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="dnn_UtilMenu1_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="dnn_UtilMenu1_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="dnn_UtilMenu1_RadWindowManager1_ClientState" name="dnn_UtilMenu1_RadWindowManager1_ClientState" type="hidden" />
+</div>
+
+<div id="dnn_UtilMenu1_SiteUtilMenu" class="RadMenu RadMenu_ RadMenu_rtl RadMenu__rtl" dir="rtl">
+	<ul class="rmRootGroup rmHorizontal">
+		<li class="rmItem rmFirst rmLast"><a href="#" class="rmLink rmRootLink iconLink shareLink"><span class="rmText">Tools & Sharing</span></a><div class="rmSlide">
+			<ul class="rmHorizontal rmGroup rmLevel1">
+				<li class="rmItem rmFirst rmLast rmTemplate"><div class="rmText">
+					
+                        <div class="siteUtilitiesTemplateWrapper">
+                            <h2 class="offPage">Tools &amp; Sharing</h2>
+                            <table width="200" cellpadding="0" cellspacing="0" border="0" class="siteUtilitiesTable">
+                                <tr>
+                                    <td>
+                                        <div class="siteUtilitiesMenuWrapper">
+                                            <h3>Tools</h3>
+                                            <ul>
+                                                <li><a href="#" class="iconLink bookmarkLink" onclick="bookmark(this.href,document.title);">Bookmark</a></li>
+                                                <li><a href="javascript:void(window.print())" class="iconLink printLink">Print Page</a></li>
+                                                <li><a href="/Help/AccessibilityUsability.aspx" class="iconLink accessibilityLink">Accessibility</a></li>
+                                                <li><a href="#" onclick="translate(); return false;" class="iconLink spanishLink" lang="es">Traducci&oacute;n</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="siteUtilitiesMenuWrapper">
+                                            <h3>Sharing</h3>
+                                            <ul>
+                                                <li><a href="http://www.facebook.com/share.php?u=http%3a%2f%2fbusiness.baltimorecity.gov%2fDefault.aspx" onclick="popWin(this.href,'rwFacebook'); return false;" class="iconLink facebookLink">Facebook</a></li>
+                                                <li><a href="http://www.twitter.com/home?status=Currently reading http%3a%2f%2fbusiness.baltimorecity.gov%2fDefault.aspx" onclick="popWin(this.href,'rwTwitter'); return false;" class="iconLink twitterLink">Twitter</a></li>
+                                                <li><a href="http://www.digg.com/submit?phase=2&amp;url=http%3a%2f%2fbusiness.baltimorecity.gov%2fDefault.aspx" onclick="popWin(this.href,'rwDigg'); return false;" class="iconLink diggLink">Digg</a></li>
+                                                <li><a href="http://www.del.icio.us/post?url=http%3a%2f%2fbusiness.baltimorecity.gov%2fDefault.aspx" onclick="popWin(this.href,'rwDelicious'); return false;" class="iconLink deliciousLink">Delicious</a></li>
+                                                <li><a href="http://www.addthis.com/bookmark.php" onclick="popWin(this.href,'rwMoreOptions'); return false;" class="iconLink addThisLink">More...</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                        
+                    
+				</div></li>
+			</ul>
+		</div></li>
+	</ul><input id="dnn_UtilMenu1_SiteUtilMenu_ClientState" name="dnn_UtilMenu1_SiteUtilMenu_ClientState" type="hidden" />
+</div>
+        
+        </div>
+
+
+
+	    <div id="mainNavigation">
+			<div id="dnn_radMENU1_RadMenu1" class="RadMenu RadMenu_ rmSized RadMenu_TOP" style="width:100%;">
+	<ul class="rmRootGroup rmHorizontal">
+		<li class="rmItem rmFirst"><a href="http://business.baltimorecity.gov/Home.aspx" class="rmLink rmRootLink"><span class="rmText">Home</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/StartaBusiness.aspx" class="rmLink rmRootLink"><span class="rmText">Start a Business</span></a></li><li class="rmItem "><a href="#" class="rmLink rmRootLink"><span class="rmText">Business Guides</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst"><a href="http://business.baltimorecity.gov/BusinessGuides/Restaurant.aspx" class="rmLink"><span class="rmText">Restaurant</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/BusinessGuides/ChildCare.aspx" class="rmLink"><span class="rmText">Child Care</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/BusinessGuides/BarberShopSalon.aspx" class="rmLink"><span class="rmText">Barber Shop & Salon</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/BusinessGuides/AutomotiveRepair.aspx" class="rmLink"><span class="rmText">Automotive Repair</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/BusinessGuides/RetailandGrocery.aspx" class="rmLink"><span class="rmText">Retail and Grocery</span></a></li><li class="rmItem rmLast"><a href="http://business.baltimorecity.gov/BusinessGuides/GreenBusiness.aspx" class="rmLink"><span class="rmText">Green Business</span></a></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="http://business.baltimorecity.gov/BusinessResources.aspx" class="rmLink rmRootLink"><span class="rmText">Business Resources</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst"><a href="http://www.baltimorecity.gov/OfficeoftheMayor/MayoralOffices/MinorityandWomenOwnedBusinessDevelopment.aspx" class="rmLink"><span class="rmText">Minority Contracting</span></a></li><li class="rmItem "><a href="http://www.baltimorecity.gov/Government/AgenciesDepartments/Finance/Purchases.aspx" class="rmLink"><span class="rmText">The Procurement Process</span></a></li><li class="rmItem "><a href="https://www.baltimorecitibuy.org" class="rmLink"><span class="rmText">Vendor Bidder Registration</span></a></li><li class="rmItem rmLast"><a href="http://business.baltimorecity.gov/BusinessResources/EmploymentResources.aspx" class="rmLink"><span class="rmText">Employment Resources</span></a></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="http://business.baltimorecity.gov/PermitsLicenses.aspx" class="rmLink rmRootLink"><span class="rmText">Permits & Licenses</span></a></li><li class="rmItem rmLast"><a href="http://business.baltimorecity.gov/ContactUs.aspx" class="rmLink rmRootLink"><span class="rmText">Contact Us</span></a></li>
+	</ul><input id="dnn_radMENU1_RadMenu1_ClientState" name="dnn_radMENU1_RadMenu1_ClientState" type="hidden" />
+</div>
+
+	    </div>
+
+	    <div id="searchBar">
+	    
+	        <div id="iWantToMenu">
+			    
+
+		    </div>
+
+		    <div id="siteSearch">
+    		    	
+
+
+		    </div>
+    	
+	    </div>
+	        	
+    </div>
+    
+	<div id="middleWrapper">
+	
+        <div id="leftColumn">
+            
+            
+		           
+    		
+		    
+		    
+		    
+		    
+            <div id="dnn_LeftPane"><div class="DnnModule DnnModule-PTG_Links DnnModule-3356"><a name="3356"></a>
+
+<div class="container">
+    <span class="dnnPageIcon">
+        
+    </span>
+    <h2>
+        <span id="dnn_ctr3356_dnnTITLE_titleLabel" class="Head">Mayor's Message</span>
+
+
+
+    </h2>
+    <div id="dnn_ctr3356_ContentPane" class="containerContent clearfix"><!-- Start_Module_3356 --><div id="dnn_ctr3356_ModuleContent" class="DNNModuleContent ModPTGLinksC">
+	<div id="dnn_ctr3356_Links_pnlList">
+		
+    
+            <ul class="ptgLinks">
+        
+            <li>
+                <span class="ptgLinksEditLink">
+                    
+                </span>
+                <a id="dnn_ctr3356_Links_rpLinks_HyperLink1_0" class="ptgLinksLink" href="http://business.baltimorecity.gov/MayorsMessage.aspx" target="_self">
+                    <strong><span id="dnn_ctr3356_Links_rpLinks_Label1_0">A Letter From  Mayor Rawlings-Blake</span></strong>
+                    <span class="ptgLinksDesc"><span id="dnn_ctr3356_Links_rpLinks_Label2_0"></span></span>
+                </a>
+            </li>
+        
+            </ul>
+        
+
+	</div>
+</div><!-- End_Module_3356 --></div>
+</div></div><div class="DnnModule DnnModule-DNNCorpRazorHost DnnModule-3287"><a name="3287"></a>
+
+<div class="container">
+    <span class="dnnPageIcon">
+        
+    </span>
+    <h2>
+        <span id="dnn_ctr3287_dnnTITLE_titleLabel" class="Head">Business Guides</span>
+
+
+
+    </h2>
+    <div id="dnn_ctr3287_ContentPane" class="containerContent clearfix"><!-- Start_Module_3287 --><div id="dnn_ctr3287_ModuleContent" class="DNNModuleContent ModDNNCorpRazorHostC">
+	
+
+    <li><a href="http://business.baltimorecity.gov/BusinessGuides/Restaurant.aspx">Restaurant</a></li>
+    <li><a href="http://business.baltimorecity.gov/BusinessGuides/ChildCare.aspx">Child Care</a></li>
+    <li><a href="http://business.baltimorecity.gov/BusinessGuides/BarberShopSalon.aspx">Barber Shop & Salon</a></li>
+    <li><a href="http://business.baltimorecity.gov/BusinessGuides/AutomotiveRepair.aspx">Automotive Repair</a></li>
+    <li><a href="http://business.baltimorecity.gov/BusinessGuides/RetailandGrocery.aspx">Retail and Grocery</a></li>
+    <li><a href="http://business.baltimorecity.gov/BusinessGuides/GreenBusiness.aspx">Green Business</a></li>
+
+
+
+
+
+
+</div><!-- End_Module_3287 --></div>
+</div></div></div>
+        </div>
+	
+    	<div id="mainBodyContainer" class="ms_BodyContainer">
+		
+		<a name="contentTop" id="contentTop" tabindex="-1"></a>
+
+		<h1 class="mainPageHeader"></h1>
+
+		<div id="dnn_ContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3429"><a name="3429"></a><div id="dnn_ctr3429_ContentPane"><!-- Start_Module_3429 --><div id="dnn_ctr3429_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr3429_HtmlModule_lblContent" class="Normal">
+		<div class="controlPanel">
+<p><strong>OPEN FOR BUSINESS</strong> provides you with the information and guidance you need on how to open a business in Baltimore City. On this site, you will find permit and license information and applications, agency contacts and helpful resources to get you started.</p>
+<p>For additional questions or assistance, please contact the <a href="javascript:void(location.href='mailto:'+String.fromCharCode(115,109,97,108,108,98,117,115,105,110,101,115,115,64,98,97,108,116,105,109,111,114,101,100,101,118,101,108,111,112,109,101,110,116,46,99,111,109)+'?subject=Start%20A%20Business')">Small Business Team</a> at the Baltimore Development Corporation.</p>
+</div>
+	</div>
+
+
+
+
+
+
+</div><!-- End_Module_3429 --></div>
+</div><div class="DnnModule DnnModule-Console DnnModule-3338"><a name="3338"></a><div id="dnn_ctr3338_ContentPane"><!-- Start_Module_3338 --><div id="dnn_ctr3338_ModuleContent" class="DNNModuleContent ModConsoleC">
+	
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("#dnn_ctr3338_ViewConsole_Console").dnnConsole({allowIconSizeChange: false, allowDetailChange: false, selectedSize: 'IconFileLarge', showDetails: 'Show', tabModuleID: -1, showTooltip: false});
+	});
+</script>
+
+<div id="dnn_ctr3338_ViewConsole_Console" class="console" style="width:511px">
+	
+	
+	
+	<div>
+	<div><a href="http://business.baltimorecity.gov/BusinessGuides/Restaurant.aspx"><img src="/images/icon_unknown_16px.gif" alt="Restaurant" width="16px" height="16px"/><img src="/business/images/restaurant_icon_48.png" alt="Restaurant" width="32px" height="32px"/></a><h3>Restaurant</h3><div>A guide to health inspections, outdoor seating, seating capacity & more.</div></div><div><a href="http://business.baltimorecity.gov/BusinessGuides/ChildCare.aspx"><img src="/images/icon_unknown_16px.gif" alt="Child Care" width="16px" height="16px"/><img src="/business/images/daycare_icon_48.png" alt="Child Care" width="32px" height="32px"/></a><h3>Child Care</h3><div>A guide to licensing, links to state and federal regulations, and code and safety rules.</div></div><div><a href="http://business.baltimorecity.gov/BusinessGuides/BarberShopSalon.aspx"><img src="/images/icon_unknown_16px.gif" alt="Barber Shop & Salon" width="16px" height="16px"/><img src="/business/images/salon_icon_48.png" alt="Barber Shop & Salon" width="32px" height="32px"/></a><h3>Barber Shop & Salon</h3><div>A guide to get you started in style with health permits, licenses & barber poles.</div></div><div><a href="http://business.baltimorecity.gov/BusinessGuides/AutomotiveRepair.aspx"><img src="/images/icon_unknown_16px.gif" alt="Automotive Repair" width="16px" height="16px"/><img src="/business/images/automotive_icon_48.png" alt="Automotive Repair" width="32px" height="32px"/></a><h3>Automotive Repair</h3><div>A guide to hazardous material permits, curb cuts & more.</div></div><div><a href="http://business.baltimorecity.gov/BusinessGuides/RetailandGrocery.aspx"><img src="/images/icon_unknown_16px.gif" alt="Retail and Grocery" width="16px" height="16px"/><img src="/business/images/retail_grocery_icon_48.png" alt="Retail and Grocery" width="32px" height="32px"/></a><h3>Retail and Grocery</h3><div>A guide to signage, incentives and locations for your shops.</div></div><div><a href="http://business.baltimorecity.gov/BusinessGuides/GreenBusiness.aspx"><img src="/images/icon_unknown_16px.gif" alt="Green Business" width="16px" height="16px"/><img src="/business/images/green_business_icon_48.png" alt="Green Business" width="32px" height="32px"/></a><h3>Green Business</h3><div>A guide to setting up a green business, ideas and information.</div></div>
+	</div>
+	<br style="clear:both" />
+</div>
+
+</div><!-- End_Module_3338 --></div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-3430"><a name="3430"></a>
+
+<div class="container">
+    <span class="dnnPageIcon">
+        
+    </span>
+    <h2>
+        <span id="dnn_ctr3430_dnnTITLE_titleLabel" class="Head">Business Type Not Listed?</span>
+
+
+
+    </h2>
+    <div id="dnn_ctr3430_ContentPane" class="containerContent clearfix"><!-- Start_Module_3430 --><div id="dnn_ctr3430_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr3430_HtmlModule_lblContent" class="Normal">
+	<div class="controlPanel">
+<p>If your business type is not listed or you have any questions, please contact the&#160;<a href="javascript:void(location.href='mailto:'+String.fromCharCode(115,109,97,108,108,98,117,115,105,110,101,115,115,64,98,97,108,116,105,109,111,114,101,100,101,118,101,108,111,112,109,101,110,116,46,99,111,109)+'?subject=Start%20A%20Business')">Small Business Team</a> at the Baltimore Development Corporation for assistance.</p>
+</div>
+</div>
+
+
+
+
+
+
+</div><!-- End_Module_3430 --></div>
+</div></div></div>
+		
+		<div id="viewerDownloads" style="display:none;">
+		    <p>This page contains links to files which may require additional software to view. You may download free viewers below.</p>
+		    <div id="fileViewersContainer">
+		        <ul id="fileViewers">
+		            <li id="pdfViewer" style="display:none;"><a href="http://get.adobe.com/reader/" target="_blank" title="Adobe Reader"><span>Adobe Reader</span></a></li>
+		            <li id="docViewer" style="display:none;"><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=3657ce88-7cfa-457a-9aec-f4f827f20cac&amp;displaylang=en" target="_blank" title="Microsoft Word Viewer"><span>Microsoft Word Viewer</span></a></li>
+		            <li id="xlsViewer" style="display:none;"><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=1cd6acf9-ce06-4e1c-8dcf-f33f669dbc3a&amp;DisplayLang=en" target="_blank" title="Microsoft Excel Viewer"><span>Microsoft Excel Viewer</span></a></li>
+		            <li id="pptViewer" style="display:none;"><a href="http://www.microsoft.com/downloads/details.aspx?familyid=048DC840-14E1-467D-8DCA-19D2A8FD7485&amp;displaylang=en" target="_blank" title="Microsoft PowerPoint Viewer"><span>Microsoft PowerPoint Viewer</span></a></li>
+		            <li id="zipViewer" style="display:none;"><a href="http://www.winzip.com/prod_down.htm" target="_blank" title="Winzip Archive Utility"><span>Winzip Archive Utility</span></a></li>
+		        </ul>
+		    </div>
+		</div>
+
+	</div>
+
+        <div id="rightColumn">
+            <div id="rightColTop">
+                <div id="dnn_RightTopPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3271"><a name="3271"></a>
+
+<div class="container" id="container-padded">
+    <h2>
+        
+        <span id="dnn_ctr3271_dnnTITLE_titleLabel" class="Head">Contacts</span>
+
+
+
+    </h2>
+    <div id="dnn_ctr3271_ContentPane" class="containerContent clearfix" style="padding: 8px;"><!-- Start_Module_3271 --><div id="dnn_ctr3271_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr3271_HtmlModule_lblContent" class="Normal">
+		<strong>Baltimore Development Corporation</strong><br />
+Small Business Team<br />
+36 South Charles Street, <br />
+Suite 1600<br />
+Baltimore, MD 21201<br />
+<a href="mailto:smallbusiness@baltimoredevelopment.com" class="ApplyClass"><span class="ApplyClass">Contact Us</span></a>
+	</div>
+
+
+
+
+
+
+</div><!-- End_Module_3271 --></div>
+</div></div></div>
+            </div>
+            <div id="dnn_RightPane" class="DNNEmptyPane"></div>
+        </div>
+        
+	</div>
+			
+    <div id="footer">
+    	
+        <div id="dnn_FooterPane">
+        
+            <p><strong>City of Baltimore</strong> &copy; 2010</p>
+
+   			<div id="dnn_radMENU_Footer_RadMenu1" class="RadMenu RadMenu_ RadMenu_Footer">
+	<ul class="rmRootGroup rmHorizontal">
+		<li class="rmItem rmFirst"><a href="http://business.baltimorecity.gov/Home.aspx" class="rmLink rmRootLink"><span class="rmText">Home</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/StartaBusiness.aspx" class="rmLink rmRootLink"><span class="rmText">Start a Business</span></a></li><li class="rmItem "><a href="#" class="rmLink rmRootLink"><span class="rmText">Business Guides</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/BusinessResources.aspx" class="rmLink rmRootLink"><span class="rmText">Business Resources</span></a></li><li class="rmItem "><a href="http://business.baltimorecity.gov/PermitsLicenses.aspx" class="rmLink rmRootLink"><span class="rmText">Permits & Licenses</span></a></li><li class="rmItem rmLast"><a href="http://business.baltimorecity.gov/ContactUs.aspx" class="rmLink rmRootLink"><span class="rmText">Contact Us</span></a></li>
+	</ul><input id="dnn_radMENU_Footer_RadMenu1_ClientState" name="dnn_radMENU_Footer_RadMenu1_ClientState" type="hidden" />
+</div>
+
+                     
+            <div id="webmaster">
+	            <p><a href="http://www.baltimorecity.gov/PrivacyPolicy.aspx">Privacy Policy</a>&nbsp;|&nbsp;
+			<a href="http://www.baltimorecity.gov/TermsofUse.aspx">Terms of Use</a>&nbsp;|&nbsp;
+			<a href="mailto:webmaster@baltimorecity.gov">Contact The Webmaster</a></p>
+	            <p>&nbsp;&nbsp;
+	            <a id="dnn_dnnLOGIN_loginLink" class="SkinObject" onclick="return dnnModal.show(&#39;http://business.baltimorecity.gov/Home/tabid/1733/ctl/Login/Default.aspx?returnurl=%2f&amp;popUp=true&#39;,/*showReturn*/true,300,650,true,&#39;&#39;)" href="http://business.baltimorecity.gov/Home/tabid/1733/ctl/Login/Default.aspx?returnurl=%2f">Login</a></p>
+            </div>
+        </div>
+    	
+    </div>
+    
+</div>
+
+<script type="text/javascript" language="javascript"> var hs_portalid=172360; var hs_salog_version = "2.00"; var hs_ppa = "baltimorecity.app12.hubspot.com"; document.write(unescape("%3Cscript src='" + document.location.protocol + "//" + hs_ppa + "/salog.js.aspx' type='text/javascript'%3E%3C/script%3E")); </script>
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`}" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('StylesheetManager_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2011.3.1115.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:f0ea1c34-9d2c-42a1-84c3-49717427a593:92753c09:91f742eb:ed2942d4';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":53,"clientStateFieldID":"dnn_UtilMenu1_rwFacebook_ClientState","destroyOnClose":true,"formID":"Form","height":"535px","iconUrl":"http://www.facebook.com/favicon.ico","keepInScreenBounds":true,"minimizeIconUrl":"http://www.facebook.com/favicon.ico","name":"rwFacebook","restrictionZoneID":"RestrictionZone","showContentDuringLoad":false,"skin":"Default","title":"Share on Facebook","visibleStatusbar":false,"width":"675px"}, null, null, $get("dnn_UtilMenu1_rwFacebook"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":53,"clientStateFieldID":"dnn_UtilMenu1_rwTwitter_ClientState","destroyOnClose":true,"formID":"Form","height":"535px","iconUrl":"http://www.twitter.com/favicon.ico","keepInScreenBounds":true,"minimizeIconUrl":"http://www.twitter.com/favicon.ico","name":"rwTwitter","restrictionZoneID":"RestrictionZone","showContentDuringLoad":false,"skin":"Default","title":"Tweet This","visibleStatusbar":false,"width":"675px"}, null, null, $get("dnn_UtilMenu1_rwTwitter"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":53,"clientStateFieldID":"dnn_UtilMenu1_rwDigg_ClientState","destroyOnClose":true,"formID":"Form","height":"535px","iconUrl":"http://www.digg.com/favicon.ico","keepInScreenBounds":true,"minimizeIconUrl":"http://www.digg.com/favicon.ico","name":"rwDigg","restrictionZoneID":"RestrictionZone","showContentDuringLoad":false,"skin":"Default","title":"Digg This","visibleStatusbar":false,"width":"675px"}, null, null, $get("dnn_UtilMenu1_rwDigg"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":53,"clientStateFieldID":"dnn_UtilMenu1_rwDelicious_ClientState","destroyOnClose":true,"formID":"Form","height":"535px","iconUrl":"http://del.icio.us/favicon.ico","keepInScreenBounds":true,"minimizeIconUrl":"http://del.icio.us/favicon.ico","name":"rwDelicious","restrictionZoneID":"RestrictionZone","showContentDuringLoad":false,"skin":"Default","title":"Share on Del.icio.us","visibleStatusbar":false,"width":"675px"}, null, null, $get("dnn_UtilMenu1_rwDelicious"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":53,"clientStateFieldID":"dnn_UtilMenu1_rwMoreOptions_ClientState","destroyOnClose":true,"formID":"Form","height":"535px","iconUrl":"http://www.addthis.com/favicon.ico","keepInScreenBounds":true,"minimizeIconUrl":"http://www.addthis.com/favicon.ico","name":"rwMoreOptions","restrictionZoneID":"RestrictionZone","showContentDuringLoad":false,"skin":"Default","title":"More Sharing Options","visibleStatusbar":false,"width":"675px"}, null, null, $get("dnn_UtilMenu1_rwMoreOptions"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"animation":8,"behaviors":53,"clientStateFieldID":"dnn_UtilMenu1_RadWindowManager1_ClientState","destroyOnClose":true,"formID":"Form","height":"535px","iconUrl":"","keepInScreenBounds":true,"minimizeIconUrl":"","name":"RadWindowManager1","restrictionZoneID":"RestrictionZone","showContentDuringLoad":false,"skin":"Default","visibleStatusbar":false,"width":"675px","windowControls":"['dnn_UtilMenu1_rwFacebook','dnn_UtilMenu1_rwTwitter','dnn_UtilMenu1_rwDigg','dnn_UtilMenu1_rwDelicious','dnn_UtilMenu1_rwMoreOptions']"}, null, {"child":"dnn_UtilMenu1_rwFacebook"}, $get("dnn_UtilMenu1_RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"attributes":{},"clickToOpen":true,"clientStateFieldID":"dnn_UtilMenu1_SiteUtilMenu_ClientState","collapseAnimation":"{\"duration\":450}","enableScreenBoundaryDetection":false,"expandAnimation":"{\"type\":16,\"duration\":450}","itemData":[{"groupSettings":{"flow":1,"expandDirection":2,"offsetY":-2},"items":[{"text":"UtilGroup","templated":true}],"cssClass":"iconLink shareLink"}]}, {"itemClicked":UtilMenuClickHandler,"load":StoreUtilMenuClientObject}, null, $get("dnn_UtilMenu1_SiteUtilMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"clientStateFieldID":"dnn_radMENU1_RadMenu1_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":0,"offsetY":0},"navigateUrl":"http://business.baltimorecity.gov/Home.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":0,"offsetY":0},"navigateUrl":"http://business.baltimorecity.gov/StartaBusiness.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":0,"offsetY":0},"items":[{"navigateUrl":"http://business.baltimorecity.gov/BusinessGuides/Restaurant.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/BusinessGuides/ChildCare.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/BusinessGuides/BarberShopSalon.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/BusinessGuides/AutomotiveRepair.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/BusinessGuides/RetailandGrocery.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/BusinessGuides/GreenBusiness.aspx"}]},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":0,"offsetY":0},"items":[{"navigateUrl":"http://www.baltimorecity.gov/OfficeoftheMayor/MayoralOffices/MinorityandWomenOwnedBusinessDevelopment.aspx"},{"navigateUrl":"http://www.baltimorecity.gov/Government/AgenciesDepartments/Finance/Purchases.aspx"},{"navigateUrl":"https://www.baltimorecitibuy.org"},{"navigateUrl":"http://business.baltimorecity.gov/BusinessResources/EmploymentResources.aspx"}],"navigateUrl":"http://business.baltimorecity.gov/BusinessResources.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":0,"offsetY":0},"navigateUrl":"http://business.baltimorecity.gov/PermitsLicenses.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":0,"offsetY":0},"navigateUrl":"http://business.baltimorecity.gov/ContactUs.aspx"}]}, null, null, $get("dnn_radMENU1_RadMenu1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"clientStateFieldID":"dnn_radMENU_Footer_RadMenu1_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"navigateUrl":"http://business.baltimorecity.gov/Home.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/StartaBusiness.aspx"},{},{"navigateUrl":"http://business.baltimorecity.gov/BusinessResources.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/PermitsLicenses.aspx"},{"navigateUrl":"http://business.baltimorecity.gov/ContactUs.aspx"}]}, null, null, $get("dnn_radMENU_Footer_RadMenu1"));
+});
+//]]>
+</script>
+</form>
+    
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        
+        //This code is to force a refresh of browser cache
+        //in case an old version of dnn.js is loaded
+        //It should be removed as soon as .js versioning is added
+        jQuery(document).ready(function () {
+            if (navigator.userAgent.indexOf(" Chrome/") == -1) {
+                if ((typeof dnnJscriptVersion === 'undefined' || dnnJscriptVersion !== "6.0.0") && typeof dnn !== 'undefined') {
+                    window.location.reload(true);
+                }
+            }
+        });
+         //]]>
+    </script>
+</body>
+</html>

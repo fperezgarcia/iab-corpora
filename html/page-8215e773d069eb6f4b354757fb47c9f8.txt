@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html><head>
+	
+<title>Luxury Cars, Exotic Cars, Used Cars, New Cars, Buy a Car, Sell Your Car - RLuxuryCars.com</title>
+<meta name="keywords" content="Cars for Sale, buy and sell, luxury cars, exotic cars, sports cars, classic cars, Including: Lamborghini for sale, Infiniti for sale, used BMW, new Audi, Porsche 911, Mercedes Benz for sale, Lotus, used Bentley, Lexus for sale, Ferrari for sale, Jaguar for sale, Land Rover for sale, Audi A4 for sale, Lexus Rx350 for sale, Mercedes s550 for sale, Acura for sale, Corvette for sale, Aston Martin for sale, Rolls Royce for sale, Cadillac STS for sale, Jeep for sale, and more." />
+<meta name="description" content="Cars For Sale - R Luxury Cars provides new and used cars in NY, NJ, CT, AZ, MA, SF, FL, IL. Find a new and used cars by owner and dealers like new Audi, Infiniti for sale, Mercedes Benz for sale, BMW for sale, Bentley for sale, Cadillac Srx for sale, Jeep Prices, Porsche for sale, Acura Mdx for sale, Infiniti G37 for sale, Mercedes C300, S550 & Ml350 for sale, Audi a4 for sale, Aston Martin for sale, Ferrari for sale, Lotus for sale, BMW 328i for sale, Rang Rover for sale, Lexus Rx350 available now." />
+<SCRIPT language="javascript" src="inc/xmlhttp.js"></SCRIPT>
+<link href="inc/_style.css" rel="stylesheet" type="text/css">
+<!--[if IE 7]>
+	<link href="inc/ie_derp.css" rel="stylesheet" type="text/css">
+<![endif]-->
+</head>
+<body>
+
+<table width="982" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="images/interface/h1-new6.gif" width="410" height="80" /></td>
+    <td><img src="images/interface/h2-new6.gif" width="163" height="80" /></td>
+    <td><img src="images/interface/h3-new6.gif" width="409" height="80" /></td>
+  </tr>
+</table>
+
+<table width="982" border="0" align="center" cellpadding="0" cellspacing="0" id="nav">
+  <tr>
+    <td width="2"><img src="images/interface/n1.jpg" width="2" height="26" /></td>
+    <td width="800" background="images/interface/n2t.jpg">
+		<img src="images/interface/spacer.gif" width="0" height="7" /> 
+		<a href="http://www.rluxurycars.com/">Home</a> 
+		<img src="images/interface/spacer.gif" width="15" height="8" />|<img src="images/interface/spacer.gif" width="15" height="8" />
+		<a href="search.php">Search</a> 		<img src="images/interface/spacer.gif" width="15" height="8" />|<img src="images/interface/spacer.gif" width="15" height="8" />
+		<a href="packages_seller.php">Sell Your Car</a>		<img src="images/interface/spacer.gif" width="15" height="8" />|<img src="images/interface/spacer.gif" width="15" height="8" />
+		<a href="packages_dealer.php">Dealers</a>		<img src="images/interface/spacer.gif" width="15" height="8" />| <img src="images/interface/spacer.gif" width="15" height="8" />
+		<a href="login.php">My Account</a>		<img src="images/interface/spacer.gif" width="15" height="8" />| <img src="images/interface/spacer.gif" width="15" height="8" />
+		<a href="checklist.php">My Favorites</a>		
+			</td>
+    <td width="100" align="right" background="images/interface/n2t.jpg">
+		<a href="contactus.php">Contact Us</a>		<img src="images/interface/spacer.gif" width="10" height="8" />	</td>
+    <td width="2"><img src="images/interface/n3.jpg" width="2" height="26" /></td>
+  </tr>
+</table>
+<table width="982" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000" id="content">
+  <tr>
+   <td width="982" height="6" valign="top"></td>
+  </tr>
+  <tr>
+   <td width="982">
+    <table border="0" width="982" cellpadding="0" cellspacing="0">
+	 <tr>
+      <td width="50"></td>
+      <td width="441" valign="top" align="center">
+       <table width="100%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+         <td width="100%" valign="top" bgcolor="#484848" height="319px">
+	      <table width="100%" border="0" cellpadding="0" cellspacing="1" height="319px">
+	       <tr>
+            <td bgcolor="#000000" align="center" height="43px"><h1>Search For A Vehicle</h1></td>
+           </tr>
+		   <tr>
+            <td width="100%" valign="top" bgcolor="#000000" align="center" height="295px">
+	         <form name="search_form" action="search.php" method="post">
+<input type="hidden" name="search_the_cat" id="search_the_cat" value="">
+				<table width="75%" border="0" cellspacing="4" cellpadding="0" style="margin-top: 5px;">
+					<tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Category:</td>
+                            <td width="71%" align="right"><select name="id_cat" class="form_menu" onChange="window.location='/index.php?id_cat='+document.search_form.id_cat.options[document.search_form.id_cat.selectedIndex].value;">
+                                <option value="0">All Categories</option>
+                <option value='3'>Certified Pre-Owned</option><option value='4'>Classic Cars</option><option value='6'>Lease Cars</option><option value='1'>New Cars</option><option value='2'>Used Cars</option>                              </select>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Make:</td>
+                            <td width="71%" align="right"><select name="id_make" class="form_menu" onchange="changeMake_search('inc/models_home.php?id_model=0&search=1&id_cat=');">
+                                <option value="">All Makes</option>
+                <option value='8'>Acura</option><option value='16'>Aston-Martin</option><option value='17'>Audi</option><option value='21'>Bentley</option><option value='22'>BMW</option><option value='100'>Bugatti</option><option value='23'>Buick</option><option value='24'>Cadillac</option><option value='6'>Chevrolet</option><option value='26'>Chrysler</option><option value='31'>Dodge</option><option value='33'>Ferrari</option><option value='35'>Ford</option><option value='37'>GMC</option><option value='4'>Honda</option><option value='40'>Hyundai</option><option value='41'>Infiniti</option><option value='44'>Jaguar</option><option value='45'>Jeep</option><option value='48'>Lamborghini</option><option value='50'>Land-Rover</option><option value='51'>Lexus</option><option value='54'>Maserati</option><option value='120'>Maybach</option><option value='55'>Mazda</option><option value='7'>Mercedes-Benz</option><option value='61'>Nissan</option><option value='67'>Porsche</option><option value='71'>Rolls-Royce</option><option value='3'>Toyota</option><option value='81'>Volkswagen</option><option value='82'>Volvo</option>                              </select>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Models:</td>
+                            <td width="71%" align="right">
+							<div id="model">
+							  <select name="id_model" class="form_menu">
+                                <option value="">All Models</option>
+                              </select>
+							 </div>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Trim:</td>
+                            <td width="71%" align="right">
+							<div id="trim">
+							  <select name="id_trim" class="form_menu">
+                                <option value="-1">All Trims</option>
+                              </select>
+							 </div>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+					<tr>
+                      <td>
+					  	<table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Year:</td>
+                            <td width="71%" align="right"><select name="year_from" class="form_select">
+                                <option value='2014'>2014</option><option value='2013'>2013</option><option value='2012'>2012</option><option value='2011'>2011</option><option value='2010'>2010</option><option value='2009'>2009</option><option value='2008'>2008</option><option value='2007'>2007</option><option value='2006'>2006</option><option value='2005'>2005</option><option value='2004'>2004</option><option value='2003'>2003</option><option value='2002'>2002</option><option value='2001'>2001</option><option value='2000'>2000</option><option value='1999'>1999</option><option value='1998'>1998</option><option value='1997'>1997</option><option value='1996'>1996</option><option value='1995'>1995</option><option value='1994'>1994</option><option value='1993'>1993</option><option value='1992'>1992</option><option value='1991'>1991</option><option value='1990'>1990</option><option value='1989'>1989</option><option value='1988'>1988</option><option value='1987'>1987</option><option value='1986'>1986</option><option value='1985'>1985</option><option value='1984'>1984</option><option value='1983'>1983</option><option value='1982'>1982</option><option value='1981'>1981</option><option value='1980' >1980</option><option value='1970' >1970</option><option value='1960' >1960</option><option value='1950' >1950</option><option value='1940' >1940</option><option value='1930' >1930</option><option value='1920' >1920</option><option value='1910' >1910</option><option value='1900' selected>1900</option>                              </select>
+                              &nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;
+                              <select name="year_to" class="form_select">
+                                <option value='2014'>2014</option><option value='2013'>2013</option><option value='2012'>2012</option><option value='2011'>2011</option><option value='2010'>2010</option><option value='2009'>2009</option><option value='2008'>2008</option><option value='2007'>2007</option><option value='2006'>2006</option><option value='2005'>2005</option><option value='2004'>2004</option><option value='2003'>2003</option><option value='2002'>2002</option><option value='2001'>2001</option><option value='2000'>2000</option><option value='1999'>1999</option><option value='1998'>1998</option><option value='1997'>1997</option><option value='1996'>1996</option><option value='1995'>1995</option><option value='1994'>1994</option><option value='1993'>1993</option><option value='1992'>1992</option><option value='1991'>1991</option><option value='1990'>1990</option><option value='1989'>1989</option><option value='1988'>1988</option><option value='1987'>1987</option><option value='1986'>1986</option><option value='1985'>1985</option><option value='1984'>1984</option><option value='1983'>1983</option><option value='1982'>1982</option><option value='1981'>1981</option><option value='1980'>1980</option><option value='1970'>1970</option><option value='1960'>1960</option><option value='1950'>1950</option><option value='1940'>1940</option><option value='1930'>1930</option><option value='1920'>1920</option><option value='1910'>1910</option><option value='1900'>1900</option>                              </select>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Price:</td>
+                            <td width="71%" align="right"><select name="price_from" class="form_select">
+                                <option value='0'> Any </option><option value='1000'>1000</option><option value='2000'>2000</option><option value='3000'>3000</option><option value='4000'>4000</option><option value='5000'>5000</option><option value='6000'>6000</option><option value='7000'>7000</option><option value='8000'>8000</option><option value='9000'>9000</option><option value='10000'>10000</option><option value='11000'>11000</option><option value='12000'>12000</option><option value='13000'>13000</option><option value='14000'>14000</option><option value='15000'>15000</option><option value='16000'>16000</option><option value='17000'>17000</option><option value='18000'>18000</option><option value='19000'>19000</option><option value='20000'>20000</option><option value='22000'>22000</option><option value='24000'>24000</option><option value='26000'>26000</option><option value='28000'>28000</option><option value='30000'>30000</option><option value='40000'>40000</option><option value='50000'>50000</option><option value='60000'>60000</option><option value='70000'>70000</option><option value='80000'>80000</option><option value='90000'>90000</option><option value='100000'>100000</option><option value='110000'>110000</option><option value='120000'>120000</option><option value='130000'>130000</option><option value='140000'>140000</option><option value='150000'>150000</option>                              </select>
+                              &nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;
+                              <select name="price_to" class="form_select">
+							  	<option value='0'> Any </option>
+                                <option value='150000'>150000</option><option value='140000'>140000</option><option value='130000'>130000</option><option value='120000'>120000</option><option value='110000'>110000</option><option value='100000'>100000</option><option value='90000'>90000</option><option value='80000'>80000</option><option value='70000'>70000</option><option value='60000'>60000</option><option value='50000'>50000</option><option value='40000'>40000</option><option value='30000'>30000</option><option value='28000'>28000</option><option value='26000'>26000</option><option value='24000'>24000</option><option value='22000'>22000</option><option value='20000'>20000</option><option value='19000'>19000</option><option value='18000'>18000</option><option value='17000'>17000</option><option value='16000'>16000</option><option value='15000'>15000</option><option value='14000'>14000</option><option value='13000'>13000</option><option value='12000'>12000</option><option value='11000'>11000</option><option value='10000'>10000</option><option value='9000'>9000</option><option value='8000'>8000</option><option value='7000'>7000</option><option value='6000'>6000</option><option value='5000'>5000</option><option value='4000'>4000</option><option value='3000'>3000</option><option value='2000'>2000</option><option value='1000'>1000</option>                              </select>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <!--<tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%"><b>Keywords:</b></td>
+                            <td width="71%"><input name="keywords" type="text" class="form_textbox" />
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>-->
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Ad # :</td>
+                            <td width="71%" align="right"><input name="adnr" type="text" class="form_textbox" />
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="29%" align="left">&nbsp;&nbsp;Zip :</td>
+                            <td width="71%" align="right">
+								<input name="zip" type="text" class="form_textboxnowidth" size="6" />
+								Distance:
+								<select name='distance' class="form_select">
+								<option value="100000">Any </option>
+								<option value="50">50 miles</option>
+								<option value="100">100 miles</option>
+								<option value="200">200 miles</option>
+								<option value="300">300 miles</option>
+								<option value="400">400 miles</option>
+								<option value="500">500 miles</option>
+								</select>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td width="51%" align="left">&nbsp;&nbsp;Vehicles per page :</td>
+                            <td width="49%" align="right"><select name="display_nr" style="font-size:12px;">
+								<option value="10">10</option>
+								<option value="20">20</option>
+                                <option value="25">25</option>
+								<option value="30">30</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="2">
+                          <tr>
+                            <td align="center"><input name="Search" type="submit" id="Begin Search" value="Begin Search" />
+                            </td>
+                            <td align="center"><input type="reset" value="Clear Search" onclick="goTo('index.php')" /></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></form>	        </td>
+           </tr>
+          </table>
+         </td>
+	    </tr>
+	   </table>
+      </td>
+      <td width="441" valign="top" align="center">
+       <table width="100%" border="0" cellpadding="0" cellspacing="1">
+     <tr>
+      <td width="100%" valign="top" bgcolor="#484848" height="319px">
+	   <table width="100%" border="0" cellpadding="0" cellspacing="1" height="319px">
+	    <tr>
+         <td bgcolor="#000000" align="center" height="43px"><h1>Sell Your Vehicle</h1></td>
+        </tr>
+		<tr>
+         <td width="100%" valign="top" bgcolor="#000000" height="295px" align="center">
+		  <table width="70%" style="margin-top: 5px;">
+		   <!--<tr>
+		    <td align="left">List your exotic cars, sports cars, classic cars or luxury cars on RLuxuryCars.Com and reach qualified buyers online and sell it fast!</td>
+			<td align="center" valign="middle"><img src="images/sale_detailpage.jpg" border="0" width="175"></td>
+		   </tr>-->
+		   <tr>
+		   	<td colspan="2" align="center">
+		   		<img src="images/list-cars.png" alt="" />
+		   	</td>
+		   </tr>
+		   <tr>
+		    <td align="center" width="100%">
+			 <table width="100%">
+			 <tr><td>
+			 	<a href="search.php" class="new_sell">Buy</a>
+			 </td></tr>
+			  <tr>
+			   <td width="100%" align="center" style="padding-top: 8px">
+			   	<a href="packages_dealer.php" class="new_sell">Sell</a>
+			   </td>
+			  </tr>
+			 </table>
+			</td>
+			<td align="center" width="100%">
+			 <table width="100%" style="padding-left: 12px">
+			 <tr><td>
+			 	<a href="login.php" class="new_sell">Sign In</a>
+			 </td></tr>
+			  <tr>
+			   <td style="padding-top: 8px">
+			   	<a href="subscribe.php" class="new_sell">Register</a>
+			   </td>
+			  </tr>
+			 </table>
+			</td>
+		   </tr>
+		  </table>
+	     </td>
+        </tr>
+       </table>
+      </td>
+	 </tr>
+	</table>
+      </td>
+      <td width="50"></td>
+	 </tr>
+	</table>
+   </td>
+  </tr>
+  <tr>
+   <td width="982">
+    <table border="0" width="982" cellpadding="0" cellspacing="0" >
+	 <tr>
+      <td width="50"></td>
+      <td width="882" valign="top" align="center">
+       <table width="100%" border="0" cellpadding="0" cellspacing="1" >
+     <tr>
+      <td width="100%" valign="top" bgcolor="#484848" style="font-size:10px; font-family:Verdana, Arial, Helvetica, sans-serif">
+	   <table width="100%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+         <td width="100%" valign="top" bgcolor="#000000">
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+            <td width="100%" align="center" height="30"  bgcolor="#292929"><H1><font color="#6699cc">LUXURY CARS FEATURED ADS</font></H1></td>
+           </tr>
+           <tr>
+            <td height="1" colspan="2" bgcolor="#323232"></td>
+           </tr>
+		   <tr>
+            <td valign="middle">
+			 <table width="100%" border="0" cellspacing="2" cellpadding="0">
+              <tr>
+			   <td height="2" colspan="5"></td>
+			  </tr>
+			  <tr>
+<td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_828').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_828').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2013-Mercedes-Benz-C-Class-Sedan-C300_4MATIC-For-Sale-828'><img src='images/ads/828_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2013-Mercedes-Benz-C-Class-Sedan-C300_4MATIC-For-Sale-828' id='link_828' style="color:#FFFFFF;">2013 Mercedes-Benz C-Class-Sedan C300 4MATIC</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_578').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_578').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2014-Audi-Q7-3.0T_Premium_Quattro-For-Sale-578'><img src='images/ads/578_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2014-Audi-Q7-3.0T_Premium_Quattro-For-Sale-578' id='link_578' style="color:#6699cc;">2014 Audi Q7 3.0T-Premium-Quattro</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_133').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_133').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2008-Lamborghini-Gallardo-Convertible-_-For-Sale-133'><img src='images/ads/133_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2008-Lamborghini-Gallardo-Convertible-_-For-Sale-133' id='link_133' style="color:#FFFFFF;">2008 Lamborghini Gallardo-Convertible  </a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_3').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_3').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2008-Bugatti-Veyron-EB_16.4_Coupe-For-Sale-3'><img src='images/ads/3_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2008-Bugatti-Veyron-EB_16.4_Coupe-For-Sale-3' id='link_3' style="color:#6699cc;">2008 Bugatti Veyron EB 16.4 Coupe</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_2').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_2').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2010-Aston-Martin-DBS-Convertible-Volante-For-Sale-2'><img src='images/ads/2_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2010-Aston-Martin-DBS-Convertible-Volante-For-Sale-2' id='link_2' style="color:#FFFFFF;">2010 Aston-Martin DBS-Convertible Volante</a></b></td></tr></table></td></tr>
+				    	   <tr>
+					    	<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr>
+							<td height="1" colspan="5" bgcolor="#323232"></td>
+						   </tr>
+						   <tr>
+							<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_117').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_117').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2006-Bentley-Continental-GT-Coupe-Mulliner-For-Sale-117'><img src='images/ads/117_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2006-Bentley-Continental-GT-Coupe-Mulliner-For-Sale-117' id='link_117' style="color:#6699cc;">2006 Bentley Continental-GT-Coupe Mulliner</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_829').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_829').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2013-Mercedes-Benz-CLS-Class-CLS550_4MATIC-For-Sale-829'><img src='images/ads/829_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2013-Mercedes-Benz-CLS-Class-CLS550_4MATIC-For-Sale-829' id='link_829' style="color:#FFFFFF;">2013 Mercedes-Benz CLS-Class CLS550 4MATIC</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_741').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_741').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2013-Jaguar-XJ-_-For-Sale-741'><img src='images/ads/741_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2013-Jaguar-XJ-_-For-Sale-741' id='link_741' style="color:#6699cc;">2013 Jaguar XJ  </a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_358').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_358').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2007-Lamborghini-Gallardo-Convertible-_-For-Sale-358'><img src='images/ads/358_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2007-Lamborghini-Gallardo-Convertible-_-For-Sale-358' id='link_358' style="color:#FFFFFF;">2007 Lamborghini Gallardo-Convertible  </a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_119').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_119').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2008-Bentley-Continental-GTC-Convertible-_-For-Sale-119'><img src='images/ads/119_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2008-Bentley-Continental-GTC-Convertible-_-For-Sale-119' id='link_119' style="color:#6699cc;">2008 Bentley Continental-GTC-Convertible  </a></b></td></tr></table></td></tr>
+				    	   <tr>
+					    	<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr>
+							<td height="1" colspan="5" bgcolor="#323232"></td>
+						   </tr>
+						   <tr>
+							<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_550').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_550').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2013-Infiniti-G-Convertible-G37-For-Sale-550'><img src='images/ads/550_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2013-Infiniti-G-Convertible-G37-For-Sale-550' id='link_550' style="color:#FFFFFF;">2013 Infiniti G-Convertible G37</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_1').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_1').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2011-Ferrari-458-Italia-Coupe-_-For-Sale-1'><img src='images/ads/1_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2011-Ferrari-458-Italia-Coupe-_-For-Sale-1' id='link_1' style="color:#6699cc;">2011 Ferrari 458-Italia-Coupe  </a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_776').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_776').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2013-Infiniti-JX-JX35-For-Sale-776'><img src='images/ads/776_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2013-Infiniti-JX-JX35-For-Sale-776' id='link_776' style="color:#FFFFFF;">2013 Infiniti JX JX35</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_672').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_672').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2014-Audi-A8-3.0T_Quattro-For-Sale-672'><img src='images/ads/672_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2014-Audi-A8-3.0T_Quattro-For-Sale-672' id='link_672' style="color:#6699cc;">2014 Audi A8 3.0T Quattro</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_203').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_203').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2007-Bentley-Continental-GTC-Convertible-_-For-Sale-203'><img src='images/ads/203_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2007-Bentley-Continental-GTC-Convertible-_-For-Sale-203' id='link_203' style="color:#FFFFFF;">2007 Bentley Continental-GTC-Convertible  </a></b></td></tr></table></td></tr>
+				    	   <tr>
+					    	<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr>
+							<td height="1" colspan="5" bgcolor="#323232"></td>
+						   </tr>
+						   <tr>
+							<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_10').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_10').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2008-Rolls-Royce-Phantom-Drophead-Coupe-Base-For-Sale-10'><img src='images/ads/10_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2008-Rolls-Royce-Phantom-Drophead-Coupe-Base-For-Sale-10' id='link_10' style="color:#6699cc;">2008 Rolls-Royce Phantom-Drophead-Coupe Base</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_220').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_220').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2006-Bentley-Continental-GT-Coupe-_-For-Sale-220'><img src='images/ads/220_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2006-Bentley-Continental-GT-Coupe-_-For-Sale-220' id='link_220' style="color:#FFFFFF;">2006 Bentley Continental-GT-Coupe  </a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_77').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_77').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2008-Lamborghini-Gallardo-Convertible-LP_570_4_Spyder_Performante-For-Sale-77'><img src='images/ads/77_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2008-Lamborghini-Gallardo-Convertible-LP_570_4_Spyder_Performante-For-Sale-77' id='link_77' style="color:#6699cc;">2008 Lamborghini Gallardo-Convertible LP-570-4-Spyder-Performante</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#6699cc'; document.getElementById('link_744').style.color='#6699cc';" onMouseout="this.style.borderColor='#FFFFFF';document.getElementById('link_744').style.color='#FFFFFF';"  style="border:1px solid #FFFFFF"><tr><td width="130" valign="top" align="center"><a href='2014-Audi-A6-2.0T_Premium_Quattro-For-Sale-744'><img src='images/ads/744_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2014-Audi-A6-2.0T_Premium_Quattro-For-Sale-744' id='link_744' style="color:#FFFFFF;">2014 Audi A6 2.0T-Premium-Quattro</a></b></td></tr></table></td><td align="center"><table cellspacing="0" cellpadding="6" onMouseover="this.style.borderColor='#FFFFFF'; document.getElementById('link_226').style.color='#FFFFFF';" onMouseout="this.style.borderColor='#6699cc';document.getElementById('link_226').style.color='#6699cc';"  style="border:1px solid #6699cc"><tr><td width="130" valign="top" align="center"><a href='2008-Lamborghini-Gallardo-Coupe-Superleggera-For-Sale-226'><img src='images/ads/226_1_tt.jpg' name='big_img' width='130' height='98' border=0 class='imgborder'></a><br><b><a href='2008-Lamborghini-Gallardo-Coupe-Superleggera-For-Sale-226' id='link_226' style="color:#6699cc;">2008 Lamborghini Gallardo-Coupe Superleggera</a></b></td></tr></table></td></tr>
+ 					       <tr>
+					    	<td height="2" colspan="5"></td>
+						   </tr>
+						   <tr>              </tr>        
+             </table>
+		    </td>
+           </tr>
+		  </table>
+		 </td>
+		</tr>
+		<tr>
+         <td width="100%" bgcolor="#000000">
+		  <br />
+		  <table width="100%" >
+		   <tr height="30">
+		    <td width="10%"></td>
+		    <td width="30%" bgcolor="#292929" align="center"><a href="search.php?f=1" style="color:#6699cc; text-decoration:none; font-size:14px; font-weight:bold; ">View All Featured Ads</a></td>
+			<td width="20%"></td>
+			<td width="30%" bgcolor="#292929" align="center"><a href="search.php?f=1" style="color:#6699cc; text-decoration:none; font-size:14px; font-weight:bold; ">View All Listings</a></td>
+		    <td width="10%"></td>
+		   </tr>
+		  </table>
+		  <br />
+		 </td>
+        </tr>
+	    <tr>
+         <td width="100%" align="center" height="30"  bgcolor="#292929">
+		   <table border="0" cellpadding="1" cellspacing="0" width="100%">
+			<tr>
+			 <td width="20%" align="center"><a href="http://www.grundy.com" style=" font-size:16px;text-decoration:underline;" target="_blank"><b>Insurance</b></a></td>
+			 <td width="20%" align="center"><a href="http://www.carchex.com" style=" font-size:16px;text-decoration:underline;" target="_blank"><b>Warranty</b></a></td>
+			 <td width="20%" align="center"><a href="http://www.concourstransport.com/" style=" font-size:16px;text-decoration:underline;" target="_blank"><b>Shipping</b></a></td>
+			 <td width="20%" align="center"><a href="https://www.eloan.com/s/show/auto?context=auto&transtype=&sid=NtIjCL3QeiPDZBTLGDMP14q4PWw&user=&mcode=" style=" font-size:16px;text-decoration:underline;" target="_blank"><b>E-Loans</b></a></td>
+             <td width="20%" align="center"><a href="http://www.carfax.com/cfm/general_check.cfm?partner=kow_A&AffiliateID=1304&BannerName=record_check_468x60static1.gif" style=" font-size:16px;text-decoration:underline;" target="_blank"><b>CarFax</b></a></td>
+            </tr>
+		   </table>
+		 </td>
+        </tr>
+       </table>
+	  </td>
+     </tr>
+	 <tr>
+	  <td><br>
+	  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#292929" class="greyborder1">
+            <tr>
+             <td align='center'><font style="font-size:30px"><a href="Luxury-Sports-Cars" style="text-decoration:underline;"><b>Luxury Sports Cars</b></a></font><br></td>
+            </tr>
+	  </table>
+	  <br />
+	  <p> 
+		<table style="margin-top: -11px;" border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#000000" class="greyborder1">
+		<tr><td align="left">
+Welcome to R Luxury Cars. Marketplace to buy and sell new & used exotic luxury cars, sports cars, classic cars and top fine cars, limited edition highline automobiles. Along with exotic, luxury cars dealers.
+<br /><br />
+R Luxury Cars offers auto classifieds ads for used cars, vintage classic cars, luxury imports and exotic sports cars. Whether you are looking for a pre-owned cars Mercedes, Jaguar, Range Rover, BMW, Porsche, Cadillac, Rolls Royce, Bentley, Ferrari, Lamborghini, Maserati, Corvette, Hummer, Viper, Luxury SUV or Limousine, you have come to the right place. We only the place you can purchase new latest models cars certified pre-owned cars High-End sports cars & top ultra luxury cars.
+<br /><br />
+You now have our fully functional easy to navigate online search engine, you can find car dealers and private sellers covering cities like California, Arizona, Florida, Boston, New York, New Jersey, Chicago, San Francisco, or by Zip code.<br />
+		</td></tr>
+		</table>
+		</p>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	  <br />
+	  <script language="javascript">
+function search_category(cat_val){
+	document.search_form.search_the_cat.value = 1;
+	document.search_form.id_cat.value = cat_val;
+	document.search_form.submit();
+}
+</script>
+		<table class="derpathon" border="0" cellpadding="2" cellspacing="2" width="100%" class="greyborder1" bgcolor="#292929">
+			<tr>
+			 <td align="center" width="100%">
+			 <table width="100%">
+			  <tr>
+			 <td align='center'><a href="Certified-Pre-Owned " style="font-size:12px;text-decoration:underline;" >Certified Pre-Owned</a></td><td align='center'><a href="Classic-Cars" style="font-size:12px;text-decoration:underline;" >Classic Cars</a></td><td align='center'><a href="Limousine" style="font-size:12px;text-decoration:underline;" >Limousine</a></td><td align='center'><a href="New-Cars" style="font-size:12px;text-decoration:underline;" >New Cars</a></td><td align='center'><a href="Used-Cars" style="font-size:12px;text-decoration:underline;" >Used Cars</a></td>			   </tr>
+			  </table>
+			 </td>
+            </tr>
+		   </table>	  <br />
+	  </td>
+	 </tr>
+    </table> 
+      </td>
+      <td width="50"></td>
+     </tr>
+	</table>
+   </td>
+  </tr>
+</table>
+<div class="hi" style="margin-top: 8px; padding: none">
+<table bgcolor="#000000" width="982" border="0" align="center" cellpadding="0" cellspacing="0" id="footer">
+	<tr>
+		<td>
+			<table style="padding-top: 3px; padding-bottom:8px" width="972" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<table border="0" cellpadding="2" cellspacing="0" width="972">
+						<tr><td class="greyborder" align="center">
+						Copyright &copy; 2005 - 2013 R Luxury Cars<br />
+						All rights reserved. This document is strictly for informational, non-commercial purposes.<br />
+						Prices do not include government fees and taxes, any finance charges, any dealer document preparation charge and any emission testing charge. <br />
+						</td></tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<table style="margin-bottom: 8px; "align="center" bgcolor="#292929" border="0" cellpadding="2" cellspacing="0" width="972" class="greyborder1">
+			<tr>
+			<td align="left"><a href="search.php">Zip Code Look Up</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.rluxurycars.com/Luxury-Sports-Cars">Luxury Sports Cars</a></td>
+			<td align="right">|&nbsp;&nbsp;&nbsp;<a href="fraud.php">fraud</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="agreement.php">participation agreement</a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32910071-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

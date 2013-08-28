@@ -1,0 +1,1733 @@
+<!DOCTYPE HTML>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+
+
+<link rel="stylesheet" href="http://styles.freescale.com/v1.0/shared/js/jquery/jquery_ui_min.css" type="text/css"/>
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/jquery/jquery.plus.min.js"></script>
+
+
+
+<script>
+//if ( !(typeof i18n == 'function')) {
+	var i18n = (function () {
+	    'use strict';
+	    /*Check the client timezone to adjust DST*/
+	    var DST = function () {
+	        var rightNow = new Date(), temp = '',date1 = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0),
+	            date2 = new Date(rightNow.getFullYear(), 6, 1, 0, 0, 0, 0),date3, date4, hoursDiffStdTime = 0, hoursDiffDaylightTime = 0;
+	        temp = date1.toGMTString();
+	        date3 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+	        temp = date2.toGMTString();
+	        date4 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+	        hoursDiffStdTime = (date1 - date3) / (1000 * 60 * 60);
+	        hoursDiffDaylightTime = (date2 - date4) / (1000 * 60 * 60);
+	        return (hoursDiffDaylightTime !== hoursDiffStdTime) ? true : false;
+	    };
+	    var lang = '';
+	    // language file's path
+	    var path = [];
+	    // language data object
+	    var data = {};
+	    //localize object
+	    var localize = {};
+	     //default setting
+	    var setting = {
+	        "DST" : -4,
+	        "format": "D, d F Y H:i:s",
+	        "AM" : "AM",
+	        "PM": "PM"
+	    };
+	    //fetch lauguage string in JSON object
+	    var locale = function (langcode) {
+	        var data = {}, xmlhttp;
+	        function MergeRecursive(obj1, obj2) {
+	              for (var p in obj2) {
+	                try {
+	                  // Property in destination object set; update its value.
+	                  if ( obj2[p].constructor==Object ) {
+	                    obj1[p] = MergeRecursive(obj1[p], obj2[p]);
+	                  } else {
+	                    obj1[p] = obj2[p];
+	                  }
+	                } catch(e) {
+	                  // Property in destination object not set; create it and set its value.
+	                  obj1[p] = obj2[p];
+	                }
+	              }
+	              return obj1;
+	            }
+
+	        function getResult(url) {
+					var result = null;
+	                if (window.jQuery) {
+	                    $.ajax({
+	                        'async': false,
+	                        'global': false,
+	                        'url': url,
+	                        'dataType': "json",
+	                         'error': function (xhr, status, error) { result = {}; },
+	                         'success' : function (resp) { result = resp; }
+	                    });
+	                }else{
+	                    var callback = function () {
+	                        if (xmlhttp.readyState == 4) {
+	                            if (xmlhttp.status == 200) {
+	                                try {
+	                                    if ('function' == typeof JSON.parse) {
+	                                        result = JSON.parse(xmlhttp.responseText);
+	                                    }
+	                                } catch (e) {
+	                                }
+	                            }
+	                        }
+	                    };
+	                    if (window.XMLHttpRequest) {
+	                        xmlhttp = new XMLHttpRequest();
+	                        if (xmlhttp.overrideMimeType) {
+	                            xmlhttp.overrideMimeType('text/xml');
+	                        }
+	                    } else if (window.ActiveXObject) {
+	                        var activexName = ['MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];
+	                        for (var i = 0; i < activexName.length; i++) {
+	                            try {
+	                                xmlhttp = new ActiveXObject(activexName[i]);
+	                                break;
+	                            } catch (e) {
+	                            }
+	                        }
+	                    }
+	                    xmlhttp.onreadystatechange = callback;
+	                    xmlhttp.open('GET', url, false);
+	                    xmlhttp.send(null);
+	                        }
+	                return result;
+	            };
+	           	// var data={};
+	            if (path.length !== 0) {
+	                for (var i=0; i<path.length; i++) {
+	                    var url = path[i].replace(/\/$/, '') + '/' + langcode + '.js';
+	                    var result = getResult(url);
+	                    var  data=MergeRecursive(data,result);
+	                }
+	            } else {
+	                var url = './'+langcode + '.js'
+	                var data = getResult(url);
+	            }
+	            return data;
+	    };
+
+	    /*datetime format */
+	    Date.prototype.format=function(format){var returnStr='',replace=Date.replaceChars,curChar='';replace.reload();for(var i=0;i<format.length;i++){curChar=format.charAt(i);returnStr+=(replace[curChar]?replace[curChar].call(this):curChar)}return returnStr};
+
+	    /*
+	     * datetime function object
+	     * Source: http://jacwright.com/projects/javascript/date_format (unavailable)
+	     * http://code.google.com/p/omeglelogger/source/browse/trunk/dateformat.js?spec=svn2&r=2
+	     */
+	    Date.replaceChars={reload:function(){Date.replaceChars.shortMonths=localize.hasOwnProperty('shortMonths')?localize.shortMonths:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];Date.replaceChars.longMonths=localize.hasOwnProperty('longMonths')?localize.longMonths:['January','February','March','April','May','June','July','August','September','October','November','December'];Date.replaceChars.shortDays=localize.hasOwnProperty('shortDays')?localize.shortDays:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];Date.replaceChars.longDays=localize.hasOwnProperty('longDays')?localize.longDays:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']},shortMonths:[],longMonths:[],shortDays:[],longDays:[],d:function(){return(this.getUTCDate()<10?'0':'')+this.getUTCDate()},D:function(){return Date.replaceChars.shortDays[this.getUTCDay()]},j:function(){return this.getUTCDate()},l:function(){return Date.replaceChars.longDays[this.getUTCDay()]},N:function(){return this.getDay()+1},S:function(){return(this.getUTCDate()%10==1&&this.getUTCDate()!==11?'st':(this.getUTCDate()%10==2&&this.getUTCDate()!==12?'nd':(this.getUTCDate()%10==3&&this.getUTCDate()!=13?'rd':'th')))},w:function(){return this.getUTCDay()},z:function(){return''},W:function(){return''},F:function(){return Date.replaceChars.longMonths[this.getUTCMonth()]},m:function(){return(this.getUTCMonth()<9?'0':'')+(this.getUTCMonth()+1)},M:function(){return Date.replaceChars.shortMonths[this.getUTCMonth()]},n:function(){return this.getUTCMonth()+1},t:function(){return''},L:function(){return''},o:function(){return''},Y:function(){return this.getUTCFullYear()},y:function(){return(''+this.getUTCFullYear()).substr(2)},a:function(){var set=localize.hasOwnProperty('setting')?localize.setting:setting;return this.getUTCHours()<12?set.AM:set.PM},A:function(){var set=localize.hasOwnProperty('setting')?localize.setting:setting;return this.getUTCHours()<12?set.AM:set.PM},B:function(){return''},g:function(){return this.getUTCHours()%12||12},G:function(){return this.getUTCHours()},h:function(){return((this.getUTCHours()%12||12)<10?'0':'')+(this.getUTCHours()%12||12)},H:function(){return(this.getUTCHours()<10?'0':'')+this.getUTCHours()},i:function(){return(this.getUTCMinutes()<10?'0':'')+this.getUTCMinutes()},s:function(){return(this.getUTCSeconds()<10?'0':'')+this.getUTCSeconds()},e:function(){return''},I:function(){return''},O:function(){return(-this.getTimezoneOffset()<0?'-':'+')+(Math.abs(this.getTimezoneOffset()/60)<10?'0':'')+(Math.abs(this.getTimezoneOffset()/60))+'00'},T:function(){var m=this.getUTCMonth();this.setMonth(0);var result=this.toTimeString().replace(/^.+ \(?([^\)]+)\)?$/,'$1');this.setMonth(m);return result},Z:function(){return-this.getTimezoneOffset()*60},c:function(){return''},r:function(){return this.toString()},U:function(){return this.getUTCTime()/1000}};
+
+	    /* Similar the ASP Dateadd function */
+	    var DateAdd=function(interval,number,date){var d;number=parseInt(number,10);if('string'==typeof date){date=date.split(/\D/);--date[1];d=new Date(date.join(','))}d=('object'==typeof d)?d:date;switch(interval){case'y':d.setFullYear(d.getFullYear()+number);break;case'm':d.setMonth(d.getMonth()+number);break;case'd':d.setDate(d.getDate()+number);break;case'w':d.setDate(d.getDate()+7*number);break;case'h':d.setHours(d.getHours()+number);break;case'n':d.setMinutes(d.getMinutes()+number);break;case's':d.setSeconds(d.getSeconds()+number);break;case'l':d.setMilliseconds(d.getMilliseconds()+number);break}return d};
+
+	    /* public functions */
+	    return {
+	        /*
+	         * i18n setting
+	         */
+	        set: function (options) {
+	            if (null !== options && 'object' == typeof options) {
+	                lang = options.hasOwnProperty('lang') ? options.lang : null;
+	                path = options.hasOwnProperty('path') ? options.path : path;
+	                data = options.hasOwnProperty('data') ? options.data : null;
+	            }
+	            if (data !== null ) {localize = data}
+	              else {
+	                localize = locale(lang || (navigator.browserLanguage || navigator.language).toLowerCase());
+	              }
+	        },
+
+	        /*
+	         * Core of the datetime replace
+	         */
+	        datetime: function (d) {
+	            var set = localize.hasOwnProperty('setting') ? localize.setting : setting;
+	            var r = set.format ? DateAdd('h', set.DST, d ? new Date(d) : new Date()) : (d ? new Date(d) : new Date());
+
+	            return r.format(set.format);
+	        },
+
+	        /*
+	         * Core of the strings replace
+	         */
+	        _: function (string) {
+	            try {
+	                string = string.toString() || '';
+	                var args = arguments;
+	                var pattern = (args.length > 0) ? new RegExp('%([1-' + args.length.toString() + '])', 'g') : null;
+	                var str = localize.hasOwnProperty(string) ? localize[string] : string;
+	                return String(str).replace(pattern, function (match, index) { return args[index]; });
+	            } catch (e) {
+	            }
+	        }
+	    };
+	}());	
+//}
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+function getTranslatedText(input){
+	var translatedValue = i18n._(input);	
+	return translatedValue;
+}
+</script>
+
+
+<link rel="stylesheet"
+	href="http://styles.freescale.com/v1.0/shared/stylesheets/toplevel.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="http://styles.freescale.com/files/abstract/misc/TOPLEVEL_DELTA.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="http://styles.freescale.com/v1.0/shared/stylesheets/public_common.css"
+	type="text/css" />
+
+<!--Added by b28379 -->
+<!--[if IE]><link rel="stylesheet" type="text/css" media="screen, projection" href="http://www.freescale.com/files/css/ie.blockdiag.css" /><![endif]-->
+<!-- end-->
+
+
+
+
+<script type="text/javascript"
+	src="http://styles.freescale.com/v1.0/shared/js/public_common.js"></script>
+<script src="http://styles.freescale.com/files/abstract/misc/public_common_delta.js" language="javascript" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript" src="http://styles.freescale.com/v1.0/search/javascript/Serp.js"></script>  
+
+<script
+	src="http://styles.freescale.com/v1.0/shared/js/jquery/jquery.blockdiag.cluetip.js"
+	type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript"
+	src="http://styles.freescale.com/v1.0/search/javascript/SearchCommon.js"></script>
+
+
+
+<link rel="canonical" href="http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG" />
+
+
+
+<title>Automotive Hybrid Electric Vehicle (HEV) Inverter Controller Solutions By Freescale</title>
+
+
+
+
+
+
+<meta name="Keywords" content="h-bridge, high side switch, voltage regulator, design service, dsp, lin, phy, power management, transistor, etpu, Inverter, hybrid electrical vehicle, electrical motor, torque assist" />
+
+<meta name="Description" content="Hybrid drive train: The hybrid electric vehicle (HEV) inverter controls the electric motor to power the drivetrain  combined with a thermal engine." />
+
+
+
+
+
+<meta name="Title"
+	content="Automotive Hybrid Electric Vehicle (HEV) Inverter Controller Solutions By Freescale" />
+
+
+
+
+
+
+
+<meta name="DCSext.nodeId"
+	content="02Wcbf56hRVZGg" />
+
+
+<link rel="stylesheet"
+	href="http://styles.freescale.com/v1.0/recommendation/stylesheet/reco_styles.css"
+	type="text/css" />
+<script type="text/javascript"
+	src="http://styles.freescale.com/v1.0/recommendation/javascript/gen_recommendation.js"></script>
+<script type="text/javascript"
+	src="http://styles.freescale.com/v1.0/recommendation/javascript/personal_recommendation.js"></script>
+
+<meta name="DCSext.footprint"
+	content="" />
+
+</head>
+
+<body leftmargin="1" topmargin="1" marginheight="0" marginwidth="0"
+	class="psp-jsp" id="asp-jsp">
+
+
+<a name="top"></a>
+
+ 
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+        var jQuery_1_9_1 = jQuery.noConflict(true);
+        jQuery_1_9_1(function($){
+        jQuery_1_9_1('ul.sf-menu').superfish();
+});
+</script> 
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/superfish.js"></script>
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/hoverIntent.js"></script> 
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/header.js"></script>
+ 
+                <a name="top"></a>
+                <noindex>
+
+                <input type="hidden" name="baseUrl" value="http://www.freescale.com/webapp"/>
+        <input type ="hidden" name="PART_NUMBER" value=""/>
+        <input type ="hidden" name="SEARCH_OPERATOR" value="Contains"/>
+
+        <!-- Start - Changes done by B37085 for CCT81511-->
+        <div id="hedr">
+                <div id="header_left">
+                        <div id="header_logo">
+                    <a href="http://www.freescale.com" title="Freescale"><span id="lgo">Freescale Logo</span></a> 
+                        </div>
+                        <div class="bkflt"></div>
+                        <div id="topnav">
+                                <div id="cnvhms">
+                                                        
+                                                
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<ul id="cnv" class="sf-menu">
+</ul>
+
+<script language="javascript" type="text/javascript" charset="UTF-8" src="http://styles.freescale.com/files/abstract/misc/header_nav.js"></script>
+ <script language="javascript" type="text/javascript" charset="UTF-8">
+  
+  function getNav(){
+				//json = JSON.parse(navs);		
+			   var i=0;
+			   var url ="";
+			   var text = "";
+			   var htmlstr ="";
+			   var id1 ="";
+			   var idul="";
+				
+				var id_type_ul = ["products-nav","applications-nav","design-resources-nav","support-nav","sample-and-buy-nav","about-nav"];
+				
+			for(k=0; k<NavObj.length; k++){
+			  var parent_index = NavObj[k].parent.length;
+			 
+				if(parent_index > 1){
+					
+					
+					for(i=0 ;i<parent_index; i++){
+						if(NavObj[k].parent[i].child != null){
+						
+							url = NavObj[k].parent[i].child[0].url;
+							text = NavObj[k].parent[i].child[0].text;
+						
+							
+							
+							if(NavObj[k].parent[i].child.length > 1){
+								htmlstr += '<li> <a class=\"ar\" href='+url +'>'+text+'</a>'
+								var childrenlength = NavObj[k].parent[i].child[1].children.length;
+								
+								htmlstr += '<ul>'
+								for(j=0; j<childrenlength; j++){
+								
+									url = NavObj[k].parent[i].child[1].children[j].url;
+									text = NavObj[k].parent[i].child[1].children[j].text;
+						
+								
+								htmlstr += '<li> <a href='+url +'>'+text+'</a></li>'
+								};
+								htmlstr += '</ul></li>'
+							}
+							else{
+								htmlstr += '<li> <a href='+url +'>'+text+'</a>'
+								
+							}
+							
+						}
+					};
+					htmlstr += '</ul></li>'
+				}
+				else{
+					 url = NavObj[k].parent[0].url;
+					 text =  NavObj[k].parent[0].text;
+					
+					id1=NavObj[k].parent[0].id1;
+					id2=NavObj[k].parent[0].id2;
+					idul=id_type_ul[k/2]
+					htmlstr += '<li id="'+id1+'"> <h3><a id = "'+id2+'" href='+url + '>'+text +'</a></h3>';
+					htmlstr += '<ul class="dnv" id="'+idul+'">'
+					
+				}
+				
+				document.getElementById( "cnv" ).innerHTML = htmlstr;
+			}
+							
+								
+					
+		}
+  getNav();
+  
+</script>
+
+	    
+                                        </div>
+                                </div>
+                        </div>
+                        <div id="header_right">
+                                <div id="worldwide">
+                                        <ul id="tpnv">
+                                           
+                                                <li><a href="/webapp/sps/site/homepage.jsp?code=GLOBAL_SITES">Locations</a></li>
+                           
+                                                <li class="tpnv_li"><div class="tpnv_sep"></div></li>
+                                                <!-- Added by b40595 for CR-50658 start -->
+                                                
+														<li id="korea" class="sprite1"><a href="http://www.freescale.co.kr">Korea</a></li>
+													
+                                                   
+                                                <li class="tpnv_li"><div class="tpnv_sep"></div></li>    
+                                                
+                                                        <li id="china" class="sprite1"><a href="/zh-Hans/webapp/sps/site/application.jsp?code=APLHYFCNG&uc=true&lang_cd=zh-Hans">China</a></li>
+                                                    
+                                                <li class="tpnv_li"><div class="tpnv_sep"></div></li>    
+                                                
+                                                        <li id="japan" class="sprite1"><a href="/ja/webapp/sps/site/application.jsp?code=APLHYFCNG&uc=true&lang_cd=ja">Japan</a></li>
+                                                    
+                                                <li class="tpnv_li"><div class="tpnv_sep"></div></li>    
+                                                
+                                                
+                                                <!-- Added by b40595 for CR-50658 end -->
+
+                                                <li id="cart" class="sprite1"><a href="https://www.freescale.com/webapp/ecommerce.show_cart.framework"
+                                                         title="Shopping Cart">Shopping Cart</a></li>
+
+                                                <li class="tpnv_li"><div class="tpnv_sep"></div></li>
+                                                
+                                                <li>
+                                                        <a href="https://www.freescale.com/ruhp/myFreescale.html" class="lgn">My Freescale</a>
+                                                </li>   
+                                                <li class="tpnv_li"><div class="tpnv_sep"></div></li>
+
+                                                <li class="lgn">
+                                                
+                                                        <a href="https://www.freescale.com/security/public/login.LoginActionController.sp">Login</a>
+                                                
+                                                </li>
+
+                                        </ul>
+                                </div>
+                                <div id="searchtop" >
+                                        <ul style="list-style:none; display:block: list-style-image:none; list-style-type:none; ">
+                                          <li id="sb1a" title="Search by keyword"><a target="keyword" title="Search by keyword" class="active" 
+                                          onMouseover="searchTopMouseEvent(event)" onMouseout="searchTopMouseEvent(event)" 
+                                          onClick="searchTopMouseEvent(event)">Keyword</a></li>
+                                          <li id="sb1b" title="Browse for the right product"><a target="product" title="Browse for the right product" 
+                                          onMouseover="searchTopMouseEvent(event)" 
+                                          onMouseout="searchTopMouseEvent(event)" onClick="searchTopMouseEvent(event)">Product/Parametric</a></li>
+                                          <li id="sb1c" title="Quickly locate a specific product"><a target="part" title="Quickly locate a specific product" 
+                                          onMouseover="searchTopMouseEvent(event)" onMouseout="searchTopMouseEvent(event)" 
+                                          onClick="searchTopMouseEvent(event)">Orderable Part</a></li>
+                                        </ul>
+                                  
+                                        <form  method="post" name="search" id="search" onsubmit="return  submitEvent();" >
+                                          <input name="QueryText" type="text" id="parts" value="Search by keyword" class="sb_input" onClick="searchInputEvent(event)"  >
+                                          <div id="sprbutton" >
+                                                <input name="Go" type="submit" alt="&nbsp;"  value="&nbsp;"  />
+                                          </div>
+                                          <input type="hidden" name="baseUrl" value="http://www.freescale.com/webapp">
+                                          <input type="hidden" name="SEARCH_OPERATOR" value="Contains">
+                                          <input type="hidden" name="attempt" value="-1">
+                                        </form>
+                                        
+                                  </div>
+                                
+                </div>
+         <!-- End - Changes done by B37085 for CCT81511-->
+                
+         </div>
+        </div>
+
+        <!-- Searchbox functionallity -->
+        <script language="javascript" type="text/javascript">
+                function submitEvent() {
+                        if(noSearchTxt) {
+                                document.getElementById("parts").value = "";
+                        }
+
+                         switch(searchActiveTab.target) {
+                         case 'keyword':
+                                                document.getElementById("search").setAttribute('action', '/webapp/search/Serp.jsp');
+                                                break;
+                                        case 'part':
+                                                document.getElementById("search").setAttribute('action','/webapp/search/MainSERP.jsp?SelectedAsset=Orderable%20Parts');
+                                                break;
+                                        case 'product':
+                                                document.getElementById("search").setAttribute('action','/webapp/search/MainSERP.jsp?SelectedAsset=Product%20Pages' );
+                                                break;
+                                        default:
+                                                document.getElementById("search").setAttribute('action','/webapp/search/Serp.jsp' );
+                                }
+                        return true;
+                };
+
+                function searchTopMouseEvent(event) {
+                        var element = event.target || event.srcElement;
+
+                        if (event.type == "mouseover" && noSearchTxt) {
+                                document.getElementById("parts").value = element.title;
+                        } else if (event.type == "click") {
+                                searchActiveTab.className = "";
+                                element.className = "active";
+                                searchActiveTab = element;
+
+                                if  (noSearchTxt) {
+                                        document.getElementById("parts").value = element.title;
+                                }
+                        } else if (event.type == "mouseout" && noSearchTxt) {
+                                document.getElementById("parts").value = searchActiveTab.title;
+                        }
+                }
+
+                function searchInputEvent(event) {
+                        if (noSearchTxt) {
+                                document.getElementById("parts").value = "";
+                                noSearchTxt=false;
+                        }
+                }
+
+                // Initialize initial values and subscribe submit event handler
+                var searchActiveTab = document.getElementById("sb1a").firstChild;
+                var noSearchTxt=true;
+
+        </script>
+
+
+
+
+</noindex>
+
+
+
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/favorite.js"></script>
+
+
+
+<div id="pgctwrp">
+<div id="dhtmltooltip"></div>
+
+<div id="mncnt" class="iframe">
+ 
+
+
+<head>
+<link rel="stylesheet"  href="http://styles.freescale.com/v1.0/shared/stylesheets/webnote_style.css" type="text/css" />
+</head>
+
+<script type="text/javascript">
+var assetId='MVZGg';
+var assettype='WEBPAGE';
+var tabname='';
+</script>
+
+
+
+
+
+
+
+	<div style="width: 0px;" id="noteSeparatorLayer"></div>
+	<div id="notesContainer">
+	<div class="notesLayer" id="noteTemplate" >
+		<input name="left" value="783px" type="hidden" />
+		<input name="top" value="220px" type="hidden" />
+		<input name="width" value="600px" type="hidden" />
+		<input name="height" value="800px" type="hidden" />
+		<div class="dragBar" id="dragtitle" onmouseup="DL_oLayer=this.parentNode">
+
+			<img src="http://images.freescale.com/v1.0/shared/images/b_icon_trash.gif" onmousedown="opacity(event,this.parentNode.parentNode, 100, 0, 500,false,'MVZGg','WEBPAGE','');" alt=""/>&nbsp;
+			
+			<img src="http://images.freescale.com/v1.0/shared/images/x.gif" onmousedown="opacity(event,this.parentNode.parentNode, 100, 0, 500,true);" alt="" />&nbsp;
+		</div>
+ 
+		<fieldset >
+			<textarea id="noteBody" onblur="DL_oLayer=this.parentNode.parentNode;insertNoteData();" rows="" cols="" ></textarea>
+		</fieldset>
+
+		<img src="http://images.freescale.com/v1.0/shared/images/dragger_blue.gif" style="padding-left: 5px; cursor: se-resize; position: relative;" height="11px" border="0" alt="" />
+		<iframe class="bufferIframe" src="http://styles.freescale.com/v1.0/shared/js/transparentIframe.htm" frameborder="0" ></iframe>
+	</div>
+    
+ 
+	<div id="bottomMarker"></div>
+</div>
+
+
+<form method="post" name="usersessionchk" action="../../Webnote_Servlet">
+<input type="hidden" name="action" value="getuserinfo"/>
+<input type="hidden" id="url_page" name="urlpage" value=""/>
+</form>
+
+<script type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/webnote.js"></script>
+
+
+
+
+<noindex> <div id="pbar">
+<ul id="pbarNav" class="pbarMain"
+><li class="first"><a class="wc">Welcome Guest</a></li>
+<li><a  href="/files/abstract/help_page/learnpersonalization.html" onclick="personalization_bar_metrics('pb_info');"><img src="http://images.freescale.com/v1.0/shared/images/pbar-i-Icon.png " alt=""/></a></li>
+<li class="pbarDivider"><div id="listColor"></div></li><li><a class="login" href="https://www.freescale.com/webapp/crcl.ccr_register.framework" onclick="call_pbar_metrics('pb_register')">Register</a>
+</li>
+<li class="pbarDivider"><div id="listColor"></div></li><li><a class="login" href="https://www.freescale.com/security/public/login.LoginActionController.sp" onclick="call_pbar_metrics('pb_login');">Login</a></li>
+<li class="pbarDivider"><div id="listColor"></div></li><li><a href="#">Annotate</a><ul class="menu">
+<li>
+<a href="javascript:call_pbar_metrics('pb_add_note');insertNote('yes',true,false);"> <img src="http://images.freescale.com/v1.0/shared/images/addnote_active.gif" alt="" />Add a Note to this Page</a></li>
+</ul>
+</li>
+<li class="pbarDivider"><div id="listColor"></div></li><li><a href="#" onclick="displayBlockForHistory('','My History');hideselectsHistory();call_pbar_metrics('pb_browse_history');">History</a></li>
+<li class="pbarDivider"><div id="listColor"></div></li><li><a href="#" onclick="displayBlockForRecommendations();hideRecommendations();personalization_bar_metrics('pb_my_recommendations');">My Recommendations</a></li>
+<li class="pbarDivider"><div id="listColor"></div></li><li><a href="#" onclick="displayBlockForFavorites('','My History');call_pbar_metrics('pb_my_favorites');">My Favorites</a></li>
+</ul>
+<div style="float:right;" >
+<ul  style="float:right">
+<li class="shareIcon">
+<a href="#" title="Print this page" class="print18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" title="Share via Email" class="email18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" title="Share on Twitter" class="twitter18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" title="Share on Facebook" class="facebook18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" title="Share" class="share18x">&nbsp;</a><a href="#" class="share-button">Share</a></li>
+</ul>
+<div class="pgactions"  align="right" >
+<div class="share-popup"><ul><li class="closeImg">
+<a href="#" title="Close" class="close18x">&nbsp;</a></li>
+<li>
+<a href="#" title="Share on Facebook" class="facebook18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" id="facebook_txt" class="share_txt">Facebook</a></li>
+<li>
+<a href="#" title="Share on Twitter" class="twitter18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" id="twitter_txt" class="share_txt">Twitter</a></li>
+<li>
+<a href="#" title="Share on Google+" class="google18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" id="google_txt" class="share_txt">Google+</a></li>
+<li>
+<a href="#" title="Share on LinkedIn" class="linkedIn18x" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" id="linkedIn_txt" class="share_txt">LinkedIn</a></li>
+<li>
+<a href="#" title="Share via Email" class="email18x_grey" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" id="email_txt" class="share_txt">Email</a></li>
+<li>
+<a href="#" title="Print this page" class="print18x_grey" style="margin-right: 10px; padding-right: 0px;  padding-left:0px; text-decoration:none;">&nbsp;</a><a href="#" id="print_txt" class="share_txt">Printer</a></li>
+</ul></div></div>
+</div>
+</div><script type="text/javascript" src="http://images.freescale.com/v1.0/files/worldwide/shared/js/shareThis.js"></script>
+<script>{attachEvents();}</script>
+
+ </noindex>    
+
+
+
+
+	
+	
+
+<noindex>
+	
+	 
+	
+
+	
+	<div id ="bc">
+	<ul>
+	<li><a href="/">Freescale</a></li>
+	
+	
+  
+				
+				<li>
+
+
+
+
+	
+		
+					<a href="http://www.freescale.com/webapp/sps/site/homepage.jsp?nodeId=02Wcbf">Automotive</a>
+					   
+	            		
+	   
+
+</li>
+				
+			
+				
+				<li>
+
+
+
+
+	
+		
+					<a href="http://www.freescale.com/webapp/sps/site/overview.jsp?nodeId=02Wcbf56hR">Powertrain and Hybrid Systems</a>
+					   
+	            		
+	   
+
+</li>
+				
+			
+						<li>Hybrid Electric Vehicle (HEV) Inverter Controller</li>
+					
+	
+	</ul>
+	</div>
+	
+	
+	
+	</noindex>
+	
+	
+
+
+
+<noindex>
+<div class="liveChat">
+ <font
+	style="font-familyl: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: normal; cursor: pointer;">
+<img src="http://images.freescale.com/v1.0/shared/images/no_agent.JPG"
+	title="Available Monday-Friday, 8AM-6PM CT (US & Canada), 9AM-5PM CET (Europe), 9AM-5PM HKG (Asia).
+" />Live Chat Not Available: <a
+	href="/webapp/servicerequest.create_SR.framework"
+	title="Available Monday-Friday, 8AM-6PM CT (US & Canada), 9AM-5PM CET (Europe), 9AM-5PM HKG (Asia).
+">Create Service Request </a></font> 
+</div></noindex> 
+
+
+    
+<div class="hrw"><noindex>
+<hr />
+</noindex></div>
+<h1>Hybrid Electric Vehicle (HEV) Inverter Controller&nbsp&nbsp;<a style="cursor: pointer" onclick="callFramework(this,'MVZGg','application');" ><img id="MVZGg" src="/shared/images/whitestar.png" alt="Favorite"/></a></h1>
+<!--Added By B28380 For Cr39352--> 
+<noindex>
+<div class="hrw">
+<hr />
+</div>
+</noindex>
+<div class="padMe5"></div>
+<div class="padMe5"></div>
+
+<div id="previewMessage"></div>
+<script type="text/javascript">
+			displayPrinterFriendlyMessage();
+		</script> <div id="tabBaseUrl" style="visibility:hidden; display:none">http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG</div><div class="tabBar"><ul><li id='selectedTab'><a href='http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG'>Overview</a></li><li><a href='http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG&amp;tab=In-Depth_Tab'>In-depth</a></li><li><a href='http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG&amp;fasp=1&amp;tab=Documentation_Tab'>Documentation</a></li><li><a href='http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG&amp;fasp=1&amp;tab=Design_Tools_Tab'>Software & Tools</a></li><li><a href='http://www.freescale.com/webapp/sps/site/application.jsp?code=APLHYFCNG&amp;fasp=1&amp;tab=Training_Support_Tab'>Training & Support</a></li></ul></div>
+  
+
+
+
+
+<div class="lc">
+
+	<noindex>
+	
+			<div class="subscribeBar" id="obviousBar">
+				<ul>
+				
+					<li><a href="http://cache.freescale.com/files/32bit/doc/app_note/AN4428.pdf?aspll=1">Application Notes</a></li>
+				
+				</ul>							
+			</div>	
+			<br />
+			<div class="hrw" id="obviousRule"><hr /></div>				
+		
+		<div class="padMe5"></div>
+		<div class="padMe5"></div>	
+	</noindex>
+	
+   
+   
+    	<div class="ccl verticalDotted" >	
+	
+		
+
+		
+		<div class="productHomeBox" id="pHB_intro">
+			
+			
+
+			
+			A hybrid vehicle combines a downsized internal combustion engine (ICE) and an electric motor (e-motor) to improve fuel economy and reduce harmful emissions. Mild hybrid, full hybrid and plug-in hybrid are a common way to refer to the power breakdown capability of the electric motor and functionalities associated to it.  For example, the torque of the electric motor in mild hybrid may assist the thermal engine at low speed, minimizing fuel consumption while the brakes regenerate the mechanical energy to electricity.<br/> &#10;Freescale&#8217;s MCU portfolio includes motor control solutions with an available low-level software library. We are continually developing new products with dedicated peripheral sets for the electric architectures used in hybrid vehicles.&#10;<p>&#10;<h4>Target Applications</h4>&#10;<ul>&#10;<li>Control Board for PMSM and BLDC Electric Motor</li>&#10;<li>Electric Vehicle</li>&#10;<li>Hybrid Electric Vehicle</li>&#10;<li>Inverter Controller</li>&#10;</ul>&#10;</p>
+			
+			<div class="pdtn"></div>
+			
+		</div> 
+
+		
+
+		
+	</div>
+ 
+	
+
+		
+	
+	<div class="ccr verticalDotted-l" >	
+
+		
+		<div class="productHomeBox" id="pHB_bd"><a href="#" onClick="return openBlockDrg('Hybrid Electric Vehicle (HEV) Inverter Controller', 'http://cache.freescale.com/files/graphic/block_diagram/APLHYFCNG_BD.jpg', 'APLHYFCNG','02Wcbf56hRVZGg','823','510','null','APLHYFCNG','','');"><img src='http://cache.freescale.com/files/graphic/block_diagram/APLHYFCNG_TH.jpg' alt='Freescale Hybrid Electric Vehicle (HEV) Inverter Controller block diagram' border="0"/></a><div class="pdtn"></div></div>
+
+
+	</div>
+	
+ 
+ 
+	<div class="pdtn"></div>
+
+	
+
+	
+		
+		
+<div class= "lc">
+		<div class= "productHomeBox" >
+		<div class="hrw"><hr /></div>
+		<h4>Recommended Solutions</h4>
+		<div class="hrw"><hr /></div>
+		<div class="padMe5"></div>
+		<div class="padMe5"></div>
+
+		<div id="recDevTable" >
+		<table class="rdTable" width="100%" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					
+					<td height="100%" width="66%" valign="top" style="border-right:1px solid #c4cfd1;">
+						<table id="ProdFeat" name="ProdFeat" width="100%" cellspacing="0">
+							<tbody>
+								<tr  >
+									<td class="rdHead" height="15px" width="50%" >Products</td>
+									<td class="rdHead" height="15px" width="50%">Features</td>
+									
+								</tr>
+								
+									<!-- b30255 start-->
+									<tr><td  height="15px" colspan="2" style="border-right:0px;" class="rdTaxLevel" >Microcontroller (MCU)</td>
+											
+									 <!-- <td class="rdTaxLevel" style="border-right:0px">&nbsp;</td> -->
+									 <!--b30255 end-->
+									</tr>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThg" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPC560xP'>
+										MPC560xP: Qorivva 32-bit MCU for Chassis and Safety Applications</a></td>
+										
+										
+										
+										<td CLASS="rdThg" valign="top" style="padding-left:12px; border-right:0px">Low cost scalable MCU for motor control</td>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThw" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPC564xL'>
+										MPC564xL: Qorivva 32-bit MCU for Chassis and Safety Applications</a></td>
+										
+										
+										
+										<td CLASS="rdThw" valign="top" style="padding-left:12px; border-right:0px">Dual Core MCU 1MB Flash motor control & SafeAssure </td>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThg" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MPC567xK'>
+										MPC567xK: Qorivva 32-bit MCU for ADAS Applications</a></td>
+										
+										
+										
+										<td CLASS="rdThg" valign="top" style="padding-left:12px; border-right:0px">High performance dual Core, 2MB Flash, SafeAssure</td>
+
+									
+									<!-- b30255 start-->
+									<tr><td  height="15px" colspan="2" style="border-right:0px;" class="rdTaxLevel" >System Basis Chip (SBC)</td>
+											
+									 <!-- <td class="rdTaxLevel" style="border-right:0px">&nbsp;</td> -->
+									 <!--b30255 end-->
+									</tr>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThg" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MC33903'>
+										MC33903: System Basis Chip Gen2 with High-speed CAN and LIN Interfaces</a></td>
+										
+										
+										
+										<td CLASS="rdThg" valign="top" style="padding-left:12px; border-right:0px">High Speed CAN transceiver with 5 V power Supply   </td>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThw" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MC33905'>
+										MC33905: System Basis Chip Gen2 with High-speed CAN and LIN Interface</a></td>
+										
+										
+										
+										<td CLASS="rdThw" valign="top" style="padding-left:12px; border-right:0px">System Basis Chip, power management and LIN/CAN</td>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThg" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MC33730'>
+										MC33730: Switch Mode Power Supply with Multiple Linear Regulators</a></td>
+										
+										
+										
+										<td CLASS="rdThg" valign="top" style="padding-left:12px; border-right:0px">Switch Mode power supply</td>
+
+									
+									<!-- b30255 start-->
+									<tr><td  height="15px" colspan="2" style="border-right:0px;" class="rdTaxLevel" >Gate Drive and Isolation</td>
+											
+									 <!-- <td class="rdTaxLevel" style="border-right:0px">&nbsp;</td> -->
+									 <!--b30255 end-->
+									</tr>
+
+									
+										<tr>
+										
+										
+										<td CLASS="rdThg" valign="top"><a href='http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MC33937'>
+										MC33937: Three Phase Field Effect Transistor Pre-driver</a></td>
+										
+										
+										
+										<td CLASS="rdThg" valign="top" style="padding-left:12px; border-right:0px">Three Phase pre-driver</td>
+
+									
+
+									
+									
+										
+							<tr id="RemainingTableHeight" name="RemainingTableHeight" style="display:none">
+								<td class="rdThg" style="background-color:white;">&nbsp;</td>
+								<td class="rdThg" style="background-color:white;border:0;padding:0;">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td valign="top" >
+					<table id="advantages" name="advantages" width="100%" >
+						<tr>
+							<td class="rdHeadRight" width="50%">Advantages</td>
+						</tr>
+						<tr><td class="rdThw1" valign="top"><ul class="boxes"><li>High performance scalable controller family</li><li>High precision PWM</li><li>Motor control associated software libraries available</li><li>Cross triggering unit that synchronizes sample timing and PWM signals</li><li>Fault collection unit&#44; which monitors and manages fault events</li><li>Dual core processing for MPC564xL & MPC567xK</li><li>Lock Step and Dual Parallel operating modes</li><li>Designed to address safety requirements outlined in IEC61508 and ISO26262</li><li><a href='http://www.freescale.com/webapp/sps/site/overview.jsp?code=PRDCT_LONGEVITY_HM'>Freescale's Product Longevity Program assures supply for 15 years after launch</a></li></ul></td>	</tr>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+			
+			function setTableHeight()
+			{
+				var ProdFeatTab = document.getElementById("ProdFeat");
+				var advantages = document.getElementById("advantages");
+				var RemTabHeight = document.getElementById("RemainingTableHeight");
+				
+					if(ProdFeatTab.offsetHeight<advantages.offsetHeight){
+					RemTabHeight.style.height = ""+(advantages.offsetHeight - ProdFeatTab.offsetHeight) +"px";
+					RemTabHeight.style.display = '';
+				}
+			
+			}
+			
+			var a = setTableHeight();
+			</script>
+
+
+</div>
+
+
+ <div id="maindivcontent" style="display: none;background: none repeat scroll 0 0 #51626F;height: 404px;position: absolute;width: 604px;z-index: 100;" >
+	<div id="dwindow2" style="position:relative;background-color:#FFFFFF;left:250px;border-top:1px solid #C3CFD1;border-left:1px solid #C3CFD1;border-right:1px solid #C3CFD1;border-bottom:1px solid #C3CFD1;z-index:2000;width:602px;overflow-x:hidden;overflow-y:hidden;left: -2px;margin-bottom: 0;top: -2px;z-index: 100;margin: 0 0 2px;padding: 0;">  
+			<div align="left" id="blockwindow2" onmousedown="startdragging(this.parentNode.parentNode, event);" style="color:#51626F;font-size:1.2em;font-weight:bold;height:22px;margin:1px;cursor:move;width:602px;padding:5px 0 0 0; ">
+			   <div align="left" id="ajaxWindowTitle2"></div>
+			</div>
+			<div align="left" id="dwindowcontent2">   
+			   <div id="maindiv" style="position:absolute;width:584px;margin-left:10px;margin-right:10px;" align="center"> </div> 
+			</div>  
+	</div> 
+</div> 
+
+<div class = "rc">
+
+
+
+				<div class="iu"><h1>Featured Training & Events</h1><ul>&#10;&#9;<li><strong>On-Demand Training</strong>&#10;&#9;&#9;<ul>&#10;<li><a href='http://www.freescale.com/webapp/sps/site/training_information.jsp?code=WBNR_FTF12_AUT_F0042'>Electrification of the Car: Powertrain Challenges and Freescale Solutions</a></li>&#10;<li><a href='http://www.freescale.com/webapp/sps/site/training_information.jsp?code=WBNR_FTF10_F0737'>MCU Solutions for Hybrid Drive Train</a></li>&#10;<li><a href="/webapp/Download?colCode=FTF11_AUT_F0438&location=null&fsrch=1&sr=1&Parent_nodeId=from%20search&Parent_pageType=from%20search">Automotive Powertrain Solutions from Low- to High-End</a></li>&#10;<li><a href="/webapp/search/Serp.jsp?QueryText=&assetIdResult=&sessionChecker=M61xPxsSkDcNsW814vG169nyFnpF2xBsqMHYJ5fQY2CyGj0n2rc8!-1923266245!1328655602940&fsrch=1&attempt=0&showCustomCollateral=false&RELEVANCE=true&fromTrng=false&showAllCategories=false&fromMobile=false&isResult=false&isFromFlex=false&isTree=false&pageSize=25&fromASP=false&isAdvanceSearch=false&getTree=false&fromPSP=false&SelectedAsset=Training&iteration=1&assetLocked=false&Product+Use=Applications%2F000M0ylfWcbf%60%60Automotive&assetLockedForNavigation=false&fromCust=false&getFilter=false&fromDAP=false&fromWebPages=false&getResult=false&isComparison=false&Training=Training%2F000JONRMWLZT%60%60On+Demand">View all</a></li>&#10;&#10;&#9;&#9;</ul>&#10;&#9;</li>&#10;</ul></div>
+
+
+				<div class="iu"><h1>Functional Safety</h1><ul>&#10;&#9;<li class="clearfix">&#10;&#9;&#9;<a href='http://www.freescale.com/webapp/sps/site/homepage.jsp?code=SAFETYPRGRM'>&#10;&#9;&#9;&#9;<img class="thumb" src='http://cache.freescale.com/files/graphic/banner/edir_pu/SafeAssure_68x74.jpg' alt="SafeAssure Solutions Mark" border="0" width="68" />&#10;&#9;&#9;</a>&#10;&#9;&#9;<p class="thumbp">&#10;&#9;&#9;&#9;<strong>&#10;&#9;&#9;&#9;&#9;<a href='http://www.freescale.com/webapp/sps/site/homepage.jsp?code=SAFETYPRGRM'>&#10;&#9;&#9;&#9;&#9;&#9;SafeAssure Functional Safety Program&#10;&#9;&#9;&#9;&#9;</a>&#10;&#9;&#9;&#9;</strong>&#10;&#9;&#9;&#9;Solutions targeted to help meet IEC 61508 and ISO 26262 functional safety compliance&#10;&#9;&#9;</p>&#10;&#9;</li>&#10;&#9;<li class="clearfix">&#10;&#9;&#9;<a href='http://cache.freescale.com/files/32bit/doc/support_info/C26262_MPC5643L.pdf'>&#10;&#9;&#9;&#9;<img class="thumb" src='http://cache.freescale.com/files/graphic/tn/LeopardISO_68x74.jpg' alt="ISO 26262 functional safety standard certification" border="0" width="68" />&#10;&#9;&#9;</a> &#10;&#9;&#9;<p class="thumbp">&#10;&#9;&#9;&#9;<strong><a href='http://cache.freescale.com/files/32bit/doc/support_info/C26262_MPC5643L.pdf'>Qorivva MPC5643L MCU</a></strong>&#10;&#9;&#9;&#9;ISO 26262 certificate for ASIL D&#10;&#9;&#9;</p> &#9;&#10;    </li>&#10;</ul></div>
+
+
+				
+
+
+
+
+
+
+	
+
+				
+				<div class="iu">
+				<h1>Featured Videos</h1>
+				
+			
+
+		
+			<div class="video-outer-n clearfix">
+
+				
+						<div class="video-inner-n">
+							  <!-- Code Commented/Added by B28382 for CR42805 on 15/03/2012 -->
+							  <a class="FSLvideo" data-video="http://www.youtube.com/v/X4lc6LVV7IA" data-title="Automotive Powertrain System">
+
+							<img border="0" align="left" width="68px" src="http://cache.freescale.com/videos/thumbnails/X4lc6LVV7IA.jpg" alt="Automotive Powertrain System" class="thumb-v-n"></a>
+							<div class="play-video-n">
+							<a class="FSLvideo" data-video="http://www.youtube.com/v/X4lc6LVV7IA" data-title="Automotive Powertrain System"></a>
+							</div>
+						</div>
+					
+						<div class="thumbp">
+							
+							
+								<a class="FSLvideo" data-video="http://www.youtube.com/v/X4lc6LVV7IA" data-title= "Automotive Powertrain System">Automotive Powertrain System</a>
+								<br/> (03:31 min)
+							
+							<div class="bkflt"></div>
+					
+				
+				</div>
+			
+				
+			</div>
+			<div class="hrw"><hr /></div>
+			
+				
+			<div class="video-outer-n clearfix">
+
+				
+						<div class="video-inner-n">
+							  <!-- Code Commented/Added by B28382 for CR42805 on 15/03/2012 -->
+							  <a class="FSLvideo" data-video="http://www.youtube.com/v/tmAlt5BqGUQ" data-title="Freescale Concept Car">
+
+							<img border="0" align="left" width="68px" src="http://cache.freescale.com/videos/thumbnails/tmAlt5BqGUQ.jpg" alt="Freescale Concept Car" class="thumb-v-n"></a>
+							<div class="play-video-n">
+							<a class="FSLvideo" data-video="http://www.youtube.com/v/tmAlt5BqGUQ" data-title="Freescale Concept Car"></a>
+							</div>
+						</div>
+					
+						<div class="thumbp">
+							
+							
+								<a class="FSLvideo" data-video="http://www.youtube.com/v/tmAlt5BqGUQ" data-title= "Freescale Concept Car">Freescale Concept Car</a>
+								<br/> (03:22 min)
+							
+							<div class="bkflt"></div>
+					
+				
+								
+				
+				</div>
+			
+				
+			</div>
+			<div class="hrw"><hr /></div>
+			
+		
+		
+		
+		
+			
+
+			
+			<div class="pdtn"></div>
+			
+			</div>
+			
+
+		
+
+	
+
+			
+				<div class="iu"><h1>Connect with Us</h1><ul>&#10;<li><strong><a href="http://blogs.freescale.com/category/automobility">Automobility Blog</a></strong> by Freescale's auto experts</li>&#10;</ul></div>
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+
+
+
+
+	
+	<div class="padMe5"></div>
+	
+	
+
+	
+
+	
+	
+	
+</div> 
+
+
+
+
+ 
+
+<div class="bkflt"></div>
+
+</div>
+</div>
+
+
+
+
+
+<div id="divBlockLayer" class="blockLayer" ></div>
+                        <input type="hidden" id="Asset_code" value="APLHYFCNG"/>
+                        <input type="hidden" id="Asset_name" value="Hybrid Electric Vehicle (HEV) Inverter Controller"/>
+                                        <div id="divBottomRight" style="position:absolute;z-index:8;width:70px">
+                                                <center>
+                                                <span id="image_feedback" alt="Feedback" onclick="displayBlock();"></span>
+                                                </center>
+                                        </div>
+
+            
+                        
+                        <script language="JavaScript" type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/FloatingIcon.js"></script>
+                        <script language="Javascript" type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/CountChars.js"></script>
+                        <script language="JavaScript" type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/checkTextareaLimit.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+function openfeedBackBlock(window_title,blockDiagUrl,code,psp_URL,width,height,fastpreview){
+	if(document.getElementById('feedBackajaxbox')!=null){
+           document.getElementById('feedBackajaxbox').contentarea.innerHTML="";
+    }
+    var url = getPreviewUrl('../components/hotFeedback.jsp?collateralCode=FEEDBACK_FORM');
+    ajaxwin=dhtmlwindow.open('feedBackajaxbox',url,window_title, 'width='+width+'px,height='+height+'px,left=172px,top=100px,resize=0,scrolling=1');
+    return ajaxwin ;
+}
+
+function openthankYouBlock(window_title,blockDiagUrl,code,psp_URL,width,height,fastpreview){
+    var url = getPreviewUrl('../components/hotFeedback.jsp?collateralCode=ONLINE_THANK_YOU');
+    ajaxwin=dhtmlwindow.open('feedBackajaxbox',url,window_title, 'width='+width+'px,height='+height+'px,left=165px,top=100px,resize=0,scrolling=1');
+    return ajaxwin ;
+}
+
+function getPreviewUrl(url, fastpreview){
+    if(fastpreview!=null  &&  (trim(fastpreview) != '' ) ){
+        return url+'&fastpreview=1' ;
+    }else{
+        return url ;
+    }
+}
+
+</script>
+
+
+<input id="metricsPath" type="hidden" name=" metricsPath "
+	value="Applications/Automotive/Powertrain and Hybrid Systems/Hybrid Electric Vehicle (HEV) Inverter Controller/" />
+<input id="metricsPageId" type="hidden" name=" metricsPageId"
+	value="APLHYFCNG" />
+
+
+
+
+
+
+
+
+
+
+
+	<meta name="DCSext.language_option" content="en" />
+
+	<meta name="DCSext.en_ti" content="Hybrid Electric Vehicle (HEV) Inverter Controller" />
+
+
+<script language="javascript" type="text/javascript">elqTryI = true;</script>
+<script language="javascript" type="text/javascript" src="http://styles.freescale.com/v1.0/elqNow/elqCfg.js"></script>
+<script language="javascript" type="text/javascript" src="http://styles.freescale.com/v1.0/elqNow/elqFCS.js"></script>
+
+<!-- WebTrends collateral activated 2006-01-27 -->
+
+
+
+
+
+
+
+<script src="http://styles.freescale.com/files/abstract/misc/SDC_SMARTSOURCE_TAG.js" language="javascript" type="text/javascript">
+</script>
+<noscript>
+<img border="0" name="DCSIMG" width="1" height="1" alt="DSCIMG" src="http://fdc.freescale.com/dcsna6bpqoifwzzkbkpmprmyf_5x3f/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" />
+</noscript>
+<script  language="javascript"  type="text/javascript"> 
+   var web_type="";
+   var elqURL="";   
+   
+   jQuery(document).ready(function() 
+  {  
+	if(web_type==null);
+    {	
+	    try{
+			web_type= document.getElementById("webActivityAssetType").value;
+		}catch(err){ 
+			web_type=document.getElementById("pageType").value;
+	  }
+    } 	
+
+    var langOption = 'en';
+    
+	var  metricsPath ="";
+	var metricsPageId ="";
+	
+    try{
+	   metricsPath = document.getElementById("metricsPath").value;
+    }catch(err){
+		metricsPath="";
+    }
+
+    if(langOption && langOption!='en'){
+    	metricsPath = langOption+"/"+metricsPath;
+    }
+	 try{
+       metricsPageId = document.getElementById("metricsPageId").value;
+    }catch(err){
+		metricsPageId=""; 
+    }
+	if(metricsPageId.length!=0&&metricsPath.length!=0){
+	   elqURL='http://www.freescale.com/'+metricsPath+''+metricsPageId+'?WT_ASSET='+web_type;
+	 }else if(metricsPageId.length==0&&metricsPath.length!=0){
+       metricsPath =metricsPath.substring(0,metricsPath.lastIndexOf("/")-0); 
+	   elqURL='http://www.freescale.com/'+metricsPath+'?WT_ASSET='+web_type;
+	 }else if(metricsPageId.length!=0&&metricsPath.length==0){	
+	   elqURL='http://www.freescale.com/unknown_path/'+metricsPageId+'?WT_ASSET='+web_type;
+	}		
+        try {
+                var checktid=extractQP('tid');
+                if (checktid != ""){
+                        elqURL=elqURL+"&tid="+checktid;
+                }
+                var checktab=extractQP('tab');
+                if (checktab != ""){
+                        elqURL=elqURL+"&tab="+checktab;
+                }
+        } catch(err) {}
+   elqFCS(elqURL); 
+  
+  }); 
+</script>
+
+
+
+
+<div id="divBlockLayer" class="blockLayer" ></div>
+                        <input type="hidden" id="Asset_code" value="APLHYFCNG"/>
+                        <input type="hidden" id="Asset_name" value="Hybrid Electric Vehicle (HEV) Inverter Controller"/>
+                                        <div id="divBottomRight" style="position:absolute;z-index:8;width:70px">
+                                                <center>
+                                                <span id="image_feedback" alt="Feedback" onclick="displayBlock();"></span>
+                                                </center>
+                                        </div>
+
+            
+                        
+                        <script language="JavaScript" type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/FloatingIcon.js"></script>
+                        <script language="Javascript" type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/CountChars.js"></script>
+                        <script language="JavaScript" type="text/javascript" src="http://styles.freescale.com/v1.0/shared/js/checkTextareaLimit.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+function openfeedBackBlock(window_title,blockDiagUrl,code,psp_URL,width,height,fastpreview){
+	if(document.getElementById('feedBackajaxbox')!=null){
+           document.getElementById('feedBackajaxbox').contentarea.innerHTML="";
+    }
+    var url = getPreviewUrl('../components/hotFeedback.jsp?collateralCode=FEEDBACK_FORM');
+    ajaxwin=dhtmlwindow.open('feedBackajaxbox',url,window_title, 'width='+width+'px,height='+height+'px,left=172px,top=100px,resize=0,scrolling=1');
+    return ajaxwin ;
+}
+
+function openthankYouBlock(window_title,blockDiagUrl,code,psp_URL,width,height,fastpreview){
+    var url = getPreviewUrl('../components/hotFeedback.jsp?collateralCode=ONLINE_THANK_YOU');
+    ajaxwin=dhtmlwindow.open('feedBackajaxbox',url,window_title, 'width='+width+'px,height='+height+'px,left=165px,top=100px,resize=0,scrolling=1');
+    return ajaxwin ;
+}
+
+function getPreviewUrl(url, fastpreview){
+    if(fastpreview!=null  &&  (trim(fastpreview) != '' ) ){
+        return url+'&fastpreview=1' ;
+    }else{
+        return url ;
+    }
+}
+
+</script>
+
+
+<noindex>
+
+
+
+
+		
+
+
+
+<br />
+
+<div id="ftr">
+	<ul class="dnv" id="dnv">
+	</ul>
+<script language="javascript" type="text/javascript" charset="UTF-8">
+  function getFooter() {
+				var i=0;
+				var url ="";
+				var text = "";
+				var htmlstr ="";
+				for(i=0; i<ftrObj.length; i++){
+		  				url = ftrObj[i].url;
+		  				if(url=='$mobileUrl'){
+			  				url = '/webapp/sps/site/application.jsp?code=APLHYFCNG&site_preference=mobile';
+		  				}
+						text = ftrObj[i].text;
+						if(i>0 && i<= (ftrObj.length -1)){
+							htmlstr += '<li><span class="sep">&nbsp;</span> <a  href='+url +'>'+text+'</a></li>';
+						}else{
+							htmlstr += '<li> <a href='+url +'>'+text+'</a></li>';							
+						}
+				}
+				htmlstr += '<li class="ftr-sm" >';
+				for(i=0; i<ftrSocialObj.length; i++){
+	  				url = ftrSocialObj[i].url;
+					text = ftrSocialObj[i].text;					
+					htmlstr += '<a class='+ftrSocialObj[i].clss+' title='+ftrSocialObj[i].title+' href='+url +'>&nbsp</a>';							
+				}
+				htmlstr += '</li>';
+				document.getElementById( "dnv" ).innerHTML = htmlstr;			
+		}
+		getFooter();
+  </script>
+  
+</br>
+<div id="copy">
+	<ul id="copy_ul" >
+		<li class="copyright">&copy; 2004-2013 Freescale Semiconductor, Inc. All rights reserved. </li>
+	</ul>
+</div>
+<input id="language_option" type="hidden" name="language_option" value="en"/>
+</div>	
+
+
+
+
+<script language="JavaScript1.2" src="http://styles.freescale.com/v1.0/shared/js/HM_Loader_ScriptDOM.js" type='text/javascript'></script>
+
+
+
+
+			<!-- Response Server name = [ ebiz_ms1 ] --> 
+
+
+
+
+
+</noindex>
+
+
+
+<br/>
+
+<form name="downloadResultsForm" action="" method="post"></form>
+
+<input id="recordHistoryTime" type="hidden" name="recordHistroryTime"
+	value="10" />
+<input id="recordHistoryCommand" type="hidden"
+	name="recordHistroryCommand"
+	value="BROWSE_WEBPAGE" />
+<input id="pageNodeId" type="hidden" name="pageNodeId"
+	value="MVZGg" />
+<input id="pageType" type="hidden" name="pageType"
+	value="application" />
+<input id="recrdHistDwnlodComnd" type="hidden"
+	name="recrdHistDwnlodComnd"
+	value="DOWNLOAD" />
+<input id="noteTxt" type="hidden" name="noteTxt" value="" />
+<!--change made by b31787 [START] -->
+<script type="text/javascript"
+	src="http://styles.freescale.com/v1.0/site_cons/Javascript/application.js"></script>
+<!--change made by b31787 [END]-->
+
+
+
+<input id="langCd" type="hidden" name="langCd" value="en"/>
+
+
+
+<input id="webActivityAssetID" type="hidden" name="webActivityAssetID"
+	value="MVZGg" />
+<input id="webActivityAssetType" type="hidden"
+	name="webActivityAssetType"
+	value="ASP" />
+
+
+ 
+
+<input id="recordActivityCommand" type="hidden" name="recordActivityCommand" value="RECORD_WEB_ACTIVITY"/>
+<input id="lang" type ="hidden"  value="" /> <!-- added by b42233 -->
+<script type="text/javascript">
+	
+	
+  jQuery(document).ready(function()
+  {
+		var assetID= document.getElementById("webActivityAssetID").value;
+		var assetType= document.getElementById("webActivityAssetType").value;
+		var referrerUrl= document.referrer;
+		var commandID = document.getElementById("recordActivityCommand").value;
+		var attrNames ="";
+		var attrValues = "";
+		var resultCnt=0;
+		var serpUrl=window.location.href;
+		var flag;
+		var suburl="";
+		var lang= document.getElementById("lang").value;	//added by b42233	
+		var recoUrl=window.location.href;
+		var tmpParentID = "";
+		var tmpParentTp = "";
+		
+		//START: Added for CR 48749 by b45339 on jul 2013
+		if (document.getElementById("webActivityParentID") != undefined && document.getElementById("webActivityParentType")!= undefined)
+		{
+			tmpParentID=document.getElementById("webActivityParentID").value;
+			tmpParentTp=document.getElementById("webActivityParentType").value;
+		}
+		//End: Added for CR 48749 by b45339 on jul 2013
+		
+		
+		if(recoUrl.lastIndexOf("&fr=")>=0||recoUrl.lastIndexOf("?fr=")>=0)
+		{
+			
+			
+			if(recoUrl.lastIndexOf("&fr=")>=0){
+				
+				suburl=recoUrl.substring(recoUrl.lastIndexOf("&fr="));
+			}
+			else if(recoUrl.lastIndexOf("?fr=")>=0)
+			{
+				suburl=recoUrl.substring(recoUrl.lastIndexOf("?fr="));
+			}
+			if(suburl!=""){
+				attrNames=attrNames+"fromRecommendation"+",";
+				//START: Added for CR 40875 by b28384 on 07th Jan 2013
+				if(suburl.indexOf("gdc")>=0)
+					attrValues+="gen_doc"+",";
+				else if(suburl.indexOf("gtl")>=0)
+					attrValues+="gen_tool"+",";
+				else if(suburl.indexOf("gsc")>=0){
+					attrValues+="gen_cart"+",";
+					var parameters = suburl.split("&");
+					for(var mm=0; mm<parameters.length; mm++){
+						var parameters1 = parameters[mm].split("=");
+						
+						if(parameters1 != null && parameters1.length >=2 && parameters1[0]!=null && parameters1[0] != "" && parameters1[1]!=null && parameters1[1] != ""){
+							if(parameters1[0] == "cart_opn"){
+								attrNames = attrNames + "cart_opn"+",";
+								attrValues = attrValues + parameters1[1] + ",";
+							}else if(parameters1[0] == "cart_weborderid"){
+								attrNames = attrNames + "cart_weborderid" + ",";
+								attrValues = attrValues + parameters1[1] + ",";
+							}else if(parameters1[0] == "parentID"){
+								tmpParentID = parameters1[1];
+							}else if(parameters1[0] == "parentType"){
+								tmpParentTp = parameters1[1];
+							}
+						}
+					}
+				}
+				//END: Added for CR 40875 by b28384 on 07th Jan 2013
+				else if((suburl.indexOf("p"))>=0)		
+					attrValues+="personal"+",";
+				else if(suburl.indexOf("g")>=0)
+					attrValues+="general"+",";
+			}
+
+		}
+		
+		if(serpUrl.lastIndexOf("&sr=")>=0)
+		{
+			serpUrl = serpUrl.substring(serpUrl.lastIndexOf("&sr="));
+			if(serpUrl.indexOf("&",1)>=0){
+				serpUrl = serpUrl.substring(0,serpUrl.indexOf("&",1));
+			}
+			var a=serpUrl.indexOf("=")+1;
+			resultCnt=serpUrl.substr(a,(serpUrl.length));
+		}
+		if(resultCnt!=0){
+			attrNames+="Search Result" +",";
+			attrValues+= resultCnt + ",";
+		}
+		
+		//Added by b44406 start for CR-50658
+		if(lang!=null && lang!="")
+		{
+			   
+		attrNames+="lang,";
+		attrValues+=lang+","; 
+		}
+		else{
+			   
+		attrNames+="lang,";
+		attrValues+="en,";
+		}
+		// added by b44406 end  for CR-50658
+		attrNames = attrNames.substring(0,attrNames.length-1);
+		attrValues = attrValues.substring(0,attrValues.length-1);
+
+		var url = '/webapp/history/recordActivity.sp';
+		
+		
+		var obj = new Object;
+		obj.assetID = assetID;
+		obj.assetType = assetType;
+		obj.commandID = commandID;
+		obj.referrerUrl = referrerUrl;
+
+		if(tmpParentID != null && tmpParentID != ""){
+			obj.parentID = tmpParentID;
+		}
+		if(tmpParentTp != null && tmpParentTp != ""){
+			obj.parentType = tmpParentTp;
+		}
+		if(	attrValues!=""&&attrNames!="")
+		{
+			obj.attrValues = attrValues;	
+			obj.attrNames=attrNames;
+		}
+		
+	  	 recordActivity(url, obj);
+  });
+  
+
+</script>
+
+
+
+ 
+
+<!-- Web reco project b30255 start-->
+
+	
+	
+	
+    
+	
+
+
+
+<div id="divHeight"></div>
+	
+	<div id="site-bottom-bar" style="display:none">
+		<div id="scrollHeader" class="contentHeader"></div>		
+		<div id="recoContent" class="loading">
+			<div class="scrollable" id="browsable"></div>
+		</div>
+		<div id="generalFooter"></div>		
+	</div>
+ 
+	<!--div id="site-top-bar" class="site_top_bar_default" onmousedown="startdrag(this, event);"-->
+		<div id="site-top-bar" class="site_top_bar_default">	
+		<!--div id="scrollHeaderdisplay" class="contentHeader"-->
+		<div id="scrollHeaderdisplay" class="contentHeader" onmousedown="startdrag(this.parentNode, event);"></div>
+			<div id="personal_recoContent" class="loading">
+				<div class="scrollable" id="browsabledisplay"></div>
+			</div>
+			<div id="scrollFooterdisplay"></div>	  			
+	</div>
+
+
+	
+<div id="general_whtsThisPopup" ></div>
+
+<div id="personal_whtsThisPopup" ></div>
+		
+	
+<div id="fixThisPopup" class="popup_block"></div>
+
+<div id="reco_setting"></div>
+	<div id="recoSettingspopup" ></div>
+
+
+<input type='hidden' name='fromPSP' value="" /> 
+<input type='hidden' name='tab' value="" /> 
+<input type='hidden' name='position' value="position" /> 
+<input type='hidden' name='uservalue' value="uservalue" />  
+<input type='hidden' name='sessionNameforRec' value="" /> 
+
+<!-- Web reco project b30255 end-->
+
+<body  onKeyDown="knowkey(event)"> 
+
+<div id="divopacity1"   ></div>
+<div id="wrapper1" style="position:fixed;left:0pt;right:0pt;top:0pt;"> 
+	<div id="dwindow1" class="dwindow1" style="position:relative; display:none; background-color:#FFFFFF ;border:1px solid #C3CFD1;margin-right: auto; margin-left: auto;margin-top: auto;margin-bottom: auto; position: relative; left: 0pt; right: 0pt;top:2pt;bottom:0pt; ">
+		<div align="right" id="blockwindow1" class="blockwindow1" style="background-color:#FFFFFF;color:#51626F;font-size:1.2em;font-weight:bold;height:32px;margin:1px; "> <!--background-color:#C4CFD1: color changed to #FFFFFF by b30256 for CR40452-->
+			<div class="ajaxWindowTitle1"></div>
+			<div class="closeAjaxWindow1">Esc Key or <a title="Close"  href="#" onClick="closeit1()"><img src="/shared/images/x.png" align="bottom" class="closeImage"/></a></div> <!--new image added by b30256 for CR40452 27B issue-->
+		</div>
+		<div id="dwindowcontent1" class="dwindowcontent1" style="height:400px" >  
+			
+			<div id="cframe1" style="border:0px;position:fixed;margin-left:15px;margin-top:12px" align="center">
+			 
+			</div>
+			
+		</div> 
+	</div>
+</div> 
+</div>
+
+</body>   
+
+</body>
+</html>
+
+
+<input type="hidden" value="Expand All" id="rt-ea" />
+<input type="hidden" value="Close All" id="rt-ca" />
+<input type="hidden" value="Collapse All Sections" id="rt-cas" />
+<input type="hidden" value="Expand All Sections" id="rt-eas" />

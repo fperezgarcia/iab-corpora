@@ -1,0 +1,647 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/jquery/theme/contrast.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript" src="/internal_urls.js"></script>
+<script type="text/javascript">	
+<!--
+	
+     jQuery.noConflict();
+     
+var externalpagepart = '#res';
+var loadinggif = '/loading.gif';
+ 
+$(document).ready(function(){  
+    // set up the click event
+        $('a.loader').live('click', function() {
+                var toLoad = '/searchgoogle.php ' + externalpagepart;
+                $('.content').slideUp('slow', loadContent);
+                $('#load').remove();
+                $('#waiting').append('<div id="load"><img src="' + loadinggif + '" alt="Loading" /></div>');
+                $('#load').fadeIn('normal');
+                function loadContent() {
+            var searchterm = $('#searchterm').val();
+                        $('.content').load(toLoad, {'string': searchterm}, function(response, status, xhr) {
+                if (status == 'error') {
+                    var msg = "Sorry but there was an error: ";
+                    $(".content").html(msg + xhr.status + " " + xhr.statusText);
+                }            
+            }).slideDown('slow', hideLoader());
+                }
+                function hideLoader() {
+                        $('#load').fadeOut('normal');
+                }
+                return false;
+        });
+});
+     
+-->
+</script>	
+
+	<script type="text/javascript" src="/jquery/ui.core.js"></script>
+	<script type="text/javascript" src="/jquery/ui.dialog.js"></script>
+	<script type="text/javascript" src="/jquery/ui.draggable.js"></script>
+	<script type="text/javascript" src="/jquery/disclaimer.js"></script>
+
+  <base href="http://fultoncountyga.gov/business" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Fulton County, Fulton County Georgia" />
+  <meta name="description" content="Fulton County Online - Rapid and Complete Access for all" />
+  <meta name="generator" content="Fulton County, GA - @ Your Service" />
+  <title>Business</title>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="/plugins/system/mtupgrade/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <script type="text/javascript" src="http://fultoncountyga.gov/modules/mod_swmenufree/transmenu_Packed.js"></script>
+  <style type='text/css'>
+<!--
+.transMenu {
+ position:absolute ; 
+ overflow:hidden; 
+ left:-1000px; 
+ top:-1000px; 
+}
+.transMenu .content {
+ position:absolute  ; 
+}
+.transMenu .items {
+ border: 0px solid #FFFFFF ; 
+ position:relative ; 
+ left:0px; top:0px; 
+ z-index:2; 
+}
+.transMenu  td
+{
+ padding: 5px 5px 5px 5px  !important;  
+ font-size: 12px !important ; 
+ font-family: Arial, Helvetica, sans-serif !important ; 
+ text-align: left !important ; 
+ font-weight: bold !important ; 
+ color: #000000 !important ; 
+} 
+#subwrap 
+{ 
+ text-align: left ; 
+}
+.transMenu  .item.hover td
+{ 
+ color: #FFFFFF !important ; 
+}
+.transMenu .item { 
+ text-decoration: none ; 
+ cursor:pointer; 
+ cursor:hand; 
+}
+.transMenu .background {
+background-image:none; background-color: #FFCC99 !important ; 
+ position:absolute ; 
+ left:0px; top:0px; 
+ z-index:1; 
+ opacity:0.85; 
+ filter:alpha(opacity=85) 
+}
+.transMenu .shadowRight { 
+ position:absolute ; 
+ z-index:3; 
+ top:-3000px; width:2px; 
+ opacity:0.85; 
+ filter:alpha(opacity=85)
+}
+.transMenu .shadowBottom { 
+ position:absolute ; 
+ z-index:1; 
+ left:-3000px; height:2px; 
+ opacity:0.85; 
+ filter:alpha(opacity=85)
+}
+.transMenu .item.hover {
+background-image:none; background-color: #FF6600 !important ; 
+}
+.transMenu .item img { 
+ margin-left:10px !important ; 
+}
+table.menu {
+ top: 0px; 
+ left: 0px; 
+ position:relative ; 
+ margin:0px !important ; 
+ border: 0px solid #FFCC00 ; 
+ z-index: 1; 
+}
+table.menu a{
+ margin:0px !important ; 
+ padding: 11px 10px 9px 10px  !important ; 
+ display:block !important; 
+ position:relative !important ; 
+}
+div.menu a,
+div.menu a:visited,
+div.menu a:link {
+ font-size: 12px !important ; 
+ font-family: Arial, Helvetica, sans-serif !important ; 
+ text-align: center !important ; 
+ font-weight: normal !important ; 
+ color: #FFFFFF !important ; 
+ text-decoration: none !important ; 
+ margin-bottom:0px !important ; 
+ display:block !important; 
+ white-space:nowrap ; 
+}
+div.menu td {
+ border-bottom: 0px solid #363636 ; 
+ border-top: 0px solid #363636 ; 
+ border-left: 0px solid #363636 ; 
+ background-image: URL("http://fultoncountyga.gov/modules/mod_swmenufree/images/transmenu/bg_menu_mainoff.gif") ;
+ background-color: #363636 !important ; 
+} 
+div.menu td.last {
+ border-right: 0px solid #363636 ; 
+} 
+#trans-active a{
+ color: #FFCC00 !important ; 
+ background-image: URL("http://fultoncountyga.gov/modules/mod_swmenufree/images/transmenu/bg_menu_main_1.gif") ;
+ background-color: #363636 !important ; 
+} 
+#menu a.hover   { 
+ background-image: URL("http://fultoncountyga.gov/modules/mod_swmenufree/images/transmenu/bg_menu_main_1.gif") ;
+ color: #FFCC00 !important ; 
+ background-color: #363636 !important ; 
+}
+#menu span {
+ display:none; 
+}
+
+-->
+</style>
+
+<link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" /> 
+<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+ 
+<link rel="shortcut icon" href="/images/favicon.ico" />
+ 
+<link rel="stylesheet" href="/templates/fulco_blue_default/css/template.css" type="text/css" /> 
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="/pngfix/pngfix.js"></script>
+<![endif]-->
+</head>
+<body class="bg_page" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" marginheight="0">
+	<div id="exlinkmsg">
+	</div>
+<div align="center">
+<table width="964" cellpadding="0" cellspacing="0">
+<tr valign="top">
+<td>
+	<table width="950" border="0" cellspacing="0" cellpadding="0">
+	<tr align="left">
+	<td width="253" class="bgtop"><div class="logo_loc"><img src="http://www.fultoncountyga.gov/templates/fulco_blue_default/images/logo.gif" width="195" height="58" alt="Fulton County Logo" border="0"></div> <div class="contact"></div></td>
+	<td width="554" class="bgtop"><div class="searchp">		<div class="moduletable2">
+					<form action="index.php" method="post">
+	<div class="search2">
+		<input name="searchword" id="mod_search_searchword" maxlength="50" alt="Search" class="inputbox2" type="text" size="40" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" /><input type="submit" value="Search" class="button2" onclick="this.form.searchword.focus();"/>	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value="102" />
+</form>		</div>
+	</div></td>
+	<td width="143" class="bgtop"><a href="/contact-fultoncounty"><img src="http://www.fultoncountyga.gov/templates/fulco_blue_default/images/contact_us.gif" width="143" height="71" alt="Contact the County" border="0"></a><br /></td>
+	</tr>
+	<tr>
+	<td colspan="3" class="bgmen" height="32">
+<!--swMenuFree5.0J_1.5 transmenu by http://www.swmenupro.com-->
+<div id="wrap" class="menu" align="center">
+<table cellspacing="0" cellpadding="0" id="menu" class="menu" > 
+<tr> 
+<td> 
+<a id="menu1" href="/fulcohome" >Home</a>
+</td> 
+<td> 
+<a id="menu1138" href="/services" >Services</a>
+</td> 
+<td> 
+<a id="menu1129" href="/commissioners" >Government</a>
+</td> 
+<td> 
+<a id="menu482" href="/residents-welcome" >Residents</a>
+</td> 
+<td> 
+<a id="menu102" href="/business" >Business</a>
+</td> 
+<td> 
+<a id="menu72" href="/visitors" >Visitors</a>
+</td> 
+<td> 
+<a id="menu84" href="/personnel" >Employment</a>
+</td> 
+<td> 
+<a id="menu1127" href="/departments-and-agencies" >Departments & Agencies</a>
+</td> 
+<td class="last"> 
+<a id="menu2098" href="/employee-source-home-menu" >For Employees</a>
+</td> 
+</tr> 
+</table></div> 
+<div id="subwrap"> 
+<script type="text/javascript">
+<!--
+if (TransMenu.isSupported()) {
+var ms = new TransMenuSet(TransMenu.direction.down, 0,0, TransMenu.reference.bottomLeft);
+function init() {
+if (TransMenu.isSupported()) {
+TransMenu.initialize();
+document.getElementById("menu1").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu1").onmouseout = function() { this.className = ""; }
+document.getElementById("menu1138").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu1138").onmouseout = function() { this.className = ""; }
+document.getElementById("menu1129").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu1129").onmouseout = function() { this.className = ""; }
+document.getElementById("menu482").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu482").onmouseout = function() { this.className = ""; }
+document.getElementById("menu102").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu102").onmouseout = function() { this.className = ""; }
+document.getElementById("menu72").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu72").onmouseout = function() { this.className = ""; }
+document.getElementById("menu84").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu84").onmouseout = function() { this.className = ""; }
+document.getElementById("menu1127").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu1127").onmouseout = function() { this.className = ""; }
+document.getElementById("menu2098").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu2098").onmouseout = function() { this.className = ""; }
+}}
+TransMenu.dingbatSize = 0;
+TransMenu.spacerGif = "";
+TransMenu.dingbatOn = "";
+TransMenu.dingbatOff = ""; 
+TransMenu.sub_indicator = false;
+TransMenu.menuPadding = 0;
+TransMenu.itemPadding = 0;
+TransMenu.shadowSize = 2;
+TransMenu.shadowOffset = 3;
+TransMenu.shadowColor = "#888";
+TransMenu.shadowPng = "http://fultoncountyga.gov/modules/mod_swmenufree/images/transmenu/grey-40.png";
+TransMenu.backgroundColor = "#FFCC99";
+TransMenu.backgroundPng = "http://fultoncountyga.gov/modules/mod_swmenufree/images/transmenu/white-90.png";
+TransMenu.hideDelay = 600;
+TransMenu.slideTime = 300;
+TransMenu.selecthack = 0;
+TransMenu.autoposition = 0;
+TransMenu.renderAll();
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", init, false );
+else if ( typeof window.attachEvent != "undefined" ) {
+window.attachEvent( "onload", init);
+}else{
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+init();
+}
+}else
+window.onload = init();
+}
+}
+-->
+</script>
+</div>
+
+<!--End swMenuFree menu module-->
+</td>
+	</tr>
+	<tr>
+	<td colspan="3" height="">		<div class="moduletable">
+					<div class="bannergroup">
+
+<div class="banneritem"><img src="http://fultoncountyga.gov/images/banners/banner_business.jpg" alt="Banner" /><div class="clr"></div>
+	</div>
+
+</div>		</div>
+	</td>
+	</tr>
+	</table>
+
+</td>
+<td width="14" class="bg_toprt">&nbsp;</td>
+</tr>
+</table></div>
+<div align="center">
+<table width="964" cellpadding="0" cellspacing="0">
+<tr valign="top">
+<td width="950" height="" bgcolor="FFFFFF"  class="white" align="left">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	<td width="30">&nbsp;</td>
+	<td width="280" class="white">		<div class="moduletablepulldown">
+					
+<!-- Simple Select Box 1.5.4 starts here -->
+<script type="text/javascript">
+<!--
+function openpage(link)
+	{
+	if (link!="!")
+		window.open(link);
+	return false;
+	}
+-->
+</script>
+<table cellpadding="0" cellspacing="0" style="width:100%; text-align: center; direction: ltr;">
+	<tr>
+		<td></td>
+		</tr><tr>		<td>
+			<form id="ols_frm" method="get" action="">
+				<select id="ols" name="Select" style="width: auto" onchange="top.location.href=this.options[this.selectedIndex].value">
+				<option value='!'>How Do I?</option><option value='/fcprobate-marriage-license'>Get a Marriage License</option><option value='/rae-voter-registration'>Register to Vote</option><option value='/resident-financial-assistance'>Get Mortgage Assistance</option><option value='/bhdd-call-for-assistance'>Find Mental Health Resources</option><option value='/fcfd-business-license'>Apply for a Business License</option><option value='/fced-business-resource/fced-economic-dev'>Get a Business Loan</option><option value='/fcpccd-vendor-self-service'>Register as a Vendor</option><option value='/judicial-services-bh'>Find Addiction Resources</option><option value='/fccomm-requesting-a-proclamation'>Request a Proclamation</option><option value='/fcprd-programs-and-classes'>Learn to Swim</option><option value='/fccomm-citizens-university'>Learn More About How Fulton County Works</option><option value='/fcfd-water-sewer'>Pay My Water Bill</option><option value='/pw-water-services/2836-water-conservation'>Reduce Water Consumption</option><option value='/pw-water-services/pw-education-a-outreach/2837-2010-outdoor-watering-schedule'>Learn About Outdoor Watering Restrictions</option><option value='/code-enforcement-ecd/complaint-process-code-enforcement'>Report Code Violation</option><option value='/fcced-agriculture-a-horticulture'>Get Gardening Help</option>				</select>
+			</form>
+		</td>
+	</tr>
+</table>
+<!-- Simple Select Box 1.5.4 ends here -->
+		</div>
+	</td>
+	<td width="20">&nbsp;</td>
+	<td width="310">		<div class="moduletable">
+					
+<!-- Simple Select Box 1.5.4 starts here -->
+<script type="text/javascript">
+<!--
+function openpage(link)
+	{
+	if (link!="!")
+		window.open(link);
+	return false;
+	}
+-->
+</script>
+<table cellpadding="0" cellspacing="0" style="width:100%; text-align: center; direction: ltr;">
+	<tr>
+		<td></td>
+		</tr><tr>		<td>
+			<form id="ols_frm" method="get" action="">
+				<select id="ols" name="Select" style="width: auto" onchange="openpage(this.options[this.selectedIndex].value);">
+				<option value='!'>Online  Services</option><option value='http://activenet12.active.com/fultonartsclasses/?redir=1'>Arts Classes</option><option value='http://www.vitalchek.com/agency_info.aspx?t=birth&p=18884&s=loc'>Birth Certificates</option><option value='http://www.ocse.dhr.georgia.gov/portal/site/DHS-OCSE/'>Child Support</option><option value='http://www.dds.ga.gov/drivers/dldata.aspx?con=1742949265&ty=dl'>Driver's License Renewal</option><option value='http://agency.governmentjobs.com/fulton/default.cfm'>Employment Applications</option><option value='http://fultoncountyga.gov/juvenile-court/'>Juvenile Court Hearing Schedule</option><option value='http://www.fultoncourt.org/library/index.php'>Law Library</option><option value='http://afcatalog.co.fulton.ga.us/uhtbin/cgisirsi/X/0/0/49/'>Library Card Catalog</option><option value='http://www.petdata.com/cs/ful/'>Pet Licenses</option><option value='https://www.fultoncountytaxes.org/property-taxes/search-for-tax-bill.aspx'>Tax Bill Search</option><option value='http://www.afpls.org/index.php?option=com_content&task=view&id=183&Itemid=106'>Renew Library Materials</option><option value='http://qpublic9.qpublic.net/ga_search_dw.php?county=ga_fulton'>Search Property Records</option><option value='http://services.georgia.gov/gbi/gbisor/SORSearch.jsp'>Sex Offender Search</option><option value='https://www1.fultoncountytaxes.org/solid-waste.aspx'>Solid Waste Billing</option><option value='http://www.dailyreportonline.com/Public_Notice/Court_Calendars/listWeekly.asp?court_Disp=state'>State Court Calendar</option><option value='http://www.dailyreportonline.com/Public_Notice/Court_Calendars/listWeekly.asp?court_Disp=superior'>Superior Court Calendar</option><option value='https://mvd.dor.ga.gov/tags/index.aspx'>Vehicle Registration Renewal</option><option value='/fcgis-property-profile'>Voting and Precinct Maps</option><option value='https://waterbilling.fultoncountyga.gov/'>Water and Sewer Billing</option><option value='http://gis.fultoncountyga.gov/apps/ZoningLandUseMapViewerPublic'>Zoning Map</option><option value='http://ga.state.gegov.com/georgia/search.cfm?county=Fulton'>Restaurant Health Inspections</option>				</select>
+			</form>
+		</td>
+	</tr>
+</table>
+<!-- Simple Select Box 1.5.4 ends here -->
+		</div>
+	</td>
+	<td width="30">&nbsp;</td>
+	<td width="250" align="right">		<div class="moduletable">
+					
+
+<div style="margin: 10px;">
+<strong id="edc8d9">Share</strong><br />	<a href="#" onclick="location.href='http://del.icio.us/post?v=2&url='+encodeURIComponent(location.href)+'�es=&tags=&title='+encodeURIComponent(document.title);return false;">
+	<img src="http://fultoncountyga.gov/modules/mod_socialmedia/socialmedia_buttons/delicious.gif" border="0" alt="del.icio.us" title="del.icio.us" style="border:1px solid #CCCCCC;padding:1px;margin: 0px;" />
+	</a>
+		<a href="#" onclick="location.href='http://digg.com/submit?phase=2&url='+encodeURIComponent(location.href)+'&bodytext=&tags=&title='+encodeURIComponent(document.title);return false;">
+	<img src="http://fultoncountyga.gov/modules/mod_socialmedia/socialmedia_buttons/digg.png" border="0" alt="Digg.com" title="Digg.com" style="border:1px solid #CCCCCC;padding:1px;margin: 0px;" />
+	</a>
+		<a href="#" onclick="location.href='http://www.facebook.com/share.php?u='+encodeURIComponent(location.href)+'&t='+encodeURIComponent(document.title);return false;">
+	<img src="http://fultoncountyga.gov/modules/mod_socialmedia/socialmedia_buttons/facebook.png" border="0" alt="Facebook" title="Facebook" style="border:1px solid #CCCCCC;padding:1px;margin: 0px;" />
+	</a>
+		<a href="#" onclick="location.href='http://twitter.com/home?status='+encodeURIComponent(location.href);return false;">
+	<img src="http://fultoncountyga.gov/modules/mod_socialmedia/socialmedia_buttons/twitter.png" border="0" alt="Twitter" title="Twitter" style="border:1px solid #CCCCCC;padding:1px;margin: 0px;" />
+	</a>
+		<a href="#" onclick="location.href='http://myweb2.search.yahoo.com/myresults/bookmarklet?t='+encodeURIComponent(document.title)+'&d=&tag=&u='+encodeURIComponent(location.href);return false;">
+	<img src="http://fultoncountyga.gov/modules/mod_socialmedia/socialmedia_buttons/yahoo.gif" border="0" alt="Yahoo" title="Yahoo" style="border:1px solid #CCCCCC;padding:1px;margin: 0px;" />
+	</a>
+	</div>
+<script type="text/javascript">
+<!--
+document.getElementById('edc8d9').innerHTML = 'Share';
+//-->
+</script>
+		</div>
+	</td>
+	<td width="30">&nbsp;</td>
+	</tr>
+	</table>
+</td>
+<td width="14" class="bg_pd">&nbsp;</td>
+</tr>
+</table></div>
+<div align="center">
+<table width="964" cellpadding="0" cellspacing="0">
+<tr valign="top">
+<td width="950" bgcolor="FFFFFF"  class="white">
+	<table width="950" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+	<td width="220">		<div class="moduletable_menu2">
+					<h3>Business</h3>
+					
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr ><td><a href="/business-starting-a-business" class="mainlevel" >Starting a Business</a></td></tr>
+<tr ><td><a href="/business-bidsauctionspurchasing" class="mainlevel" >Bids, Auctions and Purchasing</a></td></tr>
+<tr ><td><a href="/business-licenseslawsregs" class="mainlevel" >Licenses, Laws and Regulations</a></td></tr>
+<tr ><td><a href="/fcpcsd-zoning-a-planning-analysis" target="_blank" class="mainlevel" >Zoning</a></td></tr>
+<tr ><td><a href="http://www.mspection.com/counties/fulton/default.aspx" target="_blank" class="mainlevel" >Permit Inspections</a></td></tr>
+<tr ><td><a href="/business-vendor-relations" target="_blank" class="mainlevel" >Vendor Relations</a></td></tr>
+<tr ><td><a href="/business-real-estate-for-sale" class="mainlevel" >Real Estate for Sale</a></td></tr>
+<tr ><td><a href="http://gis.myfultoncountyga.us/apps/FutureLandUseMapViewer/" target="_blank" class="mainlevel" >Land Use Maps</a></td></tr>
+<tr ><td><a href="/fcgis-home" target="_blank" class="mainlevel" >GIS</a></td></tr>
+</table>		</div>
+	</td>
+	<td width="16"><img src="http://www.fultoncountyga.gov/templates/fulco_blue_default/images/content_shadow_lft.gif" width="16" height="400" alt="" border="0"></td>
+	<td width="477" align="left"><img src="http://www.fultoncountyga.gov/templates/fulco_blue_default/images/content_shadow_top.gif" width="477" height="14" alt="" border="0"><br />
+	
+	
+	
+	
+	
+  
+<div class="componentheading">
+	Business</div>
+<table class="blog" cellpadding="0" cellspacing="0">
+<tr>
+	<td valign="top">
+				<p>Do you own a business in unincorporated <st1:place w:st="on"><st1:placename w:st="on">Fulton</st1:placename> <st1:placetype w:st="on">County</st1:placetype></st1:place>?   Planning to do business with the County?  You have come to the right place. Here you will find a variety of services available online for businesses, as well as information and resources to begin doing business with <st1:city w:st="on"><st1:place w:st="on">Fulton</st1:place></st1:city>.</p>
+<p>You will find information about:</p>
+<ul>
+<li>Obtaining a business license and permits (unincorporated <st1:city w:st="on"><st1:place w:st="on">Fulton</st1:place></st1:city>)</li>
+<li>Becoming a vendor with <st1:place w:st="on"><st1:placename w:st="on">Fulton</st1:placename> <st1:placetype w:st="on">County</st1:placetype></st1:place></li>
+<li>Minority/Female Business <st1:place w:st="on"><st1:city w:st="on">Enterprise</st1:city></st1:place> Certification</li>
+<li>Federal taxes</li>
+<li>Development Authority of <st1:place w:st="on"><st1:placename w:st="on">Fulton</st1:placename> <st1:placetype w:st="on">County</st1:placetype></st1:place></li>
+<li>and much more</li>
+</ul>
+<p>If you have a question for the County that you can not find answered on the site, you can always contact us via e-mail at 
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = 'm&#97;&#105;lt&#111;:';
+ var suffix = '';
+ var attribs = '';
+ var path = 'hr' + 'ef' + '=';
+ var addy25773 = 'f&#117;lt&#111;n.c&#111;mm&#117;n&#105;c&#97;t&#105;&#111;n' + '&#64;';
+ addy25773 = addy25773 + 'f&#117;lt&#111;nc&#111;&#117;ntyg&#97;' + '&#46;' + 'g&#111;v';
+ document.write( '<a ' + path + '\'' + prefix + addy25773 + suffix + '\'' + attribs + '>' );
+ document.write( addy25773 );
+ document.write( '<\/a>' );
+ //-->
+ </script><script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>This e-mail address is being protected from spambots. You need JavaScript enabled to view it
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script> or call us at 404-612-4000.</p>
+<p>For frequent updates on <st1:place w:st="on"><st1:placename w:st="on">Fulton</st1:placename> <st1:placetype w:st="on">County</st1:placetype></st1:place> services, we hope that you will become a Fan of Fulton County on Facebook, follow us on Twitter, or sign up for our e-newsletters.</p>			<br />
+		<br />
+	</td>
+</tr>
+<tr>
+	<td valign="top">
+					<div>
+		
+<table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+					Real Estate Opportunities			</td>
+	
+	
+		<td align="right" width="100%" class="buttonheading">
+	<a href="/business/476-real-estate-op/609-real-estate-opportunities?tmpl=component&amp;print=1&amp;layout=default&amp;page=" title="Print" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">|&nbsp;Print&nbsp;|</a>	</td>
+	
+		
+		
+</tr>
+</table>
+<table class="contentpaneopen">
+
+
+
+
+<tr>
+<td valign="top" colspan="2">
+<p align="left"><img alt="For Sale Sign" style="margin: 0px 5px 0px 0px; float: left;" longdesc="undefined" src="http://fultoncountyga.gov/images/stories/Property for Sale/for_sale_sign.gif" width="80" height="80" /></p>
+<p align="left">As it grows and changes, Fulton County recognizes that some of its properties are no longer essential to its operations. Our list of available surplus properties includes both improved parcels and vacant land.</p>
+</td>
+</tr>
+
+
+<tr>
+	<td  colspan="2">
+		<a href="/business-real-estate-for-sale" class="readon">
+			Read more...</a>
+	</td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+		</div>
+		</td>
+</tr>
+
+
+</table>
+
+	
+	
+	
+	
+	
+	
+	</td>
+	<td width="29" class="bg_content_rt">&nbsp;</td>
+	<td width="208">
+
+		<div class="moduletable">
+					<h3>Translate This Page</h3>
+					
+
+<script type="text/javascript">
+//<![CDATA[
+                    if(top.location!=self.location)top.location=self.location;
+        window['_tipoff']=function(){};window['_tipon']=function(a){};
+        function doTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;if(location.hostname=='fultoncountyga.gov' && lang_pair=='en|en')return;var lang=lang_pair.split('|')[1];if(location.hostname!='fultoncountyga.gov' && lang_pair=='en|en')location.href=unescape(gfg('u'));else if(location.hostname=='fultoncountyga.gov' && lang_pair!='en|en')location.href='http://translate.google.com/translate?client=tmpg&hl=en&langpair='+lang_pair+'&u='+escape(location.href);else location.href='http://translate.google.com/translate?client=tmpg&hl=en&langpair='+lang_pair+'&u='+unescape(gfg('u'));}
+        function gfg(name) {name=name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");var regexS="[\\?&]"+name+"=([^&#]*)";var regex=new RegExp(regexS);var results=regex.exec(location.href);if(results==null)return '';return results[1];}
+            //]]>
+</script>
+
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,zh-CN,fr,de,it,ja,ko,pt,es,'
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		</div>
+			<div class="moduletable_minibanner">
+					<div class="bannergroup_minibanner">
+
+<div class="banneritem_minibanner"><a href="/component/banners/click/76"><img src="http://fultoncountyga.gov/images/banners/newsletter_side_banner.gif" alt="Banner" /></a><div class="clr"></div>
+	</div>
+
+</div>		</div>
+	</td>
+	</tr>
+	<tr><td colspan="5"><br /><br /><br /></td></tr>
+	</table>
+</td>
+<td width="14" class="bg_pd">&nbsp;</td>
+</tr>
+</table></div><div align="center">
+<img src="http://www.fultoncountyga.gov/templates/fulco_blue_default/images/template_bottom.gif" width="964" height="15" alt="" border="0"><br /><div class="footer">
+ 		<div class="moduletablefooter">
+					<div align="center" class="footer">
+<p><a href="/privacy" class="footer"><span style="color: #ffffff;">Privacy Statement</span></a><span style="color: #ffffff;"><span style="font-size: 10pt;"> | </span></span><a href="/translate-this-site" class="footer"><span style="color: #ffffff;">Translate This Site</span></a><span style="color: #ffffff;"><span style="font-size: 10pt;"> | </span></span><a href="/translation-disclaimer" class="footer"><span style="color: #ffffff;">Translation Disclaimer</span></a><span style="color: #ffffff;"><span style="font-size: 10pt;"> | </span></span><a href="/contact-fultoncounty" class="footer"><span style="color: #ffffff;">Contact Us</span></a><span style="color: #ffffff;"><span style="font-size: 10pt;"> </span></span><span style="color: #ffffff;"><span style="font-size: 10pt;">| </span></span><a href="/disclaimer" class="footer"><span style="color: #ffffff;">General Disclaimer</span></a></p>
+<p><span style="color: #ffffff;">©2011 Fulton County Government<br />141 Pryor St. Atlanta, GA 30303 | (404)-612-4000</span></p>
+</div>		</div>
+	<br />
+</div>
+</div>
+<br />
+
+<!-- Start Google -->
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6455610-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- End Google -->
+
+</body>
+
+</html>

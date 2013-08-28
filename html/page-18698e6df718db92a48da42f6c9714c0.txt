@@ -1,0 +1,297 @@
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Honda Civic Hybrid</title>
+    <link href="CSS/master.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="CSS/civichybrid.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="mainContainer">
+        <!-- ======== jQuery Top Menu ======================================================= -->
+        <div id="topMenuContainer" style="background: url(images/topLinkBg.gif) no-repeat;">
+            <a href="http://www.hondacarindia.com" target="_blank" style="background: #f5f5f5;
+                opacity: 0.05; filter: alpha(opacity=5); display: block; width: 210px; height: 40px;
+                margin: 5px 0px 0px 0px; float: left;" title="Honda Car India"></a>
+            <div id="all">
+
+                <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+
+                <script type="text/javascript">            
+				var timeout = 500;
+				var closetimer = 0;
+				var ddmenuitem = 0;
+				
+				function jsddm_open()
+				{
+					jsddm_canceltimer();
+					jsddm_close();
+					ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');
+				}
+				
+				function jsddm_close(){
+					 if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');
+				}
+				
+				function jsddm_timer(){
+					 closetimer = window.setTimeout(jsddm_close, timeout);
+				}
+				
+				function jsddm_canceltimer()
+				{
+					 if(closetimer)
+					{
+					 window.clearTimeout(closetimer);
+					closetimer = null;
+					}
+				}
+				
+				$(document).ready(function()
+				{
+				 $('#jsddm > li').bind('mouseover', jsddm_open);
+				
+				$('#jsddm > li').bind('mouseout', jsddm_timer);
+				});
+				
+				document.onclick = jsddm_close;
+            
+                </script>
+
+                <ul id="jsddm">
+                    <li><a href="http://hondacarindia.com/about/hondaInIndia.aspx">About Honda</a>
+                        <ul>
+                            <li><a href="http://www.hondacarindia.com/about/globalHonda.aspx">Global Honda</a></li>
+                            <li><a href="http://www.hondacarindia.com/about/hondaInIndia.aspx">Honda In India </a>
+                            </li>
+                            <li><a href="http://www.hondacarindia.com/about/awards.aspx">Awards</a></li>
+                            <li><a href="http://www.hondacarindia.com/about/founders.aspx">Founders</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.hondacarindia.com/ownahonda/pricelist.aspx">Price</a> </li>
+                    <li><a href="http://www.hondacarindia.com/about/mediaCenter.aspx">Media Center</a>
+                        <ul>
+                            <li><a href="http://www.hondacarindia.com/about/hondaInIndia.aspx">Company Profile</a></li>
+                            <li><a href="http://www.hondacarindia.com/mediaCenter/press_releases.aspx">Press Releases</a></li>
+                            <li><a href="http://www.hondacarindia.com/events/events.html">Events</a></li>
+                            <li><a href="http://www.hondacarindia.com/events/events.html">Honda Executives</a></li>
+                            <li><a href="http://www.hondacarindia.com/about/media_contacts.aspx">Media Contacts</a></li>
+                            <li><a href="http://www.hondacarindia.com/about/download.aspx">Download</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.hondacarindia.com/careers/JobOpenings.aspx">Careers</a> </li>
+                    <li><a href="http://www.hondacarindia.com/about/contact.aspx">Contact Us</a> </li>
+                    <li><a href="http://www.hondacarindia.com/about/contact.aspx">Feedback</a> </li>
+                    <li><a href="http://www.hondacarindia.com/about/sitemap.aspx">Sitemap</a> </li>
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <!-- ======== jQuery Top Menu ends ======================================================= -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td valign="top">
+                    <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td valign="top">
+                                <!--<img src="images/img_header.jpg" alt="" />-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" class="">
+                                <!--<table width="100%" border="0" cellpadding="0" cellspacing="0" class="borderleft">-->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="">
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <table border="0" align="left" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <div id="qm0" class="qmmc" style="width: 760px; display: none;">
+                                                            <a href="overview.html">
+                                                                <img onmouseover="this.src='images/btn_oveviewHover.jpg'" onmouseout="this.src='images/btn_oveview.jpg'"
+                                                                    alt="" src="images/btn_oveview.jpg" />
+                                                            </a><a href="technology.html">
+                                                                <img onmouseover="this.src='images/btn_technologyHover.jpg'" onmouseout="this.src='images/btn_technology.jpg'"
+                                                                    alt="" src="images/btn_technology.jpg" /></a>
+                                                            <div>
+                                                                <a href="engine.html" style="border-bottom: 1px dotted #555;">Civic Hybrid Engine</a>
+                                                                <a href="cvt.html">CVT</a>
+                                                            </div>
+                                                            <a href="styling.html">
+                                                                <img onmouseover="this.src='images/btn_stylingHover.jpg'" onmouseout="this.src='images/btn_styling.jpg'"
+                                                                    height="29" alt="" src="images/btn_styling.jpg" width="80" /></a>
+                                                            <div>
+                                                                <a href="style_exterior.html" style="border-bottom: 1px dotted #555;">Exteriors</a>
+                                                                <a href="style_interior.html" style="width: 62px;">Interiors</a>
+                                                            </div>
+                                                            <a href="safety.html">
+                                                                <img onmouseover="this.src='images/btn_safetyHover.jpg'" onmouseout="this.src='images/btn_safety.jpg'"
+                                                                    height="29" alt="" src="images/btn_safety.jpg" width="63" /></a>
+                                                            <div>
+                                                                <a href="safety_airbags.html" style="border-bottom: 1px dotted #555;">SRS Airbags</a>
+                                                                <a href="gcon.html" style="border-bottom: 1px dotted #555;">G-CON</a> <a href="abs.html"
+                                                                    style="border-bottom: 1px dotted #555;">ABS</a> <a href="active_headrest.html">Active
+                                                                        Headrest</a>
+                                                            </div>
+                                                            <a href="javascript:void(0)">
+                                                                <img onmouseover="this.src='images/btn_featureHover.jpg'" onmouseout="this.src='images/btn_feature.jpg'"
+                                                                    height="29" alt="" src="images/btn_feature.jpg" width="172" /></a>
+                                                            <div>
+                                                                <a href="specifications.html" style="border-bottom: 1px dotted #555; width: 155px;">
+                                                                    Technical Specifications</a> <a href="features.html">Features</a>
+                                                            </div>
+                                                            <a href="colors.html">
+                                                                <img onmouseover="this.src='images/btn_colorsHover.jpg'" onmouseout="this.src='images/btn_colors.jpg'"
+                                                                    height="29" alt="" src="images/btn_colors.jpg" width="62" /></a> <a href="expert_review.html">
+                                                                        <img onmouseover="this.src='images/btn_legacyHover.jpg'" onmouseout="this.src='images/btn_legacy.jpg'"
+                                                                            height="29" alt="" src="images/btn_legacy.jpg" width="90" /></a>
+                                                            <span class="qmclear">&nbsp;</span>
+                                                        </div>
+                                                        <!--<script type="text/JavaScript">qm_create(0,false,0,500,false,false,false,false,false)</script>  -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="30" align="left" valign="top">
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td colspan="2" align="left" valign="top">
+                                                        <!--	<table width="100%" border="1" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" valign="top"><a href="http://www.hondacarindia.com/ownahonda/pricelist.aspx" class="callBtns"><img src="images/icn1.jpg" alt="" width="26" height="19" align="absmiddle" />Price List</a></td>
+                        <td align="left" valign="top"><a href="http://www.hondacarindia.com/ownahonda/toolform.aspx?opt=2" class="callBtns"><img src="images/icn2.jpg" alt="" width="26" height="19" align="absmiddle" />Call From Dealer</a></td>
+                        </tr>
+                      <tr>
+                        <td align="left" valign="top"><a href="http://www.hondacarindia.com/ownahonda/toolform.aspx?opt=3" class="callBtns"><img src="images/icn3.jpg" alt="" width="26" height="19" align="absmiddle" /> Test Drive</a></td>
+                        <td align="left" valign="top"><a href="http://www.hondacarindia.com/ownahonda/dealers.aspx#" class="callBtns"><img src="images/icn4.jpg" alt="" width="26" height="19" align="absmiddle" /> Dealer Locator</a></td>
+                        </tr>
+                      <tr>
+                        <td align="left" valign="top"><a href="http://www.hondacarindia.com/ownahonda/autoterrace.aspx" class="callBtns"><img src="images/icn5.jpg" alt="" width="26" height="19" align="absmiddle" />Auto Terrace</a></td>
+                        <td align="left" valign="top"><a href="http://www.hondacarindia.com/ownahonda/EMI_calculater.asp" class="callBtns"><img src="images/icn6.jpg" alt="" width="26" height="19" align="absmiddle" />EMI Calculator</a></td>
+                        </tr>
+                    </table>-->
+                                                        <table width="95%" border="0" align="left" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <!--<td width="315" valign="top" class="otherbrands">
+                                                                    <div>
+                                                                        <a href="http://hondacarindia.com/jazz/Default.aspx">Honda Jazz</a></div>
+                                                                    <div>
+                                                                        <a href="http://hondacarindia.com/city">Honda City</a></div>
+                                                                    <div>
+                                                                        <a href="http://hondacarindia.com/civic">Honda Civic</a></div>
+                                                                    <div>
+                                                                        <a href="http://hondacarindia.com/accord">Honda Accord</a></div>
+                                                                    <div>
+                                                                        <a href="http://hondacarindia.com/crv">Honda CR-V</a></div>
+                                                                </td>-->
+                                                                <td>
+                                                                    &nbsp;</td>
+                                                                <td valign="top" width="100%" align="center">
+                                                                    <!--The Honda Civic Hybrid has the distinction of being Indiaâs First Hybrid car. In line with Honda's long-term commitment to the development of advanced and environmentally-friendly technologies that do not compromise on driving pleasure, the Civic Hybrid offers a rare combination of being environmentally friendly, fuel efficient and also having a high fun-to-drive quotient.<br />
+                      <br />
+                      <strong>                      Drive the Hybrid and LEAVE BEHIND A BETTER WORLD</strong>-->
+                                                                    <br />
+                                                                    <br />
+                                                                    <br />
+                                                                    
+                                                                    <table width="614" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="images/civichybridHome.jpg" alt="" width="614" height="322" border="0" usemap="#Map" /><map name="Map" id="Map"><area shape="rect" coords="134,180,295,209" href="http://hondacarindia.com/jazz/Default.aspx" />
+<area shape="rect" coords="314,179,473,209" href="http://hondacarindia.com/city" />
+<area shape="rect" coords="136,228,294,260" href="http://hondacarindia.com/accord" /><area shape="rect" coords="317,229,472,259" href="http://hondacarindia.com/civic" />
+<area shape="rect" coords="316,280,473,308" href="http://www.hondacarindia.com/HondaBRIO/Default.aspx" /><area shape="rect" coords="137,279,294,308" href="http://hondacarindia.com/crv" />
+</map</td>
+  </tr>
+</table>
+                                                                    <br />
+                                                                    <br />
+                                                                    <br />
+                                                                    <br />
+                                                                     
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="display: none;">
+                                                    <td>
+                                                        &nbsp;
+                                                        <!--<td width="315" valign="top" class="otherbrands">-->
+                                                        <!--<div>
+                                                            <a href="http://hondacarindia.com/jazz/Default.aspx">Honda Jazz</a></div>
+                                                        <div>
+                                                            <a href="http://hondacarindia.com/city">Honda City</a></div>
+                                                        <div>
+                                                            <a href="http://hondacarindia.com/civic">Honda Civic</a></div>
+                                                        <div>
+                                                            <a href="http://hondacarindia.com/accord">Honda Accord</a></div>
+                                                        <div>
+                                                            <a href="http://hondacarindia.com/crv">Honda CR-V</a></div>-->
+                                                        <!--<table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" valign="middle"><a href="#">Honda City</a></td>
+                            <td align="center" valign="middle"><a href="#">Honda Civic</a></td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle"><a href="#">Honda Accord</a></td>
+                            <td align="center" valign="middle"><a href="#">Honda CR-V</a></td>
+                          </tr>
+                        </table>-->
+                                                    </td>
+                                                    <td align="center" valign="bottom">
+                                                        <div class="bodydiv3">
+                                                            <br />
+                                                            <strong class="text1">Know more<br />
+                                                                about Hybrid </strong>
+                                                            <!--<a href="faq.html">-->
+                                                            <br />
+                                                            <br />
+                                                            <br />
+                                                            Frequently Asked Questions<!--</a>--><p style="padding: 4px; background: transparent;">
+                                                            </p>
+                                                            <!--<a href="images/inner/hybrid_systemgraph1.jpg">Graphic Representation</a>-->
+                                                            <a href="">Graphic Representation</a>
+                                                        </div>
+                                                        <div class="bodydiv2">
+                                                            <!--<a href="video.html">-->
+                                                            <img src="images/img_engine.jpg" alt="Hybrid Engine Video" width="196" height="145" /></a><br />
+                                                            <!--<a href="video.html" onclick="window.open(this.href,'child', 'scrollbars,width=500px,height=460px,left=200px'); return false;">-->
+                                                            Hybrid Engine Video<!--</a>--></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td valign="top">
+                    <!-- <img src="images/img_bodyright.jpg" alt="" />-->
+                </td>
+            </tr>
+            <tr>
+                <td height="30" colspan="2" align="left" valign="middle" id="footerTd">
+                    <div>
+                        Copyright Â© 2011 HSCI. All Rights Reserved | <a href="http://www.hondacarindia.com/about/privacy.aspx">
+                            Privacy Policy</a></div>
+                    <div class="div2">
+                        <a href="http://www.pugmarks.com">Designed, Developed and Hosted by Pugmarks</a></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--==================== main container div ends ==============================================-->
+</body>
+</html>

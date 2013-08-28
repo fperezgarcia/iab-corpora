@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="google-translate-customization" content="c6dc90daf1eb79a7-cde358b821fab4f5-g4798613cb6a44071-f"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Riverside, California | City of Arts & Innovation | </title>
+	<script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="/js/jquery-migrate-1.1.1.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.10.2-ui.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="/js/coresearch.js"></script>
+	<script type="text/javascript" src="/js/supersleight.plugin.js"></script>
+	<script type="text/javascript" src="/js/slimbox2.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
+	<link type="text/css" rel="stylesheet" href="/css/print.css" media="print" />
+	<link type="text/css" rel="stylesheet" href="/css/coresearch.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="/css/slimbox2.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="/css/riverside-main.css" />
+	<link type="text/css" rel="stylesheet" href="/css/default.css" />
+
+
+<script>
+$(function() {
+	$('input, textarea').placeholder();
+});
+</script>
+<script type="text/javascript">
+$(function(){
+  function stripTrailingSlash(str) {
+    if(str.substr(-1) == '/') {
+      return str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+  var url = window.location.pathname;  
+  var activePage = stripTrailingSlash(url);
+  $('.nav li a').each(function(){  
+    var currentPage = stripTrailingSlash($(this).attr('href'));
+
+    if (activePage == currentPage) {
+      $(this).parent().parent().addClass('in'); 
+    } 
+  });
+});</script>  
+<!--[if IE 8 ]>
+<style type="text/css">
+	#searchform{
+		margin-top:-30px;
+	}
+	INPUT#coresearch{
+		padding-top:2px;
+		padding-bottom:2px;
+		padding-left:0px;
+		font-size:18px;
+	}
+</style>
+<![endif]-->
+<!--[if IE 7 ]>
+<style type="text/css">
+	#searchform{
+		margin-top:6px;
+	}
+	INPUT#coresearch{
+		padding-top:2px;
+		padding-bottom:2px;
+		padding-left:0px;
+		font-size:18px;
+	}
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="/js/res/root.js"></script>
+<style type="text/css">
+.navbar-wrapper .container{
+	z-index:11;
+}
+.span12{
+	padding-top:20px;
+}
+.span9{
+	padding-left:4px;
+	margin-right:-4px;
+}
+.accordion-inner{
+	padding-left:5px;
+}
+@media (max-width:768px){
+	.span12{
+		padding-top:0px;
+	}
+}
+}
+</style>
+<!-- HEADER
+	================================================= -->
+<div class="header" id="head">
+</div><!-- NAVBAR 
+  ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar ">
+          <div class="navbar-inner ">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button class="btn btn-navbar" id="navbtn" data-toggle="collapse" data-target=".nav-collapse" type="button">
+              <span class="icon-bar icon-black"></span>
+              <span class="icon-bar icon-black"></span>
+              <span class="icon-bar icon-black"></span>
+            </button>
+			<button class="btn btn-navbar" id="navsearch" data-toggle="collapse2" data-target=".navbar-search" type="submit">
+				<i class="icon-search icon-black"></i>
+			</button>
+             <a href="#" id="citybrand" class="brand hidden-desktop">City of Riverside</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="/government.asp">Government</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="/services.asp">Online Services</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="/residents.asp">Residents</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="/business.asp">Business</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="http://www.exploreriverside.com">Visitors</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="/press">Media</a></li>
+				<li class="divider-vertical"></li>
+                <li><a href="http://cityjobs.riversideca.gov">Jobs</a></li>         
+                <li class="divider-vertical"></li>
+              </ul>
+			  <!--
+			  	<form class="navbar-search pull-right" id="searchform" method="post" action="http://riversideca.gov/coresearch-1.2/item/search" autocomplete="off">
+					<input name="t" type="hidden" value="h" />	
+					<input type="text" name="q" id="coresearch" class="search-query" placeholder="Search RiversideCA.gov">
+					<div id="suggestions"></div>
+					<div class="clear"></div> 
+                 </form>  -->
+            </div><!--/.nav-collapse -->
+			
+					  	<form class="navbar-search pull-right" id="searchform" method="post" action="http://riversideca.gov/coresearch-1.2/item/search" autocomplete="off">
+					<input name="t" type="hidden" value="h" />	
+					<input type="text" name="q" id="coresearch" class="search-query" placeholder="Search RiversideCA.gov">
+					<div id="suggestions"></div>
+					<div class="clear"></div> 
+                 </form>  
+				 
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+<div class="container">
+
+	<div class="row">
+		<div class="span12">
+
+			<div class="row">
+			<div class="span3" id="sidenav">
+		  <!-- ACCORDION -->
+        <div class="accordion" id="sidebar">
+          <div class="accordion-group">
+            <div class="accordion-heading ">
+             <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#sidebar2"
+                href="#mayor">Mayor & City Council</a>
+                </div>
+            <div id="mayor" class="accordion-body collapse in">
+            <div class="accordion-inner">
+				<ul class="nomarginbottom">
+					<li><a href="/mayor">Mayor's Office</a></li>
+					<li><a href="/council"> City Council & Wards</a></li>
+					<li><a href="http://riversideca.legistar.com">Meetings 
+					Calendar &amp; Agendas</a></li>
+				<!--	<li><a href="/citycouncilvideo" target="_blank">City Council Meetings on the Web</a></li>   -->
+				<!--	<li><a href="/city_clerk/charterreviewcommittee.asp">Charter Review Committee</a></li> -->
+					<li><a href="/municode">Municipal Code</a></li>
+				</ul>
+             </div>
+          </div> <!--/mayor-->
+          </div> <!--/accordion-group-->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#sidebar"
+                href="#apply">Apply for...</a>
+            </div>
+            <div id="apply" class="accordion-body collapse">
+            <div class="accordion-inner">
+				<ul>
+					<li><a href="/building/permits.asp">A Building Permit</a></li>
+					<li><a href="/finance/license.asp">A Business License</a></li>
+					<li><a href="http://cityjobs.riversideca.gov">A Job</a></li>
+					<li><a href="/city_clerk/passport.asp">A Passport</a></li>
+					<li><a href="/pworks/pet-license.asp">A Pet License</a></li>
+					<li><a href="/publicworks/engineering/permits.asp">A Public Works Permit</a></li>
+					<li><a href="/utilities/residents.asp">A Rebate</a></li>
+					<li><a href="http://www2.riversideca.gov/arts/">A Special Event Permit</a></li>
+					<li><a href="/volunteer">Volunteer Opportunities</a></li>
+				</ul>
+             </div>
+          </div>
+          </div> <!--/accordion-group-->
+         <div class="accordion-group">
+            <div class="accordion-heading">
+             <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#sidebar"
+             href="#pay">Pay My...</a>
+              </div>
+                <div id="pay" class="accordion-body collapse">
+                <div class="accordion-inner">
+                <ul>
+               <li><a href="http://www.riversideca.gov/finance/license.asp#tax">Business License Renewal</a></li>
+               <li><a href="/library/smartpay">Library Fees &amp; Fines</a></li>
+               <li><a href="https://active.riversideca.gov/registrationmain.sdi">Parks &amp; Recreation Activities</a></li>
+                <li><a href="https://www.pticket.com/scripts/Autobahn.exe/Execute?Application=pTicket&amp;Program=REPORT-query_citation&amp;parmAGENCY_STATE=CA&amp;parmAGENCY_LOC=RIVERSID&amp;DSI=0" target="_blank">Parking Citation </a></li>
+                <li><a href="http://www.riversideca.gov/pworks/pet-license.asp">Pet License</a></li>
+                <li><a href="javascript:popUp('https://www1.epay-it.com/riv',800,600)">Red Light Citation</a></li>
+                 <li><a href="/park_rec/seniors-transportation.asp">Senior Bus Transportation Pass</a></li>
+                 <li><a href="/finance/licensetot.asp">Transient Occupancy Tax (T.O.T.)</a></li>
+                  <li><a href="http://www.riversideca.gov/utilities/services/">Utility Bill</a></li>
+                 </ul>
+                </div>
+              </div>
+              </div>   <!--/accordion-group-->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#sidebar"
+                href="#report">Report A...</a>
+            </div>
+            <div id="report" class="accordion-body collapse">
+            <div class="accordion-inner">
+             <ul>
+                <li><a href="/trees/trees-request.aspx">City Tree Issue</a></li>
+                <li><a href="http://crmweb.riversideca.gov/">Code Violation</a></li>
+                <li><a href="/audit/complaint-form.aspx">Concern Regarding<br/>Employee Misconduct</a></li>
+                <li><a href="http://www.rpdonline.org/report">Crime</a></li>
+                <li><a href="http://crmweb.riversideca.gov/?graffiti=1">Graffiti Incident</a></li>
+                <li><a href="/trash/trash-miss.aspx">Missed Trash Pick-Up</a></li>
+                <li><a href="http://crmweb.riversideca.gov/?potHoles=Pot Holes">Pothole</a></li>
+              </ul>
+             </div>
+          </div>
+          </div>  <!--/accordion-group-->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#sidebar"
+                href="#how">How Do I...</a>
+            </div>
+            <div id="how" class="accordion-body collapse">
+            <div class="accordion-inner">
+             <ul>
+                <li><a href="http://rcdas.org/home/index.php?option=com_content&view=article&id=38&Itemid=20" target="_blank">Adopt a Pet</a></li>
+				<li><a href="/finance/purchase.asp">Bid for City Projects</a></li>
+				<li><a href="/traffic/bike.asp">Start Bicycling in the City</a></li>
+				<li><a href="/council/">Contact my City Council Representative</a></li>
+				<li><a href="/gov-whotocall-state.asp">Contact my State &amp; Federal Representatives</a></li>
+				<li><a href="https://www.pticket.com/scripts/Autobahn.exe/Execute?Application=pTicket&Program=REPORT-query_citation&parmAGENCY_STATE=CA&parmAGENCY_LOC=RIVERSID&DSI=0">Contest a Parking Citation</a></li>
+				<li><a href="/city_clerk/">Find City Council Meetings</a></li>
+				<li><a href="/housing/firsttimehomebuyer.asp">Find First-Time Home Buyer Opportunities</a></li>
+				<li><a href="/graffiti/">Prevent Graffiti</a></li>
+				<li><a href="http://www.riversidegotransit.com">Purchase a Reduced Bus Pass</a></li>
+				<li><a href="http://www.ie-mos.com" target="_blank">Receive Military &amp; Verterans Services</a></li>
+				<li><a href="/library">Search the Library Catalog</a></li>
+				<li><a href="/audit/fraud-form.aspx">Report Fraud or Ethics Violations</a></li>
+				<li><a href="/building">Schedule a Building and Safety Inspection</a></li>
+				<li><a href="/eplans/apply">Submit an Online Building Plan Check or Planning Case Application</a></li>
+				<li><a href="/pworks/engineering/scheduling/">Schedule a Public Works Inspection</a></li>
+				<li><a href="/ceqa/">View CEQA Document Postings</a></li>
+              </ul>
+             </div>
+          </div>
+          </div>   <!--/accordion-group-->
+           <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#sidebar"
+                href="#road">Major Road Projects</a>
+            </div>
+            <div id="road" class="accordion-body collapse">
+            <div class="accordion-inner">
+             <ul>
+                <li>
+				<a href="http://riversideca.gov/gs/iowa.asp">Iowa</a></li>
+				<li><a href="http://www.riversideca.gov/gs/streeter.asp">Streeter</a></li>
+				<li><a href="http://www.91hovproject.com/">91 Freeway HOV</a></li>
+              </ul>
+             </div>
+          </div>
+          </div>   <!--/accordion-group-->
+            </div> <!--end of accordion-->
+
+		  				<div class="hidden-phone">
+					<div class="aligncenter"><a href="http://crmweb.riversideca.gov/"><img src="/images/2009/footericon-311-2.png" border="0" /></a><br />
+			<span class="text311">From Outside Riverside<br />Call 951.826.5311</span><br />
+			<div style="display: none;"><span class="font11 letterspace-1">311 Requests:</span> <a href="" class="bold font11 letterspace-1">Submit</a> | <a href="" class="bold font11 letterspace-1">Track</a></div>
+			</div>
+				</div>
+			</div>
+			<div class="span9 whitebg">
+				<div class="row">
+				<!-- start center content -->
+				<h1>Doing Business Here</h1>
+   				<br />
+				<div class="span5">
+					<h4>Doing Business in Riverside</h4>
+    
+<ul>
+	<li><a href="/econdev">Office of Economic Development</a></li>
+	<li><a href="/library/business.asp">Business Resources at the Library</a></li>
+	<li><a href="http://www.riversideca.gov/econdev/business-resources/">Business Resource Guide</a></li>
+	<li><a href="/municode/Title5.asp">Business Taxes, Licenses &amp; Regulations</a></li>
+	<li><a href="/finance/license-startnew.asp">Checklist for Starting a New Business</a></li>
+	<li><a href="/finance/license.asp">Conducting Business in Riverside</a></li>
+	<li><a href="/planning/demographics.asp">Demographics</a></li>
+	<li><a href="/arts/film.asp">Film Permits</a></li>
+	<li><a href="/pdf/marketplace-sign.pdf" class="pdf">Marketplace Advertising	Sign Guidelines &amp; Application</a></li>
+	<li><a href="/municode/">Municipal Code Online</a></li>
+	<li><a href="/arts/special-events.asp">Special Events Application &amp; Permit</a></li>
+	<!-- <li><a href="PDF2/2008-Special-Events-Vendor-Application.pdf" class="pdf">Special Events Vendor Application</a></li> -->
+	<li><a href="/municode/Title19.asp">Title 19 - Zoning Information</a></li>
+	<li><a href="/finance/licensetot.asp">Transient Occupancy Tax (T.O.T.)</a></li>
+	<li><a href="/planning/zoning.asp">Zoning FAQs</a></li>
+</ul>
+
+					<div class="line"></div>
+					<h4>Doing Business With the City</h4>
+    
+<ul>
+	<li><a href="http://www.activebidder.com/bid-listings" class="extlink" onclick="alert('Special Announcement for Public Works Construction Contracts\n\n\nAs of July 1, 2012, the City of Riverside\âs specifications for Public Works Construction type contracts will contain the following new addition to Award criteria:\n\nAward will be subject to successful completion of the qualification process through PICS Auditing at www.picsauditing.com.\n\nPlease be aware of this and any additional bid specifications / requirements.');">Bid for City Projects</a></li>
+	<li><a href="/PDF/small-business-resource-guide.pdf" class="pdf">Business Resource Guide</a></li>
+	<li><a href="/econdev/business-resources/city-of-riverside-contacts/">City, County, State, and Federal Agencies Contact Info</a></li>
+	<li><a href="/PDF/CitysDBEProgram.pdf" class="pdf">Disadvantaged Business Enterprise (DBE) Program</a></li>
+	<li>Festival of Lights
+		<ul>
+			<!-- <li><a href="http://www.riversideca.gov/pdf2/2010-0811/Call%20for%20Community%20Entertainment.pdf" class="pdf">Performance Request Form</a></li> -->
+			<li><a href="/fol/sponsorship.asp">Sponsorship Opportunities</a></li>
+			<!-- <li><a href="/arts/pdf/2009-FOL-VendorApplication_Instructions.pdf" class="pdf">Vendor Application</a></li> -->
+		</ul>
+	</li>
+	<li><a href="/finance/purchase.asp">How to Do Business With the City</a></li>
+	<li>Licensed Businesses in Riverside
+		<ul>
+			<li><a href="/finance/pdf/Business_List.pdf" class="pdf">All </a></li>
+			<li><a href="/finance/pdf/NewBusLst.pdf" class="pdf">Recent </a></li>
+			<li><a href="https://riversideca.gov/businesstax/Search">Search Database</a></li>
+		</ul>
+	</li>
+	<li><a href="/finance/purchase.asp">Purchasing Division</a></li>
+	<li><a href="/finance/purchase-sellto.asp">Selling to the City From a Supplier's Perspective</a></li>
+	<li><a href="http://www.activebidder.com/register" target="_blank" class="extlink">Suppliers Application</a></li>
+	<li><a href="/utilities/business.asp">Utilities Business Programs</a></li>
+	<li><a href="/finance/pdf/VendorEFT.pdf" class="pdf">Vendor EFT Form</a></li>
+	<li><a href="/finance/contact.asp">Who to Call in Purchasing</a></li>
+</ul>           
+
+					<div class="line"></div>
+					<h4>City Logos</h4>
+					<img src="images2/ico-citylogo-rgb-295.jpg" alt="City Logo Icon" height="30" width="30" class="floatleft marginright" />
+					<ul>
+						<li><a href="/press/logo.asp">City Logos &amp; Graphic Standards Manual</a></li>
+					</ul>
+				</div>
+				<div class="line visible-phone"></div>
+				<div class="span4">
+					<h4>Related Links</h4>
+					<ul>
+					<li><a href="http://www.riversideca.gov/city_clerk/agenda.asp">City
+					Council Agenda </a></li>
+					<li><a href="http://www.riversideca.gov/council">City Council/Wards </a></li>
+					<li><a href="http://www.riversideca.gov/city_clerk/agendas/agenda.htm"></a><a href="http://www.riversideca.gov/mayor">Mayor's
+					Office </a></li>
+					<li><a href="http://www.riversideca.gov/municode/"> Municipal Code</a></li>
+					</ul>
+
+					<div class="line"></div>
+
+					<h4>Building</h4>
+
+					  <ul>
+						<li><a href="http://www.riversideca.gov/building/faq-inspections.asp">Building
+						  Inspections</a></li>
+						<li><a href="http://www.riversideca.gov/building/">Building &amp; Safety</a></li>
+						<li><a href="http://www.riversideca.gov/building/permits.asp">Building
+						  Permits</a></li>
+						<!-- <li><a href="http://www.riversideca.gov/planning/building_permit_calculator_10272003_01.xls">Building
+						  Permit Calculator</a></li> -->
+						<li><a href="http://aquarius.riversideca.gov/permits/Browse.aspx?dbid=1">Building
+						  Permits Online </a> <br>
+
+						(Final or completed permits only)</li>
+						<li><a href="http://www.riversideca.gov/code">Code
+						  Enforcement</a></li>
+						<li><a href="http://www.riversideca.gov/building/drawings.asp">Plan
+						  Submittals &amp; Forms</a></li>
+						<li><a href="http://www.riversideca.gov/building/permits-activity.asp">Plan Check
+						  Status</a></li>
+						<li><a href="http://aquarius.riversideca.gov/plnimage/Browse.aspx">Planning
+						  Department Online</a></li>
+
+						<li><a href="http://www.riversideca.gov/pworks">Public Works</a></li>
+						<li><a href="http://www.permitplace.com/" target="_blank">Southern California Permit Resources</a> </li>
+						<li><a href="http://wam.riversideca.gov/PWSurvey">Survey, Land Records, &amp; Improvement Plans</a> </li>
+					  </ul>
+
+						<div class="line"></div>
+						<h4>Development</h4>
+
+							  <ul>
+								<li><a href="http://www.riversideca.gov/airport/pdf/2011-RiversideAirportMasterPlan.pdf">Airport Master Plan</a></li>
+								<li><a href="http://www.riversideca.gov/devdept/">Development Department</a></li>
+								<li><a href="http://www.riversideca.gov/econdev">Economic Development</a></li>
+								<li><a href="http://www.riversideca.gov/neighborhoods">Housing &amp; Neighborhoods</a></li>
+								<li><a href="http://www.riversideca.gov/econdev/">Redevelopment Agency</a></li>
+								<li><a href="http://www.riversideprospector.com" target="_blank">Riverside Site Selector</a></li>
+								<li><a href="http://www.riversideca.gov/econdev">Workforce Resources</a></li>
+							  </ul>
+							<div class="line"></div>
+
+							<h4>Non-City Resources</h4>
+
+										  <ul>
+											<li><a href="http://www.labbb.org" target="_blank">Better Business Bureau</a></li>
+											<li>Chambers of Commerce
+											  <ul>
+												<li><a href="http://www.riverside-chamber.com/" target="_blank">Greater Riverside</a></li>
+												<li><a href="http://www.grhcc.org/" target="_blank">Greater Riverside Hispanic  </a></li>
+											  </ul>
+											</li>
+											<li><a href="http://www.riversideca.gov/community-directory.asp">Community Directory</a></li>
+											<li>Government Agencies
+											  <ul>
+												<li><a href="http://www.countyofriverside.us/" target="_blank">County</a></li>
+												<li><a href="http://www.ca.gov/" target="_blank">State </a></li>
+												<li><a href="http://www.usa.gov/" target="_blank">Federal</a></li>
+											  </ul>
+											</li>
+											<li><a href="http://www.riversideca.gov/PDF/hitech-04-10-14-White-Paper.pdf">High
+											  Technology in Riverside - The Task Force Report </a></li>
+											<li><a href="http://www.ieep.com" target="_blank">Inland Empire Economic Partnership </a></li>
+											<li><a href="http://www.iesmallbusiness.com/" target="_blank">Inland Empire Small Business Development Center </a></li>
+											<li><a href="http://www.ita.doc.gov/" target="_blank">International Trade Administration </a></li>
+											<li><a href="http://www.4af.afrc.af.mil/" target="_blank">March Air Reserve Base</a> </li>
+											<li><a href="http://www.pe.com/" target="_blank">Press Enterprise Newspaper</a></li>
+											<li><a href="http://www.riversidecb.com/" target="_blank">Riverside Convention Bureau </a></li>
+											<li><a href="http://www.rivcoeda.org/" target="_blank">Riverside County Economic Development</a></li>
+											<li><a href="http://www.sister-cities.org" target="_blank">Sister Cities International </a></li>
+											<li><a href="http://www.smartriverside.com" target="_blank">Smart Riverside</a> </li>
+											<li><a href="http://www.cslb.ca.gov/" target="_blank">State Contractor's Licensing</a></li>
+											 </ul>
+											</div>
+				<!-- end center content -->
+				</div>
+				<div class="visible-phone">
+					<div class="line"></div>
+					<div class="aligncenter"><a href="http://crmweb.riversideca.gov/"><img src="/images/2009/footericon-311-2.png" border="0" /></a><br />
+			<span class="text311">From Outside Riverside<br />Call 951.826.5311</span><br />
+			<div style="display: none;"><span class="font11 letterspace-1">311 Requests:</span> <a href="" class="bold font11 letterspace-1">Submit</a> | <a href="" class="bold font11 letterspace-1">Track</a></div>
+			</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+      <div class="container-fluid">
+	  
+	  <div class="row-fluid">
+		<div class="span 12 hidden-phone hidden-tablet ">
+<!-- Start 2012 Footer -->
+		<div id="footer2012">
+	<div class="layout aligncenter" style="height: 27px;"><img src="/images/2009/icons/raincross-orange.png" border="0" /></div>
+	<div style="background-color: #333; border-top: solid 3px #f60;">
+		<div class="layout" style="color: #fff; padding: 40px;">
+			<table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="23%" valign="top">
+						<b>Home</b>
+						<ul>
+							<li><a href="/government.asp">Government</a></li>
+							<li><a href="/services.asp">Online Services</a></li>
+							<li><a href="/residents.asp">Residents</a></li>
+							<li><a href="/business.asp">Business</a></li>
+							<li><a href="http://www.exploreriverside.com">Visitors</a></li>
+							<li><a href="http://cityjobs.riversideca.gov">Jobs</a></li>
+						</ul>
+					</td>
+					<td width="1%" valign="top"><img src="/images/2009/icons/linefade.png" border="0" /></td>
+					<td width="25%" valign="top" style="padding-left: 20px;">
+						<b>Popular Pages</b>
+						<ul>
+							<li><a href="/government.asp">City Departments</a></li>
+							<li><a href="/mayor">Mayor</a></li>
+							<li><a href="/council">City Council</a></li>
+							<li><a href="/library">Library</a></li>
+							<li><a href="/museum">Museum</a></li>
+							<li><a href="/park_rec">Parks and Recreation</a></li>
+							<li><a href="/utilities">Public Utilities</a></li>
+						</ul>
+					</td>
+					<td width="1%" valign="top"><img src="/images/2009/icons/linefade.png" border="0" /></td>
+					<td width="25%" valign="top" style="padding-left: 20px;">
+						<strong>Contact</strong>
+						<ul>
+							<li><a href="/gov-whotocall.asp">Who to Call at City Hall</a></li>
+							<li><a href="http://crmweb.riversideca.gov">311 Services</a></li>
+							<li><a href="/community-directory.asp">Service Index A-Z</a></li>
+							<li><a href="mailto:callcenter@riversideca.gov">Email Call Center</a></li>
+							<li><a href="mailto:webmaster@riversideca.gov">Email Webmaster</a></li>
+						</ul>
+					</td>
+					<td width="1%" valign="top"><img src="/images/2009/icons/linefade.png" border="0" /></td>
+					<td width="24%" valign="top" style="padding-left: 20px;">
+						<b>Resources</b>
+						<ul>
+							<li><a href="/press">Media Page</a></li>
+							<li><a href="/calendar">Community Calendar</a></li>
+							<li><a href="/exploreweekly">Explore Riverside Newsletter</a></li>
+							<li><a href="/apps">iPhone and Android Apps</a></li>
+							<li><a href="/data">Open Data</a></li>
+							<li><a href="http://assistive.usablenet.com/tt/referrer">Text Only Website</a></li>
+							<li><a href="/awards.asp">Our Awards</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div class="layout font11" style="color: #fff; padding-bottom: 40px;">
+			<table width="100%">
+				<tr>
+					<td width="1%"><img src="/images/2012/cor-logo-30x30.png" /></td>
+					<td width="1%" nowrap="nowrap" style="padding-left: 10px;"><a href="/">City of Riverside</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.exploreriverside.com">Explore Riverside</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.homeinriverside.com">At Home in Riverside</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.seizingourdestiny.com">Seizing Our Destiny</a></td>
+					<td width="1%">						 
+						 <style>
+						    #google_translate_element select{
+							width:160px;
+							}
+						</style>
+						<div id="google_translate_element" style="margin-top:16px;padding-left:50px;"></div><script type="text/javascript">
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({pageLanguage: 'en', gaTrack: true, gaId: 'UA-10797445-1'}, 'google_translate_element');
+							}
+							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></td>
+					<td width="97%" align="right"><img src="/images/2009/stopthehacker.png" border="0" /></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div style="background-color: #000; border-top: solid 1px #666;">
+		<div class="layout font10" style="color: #999; height: 40px;">
+
+			<div style="float: left; padding-top: 8px; width: 580px;">Copyright &copy; 2013 City of Riverside | <a href="/accessibility.asp">Accessibility Policy</a> | <a href="/disclaimer.asp">Website Disclaimer</a> | <a href="/privacy.asp">Privacy Policy</a></div>
+			<div style="float: right; padding-top: 3px; width: 350px;">
+				<table cellpadding="2" cellspacing="2" width="100%" border="0" align="right">
+					<tr>
+						<td width="1%"><a href="http://www.facebook.com/CityofRiverside" target="_blank" title="Facebook: Like the City of Riverside"><img src="/images/2009/icons/facebook2.png" border="0" alt="Facebook: Like the City of Riverside" /></a></td>
+						<td width="1%"><a href="http://www.linkedin.com/groups?gid=104915" target="_blank" title="LinkedIn"><img src="/images/2009/icons/linkedin2.png" border="0" alt="LinkedIn" /></a></td>
+						<td width="1%"><a href="http://twitter.com/riversidecagov" target="_blank" title="Twitter"><img src="/images/2009/icons/twitter2.png" border="0" alt="Twitter" /></a></td>
+						<td width="1%"><a href="http://www.youtube.com/riversidecagov" target="_blank" title="YouTube: Subscribe to the City of Riverside"><img src="/images/2009/icons/youtube2.png" border="0" alt="YouTube: Subscribe to the City of Riverside" /></a></td>
+						<td width="1%"><a href="http://www.riversideca.gov/xml/rss/homepage.xml" target="_blank" title="RSS: Stay up-to-date with the latest news from the City of Riverside"><img src="/images/2009/icons/rss2.png" border="0" alt="RSS: Stay up-to-date with the latest news from the City of Riverside" /></a></td>
+						<td width="1%"><a href="http://service.govdelivery.com/service/multi_subscribe.html?code=CARIVERSIDE" target="_blank" title="GovDelivery: Receive email alerts from the City of Riverside"><img src="/images/2009/icons/govdelivery2.png" border="0" alt="GovDelivery: Receive email alerts from the City of Riverside" /></a></td>
+						<td width="1%"><a href="/video/" title="GTV: City of Riverside's television channel"><img src="/images/2009/icons/gtv2.png" border="0" alt="GTV: City of Riverside's television channel" /></a></td>
+						<td width="1%"><a href="/outlook/" title="Outlook E-News"><img src="/images/2009/icons/outlooke-news2.png" border="0" alt="Outlook E-News" /></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+		</div>
+	  </div>
+<div class="row-fluid">
+        <!-- Start 2013 Footer -->
+        <div class="well whitebg span12 hidden-desktop">
+<div id="footer">
+      <p class="muted text-center">Copyright &copy; 2012 City of Riverside | <a href="/accessibility.asp">Accessibility Policy</a> | <a href="/disclaimer.asp">Website Disclaimer</a> | <a href="/privacy.asp">Privacy Policy</a></p>
+      <p  class="text-center" style="float: right; padding-top: 3px; width: 350px;">
+        <table cellpadding="4" cellspacing="2" width="100%" border="0" align="center" id="footertable">
+          <tr>
+            <td width="1%"><a href="http://www.facebook.com/CityofRiverside" target="_blank" title="Facebook: Like the City of Riverside"><img src="/images/2009/icons/facebook2.png" border="0" alt="Facebook: Like the City of Riverside" /></a></td>
+            <td width="1%"><a href="http://www.linkedin.com/groups?gid=104915" target="_blank" title="LinkedIn"><img src="/images/2009/icons/linkedin2.png" border="0" alt="LinkedIn" /></a></td>
+            <td width="1%"><a href="http://twitter.com/riversidecagov" target="_blank" title="Twitter"><img src="/images/2009/icons/twitter2.png" border="0" alt="Twitter" /></a></td>
+            <td width="1%"><a href="http://www.youtube.com/riversidecagov" target="_blank" title="YouTube: Subscribe to the City of Riverside"><img src="/images/2009/icons/youtube2.png" border="0" alt="YouTube: Subscribe to the City of Riverside" /></a></td>
+            <td width="1%"><a href="http://www.riversideca.gov/xml/rss/homepage.xml" target="_blank" title="RSS: Stay up-to-date with the latest news from the City of Riverside"><img src="/images/2009/icons/rss2.png" border="0" alt="RSS: Stay up-to-date with the latest news from the City of Riverside" /></a></td>
+            <td width="1%"><a href="http://service.govdelivery.com/service/multi_subscribe.html?code=CARIVERSIDE" target="_blank" title="GovDelivery: Receive email alerts from the City of Riverside"><img src="/images/2009/icons/govdelivery2.png" border="0" alt="GovDelivery: Receive email alerts from the City of Riverside" /></a></td>
+            <td width="1%"><a href="/video/" title="GTV: City of Riverside's television channel"><img src="/images/2009/icons/gtv2.png" border="0" alt="GTV: City of Riverside's television channel" /></a></td>
+            <td width="1%"><a href="/outlook/" title="Outlook E-News"><img src="/images/2009/icons/outlooke-news2.png" border="0" alt="Outlook E-News" /></a></td>
+          </tr>
+        </table>
+      </p>
+    </div>
+      </div>
+    </div><!-- End 2013 Footer -->
+</div>
+<script type="text/javascript" src="/js/custom.js"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10797445-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<div id="url"><strong>Printed from:</strong> http://www.riversideca.gov/business.asp</div>
+
+</body>
+</html>

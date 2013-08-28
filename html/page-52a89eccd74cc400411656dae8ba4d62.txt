@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+        <title>Calgary Automotive Repair | Calgary Auto Repair & Roadside Assistance Services</title>
+        <meta name="description" content="Calgary's automotive repair shop and roadside assistance provider, offering auto repair & maintenance discounts, along with automotive support & roadside assistance to all our members.">
+    
+    <meta name="keywords" content="repair shops, roadside services, roadside assistance, repair facilities, auto repair, automotive repair, auto repair shops, auto roadside services, auto roadside assistance, auto repair facilities, calgary auto repair shops, calgary auto roadside services, calgary auto roadside assistance, calgary auto repair facilities">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="google-site-verification" content="2B-fFGcAtfa8JO0BAc-xrNTlvaiGJTda_y9JSDH3sJg" />
+    <meta name="msvalidate.01" content="4AFF4A94C784BC2CAF9786EED4A5F935" />
+    <meta name="alexaVerifyID" content="w08GdG8RWpyRGEv19m1n7UDqM9Q" />
+    <meta name="copyright" content="Copyright ©2012 - Global Designs Internet Solutions Inc.">
+    <meta name="viewport" content="width=device-width">
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-34492542-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<script language="JavaScript1.2" src="includes/imagefade.js"></script>
+<link rel="shortcut icon" HREF="http://www.aaofc.ca/favicon.ico">
+<link rel="stylesheet" type="text/css" href="includes/default_style.css">
+<link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tenor+Sans' rel='stylesheet' type='text/css'>
+<script language=javascript>
+function testEmail(txtValue)
+{
+	var reg = /^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$/i;
+	var ar = reg.exec(txtValue);
+	return ar;
+}
+function Login()
+{	
+	if (document.frmLogin.Email.value == "")
+	{
+		alert("Please enter your email address");
+		document.frmLogin.Email.focus();
+		return;
+	}
+	if (!testEmail(document.frmLogin.Email.value))
+	{
+		alert("Please enter a valid email address");
+		document.frmLogin.Email.focus();
+		return;
+	}
+	if (document.frmLogin.Password.value == "")
+	{
+		alert ("Please enter your password");
+		document.frmLogin.Password.focus();
+		return false;
+	}
+	document.frmLogin.Action.value = 'Login';
+	document.frmLogin.submit();
+	return;
+}
+function sendAcctInfo()
+{
+    if (document.frmLogin.Email.value == "")
+    {
+        alert('Please enter your email address');
+        document.frmLogin.Email.focus();
+        return;
+    }
+    if (!testEmail(document.frmLogin.Email.value))
+    {
+        alert('Please enter a valid email address');
+        document.frmLogin.Email.focus();
+        return;
+    }
+    document.frmLogin.Action.value = "sendAccountInfo";
+    document.frmLogin.action = "forgotpassword.asp";
+    document.frmLogin.submit();
+    return;
+}
+</script>
+<body >
+<div id="container">
+    <div id="header1">
+        <div id="header1-content">Welcome to Automotive Affiliation of Canada</div>
+    </div>
+    <div id="header2">
+        <div id="header2-leaf">
+            <div id="header2-content">
+                <div id="header2-menu">
+                    <div id="menu">
+                        <a href="http://www.aaofc.ca/default.asp"><img src="images/layout/logo.jpg" /></a>
+                        <ul>
+                            <li><a href="http://www.aaofc.ca/default.asp" style="color: #000000;background: #f0dd25;">Home</a></li>
+                            <li><a href="http://www.aaofc.ca/automotive-roadside-assistance.asp" >About Us</a></li>
+                            <li><a href="http://www.aaofc.ca/automotive-repair-facilities.asp" >Our Services</a></li>
+                            <li><a href="http://www.aaofc.ca/automotive-services.asp" >FAQ</a></li>
+                            <li><a href="http://www.aaofc.ca/auto-roadside-assistance.asp" >Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="header2-image">
+                    <div id="membersonly">NEED A SHOP?</div>
+                    <div id="login">
+                        <div id="login-header">
+                            Member Login
+                            <div id="login-form">
+                                <form method="post" name="frmLogin" action="http://www.aaofc.ca/default.asp">
+                                <input type="hidden" name="Action">
+                                    <table>
+                                        <tr>
+                                            <td style="padding:0px;">Email: </td>
+                                            <td colspan="2" style="padding:0px;"><input type="text" class="input" name="Email" size="145" maxlength="50" style="width:145px;" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:0px;">Password: </td>
+                                            <td style="padding:0px;"><input type="password" class="input" name="Password" size="145" maxlength="50" style="width:145px;"></td>
+                                            <td style="padding:0px;"><input type="button" value="LOGIN" class="button" onclick="javascript:Login();" /></td>
+                                        </tr>
+                                    </table>
+                                    <font style="font-weight:normal;font-size:12px;display:inline-block;margin-top:10px;">Forgot your password? <a href="javascript:sendAcctInfo();">Click Here to reset</a></font>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="lcol">
+
+<h1 class="header">What does an Automotive Affiliation of Calgary membership mean to you?</h1><br />Automotive Affiliation of Calgary members become a part of an elite team of personnel that believe in the highest level of customer service and workmanship available. Together Automotive Affiliation of Calgary and its <b>AFFILIATED REPAIR SHOPS & SERVICES</b> work together with consistency and professionalism to give you the level of service that you and your vehicle deserve.
+<br /><br />
+As Calgarys service provider it has been brought to our attention that some people neglect their vehicles simply because they are intimidated to take their cars to a shop.
+<br /><br />
+<h2 class="header">As a member, we stand behind you to ensure:</h2>
+<ul id="ul">
+    <li id="li">that you receive the workmanship and parts that you are paying for</li>
+    <br />
+    <li id="li">that you attain knowledgeable automotive representatives that will speak on your behalf if any questions or problems arise</li>
+    <br />
+    <li id="li">support to our members as well as our repair facilities and will work with all parties to resolve conflicts that may occur</li>
+    <br />
+    <li id="li">discounts on hourly and fixed rate repairs and services (oil change, tire repairs)</li>
+    <br />
+    <li id="li">service programs are put in place that all our shops commit to, such as the use of <b>PREMIUM</b> parts for your car or light truck</li>
+</ul>
+We are committed to making the automotive industry an inviting one. We will work together with members and repair facilities to build a lasting and trustworthy relationship. When we all work together a difference is made.
+        
+        </div>
+        <div id="rcol">
+            
+            <h2>Not a Member?</h2><br />
+            Take advantage of our special introductory offer by clicking the button below.
+            <br /><br />
+            <h3>What do I get?</h3>
+            <ul id="ul">
+                <li id="li">10% Hourly Rate Discount</li>
+                <li id="li">10% Flat Rate Services and Repairs (oil changes, tire repairs)</li>
+                <li id="li">Guaranteed Service</li>
+                <li id="li">Guaranteed Support</li>
+            </ul>
+            <br />
+            <h2 class="header"><center>Membership is <br />FREE</center></h2>
+            <a href="http://www.aaofc.ca/user_registration.asp"><img src="images/signuptoday.png" /></a><br />
+            
+        </div>
+        <div style="clear:both;">&nbsp;</div>
+        <br /><br />
+    </div>
+</div>
+<div id="footer">
+    <div id="footercontent">
+        <a href="http://www.aaofc.ca/default.asp">Home</a> | <a href="http://www.aaofc.ca/automotive-roadside-assistance.asp">About Us</a> | <a href="http://www.aaofc.ca/automotive-repair-facilities.asp">Our Services</a> |  <a href="http://www.aaofc.ca/automotive-services.asp">FAQ</a> |  <a href="http://www.aaofc.ca/auto-roadside-assistance.asp">Contact Us</a> | <a href="http://www.aaofc.ca/auto-repair-services.asp">Terms of Use</a> | <a href="http://www.aaofc.ca/auto-services.asp">Privacy Statement</a> | <a href="http://www.aaofc.ca/sitemap.asp">Sitemap</a><br />
+        <div id="lfooter">©2013 AAofC.ca All Rights Reserved</div>
+        <div id="rfooter"><a href="http://www.globalwebdesigns.ca" target="_blank">design by Global Designs Internet Solutions Inc.</a></div>
+    </div>
+</div>
+</body>
+</html>

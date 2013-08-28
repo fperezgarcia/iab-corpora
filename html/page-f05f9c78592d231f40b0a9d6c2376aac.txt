@@ -1,0 +1,300 @@
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hastings Catalog</title>
+    <!---For PNG transparency Issue, the page's CSS rendering were link through a javascript browser detection to enable PNG transparency if the viewers browser is IE6 and below--->
+    <!---For PNG images insertion for IE6 and the others, just change the background image at their own respective css files--->
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+
+    <!---<script type="text/javascript" src="js/supersleight-min.js"></script>--->
+
+    <script type="text/javascript" src="js/global.js"></script>
+
+    <script type="text/javascript" src="js/detect_browser.js"></script>
+
+    <script type="text/javascript" src="js/sameheight.js"></script>
+
+    <script type="text/javascript">        browser_css();</script>
+
+    <script type="text/javascript">
+        function SearchUPC() {
+            parent.window.frames["main"].location.href = "UPC.asp?SearchBy=1";
+            parent.window.frames["main2"].location.href = "UPC_Post.asp?SearchItem=CLEAR";
+        }
+
+        function SearchCharts() {
+            parent.window.frames["main"].location.href = "SizeCharts.html";
+            //parent.window.frames["main2"].location.href = "Charts_Post.asp?SearchItem=CLEAR";    
+        }
+        function SearchProductGuide() {
+            parent.window.frames["main2"].location.href = "DisplayPartInfoNew.asp?partnumber=&VehicleRef=4";
+            parent.window.frames["main"].location.href = "PartEntry.asp";
+        }
+        function SearchCrossReference() {
+            parent.window.frames["main2"].location.href = "BaldwinDisplay.asp?partnumber=CLEAR&optiontype=OEM";
+            parent.window.frames["main"].location.href = "BaldwinOEM.asp";
+        }
+        function gup(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+    </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5714656-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+</head>
+<body>
+    <div id="pagecon">
+        <!---The Naming conventions that I used here is very obvious like 'bannercon' for banner container just to name a few--->
+        <!--Here will be the banner area or the Upper container--->
+        <div class="bannercon" style="height: 120px;">
+            <div class="bannerholder">
+                <div class="home_link">
+                    <a href="http://www.hastingsfilter.com">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End of the Banner Area--->
+        <!--This is the Mid Area--->
+        <div class="midcon" id="midcon">
+            <!--Start the actual content of the site here--->
+            <div class="contentcon" id="midcon" style="height: ;">
+                <!---Here is the main menus--->
+                <div class="menucon">
+                    <!---Main menu bg's--->
+                    <!---The Down states--->
+                    <!---<div class="mmmenu01" id="" ></div>-->
+                    <div class="mmmenu02" id="">
+                    </div>
+                    <div class="mmmenu03" id="">
+                    </div>
+                    <div class="mmmenu04" id="">
+                    </div>
+                    <div class="mmmenu05" id="">
+                    </div>
+                    <div class="mmmenu06" id="">
+                    </div>
+                    <div class="mmmenu07" id="">
+                    </div>
+                    <!---The up states--->
+                    <!---<div class="mmenu01" id="menu01"></div>-->
+                    <div class="mmenu02" id="menu02">
+                    </div>
+                    <div class="mmenu03" id="menu03">
+                    </div>
+                    <div class="mmenu04" id="menu04">
+                    </div>
+                    <div class="mmenu05" id="menu05">
+                    </div>
+                    <div class="mmenu06" id="menu06">
+                    </div>
+                    <div class="mmenu07" id="menu07">
+                    </div>
+                    <!---End of the Main Menu Bg's--->
+                    <!---Main menu Wordings DOWN STATE--->
+                    <!---<a href="" class="main_navlink"><div class="nmenu01 down_n"  onmouseover="hoverAll('1')" onmouseout="outAll('1')">HOME</div></a>--->
+                    <a href="http://www.hastingsfilter.com" class="main_navlink">
+                        <div class="nmenu02 down_n" onmouseover="hoverAll('2')" onmouseout="outAll('2')">
+                            HOME</div>
+                    </a><a class="main_navlink">
+                        <div class="nmenu03 down_n" onmouseover="hoverAll('3')" onmouseout="outAll('3')">
+                            CATALOG INFORMATION</div>
+                    </a><a href="Javascript:SearchCrossReference()" class="main_navlink">
+                        <div class="nmenu04 down_n" onmouseover="hoverAll('4')" onmouseout="outAll('4')">
+                            CROSS-REFERENCE</div>
+                    </a><a class="main_navlink">
+                        <div class="nmenu05 down_n" onmouseover="hoverAll('5')" onmouseout="outAll('5')">
+                            APPLICATIONS</div>
+                    </a><a href="Javascript:SearchProductGuide()" class="main_navlink">
+                        <div class="nmenu06 down_n" onmouseover="hoverAll('6')" onmouseout="outAll('6')">
+                            PRODUCT GUIDE</div>
+                    </a><a href="ProductsMain.html" target="main" class="main_navlink">
+                        <div class="nmenu07 down_n" onmouseover="hoverAll('7')" onmouseout="outAll('7')">
+                            NEW PRODUCTS</div>
+                    </a>
+                    <!--href="contacts.html"-->
+                    <!---End of the Wordings-->
+                    <!---Main menu Wordings UP STATE--->
+                    <!---<div class="nmenu01" id="nmenu01"  onmouseover="hoverAll('1')" onmouseout="outAll('1')" >HOME</div>--->
+                    <div class="nmenu02" id="nmenu02" onmouseover="hoverAll('2')" onmouseout="outAll('2')">
+                        HOME</div>
+                    <div class="nmenu03" id="nmenu03" onmouseover="hoverAll('3')" onmouseout="outAll('3')">
+                        CATALOG INFORMATION</div>
+                    <div class="nmenu04" id="nmenu04" onmouseover="hoverAll('4')" onmouseout="outAll('4')">
+                        CROSS-REFERENCE</div>
+                    <div class="nmenu05" id="nmenu05" onmouseover="hoverAll('5')" onmouseout="outAll('5')">
+                        APPLICATIONS</div>
+                    <div class="nmenu06" id="nmenu06" onmouseover="hoverAll('6')" onmouseout="outAll('6')">
+                        PRODUCT GUIDE</div>
+                    <div class="nmenu07" id="nmenu07" onmouseover="hoverAll('7')" onmouseout="outAll('7')">
+                        NEW PRODUCTS</div>
+                    <!---End of the Wordings-->
+                    <!---Submenusbg:  Adjust the height of each submenu bg according to the number of submenu choices. Heights can be adjusted at their respective browser css (see firefox.css, safari.css, ie.css, ie7.css)--->
+                    <!---<div class="subs01" id="sub01" style="display:none;"></div>-->
+                    <div class="sm_form1_but">
+                    </div>
+                    <div class="subs02" id="sub02" style="">
+                    </div>
+                    <div class="subs03" id="sub03" style="">
+                    </div>
+                    <div class="subs04" id="sub04" style="">
+                    </div>
+                    <div class="subs05" id="sub05" style="">
+                    </div>
+                    <div class="subs06" id="sub06" style="">
+                    </div>
+                    <div class="subs07" id="sub07" style="display: none;">
+                    </div>
+                    <!---End of submenusbgs--->
+                    <!---The real submenus--->
+                    <!---The msub02 has been moved to the sidenav_mid for absolute position issues--->
+                    <!---For IE bullets please make sure there is the <div class="ie_7bullet"></div> in each selection. In other browsers, this div is displayed blocked other than IE--->
+                    <div class="msubs02" id="msub02" onmouseover="hoverAll('2');" onmouseout="outAll('2');">
+                    </div>
+                    <div class="msubs03" id="msub03" onmouseover="hoverAll('3');" onmouseout="outAll('3');">
+                        <ul class="mainmenu_subs_cj">
+                            <li><a href="pdfs/abbreviations.pdf" class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Abbreviations</a> </li>
+                          
+                           
+                            <li><a href="Javascript:SearchUPC()"" " class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                UPC Code Search</a> </li>
+                            <li><a href="pdfs/weights.pdf" class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Weights & Volumes</a> </li>
+                            <li><a href="Javascript:SearchCharts()" class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Size Chart Search</a> </li>
+                        </ul>
+                    </div>
+                    <div class="msubs04" id="msub04" onmouseover="hoverAll('4');" onmouseout="outAll('4');">
+                    </div>
+                    <div class="msubs05" id="msub05" onmouseover="hoverAll('5');" onmouseout="outAll('5');">
+                        <ul class="mainmenu_subs_cj">
+                            <li><a href="Catalog.asp?VehicleRef=1" target="main" class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Automotive</a> </li>
+                            <li><a href="Catalog.asp?VehicleRef=2" target="main" class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Off-Highway</a> </li>
+                            <li><a href="Catalog.asp?VehicleRef=3" target="main" class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Trucks & Buses</a> </li>
+                            <li><a href="ScanDescription.asp?Parent=1&VehicleRef=1&Scan=Automotive" target="main"
+                                class="stlink sublink">
+                                <div class="ie_7bullet">
+                                </div>
+                                Search by Keyword</a> </li>
+                        </ul>
+                    </div>
+                    <div class="msubs06" id="msub06" onmouseover="hoverAll('6');" onmouseout="outAll('6');">
+                    </div>
+                    <div class="msubs07" id="msub07" onmouseover="hoverAll('7');" onmouseout="outAll('7');">
+                    </div>
+                    <!---End of the Real Submenus--->
+                </div>
+                <!---End of the main menus--->
+                <frameset>
+		<div id="mainContent">			
+			<div class="home">
+            <!--
+			 ///
+			 /// begin main
+			 ///
+			 -->
+			<div id="main">
+				<!-- begin products -->
+				<div id="products">
+					<!-- begin search -->
+					<div id="search" style="padding-top:35px; padding-left:0px">
+                       <iframe frameborder = "0" name ="main" 
+                        src="BaldwinOEM.asp" style="padding: 0px 0px 0px 2px; height: 620px; width: 350px;">                        
+                       </iframe>
+                       <p><a href="http://www.hastingsfilter.com/newslettersignup.html" target="blank"><img src="images/signupbutton.jpg" width="180" /></a> </p>
+                    <!-- end search -->
+					 </div>
+                    <div class="clear"></div>
+				</div></div>
+				<!-- end products -->
+				<!--
+				 ///
+				 /// begin columnRight
+				 ///
+				 -->
+				<div >
+											
+					<!-- begin columnRight -->
+					<div id="columnright" style="padding-top:35px">
+						<iframe frameborder = "0" name ="main2" 
+                         src="BaldwinDisplay.asp?partnumber=CLEAR&amp;optiontype=OEM" 
+                         style="padding: 0px 0px 0px 2px; width:640px; height: 620px">
+                        </iframe>	</div>                        		
+                  </div>									
+					<div class="clear"></div>
+				
+				<!-- end columnRight -->
+				<div class="clear"></div>
+			</div>
+			<!-- end main -->
+		</div>
+ </frameset>
+                <!-- end mainContent -->
+                <!--
+		 ///
+		 /// begin footer
+		 ///
+		 -->
+                <div class="clear">
+                </div>
+                <div id="footer">
+                    <ul id="companyInfo">
+                        <li class="first">&copy; 2009 Hastings Premium Filters</li>
+                        <li>4400 East Highway 30</li>
+                        <li>Kearney, NE 68847</li>
+                        <li>Ph: 800-887-8836</li>
+                        <li>Fax: 800-210-6906</li>
+                    </ul>
+                    <ul id="companyDocuments">
+                        <a href="termsandconditions.html">Terms & Conditions</a>
+                    </ul>
+                    <div class="clear">
+                    </div>
+                </div>
+                <!-- end footer -->
+</body>
+</html>>>>>

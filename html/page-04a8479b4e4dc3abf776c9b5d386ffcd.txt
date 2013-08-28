@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- #BeginTemplate "Main.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Tuning News!&nbsp; From Tuner Tools - the Inside Line</title>
+<link rel="icon" 
+      type="image/ico" 
+      href="favicon.ico" />
+<meta content="training,j2534,gauge,obd,tuner,tools,ecu,gas,diesel,data,logging,data logging,pass-thru,sae j2534,superchips,bully dog,diablosport,sct,edge,trinity,intune,traildash" name="keywords" />
+<meta content="Free J2534 Training Webinars:   www.TunerTools.com is your family owned American source for the newest, most advanced and highest quality automotive gas &amp; diesel flash tuners, tuning modules, stand alone &amp; piggy back ECU's, Data Logging, Gauges, OBD-II and SAE J2534 pass-thru programming tools on the market." name="description" />
+<script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<!-- #EndEditable -->
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script language="JavaScript" type="text/JavaScript">
+
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+-->
+</script>
+</head>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<body onload=" MM_preloadImages('../images/menu/tophomeov.gif','../images/menu/topsearchov.gif','../images/menu/tophelpov.gif','../images/menu/topemailov.gif','../images/menu/homeov.gif','../images/menu/productsov.gif','../images/menu/servicesov.gif','../images/menu/aboutov.gif','../images/menu/linksov.gif','../images/menu/contactov.gif','../images/menu/topcheckoutov.gif')">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td colspan="4" bgcolor="#767981">
+	<img src="images/clearpixel.gif" width="1" height="1" alt=""/></td>
+  </tr>
+  <tr> 
+    <td width="10" class="leftbg">
+	<img src="images/clearpixel.gif" width="10" height="32" alt=""/></td>
+    <td width="50%"><br/>
+      <a href="index.asp">
+      <img src="images/name.gif" width="330" height="33" alt="Tuner Tools LLC - the Inside Line" style="border-width: 0px"/></a></td>
+    
+     <!-- Search Box Experiment -->
+ <td>
+ <form method="post" action="search.asp">
+ <table align="right">
+   <tr>
+     <td>
+     <input type="hidden" name="posted" value="1"/>
+     </td>
+     <td>
+   <input type="text" name="stext" size="20"/><br/>
+     <td><input type="submit" name="search" value="Search Tuner Tools" />
+     </td>
+   </tr>
+ </table>
+ </form> 
+</td>
+      
+<td width="10" class="rightbg" align="right">
+	<img src="images/clearpixel.gif" width="1" height="32" alt=""/></td>
+
+  </tr>
+  <tr> 
+    <td class="leftendbg">
+	<img src="images/clearpixel.gif" width="10" height="30" alt=""/></td>
+    <td class="topbg" valign="top" colspan="3" align="right">
+	<a href="index.asp" title="Tuner Tools - the Inside Line">
+	<img id="img12" alt="Home" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img12',/*url*/'images/buttons/button238.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img12',/*url*/'images/buttons/button236.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img12',/*url*/'images/buttons/button237.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img12',/*url*/'images/buttons/button237.jpg')" src="images/buttons/button236.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Home" --></a><a href="vehicle_search.asp"><img id="img16" alt="By Vehicle" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img16',/*url*/'images/buttons/button269.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img16',/*url*/'images/buttons/button267.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img16',/*url*/'images/buttons/button268.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img16',/*url*/'images/buttons/button268.jpg')" src="images/buttons/button267.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="By Vehicle" --></a><a href="sitemap.asp"><img id="img11" alt="Site Map" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img11',/*url*/'images/buttons/button235.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img11',/*url*/'images/buttons/button233.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img11',/*url*/'images/buttons/button234.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img11',/*url*/'images/buttons/button234.jpg')" src="images/buttons/button233.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Site Map" --></a><a href="search.asp" title="Search the Tuner Tools online catalog"><img id="img10" alt="Search" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img10',/*url*/'images/buttons/button225.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img10',/*url*/'images/buttons/button223.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img10',/*url*/'images/buttons/button224.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img10',/*url*/'images/buttons/button224.jpg')" src="images/buttons/button223.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Search" --></a><a href="catehome.asp?cat=Brand+Line+Card"><img id="img15" alt="Brands" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img15',/*url*/'images/buttons/button256.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img15',/*url*/'images/buttons/button254.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img15',/*url*/'images/buttons/button255.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img15',/*url*/'images/buttons/button255.jpg')" src="images/buttons/button254.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Brands" --></a><a href="about.asp" title="About Tuner Tools LLC"><img id="img9" alt="About Us" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img9',/*url*/'images/buttons/button222.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img9',/*url*/'images/buttons/button220.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img9',/*url*/'images/buttons/button221.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img9',/*url*/'images/buttons/button221.jpg')" src="images/buttons/button220.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="About Us" --></a><a href="contact.asp" title="Contact Tuner Tools Management"><img id="img7" alt="Contact Us" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img7',/*url*/'images/buttons/button219.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img7',/*url*/'images/buttons/button217.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img7',/*url*/'images/buttons/button218.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img7',/*url*/'images/buttons/button218.jpg')" src="images/buttons/button217.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Contact Us" --></a><a href="privacy.asp" title="Tuner Tools Privacy Policies"><img id="img14" alt="Privacy" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img14',/*url*/'images/buttons/button253.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img14',/*url*/'images/buttons/button251.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img14',/*url*/'images/buttons/button252.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img14',/*url*/'images/buttons/button252.jpg')" src="images/buttons/button251.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Privacy" --></a><a href="terms.asp" title="Tuner Tools Terms of Service"><img id="img13" alt="Terms" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img13',/*url*/'images/buttons/button250.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img13',/*url*/'images/buttons/button24E.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img13',/*url*/'images/buttons/button24F.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img13',/*url*/'images/buttons/button24F.jpg')" src="images/buttons/button24E.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Terms" --></a><a href="cart.asp"><img id="img8" alt="Checkout" height="30" onmousedown="FP_swapImg(1,0,/*id*/'img8',/*url*/'images/buttons/button21C.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img8',/*url*/'images/buttons/button21A.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img8',/*url*/'images/buttons/button21B.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img8',/*url*/'images/buttons/button21B.jpg')" src="images/buttons/button21A.jpg" style="border: 0" width="75" /><!-- MSComment="ibutton" fp-style="fp-btn: Glass Tab 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-proportional: 0" fp-title="Checkout" --></a></td>
+	
+	<!-- extra cell to the right of the tab buttons -->
+	
+	
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td valign="top" colspan="3" bgcolor="#767981">
+	<img src="images/clearpixel.gif" width="1" height="1" alt=""/></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="130"> 
+      <div style="text-align: left">
+      <br />
+	  <a href="index.asp">
+	  <img id="img17" alt="  Home" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img17',/*url*/'images/buttons/button272.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img17',/*url*/'images/buttons/button270.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img17',/*url*/'images/buttons/button271.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img17',/*url*/'images/buttons/button271.jpg')" src="images/buttons/button270.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Home" --></a><a href="cart.asp"><img id="img1" alt="  Cart" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/button15B.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/button159.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/buttons/button15A.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/buttons/button15A.jpg')" src="images/buttons/button159.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Cart" --></a><br />
+	  <a href="sitemap.asp">
+	  <img id="img2" alt="  Site Map" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button16D.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button16B.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'images/buttons/button16C.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'images/buttons/button16C.jpg')" src="images/buttons/button16B.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Site Map" --></a><br />
+	  <a href="catehome.asp">
+	  <img id="img3" alt="  Our Products" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button170.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button16E.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/buttons/button16F.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/buttons/button16F.jpg')" src="images/buttons/button16E.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Our Products" --></a><br />
+	  <a href="vehicle_search.asp">
+	  <img id="img4" alt="   &gt;&gt;  By Vehicle" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/button17E.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/button17C.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttons/button17D.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttons/button17D.jpg')" src="images/buttons/button17C.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="   >>  By Vehicle" --></a><br />
+	  <a href="catehome.asp?cat=Brand+Line+Card">
+	  <img id="img5" alt="   &gt;&gt;  By Brand" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'images/buttons/button181.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'images/buttons/button17F.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'images/buttons/button180.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'images/buttons/button180.jpg')" src="images/buttons/button17F.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="   >>  By Brand" --></a><br />
+	  <a href="catehome.asp?cat=Product+Types">
+	  <img id="img6" alt="   &gt;&gt;  By Type" height="18" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'images/buttons/button1A0.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'images/buttons/button19E.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'images/buttons/button19F.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'images/buttons/button19F.jpg')" src="images/buttons/button19E.jpg" style="border: 0" width="125" /><!-- MSComment="ibutton" fp-style="fp-btn: Braided Column 1; fp-font-color-hover: #FF0000; fp-justify-horiz: 0; fp-proportional: 0" fp-title="   >>  By Type" --></a><br />
+      &nbsp;
+    <p style="text-align: center">
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="tunertools" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+		  <br>
+<center><div class="fb-like" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div></center>	  
+	</p>
+	  <img src="images/specials.gif" width="130" height="20" alt="" style="width: 134px; height: 19px; border-style: solid; border-width: 0px"/><br/>
+	  </div>
+	  <table bgcolor="#767981" border="0" cellspacing="0" width="128">
+        <tbody> 
+        <tr> 
+          <td valign="top" width="128"> 
+            <table border="0" cellpadding="6" cellspacing="0" width="128">
+              <tbody> 
+              <tr> 
+                <td class="smaller" bgcolor="#FFFFFF" colspan="2" align="center">
+				
+	<script type="text/javascript">document.write('<scr');document.write('ipt type="text/javascript" data-ppmnid="98949726817360" src="//ad.where.com/jin/spotlight/ads?pubid=24f676861b&format=js&v=2.4&placementtype=120x240&ppmnid=98949726817360&rand=' + Math.round(Math.random() * 100000000000000) + '">');document.write('</scr' + 'ipt>');</script>
+
+				</td>
+              </tr>
+              </tbody> 
+            </table>
+          </td>
+        </tr>
+        </tbody> 
+      </table>
+	  
+ <form method="post" action="http://oi.vresp.com?fid=17fb05f58c" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;" >
+
+  <div style="font-family: verdana; font-size: 10px; width: 128px; padding: 0px; border: 0px solid #dddddd; background: #ffffff">
+    <strong><span style="color: #333333;"><br />
+	  Dealer Inquiry (dealers ONLY please)</span></strong><br/><br/>
+    <input type="submit" value="Send Inquiry" style="border: 1px solid #999; padding: 3px;"/><br/>
+    <br/>
+  </div>
+</form>
+ 
+	  
+	  </td>
+    <td width="100%" valign="top"><br/><!-- #BeginEditable "Body" -->
+      <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td colspan="3" class="bodytopbg">
+		  <img src="images/tuner_news.gif" width="144" height="20" alt="Tuner News! Latest Products, Events, &amp; Updates" longdesc="Tuner News! Latest Products, Events, &amp; Updates"/></td>
+          <td><img src="images/bodytopright.gif" width="14" height="20" alt=""/></td>
+        </tr>
+        <tr> 
+          <td class="bodyleftbg" width="14"><img src="images/clearpixel.gif" width="14" height="1" alt=""/></td>
+          <td>  <p style="margin-top: 5px; margin-bottom: 1px">&nbsp;</p>
+		  <table style="width: 100%">
+			  <tr>
+				  <td>
+		  <p style="margin-top: 5px; margin-bottom: 1px">
+		  <a href="http://tunertools.com/products.asp?cat=BRZ-FRS-FT86">
+		  <img alt="Scion FR-S, Toyota FT86 &amp; Subaru BRZ have a lot of great performance products available, including new twin screw supercharger package available any time now!    See all our products for the FR-S, BRZ &amp; FT86 here!" height="97" longdesc="Scion FR-S, Toyota FT86 &amp; Subaru BRZ have a lot of great performance products available, including new twin screw supercharger package available any time now!    See all our products for the FR-S, BRZ &amp; FT86 here!" src="http://tunertools.com/images/FR-S-White.jpg" style="float: left; border-style: solid; border-width: 0px; margin-left: 7px; margin-right: 7px" width="180" /></a></p>
+				  <p style="margin-top: 5px; margin-bottom: 1px"><strong>Scion FR-S, 
+		  Toyota FT86 &amp; Subaru BRZ</strong> have a lot of great performance products 
+				  available, including new twin screw supercharger package 
+		  available any time now!&nbsp;&nbsp;&nbsp;
+				  <a href="http://tunertools.com/products.asp?cat=BRZ-FRS-FT86" title="Products for the Subaru BRZ, Scion FR-S &amp; Toyota FT 86 are segregated here. We just think these cars are a bit special and want to make it easy to find what you want.">See 
+				  all our products for the FR-S, BRZ &amp; FT86 here!</a></p>
+				  <p style="margin-top: 5px; margin-bottom: 1px">&nbsp;</p>
+				  <p style="margin-top: 5px; margin-bottom: 1px">
+				  <strong><em>
+				  <a href="f1-standings.asp" target="_blank" title="F1 Results, Standings &amp; News updated from the Hungarian Gran Prix, 28 July ">
+				  F1 Results, Standings &amp; News updated from the Hungarian Gran 
+				  Prix, 28 July </a> </em></strong></p>
+		  		</td>
+			  </tr>
+		  </table>
+		  <ul>
+			  <li>
+			  <strong>
+			  GDS2 Diagnostics for General Motors Now Supported! </strong>
+			  <ul>
+				  <li>
+				  <a href="http://tunertools.com/drew-tech-mongoose-pro-gm-ii-!!-supports-general-motors-diagnostics-&-programming.html" target="_blank" title="The newest public release of GM's Diagnostics Software, GDS2 version 11.0.09412, now works with DrewTech's CarDAQ-M and MongoosePro GM II. GM will not be providing technical support for aftermarket devices with GDS2 so customers will be encouraged to conta">
+				  <strong>The GM Mongoose PRO II now supports GDS2 General Motors 
+				  Diagnostics!</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/cardaq!!m-!!-passthru-j2534-reflash***diagnostics-hardware.html" target="_blank" title="The newest public release of GM's Diagnostics Software, GDS2 version 11.0.09412, now works with DrewTech's CarDAQ-M and MongoosePro GM II. GM will not be providing technical support for aftermarket devices with GDS2 so customers will be encouraged to conta">
+				  <strong>The CarDAQ-M Now supports GDS2 General Motors Diagnostics!</strong></a></li>
+			  </ul>
+			  </li>
+			  <li><strong>New Coverage Released! </strong>
+			  <ul>
+				  <li>
+				  <a href="http://tunertools.com/new-flashpaq!!!--ford,-lincoln,-mazda,-mercury-diesel***gas.html" target="_blank" title="2013 Ford Powerstroke 6.7L Tuning is released on the Flashpaq with 157 additional horsepower!">
+				  <strong>2013 Ford Powerstroke 6.7L Tuning is released on the 
+				  Flashpaq with 157 additional horsepower!</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/new-flashpaq!!!--ford,-lincoln,-mazda,-mercury-diesel***gas.html" target="_blank" title="2014 F-150 and Ford Raptor 6.2L is Tuned! ">
+				  <strong>2014 F-150 and Ford Raptor 6.2L is Tuned! </strong>
+				  </a> </li>
+				  <li>
+				  <a href="http://tunertools.com/new-flashpaq!!!--ford,-lincoln,-mazda,-mercury-diesel***gas.html" target="_blank" title="2014 Ford Mustang and Mustang GT are now covered by the Superchips Flashpaq 1840">
+				  <strong>2014 Ford Mustang and Mustang GT are now covered by 
+				  the Superchips Flashpaq 1840</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/bully-dog!!!-triple-dog-gt-gas-tuner***gauge-monitor-40415-not-ca-legal.html" target="_blank" title="2014 Silverados and Sierras with 5.3L, 6.0L and 6.2L gas engines TUNED! Bullyd Dog GT Gas (40415)">
+				  <strong>2014 Silverados and Sierras with 5.3L, 6.0L and 6.2L 
+				  gas engines TUNED! Bully Dog GT Gas (40415)</strong></a> </li>
+				  <li>
+				  <a href="http://tunertools.com/intune-virtual-gauge-monitor,-performance-programmer,-and-diagnostic-code-reader.html" target="_blank" title="Diablosport inTune now has coverage for the 2014 GM Truck 5.3L">
+				  <strong>Diablosport inTune now has coverage for the 2014 GM 
+				  Truck 5.3L</strong></a><strong> </strong></li>
+				  <li>
+				  <strong>
+				  <a href="http://tunertools.com/diablosport-rebates.asp" title="2014 Camaro SS is Tuned!  See the Diablosport Trinity or inTune">
+				  2014 Camaro SS is Tuned!&nbsp; See the Diablosport Trinity or 
+				  inTune</a></strong></li>
+				  <li>
+				  <a href="http://tunertools.com/products.asp?cat=Diablosport" target="_blank" title="Diablosport inTune &amp; Trinity now have tuning for the 2014 Mustang V6, GT and GT500">
+				  <strong>Diablosport inTune &amp; Trinity now have tuning for the 2014 Mustangs</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/edge!!!-evolution-cs-diesel-!!-85100.html" target="_blank" title="Edge Evolution ">
+				  <strong>Edge Evolution </strong></a>
+				  <a href="http://tunertools.com/edge-evoht-programmer-dodge,-chrysler-gas-&-diesel-trucks-&-suv^s.html" target="_blank" title="and EvoHT now has Cummins diesel coverage from 1998.5-2012">
+				  <strong>and EvoHT now has Cummins diesel coverage from 
+				  1998.5-2012</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/search.asp?nobox=&amp;scat=&amp;stext=Edge+Evolution&amp;stype=&amp;sprice=&amp;pg=2" target="_blank" title="Edge Evolution">
+				  <strong>Edge Evolution</strong></a>
+				  <a href="http://tunertools.com/edge-plist.htm" target="_blank" title="Edge EvoHT Ford">
+				  <strong>and </strong></a>
+				  <a href="http://tunertools.com/edge-evoht-programmer-ford-diesel***gas.html" target="_blank" title="Edge EvoHT Ford">
+				  <strong>EvoHT</strong></a>
+				  <a href="http://tunertools.com/edge-plist.htm" target="_blank">
+				  <strong>now has tuning for the 2013 Ford Powerstroke 6.7L
+				  </strong></a></li>
+			  </ul>
+			  </li>
+			  <li><strong>Superchips Flashpaq 3840 Now includes Cummins 6.7L Tuning!</strong><ul>
+				  <li>
+				  <a href="http://tunertools.com/flashpaq-3840!!!-dodge***chrysler***ram-diesel***gas.html" target="_blank" title="The 3840 Flashpaq covers 2007-2012 6.7L Dodge Cummins">
+				  <strong>The 3840 Flashpaq covers 2007-2012 6.7L Dodge Cummins</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/flashpaq-3840!!!-dodge***chrysler***ram-diesel***gas.html" target="_blank" title="Up to 85 additional Horsepower &amp; 235 ft/lb of torque!">
+				  <strong>Up to 85 additional Horsepower &amp; 235 ft/lb of torque!</strong></a></li>
+			  </ul>
+			  </li>
+			  <li><strong>Laptop Custom Tuning</strong><ul>
+				  <li>
+				  <a href="http://tunertools.com/hptuners!!!-vcm-suite-automotive-programming-|-see-options-for-pro,-standard,-gm-or-ford.html" target="_blank" title="HPTuners Version 2.24 is out with new vehicles supported!">
+				  <strong>HPTuners Version 2.24 is out with new vehicles 
+				  supported!</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/hptuners-plist.htm" target="_blank">
+				  <strong>Credits for additional tuning with HPTuners are 
+				  cheaper at Tuner Tools!</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/sniper-commando-tuning-kit-!!-ford-gas-&-diesel.html" target="_blank" title="Sniper Commando Tuning Kit - Ford Gas &amp; Diesel thru 2010">
+				  <strong>Sniper Commando Tuning Kit - Ford Gas &amp; Diesel thru 
+				  2010</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/efilive-plist.htm" target="_blank" title="EFILive: FlashScan V2 with GM &amp; Dodge Cummins Tuning ">
+				  <strong>EFILive: FlashScan V2 with GM &amp; Dodge Cummins Tuning
+				  </strong></a></li>
+			  </ul>
+			  </li>
+			  <li><strong>Jeep Stuff News!</strong><ul>
+				  <li>
+				  <a href="http://tunertools.com/search.asp?nobox=&amp;scat=&amp;stext=traildash&amp;stype=&amp;sprice=&amp;pg=1" target="_blank" title="Now Stocking the full line of accessories for the Jeep TrailDASH">
+				  <strong>Now Stocking the full line of accessories for the Jeep 
+				  TrailDASH</strong></a><ul>
+					  <li>
+					  <a href="http://tunertools.com/search.asp?nobox=&amp;scat=&amp;stext=traildash&amp;stype=&amp;sprice=&amp;pg=1" target="_blank" title="Jeep DashPod Mount">Wrangler DashPod Mount</a></li>
+					  <li>
+					  <a href="http://tunertools.com/superchips-expandable-accessory-system-for-traildash-power-switch-w***-starter-kit.html" target="_blank" title="TrailDASH Power Swtch with EAS Starter Kit">TrailDASH Power Swtch with EAS Starter Kit</a></li>
+					  <li>
+					  <a href="http://tunertools.com/eas-universal-sensor-input-(5-volt)-98605.html" target="_blank" title="EAS Universal 5v Sensor Input Harness">EAS Universal 5v Sensor Input Harness</a></li>
+					  <li>
+					  <a href="http://tunertools.com/eas-pressure-sensor-98607.html" target="_blank" title="EAS Pressure Sensor Kit">EAS Pressure Sensor Kit</a></li>
+					  <li>
+					  <a href="http://tunertools.com/eas-temperature-sensor-98608.html" target="_blank" title="EAS Temperature Sensor Kit">EAS Temperature Sensor Kit</a></li>
+					  <li>
+					  <a href="http://tunertools.com/eas-ambient-temperature-sensor-98610.html" target="_blank" title="EAS Ambient Temperature Sensor Kit">EAS Ambient Temperature Sensor Kit</a></li>
+					  <li>
+					  <a href="http://tunertools.com/trail-jammer-tdx-!!-superchips-traildash,-cold-air-intake-&-throttle-body.html" target="_blank" title="Jeep Wrangler TDX Intake, Throttle Body &amp; more! ">TDX Intake, Throttle Body &amp; more! 
+					  </a></li>
+				  </ul>
+				  </li>
+				  <li>
+				  <a href="http://tunertools.com/proddetail.asp?prod=SC-3570" target="_blank" title="Jeep Wrangler JK Calibration Tool is here!  The FlashCal is just $159 &amp; FREE SHIPPING">
+				  <strong>Jeep Wrangler JK Calibration Tool is here!&nbsp; The 
+			  FlashCal is just $159</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/proddetail.asp?prod=BD-40440" target="_blank" title="Bully Dog GT Gauge Tuner for Jeep, 2006-2013">
+				  <strong>Bully Dog has released a new GT Tuner for the 2006 thru 
+			  2013 Jeeps!</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/new-flashpaq!!!--jeep-cherokee,-grand-cherokee,-wrangler,-laredo,-limited,-rubicon,-commander.html" target="_blank" title="Superchips Flashpaq 3870 - Jeep Cherokee, Grand Cherokee, Wrangler, Laredo, Limited, Rubicon, Commander with coverage from 1999-2010.">
+				  <strong>Superchips Flashpaq 3870 - Jeep Cherokee, Grand 
+				  Cherokee, Wrangler, Laredo, Limited, Rubicon, Commander with 
+				  coverage from 1999-2010.</strong></a></li>
+			  </ul>
+			  </li>
+			  <li><strong>Diesel Pick&nbsp; Ups</strong><ul>
+				  <li>
+				  <a href="http://tunertools.com/products.asp?cat=Diesel+Pickup+Gauge+Sets" target="_blank" title="Auto Meter,  Diesel Pickup Gauge Sets">
+				  <strong>Autometer Gauge Kits for Diesel Pickups are now stocked at 
+			  Tuner Tools</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/search.asp?pg=1&amp;stext=Edge+EvoHT&amp;sprice=400&amp;stype=exact&amp;scat=355&amp;sman=" target="_blank">
+				  <strong>Edge EvoHT Tuners have new designs &amp; massive coverage!</strong></a><ul>
+					  <li>
+					  <a href="http://tunertools.com/proddetail.asp?prod=EDGE-16030" target="_blank" title="Edge EvoHT Programmer Ford Diesel/Gas (Diesel 94-12 &amp; Gas 97-13)">FORD DIESEL/GAS EVO HT (Diesel 94-12 &amp; Gas 97-13)</a></li>
+					  <li>
+					  <a href="http://tunertools.com/proddetail.asp?prod=EDGE-26030" target="_blank" title="Edge EvoHT Programmer GM Diesel/Gas (Diesel 01-13 &amp; Gas 99-13)">GM DIESEL/GAS EVO HT (Diesel 01-13 &amp; Gas 99-13) 
+					  </a></li>
+					  <li>
+					  <a href="http://tunertools.com/proddetail.asp?prod=EDGE-36030" target="_blank" title="Edge EvoHT Programmer Dodge, Chrysler Gas &amp; Diesel Trucks &amp; SUV's (Diesel 03-09 &amp; Gas 98-10)">DODGE/RAM DIESEL/GAS EVO HT (Cummins 
+					  99-12 &amp; Gas 98-10)</a></li>
+				  </ul>
+				  </li>
+			  </ul>
+			  </li>
+			  <li><strong>Mustang News!</strong><ul>
+				  <li>
+				  <a href="http://tunertools.com/proddetail.asp?prod=SC-8040" target="_blank" title="Superchips Redline SCR in-cabin tuner programs the 2013 Ford Focus St &amp; 04-13 Mustangs">
+				  <strong>Superchips Redline SCR in-cabin tuner programs 04-13 Mustangs</strong></a></li>
+				  <li>
+				  <a href="http://tunertools.com/products.asp?cat=Diablosport" target="_blank" title="Diablosport inTune &amp; Trinity now have tuning for the 2014 Mustang V6, GT and GT500">
+				  <strong>Diablosport inTune &amp; Trinity now have tuning for the 2014 Mustangs</strong></a></li>
+			  </ul>
+			  </li>
+			  <li><strong>On Sale Now:</strong><ul>
+				  <li>
+				  <strong>
+				  <a href="http://tunertools.com/cobb-accessport.asp" title="Cobb AccessPort V2 Programmers are On Sale!">
+				  Cobb AccessPort V2 Programmers are On Sale!</a></strong></li>
+				  <li>
+				  <strong>
+				  <a href="http://tunertools.com/superchips-rebate.asp" title="Superchips Flashpaq on sale for just $267 &amp; FREE SHIPPING">
+				  Superchips Flashpaq on sale for just $267 &amp; FREE SHIPPING</a></strong></li>
+				  <li>
+				  <strong>
+				  <a href="http://tunertools.com/search.asp?pg=1&amp;stext=PLX-DM-5&amp;sprice=&amp;stype=&amp;scat=&amp;sman=" target="_blank" title="All PLX DM5 Gauges on sale for $50 each!">
+				  All PLX DM5 Gauges on sale for $50 each! Limited stock</a></strong>.</li>
+				  <li>
+				  <a href="http://tunertools.com/launch!!!--c-reader-v-obd!!ii-automotive-scan-tool.html" target="_blank" title="Launch C Reader Scan Tool on sale for $60">
+				  <strong>Launch C Reader Scan Tool on sale for $60</strong></a></li>
+			  </ul>
+			  </li>
+		  </ul>
+			<p style="text-align: center">
+					 <a href="http://www.facebook.com/TunerToolsLLC" target="_blank">
+					 <img alt="Chat with us on Facebook" height="44" longdesc="Chat with us on Facebook" src="images/social/facebook.gif" style="border-style: solid; border-width: 0px" width="141" /></a>&nbsp;
+					 <a href="https://twitter.com/#!/TunerTools" target="_blank">
+					 <img alt="Follow Tuner Tools on Twitter" height="44" longdesc="Follow Tuner Tools on Twitter" src="images/social/twitter.jpg" style="border-style: solid; border-width: 0px" width="141" /></a>&nbsp;
+					 <a href="http://pinterest.com/tunertools/" target="_blank">
+					 <img alt="Follow Tuner Tools on Pinterest" height="44" longdesc="Follow Tuner Tools on Pinterest" src="images/social/pinterest.gif" style="border-style: solid; border-width: 0px" width="141" /></a>&nbsp;
+					 <a href="http://www.linkedin.com/pub/lloyd-barnhill/10/843/8a7" target="_blank">
+					 <img alt="Connect with Tuner Tools at LinkedIn" height="44" longdesc="Connect with Tuner Tools at LinkedIn" src="images/social/linkedin.gif" style="border-style: solid; border-width: 0px" width="141" /></a><a href="http://www.youtube.com/user/TunerToolsLLC/videos?view=1&amp;flow=grid" target="_blank"><img alt="Tuner Tools You Tube Channel" height="45" longdesc="Tuner Tools You Tube Channel" src="images/social/youtube.gif" style="border-style: solid; border-width: 0px" width="141" /></a></p>
+ 
+            </td>
+          <td align="center">
+		  &nbsp;</td>
+          <td class="bodyrightbg" width="10"><img src="images/clearpixel.gif" width="10" height="8" alt=""/></td>
+        </tr>
+        <tr> 
+          <td class="bodyleftbg" width="14">&nbsp;</td>
+          <td colspan="2"> 
+            <hr/>
+             <p><b><a href="http://www.TunerTools.com">www.TunerTools.com</a> </b>
+		  is your family owned American source for the newest, most advanced and 
+		  highest quality automotive gas &amp; diesel flash tuners, tuning modules, 
+		  stand alone &amp; piggy back ECU's, Data Logging, Gauges, OBD-II and SAE J2534 pass-thru 
+		  programming tools on the market.</p>
+			
+ <form method="post" action="http://oi.vresp.com?fid=17fb05f58c" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;" >
+ <div align="center" style="font-family: verdana; font-size: 10px; padding: 0px; border: 0px solid #dddddd; background: #ffffff">
+    <strong><span style="color: #333333;">Dealer Inquiries Welcome, please contact us for details (dealers ONLY please)
+    </span></strong><br/><br/>
+    <input type="submit" value="Request Dealer Information" style="border: 1px solid #999; padding: 3px;"/><br/>
+    <br/>
+  </div>
+</form>
+
+			
+			
+          </td>
+          <td class="bodyrightbg" width="10">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td valign="top" colspan="4" bgcolor="#767981"><img src="images/clearpixel.gif" width="1" height="1" alt=""/></td>
+        </tr>
+      </table>
+      <!-- #EndEditable -->
+    </td><!-- #BeginEditable "Right" --> 
+    <td width="130" valign="top"><!-- #BeginLibraryItem "/Library/right.lbi" -->
+    <br>
+	<a href="catehome.asp?cat=Product+Types">
+	<img src="images/ProdTypes.gif" alt="Products Available at www.TunerTools.com" height="20" style="border-style: solid; border-width: 0px" width="130"/></a><br/><table bgcolor="#767981" border="0" cellspacing="0" width="128">
+        <tbody> 
+        <tr> 
+          <td valign="top" width="128"> 
+            <table border="0" cellpadding="5" cellspacing="0" width="128">
+              <tbody> 
+              <tr> 
+                
+          <td class="smaller" bgcolor="#FFFFFF">
+		  <script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+		  <script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+		  <script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+		  <script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+		  <script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+		  <a href="http://tunertools.com/training.asp">
+		  <img id="img21" alt="Training" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img21',/*url*/'images/buttons/button37.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img21',/*url*/'images/buttons/button35.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img21',/*url*/'images/buttons/button36.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img21',/*url*/'images/buttons/button36.jpg')" src="images/buttons/button35.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Training" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Tuning+Books+%26+DVDs">
+		  <img id="img23" alt="Books &amp; DVDs" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img23',/*url*/'images/buttons/button2BF.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img23',/*url*/'images/buttons/button2BD.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img23',/*url*/'images/buttons/button2BE.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img23',/*url*/'images/buttons/button2BE.jpg')" src="images/buttons/button2BD.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Books &amp; DVDs" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=SAE+J2534+Pass-Thru+Programming">
+		  <img id="img22" alt="J2534 Pass-thru" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img22',/*url*/'images/buttons/button73.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img22',/*url*/'images/buttons/button71.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img22',/*url*/'images/buttons/button72.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img22',/*url*/'images/buttons/button72.jpg')" src="images/buttons/button71.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="J2534 Pass-thru" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Laptop+Tuning">
+		  <img id="img24" alt="Laptop Tuning" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img24',/*url*/'images/buttons/button2C2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img24',/*url*/'images/buttons/button2C0.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img24',/*url*/'images/buttons/button2C1.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img24',/*url*/'images/buttons/button2C1.jpg')" src="images/buttons/button2C0.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Laptop Tuning" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Flash+Tuners">
+		  <img id="img18" alt="Flash Tuners" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img18',/*url*/'images/buttons/button76.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img18',/*url*/'images/buttons/button74.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img18',/*url*/'images/buttons/button75.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img18',/*url*/'images/buttons/button75.jpg')" src="images/buttons/button74.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Flash Tuners" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Monitors+%26+Performance+Meters">
+		  <img id="img19" alt="Monitors/Gauges" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img19',/*url*/'images/buttons/button79.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img19',/*url*/'images/buttons/button77.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img19',/*url*/'images/buttons/button78.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img19',/*url*/'images/buttons/button78.jpg')" src="images/buttons/button77.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Monitors/Gauges" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=iPhone+%2F+Android+Tuning">
+		  <img id="img20" alt="iPhone/Android" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img20',/*url*/'images/buttons/button7C.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img20',/*url*/'images/buttons/button7A.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img20',/*url*/'images/buttons/button7B.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img20',/*url*/'images/buttons/button7B.jpg')" src="images/buttons/button7A.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="iPhone/Android" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=OBD+Diagnostics">
+		  <img id="img25" alt="OBD Diagnostics" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img25',/*url*/'images/buttons/button2C5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img25',/*url*/'images/buttons/button2C3.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img25',/*url*/'images/buttons/button2C4.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img25',/*url*/'images/buttons/button2C4.jpg')" src="images/buttons/button2C3.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="OBD Diagnostics" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Data+Loggers">
+		  <img id="img26" alt="Data Loggers" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img26',/*url*/'images/buttons/button2C8.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img26',/*url*/'images/buttons/button2C6.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img26',/*url*/'images/buttons/button2C7.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img26',/*url*/'images/buttons/button2C7.jpg')" src="images/buttons/button2C6.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Data Loggers" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Knock+Monitoring">
+		  <img id="img27" alt="Knock Monitors" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img27',/*url*/'images/buttons/button2CB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img27',/*url*/'images/buttons/button2C9.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img27',/*url*/'images/buttons/button2CA.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img27',/*url*/'images/buttons/button2CA.jpg')" src="images/buttons/button2C9.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Knock Monitors" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=EGT+Monitoring">
+		  <img id="img28" alt="EGT Monitors" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img28',/*url*/'images/buttons/button2CE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img28',/*url*/'images/buttons/button2CC.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img28',/*url*/'images/buttons/button2CD.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img28',/*url*/'images/buttons/button2CD.jpg')" src="images/buttons/button2CC.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="EGT Monitors" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Air%2FFuel+Wideband+Systems">
+		  <img id="img29" alt="AFR Wideband" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img29',/*url*/'images/buttons/button2D1.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img29',/*url*/'images/buttons/button2CF.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img29',/*url*/'images/buttons/button2D0.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img29',/*url*/'images/buttons/button2D0.jpg')" src="images/buttons/button2CF.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="AFR Wideband" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Boost+Controllers">
+		  <img id="img30" alt="Boost Controllers" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img30',/*url*/'images/buttons/button2D4.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img30',/*url*/'images/buttons/button2D2.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img30',/*url*/'images/buttons/button2D3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img30',/*url*/'images/buttons/button2D3.jpg')" src="images/buttons/button2D2.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Boost Controllers" /></a><br />
+		  <a href="http://tunertools.com/products.asp?cat=Replacement+Parts">
+		  <img id="img31" alt="Replacement Parts" height="23" onmousedown="FP_swapImg(0,0,/*id*/'img31',/*url*/'images/buttons/button2D7.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img31',/*url*/'images/buttons/button2D5.jpg')" onmouseover="FP_swapImg(0,0,/*id*/'img31',/*url*/'images/buttons/button2D6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img31',/*url*/'images/buttons/button2D6.jpg')" src="images/buttons/button2D5.jpg" style="border: 0" width="115" fp-style="fp-btn: Glass Rectangle 5; fp-font-color-hover: #CC0000; fp-font-color-press: #CC0000; fp-preload: 0" fp-title="Replacement Parts" /></a><br />
+		  
+
+
+		  		</td>
+              </tr>
+              </tbody> 
+            </table>
+          </td>
+        </tr>
+        </tbody> 
+      </table>
+      <img src="images/check.gif" alt=""/><br/>
+      <table bgcolor="#767981" border="0" cellspacing="0" width="128">
+        <tbody> 
+        <tr> 
+          <td valign="top" width="128"> 
+            <table border="0" cellpadding="5" cellspacing="0" width="128">
+              <tbody> 
+              <tr> 
+                <td class="smaller" bgcolor="#FFFFFF" align="center">
+     
+<p style="text-align: center">
+<a href="http://tunertools.com/cobb-accessport.asp" target="_blank" title="Cobb V2 AccessPort Tuners are on sale!">
+<strong>Cobb AccessPort<br>On Sale! </strong></a></p>
+<p style="text-align: center">
+<a href="http://tunertools.com/diablosport-rebates.asp" title="In honor of America's greatest holiday, Independence Day, Diablosport is running a rebate promotion for the entire month of July. ">
+<strong>Diablosport has tuned the 2014 Camaro SS!</strong></a></p>
+<p style="text-align: center">
+<a href="http://tunertools.com/superchips-rebate.asp" title="SUPERCHIPS FLASHPAQ CLEARANCE SALE!">
+<strong>$267<br>Superchips Flashpaq Tuners!<br>click here!</strong></a></p>
+<p style="text-align: center">
+<strong>
+<a href="http://tunertools.com/Tuning-Newsletter.asp" target="_blank" title="Free J2534 Training &amp; Hot Deals">
+Newletter<br>Summer Sizzling!<br>Free Training<br>GM Diagnostics<br>Superchips 
+Sale!</a></strong></p>
+<p style="text-align: center">
+&nbsp;</p>
+
+
+
+                </td>
+              </tr>
+              </tbody> 
+            </table>
+          </td>
+        </tr>
+        </tbody> 
+      </table>
+      <img src="images/contactinfo.gif" alt=""/><br/>
+      <table bgcolor="#767981" border="0" cellspacing="0" width="128">
+        <tbody> 
+        <tr> 
+          <td valign="top" width="128"> 
+            <table border="0" cellpadding="5" cellspacing="0" width="128">
+              <tbody> 
+              <tr> 
+                <td class="smaller" bgcolor="#FFFFFF" align="center">
+     
+<p style="text-align: center">
+<a href="https://www.facebook.com/TunerToolsLLC" target="_blank">
+<img alt="Tuner Tools Facebook Page" height="45" longdesc="Tuner Tools Facebook Page" src="images/Facebook.jpg" style="border-style: solid; border-width: 0px; height: 38px; width: 38px;" width="105" /></a><a href="https://twitter.com/#!/TunerTools" target="_blank"><img alt="Tuner Tools on Twitter" height="38" src="images/twitter2.jpg" style="border-style: solid; border-width: 0px" width="47"></a><a href="http://www.linkedin.com/pub/lloyd-barnhill/10/843/8a7" target="_blank"><img alt="Tuner Tools on Linked In" height="38" longdesc="Tuner Tools on Linked In" src="images/linkedin2.jpg" style="border-style: solid; border-width: 0px" width="45"></a><br />
+Tuner Tools LLC<br />
+888 OBD TUNE<br />
+<a href="http://tunertools.com/contact.asp" title="Contact the staff at Tuner Tools LLC">
+Contact Us</a></p>
+
+
+                  </td>
+              </tr>
+              </tbody> 
+            </table>
+          </td>
+        </tr>
+        </tbody> 
+      </table>
+
+
+<!-- #EndLibraryItem --></td><!-- #EndEditable -->
+  </tr>
+  <tr align="center"> 
+    <td colspan="3">
+      <p><a href="index.asp" title="Tuner Tools - the Inside Line">home</a> - 
+	  <a href="http://tunertools.com/sitemap.asp" title="Site Map of Tuner Tools">site map</a> 
+        - 
+	  <a href="search.asp" title="Search Tuner Tools for your automotive tuning &amp; diagnostics">
+	  search</a> - 
+	  <a href="http://tunertools.com/categories.asp?cat=Brand+Line+Card" title="Tuner Tools Brand Line Card">brands</a> - <a href="about.asp" title="About Tuner Tools LLC">about 
+        us</a> - <a href="contact.asp" title="Contact Tuner Tools Staff">contact</a> 
+	  - <a href="privacy.asp" title="Tuner Tools Privacy Policies">privacy</a> - 
+	  <a href="terms.asp" title="Tuner Tools Terms of Service">terms of service</a> -
+	  <a href="cart.asp" title="See your shopping cart &amp; checkout">cart</a></p>
+	  <a href="http://tunertools.com/affiliate.asp" target="_blank" title="Tuner Tools Affiliates: Access your account here">
+	  Tuner Tools Affiliates: Access your account here</a><br />
+	  Copyright 2006-2013 Tuner Tools LLC - All Rights Reserved Worldwide<br/>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

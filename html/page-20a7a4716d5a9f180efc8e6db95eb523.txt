@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Nissan USA Official Site: 2014 Nissan Versa information, key features, colors, and photos."/>
+<title>2014 Nissan Versa - Models, Pricing &amp; Information | Nissan USA</title>
+<link rel="canonical" href="http://www.nissanusa.com/versa/" />
+<link rel="stylesheet" href="/versa_entry_page/en/css/normalize.css" media="screen"/>
+<link rel="stylesheet" href="/versa_entry_page/en/css/style.css" media="screen"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<script src="/versa_entry_page/en/js/libs/modernizr-2.0.6.custom.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="nissan_global_navigation"></div>
+	<div id="content-area">
+        <h1>THE 2014 NISSAN VERSA� SEDAN AND 2014 VERSA<sup>�</sup> NOTE�
+THERE'S ROOM FOR EVERYONE. <small>Choose your Versa</small></h1>
+        <ul id="versa_vlp_trims">
+            <li id="versa_sedan">
+                <a class="car_link" href="/versa-sedan/?next=Versa_Gateway.Versa_Sedan.Versa_Sedan.vlp.background">Versan Sedan</a>
+                <div>
+                    <h2>Sedan</h2>
+                    <p>Climb in the Big Little Car, and bring your friends along. Versa Sedan has room for 5 and loads of front and rear headroom and legroom. Starting at $11,990[1].</p>
+                    <ul>
+                        <li><a class="button_explore" href="/versa-sedan/?next=Versa_Gateway.Versa_Sedan.Versa_Sedan.vlp.button1">Explore Versa Sedan</a></li>
+                        <li><a href="/tools/build/versa-sedan?next=Versa_Gateway.Versa_Sedan.Config.button2">Build your own Versa Sedan</a></li>
+                        <li><a href="/tools/raq/versa-sedan?next=Versa_Gateway.Versa_Sedan.RAQ.button3">Request a quote</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="versa_hatch">
+                <a class="car_link" href="/versa-note/?next=Versa_Gateway.Versa_Hatchback.Versa_Hatchback.vlp.background">Versan Note</a>
+                <div>
+                    <h2>Note</h2>
+                    <p>When life gets bigger, Versa Note accomodates, Room for 5 best in class rear legroom[2] and fuel-sipping 31/40 City/Hwy MPG[3] Nissan performance, all starting at $13,990[4].</p>
+                    <ul>
+                        <li><a class="button_explore" href="/versa-note/?next=Versa_Gateway.Versa_Hatchback.Versa_Hatchback.vlp.button1">Explore Versa Note</a></li>
+                        <li><a href="/tools/build/versa-note?next=Versa_Gateway.Versa_Hatchback.Config.button2">Build your own Versa Note</a></li>
+                        <li><a href="/tools/raq/versa-note?next=Versa_Gateway.Versa_Hatchback.RAQ.button3">Request a quote</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <a id="content_disclaimer" href="javascript:;">Disclaimer</a>
+        <ol id="disclaimer_info">
+            <li>All prices are Manufacturer's Suggested Retail Price (MSRP). MSRP excludes destination and handling charges, tax, title, license and options. Dealer sets actual price.</li>
+            <li>AutoPacific segmentation. MY14 Versa Note v. 2013 Economy Compact Class, 5 passenger vehicles, excluding electrics and hybrids.</li>
+            <li>2014 EPA Fuel Economy Estimates. Actual mileage may vary with driving conditions.</li>
+            <li>All prices are Manufacturer's Suggested Retail Price (MSRP). MSRP excludes destination and handling charges, tax, title, license and options. Dealer sets actual price.</li>
+        </ol>
+	</div>
+	<div id="nissan_global_footer" class="thin"></div>
+	<script src="/AppGateway/nissan_global_navigation.js?lang=en" async></script>
+</div>
+<!-- JS -->
+<script src="/versa_entry_page/en/js/libs/jquery-1.6.4.min.js"></script>
+<script src="/versa_entry_page/en/js/init.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	// Disclaimer window
+	jQuery("#content_disclaimer").hover(discOver, discOut);
+	function discOver(evt){evt.preventDefault();jQuery("#disclaimer_info").fadeIn("fast");}
+	function discOut(evt){evt.preventDefault();jQuery("#disclaimer_info").fadeOut("fast");}
+});
+</script>
+<!-- Mainsite dependancies -->
+<script src="/js/shared.js"></script>
+<script src="/js/swfobject/swfnav.js"></script>
+<script src="/js/crm/engine.js" id="crmEngine" pageid="30553" pagelocale="en" pagesite="nissan"></script>
+<!-- Social Buttons -->
+<script>
+		(function($) {
+			$.getScript('//platform.twitter.com/widgets.js', function(e) {
+				twttr.events.bind('click', function(e) {
+					// user auth required
+					$('body').trigger({
+						type:'nna_share_auth_prompt',
+						shareDestination: 'Twitter'
+					});
+				});
+				twttr.events.bind('tweet', function(e) {
+					// User has tweeted
+					$('body').trigger({
+						type:'nna_share_confirm',
+						shareDestination: 'Twitter'
+					});
+				});
+			});
+		})(jQuery);
+	</script>
+<div id="fb-root">
+</div>
+<script>
+		// Facebook
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {FB.init({xfbml: true}); return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			window.fbAsyncInit = function() {
+				FB.Event.subscribe('edge.create', function(response) {
+					// user clicked on the like button
+					jQuery('body').trigger({
+						type:'nna_share_confirm',
+						shareDestination: 'Facebook'
+					});
+				});
+				// user is prompted to login
+				FB.Event.subscribe('auth.prompt', function(response) {
+					// auth required before liking
+					jQuery('body').trigger({
+						type:'nna_share_auth_prompt',
+						shareDestination: 'Facebook'
+					});
+				});
+			};
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+</body>
+</html>

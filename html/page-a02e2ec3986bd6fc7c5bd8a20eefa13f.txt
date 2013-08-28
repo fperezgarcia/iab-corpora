@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="BD8pXgIuJjtxt0oaeHhsG5Tq3G91bfIX5IqAwuuPrB0" />
+<meta NAME="Description" CONTENT="">
+<title> - Hunters Custom Automotive</title>
+<base href="http://www.hunterscustom.com/" />
+<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="ext/jquery/ui/aristo/jquery-ui-1.8.7.custom.css" />
+<script type="text/javascript" src="ext/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="ext/jquery/ui/jquery-ui-1.8.6.min.js"></script>
+
+
+<script type="text/javascript" src="ext/jquery/bxGallery/jquery.bxGallery.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="ext/jquery/fancybox/jquery.fancybox-1.3.4.css" />
+<script type="text/javascript" src="ext/jquery/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$( "button, input:submit, a", ".search_box" ).button();
+	$('#make_select').change(function() {
+		$.post("ajax.php", { make: $(this).val(), go: 'select_models' },function(data) {
+			$('#model_select').html(data);
+		});
+	});
+	$('#model_select').change(function() {
+		$.post("ajax.php", { year: $('#year_select').val(), make: $('#make_select').val(), model: $(this).val(), go: 'select_vehicle' },function(data) {
+			$('#vehicle_select_form').hide();
+			$('#vehicle_name').html(data);
+			$('#vehicle_selected').show();
+			location.reload(true);
+		});
+	});
+	$('#reset_vehicle').click(function() {
+		$.post("ajax.php", { go: 'reset_vehicle' },function(data) {
+			$('#vehicle_select_form').show();
+			$('#vehicle_selected').hide();
+			location.reload(true);
+		});
+		return false;
+	});
+	$('.agselect').click(function() {
+		var agid = $(this).attr("id");
+		$.post("ajax.php", { go: 'select_appguide_vehicle', appguide_id: agid },function(data) {
+			location.reload(true);
+		});
+		return false;
+	});
+	$(".fancy").fancybox({
+		overlayOpacity: 0.4,
+		overlayColor: '#000'
+	});
+	$("a#inline").fancybox({
+		'hideOnOverlayClick': false,
+		overlayOpacity: 0.7,
+		overlayColor: '#000',
+		onStart		:	function() {
+			var appguide_id = $("#matches_div").attr("class");
+			$.post("ajax.php", { appguide_id: appguide_id },function(data) {
+			});
+		},
+	});
+	$("a#inline").trigger('click');
+	
+	
+})
+</script>
+<link rel="stylesheet" type="text/css" href="ext/960gs/960_24_col.css" />
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<body>
+<div id="bodyWrapper">
+
+
+<div id="header">
+	
+	<div style="float:left;margin-right:10px;"><a href="/"><img src="/images/layout/logo.png" style="margin-left:5px;" border="0" class="storeLogo"></a></div>
+	<div style="color:white;float:left;padding-top:55px;font-family: arial, serif;">
+	<div style="float:left;margin-top:10px;"><div style="color:#e00024;font-size:12px;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CALL US TOLL FREE</div><div style="font-size:26px;margin-top:12px;">800-251-3548</div></div>
+	<div style="float:left;margin-left:30px;margin-bottom:5px;margin-top:10px;"><div style="color:#e00024;font-size:12px;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR LOCALLY</div><div style="font-size:26px;margin-top:12px;">615-227-6584</div></div>
+	<div style="margin-top:10px;text-align:center;font-size:12px;font-weight:bold;">MON - FRI 8:00 AM - 6:00PM | SAT 8:00 AM - 5:00 PM CST<br />975 Main Street | Nashville, TN 37206<br /><img src="/images/layout/creditcards.jpg" style="margin-top:10px;"></div></div>
+	<div style="float:left;padding-top:80px;padding-left:30px;">
+		<img src="/images/layout/bbb.jpg" style="float:left;">
+		<img src="/images/layout/sema.jpg" style="float:left;margin-left:15px;clear:right;"><br />
+		<img src="/images/layout/hria.jpg" style="float:left;clear:both;margin-top:10px;">
+	</div>
+	<div style="float:right;width:120px;padding-top:65px;margin-right:20px;"><a href="/shopping_cart.php"><img src="/images/layout/cartIcon.png" style="float:right;"></a><div><br /><br />0 items<br /><a href="/shopping_cart.php">View Cart</a> | <a href="/checkout_shipping.php">Checkout</a></div><img src="/images/layout/rapidssl_seal.gif" style="float:right;margin-top:10px;"></div>
+  <div id="headerShortcuts">
+  </div>
+  
+
+
+<script type="text/javascript">
+  $("#headerShortcuts").buttonset();
+</script>
+</div>
+<div id="vehicle_select">
+	<div id="vehicle_select_form" style="float:left;">
+		Select your vehicle:  
+		<select id="year_select">
+						<option value="1946" >1946</option>
+						<option value="1947" >1947</option>
+						<option value="1948" >1948</option>
+						<option value="1949" >1949</option>
+						<option value="1950" >1950</option>
+						<option value="1951" >1951</option>
+						<option value="1952" >1952</option>
+						<option value="1953" >1953</option>
+						<option value="1954" >1954</option>
+						<option value="1955" >1955</option>
+						<option value="1956" >1956</option>
+						<option value="1957" >1957</option>
+						<option value="1958" >1958</option>
+						<option value="1959" >1959</option>
+						<option value="1960" >1960</option>
+						<option value="1961" >1961</option>
+						<option value="1962" >1962</option>
+						<option value="1963" >1963</option>
+						<option value="1964" >1964</option>
+						<option value="1965" >1965</option>
+						<option value="1966" >1966</option>
+						<option value="1967" >1967</option>
+						<option value="1968" >1968</option>
+						<option value="1969" >1969</option>
+						<option value="1970" >1970</option>
+						<option value="1971" >1971</option>
+						<option value="1972" >1972</option>
+						<option value="1973" >1973</option>
+						<option value="1974" >1974</option>
+						<option value="1975" >1975</option>
+						<option value="1976" >1976</option>
+						<option value="1977" >1977</option>
+						<option value="1978" >1978</option>
+						<option value="1979" >1979</option>
+						<option value="1980" >1980</option>
+						<option value="1981" >1981</option>
+						<option value="1982" >1982</option>
+						<option value="1983" >1983</option>
+						<option value="1984" >1984</option>
+						<option value="1985" >1985</option>
+						<option value="1986" >1986</option>
+						<option value="1987" >1987</option>
+						<option value="1988" >1988</option>
+						<option value="1989" >1989</option>
+						<option value="1990" >1990</option>
+						<option value="1991" >1991</option>
+						<option value="1992" >1992</option>
+						<option value="1993" >1993</option>
+						<option value="1994" >1994</option>
+						<option value="1995" >1995</option>
+						<option value="1996" >1996</option>
+						<option value="1997" >1997</option>
+						<option value="1998" >1998</option>
+						<option value="1999" >1999</option>
+						<option value="2000" >2000</option>
+						<option value="2001" >2001</option>
+						<option value="2002" >2002</option>
+						<option value="2003" >2003</option>
+						<option value="2004" >2004</option>
+						<option value="2005" >2005</option>
+						<option value="2006" >2006</option>
+						<option value="2007" >2007</option>
+						<option value="2008" >2008</option>
+						<option value="2009" >2009</option>
+						<option value="2010" >2010</option>
+						<option value="2011" >2011</option>
+						<option value="2012" >2012</option>
+						<option value="2013" SELECTED>2013</option>
+						<option value="2014" >2014</option>
+					</select>
+		<select name="make" id="make_select">
+			<option value="">Select Make</option>
+			<option value="Acura">Acura</option><option value="AM General">AM General</option><option value="Aston Martin">Aston Martin</option><option value="Audi">Audi</option><option value="Bentley">Bentley</option><option value="BMW">BMW</option><option value="Bugatti">Bugatti</option><option value="Buick">Buick</option><option value="Cadillac">Cadillac</option><option value="Chevrolet">Chevrolet</option><option value="Chrysler">Chrysler</option><option value="Daewoo">Daewoo</option><option value="Dodge">Dodge</option><option value="Eagle">Eagle</option><option value="Ferrari">Ferrari</option><option value="Ford">Ford</option><option value="Geo">Geo</option><option value="GMC">GMC</option><option value="Honda">Honda</option><option value="HUMMER">HUMMER</option><option value="Hyundai">Hyundai</option><option value="Infiniti">Infiniti</option><option value="Isuzu">Isuzu</option><option value="Jaguar">Jaguar</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option><option value="Lamborghini">Lamborghini</option><option value="Land Rover">Land Rover</option><option value="Lexus">Lexus</option><option value="Lincoln">Lincoln</option><option value="Lotus">Lotus</option><option value="Maserati">Maserati</option><option value="Maybach">Maybach</option><option value="Mazda">Mazda</option><option value="Mercedes-Benz">Mercedes-Benz</option><option value="Mercury">Mercury</option><option value="MINI">MINI</option><option value="Mitsubishi">Mitsubishi</option><option value="Nissan">Nissan</option><option value="Oldsmobile">Oldsmobile</option><option value="Panoz">Panoz</option><option value="Plymouth">Plymouth</option><option value="Pontiac">Pontiac</option><option value="Porsche">Porsche</option><option value="Rolls-Royce">Rolls-Royce</option><option value="Saab">Saab</option><option value="Saturn">Saturn</option><option value="Scion">Scion</option><option value="Smart">Smart</option><option value="Spyker">Spyker</option><option value="Subaru">Subaru</option><option value="Suzuki">Suzuki</option><option value="Tesla">Tesla</option><option value="Toyota">Toyota</option><option value="Volkswagen">Volkswagen</option><option value="Volvo">Volvo</option>		</select>
+		<select name="model" id="model_select">
+			<option value="">Select Make First</option>
+		</select>
+
+	</div>
+	<div style="width:310px;float:right;" class="search_box">Product Search:<form method="GET" action="/advanced_search_result.php"><input type="text" name="keywords"> <input type="submit" value="Go"></form></div>
+	<div id="vehicle_selected" style="display:none;">
+		<span id="vehicle_name">  </span>
+		<a href="#" id="reset_vehicle">(change)</a>
+	</div>
+</div>
+<div id="columnLeft">
+  <div class="ui-widget infoBoxContainer">  <div class="infoBoxHeading MyBox_header"><h1>Car & Truck Accessories</h1></div>  <div class="infoBoxContents MyBox_content"><a href="http://www.hunterscustom.com/air-intakes-and-filters-c-31.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Air Intakes and Filters</div></a><a href="http://www.hunterscustom.com/apparel-c-51.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Apparel</div></a><a href="http://www.hunterscustom.com/bed-covers-c-37.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Bed Covers</div></a><a href="http://www.hunterscustom.com/billet-accessories-c-30.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Billet Accessories</div></a><a href="http://www.hunterscustom.com/billet-grilles-c-29.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Billet Grilles</div></a><a href="http://www.hunterscustom.com/billet-steering-wheels-c-23.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Billet Steering Wheels</div></a><a href="http://www.hunterscustom.com/bumpers-and-airdams-c-35.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Bumpers and Airdams</div></a><a href="http://www.hunterscustom.com/car-care-c-39.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Car Care</div></a><a href="http://www.hunterscustom.com/chrome-exterior-accessories-c-36.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Chrome exterior accessories</div></a><a href="http://www.hunterscustom.com/consoles-c-61.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Consoles</div></a><a href="http://www.hunterscustom.com/cowl-hoods-c-33.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Cowl Hoods</div></a><a href="http://www.hunterscustom.com/dee-zee-c-65.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Dee Zee</div></a><a href="http://www.hunterscustom.com/edelbrock-c-63.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Edelbrock</div></a><a href="http://www.hunterscustom.com/exterior-accessories-c-47.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Exterior Accessories</div></a><a href="http://www.hunterscustom.com/floor-liners-c-66.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Floor Liners</div></a><a href="http://www.hunterscustom.com/gauges-c-48.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Gauges</div></a><a href="http://www.hunterscustom.com/gift-certificates-c-67.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Gift Certificates</div></a><a href="http://www.hunterscustom.com/grill-guards-c-26.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Grill Guards</div></a><a href="http://www.hunterscustom.com/grille-shells-c-42.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Grille Shells</div></a><a href="http://www.hunterscustom.com/hot-rod-performance-c-50.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Hot Rod Performance</div></a><a href="http://www.hunterscustom.com/interior-lighting-c-60.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Interior Lighting</div></a><a href="http://www.hunterscustom.com/jeep-accessories-c-54.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Jeep Accessories</div></a><a href="http://www.hunterscustom.com/license-platesframes-and-access-c-58.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">License Plates,Frames and Access</div></a><a href="http://www.hunterscustom.com/lift-kits-c-44.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Lift Kits</div></a><a href="http://www.hunterscustom.com/lighting-c-25.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Lighting</div></a><a href="http://www.hunterscustom.com/lowering-kits-c-55.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Lowering Kits</div></a><a href="http://www.hunterscustom.com/mesh-grilles-c-34.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Mesh Grilles</div></a><a href="http://www.hunterscustom.com/mirrors-c-32.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Mirrors</div></a><a href="http://www.hunterscustom.com/performance-c-43.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Performance</div></a><a href="http://www.hunterscustom.com/rollpans-c-38.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Rollpans</div></a><a href="http://www.hunterscustom.com/running-boards-c-22.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Running Boards</div></a><a href="http://www.hunterscustom.com/shipping-c-64.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Shipping</div></a><a href="http://www.hunterscustom.com/spoilers-c-45.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Spoilers</div></a><a href="http://www.hunterscustom.com/steering-wheels-and-accessories-c-59.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Steering wheels and accessories</div></a><a href="http://www.hunterscustom.com/tires-c-52.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Tires</div></a><a href="http://www.hunterscustom.com/tool-boxes-c-62.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Tool Boxes</div></a><a href="http://www.hunterscustom.com/truck-accessories-c-40.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Truck Accessories</div></a><a href="http://www.hunterscustom.com/vehicle-horns-c-49.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Vehicle Horns</div></a><a href="http://www.hunterscustom.com/wheel-accessories-c-57.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Wheel Accessories</div></a><a href="http://www.hunterscustom.com/wheels-c-24.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Wheels</div></a><a href="http://www.hunterscustom.com/window-tinting-c-53.html?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Window Tinting</div></a></div></div>
+<div class="ui-widget infoBoxContainer">  <div class="infoBoxHeading MyBox_header"><h1>Information</h1></div>  <div class="infoBoxContents MyBox_content">    <a href="http://www.hunterscustom.com/photo_galleries.php?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item"> Photo Galleries </div></a>    <a href="http://www.hunterscustom.com/privacy.php?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Privacy Notice</div></a>    <a href="http://www.hunterscustom.com/conditions.php?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Terms and Conditions</div></a>    <a href="http://www.hunterscustom.com/contact_us.php?osCsid=ilgie0b8jtp023o7f6h1us7ds5"><div class="MyBox_item">Contact Us</div></a>  </div></div></div>
+
+<div id="bodyContentFull">
+<style>
+/* Gallery styles */
+
+#gallery{
+	/* CSS3 Box Shadow */
+	-moz-box-shadow:0 0 3px #AAAAAA;
+	-webkit-box-shadow:0 0 3px #AAAAAA;
+	box-shadow:0 0 3px #AAAAAA;
+
+	/* CSS3 Rounded Corners */
+
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+	border-bottom-left-radius:4px;
+
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-right-radius:4px;
+
+	border:1px solid white;
+
+	/* The width of the gallery */
+	width:576px;
+	overflow:hidden;
+	text-align:center;
+	margin:auto;
+}
+
+#slides{
+	/* This is the slide area */
+	height:250px;
+
+	/* jQuery changes the width later on to the sum of the widths of all the slides. */
+	width:576px;
+	overflow:hidden;
+}
+
+.slide{
+	float:left;
+}
+
+#menu{
+	/* This is the container for the thumbnails */
+	height:20px;
+}
+
+ul{
+	margin:0px;
+	padding:0px;
+}
+
+li{
+	/* Every thumbnail is a li element */
+	width:20px;
+	display:inline-block;
+	list-style:none;
+	height:20px;
+	overflow:hidden;
+}
+
+li.inact:hover{
+	/* The inactive state, highlighted on mouse over */
+}
+
+li.act,li.act:hover{
+	/* The active state of the thumb */
+	background-color:#999;
+}
+
+li.act a{
+	cursor:default;
+}
+
+.fbar{
+	/* The left-most vertical bar, next to the first thumbnail */
+	width:2px;
+}
+
+li a{
+	display:block;
+	height:20px;
+	padding-top:0px;
+}
+
+a img{
+	border:none;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var totWidth=0;
+	var positions = new Array();
+	
+	$('#slides .slide').each(function(i){
+		
+		/* Traverse through all the slides and store their accumulative widths in totWidth */
+		
+		positions[i]= totWidth;
+		totWidth += $(this).width();
+		
+		/* The positions array contains each slide's commulutative offset from the left part of the container */
+		
+		if(!$(this).width())
+		{
+			alert("Please, fill in width & height for all your images!");
+			return false;
+		}
+		
+	});
+	
+	$('#slides').width(totWidth);
+
+	/* Change the cotnainer div's width to the exact width of all the slides combined */
+
+	$('#menu ul li a').click(function(e,keepScroll){
+
+			/* On a thumbnail click */
+
+			$('li.menuItem').removeClass('act').addClass('inact');
+			$(this).parent().addClass('act');
+			
+			var pos = $(this).parent().prevAll('.menuItem').length;
+			
+			$('#slides').stop().animate({marginLeft:-positions[pos]+'px'},450);
+			/* Start the sliding animation */
+			
+			e.preventDefault();
+			/* Prevent the default action of the link */
+			
+			
+			// Stopping the auto-advance if an icon has been clicked:
+			if(!keepScroll) clearInterval(itvl);
+	});
+	
+	$('#menu ul li.menuItem:first').addClass('act').siblings().addClass('inact');
+	/* On page load, mark the first thumbnail as active */
+	
+	
+	
+	/*****
+	 *
+	 *	Enabling auto-advance.
+	 *
+	 ****/
+	 
+	var current=1;
+	function autoAdvance()
+	{
+		if(current==-1) return false;
+		
+		$('#menu ul li a').eq(current%$('#menu ul li a').length).trigger('click',[true]);	// [true] will be passed as the keepScroll parameter of the click function on line 28
+		current++;
+	}
+
+	// The number of seconds that the slider will auto-advance in:
+	
+	var changeEvery = 10;
+
+	var itvl = setInterval(function(){autoAdvance()},changeEvery*500);
+
+	
+});
+</script>
+<div id="gallery">
+	<!--<a href="http://www.hunterscustom.com/100-gift-certificate-p-2911.html"><img src="/images/24hrbanner.png" border="0"></a>-->
+	
+	<div id="slides">
+	<div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/55Chevy.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Armorlid.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/AstonMartin.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/BilletMustang.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/BlackJeep.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/BlackJeepSide.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/BlackLiftedChevy.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Caddy.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Camaro.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/CamaroAccessories1.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Chryslergrillemoustache.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Corvette.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Covercraft.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Deezeebedcaps.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Deezeemat.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/DeezeeNXc.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/EmpireBIllet1.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Escaladebillet.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/ExtangTrifecta.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/FordChrome.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/GMCTruck.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/HummerAccessories.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Huskyliner.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/JeepStuff.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/JeepStuff2.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/LiftedTruck.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/MatrixLights1.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/MatrixLights2.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Mercedes.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/MonteCarlo.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/MuscleCar.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Mustang.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Mustang2.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/RAM.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/RaptorSteps.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/SilverCharger.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/SSBumpersValances.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/SSHood.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Trucktecgrille.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/Tundra2.jpg" width="576" height="250" /></a></div><div class="slide"><a href="/page/Hunters%20Custom%20Car%20Show"><img src="/images/carousel/TundraAccessories.jpg" width="576" height="250" /></a></div>
+	</div>
+
+	<div id="menu">
+
+	<ul>
+	<li class="fbar">&nbsp;</li>
+	<li class="menuItem"><a href="">1</a></li>
+	<li class="menuItem"><a href="">2</a></li>
+	<li class="menuItem"><a href="">3</a></li>
+	<li class="menuItem"><a href="">4</a></li>
+	<li class="menuItem"><a href="">5</a></li>
+	</ul>
+
+	</div>
+
+</div>
+</br /><h1>The Hottest Car and Truck Accessories Come From Hunters</h1>
+<br />	<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Air Intakes and Filters-c-31.html"><img src="images/air.gif" width="115px" height="115px"><br />Air Intakes and Filters</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Apparel-c-51.html"><img src="images/IMG_2074.JPG" width="115px" height="115px"><br />Apparel</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Bed Covers-c-37.html"><img src="images/bed_covers.gif" width="115px" height="115px"><br />Bed Covers</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Billet Accessories-c-30.html"><img src="images/billet_accessories.gif" width="115px" height="115px"><br />Billet Accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Billet Grilles-c-29.html"><img src="images/billet_grilles.gif" width="115px" height="115px"><br />Billet Grilles</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Billet Steering Wheels-c-23.html"><img src="images/billet_steering_wheels.gif" width="115px" height="115px"><br />Billet Steering Wheels</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Bumpers and Airdams-c-35.html"><img src="images/anb.jpg" width="115px" height="115px"><br />Bumpers and Airdams</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Car Care-c-39.html"><img src="images/car_care.jpg" width="115px" height="115px"><br />Car Care</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Chrome exterior accessories-c-36.html"><img src="images/chrome.jpg" width="115px" height="115px"><br />Chrome exterior accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Consoles-c-61.html"><img src="images/console.jpg" width="115px" height="115px"><br />Consoles</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Cowl Hoods-c-33.html"><img src="images/cowl.jpg" width="115px" height="115px"><br />Cowl Hoods</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Dee Zee-c-65.html"><img src="images/deezee-logo1.jpg" width="115px" height="115px"><br />Dee Zee</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Edelbrock-c-63.html"><img src="images/edsq2.jpg" width="115px" height="115px"><br />Edelbrock</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Exterior Accessories-c-47.html"><img src="images/extaccessories.jpg" width="115px" height="115px"><br />Exterior Accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Floor Liners-c-66.html"><img src="images/huskyfront.jpg" width="115px" height="115px"><br />Floor Liners</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Gauges-c-48.html"><img src="images/at01sch.jpg" width="115px" height="115px"><br />Gauges</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Gift Certificates-c-67.html"><img src="images/irish-gift-certificate-lg.gif" width="115px" height="115px"><br />Gift Certificates</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Grill Guards-c-26.html"><img src="images/gg.jpg" width="115px" height="115px"><br />Grill Guards</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Grille Shells-c-42.html"><img src="images/tyggrill.jpg" width="115px" height="115px"><br />Grille Shells</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Hot Rod Performance-c-50.html"><img src="images/Silver-55-4.jpg" width="115px" height="115px"><br />Hot Rod Performance</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Interior Lighting-c-60.html"><img src="images/leddome2.jpg" width="115px" height="115px"><br />Interior Lighting</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Jeep Accessories-c-54.html"><img src="images/IMG_0546.jpg" width="115px" height="115px"><br />Jeep Accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/License Plates,Frames and Access-c-58.html"><img src="images/310592.jpg" width="115px" height="115px"><br />License Plates,Frames and Access</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Lift Kits-c-44.html"><img src="images/02-06-2500-HD-6in.jpg" width="115px" height="115px"><br />Lift Kits</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Lighting-c-25.html"><img src="images/light.jpg" width="115px" height="115px"><br />Lighting</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Lowering Kits-c-55.html"><img src="images/folow.png" width="115px" height="115px"><br />Lowering Kits</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Mesh Grilles-c-34.html"><img src="images/950-77151.jpg" width="115px" height="115px"><br />Mesh Grilles</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Mirrors-c-32.html"><img src="images/950-16245.jpg" width="115px" height="115px"><br />Mirrors</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Performance-c-43.html"><img src="images/hyper.jpg" width="115px" height="115px"><br />Performance</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Rollpans-c-38.html"><img src="images/950-71110.jpg" width="115px" height="115px"><br />Rollpans</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Running Boards-c-22.html"><img src="images/nerf.gif" width="115px" height="115px"><br />Running Boards</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Shipping-c-64.html"><img src="images/shipping-box.jpg" width="115px" height="115px"><br />Shipping</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Spoilers-c-45.html"><img src="images/car-wings.jpg" width="115px" height="115px"><br />Spoilers</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Steering wheels and accessories-c-59.html"><img src="images/Rival.jpg" width="115px" height="115px"><br />Steering wheels and accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Tires-c-52.html"><img src="images/wildpeakat.jpg" width="115px" height="115px"><br />Tires</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Tool Boxes-c-62.html"><img src="images/7170.jpg" width="115px" height="115px"><br />Tool Boxes</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Truck Accessories-c-40.html"><img src="images/dee_zee_bed_mat.jpg" width="115px" height="115px"><br />Truck Accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Vehicle Horns-c-49.html"><img src="images/horn.jpg" width="115px" height="115px"><br />Vehicle Horns</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Wheel Accessories-c-57.html"><img src="images/480021.JPG" width="115px" height="115px"><br />Wheel Accessories</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Wheels-c-24.html"><img src="images/badlandsc.jpg" width="115px" height="115px"><br />Wheels</a></div>
+		<div style="height:180px;width:140px;margin:0px 20px;float:left;text-align:center;"><a href="/Window Tinting-c-53.html"><img src="images/tint.jpg" width="115px" height="115px"><br />Window Tinting</a></div>
+	<img src="/images/layout/store1.gif"><br />
+<font size="+1">H</font>unters Custom Automotive has been serving the automotive community since 1968.
+<p>
+From humble beginings in a 1600 square foot store front, Hunters Custom Automotive has grown to over 60,000 square feet to better serve the automotive enthusiast.  Providing the latest and best in aftermarket accessories as well as professional service to our customers has always been a Hunters trademark.
+</p>
+<p>
+Whatever your custom needs, from wheels and tires, to nerf bars for your truck, perfomance accessories, chrome accessories, custom vehicle lighting , custom grills, and so much more that everything can't possibly be listed here, Hunters is your one stop shop for the very best in aftermarket automotive accessories.
+</p>
+<p>
+Even when the tornado hit East Nashville in 1998, severly damaging the facility, Hunters was up and running, providing service to our customers, the very next day! That was due to the hard work and dedication of a staff who have over 150 years combined experience in the aftermarket industry.
+</p>
+<p>
+Hunters Custom Automotive<br />975 Main Street<br />Nashville, Tennessee 37206<br />615-227-6584<br />800-251-3548
+</p><!-- latest_news //-->
+<br /><h2>Latest News</h2><h1>HUNTERS CUSTOM CAR SHOW 2013 COMING TO THE TENNESSEE STATE FAIRGROUNDS!</h1> - <i>Monday 14 January, 2013</i><br />The dates are set for Hunters Custom Car Show 2013 at the Tennessee State Fairgrounds. The Expo will be held March 9th. and 10th. 2013. It promises to be bigger and better than ever with the hottest show cars , trucks and hot rods around coupled with the manufacturers and vendor booths  that make this a show you can't afford to miss.<br />
+Hunters Custom Car Show 2013 coming to the Tennessee State Fairgrounds. Make your plans to attend now!<!-- latest_news_eof //-->
+<br />
+</div> <!-- bodyContent //-->
+<div style="clear:both;"></div>
+</div> <!-- bodyWrapper //-->
+
+<div id="footer">
+	<div style="clear:both;"></div>
+	<br /><br /><div style="float:left;margin-right:10px;"><a href="/Acura-Accessories/m/">Acura Accessories</a><br /><a href="/AM General-Accessories/m/">AM General Accessories</a><br /><a href="/Aston Martin-Accessories/m/">Aston Martin Accessories</a><br /><a href="/Audi-Accessories/m/">Audi Accessories</a><br /><a href="/Bentley-Accessories/m/">Bentley Accessories</a><br /><a href="/BMW-Accessories/m/">BMW Accessories</a><br /><a href="/Bugatti-Accessories/m/">Bugatti Accessories</a><br /><a href="/Buick-Accessories/m/">Buick Accessories</a><br /><a href="/Cadillac-Accessories/m/">Cadillac Accessories</a><br /><a href="/Chevrolet-Accessories/m/">Chevrolet Accessories</a><br /></div><div style="float:left;margin-right:10px;"><a href="/Chrysler-Accessories/m/">Chrysler Accessories</a><br /><a href="/Daewoo-Accessories/m/">Daewoo Accessories</a><br /><a href="/Dodge-Accessories/m/">Dodge Accessories</a><br /><a href="/Eagle-Accessories/m/">Eagle Accessories</a><br /><a href="/Ferrari-Accessories/m/">Ferrari Accessories</a><br /><a href="/Ford-Accessories/m/">Ford Accessories</a><br /><a href="/Geo-Accessories/m/">Geo Accessories</a><br /><a href="/GMC-Accessories/m/">GMC Accessories</a><br /><a href="/Honda-Accessories/m/">Honda Accessories</a><br /><a href="/HUMMER-Accessories/m/">HUMMER Accessories</a><br /></div><div style="float:left;margin-right:10px;"><a href="/Hyundai-Accessories/m/">Hyundai Accessories</a><br /><a href="/Infiniti-Accessories/m/">Infiniti Accessories</a><br /><a href="/Isuzu-Accessories/m/">Isuzu Accessories</a><br /><a href="/Jaguar-Accessories/m/">Jaguar Accessories</a><br /><a href="/Jeep-Accessories/m/">Jeep Accessories</a><br /><a href="/Kia-Accessories/m/">Kia Accessories</a><br /><a href="/Lamborghini-Accessories/m/">Lamborghini Accessories</a><br /><a href="/Land Rover-Accessories/m/">Land Rover Accessories</a><br /><a href="/Lexus-Accessories/m/">Lexus Accessories</a><br /><a href="/Lincoln-Accessories/m/">Lincoln Accessories</a><br /></div><div style="float:left;margin-right:10px;"><a href="/Lotus-Accessories/m/">Lotus Accessories</a><br /><a href="/Maserati-Accessories/m/">Maserati Accessories</a><br /><a href="/Maybach-Accessories/m/">Maybach Accessories</a><br /><a href="/Mazda-Accessories/m/">Mazda Accessories</a><br /><a href="/Mercedes-Benz-Accessories/m/">Mercedes-Benz Accessories</a><br /><a href="/Mercury-Accessories/m/">Mercury Accessories</a><br /><a href="/MINI-Accessories/m/">MINI Accessories</a><br /><a href="/Mitsubishi-Accessories/m/">Mitsubishi Accessories</a><br /><a href="/Nissan-Accessories/m/">Nissan Accessories</a><br /><a href="/Oldsmobile-Accessories/m/">Oldsmobile Accessories</a><br /></div><div style="float:left;margin-right:10px;"><a href="/Panoz-Accessories/m/">Panoz Accessories</a><br /><a href="/Plymouth-Accessories/m/">Plymouth Accessories</a><br /><a href="/Pontiac-Accessories/m/">Pontiac Accessories</a><br /><a href="/Porsche-Accessories/m/">Porsche Accessories</a><br /><a href="/Rolls-Royce-Accessories/m/">Rolls-Royce Accessories</a><br /><a href="/Saab-Accessories/m/">Saab Accessories</a><br /><a href="/Saturn-Accessories/m/">Saturn Accessories</a><br /><a href="/Scion-Accessories/m/">Scion Accessories</a><br /><a href="/Smart-Accessories/m/">Smart Accessories</a><br /><a href="/Spyker-Accessories/m/">Spyker Accessories</a><br /></div><div style="float:left;margin-right:10px;"><a href="/Subaru-Accessories/m/">Subaru Accessories</a><br /><a href="/Suzuki-Accessories/m/">Suzuki Accessories</a><br /><a href="/Tesla-Accessories/m/">Tesla Accessories</a><br /><a href="/Toyota-Accessories/m/">Toyota Accessories</a><br /><a href="/Volkswagen-Accessories/m/">Volkswagen Accessories</a><br /><a href="/Volvo-Accessories/m/">Volvo Accessories</a><br /></div><div style="clear:both;"></div><br /><br />	
+	<p align="center">Copyright &copy; 2013 <a href="http://www.hunterscustom.com/index.php?osCsid=ilgie0b8jtp023o7f6h1us7ds5">Hunters Custom Automotive</a></p>
+	<p align="center"><a href="http://archive.hunterscustom.com">View our original website.</a></p>
+</div>
+
+
+
+<script type="text/javascript">
+$('.productListTable tr:nth-child(even)').addClass('alt');
+</script>
+
+</body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-187166-11']);
+  _gaq.push(['_setDomainName', '.hunterscustom.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</html>

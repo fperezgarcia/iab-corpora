@@ -1,0 +1,810 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Vintage cars, Antique cars, Vintage trucks, Cheap old cars for sale, Old car parts</title>
+<meta name="keywords" content="vintage cars, vintage cars for sale, antique cars, antique cars for sale, vintage race cars, vintage sports cars, vintage trucks, antique car parts, vintage fire trucks, vintage trucks for sale, cheap antique cars for sale, cheap old cars for sale, old junk cars for sale, old classic cars, old used cars, old car parts, vintage car parts, antique trucks, antique mack truck parts, antique trucks for sale, vintage cars for sale uk, vintage drag race cars, old vintage cars for sale, selling antique cars, antique used cars, vintage semi trucks">
+<meta name="description" content="Vintage cars, Cheap old antique cars  and trucks for sale with Old car, antique cars and vintage car parts at VC cars.">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="robots" content="ALL">
+<meta name="revisit-after" content="2 days">
+<meta name="document-distribution" content="Global">
+<meta content=English name=language>
+<meta content=Global name=distribution>
+<meta content=Never name=expires>
+<meta content="Index, Follow" name=robots>
+
+
+<link href="includes/css/style.css" rel="stylesheet" type="text/css">
+
+
+<script src="SpryAssets/SpryEffects.js" type="text/javascript"></script>
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript">
+var ajax = new sack();
+var xmlHttp;
+
+ 
+ 
+ function GetXmlHttpObject()
+{
+var xmlHttp=null;
+try
+ {
+ // Firefox, Opera 8.0+, Safari
+ xmlHttp=new XMLHttpRequest();
+ }
+catch (e)
+ {
+ // Internet Explorer
+ try
+  {
+  xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+  }
+ catch (e)
+  {
+  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+ }
+return xmlHttp;
+}
+//*******************************************************************************************
+
+ 
+function Get_Model_quick(sel1)
+{
+  
+	var yearCode = sel1.options[sel1.selectedIndex].value;
+	document.getElementById('quick_model').options.length = 0;	
+	
+	
+	if(yearCode.length>0)
+	{
+		ajax.requestFile = 'get_quick_model.php?quick_make='+yearCode;	
+		//window.alert(ajax.requestFile);
+		ajax.onCompletion = createYears_quick2;	
+		ajax.runAJAX();		
+	}
+}
+
+function createYears_quick2()
+  {
+		var obj = document.getElementById('quick_model');
+	//	window.alert(ajax.response);
+	eval(ajax.response);	
+ }
+
+//*******************************************************************************************
+
+/*function Get_Model(sel)
+{
+  
+	var yearCode = sel.options[sel.selectedIndex].value;
+	document.getElementById('model').options.length = 0;	
+	
+	
+	if(yearCode.length>0)
+	{
+		ajax.requestFile = 'getmodel.php?category='+yearCode;	
+		//window.alert(ajax.requestFile);
+		ajax.onCompletion = createYears;	
+		ajax.runAJAX();		
+	}
+}
+
+function createYears()
+  {
+		var obj = document.getElementById('model');
+	//	window.alert(ajax.response);
+	eval(ajax.response);	
+ }*/
+ 
+ 
+ function Get_Model_2(sel)
+{
+  
+	var yearCode1 = sel.options[sel.selectedIndex].value;
+	document.getElementById('model2').options.length = 0;	
+	
+	
+	if(yearCode1.length>0)
+	{
+		ajax.requestFile = 'getmodel3.php?category='+yearCode1;	
+		//window.alert(ajax.requestFile);
+		ajax.onCompletion = createYears2;	
+		ajax.runAJAX();		
+	}
+}
+
+function createYears2()
+  {
+		var obj = document.getElementById('model2');
+		//window.alert(ajax.response);
+	eval(ajax.response);	
+ }
+
+ 
+ 
+ 
+</script>
+
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-family: Arial, Verdana;
+}
+-->
+</style>
+</head>
+<body >
+<table width="999px" border="0" align="center" cellpadding="0" cellspacing="0"  id="main">
+  <tr>
+    <td height="112" align="center">
+
+
+<script language="JavaScript" type="text/JavaScript">
+function submitme(myform)
+{
+
+	if(myform.email.value=="")
+	{
+		alert("User Name can not be blank. Please enter it..")
+		myform.email.focus();
+		return (false);
+	}
+
+	
+	if(myform.password.value=="")
+	{
+		alert("Password can not be blank. Please enter it..")
+		myform.password.focus();
+		return (false);
+	}
+	return (true);
+}
+</script>
+
+<table width="999" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td height="112" align="center" bgcolor="#ffffff">
+    
+    
+    <table width="999" height="112" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFE">
+      <tr>
+        <td width="458" height="123" valign="top"><a href="http://www.vc-cars.com"><img src="../images/header_logo.gif" width="458" height="123" alt="Cheap old cars for sale" /></a></span></td>
+        <td valign="top" background="../images/header_bg.jpg">
+		
+        <div style="padding-top:35px;padding-left:30px;" class="count" align="center">
+        
+		17840 Vinatge Cars &nbsp;| &nbsp; 1065 Car  Dealers<br />
+		Welcome to Buy or Sell Cheap old cars for sale, Old car parts,<br /> Vintage cars, Antique cars and Project cars for sale</div>
+        
+        </td>
+      </tr>
+    </table>
+    
+    
+    </td>
+  </tr>
+  <tr>
+    <td height="37" align="center" class="link_bg"><div id="menus">
+      <ul>
+        <li style="list-style:none"><a href="http://www.vc-cars.com" title="Vintage cars, Project cars for sale">Home</a></li>
+		<li  style="list-style:none"><a href="about_us.php" title="Vintage Trucks, Old cars for sale">About Us</a></li>
+        <li  style="list-style:none"><a href="find_dealer.php" title="Classic Cars, Muscle car, Old Car, Antique Car dealer">Find Dealer</a></li>
+        <li  style="list-style:none"><a href="browse_car.php" title="Project cars, Custom Street for sale">Browse Cars</a></li>
+        <li  style="list-style:none"><a href="detail_search.php" title="Used Antique Car, Vintage Car Dealers, Classic Car Search">Search Cars</a></li>
+        <li  style="list-style:none"><a href="login.php" title="Cheap old cars, Used Classic Cars for sale">Sign In</a></li>
+		<li  style="list-style:none"><a href="contact_us.php" title="Cheap old cars, Used Classic Cars for sale">Contact Us</a></li>
+	<li  style="list-style:none"><a href="latest_carss.php" title="Latest Old Cars">Latest Old Cars</a></li>
+	<li  style="list-style:none"><a href="http://www.vc-cars.com/carblog" title="Latest Bikes, Old Bike Review, Motorcycle Prices, Used Bikes Specification">Blog</a></li>
+      </ul>
+    </div></td>
+  </tr>
+    <tr>
+    <td height="15" valign="top" class="gradient1"></td>
+  </tr>
+</table></td>
+  </tr>
+  
+  <tr>
+    <td valign="top" class="pad5"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center" valign="middle"><span class="pad5_t">
+                <script type="text/javascript">
+
+google_ad_client = "pub-8185153612239268";
+google_alternate_color = "";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+
+google_ad_channel = "0033598648";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "c82e2e";
+google_color_text = "000000";
+google_color_url = "000000";
+
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>              </span></td>
+              <td width="336" rowspan="2" align="center" bordercolor="#000000" bgcolor="#FFFFFF" class="pad5 data_text"><span class="pad5_t">
+                <script type="text/javascript">
+
+google_ad_client = "pub-8185153612239268";
+google_alternate_color = "";
+google_ad_width = 250;
+google_ad_height = 250;
+google_ad_format = "250x250_as";
+google_ad_type = "text";
+
+google_ad_channel = "0033598648";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "c82e2e";
+google_color_text = "000000";
+google_color_url = "000000";
+
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>              </span></td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><div align="justify" span class="pad5 data_text">
+                <p>Welcome to vc-cars.com. we have pleasure in presenting the  most efficient and scam free website for those who are planning for <strong>buying  cheap old cars</strong>, <strong>vintage cars</strong>, <strong>vintage trucks</strong>, <strong>old trucks for sale</strong>, etc. We also welcome dealers who would  like to list their <strong>cheap old cars for sale</strong> on our reputed  website.</p>
+                <p>At our site you can get each and every detail of old cars along with their  technical specifications as well. You can get information about various cars  and their features as the details are itself collected by the site experts due  to which the authentic and accurate information of cars can be your cup of tea.  You can buy old car parts which are frequently required to maintain your car. There  are project cars for sale for those who planning to avail them. You can also  get an <a href="http://www.farmers.com/auto_insurance.html" target="_blank">auto insurance quote</a> for your new car. Within a short span of time our  members have <a href="http://www.vc-cars.com/">trusted</a> us and made us the  most sort of website for purchase of old cars and trucks. Here at <a href="http://www.vc-cars.com">vc-cars.com</a> you have the access in preferring  that car which you were planning to buy from long. </p>
+		<p>Do not make a mistake here, as not only buyers are greeted at our site but also seller, owners, dealers and information searchers of such a specialized vehicle are welcomed here. </p>
+              </div></td>
+              </tr>
+        </table></td>
+      </tr>
+  
+  <tr>
+    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="360" height="100%" align="center" valign="top"><table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="box gradient2">
+          <tr>
+            <td height="80" align="center" class="pad_left head_bg" colspan="3"><h1> Used classic Cars For Sale</h1></td>
+          </tr>
+          <tr>
+			            <td align="center"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td align="center" valign="top">
+				  <a href="anticcar_details.php?RID=1638" title="Cheap Chevrolet Classic Antique Car For Sale">
+				  <img src="image_gd/imagesmall.php?9903359391.jpg"  border="0"  alt="Cheap Old Chevrolet Classic Antique Car For Sale" width="110" height="75" class="img_line"></a>				  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="name">Chevrolet<br />
+                      <span class="price">price: $75000</span></td>
+                </tr>
+            </table></td>
+                        <td align="center"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td align="center" valign="top">
+				  <a href="anticcar_details.php?RID=1239" title="Cheap Mercedes Benz Exotic Car For Sale">
+				  <img src="image_gd/imagesmall.php?15569850471.jpg"  border="0"  alt="Cheap Old Mercedes Benz Exotic Car For Sale" width="110" height="75" class="img_line"></a>				  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="name">Mercedes Benz<br />
+                      <span class="price">price: $52500</span></td>
+                </tr>
+            </table></td>
+                        <td align="center"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td align="center" valign="top">
+				  <a href="anticcar_details.php?RID=994" title="Cheap Chevrolet Muscle Car For Sale">
+				  <img src="image_gd/imagesmall.php?12702044491.jpg"  border="0"  alt="Cheap Old Chevrolet Muscle Car For Sale" width="110" height="75" class="img_line"></a>				  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="name">Chevrolet<br />
+                      <span class="price">price: $22500</span></td>
+                </tr>
+            </table></td>
+            </tr><tr>            <td align="center"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td align="center" valign="top">
+				  <a href="anticcar_details.php?RID=614" title="Cheap Kit Car Collectible Late Model For Sale">
+				  <img src="image_gd/imagesmall.php?14659725961.jpg"  border="0"  alt="Cheap Old Kit Car Collectible Late Model For Sale" width="110" height="75" class="img_line"></a>				  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="name">Kit Car<br />
+                      <span class="price">price: call for price</span></td>
+                </tr>
+            </table></td>
+                        <td align="center"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td align="center" valign="top">
+				  <a href="anticcar_details.php?RID=3374" title="Cheap Volkswagen Classic Antique Car For Sale">
+				  <img src="image_gd/imagesmall.php?19514252001.jpg"  border="0"  alt="Cheap Old Volkswagen Classic Antique Car For Sale" width="110" height="75" class="img_line"></a>				  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="name">Volkswagen<br />
+                      <span class="price">price: $11700</span></td>
+                </tr>
+            </table></td>
+                        <td align="center"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td align="center" valign="top">
+				  <a href="anticcar_details.php?RID=3100" title="Cheap Mercedes Benz Classic Antique Car For Sale">
+				  <img src="image_gd/imagesmall.php?18735390031.jpg"  border="0"  alt="Cheap Old Mercedes Benz Classic Antique Car For Sale" width="110" height="75" class="img_line"></a>				  </td>
+                </tr>
+                <tr>
+                  <td align="center" class="name">Mercedes Benz<br />
+                      <span class="price">price: $10000</span></td>
+                </tr>
+            </table></td>
+            </tr><tr>          </tr>
+        </table></td>
+        <td width="336" height="100%" align="center" valign="middle" class="pad5 data_text"><span class="pad5_t">
+          <script type="text/javascript">
+
+google_ad_client = "pub-8185153612239268";
+google_alternate_color = "";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+
+google_ad_channel = "0033598648";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "c82e2e";
+google_color_text = "000000";
+google_color_url = "000000";
+
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>        </span></td>
+        <td width="336" align="center" bordercolor="#000000" bgcolor="#FFFFFF"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="box gradient2">
+            <tr>
+              <td align="left" class="pad_left head_bg"><h2 class="style1">Search For  Vintage Cars</h2></td>
+            </tr>
+            <tr>
+              <td height="100%" align="center" valign="top" class="pad5"><form name="mysearch" method="post" encType="multipart/form-data"  action="antic_car_queck_result.php"  >
+                  <table width="100%"  height="100%" border="0" cellpadding="1" cellspacing="1"  class="box_bg data_text">
+                    <tr>
+                      <td width="76" align="left" bgcolor="#FFFFFF" class="text_blue"><strong>Make</strong></td>
+                      <td width="1" bgcolor="#FFFFFF" class="text_blue"><strong> :</strong></td>
+                      <td width="149" bgcolor="#FFFFFF"><select name="quick_make" id="quick_make" onChange="Get_Model_quick(this);"  class="states" style="width:200px">
+                          <option value="">Select Make</option>
+                                                    <option value="AC"  >AC</option>
+                                                    <option value="AC Cobra"  >AC Cobra</option>
+                                                    <option value="Acura"  >Acura</option>
+                                                    <option value="Alfa Romeo"  >Alfa Romeo</option>
+                                                    <option value="AMC"  >AMC</option>
+                                                    <option value="Amphicar"  >Amphicar</option>
+                                                    <option value="Aston Martin"  >Aston Martin</option>
+                                                    <option value="Auburn"  >Auburn</option>
+                                                    <option value="Audi"  >Audi</option>
+                                                    <option value="Austin"  >Austin</option>
+                                                    <option value="Austin Healey"  >Austin Healey</option>
+                                                    <option value="Austin-Healey"  >Austin-Healey</option>
+                                                    <option value="Avanti"  >Avanti</option>
+                                                    <option value="Bentley"  >Bentley</option>
+                                                    <option value="BMW"  >BMW</option>
+                                                    <option value="Bugatti"  >Bugatti</option>
+                                                    <option value="Buick"  >Buick</option>
+                                                    <option value="Cadillac"  >Cadillac</option>
+                                                    <option value="Chevrolet"  >Chevrolet</option>
+                                                    <option value="Chrysler"  >Chrysler</option>
+                                                    <option value="Cobra"  >Cobra</option>
+                                                    <option value="Cooper"  >Cooper</option>
+                                                    <option value="Datsun"  >Datsun</option>
+                                                    <option value="De Soto"  >De Soto</option>
+                                                    <option value="De Tomaso"  >De Tomaso</option>
+                                                    <option value="Delahaye"  >Delahaye</option>
+                                                    <option value="Delorean"  >Delorean</option>
+                                                    <option value="Desoto"  >Desoto</option>
+                                                    <option value="DeTomaso"  >DeTomaso</option>
+                                                    <option value="Dodge"  >Dodge</option>
+                                                    <option value="Duesenberg J"  >Duesenberg J</option>
+                                                    <option value="Edsel"  >Edsel</option>
+                                                    <option value="Extreme Trucks and SUVS"  >Extreme Trucks and SUVS</option>
+                                                    <option value="Ferrari"  >Ferrari</option>
+                                                    <option value="Fiat"  >Fiat</option>
+                                                    <option value="Ford"  >Ford</option>
+                                                    <option value="GMC"  >GMC</option>
+                                                    <option value="Gray"  >Gray</option>
+                                                    <option value="Honda"  >Honda</option>
+                                                    <option value="Hudson"  >Hudson</option>
+                                                    <option value="Hummer"  >Hummer</option>
+                                                    <option value="Infiniti"  >Infiniti</option>
+                                                    <option value="International"  >International</option>
+                                                    <option value="Jaguar"  >Jaguar</option>
+                                                    <option value="Jeep"  >Jeep</option>
+                                                    <option value="Jensen"  >Jensen</option>
+                                                    <option value="Kissel"  >Kissel</option>
+                                                    <option value="Kit Car"  >Kit Car</option>
+                                                    <option value="Lamborghini"  >Lamborghini</option>
+                                                    <option value="Land Rover"  >Land Rover</option>
+                                                    <option value="LaSalle"  >LaSalle</option>
+                                                    <option value="Lincoln"  >Lincoln</option>
+                                                    <option value="Lotus"  >Lotus</option>
+                                                    <option value="Maserati"  >Maserati</option>
+                                                    <option value="Mazda"  >Mazda</option>
+                                                    <option value="Mclaren"  >Mclaren</option>
+                                                    <option value="Mercedes"  >Mercedes</option>
+                                                    <option value="Mercedes Benz"  >Mercedes Benz</option>
+                                                    <option value="Mercedes-Benz"  >Mercedes-Benz</option>
+                                                    <option value="Mercury"  >Mercury</option>
+                                                    <option value="MG"  >MG</option>
+                                                    <option value="MGB"  >MGB</option>
+                                                    <option value="MGTD"  >MGTD</option>
+                                                    <option value="Morgan"  >Morgan</option>
+                                                    <option value="Morris"  >Morris</option>
+                                                    <option value="Nash"  >Nash</option>
+                                                    <option value="Nissan"  >Nissan</option>
+                                                    <option value="Oldsmobile"  >Oldsmobile</option>
+                                                    <option value="Other"  >Other</option>
+                                                    <option value="Other Makes"  >Other Makes</option>
+                                                    <option value="Other/Special"  >Other/Special</option>
+                                                    <option value="Packard"  >Packard</option>
+                                                    <option value="Paige"  >Paige</option>
+                                                    <option value="Phantom"  >Phantom</option>
+                                                    <option value="Plymouth"  >Plymouth</option>
+                                                    <option value="Pontiac"  >Pontiac</option>
+                                                    <option value="Porsche"  >Porsche</option>
+                                                    <option value="Renault"  >Renault</option>
+                                                    <option value="Replica"  >Replica</option>
+                                                    <option value="Rolls Royce"  >Rolls Royce</option>
+                                                    <option value="Rolls-Royce"  >Rolls-Royce</option>
+                                                    <option value="Saleen"  >Saleen</option>
+                                                    <option value="Shelby"  >Shelby</option>
+                                                    <option value="Shelby-American"  >Shelby-American</option>
+                                                    <option value="Studebaker"  >Studebaker</option>
+                                                    <option value="Superformance"  >Superformance</option>
+                                                    <option value="Tiffany"  >Tiffany</option>
+                                                    <option value="Toyota"  >Toyota</option>
+                                                    <option value="Triumph"  >Triumph</option>
+                                                    <option value="Unspecified"  >Unspecified</option>
+                                                    <option value="Vespa"  >Vespa</option>
+                                                    <option value="Volkswagen"  >Volkswagen</option>
+                                                    <option value="Volvo"  >Volvo</option>
+                                                    <option value="VW"  >VW</option>
+                                                    <option value="White"  >White</option>
+                                                    <option value="Willys"  >Willys</option>
+                                                    <option value="Woodill"  >Woodill</option>
+                                                    <option value="Zimmer"  >Zimmer</option>
+                                                </select></td>
+                    </tr>
+                    <tr>
+                      <td align="left" bgcolor="#FFFFFF" class="text_blue"><strong>Model</strong></td>
+                      <td bgcolor="#FFFFFF" class="text_blue"><strong> :</strong></td>
+                      <td bgcolor="#FFFFFF"><select name="quick_model" id="quick_model" class="states" style="width:200px" >
+                          <option value="">Show All</option>
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td align="left" bgcolor="#FFFFFF" class="text_blue"><strong>Year</strong></td>
+                      <td bgcolor="#FFFFFF"  class="text_blue"><strong> :</strong></td>
+                      <td bgcolor="#FFFFFF"><input size="6" name="year_lo" lf="formname.year_lo" />
+                          <span class="text_blue">to</span>
+                          <input size="6" name="year_hi" lf="formname.year_hi" /></td>
+                    </tr>
+                    <tr>
+                      <td align="left" bgcolor="#FFFFFF" class="text_blue"><strong>Max Price </strong></td>
+                      <td bgcolor="#FFFFFF" class="text_blue"><strong> :</strong></td>
+                      <td bgcolor="#FFFFFF"><input size="25" name="firstname" /></td>
+                    </tr>
+                    <tr>
+                      <td align="left" bgcolor="#FFFFFF" class="text_blue"><strong>Keyword</strong></td>
+                      <td bgcolor="#FFFFFF" class="text_blue"><strong> :</strong></td>
+                      <td bgcolor="#FFFFFF"><input size="25" name="firstname" /></td>
+                    </tr>
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                      <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                      <td align="left" bgcolor="#FFFFFF"><input name="Submit2" type="submit" class="button" value="SEARCH  NOW" style="width:110px;"/></td>
+                    </tr>
+                    <tr>
+                      <td height="70" colspan="3" align="center" bgcolor="#FFFFFF"><a href="detail_search.php"><img src="images/advance_search.gif" alt="Classic Car search" width="204" height="39"></a></td>
+                    </tr>
+                  </table>
+              </form></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>      </td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="box">
+          <tr>
+            <td class="head_bg pad_left"><h3><span class="style2">Browse A Antique Vintage Cars, Old Classic Trucks By Body Type </span>: </h3></td>
+          </tr>
+          <tr>
+            <td valign="top" class="heading3 pad5 gradient2"><table width="100%" border="0" cellpadding="5" cellspacing="2" class="data_text">
+                <tr>
+                  <td align="center"><a href="browse_car_make.php?CID=Classic%20Antique%20Car" title="Cheap Antique Cars for sale"><img src="images/classic.gif" alt="Cheap Antique Cars Dealer, Antique Cars parts" width="127" height="75" border="0"></a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Exotic Car" title="Cheap Exotic Cars for sale"><img src="images/exotic.gif" alt="Cheap Exotic Cars dealer, Exotic Cars parts" width="127" height="75" border="0"></a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Collectible%20Late%20Model" title="Cheap Collectible Late Model Cars For Sale"><img src="images/collectible.gif" alt="Cheap Collectible Late Model Cars dealers, Cheap Collectible Late Model cars parts" width="127" height="75" border="0"></a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Trucks" title="Cheap Classic Trucks For Sale"><img src="images/military.gif" alt="Cheap Classic Trucks  dealers, Cheap Classic Trucks parts" width="127" height="75" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td align="center" class="heading2"><a href="browse_car_make.php?CID=Classic%20Antique%20Car" class="heading2" title="Antique Classic Car For Sale">Classic Antique Car</a></td>
+                  <td align="center" class="heading2"><a href="browse_car_make.php?CID=Exotic Car" class="heading3" title="Exotic Car For Sale">Exotic Car <br>
+                  </a></td>
+                  <td align="center" class="heading2"><a href="browse_car_make.php?CID=Collectible%20Late%20Model" class="heading2" title="Collectible Late Model Car For Sale">Collectible Late Model </a></td>
+                  <td align="center" class="heading2"><a href="browse_car_make.php?CID=Trucks" class="heading3" title="Classic Trucks For Sale">Trucks</a></td>
+                </tr>
+                <tr>
+                  <td align="center"><a href="browse_car_make.php?CID=Muscle Car" title="Cheap Muscle Cars for sale"><img src="images/muscle.gif" alt="Cheap Muscle Car Dealer, Muscle Car parts" width="127" height="75" border="0"></a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Race Car" title="Cheap Race Cars for sale"><img src="images/race.gif" alt="Cheap Race Cars dealer, Race Cars parts" width="127" height="75" border="0"></a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Restoration Projects"><img src="images/projectvehicle.gif" alt="Cheap Restoration Projects Cars for sale" width="127" height="75" border="0" title="Cheap Restoration Projects Cars Dealers, Restoration Projects Car parts"></a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Street%20Rods" title="Cheap Street Rods Cars For Sale"><img src="images/streetrod.gif" alt="Cheap Street Rods Cars Dealers, Street Rods Car parts" width="127" height="75" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td align="center"><a href="browse_car_make.php?CID=Muscle Car" class="heading3" title="Muscle Cars For Sale">Muscle Car</a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Race Car" class="heading3" title="Race Cars for sale">Race</a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Restoration%20Projects" class="heading3" title="Restoration Projects Car For Sale">Project / Parts Vehicle</a></td>
+                  <td align="center"><a href="browse_car_make.php?CID=Street Rods" class="heading3" title="Street Rods Car For Sale">Street Rods</a></td>
+                </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="350" height="100%" align="center" valign="top" class="pad0005"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="box gradient2">
+          <tr>
+            <td align="left" class="pad_left head_bg"><h4 class="style2"> Browse classified ads for vintage cars</h4></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" class="data_text pad5" height="100%"><table width="100%" border="0" cellpadding="1" cellspacing="1">
+  <tr>
+  
+           
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Ac Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=AC" class="heading3" title="Used Ac Antique Vintage Cars For Sale">
+								  Ac</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Ac Cobra Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=AC Cobra" class="heading3" title="Used Ac Cobra Antique Vintage Cars For Sale">
+								  Ac Cobra</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Acura Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Acura" class="heading3" title="Used Acura Antique Vintage Cars For Sale">
+								  Acura</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Alfa Romeo Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Alfa Romeo" class="heading3" title="Used Alfa Romeo Antique Vintage Cars For Sale">
+								  Alfa Romeo</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Amc Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=AMC" class="heading3" title="Used Amc Antique Vintage Cars For Sale">
+								  Amc</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Amphicar Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Amphicar" class="heading3" title="Used Amphicar Antique Vintage Cars For Sale">
+								  Amphicar</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Aston Martin Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Aston Martin" class="heading3" title="Used Aston Martin Antique Vintage Cars For Sale">
+								  Aston Martin</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Auburn Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Auburn" class="heading3" title="Used Auburn Antique Vintage Cars For Sale">
+								  Auburn</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Audi Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Audi" class="heading3" title="Used Audi Antique Vintage Cars For Sale">
+								  Audi</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Austin Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Austin" class="heading3" title="Used Austin Antique Vintage Cars For Sale">
+								  Austin</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Austin Healey Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Austin Healey" class="heading3" title="Used Austin Healey Antique Vintage Cars For Sale">
+								  Austin Healey</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Austin-healey Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Austin-Healey" class="heading3" title="Used Austin-healey Antique Vintage Cars For Sale">
+								  Austin-healey</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Avanti Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Avanti" class="heading3" title="Used Avanti Antique Vintage Cars For Sale">
+								  Avanti</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Bentley Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Bentley" class="heading3" title="Used Bentley Antique Vintage Cars For Sale">
+								  Bentley</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Bmw Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=BMW" class="heading3" title="Used Bmw Antique Vintage Cars For Sale">
+								  Bmw</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Bugatti Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Bugatti" class="heading3" title="Used Bugatti Antique Vintage Cars For Sale">
+								  Bugatti</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Buick Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Buick" class="heading3" title="Used Buick Antique Vintage Cars For Sale">
+								  Buick</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Cadillac Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Cadillac" class="heading3" title="Used Cadillac Antique Vintage Cars For Sale">
+								  Cadillac</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Chevrolet Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Chevrolet" class="heading3" title="Used Chevrolet Antique Vintage Cars For Sale">
+								  Chevrolet</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Chrysler Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Chrysler" class="heading3" title="Used Chrysler Antique Vintage Cars For Sale">
+								  Chrysler</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Cobra Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Cobra" class="heading3" title="Used Cobra Antique Vintage Cars For Sale">
+								  Cobra</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Cooper Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Cooper" class="heading3" title="Used Cooper Antique Vintage Cars For Sale">
+								  Cooper</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Datsun Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Datsun" class="heading3" title="Used Datsun Antique Vintage Cars For Sale">
+								  Datsun</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old De Soto Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=De Soto" class="heading3" title="Used De Soto Antique Vintage Cars For Sale">
+								  De Soto</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old De Tomaso Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=De Tomaso" class="heading3" title="Used De Tomaso Antique Vintage Cars For Sale">
+								  De Tomaso</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Delahaye Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Delahaye" class="heading3" title="Used Delahaye Antique Vintage Cars For Sale">
+								  Delahaye</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Delorean Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Delorean" class="heading3" title="Used Delorean Antique Vintage Cars For Sale">
+								  Delorean</a> </span><br/> </td>
+								  </tr><tr>       
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Desoto Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Desoto" class="heading3" title="Used Desoto Antique Vintage Cars For Sale">
+								  Desoto</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Detomaso Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=DeTomaso" class="heading3" title="Used Detomaso Antique Vintage Cars For Sale">
+								  Detomaso</a> </span><br/> </td>
+								         
+                                  <td  >
+								  							  
+                                  <img src="images/list.gif" width="11" height="11" hspace="5" align="absmiddle" alt="Old Dodge Classic Muscle Cars" />
+								  <a href="browse_model.php?MID=Dodge" class="heading3" title="Used Dodge Antique Vintage Cars For Sale">
+								  Dodge</a> </span><br/> </td>
+								  </tr><tr>    </tr>
+</table></td></tr>
+        </table></td>
+      </tr>
+    </table>      </td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      
+      <tr>
+        <td width="258" height="100%" valign="top"><a href="register_now.php"><img src="images/atten_dealer_01.jpg" alt="Register for Buying and selling of Muscle Car, Vintage Cars, Old cars, Classic Cars for sale" width="475" height="162"></a></td>
+        <td valign="top"><img src="images/atten_dealer_02.jpg" alt="Cheap old cars for sale" width="514" height="162"></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr><td>&nbsp;</td></tr>
+   <tr><td>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="box">
+	<tr>
+		<td class="head_bg pad_left"><h3><span class="style2">Latest Bikes, New Bike Review, Motorcycle Prices, Used Bikes Specification </span>: </h3></td>
+	</tr>  
+    <tr>
+    <td align="justify" style="padding-left:3px;padding-right:3px;"><div align="left" class="heading3" style="margin-left:10px; margin-top:5px;"><a href="http://www.vc-cars.com/carblog/porsche-antique-vintage-cars-antique-928-antique-boxster.html" class="heading3" style="text-decoration:none;font-size:12px;"><strong>Porsche Antique Vintage Cars: Antique 928 &#038; Antique Boxster</strong></a>&nbsp;&nbsp;<span class="data_text" style="color:#FF0000;"><strong>Apr 12th, 2011</strong></span></div><div class="data_text" style="margin-left:10px; margin-top:5px;">Porsche Antique Vintage Cars are considered as one of the most beautiful cars in the market with their, cutting-edge technology, high-tech features and distinctive design. Their cars have a virtually untarnished reputation and are regarded as one of the finest performance vehicles in the automobile industry. It&#8217;s a reputation which is well-deserved. With power aplenty and razor sharp handling, the vehicles of Porsche provide excellent...</div>
+</td>
+  </tr>
+  	              <tr>
+    <td align="justify" style="padding-left:3px;padding-right:3px;"><div align="left" class="heading3" style="margin-left:10px; margin-top:5px;"><a href="http://www.vc-cars.com/carblog/land-rover-has-announced-new-range-rover-evoque.html" class="heading3" style="text-decoration:none;font-size:12px;"><strong>Land Rover has Announced New Range Rover Evoque</strong></a>&nbsp;&nbsp;<span class="data_text" style="color:#FF0000;"><strong>Apr 8th, 2011</strong></span></div><div class="data_text" style="margin-left:10px; margin-top:5px;">Land Rover has announced new Range Rover Evoque prices in United Kingdom which will start from Euro 27,955, when it goes in sale in September this year. The four-wheel drive variant will be available for the price of Euro 28,705. With a choice of wide range of accessories and options, three engines, three design themes and two body styles, the Evoque provides the customers with significant choice across the range of price points. It looks...</div>
+</td>
+  </tr>
+  	              <tr>
+    <td align="justify" style="padding-left:3px;padding-right:3px;"><div align="left" class="heading3" style="margin-left:10px; margin-top:5px;"><a href="http://www.vc-cars.com/carblog/bentley-antique-vintage-cars-bentley-continental-bentley-arnage.html" class="heading3" style="text-decoration:none;font-size:12px;"><strong>Bentley Antique Vintage Cars: Bentley Continental &#038; Bentley Arnage</strong></a>&nbsp;&nbsp;<span class="data_text" style="color:#FF0000;"><strong>Apr 5th, 2011</strong></span></div><div class="data_text" style="margin-left:10px; margin-top:5px;">Bentley Antique Vintage Cars are known to be one of the most expensive and prestigious vehicles in the automobile industry. Bentley Motors Limited is a British automobile manufacturer which was found by Walter Owen Bentley in the year 1919. The company was initially known for producing rotary engines during First World War and some of the most popular engine was Bentley BR1. Post World War, company produced and designed vehicles which won the 24...</div>
+</td>
+  </tr>
+  	              <tr>
+    <td align="justify" style="padding-left:3px;padding-right:3px;"><div align="left" class="heading3" style="margin-left:10px; margin-top:5px;"><a href="http://www.vc-cars.com/carblog/alfa-romeo-launched-2011-my-mito-in-europe.html" class="heading3" style="text-decoration:none;font-size:12px;"><strong>Alfa Romeo Launched 2011 MY MiTo in Europe</strong></a>&nbsp;&nbsp;<span class="data_text" style="color:#FF0000;"><strong>Apr 1st, 2011</strong></span></div><div class="data_text" style="margin-left:10px; margin-top:5px;">Alfa Romeo has revealed the 2011 My MiTo in Italy and other major European markets. It was initially shown at 2011 Geneva Salon with great combination of exterior colors, Euro 5 Compliant engines, different seat upholsteries and new optional equipments. All engine models are equipped with Start&amp;Stop system. The starting price of this model is 15,500 euros which you will get the 1.4 liter petrol 78-horsepower engine. The unique trim level is...</div>
+</td>
+  </tr>
+  	              <tr>
+    <td align="justify" style="padding-left:3px;padding-right:3px;"><div align="left" class="heading3" style="margin-left:10px; margin-top:5px;"><a href="http://www.vc-cars.com/carblog/cadillac-antique-vintage-cars-cadillac-deville-cadillac-fleetwood.html" class="heading3" style="text-decoration:none;font-size:12px;"><strong>Cadillac Antique Vintage Cars: Cadillac Deville &#038; Cadillac Fleetwood</strong></a>&nbsp;&nbsp;<span class="data_text" style="color:#FF0000;"><strong>Mar 29th, 2011</strong></span></div><div class="data_text" style="margin-left:10px; margin-top:5px;">Cadillac Antique Vintage Cars are loved by many enthusiasts and aficionados because of their cutting-edge technology, distinctive design and unique features. Cadillac is a luxury division owned by General Motors and its vehicles are sold in more than 50 different territories and countries. It is the 2nd largest automobile manufacturer in the world behind Buick Corporation and is one of the oldest marques in the automobile industry. The company...</div>
+</td>
+  </tr>
+  	            		
+</table>
+</td></tr>
+  </table></td>
+  </tr>
+  
+  <tr>
+    <td align="center"><table width="999" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+    <td align="center" valign="top" class="gradient1" height="10"></td>
+  </tr>
+  <tr>
+<td align="center" valign="middle" class="footer_text footer" style="line-height:20px;"><a href="http://www.vc-cars.com/browse_car.php" class="footer_text" title="Old Car trader, Classic Vintage car, Muscle Antique Car">Browse Cars</a> | <a href="http://www.vc-cars.com/find_dealer.php" class="footer_text" title="Car dealer at colorado, denver, Essex, Omaha Nebraska">Find Car Dealer</a> | <a href="http://www.vc-cars.com/about_us.php" class="footer_text" title="Vintage Trucks, Old cars, Classic cars for sale">About Us</a> | <a href="http://www.vc-cars.com/contact_us.php" class="footer_text" title="Buy Vintage Cars, Sell muscle Car">Contact Us</a><a href="http://www.vc-cars.com/contact_us.php" class="footer_text"></a> | <a href="http://www.vc-cars.com/privacy_policy.php" title="Privacy Policy for VC-Cars" class="footer_text">Privacy Policy</a><br />
+        </a>Copyright &copy; 2008 <a href="http://www.vc-cars.com" title="Vintage trucks, Cheap old cars for sale, Old car parts" class="footer_text">VC Cars</a>, All Rights Reserved. </td>
+  </tr>
+</table>
+
+
+
+<!-- start Vibrant Media IntelliTXT script section -->
+<script type="text/javascript" src="http://genericautotag.us.intellitxt.com/intellitxt/front.asp?ipid=21929"></script>
+<!-- end Vibrant Media IntelliTXT script section --></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

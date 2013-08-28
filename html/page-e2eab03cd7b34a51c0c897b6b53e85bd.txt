@@ -1,0 +1,478 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Excalibur & Camelot Classic Cars, Inc.</TITLE>
+
+<META NAME="description" CONTENT="Excalibur & Camelot Classic Car and Brooks Steven Automobile Collection, Camelot Classic Car Repair & Storage, Inc.">
+<META NAME="keywords" CONTENT="Autos, Excalibur, Excalibur automobiles, cars, Rolls Royce, Vintage cars, antique cars, autos for sale, museum, autos">
+
+<style type="text/css">
+
+#wrapper {
+	width: 1000px;
+	height: 200px:	
+	padding: 0;
+	background: url(images/swordsm.jpg) repeat left top;
+}
+
+.maintext {
+	font-family: Arial, Verdana;
+	font-size: 14px;
+	color: #003366;
+	font weight: bold;
+}
+.text {
+	font-family: Arial, Verdana;
+	font-size: 12px;
+	color: #003366;
+	font weight: normal;
+}
+.smtext {
+	font-family: Arial, Verdana;
+	font-size: 10px;
+	color: #000000;
+	font weight: normal;
+	.thumbnail{
+position: relative;
+z-index: 0;
+
+}
+
+</style>
+
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["slideshow/001c.jpg", "excals.html", ""] //plain image syntax
+fadeimages[1]=["slideshow/3680.jpg", "excals.html", ""] //image with link and target syntax
+fadeimages[2]=["slideshow/3476.jpg", "excals.html", ""]
+
+fadeimages[3]=["slideshow/5509.jpg", "excals.html", ""]
+fadeimages[4]=["slideshow/6bui.jpg", "other.html", ""]
+
+fadeimages[5]=["slideshow/1870.jpg", "other.html", ""]
+var fadebgcolor="#FFFFFF"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+<script src="spryassets/sprymenubar.js" type="text/javascript"></script>
+<link href="spryassets/sprymenubarhorizontal.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY background="images/hubcapb.jpg" TEXT="#003366" LINK="#003366" ALINK="#003366" vlink="#003366" topmargin="0">
+
+<center>
+
+ <!-- HEADER -->
+ 
+<table border="0" width="970"  background="images/swordsm.jpg"><tr>
+  <td colspan="3" align="top"><font face="ARIAL" size="-2" color="#FFFFCC">Excalibur Automobiles, Excalibur parts and service, original home of the Excalibur</font></td>
+</tr>
+        <tr>
+          <td align="right" width="200"><img src="images/sign.png" border="0"></td>
+          <td valign="top" align="center"><img src="images/newhead3.gif" border="0"><br>
+              <b><font size="2" color="#003366" face="Arial, helvetica">8428 W. Kaul Ave.<br>
+                Milwaukee, Wisconsin 53225 USA <br>
+                Phone: 414-760-3111 &bull; Fax: 414-760-3144 <br>
+               NEW E-MAIL ADDRESS IS  <a href="mailto:info@excaliburparts.com">info@excaliburparts.com</a> 
+                </font></b><font size="2" color="#003366" face="Arial, helvetica"><br>
+            </font></td>
+          <td width="175"><img src="images/exlogo.gif" border="0"></td>
+        </tr>
+        </table>
+        <!--END HEADER -->
+        
+        
+ 
+<table border="0" width="960" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        <tr>
+          <td height="35" colspan="2" bgcolor="#C6E1EA">
+             
+          <ul id="MenuBar1" class="MenuBarHorizontal">
+  <li><a class="MenuBarItemSubmenu" href="#">Autos For Sale</a>
+      <ul>
+        <li><a href="excals.html">Excaliburs</a></li>
+        <li><a href="antiq.html">Antique Cars</a></li>
+        <li><a href="other.html">Other Cars</a></li>
+         <li><a href="sold.html">Sold Cars</a></li>
+      </ul>
+  </li>
+  <li><a class="MenuBarItemSubmenu" href="#">Merchandise</a>
+    <ul>      <li><a href="apparel.html">Apparel</a></li>
+        <li><a href="autoparts.html">Automotive</a></li>
+        <li><a href="access.html">Accessories/Books</a></li>
+      
+      </ul>
+  </li>
+  
+  <li><a class="MenuBarItemSubmenu" href="#">Parts & Service</a>
+      <ul>
+        <li><a href="parts.html">Parts</a>
+       </li>
+        <li> <a class="MenuBarItemSubmenu" href="#">Merchandise</a>
+            
+            <ul>
+              <li><a href="apparel.html">Apparel</a></li>
+              <li><a href="autoparts.html">Automotive</a></li>
+               <li><a href="access.html">Accessories/Books</a></li>
+            </ul>
+        </li>
+        
+ 
+      
+        <li><a href="special.html">Specials</a></li>
+         <li><a href="gleason/index.html">Gleason Restoration</a></li>
+          <li><a href="cdpage.html">40th Anniversary</a></li>
+           <li><a href="letters.html">Customer Letters</a></li>
+            <li><a href="staff.html">Meet Our Staff</a></li>
+             <li><a href="map.html">Map to Camelot</a></li>
+      </ul>
+  </li>
+  <li> <a class="MenuBarItemSubmenu" href="#">Bio & History</a>
+    <ul>
+              <li><a href="bio.html">Brooks Stevens Bio</a></li>
+              <li><a href="stars.html">Famous Excalibur Owners</a></li>
+               <li><a href="story.html">The Excalibur Story</a></li>
+                <li><a href="new.html">Legend of Excalibur</a></li>
+            </ul>
+ </li>
+  <li> <a class="MenuBarItemSubmenu" href="#">Bulletin Board</a>
+  <ul>
+              <li><a href="board.html">Bulletins</a></li>
+              <li><a href="board.html#artic">Articles</a></li>
+               <li><a href="board.html#news">In the News</a></li>
+        
+            </ul>
+  
+  </li>
+  <li><a href="links.html">Links</a>
+       </li>
+       <li><a href="index.html">Home</a>
+       </li>
+ </ul>      
+          </td>
+        </tr>
+
+ 
+
+
+<TR> <td align="center"> 
+<a href="board.html"><img src="starburst.png" border="0"></a></td> 
+<TD ALIGN="center">
+<p align="center"><FONT SIZE="3" FACE="ARIAL" color="#003366"><b>Hours <br>
+Our hours are 8 AM to 4 PM Monday thru Friday
+<br> 
+Closed Sat and Sundays.</b>
+</font></td></tr>
+ 
+
+<tr><td align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="350">
+<tr><td ALIGN="center" valign="middle">
+<script type="text/javascript">
+//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+new fadeshow(fadeimages, 350, 250, 1, 2500, 1)</script></td></tr></table>
+
+</td>
+<td width="450"><br><p align="LEFT"> 
+<FONT SIZE="2" FACE="ARIAL" color="#003366">
+Camelot Classic Cars was born of Brooks Stevens Auto Museum and Excalibur Auto Corp. Upon the demise of both Camelot was born.
+<P>
+I (Alice Preston) worked for the auto Museum until it closed in 1999. Before that I was the supervisor of research and development at Excalibur Automobile Corp. 
+<P>
+When the Museum closed I opened Camelot Classic Cars to keep the Excalibur cars in parts and repairs. In 2001 I purchased the assets and all trademarks and names of Excalibur Automobile Corp. after it went into receivership. Our main goal is to keep these cars on the road as long as possible and continue the legacy of this great automobile.
+<P>
+<strong><em>The AACA has added the Excalibur Automobile to its list of 2nd generation collector cars into the AACA we consider that an honor to Mr. Stevens and the quality of our cars.</em></strong>
+<p>
+We do business all over the world for both restoration and parts.
+<br>
+<i>Alice Preston and Staff </i></FONT><br>
+<!--<br>
+<FONT SIZE="3" FACE="ARIAL" color="#FF0000">
+<b>EXCALIBUR NEWS <a href="excalnews.html">CLICK HERE</a></b></FONT> -->
+</td></tr>
+ 
+
+
+<tr><td colspan="2" align="center">
+<hr width="100%" size="2">
+<table width="940" border="0" cellspacing="0" cellpadding="8">
+  <tr>
+    <td align="left"> 
+<FONT SIZE="2" FACE="ARIAL" color="#003366">
+Dear Second Generation Collector Vehicles Enthusiasts:
+<p> 
+ The Antique Automobile Club of America (AACA) has created competition class 35c for the Second Generation Collector Vehicles (SGCV) beginning in 2012. SGCV vehicles include, but are not limited to, Avanti (1986 and newer up to 25 years of age), Clenet, Duesenberg II, <strong>Excalibur</strong>, Pray Auburn, Pray Cord, Shay Model A, Shay Thunderbird, and Zimmer.
+<p>  
+As in the past, the owner of each specific vehicle must apply in writing for acceptance by the AACA SGCV committee. This ensures that only those vehicles produced by the manufacturers are eligible to compete in class 35c at AACA meets. Competition class 35c is just like any other competition class in the AACA. Vehicles will be point judged and may compete for the Junior, Senior, Preservation, Grand National, and Grand National awards. Owners may also request Do Not Judge for their vehicle and join other SGCV vehicles in class 35c.
+
+<p>  
+In the past the SGCV vehicles were in a display and evaluation class. Please contact me for additional information and clarification.
+<p> 
+ Mike Petersen
+<br><em>AACA SGCV Committee Chairman</em>
+</td> <td align="center"><br>
+<br>
+<img src="holidayspec.jpg" border="0"> </td>
+  </tr>
+</table>
+<hr width="100%" size="2">
+</td></tr>
+
+
+<tr><td>
+
+<table border="0" width=""><tr><td valign="bottom">
+<br>
+<table bordercolorlight="#FF0000" style="border: 3px SOLID #003366; border-collapse:collapse" bgcolor="#FFFFCC" cellpadding="5" width="475" height="250" class="text">
+<tr><td align="center"><b>EXCALIBUR FACTS</b></td></tr>
+<tr><td align="left">
+<i>DID YOU KNOW THAT </i>...<br>
+EXCALIBUR is the only true hand-crafted luxury car built in America. 
+<br>
+EXCALIBUR was the fourth largest American automobile manufacturer. 
+<br>
+Each EXCALIBUR has its own unique, federally-mandated Vehicle ID 
+Number (VIN), i.e., Excalibur is not a conversion of a mass--produced 
+automobile. 
+<br>
+EXCALIBUR is the only American automobile manufacturer to build its 
+own chassis.
+<br> 
+EXCALIBUR'S fiberglass is hand layed. It is twice the thickness of a 
+Corvette 
+<br> 
+EXCALIBUR'S have depreciated less over time than a Mercedes Benz, 
+Cadillac or Lincoln.
+<br> 
+EXCALIBUR'S complete exhaust system, grill and all metal trim is 
+constructed from stainless steel.
+<br> 
+EXCALIBUR has been manufacturing automobiles for over a quarter of a century.
+<br>
+Virtually every EXCALIBUR ever built is still on the road. 
+<br>
+EXCALIBUR is the only American automobile manufacturer that will 
+completely disassemble, rebuild and restore any older model to 
+like-new condition.
+<br> 
+EXCALIBUR'S do not go out of style. 
+<br>
+EXCALIBUR Automobile Corporation's only business is the manufacture 
+and merchandising of Excalibur Automobiles (we don't manufacture 
+trailers, motor homes, boats, etc.). 
+<br>
+EXCALIBUR Automobile Corporation can supply parts for any model year, 
+regardless of age. 
+<br>
+EXCALIBUR custom sews and fits all leather upholstery, trim and vinyl 
+tops. 
+
+</td></tr>
+</table>
+</td></tr></table></td>
+
+ <td WIDTH="" VALIGN="top">
+
+<table border="0" width="425"><tr><td><p><br>
+ <FONT SIZE="+1" FACE="ARIAL" COLOR="#003366">Dont forget that we sell <a href="apparel.html">Excalibur Apparel</a> to show off your Excalibur pride.
+<br> <br>
+
+<FONT SIZE="3" FACE="ARIAL" COLOR="#003366"><B><u>FEATURED PAGES:</u></B>
+</FONT>
+<p align="left">
+<!--<img src="images/point.gif" width="18" height="18" border="0"> <FONT COLOR="#FF0000" FACE="Arial" SIZE="2"><A HREF="http://www.theautochannel.com/media/wmv/the_symbol_of_success.asx"> <b> Watch the EXCALIBUR MOVIE - <i>Symbol of Success</i></b></a>
+</FONT>
+<br>-->
+
+<img src="images/point.gif" width="18" height="18" border="0"> <FONT COLOR="#003366" FACE="Arial" SIZE="2"><b>New Special Offers in <a href="apparel.html">Apparel</a> and <a href="access.html">Accessories</a></b><br>
+<img src="images/point.gif" width="18" height="18" border="0"> <FONT COLOR="#003366" FACE="Arial" SIZE="2"><a href="excalnews.html"> <b>News About The Excalibur Automobiles Fate</b></a>
+</FONT>
+
+<br><img src="images/point.gif" width="18" height="18" border="0"> <FONT FACE="ARIAL" SIZE="2" COLOR="#FF0000"><b>NEW </b></font><b><FONT FACE="ARIAL" SIZE="2"><a href=" access.html#books">Books</a> - Repair Manual for Series I and Series II & III drawing book w/part numbers now offered.</a></b>
+</font>
+<br>
+<img src="images/point.gif" width="18" height="18" border="0"> <FONT FACE="ARIAL" SIZE="2" COLOR="#FF0000"><b>NEW </b></font><b><FONT FACE="ARIAL" SIZE="2"> <a href="manifold.htm">Series I Exhaust Manifolds</a> now offered.</a></b>
+</font>
+<br>
+ <FONT FACE="Arial" SIZE="2" COLOR="#FF0000">
+<img src="images/point.gif" width="18" height="18" border="0"> <b>Check out the Excaliburs <a href="excals.html">For Sale</a> </a></b>
+</FONT></td></tr></table>
+<br> 
+<table width="425" bordercolorlight="#FF0000" style="border: 3px SOLID #003366; border-collapse:collapse" bgcolor="#567BAF" cellpadding="5"><tr><td ><!--#91ABDD-->
+<FONT FACE="ARIAL" SIZE="2" COLOR="#FFFFFF"><b><u>WHAT WE OFFER</u></b>
+<p>
+1. We do complete factory restorations as well as partial restorations.<br>
+2. We will fly, at your expense, to inspect a car before you purchase it.<br>
+3. We will fly our mechanic to you for repairs of your car.<br>
+4. We appraise cars.<br>
+5. We will find the exact car you are looking for.<br>
+6. We will list your Excalibur or antique automobile on our web site to help you sell it.
+</FONT><br><br>
+<FONT FACE="ARIAL" SIZE="2" COLOR="#FFFFFF"><b><u>CALL US TODAY!</u></b>
+</td></tr></table>
+
+ </td></tr>
+
+<tr><td valign="top" align="center" colspan="2">
+<a href="http://www.excaliburparts.com">www.excaliburparts.com</a>&nbsp; &nbsp;
+<!--<a href="http://www.camelotclassics.com">www.camelotclassics.com</a>&nbsp;-->  
+<a href="http://www.excaliburautomobilecorporation.com">www.excaliburautomobilecorporation.com</a></font></td></tr>
+<tr><td colspan="4" valign="bottom" align="center"><FONT SIZE="1" face="Arial, Helvetica"><A HREF="excals.html"> Excaliburs</A> / <A HREF="antiq.html">Antique Cars</a> / <A HREF="other.html">Other</a> /  <A HREF="sold.html">Sold Cars</a> / <A HREF="special.html">Specials</a> /<A HREF="parts.html">Parts</a>  / <A HREF="map.html">Map</a>  / <A HREF="links.html">Links</a> / <A HREF="bio.html">Biography</a> / <a href="story.html">Excalibur Story</a> / <A HREF="index.html">Home</a></FONT></td></tr>
+<tr><td height="35" align=center colspan="4"><FONT SIZE="1" face="Arial, Helvetica">Designed and maintained by <A href="http://www.stardomdesign.com" target="_top">Stardom Design</a>
+<BR>
+© Camelot Classic Cars, Inc.
+All rights reserved.</FONT>
+<p>
+<!-- GoStats Simple HTML Based Code --><a target="_blank" title="free web tracker" href="http://gostats.com"><img alt="free web tracker"src="http://monster.gostats.com/bin/count/a_424228/t_7/i_14/counter.png"style="border-width:0" /></a><!-- End GoStats Simple HTML Based Code -->
+</td></tr>
+</table>
+
+</td></tr></table>
+</center>
+
+
+
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,1367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>ThunderStruck Motors - Electric Vehicles, Accessories and Components</title>
+
+<base href="http://www.thunderstruck-ev.com/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="description" content="Inspiring and Empowering the EV Community" />
+<meta name="keywords" content="Electric Vehicles, electric motors, electric vehicle consulting, Electric Vehicle Components, EV Components, electric throttles, controllers, electric car conversion advice, electric car conversions, EV conversions, gas to electric conversions, electric motorcycle conversions, electric dirt bikes, electric boat kits," />
+
+
+<link href="/skins/strong_black/customer/images/icons/favicon.ico" rel="shortcut icon" />
+
+
+<link href="/skins/strong_black/customer/css/ui/jqueryui.css" rel="stylesheet" type="text/css"/>
+<link href="/skins/strong_black/customer/styles.css" rel="stylesheet" type="text/css" />
+<link href="/skins/strong_black/customer/print.css" rel="stylesheet" media="print" type="text/css" />
+<link href="/skins/strong_black/customer/dropdown.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="/skins/strong_black/customer/styles_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link href="/skins/strong_black/customer/addons/autosuggest/styles.css" rel="stylesheet" type="text/css" />
+<link href="/skins/strong_black/customer/addons/buy_together/styles.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="/skins/strong_black/customer/addons/buy_together/styles_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="/skins/strong_black/customer/addons/product_configurator/styles.css" rel="stylesheet" type="text/css" />
+<link href="/skins/strong_black/customer/addons/news_and_emails/styles.css" rel="stylesheet" type="text/css" />
+<link href="/skins/strong_black/customer/addons/polls/styles.css" rel="stylesheet" type="text/css" />
+<link href="/skins/strong_black/customer/addons/discussion/styles.css" rel="stylesheet" type="text/css" />
+<link href="/skins/strong_black/customer/addons/hot_deals_block/styles.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="/lib/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/lib/js/jqueryui/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="/lib/js/tools/tooltip.min.js"></script>
+<script type="text/javascript" src="/lib/js/appear/jquery.appear-1.1.1.js"></script>
+
+<script type="text/javascript" src="/js/editors/ckeditor.editor.js"></script>
+
+<script type="text/javascript" src="/js/core.js"></script>
+<script type="text/javascript" src="/js/ajax.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+var index_script = 'index.php';
+var current_path = '';
+var changes_warning = 'Y';
+
+var lang = {
+	cannot_buy: 'You cannot buy the product with these option variants ',
+	no_products_selected: 'No products selected',
+	error_no_items_selected: 'No items selected! At least one check box must be selected to perform this action.',
+	delete_confirmation: 'Are you sure you want to delete the selected items?',
+	text_out_of_stock: 'Out-of-stock',
+	in_stock: 'In stock',
+	items: 'item(s)',
+	text_required_group_product: 'Please select a product for the required group [group_name]',
+	notice: 'Notice',
+	warning: 'Warning',
+	loading: 'Loading...',
+	none: 'None',
+	text_are_you_sure_to_proceed: 'Are you sure you want to proceed?',
+	text_invalid_url: 'You have entered an invalid URL',
+	text_cart_changed: 'Items in the shopping cart have been changed. Please click on \"OK\" to save changes, or on \"Cancel\" to leave the items unchanged.',
+	error_validator_email: 'The email address in the <b>[field]<\/b> field is invalid.',
+	error_validator_confirm_email: 'The email addresses in the <b>[field]<\/b> field and confirmation fields do not match.',
+	error_validator_phone: 'The phone number in the <b>[field]<\/b> field is invalid. The correct format is (555) 555-55-55 or 55 55 555 5555.',
+	error_validator_integer: 'The value of the <b>[field]<\/b> field is invalid. It should be integer.',
+	error_validator_multiple: 'The <b>[field]<\/b> field does not contain the selected options.',
+	error_validator_password: 'The passwords in the <b>[field2]<\/b> and <b>[field1]<\/b> fields do not match.',
+	error_validator_required: 'The <b>[field]<\/b> field is mandatory.',
+	error_validator_zipcode: 'The ZIP / Postal code in the <b>[field]<\/b> field is incorrect. The correct format is [extra].',
+	error_validator_message: 'The value of the <b>[field]<\/b> field is invalid.',
+	text_page_loading: 'Loading... Your request is being processed, please wait.',
+	view_cart: 'View cart',
+	checkout: 'Checkout',
+	product_added_to_cart: 'Product was added to your cart',
+	products_added_to_cart: 'Products were added to your cart',
+	product_added_to_wl: 'Product was added to your Wish list',
+	product_added_to_cl: 'Product was added to your Compare list',
+	close: 'Close',
+	error: 'Error',
+	error_ajax: 'Oops, something went wrong ([error]). Please try again.',
+	text_changes_not_saved: 'Your changes have not been saved.',
+	text_data_changed: 'Your changes have not been saved.\n\nPress OK to continue, or Cancel to stay on the current page.'
+}
+
+var currencies = {
+	'primary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	},
+	'secondary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	}
+};
+
+var default_editor = 'ckeditor';
+var default_previewer = 'fancybox';
+
+var cart_language = 'EN';
+var images_dir = '/skins/strong_black/customer/images';
+var skin_name = 'strong_black';
+var notice_displaying_time = 4;
+var cart_prices_w_taxes = false;
+var translate_mode = false;
+var regexp = new Array();
+
+
+
+$(document).ready(function(){
+	jQuery.runCart('C');
+});
+
+document.write('<style>.cm-noscript { display:none }</style>'); // hide noscript tags
+//]]>
+</script>
+
+<!--[if lt IE 8]>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$('ul.dropdown li').hover(function(){
+		$(this).addClass('hover');
+		$('> .dir',this).addClass('open');
+		$('ul:first',this).css('display', 'block');
+	},function(){
+		$(this).removeClass('hover');
+		$('.open',this).removeClass('open');
+		$('ul:first',this).css('display', 'none');
+	});
+});
+//]]>
+</script>
+<![endif]-->
+
+<script type="text/javascript" src="/addons/autosuggest/js/func.js"></script>
+
+<script type="text/javascript" src="/addons/buy_together/js/func.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+	lang['buy_together_fill_the_mandatory_fields'] = 'Please specify product options before adding this product combination to the cart.';
+//]]>
+</script></head>
+
+<body>
+<div class="helper-container">
+	<a name="top"></a>
+	
+<div id="ajax_loading_box" class="ajax-loading-box"><div class="right-inner-loading-box"><div id="ajax_loading_message" class="ajax-inner-loading-box">Loading...</div></div></div>
+
+	
+
+
+
+
+<div id="container" class="container">
+		<div id="header">	<div class="logo-image">
+		<a href="/"><img src="/skins/strong_black/customer/images/strong_logo.gif" width="700" height="92" border="0" alt="Thunderstruck Motors" /></a>
+	</div>
+<div class="top-tools-container">
+	<span class="float-right">&nbsp;</span>
+	<div class="top-tools-helper">
+		<div class="float-right" id="sign_io">
+										<a id="sw_login"  rel="nofollow" href="/index.php?dispatch=auth.login_form&amp;return_url=index.php">Sign in</a>
+				or
+				<a href="/index.php?dispatch=profiles.add" rel="nofollow">Register</a>
+						
+					<!--sign_io--></div>
+	</div>
+	<span class="float-left">&nbsp;</span>
+</div>
+
+<div class="float-right">
+			
+			
+					</div>
+		
+<div class="header-helper-container">
+	<p class="quick-links">&nbsp;
+			<a href="/about-our-company.html">About Us</a>
+			<a href="http://www.thunderstruck-ev.com/return-policy.html">Return Policy</a>
+			<a href="/index.php?dispatch=sitemap.view">Sitemap</a>
+			<a href="/">Home</a>
+	</p>
+	
+	
+<div id="top_menu">
+<ul class="top-menu dropdown"><li class="first-level cm-active"><span><a href="/">Home</a></span></li><li class="first-level "><span><a href="/index.php?dispatch=categories.catalog">Catalog</a></span>
+<ul >
+			<li class="dir">
+		<a href="/ac-motor-kits.html">AC Motor Kits</a>
+					
+<ul >
+			<li >
+		<a href="/ac-motor-kits/ac-12-curtis-controller-ac-kits.html">AC-12</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/ac-motor-kits/ac-15-en.html">AC-15</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/ac-motor-kits/ac-20-en.html">AC-20</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/ac-motor-kits/ac-35-en.html">AC 35 and variants</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/ac-motor-kits/ac-50-en.html">AC-50 and variants</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/ac-motor-kits/ac-75-en.html">AC-75 and variants</a>
+			</li>
+		</ul>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/electric-sailboat-kits.html">Sailboat Kits</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/adaptor-and-motor-plates.html">Adapter and Motor Plates</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li class="dir">
+		<a href="/batteries.html">Batteries</a>
+					
+<ul >
+			<li >
+		<a href="/batteries/agm.html">AGM</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/batteries/lithium-ion.html">Lithium</a>
+			</li>
+		</ul>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/battery-management-system.html">BMS Options</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/chargers.html">Chargers</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/controllers.html">Controllers</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/connectors.html">Connectors</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/contactors.html">Contactors</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/dc-dc-converters.html">DC-DC Converters</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/heatsinks-and-mouting-hardware.html">Heatsinks &amp; Mounting Hardware</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/instrumentation.html">Instrumentation</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li class="dir">
+		<a href="/motors.html">Motors</a>
+					
+<ul >
+			<li >
+		<a href="/motors/dc-pm-brushless-pmac-sep-ex.html">DC PM, Brushless PMAC &amp; Sep-Ex Motors</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/motors/dc-series.html">DC Series</a>
+			</li>
+		</ul>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/motor-brushes-and-housings.html">Motor Brushes &amp; Housings</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/programmers.html">Programmers</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/sprockets-and-gear-reduction.html">Gear Reduction and Sprockets</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/throttles.html">Throttles</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/tools-and-supplies.html">Tools &amp; Supplies</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/large-vehicles.html">Large Vehicles</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/small-vehicles.html">Small Vehicles</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/specials.html">Specials</a>
+			</li>
+		<li class="h-sep">&nbsp;</li>
+			<li >
+		<a href="/garage-sale-items.html">Garage Sale</a>
+			</li>
+		</ul>
+</li><li class="first-level "><span><a href="http://www.thunderstruck-ev.com/at-the-races.html">Racing</a></span></li><li class="first-level "><span><a href="/thunder-struck-vehicles.html">Projects</a></span></li><li class="first-level "><span><a href="http://www.thunderstruck-ev.com/thunderstruck-services.html">Contact Us</a></span></li><li class="first-level "><span><a href="http://www.thunderstruck-ev.com/f.a.q.html">FAQ</a></span></li><li class="first-level "><span><a href="http://www.thunderstruck-ev.com/links.html">Links</a></span></li></ul>
+</div>
+<span class="helper-block">&nbsp;</span>
+</div>
+<div class="clear_both"></div>
+<div class="content-tools">
+	<span class="float-left">&nbsp;</span>
+	<span class="float-right">&nbsp;</span>
+	<div class="content-tools-helper clear">
+		<div class="top-search">
+		<form action="/" name="search_form" method="get">
+<input type="hidden" name="subcats" value="Y" />
+<input type="hidden" name="status" value="A" />
+<input type="hidden" name="pshort" value="Y" />
+<input type="hidden" name="pfull" value="Y" />
+<input type="hidden" name="pname" value="Y" />
+<input type="hidden" name="pkeywords" value="Y" />
+<input type="hidden" name="search_performed" value="Y" />
+ 
+
+<span class="search-products-text">Search:</span>
+<select	name="cid" class="search-selectbox">
+	<option	value="0">- All categories -</option>
+		<option	value="36"   title="AC Motor Kits">AC Motor Kits</option>
+		<option	value="34"   title="Sailboat Kits">Sailboat Kits</option>
+		<option	value="27"   title="Adapter and Motor Plates">Adapter and Motor Plates</option>
+		<option	value="9"   title="Batteries">Batteries</option>
+		<option	value="10"   title="BMS Options">BMS Options</option>
+		<option	value="7"   title="Chargers">Chargers</option>
+		<option	value="22"   title="Controllers">Controllers</option>
+		<option	value="8"   title="Connectors">Connectors</option>
+		<option	value="6"   title="Contactors">Contactors</option>
+		<option	value="40"   title="DC-DC Converters">DC-DC Converters</option>
+		<option	value="55"   title="Heatsinks &amp; Mounting Hardware">Heatsinks &amp; Mounting Hardware</option>
+		<option	value="41"   title="Instrumentation">Instrumentation</option>
+		<option	value="1"   title="Motors">Motors</option>
+		<option	value="44"   title="Motor Brushes &amp; Housings">Motor Brushes &amp; Housings</option>
+		<option	value="43"   title="Programmers">Programmers</option>
+		<option	value="53"   title="Gear Reduction and Sprockets">Gear Reduction and Sprockets</option>
+		<option	value="5"   title="Throttles">Throttles</option>
+		<option	value="46"   title="Tools &amp; Supplies">Tools &amp; Supplies</option>
+		<option	value="38"   title="Large Vehicles">Large Vehicles</option>
+		<option	value="18"   title="Small Vehicles">Small Vehicles</option>
+		<option	value="63"   title="Specials">Specials</option>
+		<option	value="45"   title="Garage Sale">Garage Sale</option>
+	</select>
+
+<input type="text" name="q" value="" onfocus="this.select();" class="search-input" /><input type="image" src="/skins/strong_black/customer/images/icons/go.gif" alt="Search" title="Search" class="go-button" /><input type="hidden" name="dispatch" value="products.search" /><a href="/index.php?dispatch=products.search" class="search-advanced">Advanced search</a>
+</form>		</div>
+
+		
+	<div id="cart_status">
+	<div class="float-left">
+					<img id="sw_cart_box" class="cm-combination cm-combo-on valign hand" src="/skins/strong_black/customer/images/icons/empty_cart_icon.gif" alt="Cart is empty" title="Cart is empty" /><strong>&nbsp;&nbsp;&nbsp;Cart is empty</strong>
+			
+		<div id="cart_box" class="cart-list hidden cm-popup-box">
+			<img src="/skins/strong_black/customer/images/icons/empty_cart_list_icon.gif" alt="Cart" class="cm-popup-switch hand cart-list-icon" />
+			<div class="list-container">
+				<div class="list">
+									<p class="center">Cart is empty</p>
+								</div>
+				<div class="buttons-container">
+					<a href="/index.php?dispatch=checkout.cart" rel="nofollow" class="view-cart">View cart</a>
+									</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="checkout-link">
+
+	<a href="/index.php?dispatch=checkout.checkout" rel="nofollow">Checkout</a>
+
+	</div>
+	<!--cart_status--></div>
+	</div>
+</div></div>
+		
+	<div id="content">
+		<div class="content-helper clear">
+						
+						<div class="central-column">
+				<div class="central-content">
+					
+					
+
+
+<div class="cm-notification-container"></div>
+					
+					<div class="wysiwyg-content">
+<!--=========== BANNER CODE ===========-->
+<script src="gxbanner_strong/gslider.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+/***********************************************
+ * GXBanner Images Slideshow - (c) www.12leaves.com - ecommerce webdesign services
+ * This notice must stay intact for legal use
+ ***********************************************/
+	var $gslider_options = {
+		pause: 10000, // Pause between automatic slide changes in milliseconds
+		effect: "fadeOut", // one of "slideLeft", "fadeOut", "slideUp", "slideLeftBoth", "slideLeftOrRight", "slideLeftOrRightBoth"
+		speed: 1000, // number in milliseconds
+		pages_opacity: 0.7, // pagination opacity
+		pages_effect: "fade", // one of "slide", "fade"
+		pages_speed: 200 // number in milliseconds
+	};
+// ]]></script>
+<div id="gslider">
+<div class="slides"><!--Paste/remove here the HTML container for the images-->
+<div class="slide"><a href="http://www.thunderstruck-ev.com/electric-sailboat-kits.html"><img src="gxbanner_strong/images/01.jpg" alt="" width="572" height="284" /></a></div>
+</div>
+<!--=========== /BANNER CODE ===========--></div>
+</div><script type="text/javascript" src="/js/exceptions.js"></script>
+
+	
+
+
+
+
+
+
+
+
+<table cellpadding="3" cellspacing="3" border="0" width="100%">
+<tr>
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<td valign="top"  style="width: 30%;">
+						<form action="/" method="post" name="product_form_67000165" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php" />
+<input type="hidden" name="product_data[165][product_id]" value="165" />
+
+				<table border="0" cellpadding="3" cellspacing="3" width="100%">
+		<tr valign="top">
+			<td class="center" width="2%">
+			<a href="/gear-reduction-for-electric-inboard-sailboat-motor.html"><img class=" "  id="det_img_67000165" src="/images/thumbnails/0/40/40/Gear-RedFr137105695951b8ab3fd9ec8.gif" width="40" height="40" alt=""  border="0" /></a></td>
+			<td width="30%" class="compact">
+											<a href="/gear-reduction-for-electric-inboard-sailboat-motor.html" class="product-title" title="ThunderStruck Gear Reduction">ThunderStruck Gear Reduction</a>	
+				
+				<p>
+															
+											<span class="cm-reload-67000165 price-update" id="price_update_67000165">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_67000165"><span class="price">$</span><span id="sec_discounted_price_67000165" class="price">625.00</span></span>
+													<!--price_update_67000165--></span>
+
+				</p>
+				
+								
+			</td>
+		</tr>
+		</table>
+						</form>
+
+			</td>
+		<td width="2%">&nbsp;</td>
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<td valign="top"  style="width: 30%;">
+						<form action="/" method="post" name="product_form_6700055" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php" />
+<input type="hidden" name="product_data[55][product_id]" value="55" />
+
+				<table border="0" cellpadding="3" cellspacing="3" width="100%">
+		<tr valign="top">
+			<td class="center" width="2%">
+			<a href="/sevcon-brushless-sailboat-kit-8.5kw.html"><img class=" "  id="det_img_6700055" src="/images/thumbnails/0/40/40/5KWSailboatKit.jpg" width="40" height="40" alt=""  border="0" /></a></td>
+			<td width="30%" class="compact">
+											<a href="/sevcon-brushless-sailboat-kit-8.5kw.html" class="product-title" title="5KW Brushless Sailboat Kit">5KW Brushless Sailboat Kit</a>	
+				
+				<p>
+															
+											<span class="cm-reload-6700055 price-update" id="price_update_6700055">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_6700055"><span class="price">$</span><span id="sec_discounted_price_6700055" class="price">1,787.00</span></span>
+													<!--price_update_6700055--></span>
+
+				</p>
+				
+								
+			</td>
+		</tr>
+		</table>
+						</form>
+
+			</td>
+		<td width="2%">&nbsp;</td>
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<td valign="top"  style="width: 30%;">
+						<form action="/" method="post" name="product_form_67000146" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php" />
+<input type="hidden" name="product_data[146][product_id]" value="146" />
+
+				<table border="0" cellpadding="3" cellspacing="3" width="100%">
+		<tr valign="top">
+			<td class="center" width="2%">
+			<a href="/sevcon-brushless-sailboat-kit-10.5kw.html"><img class=" "  id="det_img_67000146" src="/images/thumbnails/0/40/40/Sailboat10.5Kw.gif" width="40" height="40" alt=""  border="0" /></a></td>
+			<td width="30%" class="compact">
+											<a href="/sevcon-brushless-sailboat-kit-10.5kw.html" class="product-title" title="10KW Brushless Sailboat Kit">10KW Brushless Sailboat Kit</a>	
+				
+				<p>
+															
+											<span class="cm-reload-67000146 price-update" id="price_update_67000146">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_67000146"><span class="price">$</span><span id="sec_discounted_price_67000146" class="price">2,087.00</span></span>
+													<!--price_update_67000146--></span>
+
+				</p>
+				
+								
+			</td>
+		</tr>
+		</table>
+						</form>
+
+			</td>
+	</tr>
+</table><div class="wysiwyg-content">
+<p><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">Thank you for checking out our website!&nbsp; Here you'll find our <strong><span style="text-decoration: underline;"><a href="http://www.thunderstruck-ev.com/index.php?dispatch=categories.catalog" target="_blank">Catalog</a></span></strong> containing a tested and verified selection of <strong>EV Components and Kits</strong> that will get your electric vehicle </span></span><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">up-and-running</span></span></span></span><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;"> in no time! Follow any of the social media buttons below to check out the latest and greatest of what we've been up to in our shop in located in Northern California.&nbsp; <strong>DIY-ers:</strong> browse through our<span style="text-decoration: underline;"><strong> <a href="http://www.thunderstruck-ev.com/product-manuals-and-data-sheets.html" target="_blank">Manuals and Information</a></strong></span> section to see specs and data sheets. </span></span></p>
+<p><span style="font-size: small;"><span style="font-family: arial,helvetica,sans-serif;">If you have any questions about our products or need any information, don't hesistate to give us a call at <strong>707-578-7973</strong> during our regular business hours, <strong>9am-5pm Mon-Fri, PST</strong> or email us at <a href="mailto: connect@thunderstruck-ev.com"><span style="text-decoration: underline;">connect@thunderstruck-ev.com</span>.</a><br /></span></span></p>
+<p><strong>*Shipping Note*</strong><br /> While our site is able to <em>calculate</em> shipping costs, rates are only approximate and may be subject to change prior to shipping.&nbsp; Don't worry, we will notify you first.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/PDpic.jpg" alt="" width="550" height="415" align="middle" /></p>
+<p><span style="font-size: medium;"><strong>A True ThunderStruck Story:</strong></span></p>
+<p><span style="font-size: small;">It was early June, 1980 when a young Thad Wolff&nbsp; entered his first professional race in Road America.&nbsp; As it turned out, this happened to be his very first professional win!&nbsp; No small accomplishment - <em>considering</em> that he'd never even been to this track.&nbsp; Sadly, several years later, that same track took it's revenge with a crash that&nbsp;ended Thad's outstanding <a href="http://www.amaproracing.com/" target="_blank"><span style="text-decoration: underline;">AMA Pro-Superbike</span></a> career.&nbsp;</span></p>
+<div>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">Thirty years from the day of Thad Wolff's first win at Road America, he returned, and everyone was thrilled to see him back at the track.&nbsp; It was like he never left, he seemed to know <em>everyone</em>.&nbsp; Everyone from announcers to team captains and old racers&nbsp;made a steady pilgrimage to the Team Electra pits for a chance to visit with their old buddy.&nbsp;&nbsp;</span></p>
+</div>
+<div>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">It was June 5th, 2010, that a 50-year-old Thad pulled on his leathers and&nbsp;headed back out onto the 55 year old track.&nbsp; What was he riding, you ask? He rode a Norton featherbed frame from the&nbsp;60's equipped with lithium polymer batteries and none other than a&nbsp;<em><strong>ThunderStruck</strong></em>&nbsp;electric motor.&nbsp; She was a true "cafe racer" wrapped in the John Player Special fairing from 1972.&nbsp; Thad was back on Road America, and riding for <a href="http://motoelectra.com/test-homepage/" target="_blank"><span style="text-decoration: underline;">Team Norton Electra</span></a> in the 2010 <a href="http://www.egrandprix.com" target="_blank"><span style="text-decoration: underline;">TTXGP</span></a>.&nbsp; Then, something truly wonderful occurred...<br /></span></p>
+</div>
+<div>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">Thad ground the old bikes fairing down to size as he set the fastest qualifying lap time of anyone in the TTXGP.&nbsp; He had returned&nbsp;to qualify on the poll position in&nbsp;the newest form of racing&nbsp;during <a href="http://www.amaproracing.com/rr/events/" target="_blank"><span style="text-decoration: underline;">AMA Superbike Weekend</span></a>!</span></p>
+</div>
+<div>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: small;">During that race, Thad's motor started heating up so the motor's controller cut back the power (just as it's designed to do).&nbsp; Nevertheless, Thad brought Team Norton Electra into the winners' circle with an impressive third place finish - 30 years to the day, he sprayed the Chamagne <em>one more time</em> at <a href="http://www.roadamerica.com/" target="_blank"><span style="text-decoration: underline;">Road America</span></a>!</span></p>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/TTXGP-Track-6.JPG" alt="" width="550" height="367" align="middle" /></p>
+</div>
+				</div>
+			</div>
+		
+						<div class="left-column">
+				<div class="sidebox-wrapper  wrapper-overflow">
+	<h3 class="sidebox-title"><span>Categories</span></h3>
+	<div class="sidebox-body">
+<div class="clear">
+	<ul id="vmenu_1" class="dropdown dropdown-vertical">
+		<li class="dir"><ul><li ><a href="/ac-motor-kits/ac-12-curtis-controller-ac-kits.html">AC-12</a></li><li class="h-sep">&nbsp;</li><li ><a href="/ac-motor-kits/ac-15-en.html">AC-15</a></li><li class="h-sep">&nbsp;</li><li ><a href="/ac-motor-kits/ac-20-en.html">AC-20</a></li><li class="h-sep">&nbsp;</li><li ><a href="/ac-motor-kits/ac-35-en.html">AC 35 and variants</a></li><li class="h-sep">&nbsp;</li><li ><a href="/ac-motor-kits/ac-50-en.html">AC-50 and variants</a></li><li class="h-sep">&nbsp;</li><li ><a href="/ac-motor-kits/ac-75-en.html">AC-75 and variants</a></li></ul><a href="/ac-motor-kits.html">AC Motor Kits</a></li><li class="h-sep">&nbsp;</li><li ><a href="/electric-sailboat-kits.html">Sailboat Kits</a></li><li class="h-sep">&nbsp;</li><li ><a href="/adaptor-and-motor-plates.html">Adapter and Motor Plates</a></li><li class="h-sep">&nbsp;</li><li class="dir"><ul><li ><a href="/batteries/agm.html">AGM</a></li><li class="h-sep">&nbsp;</li><li ><a href="/batteries/lithium-ion.html">Lithium</a></li></ul><a href="/batteries.html">Batteries</a></li><li class="h-sep">&nbsp;</li><li ><a href="/battery-management-system.html">BMS Options</a></li><li class="h-sep">&nbsp;</li><li ><a href="/chargers.html">Chargers</a></li><li class="h-sep">&nbsp;</li><li ><a href="/controllers.html">Controllers</a></li><li class="h-sep">&nbsp;</li><li ><a href="/connectors.html">Connectors</a></li><li class="h-sep">&nbsp;</li><li ><a href="/contactors.html">Contactors</a></li><li class="h-sep">&nbsp;</li><li ><a href="/dc-dc-converters.html">DC-DC Converters</a></li><li class="h-sep">&nbsp;</li><li ><a href="/heatsinks-and-mouting-hardware.html">Heatsinks &amp; Mounting Hardware</a></li><li class="h-sep">&nbsp;</li><li ><a href="/instrumentation.html">Instrumentation</a></li><li class="h-sep">&nbsp;</li><li class="dir"><ul><li ><a href="/motors/dc-pm-brushless-pmac-sep-ex.html">DC PM, Brushless PMAC &amp; Sep-Ex Motors</a></li><li class="h-sep">&nbsp;</li><li ><a href="/motors/dc-series.html">DC Series</a></li></ul><a href="/motors.html">Motors</a></li><li class="h-sep">&nbsp;</li><li ><a href="/motor-brushes-and-housings.html">Motor Brushes &amp; Housings</a></li><li class="h-sep">&nbsp;</li><li ><a href="/programmers.html">Programmers</a></li><li class="h-sep">&nbsp;</li><li ><a href="/sprockets-and-gear-reduction.html">Gear Reduction and Sprockets</a></li><li class="h-sep">&nbsp;</li><li ><a href="/throttles.html">Throttles</a></li><li class="h-sep">&nbsp;</li><li ><a href="/tools-and-supplies.html">Tools &amp; Supplies</a></li><li class="h-sep">&nbsp;</li><li ><a href="/large-vehicles.html">Large Vehicles</a></li><li class="h-sep">&nbsp;</li><li ><a href="/small-vehicles.html">Small Vehicles</a></li><li class="h-sep">&nbsp;</li><li ><a href="/specials.html">Specials</a></li><li class="h-sep">&nbsp;</li><li ><a href="/garage-sale-items.html">Garage Sale</a></li>	</ul>
+</div></div>
+	<div class="sidebox-bottom"><span>&nbsp;</span></div>
+</div><div class="sidebox-wrapper  wrapper-overflow">
+	<h3 class="sidebox-title"><span>Manuals &amp; Information</span></h3>
+	<div class="sidebox-body"><ul>
+		<li><a href="http://thunderstruck-ev.com/speed-calc.htm" target="_blank">Gear Ratio Calculator</a></li>
+		<li><a href="/motor-compatibility-chart.html">Motor Compatibility Chart</a></li>
+		<li><a href="/product-manuals-and-data-sheets.html">Product Manuals &amp; Data Sheets</a></li>
+	</ul>
+</div>
+	<div class="sidebox-bottom"><span>&nbsp;</span></div>
+</div><div class="wysiwyg-content">
+<div style="width: 175px; height: 175px; margin: 0 auto;"><a style="margin-right: 5px; margin-bottom: 5px; width: 85px; height: 85px; display: block; float: left;" href="http://www.facebook.com/pages/Thunderstruck-Motors-LLC/167928939888045?sk=wall&amp;filter=12" target="_blank"><img style="vertical-align: middle;" title="Facebook" onmouseover="this.src='https://www.thunderstruck-ev.com/images/facebook_hover128.png';" onmouseout="this.src='https://www.thunderstruck-ev.com/images/facebook128.png';" src="https://www.thunderstruck-ev.com/images/facebook128.png" alt="Facebook Icon" width="85" height="85" /></a><a style="margin-bottom: 5px; width: 85px; height: 85px; display: block; float: left;" href="http://twitter.com/tsmotors" target="_blank"><img style="vertical-align: middle;" title="Twitter" onmouseover="this.src='https://www.thunderstruck-ev.com/images/twitter128_hover.png';" onmouseout="this.src='https://www.thunderstruck-ev.com/images/twitter128.png';" src="https://www.thunderstruck-ev.com/images/twitter128.png" alt="Twitter Icon" width="85" height="85" /></a><a style="margin-right: 5px; width: 85px; height: 85px; display: block; float: left;" href="http://www.youtube.com/user/thunderstruckmotors" target="_blank"><img style="vertical-align: middle;" title="YouTube" onmouseover="this.src='https://www.thunderstruck-ev.com/images/Youtube128_hover.png';" onmouseout="this.src='https://www.thunderstruck-ev.com/images/youtube128.png';" src="https://www.thunderstruck-ev.com/images/youtube128.png" alt="YouTube Icon" width="85" height="85" /></a><a style="width: 85px; height: 85px; display: block; float: left;" href="https://plus.google.com/u/1/112301282986934857595/posts" target="_blank"><img style="vertical-align: middle;" onmouseover="this.src='https://www.thunderstruck-ev.com/images/google_hover128.png';" onmouseout="this.src='https://www.thunderstruck-ev.com/images/google128.png';" src="https://www.thunderstruck-ev.com/images/google128.png" alt="Google+" width="85" height="85" /></a></div>
+</div>
+			</div>
+						
+						<div class="right-column">
+				<div class="sidebox-wrapper  wrapper-overflow">
+	<h3 class="sidebox-title"><span>Newly Added</span></h3>
+	<div class="sidebox-body">
+<script type="text/javascript">
+//<![CDATA[
+var scroller_directions = {"D":"down","U":"up","R":"right","L":"left"};
+var scrollers_list = [];
+//]]>
+</script>
+
+
+
+<div align="center">
+	<ul id="scroll_list_3" class="jcarousel-skin hidden">
+						
+		
+
+					<li>
+												<table cellpadding="0" cellspacing="2" border="0" width="140">
+			<tr>
+				<td class="center product-image" style="height: 123px;">
+					<a href="/hpevs-ac34-motor-conversion-kit-en-2-3-4-5-6.html"><img class=" "   src="/images/thumbnails/0/100/100/AC35X2_144V550A.png" width="100" height="100" alt=""  border="0" /></a></td>
+			</tr>
+			<tr>
+				<td class="center compact" style="height: 90px;">
+																					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-container clear">
+		<form action="/" method="post" name="product_form_3000scr_3000255" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=categories.view&amp;category_id=34&amp;gclid=CNXGnfjfnrkCFYwWMgodSA0A9g" />
+<input type="hidden" name="product_data[scr_3000255][product_id]" value="255" />
+
+							<a href="/hpevs-ac34-motor-conversion-kit-en-2-3-4-5-6.html" class="product-title" title="AC-34X2 w/1239-8501">AC-34X2 w/1239-8501</a>	
+			
+			
+	
+		
+		<div class="prices-container clear">
+				
+		<p>									<span class="cm-reload-3000scr_3000255 price-update" id="price_update_3000scr_3000255">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_3000scr_3000255"><span class="price">$</span><span id="sec_discounted_price_3000scr_3000255" class="price">9,555.00</span></span>
+													<!--price_update_3000scr_3000255--></span>
+
+		</p>
+						</div>
+
+						
+		
+				
+					
+		
+								<div class="cm-reload-3000scr_3000255" id="qty_update_3000scr_3000255">
+		<input type="hidden" name="appearance[show_qty]" value="1" />
+		<input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+									
+					<input type="hidden" name="product_data[scr_3000255][amount]" value="1" />
+				<!--qty_update_3000scr_3000255--></div>
+		
+		
+					
+				
+					
+		
+					
+
+				<div class="buttons-container">
+						
+			
+						
+		</div>
+				</form>
+
+</div>
+
+
+				</td>
+			</tr>
+			</table>
+			</li>
+					<li>
+												<table cellpadding="0" cellspacing="2" border="0" width="140">
+			<tr>
+				<td class="center product-image" style="height: 123px;">
+					<a href="/hpevs-ac50-motor-conversion-kit-en.html"><img class=" "   src="/images/thumbnails/0/100/100/AC50_144V500A.png" width="100" height="100" alt=""  border="0" /></a></td>
+			</tr>
+			<tr>
+				<td class="center compact" style="height: 90px;">
+																					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-container clear">
+		<form action="/" method="post" name="product_form_3000scr_3000258" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=categories.view&amp;category_id=34&amp;gclid=CNXGnfjfnrkCFYwWMgodSA0A9g" />
+<input type="hidden" name="product_data[scr_3000258][product_id]" value="258" />
+
+							<a href="/hpevs-ac50-motor-conversion-kit-en.html" class="product-title" title="AC-50 w/1239-8501">AC-50 w/1239-8501</a>	
+			
+			
+	
+		
+		<div class="prices-container clear">
+				
+		<p>									<span class="cm-reload-3000scr_3000258 price-update" id="price_update_3000scr_3000258">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_3000scr_3000258"><span class="price">$</span><span id="sec_discounted_price_3000scr_3000258" class="price">5,150.00</span></span>
+													<!--price_update_3000scr_3000258--></span>
+
+		</p>
+						</div>
+
+						
+		
+				
+					
+		
+								<div class="cm-reload-3000scr_3000258" id="qty_update_3000scr_3000258">
+		<input type="hidden" name="appearance[show_qty]" value="1" />
+		<input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+									
+					<input type="hidden" name="product_data[scr_3000258][amount]" value="1" />
+				<!--qty_update_3000scr_3000258--></div>
+		
+		
+					
+				
+					
+		
+					
+
+				<div class="buttons-container">
+						
+			
+						
+		</div>
+				</form>
+
+</div>
+
+
+				</td>
+			</tr>
+			</table>
+			</li>
+					<li>
+												<table cellpadding="0" cellspacing="2" border="0" width="140">
+			<tr>
+				<td class="center product-image" style="height: 123px;">
+					<a href="/curtis-1313-1311-replacement.html"><img class=" "   src="/images/thumbnails/0/100/100/1313_Programmer.jpg" width="100" height="100" alt=""  border="0" /></a></td>
+			</tr>
+			<tr>
+				<td class="center compact" style="height: 90px;">
+																					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-container clear">
+		<form action="/" method="post" name="product_form_3000scr_3000268" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=categories.view&amp;category_id=34&amp;gclid=CNXGnfjfnrkCFYwWMgodSA0A9g" />
+<input type="hidden" name="product_data[scr_3000268][product_id]" value="268" />
+
+							<a href="/curtis-1313-1311-replacement.html" class="product-title" title="Curtis 1313 (1311 Replacement)">Curtis 1313 (1311 Replacement)</a>	
+			
+			
+	
+		
+		<div class="prices-container clear">
+				
+		<p>									<span class="cm-reload-3000scr_3000268 price-update" id="price_update_3000scr_3000268">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_3000scr_3000268"><span class="price">$</span><span id="sec_discounted_price_3000scr_3000268" class="price">475.00</span></span>
+													<!--price_update_3000scr_3000268--></span>
+
+		</p>
+						</div>
+
+						
+		
+				
+					
+		
+								<div class="cm-reload-3000scr_3000268" id="qty_update_3000scr_3000268">
+		<input type="hidden" name="appearance[show_qty]" value="1" />
+		<input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+									
+					<input type="hidden" name="product_data[scr_3000268][amount]" value="1" />
+				<!--qty_update_3000scr_3000268--></div>
+		
+		
+					
+				
+					
+		
+					
+
+				<div class="buttons-container">
+						
+			
+						
+		</div>
+				</form>
+
+</div>
+
+
+				</td>
+			</tr>
+			</table>
+			</li>
+			</ul>
+</div>
+
+
+					
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function() {
+	$('#scroll_list_3').show();
+	$('#scroll_list_3').jcarousel({
+		vertical: true,
+		size: 3,
+		scroll: -1,
+		animation: 'normal',
+		easing: 'swing',
+		auto: '4',
+		autoDirection: 'prev',
+		wrap: 'circular',
+		initCallback: $.ceScrollerMethods.fn_scroller_init_callback,
+		itemVisibleOutCallback: {onBeforeAnimation: $.ceScrollerMethods.fn_scroller_in_out_callback},
+		item_width: 140,
+		item_height: 219,
+		clip_width: 140,
+		clip_height: 219,
+		item_count: 3
+	});
+});
+//]]>
+</script></div>
+	<div class="sidebox-bottom"><span>&nbsp;</span></div>
+</div><div class="sidebox-wrapper  wrapper-overflow">
+	<h3 class="sidebox-title"><span>Great Deals</span></h3>
+	<div class="sidebox-body">
+<script type="text/javascript">
+//<![CDATA[
+var scroller_directions = {"D":"down","U":"up","R":"right","L":"left"};
+var scrollers_list = [];
+//]]>
+</script>
+
+
+
+<div align="center">
+	<ul id="scroll_list_66" class="jcarousel-skin hidden">
+						
+		
+
+					<li>
+												<table cellpadding="0" cellspacing="2" border="0" width="140">
+			<tr>
+				<td class="center product-image" style="height: 123px;">
+					<a href="/gbs-3.2v-100ah-cell-pack-of-4-new-old-stock-limited-supply.html"><img class=" "   src="/images/thumbnails/0/100/100/218_GBS-Battery-Pack-W.jpg" width="100" height="100" alt=""  border="0" /></a></td>
+			</tr>
+			<tr>
+				<td class="center compact" style="height: 90px;">
+																					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-container clear">
+		<form action="/" method="post" name="product_form_66000scr_66000218" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=categories.view&amp;category_id=34&amp;gclid=CNXGnfjfnrkCFYwWMgodSA0A9g" />
+<input type="hidden" name="product_data[scr_66000218][product_id]" value="218" />
+
+							<a href="/gbs-3.2v-100ah-cell-pack-of-4-new-old-stock-limited-supply.html" class="product-title" title="GBS 3.2V, 100Ah Cell (pack of 4), New Old Stock, Limited Supply">GBS 3.2V, 100Ah Cell (pack of 4), New Old ...</a>	
+			
+			
+	
+		
+		<div class="prices-container clear">
+				
+		<p>									<span class="cm-reload-66000scr_66000218 price-update" id="price_update_66000scr_66000218">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_66000scr_66000218"><span class="price">$</span><span id="sec_discounted_price_66000scr_66000218" class="price">480.00</span></span>
+													<!--price_update_66000scr_66000218--></span>
+
+		</p>
+						</div>
+
+						
+		
+				
+					
+		
+								<div class="cm-reload-66000scr_66000218" id="qty_update_66000scr_66000218">
+		<input type="hidden" name="appearance[show_qty]" value="1" />
+		<input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+									
+					<input type="hidden" name="product_data[scr_66000218][amount]" value="1" />
+				<!--qty_update_66000scr_66000218--></div>
+		
+		
+					
+				
+					
+		
+					
+
+				<div class="buttons-container">
+						
+			
+						
+		</div>
+				</form>
+
+</div>
+
+
+				</td>
+			</tr>
+			</table>
+			</li>
+					<li>
+												<table cellpadding="0" cellspacing="2" border="0" width="140">
+			<tr>
+				<td class="center product-image" style="height: 123px;">
+					<a href="/hpevs-ac11-motor-conversion-kit.html"><img class=" "   src="/images/thumbnails/0/100/100/AC12137002546951a8edfdb3249137572582851ffe904e3af5.gif" width="100" height="100" alt=""  border="0" /></a></td>
+			</tr>
+			<tr>
+				<td class="center compact" style="height: 90px;">
+																					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-container clear">
+		<form action="/" method="post" name="product_form_66000scr_66000273" enctype="multipart/form-data" class="cm-disable-empty-files cm-ajax">
+<input type="hidden" name="result_ids" value="cart_status,wish_list" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=categories.view&amp;category_id=34&amp;gclid=CNXGnfjfnrkCFYwWMgodSA0A9g" />
+<input type="hidden" name="product_data[scr_66000273][product_id]" value="273" />
+
+							<a href="/hpevs-ac11-motor-conversion-kit.html" class="product-title" title="AC-11 Motorcycle/Go-Kart Kit, New Old Stock, Limited Supply">AC-11 Motorcycle/Go-Kart Kit, New Old Stoc...</a>	
+			
+			
+	
+		
+		<div class="prices-container clear">
+				
+		<p>									<span class="cm-reload-66000scr_66000273 price-update" id="price_update_66000scr_66000273">
+		<input type="hidden" name="appearance[show_price_values]" value="1" />
+		<input type="hidden" name="appearance[show_price]" value="1" />
+																	<span class="price" id="line_discounted_price_66000scr_66000273"><span class="price">$</span><span id="sec_discounted_price_66000scr_66000273" class="price">1,950.00</span></span>
+													<!--price_update_66000scr_66000273--></span>
+
+		</p>
+						</div>
+
+						
+		
+				
+					
+		
+								<div class="cm-reload-66000scr_66000273" id="qty_update_66000scr_66000273">
+		<input type="hidden" name="appearance[show_qty]" value="1" />
+		<input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+									
+					<input type="hidden" name="product_data[scr_66000273][amount]" value="1" />
+				<!--qty_update_66000scr_66000273--></div>
+		
+		
+					
+				
+					
+		
+					
+
+				<div class="buttons-container">
+						
+			
+						
+		</div>
+				</form>
+
+</div>
+
+
+				</td>
+			</tr>
+			</table>
+			</li>
+			</ul>
+</div>
+
+<script type="text/javascript" src="/js/jquery.jcarousel.js"></script>
+					
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function() {
+	$('#scroll_list_66').show();
+	$('#scroll_list_66').jcarousel({
+		vertical: true,
+		size: 2,
+		scroll: -1,
+		animation: 'normal',
+		easing: 'swing',
+		auto: '4',
+		autoDirection: 'prev',
+		wrap: 'circular',
+		initCallback: $.ceScrollerMethods.fn_scroller_init_callback,
+		itemVisibleOutCallback: {onBeforeAnimation: $.ceScrollerMethods.fn_scroller_in_out_callback},
+		item_width: 140,
+		item_height: 219,
+		clip_width: 140,
+		clip_height: 219,
+		item_count: 2
+	});
+});
+//]]>
+</script></div>
+	<div class="sidebox-bottom"><span>&nbsp;</span></div>
+</div>
+			</div>
+									</div>
+		</div>
+	</div>
+		<div class="bottom clear-both">
+		<div class="bottom-helper-container">
+		<table class="fixed-layout" width="100%" cellspacing="0" cellpadding="0" border="0"><tr valign="top"><td><div class="wysiwyg-content">
+<!--=========== BOTTOM TABLE HTML CODE =============--> 
+<table class="t-bottom" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr class="t-header">
+<td class="first-column" rowspan="2">
+<p><img src="https://www.thunderstruck-ev.com/images/paypal.png" alt="PayPal" width="42" height="25" /><img src="https://www.thunderstruck-ev.com/images/visa-dark.png" alt="Visa" width="42" height="25" /></p>
+<p><img src="https://www.thunderstruck-ev.com/images/mastercard.png" alt="Mastercard" width="42" height="25" /><img src="https://www.thunderstruck-ev.com/images/american-express.png" alt="American Express" width="42" height="25" /></p>
+</td>
+<th>Contact Information</th> <th>About ThunderStruck<br /></th> <th>Customer Service<br /></th> <th>About You<br /></th>
+</tr>
+<tr>
+<td class="second-column">ThunderStruck Motors, LLC<br /> 2985 Dutton Ave. Ste 3<br /> Santa Rosa, CA 95407 <br /> Tel: (707) 578-7973<br /> Fax: (707) 581-1860<br /></td>
+<td>
+<ul>
+<li><a href="index.php">Home</a></li>
+<li><a href="http://www.thunderstruck-ev.com/index.php?dispatch=pages.view&amp;page_id=3">About Us</a></li>
+<li><a href="index.php?dispatch=sitemap.view">Sitemap</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="http://www.thunderstruck-ev.com/thunderstruck-services.html">Contact Us</a></li>
+<li><a href="http://www.thunderstruck-ev.com/return-policy.html">Return Policy</a></li>
+<li><a href="http://www.thunderstruck-ev.com/understanding-evs.html">Understanding EVs</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://www.thunderstruck-ev.com/index.php?dispatch=auth.login_form&amp;return_url=index.php%3Fdispatch%3Dprofiles.update">My account</a></li>
+<li><a href="index.php?dispatch=wishlist.view">Wish List</a></li>
+<li><a href="index.php?dispatch=checkout.cart">View Cart</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<!--=========== /BOTTOM TABLE HTML CODE =============-->
+</div></td></tr></table>
+		</div>
+	</div>
+		
+	<div id="footer">
+		<div class="footer-helper-container">
+			<div class="footer-top-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+			
+<div class="bottom-search center">
+	<span class="float-left">&nbsp;</span>
+	<span class="float-right">&nbsp;</span>
+	<form action="/" name="search_form" method="get">
+<input type="hidden" name="subcats" value="Y" />
+<input type="hidden" name="status" value="A" />
+<input type="hidden" name="pshort" value="Y" />
+<input type="hidden" name="pfull" value="Y" />
+<input type="hidden" name="pname" value="Y" />
+<input type="hidden" name="pkeywords" value="Y" />
+<input type="hidden" name="search_performed" value="Y" />
+ 
+
+<span class="search-products-text">Search:</span>
+<select	name="cid" class="search-selectbox">
+	<option	value="0">- All categories -</option>
+		<option	value="36"   title="AC Motor Kits">AC Motor Kits</option>
+		<option	value="34"   title="Sailboat Kits">Sailboat Kits</option>
+		<option	value="27"   title="Adapter and Motor Plates">Adapter and Motor Plates</option>
+		<option	value="9"   title="Batteries">Batteries</option>
+		<option	value="10"   title="BMS Options">BMS Options</option>
+		<option	value="7"   title="Chargers">Chargers</option>
+		<option	value="22"   title="Controllers">Controllers</option>
+		<option	value="8"   title="Connectors">Connectors</option>
+		<option	value="6"   title="Contactors">Contactors</option>
+		<option	value="40"   title="DC-DC Converters">DC-DC Converters</option>
+		<option	value="55"   title="Heatsinks &amp; Mounting Hardware">Heatsinks &amp; Mounting Hardware</option>
+		<option	value="41"   title="Instrumentation">Instrumentation</option>
+		<option	value="1"   title="Motors">Motors</option>
+		<option	value="44"   title="Motor Brushes &amp; Housings">Motor Brushes &amp; Housings</option>
+		<option	value="43"   title="Programmers">Programmers</option>
+		<option	value="53"   title="Gear Reduction and Sprockets">Gear Reduction and Sprockets</option>
+		<option	value="5"   title="Throttles">Throttles</option>
+		<option	value="46"   title="Tools &amp; Supplies">Tools &amp; Supplies</option>
+		<option	value="38"   title="Large Vehicles">Large Vehicles</option>
+		<option	value="18"   title="Small Vehicles">Small Vehicles</option>
+		<option	value="63"   title="Specials">Specials</option>
+		<option	value="45"   title="Garage Sale">Garage Sale</option>
+	</select>
+
+<input type="text" name="q" value="" onfocus="this.select();" class="search-input" /><input type="image" src="/skins/strong_black/customer/images/icons/go.gif" alt="Search" title="Search" class="go-button" /><input type="hidden" name="dispatch" value="products.search" />
+</form></div>
+<p class="bottom-copyright class">&copy; 2001-2013 Thunderstruck Motors. &nbsp;Powered by <a href="http://www.cs-cart.com" target="_blank">Ecommerce software with PayPal</a>
+</p>
+
+
+
+			<div class="footer-bottom-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+		</div>
+	</div>
+			</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	jQuery.ajaxRequest('/index.php?dispatch=statistics.collect', {
+		method: 'post',
+		data: {
+			've[url]': location.href,
+			've[title]': document.title,
+			've[browser_version]': jQuery.ua.version,
+			've[browser]': jQuery.ua.browser,
+			've[os]': jQuery.ua.os,
+			've[client_language]': jQuery.ua.language,
+			've[referrer]': document.referrer,
+			've[screen_x]': (screen.width || null),
+			've[screen_y]': (screen.height || null),
+			've[color]': (screen.colorDepth || screen.pixelDepth || null),
+			've[time_begin]': 1377645115.8532
+		},
+		hidden: true
+	});
+});
+//]]>
+</script>
+
+<noscript>
+<object data="/index.php?dispatch=statistics.collect&amp;ve%5Burl%5D=http%3A%2F%2Fwww.thunderstruck-ev.com%2F&amp;ve%5Btitle%5D=ThunderStruck+Motors+-+Electric+Vehicles%2C+Accessories+and+Components&amp;ve%5Breferrer%5D=&amp;ve%5Btime_begin%5D=1377645115.8532" width="0" height="0"></object>
+</noscript>
+<script type="text/javascript">
+//<![CDATA[
+	var _gaq = _gaq || [];
+	_gaq.push(["_setAccount", "751458"]);
+	_gaq.push(["_trackPageview"]);
+	
+	(function() {
+		var ga = document.createElement("script");
+		ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+		ga.setAttribute("async", "true");
+		document.documentElement.firstChild.appendChild(ga);
+	})();
+//]]>
+</script>
+
+</body>
+
+</html>

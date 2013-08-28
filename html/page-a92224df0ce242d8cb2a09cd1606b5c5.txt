@@ -1,0 +1,556 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head id="ctl00_Head1"><meta name="description" content="Automotive, Motorcycle, ATV Dynamometers, Power Commander, Fuel Injection Modules, Motorcycle and ATV Jetkits, Wideband Commanders, Wide Band 2, WB2, Dynatek Electronics" /><meta name="keywords" content="Motorcycle Fuel Injection, F.I., EFI, Fuel Injection, Fuel Controller, Fuel Injection Module, Fuel Injection Kit, Dynojet, Dynojet Reseach, Dyno Tuning, Fuel Mapping, Ignition Mapping, PCIIIUSB, Power Commander, PowerCommander, Power Commander EX, Power Commander III USB, Tuning Link, Shifters, Quick Shifters, Dynojet Approved Power Commander Tuning Center, Dynamometers for Motorcycles, Automobiles, ATV/Kart,chassis dyno, motorcycle jet kits, dyno testing, Fuel Injection, Power Commander, Power Vision,
+Injection Module, F.I. Module, Steering Dampers, Performance Dyno,Jet Kit,Air/Fuel Module, Fuel Injection Tuning, Industry Standard " /><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><link id="ctl00_Link1" rel="stylesheet" href="../App_Themes/skin_6/style.css" type="text/css" />
+ 
+    <script language="javascript" src='/jscripts/core.js' type='text/javascript'></script>
+    <link type="text/css" href="../jscripts/jquery/css/custom-theme-dynojet/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src='/jscripts/jquery/js/jquery-1.8.3.js'></script>
+    <script type="text/javascript" src='/jscripts/jquery/js/jquery-ui-1.9.2.custom.min.js'></script>
+    <script type="text/javascript" src='/jscripts/jquery/js/jquery.cookie.js'></script>
+    <script type="text/javascript" src='/jscripts/jquery/js/roundc.js'></script>
+    <script type="text/javascript" src='/jscripts/jquery/js/jquery.capty.min.js'></script>
+    <script type="text/javascript" src='/jscripts/jquery/js/jquery.capty.js'></script>
+
+        <link id="ctl00_Link2" href="../jscripts/jquery/Css/ImageOverlay/jquery.capty.css" type="text/css" rel="stylesheet" />
+
+    <!--sliddah-->
+    <link href="../jscripts/jquery/Css/JQueryContentSlider/anythingslider.css" type="text/css" rel="stylesheet" /><link href="../jscripts/jquery/Css/JQueryContentSlider/theme-minimalist-square.css" type="text/css" rel="stylesheet" />
+
+    <script src='/jscripts/jquery/JQueryContentSlider/jquery.anythingslider.js' type="text/javascript"></script>
+
+    <script src='/jscripts/jquery/JQueryContentSlider/jquery.easing.1.2.js' type="text/javascript"></script>
+    <!--end sliddah-->
+
+    <script type="text/javascript">
+        $(function () {
+            $("#tabs").tabs({
+                cookie: {
+                    // store cookie for a day, without, it would be a session cookie
+                    expires: 1
+                }
+            });
+            $("#year").text((new Date).getFullYear());
+            /*
+            $('#pcv').capty({
+                height:55,
+                opacity: .6
+            });
+
+            $('#pv').capty({
+                height: 55,
+                opacity: .6
+            });
+            $('#wb2').capty({
+                height: 55,
+                opacity: .6
+            });
+            $('#jetkits').capty({
+                height: 55,
+                opacity: .6
+            });
+            $('#cmd').capty({
+                height: 65,
+                opacity: .6
+            });
+            */
+            // dock menu
+            $('#dyno_dock li').hover(function () {
+                $(this).animate({ width: "170", height: "170" }, { queue: false, duration: 100 });
+            },
+
+            function () {
+                $(this).animate({ width: "115", height: "115" }, { queue: false, duration: 130 });
+            });
+
+
+            // Hide the "view" div.
+            $('.footer_inner').hide();
+
+            $('span.slide1').click(function () {
+                // When clicked, toggle the "view" div.
+                $('.footer_inner').slideUp(200, function () {
+
+                    if ($(this).is(":visible"))
+                        $('span.slide1 > a').text('- Hide Footer Menu');
+                    else
+                        $('span.slide1 > a').text('+ Expand Footer Menu');
+
+                });
+                return false;
+            });
+
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+        // Set up Sliders
+        // **************
+        $(function () {
+
+            $('#slider3').anythingSlider
+            ({
+                autoPlay: true,
+                startStopped: false, // If autoPlay is on, this can force it to start stopped
+                width: 1000,
+                height: 340,   // Override the default CSS width
+                theme: 'minimalist-square',
+                easing: 'easeInOutExpo',
+                autoPlayLocked: true,  // If true, user changing slides will not stop the slideshow
+                resumeDelay: 30000, // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds).
+                onSlideComplete: function (slider) {
+                    // alert('Welcome to Slide #' + slider.currentPage);
+                }
+
+            });
+
+
+            $("#goto-maps").click(function () {
+
+                $("#tabs").tabs("select", "#tabs-1");
+
+            });
+
+            $("#goto-installs").click(function () {
+
+                $("#tabs").tabs("select", "#tabs-2");
+
+            });
+
+            $("#goto-notes").click(function () {
+
+                $("#tabs").tabs("select", "#tabs-3");
+
+            });
+
+            $("#goto-more-info").click(function () {
+
+                $("#tabs").tabs("select", "#tabs-4");
+
+            });
+
+            $('.top_button').corner();
+
+        });
+   
+   
+    </script>
+
+
+
+
+
+ <!--end copy-->
+  
+    
+
+<title>
+	Dynojet Research Inc. Downloads
+</title></head>
+<body>
+    <div id="fb-root">
+    </div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU3MTIwODQ5MQ9kFgJmD2QWBAIBD2QWBgIEDxUBES9qc2NyaXB0cy9jb3JlLmpzZAIGDxUGIy9qc2NyaXB0cy9qcXVlcnkvanMvanF1ZXJ5LTEuOC4zLmpzMS9qc2NyaXB0cy9qcXVlcnkvanMvanF1ZXJ5LXVpLTEuOS4yLmN1c3RvbS5taW4uanMkL2pzY3JpcHRzL2pxdWVyeS9qcy9qcXVlcnkuY29va2llLmpzHS9qc2NyaXB0cy9qcXVlcnkvanMvcm91bmRjLmpzJy9qc2NyaXB0cy9qcXVlcnkvanMvanF1ZXJ5LmNhcHR5Lm1pbi5qcyMvanNjcmlwdHMvanF1ZXJ5L2pzL2pxdWVyeS5jYXB0eS5qc2QCCw8VAj0vanNjcmlwdHMvanF1ZXJ5L0pRdWVyeUNvbnRlbnRTbGlkZXIvanF1ZXJ5LmFueXRoaW5nc2xpZGVyLmpzOS9qc2NyaXB0cy9qcXVlcnkvSlF1ZXJ5Q29udGVudFNsaWRlci9qcXVlcnkuZWFzaW5nLjEuMi5qc2QCAw9kFgQCDw9kFgICAQ8UKwADZBQrAAkUKwACDxYEHgRUZXh0BQRIT01FHgtOYXZpZ2F0ZVVybAULfi9Ib21lLmFzcHhkZBQrAAIPFgIfAAUQRFlOT0pFVCBQUk9EVUNUU2QUKwAGFCsAAg8WBB8ABQxEWU5BTU9NRVRFUlMfAQUYfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvZBQrAAUUKwACDxYEHwAFCkFVVE9NT1RJVkUfAQU0fi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvYXV0b21vdGl2ZV9keW5hbW9tZXRlcnMuYXNweGQUKwAEFCsAAg8WBB8ABQpNT0RFTCAyMjRYHwEFQ34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDIyNHgvZHlub2pldF9keW5hbW9tZXRlcl8yMjR4LmFzcHhkZBQrAAIPFgQfAAUMTU9ERUwgMjI0eExjHwEFR34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDIyNHhMQy9keW5vamV0X2R5bmFtb21ldGVyXzIyNHhMQy5hc3B4ZGQUKwACDxYEHwAFCk1PREVMIDQyNFgfAQVDfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvRHlub01vZGVsNDI0eC9keW5vamV0X2R5bmFtb21ldGVyXzQyNHguYXNweGRkFCsAAg8WBB8ABQ1NT0RFTCA0MjR4TEMyHwEFSX4vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDQyNHhMQzIvZHlub2pldF9keW5hbW9tZXRlcl80MjR4TEMyLmFzcHhkZBQrAAIPFgQfAAUDQVRWHwEFNX4vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL3Bvd2Vyc3BvcnRzX2R5bmFtb21ldGVycy5hc3B4ZBQrAAIUKwACDxYEHwAFC01PREVMIDI1MGl4HwEFRX4vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDI1MGlYL2R5bm9qZXRfZHluYW1vbWV0ZXJfMjUwaXguYXNweGRkFCsAAg8WBB8ABQtNT0RFTCAyMDBpeB8BBUV+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9EeW5vTW9kZWwyMDBpeC9keW5vamV0X2R5bmFtb21ldGVyXzIwMGl4LmFzcHhkZBQrAAIPFgQfAAUKTU9UT1JDWUNMRR8BBTV+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9wb3dlcnNwb3J0c19keW5hbW9tZXRlcnMuYXNweGQUKwAEFCsAAg8WBB8ABQpNT0RFTCAyMDBpHwEFQ34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDIwMGkvZHlub2pldF9keW5hbW9tZXRlcl8yMDBpLmFzcHhkZBQrAAIPFgQfAAULTU9ERUwgMjAwaXgfAQVFfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvRHlub01vZGVsMjAwaXgvZHlub2pldF9keW5hbW9tZXRlcl8yMDBpeC5hc3B4ZGQUKwACDxYEHwAFCk1PREVMIDI1MGkfAQVDfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvRHlub01vZGVsMjUwaS9keW5vamV0X2R5bmFtb21ldGVyXzI1MGkuYXNweGRkFCsAAg8WBB8ABQtNT0RFTCAyNTBpeB8BBUV+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9EeW5vTW9kZWwyNTBpWC9keW5vamV0X2R5bmFtb21ldGVyXzI1MGl4LmFzcHhkZBQrAAIPFgQfAAUMU2Nvb3RlciBEeW5vHwEFQ34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbFNEMTIvZHlub2pldF9keW5hbW9tZXRlcl9TRDEyLmFzcHhkZBQrAAIPFgQfAAURUkVQTEFDRU1FTlQgUEFSVFMfAQUofi9Qcm9kdWN0cy9SZXBsYWNlbWVudFBhcnRzL0RlZmF1bHQuYXNweGRkFCsAAg8WBB8ABQNDTUQfAQUZaHR0cDovL3d3dy5keW5vamV0Y21kLmNvbWRkFCsAAg8WBB8ABQdKRVRLSVRTHwEFH2h0dHA6Ly93d3cuZHlub2pldC5jb20vamV0a2l0cy9kZBQrAAIPFgQfAAUQUE9XRVIgQ09NTUFOREVSUx8BBR1odHRwOi8vd3d3LnBvd2VyY29tbWFuZGVyLmNvbWRkFCsAAg8WBB8ABQxQT1dFUiBWSVNJT04fAQUfaHR0cDovL2R5bm9qZXQuY29tL3Bvd2VydmlzaW9uL2RkFCsAAg8WAh8ABQ9XSURFIENPTU1BTkRFUlNkFCsAAhQrAAIPFgQfAAUHTkVXIFdCMh8BBRlodHRwOi8vd3d3LmR5bm9qZXR3YjIuY29tZGQUKwACDxYEHwAFGkNMQVNTSUMgV0lERUJBTkQgQ09NTUFOREVSHwEFIGh0dHA6Ly93d3cud2lkZWJhbmRjb21tYW5kZXIuY29tZGQUKwACDxYEHwAFB1NVUFBPUlQfAQUWfi9TdXBwb3J0L0RlZmF1bHQuYXNweGQUKwAJFCsAAg8WAh8ABQ9QT1dFUiBDT01NQU5ERVJkFCsABRQrAAIPFgQfAAUWU0VMRiBHVUlERUQgSEVMUCBGSUxFUx8BBURodHRwOi8vd3d3LnBvd2VyY29tbWFuZGVyLmNvbS9wb3dlcmNvbW1hbmRlci9TdXBwb3J0L0hlbHAvSW5kZXguaHRtbGRkFCsAAg8WBB8ABQRGQVFzHwEFTWh0dHA6Ly93d3cucG93ZXJjb21tYW5kZXIuY29tL3Bvd2VyY29tbWFuZGVyL1N1cHBvcnQvcG93ZXJjb21tYW5kZXJfZmFxcy5hc3B4ZGQUKwACDxYEHwAFFFBST0RVQ1QgUkVHSVNUUkFUSU9OHwEFK34vU3VwcG9ydC9keW5vamV0X3Byb2R1Y3RfcmVnaXN0cmF0aW9uLmFzcHhkZBQrAAIPFgQfAAUOU1VQUE9SVCBWSURFT1MfAQU6fi9TdXBwb3J0L2R5bm9qZXRfdmlkZW9faW5zdGFsbHNfYW5kX3R1dG9yaWFscy5hc3B4I3RhYnMtMWRkFCsAAg8WBB8ABSBNT0JJTEUgUEhPTkUgVEVDSC4gU1VQUE9SVCBBUFBMLh8BBUhodHRwczovL21hcmtldC5hbmRyb2lkLmNvbS9kZXRhaWxzP2lkPWFwcGludmVudG9yLmFpX2tlaXRoLkR5bm9qZXRQU1RlY2hkZBQrAAIPFgIfAAUMUE9XRVIgVklTSU9OZBQrAAQUKwACDxYEHwAFBEZBUXMfAQUjfi9wb3dlcnZpc2lvbi9wb3dlcnZpc2lvbi1mYXFzLmFzcHhkZBQrAAIPFgQfAAUUUFJPRFVDVCBSRUdJU1RSQVRJT04fAQUrfi9TdXBwb3J0L2R5bm9qZXRfcHJvZHVjdF9yZWdpc3RyYXRpb24uYXNweGRkFCsAAg8WBB8ABQ5TVVBQT1JUIFZJREVPUx8BBTp+L1N1cHBvcnQvZHlub2pldF92aWRlb19pbnN0YWxsc19hbmRfdHV0b3JpYWxzLmFzcHgjdGFicy0yZGQUKwACDxYEHwAFElBPV0VSIFZJU0lPTiBUVU5FUx8BBTB+L3Bvd2VydmlzaW9uL1Bvd2VyVmlzaW9uTWFwc1R1bmVzRG93bmxvYWRzLmFzcHhkZBQrAAIPFgIfAAUMQ01EIEFORCBDTURNZBQrAAIUKwACDxYEHwAFFFBST0RVQ1QgUkVHSVNUUkFUSU9OHwEFK34vU3VwcG9ydC9keW5vamV0X3Byb2R1Y3RfcmVnaXN0cmF0aW9uLmFzcHhkZBQrAAIPFgQfAAUgTU9CSUxFIFBIT05FIFRFQ0guIFNVUFBPUlQgQVBQTC4fAQVIaHR0cHM6Ly9tYXJrZXQuYW5kcm9pZC5jb20vZGV0YWlscz9pZD1hcHBpbnZlbnRvci5haV9rZWl0aC5EeW5vamV0UFNUZWNoZGQUKwACDxYEHwAFE0ZJTkFOQ0UgSU5GT1JNQVRJT04fAQUhfi9GaW5hbmNpbmcvZmluYW5jaW5nX2FfZHluby5hc3B4ZGQUKwACDxYEHwAFFFBST0RVQ1QgUkVHSVNUUkFUSU9OHwEFK34vU3VwcG9ydC9keW5vamV0X3Byb2R1Y3RfcmVnaXN0cmF0aW9uLmFzcHhkZBQrAAIPFgQfAAUZQUREL1VQREFURSBZT1VSIERZTk8gU0hPUB8BBR5+L0R5bm9DZW50ZXJzL0FkZFlvdXJTaG9wLmFzcHhkZBQrAAIPFgQfAAUOUkVNT1RFIFNVUFBPUlQfAQUlfi9TdXBwb3J0L0R5bm9qZXRfcmVtb3RlX3N1cHBvcnQuYXNweGRkFCsAAg8WBB8ABRVDT05UQUNUIFRFQ0guIFNVUFBPUlQfAQUofi9Db250YWN0L2R5bm9qZXRfdGVjaG5pY2FsX3N1cHBvcnQuYXNweGRkFCsAAg8WBB8ABRVDT05UQUNUIFNBTEVTIFNVUFBPUlQfAQUkfi9Db250YWN0L2R5bm9qZXRfc2FsZXNfc3VwcG9ydC5hc3B4ZGQUKwACDxYEHwAFCURPV05MT0FEUx8BBRl+L0Rvd25sb2Fkcy9EZWZhdWx0My5hc3B4ZGQUKwACDxYEHwAFBlZJREVPUx8BBTN+L1N1cHBvcnQvZHlub2pldF92aWRlb19pbnN0YWxsc19hbmRfdHV0b3JpYWxzLmFzcHhkZBQrAAIPFgQfAAUWRFlOTyBDRU5URVJTIC8gREVBTEVSUx8BBRx+L1R1bmluZ0NlbnRlcnMvRGVmYXVsdC5hc3B4ZBQrAAYUKwACDxYEHwAFD0FERCBBIERZTk8gU0hPUB8BBR5+L0R5bm9DZW50ZXJzL0FkZFlvdXJTaG9wLmFzcHhkZBQrAAIPFgQfAAUXQVVUT01PVElWRSBEWU5PIENFTlRFUlMfAQUufi9EeW5vQ2VudGVycy9BdXRvbW90aXZlRHlub0NlbnRlckxvY2F0b3IuYXNweGRkFCsAAg8WBB8ABRdNT1RPUkNZQ0xFIERZTk8gQ0VOVEVSUx8BBS5+L0R5bm9DZW50ZXJzL01vdG9yY3ljbGVEeW5vQ2VudGVyTG9jYXRvci5hc3B4ZGQUKwACDxYEHwAFEEFUViBEWU5PIENFTlRFUlMfAQUnfi9EeW5vQ2VudGVycy9BVFZEeW5vQ2VudGVyTG9jYXRvci5hc3B4ZGQUKwACDxYEHwAFGFNOT1cgTU9CSUxFIERZTk8gQ0VOVEVSUx8BBS5+L0R5bm9DZW50ZXJzL1Nub3dtb2JpbGVEeW5vQ2VudGVyTG9jYXRvci5hc3B4ZGQUKwACDxYEHwAFE01PQklMRSBEWU5PIENFTlRFUlMfAQUrfi9EeW5vQ2VudGVyWnMvTW9iaWxlRHlub0NlbnRlckxvY2F0b3IuYXNweGRkFCsAAg8WBB8ABQxESVNUUklCVVRPUlMfAQUbfi9EaXN0cnVidXRvcnMvRGVmYXVsdC5hc3B4ZGQUKwACDxYEHwAFBE5FV1MfAQUYaHR0cDovL2Jsb2dzLmR5bm9qZXQuY29tZGQUKwACDxYCHwAFB0NPTVBBTllkFCsAAxQrAAIPFgQfAAUTQ09NUEFOWSBJTkZPUk1BVElPTh8BBSd+L0Fib3V0L2Fib3V0X2R5bm9qZXRfcmVzZWFyY2hfaW5jLmFzcHhkZBQrAAIPFgQfAAUHQ0FSRUVSUx8BBSt+L0NhcmVlcnMvZHlub2pldF9yZXNlYXJjaF9pbmNfY2FyZWVycy5hc3B4ZGQUKwACDxYEHwAFDUNPTVBBTlkgTUVESUEfAQUYaHR0cDovL21lZGlhLmR5bm9qZXQuY29tZGRkFhJmDw8WBB8ABQRIT01FHwEFC34vSG9tZS5hc3B4ZGQCAQ8PFgIfAAUQRFlOT0pFVCBQUk9EVUNUU2QWDGYPDxYEHwAFDERZTkFNT01FVEVSUx8BBRh+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9kFgpmDw8WBB8ABQpBVVRPTU9USVZFHwEFNH4vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL2F1dG9tb3RpdmVfZHluYW1vbWV0ZXJzLmFzcHhkFghmDw8WBB8ABQpNT0RFTCAyMjRYHwEFQ34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDIyNHgvZHlub2pldF9keW5hbW9tZXRlcl8yMjR4LmFzcHhkZAIBDw8WBB8ABQxNT0RFTCAyMjR4TGMfAQVHfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvRHlub01vZGVsMjI0eExDL2R5bm9qZXRfZHluYW1vbWV0ZXJfMjI0eExDLmFzcHhkZAICDw8WBB8ABQpNT0RFTCA0MjRYHwEFQ34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDQyNHgvZHlub2pldF9keW5hbW9tZXRlcl80MjR4LmFzcHhkZAIDDw8WBB8ABQ1NT0RFTCA0MjR4TEMyHwEFSX4vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbDQyNHhMQzIvZHlub2pldF9keW5hbW9tZXRlcl80MjR4TEMyLmFzcHhkZAIBDw8WBB8ABQNBVFYfAQU1fi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvcG93ZXJzcG9ydHNfZHluYW1vbWV0ZXJzLmFzcHhkFgRmDw8WBB8ABQtNT0RFTCAyNTBpeB8BBUV+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9EeW5vTW9kZWwyNTBpWC9keW5vamV0X2R5bmFtb21ldGVyXzI1MGl4LmFzcHhkZAIBDw8WBB8ABQtNT0RFTCAyMDBpeB8BBUV+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9EeW5vTW9kZWwyMDBpeC9keW5vamV0X2R5bmFtb21ldGVyXzIwMGl4LmFzcHhkZAICDw8WBB8ABQpNT1RPUkNZQ0xFHwEFNX4vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL3Bvd2Vyc3BvcnRzX2R5bmFtb21ldGVycy5hc3B4ZBYIZg8PFgQfAAUKTU9ERUwgMjAwaR8BBUN+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9EeW5vTW9kZWwyMDBpL2R5bm9qZXRfZHluYW1vbWV0ZXJfMjAwaS5hc3B4ZGQCAQ8PFgQfAAULTU9ERUwgMjAwaXgfAQVFfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvRHlub01vZGVsMjAwaXgvZHlub2pldF9keW5hbW9tZXRlcl8yMDBpeC5hc3B4ZGQCAg8PFgQfAAUKTU9ERUwgMjUwaR8BBUN+L1Byb2R1Y3RzL0R5bmFtb21ldGVycy9EeW5vTW9kZWwyNTBpL2R5bm9qZXRfZHluYW1vbWV0ZXJfMjUwaS5hc3B4ZGQCAw8PFgQfAAULTU9ERUwgMjUwaXgfAQVFfi9Qcm9kdWN0cy9EeW5hbW9tZXRlcnMvRHlub01vZGVsMjUwaVgvZHlub2pldF9keW5hbW9tZXRlcl8yNTBpeC5hc3B4ZGQCAw8PFgQfAAUMU2Nvb3RlciBEeW5vHwEFQ34vUHJvZHVjdHMvRHluYW1vbWV0ZXJzL0R5bm9Nb2RlbFNEMTIvZHlub2pldF9keW5hbW9tZXRlcl9TRDEyLmFzcHhkZAIEDw8WBB8ABRFSRVBMQUNFTUVOVCBQQVJUUx8BBSh+L1Byb2R1Y3RzL1JlcGxhY2VtZW50UGFydHMvRGVmYXVsdC5hc3B4ZGQCAQ8PFgQfAAUDQ01EHwEFGWh0dHA6Ly93d3cuZHlub2pldGNtZC5jb21kZAICDw8WBB8ABQdKRVRLSVRTHwEFH2h0dHA6Ly93d3cuZHlub2pldC5jb20vamV0a2l0cy9kZAIDDw8WBB8ABRBQT1dFUiBDT01NQU5ERVJTHwEFHWh0dHA6Ly93d3cucG93ZXJjb21tYW5kZXIuY29tZGQCBA8PFgQfAAUMUE9XRVIgVklTSU9OHwEFH2h0dHA6Ly9keW5vamV0LmNvbS9wb3dlcnZpc2lvbi9kZAIFDw8WAh8ABQ9XSURFIENPTU1BTkRFUlNkFgRmDw8WBB8ABQdORVcgV0IyHwEFGWh0dHA6Ly93d3cuZHlub2pldHdiMi5jb21kZAIBDw8WBB8ABRpDTEFTU0lDIFdJREVCQU5EIENPTU1BTkRFUh8BBSBodHRwOi8vd3d3LndpZGViYW5kY29tbWFuZGVyLmNvbWRkAgIPDxYEHwAFB1NVUFBPUlQfAQUWfi9TdXBwb3J0L0RlZmF1bHQuYXNweGQWEmYPDxYCHwAFD1BPV0VSIENPTU1BTkRFUmQWCmYPDxYEHwAFFlNFTEYgR1VJREVEIEhFTFAgRklMRVMfAQVEaHR0cDovL3d3dy5wb3dlcmNvbW1hbmRlci5jb20vcG93ZXJjb21tYW5kZXIvU3VwcG9ydC9IZWxwL0luZGV4Lmh0bWxkZAIBDw8WBB8ABQRGQVFzHwEFTWh0dHA6Ly93d3cucG93ZXJjb21tYW5kZXIuY29tL3Bvd2VyY29tbWFuZGVyL1N1cHBvcnQvcG93ZXJjb21tYW5kZXJfZmFxcy5hc3B4ZGQCAg8PFgQfAAUUUFJPRFVDVCBSRUdJU1RSQVRJT04fAQUrfi9TdXBwb3J0L2R5bm9qZXRfcHJvZHVjdF9yZWdpc3RyYXRpb24uYXNweGRkAgMPDxYEHwAFDlNVUFBPUlQgVklERU9THwEFOn4vU3VwcG9ydC9keW5vamV0X3ZpZGVvX2luc3RhbGxzX2FuZF90dXRvcmlhbHMuYXNweCN0YWJzLTFkZAIEDw8WBB8ABSBNT0JJTEUgUEhPTkUgVEVDSC4gU1VQUE9SVCBBUFBMLh8BBUhodHRwczovL21hcmtldC5hbmRyb2lkLmNvbS9kZXRhaWxzP2lkPWFwcGludmVudG9yLmFpX2tlaXRoLkR5bm9qZXRQU1RlY2hkZAIBDw8WAh8ABQxQT1dFUiBWSVNJT05kFghmDw8WBB8ABQRGQVFzHwEFI34vcG93ZXJ2aXNpb24vcG93ZXJ2aXNpb24tZmFxcy5hc3B4ZGQCAQ8PFgQfAAUUUFJPRFVDVCBSRUdJU1RSQVRJT04fAQUrfi9TdXBwb3J0L2R5bm9qZXRfcHJvZHVjdF9yZWdpc3RyYXRpb24uYXNweGRkAgIPDxYEHwAFDlNVUFBPUlQgVklERU9THwEFOn4vU3VwcG9ydC9keW5vamV0X3ZpZGVvX2luc3RhbGxzX2FuZF90dXRvcmlhbHMuYXNweCN0YWJzLTJkZAIDDw8WBB8ABRJQT1dFUiBWSVNJT04gVFVORVMfAQUwfi9wb3dlcnZpc2lvbi9Qb3dlclZpc2lvbk1hcHNUdW5lc0Rvd25sb2Fkcy5hc3B4ZGQCAg8PFgIfAAUMQ01EIEFORCBDTURNZBYEZg8PFgQfAAUUUFJPRFVDVCBSRUdJU1RSQVRJT04fAQUrfi9TdXBwb3J0L2R5bm9qZXRfcHJvZHVjdF9yZWdpc3RyYXRpb24uYXNweGRkAgEPDxYEHwAFIE1PQklMRSBQSE9ORSBURUNILiBTVVBQT1JUIEFQUEwuHwEFSGh0dHBzOi8vbWFya2V0LmFuZHJvaWQuY29tL2RldGFpbHM/aWQ9YXBwaW52ZW50b3IuYWlfa2VpdGguRHlub2pldFBTVGVjaGRkAgMPDxYEHwAFE0ZJTkFOQ0UgSU5GT1JNQVRJT04fAQUhfi9GaW5hbmNpbmcvZmluYW5jaW5nX2FfZHluby5hc3B4ZGQCBA8PFgQfAAUUUFJPRFVDVCBSRUdJU1RSQVRJT04fAQUrfi9TdXBwb3J0L2R5bm9qZXRfcHJvZHVjdF9yZWdpc3RyYXRpb24uYXNweGRkAgUPDxYEHwAFGUFERC9VUERBVEUgWU9VUiBEWU5PIFNIT1AfAQUefi9EeW5vQ2VudGVycy9BZGRZb3VyU2hvcC5hc3B4ZGQCBg8PFgQfAAUOUkVNT1RFIFNVUFBPUlQfAQUlfi9TdXBwb3J0L0R5bm9qZXRfcmVtb3RlX3N1cHBvcnQuYXNweGRkAgcPDxYEHwAFFUNPTlRBQ1QgVEVDSC4gU1VQUE9SVB8BBSh+L0NvbnRhY3QvZHlub2pldF90ZWNobmljYWxfc3VwcG9ydC5hc3B4ZGQCCA8PFgQfAAUVQ09OVEFDVCBTQUxFUyBTVVBQT1JUHwEFJH4vQ29udGFjdC9keW5vamV0X3NhbGVzX3N1cHBvcnQuYXNweGRkAgMPDxYEHwAFCURPV05MT0FEUx8BBRl+L0Rvd25sb2Fkcy9EZWZhdWx0My5hc3B4ZGQCBA8PFgQfAAUGVklERU9THwEFM34vU3VwcG9ydC9keW5vamV0X3ZpZGVvX2luc3RhbGxzX2FuZF90dXRvcmlhbHMuYXNweGRkAgUPDxYEHwAFFkRZTk8gQ0VOVEVSUyAvIERFQUxFUlMfAQUcfi9UdW5pbmdDZW50ZXJzL0RlZmF1bHQuYXNweGQWDGYPDxYEHwAFD0FERCBBIERZTk8gU0hPUB8BBR5+L0R5bm9DZW50ZXJzL0FkZFlvdXJTaG9wLmFzcHhkZAIBDw8WBB8ABRdBVVRPTU9USVZFIERZTk8gQ0VOVEVSUx8BBS5+L0R5bm9DZW50ZXJzL0F1dG9tb3RpdmVEeW5vQ2VudGVyTG9jYXRvci5hc3B4ZGQCAg8PFgQfAAUXTU9UT1JDWUNMRSBEWU5PIENFTlRFUlMfAQUufi9EeW5vQ2VudGVycy9Nb3RvcmN5Y2xlRHlub0NlbnRlckxvY2F0b3IuYXNweGRkAgMPDxYEHwAFEEFUViBEWU5PIENFTlRFUlMfAQUnfi9EeW5vQ2VudGVycy9BVFZEeW5vQ2VudGVyTG9jYXRvci5hc3B4ZGQCBA8PFgQfAAUYU05PVyBNT0JJTEUgRFlOTyBDRU5URVJTHwEFLn4vRHlub0NlbnRlcnMvU25vd21vYmlsZUR5bm9DZW50ZXJMb2NhdG9yLmFzcHhkZAIFDw8WBB8ABRNNT0JJTEUgRFlOTyBDRU5URVJTHwEFK34vRHlub0NlbnRlclpzL01vYmlsZUR5bm9DZW50ZXJMb2NhdG9yLmFzcHhkZAIGDw8WBB8ABQxESVNUUklCVVRPUlMfAQUbfi9EaXN0cnVidXRvcnMvRGVmYXVsdC5hc3B4ZGQCBw8PFgQfAAUETkVXUx8BBRhodHRwOi8vYmxvZ3MuZHlub2pldC5jb21kZAIIDw8WAh8ABQdDT01QQU5ZZBYGZg8PFgQfAAUTQ09NUEFOWSBJTkZPUk1BVElPTh8BBSd+L0Fib3V0L2Fib3V0X2R5bm9qZXRfcmVzZWFyY2hfaW5jLmFzcHhkZAIBDw8WBB8ABQdDQVJFRVJTHwEFK34vQ2FyZWVycy9keW5vamV0X3Jlc2VhcmNoX2luY19jYXJlZXJzLmFzcHhkZAICDw8WBB8ABQ1DT01QQU5ZIE1FRElBHwEFGGh0dHA6Ly9tZWRpYS5keW5vamV0LmNvbWRkAhMPZBYQAgEPZBYEAgMPEA8WBh4ORGF0YVZhbHVlRmllbGQFD0dlbkRvd25sb2FkUHJvZB4NRGF0YVRleHRGaWVsZAUPR2VuRG93bmxvYWRQcm9kHgtfIURhdGFCb3VuZGdkEBUVGC0tLSBTZWxlY3QgYSBQcm9kdWN0IC0tLQhBdXRvVHVuZQNDTUQKQ01EIE1hcmluZQNERkMdRHlubyBJbnN0YWxsIEd1aWRlcyAvIE1hbnVhbHMcRHluby1Tb2Z0d2FyZS1GaXJtd2FyZS1PdGhlcgRFU1JNA0xDRBFNdWx0aWZ1bmN0aW9uLUh1YgJOUAVPdGhlcgZQQyBMQ0QIUEMtT2xkZXIIUENJSUlVU0IDUENWDFBvd2VyIFZpc2lvbg9Qcm9kdWN0IENhdGFsb2cMUXVpY2tzaGlmdGVyA1dCMhFXaWRlYmFuZGNvbW1hbmRlchUVASAIQXV0b1R1bmUDQ01ECkNNRCBNYXJpbmUDREZDHUR5bm8gSW5zdGFsbCBHdWlkZXMgLyBNYW51YWxzHER5bm8tU29mdHdhcmUtRmlybXdhcmUtT3RoZXIERVNSTQNMQ0QRTXVsdGlmdW5jdGlvbi1IdWICTlAFT3RoZXIGUEMgTENECFBDLU9sZGVyCFBDSUlJVVNCA1BDVgxQb3dlciBWaXNpb24PUHJvZHVjdCBDYXRhbG9nDFF1aWNrc2hpZnRlcgNXQjIRV2lkZWJhbmRjb21tYW5kZXIUKwMVZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIFDxBkZBYBZmQCBQ9kFgICAw9kFgQCAw8QDxYGHwIFD0dlbkRvd25sb2FkUHJvZB8DBQ9HZW5Eb3dubG9hZFByb2QfBGdkEBUVGC0tLSBTZWxlY3QgYSBQcm9kdWN0IC0tLQhBdXRvVHVuZQNDTUQKQ01EIE1hcmluZQNERkMdRHlubyBJbnN0YWxsIEd1aWRlcyAvIE1hbnVhbHMcRHluby1Tb2Z0d2FyZS1GaXJtd2FyZS1PdGhlcgRFU1JNA0xDRBFNdWx0aWZ1bmN0aW9uLUh1YgJOUAVPdGhlcgZQQyBMQ0QIUEMtT2xkZXIIUENJSUlVU0IDUENWDFBvd2VyIFZpc2lvbg9Qcm9kdWN0IENhdGFsb2cMUXVpY2tzaGlmdGVyA1dCMhFXaWRlYmFuZGNvbW1hbmRlchUVASAIQXV0b1R1bmUDQ01ECkNNRCBNYXJpbmUDREZDHUR5bm8gSW5zdGFsbCBHdWlkZXMgLyBNYW51YWxzHER5bm8tU29mdHdhcmUtRmlybXdhcmUtT3RoZXIERVNSTQNMQ0QRTXVsdGlmdW5jdGlvbi1IdWICTlAFT3RoZXIGUEMgTENECFBDLU9sZGVyCFBDSUlJVVNCA1BDVgxQb3dlciBWaXNpb24PUHJvZHVjdCBDYXRhbG9nDFF1aWNrc2hpZnRlcgNXQjIRV2lkZWJhbmRjb21tYW5kZXIUKwMVZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIFDxBkZBYBZmQCCw8WAh4HVmlzaWJsZWhkAg0PFgIfBWhkAg8PFgIfBWhkAhEPFgIfBWhkAhMPFgIfBWhkAhUPFgIfBWhkZFMqBXcSdL6LW4zzt8Lgl03bSjmQ" />
+
+
+<script src="/ScriptResource.axd?d=TpT7gx7OlQGSLesxdfMDUFpQcckNmqc7WAZisEQya-Tx26g9QTgaOZcjKwTJjKgflYDYbUWLpdVY2EKONaV0rQ7znicxr3Ll8JgCdduVyTH60MW-Qc-SSEVv3gyx2Ks8CgOzxPyagMPjGuUK-isEnJkItlQkIMOp5ApouoPDNyRbMaTw0&amp;t=166c95cb" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=wr3YXoTYsTuIXm32Pnyf-23OpGaZ79BXHexG9a_-jvxYf40xwO6Kllhy-B5J_yOdd30pai0bNltU6A2Qo3PfcQHgCLtnYTEhqF_0m529EVPYEK5YvO0CE5qTE7W6mIvvOXIg6Kbl_YqrAOMS8EHi0ZzvNzQ1&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=HG9e780GTLSU0xoUwiLYIVSV5hGS_CbCL9ag8Nk4ggG_9v9Fig4E0-a1LG7xisgPFvubW2A-d3gU-B8l9tCRhdGzjldgFHeh3GYOHgFkS2IPUEeYzoniUUUHfN2eaGtjz1voZQeag3GaYHIL5RU93Bal4VM1&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=STToLzyf6j-WNKh8Bt3TvEHml7j_r_KcA5LA6XRKps4LO38ulawZ66pOqZaHUoVCCN5QZ_g1ZPE2V-LTqzcf0YPOkuM4YukWyC8Ye1S1MqzO3dnzkZwBQ90Zem-a7GPNkw4mDnZEOxOg-uAhIbxqo0taSci90hlP4AYTaLpuAWBAW6bu0&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=DAJ-G838D0Zc_jJFQwFVXC1o0U9VvO25_DnQ0_GuyIDfpAEaY92GTex77YTKKz95p823h5tCMSjU3T4uDKlXRs5-rVxLfSaci2LI9JpQFBOHv5KirR4wzYPfEs5I3hEeFbYHsSlBkC4MTwkaJq-poQucof_76rSJVYWIzr_6xxmDRpbW0&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=TloJGsjMoU35u8vgZN5x3QNWEoyXpqApO5xhslb738ripQibjgMVjLzNLNCCiF6sT2q5tTLh_rxW32wtPdvBSgCY5OWRoBcchLzKA0NpVPznQNO3CtKq9ZLWMeVnQ92VmVuhLeXGUyTmK3smNFOlyZYBm88VWQPq8NsLc5JMiK7-2JtG0&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=X6QlS87ZEAq83gjPRcYEKj9chluCDmjAFXZYbugvL53SOMoOLeIodafIK0910bflP490k3QoSql6NCZmWFYRX8EwiqGkvjjc6oG_oWMX0DrrR6hCalN4y5BZX0io0w98BRNUx9JV1jcNsgvsuRCSjDtq4M-_177a5U6vzoIsKv7fwcj2OdJI4I7RQK5HPyIEdXDfOQ2&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2INe8Ae2Qmice5tcSQqiZogH7K8uRtQTCWSrl3-ClyV98BSEnsAkGQmrLNBbLCTJFpn-82Zft9xhiX0n-ylhYzDX6z8V-ihiCEOtZZ-DXEpnIg7ZsQX9WNj2d_66CakHxgC0oO8A98ZkD2xBPs9TfArRzC14wTpDFbHMw0att_NoRFi_-MdjteXIR1OTkWrsm-qjOg2&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=nnJdZNNMy94uZUsk629uqunHgbz0eW8yCl8k756HXxNEaI8y_gEbhEmLgQ7tKpbl4ol2m1STgsWyc0awFGy9NRu0OtaidO8DGWMpGjdRXaNK86F_NkrhzWAeMXX5MDO-hHMiNjH7LTdsbXUUmDzADJmxFoTK0qZSkq0PJwXhpucJLIzs0&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=6G_fb78FHHW59LR6_fxP5qg8WE954DarJ4Nu7LEBZSEPOQHMMjFCHTBfOy_VwtoxlSOM5xv10G9Z3F2hD2MAc4A5iFMytGwRZ5VJTH1dH30xOerxaBdrwTQ8tUmvDlYV4eh7VS6y9RSqv0PzW6yANIlnKwBNRp31G53rZZQOOe_m2q550&amp;t=ffffffffe6794c46" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWLQL526u+CwKQisaCBALb8smeAwLjl5KCDgKS6eb/DgLH7NG1BAK84vDCCgKF8fSYAQKb6KagDwLql4qCDgLM8OTrAQLyioacBALHwYLrAQLB2rXFAgKq8J7OAgLnxpW/CgKc16kpAsnLnLYPArDbub8PAs/+7Z8CAqnk7YsHAu2mhOwLAviAouIEAtSYv94EAp/gsMIDAqeF694OAtb7n6MOAoP+qOkEAvjwiZ4KAsHjjcQBAt/63/wPAq6F894OAojinbcBAraY/8AEAoPT+7cBAoXIzJkCAu7i55ICAqPU7OMKAtjF0HUCjdnl6g8C9MnA4w8Ci+yUwwIC7faU1wcCqbT9sAsCstDBlQto9OCxBWVDltm1hPCrujlB/m0Peg==" />
+
+
+    
+
+    <div id="wrapper">
+        <div id="inner">
+     
+        <div id="header">
+                <div class="dynojet_pcom_logo"><a href="../Home.aspx"> 
+                    <img src="../App_Themes/Skin_6/images/dynojet_research_inc_logo.jpg" id="ctl00_logo" href="~/default.aspx" title="Dynojet Research Inc." /></a>
+                </div>
+                <div class="right_menu_holder" style="overflow: hidden; height: 108px;">
+                    <div style="clear: both; overflow: hidden;">
+                  
+                        <div style="float: right; width: 25%;">
+                            <div style="float: left; margin-left: 10px;">
+                            <a href="http://www.facebook.com/pages/Dynojet-Research-Inc-Motorcycle-Powersports/125834827479506?ref=hl" target="_blank"> 
+                                <img src="../Images/Icons/facebook_soc.png" id="ctl00_Img23" /></a>
+                            </div>
+                          
+                            <div style="float: left; margin-left: 10px;">
+                            <a href="http://www.youtube.com/watch?v=rihgJNPqKjA&list=PL9C5A82E908288E21" target="_blank">
+                                <img src="../Images/Icons/youtube_22x22.png" id="ctl00_Img4" /></a>
+                            </div>
+                            <div style="float: left; margin-left: 10px;">
+                                
+                               <script type="text/javascript">                                   var addthis_pub = "fgarcilazo";
+                                   var addthis_options = 'facebook, email, twitter, print, favorites, stubleupon, more';</script>
+
+                <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+                    onmouseout="addthis_close()" onclick="return addthis_sendto()">
+                <img src="../Images/Icons/share_22x78.png" id="ctl00_Img1" alt="Share and Bookmark" /></a>
+                        <script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            
+            <div id="bodyWrapper" style="clear:both;">
+                <div>
+                    <div id="ML">
+                    
+                    </div>
+                    
+                </div>
+                <div id="content">
+                    <!-- CONTENTS START -->
+                    
+
+    <div class="main_body_wrap_v3">
+    
+
+  
+<div class="content_holder_1">
+    <div class="downloads_container">
+        <div class="downloads_header_16px">
+            SELECTION:
+            <span id="ctl00_PageContent_PCDownloadSelector_lblDownloadType"><b><font color="#CC0000" size="4"></font></b></span>
+        </div>
+        <div class="content_container_4">
+        You can access product downloads by selecting a product from the dropdown list or clicking on the product images below.
+          You will need a pdf reader to read some of the documents. Download a copy of Acrobat® Reader by following this link: <a href="http://www.adobe.com/support/downloads/main.html"
+                target="_blank">Adobe</a>
+            <br />
+            <br />
+            <select name="ctl00$PageContent$PCDownloadSelector$Category" id="ctl00_PageContent_PCDownloadSelector_Category" class="dropdown_toupper">
+	<option selected="selected" value=" ">--- Select a Product ---</option>
+	<option value="AutoTune">AutoTune</option>
+	<option value="CMD">CMD</option>
+	<option value="CMD Marine">CMD Marine</option>
+	<option value="DFC">DFC</option>
+	<option value="Dyno Install Guides / Manuals">Dyno Install Guides / Manuals</option>
+	<option value="Dyno-Software-Firmware-Other">Dyno-Software-Firmware-Other</option>
+	<option value="ESRM">ESRM</option>
+	<option value="LCD">LCD</option>
+	<option value="Multifunction-Hub">Multifunction-Hub</option>
+	<option value="NP">NP</option>
+	<option value="Other">Other</option>
+	<option value="PC LCD">PC LCD</option>
+	<option value="PC-Older">PC-Older</option>
+	<option value="PCIIIUSB">PCIIIUSB</option>
+	<option value="PCV">PCV</option>
+	<option value="Power Vision">Power Vision</option>
+	<option value="Product Catalog">Product Catalog</option>
+	<option value="Quickshifter">Quickshifter</option>
+	<option value="WB2">WB2</option>
+	<option value="Widebandcommander">Widebandcommander</option>
+
+</select>
+            
+            <span id="ctl00_PageContent_PCDownloadSelector_Literal1" class="header_2_15px_b" style="color: #999;
+                float: right; width: 300px; clear: both; margin-top: -5px;"></span>
+        </div>
+        <div style="margin-top: 20px; font-size: 15px; font-weight: bold; color: #fff;">
+            
+        </div>
+    </div>
+</div>
+
+
+  
+     <div>
+      
+          <input type="submit" name="ctl00$PageContent$ShowModal" value="" id="ctl00_PageContent_ShowModal" style="border:1px solid #ddd; visibility:hidden;" />
+          
+            <div id="ctl00_PageContent_ModalPanel" style="width:460px; height:265px; margin-left: auto;
+                margin-right: auto; background-color: #F4FBFD; display: none;">
+	
+                <div style="height:290px; width:445px; border:4px solid #E4E4E4; padding:4px; background-color:#f1f1f1;">
+                <div style="background-color:#f4f4f4; height:55px; width:96%; margin-left:auto; text-align:center; line-height:55px; margin-right:auto;">
+                <span id="ctl00_PageContent_lbsResultsPopUp" style="color: #cc0000; font-size: 17px; 
+                    font-weight: bold;">XX NO SELECTION MADE XX</span>
+                    
+                    </div>
+                    <div style="margin-top:10px; margin-left:auto; margin-right:auto; width:98%; overflow:hidden; background-color:#f4f4f4;">
+                      
+<div class="content_holder_1">
+    <div class="downloads_container">
+        <div class="downloads_header_16px">
+            SELECTION:
+            <span id="ctl00_PageContent_PCDownloadSelectorModal_lblDownloadType"><b><font color="#CC0000" size="4"></font></b></span>
+        </div>
+        <div class="content_container_4">
+        You can access product downloads by selecting a product from the dropdown list or clicking on the product images below.
+          You will need a pdf reader to read some of the documents. Download a copy of Acrobat® Reader by following this link: <a href="http://www.adobe.com/support/downloads/main.html"
+                target="_blank">Adobe</a>
+            <br />
+            <br />
+            <select name="ctl00$PageContent$PCDownloadSelectorModal$Category" id="ctl00_PageContent_PCDownloadSelectorModal_Category" class="dropdown_toupper">
+		<option selected="selected" value=" ">--- Select a Product ---</option>
+		<option value="AutoTune">AutoTune</option>
+		<option value="CMD">CMD</option>
+		<option value="CMD Marine">CMD Marine</option>
+		<option value="DFC">DFC</option>
+		<option value="Dyno Install Guides / Manuals">Dyno Install Guides / Manuals</option>
+		<option value="Dyno-Software-Firmware-Other">Dyno-Software-Firmware-Other</option>
+		<option value="ESRM">ESRM</option>
+		<option value="LCD">LCD</option>
+		<option value="Multifunction-Hub">Multifunction-Hub</option>
+		<option value="NP">NP</option>
+		<option value="Other">Other</option>
+		<option value="PC LCD">PC LCD</option>
+		<option value="PC-Older">PC-Older</option>
+		<option value="PCIIIUSB">PCIIIUSB</option>
+		<option value="PCV">PCV</option>
+		<option value="Power Vision">Power Vision</option>
+		<option value="Product Catalog">Product Catalog</option>
+		<option value="Quickshifter">Quickshifter</option>
+		<option value="WB2">WB2</option>
+		<option value="Widebandcommander">Widebandcommander</option>
+
+	</select>
+            
+            <span id="ctl00_PageContent_PCDownloadSelectorModal_Literal1" class="header_2_15px_b" style="color: #999;
+                float: right; width: 300px; clear: both; margin-top: -5px;"></span>
+        </div>
+        <div style="margin-top: 20px; font-size: 15px; font-weight: bold; color: #fff;">
+            
+        </div>
+    </div>
+</div>
+
+                     </div>
+                     <div  style="margin-top:10px; margin-left:auto; margin-right:auto; width:98%; overflow:hidden; background-color:#f4f4f4;">
+                <input type="submit" name="ctl00$PageContent$OKButton" value="Close Window" id="ctl00_PageContent_OKButton" style="float:right; cursor:pointer; text-align:center; margin-right:10px; height:26px; width:120px; color:#888; background-color:#222;" /></div>
+                </div>
+            
+</div>
+              
+            
+        </div>
+        <!--modal popup end-->
+  
+        <div class="content_holder_1">
+            
+            <!--ends software repeater-->
+            <!--firmware repeater begins-->
+            
+            <!-- ends firmware repeater begins-->
+            <!--manuals repeater begins-->
+            
+            <!-- ends manuals repeater begins-->
+
+            <!--tutorials repeater begins-->
+            
+            <!-- ends tutorials repeater begins-->
+            
+             <!--tutorials repeater begins-->
+            
+            <!-- ends tutorials repeater begins-->
+           <!--tutorials repeater begins-->
+            
+            <!-- ends tutorials repeater begins-->
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+
+                    <!-- CONTENTS END -->
+                </div>
+            </div>
+
+
+            <!--begin footer-->
+            
+      <div id="footer_dark">
+
+            <span class="slide1">
+            <a href="#" class="slide1">+  Expand Footer Menu</a>
+            </span>
+
+         
+                <div class="footer_inner">
+                    <div class="footer_link_container">
+                        <h3>
+                            POWERSPORTS PRODUCTS</h3>
+                        <div class="footer_ul_adj">
+                            <ul>
+                                <li><span>Powercommander </span></li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/PowerCommanderV/powercommander_v.aspx">Powercommander V</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/PowerCommanderVPti/powercommander_v_pti.aspx">Powercommander V Pti</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/PowerCommanderETec/powercommander_e_tec.aspx">Powercommander E-Tec</a></li>
+                                <li><span>Powercommander Accessories</span> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/IgnitionModule/powercommander_v_ignition_module.aspx">PCV Ignition Module</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/QuickShifterExpansionModule/powercommander_quick_shifter_expansion_module.aspx">Quickshifter</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/LCDUnit/powercommander_lcd.aspx">LCD Unit</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/AutoTune/powercommander_autotune.aspx">Autotune</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/MultiFunctionHub/powercommander_multifunction_hub.aspx">Multifunction Hub</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/SecondaryFuelModule/powercommander_v_secondary_fuel_module.aspx">SFM</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/HarleyDavidsonMicroDisplay/">Harley Micro Display</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Products/DFC/powercommander_dfc.aspx">DFC</a></span> </li>
+                                <li><a href="http://www.dynojet.com/powervision/">Power Vision</a></li>
+                                <li><a href="http://www.widebandcommander.com/">Wideband Commander </a></li>
+                                <li><a href="http://www.widebandcommander.com/"> Wideband Commander 2</a></li>
+                                <li><a href="http://www.dynojetcmd.com/cmd_automotive.aspx">Combustion Manage Device </a></li>
+                                <li><a href="http://www.dynojetcmd.com/cmd_marine.aspx">Combustion Manage Device Marine </a></li>
+                                <li><a href="http://www.dynojet.com/jetkits/index.aspx">Jetkits</a></li>
+                                <li><a href="http://www.dynaonline.com/">Dynatek Products</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_link_container">
+                        <h3>
+                            DYNAMOMETER MODELS</h3>
+                        <div class="footer_ul_adj">
+                            <ul>
+                                <li><span>Automotive Dynamometers</span></li>
+                                <li><a href="../Products/Dynamometers/DynoModel224x/dynojet_dynamometer_224x.aspx">Model 224X</a> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel224xLC/dynojet_dynamometer_224xLC.aspx">Model 224xLC</a> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel424x/dynojet_dynamometer_424x.aspx">Model 424X</a> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel424xLC2/dynojet_dynamometer_424xLC2.aspx">Model 424xLC2</a> </li>
+                                <li><span>Powersports Dynamometers</span> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel200i/dynojet_dynamometer_200i.aspx">Model 200i</a> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel200ix/dynojet_dynamometer_200ix.aspx">Model 200ix</a> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel250i/dynojet_dynamometer_250i.aspx">Model 250i</a> </li>
+                                <li><a href="../Products/Dynamometers/DynoModel250iX/dynojet_dynamometer_250ix.aspx">Model 250ix</a> </li>
+                                <li><span>Scooter Dynamometers</span></li>
+                                <li><a href="../Products/Dynamometers/DynoModelSD12/dynojet_dynamometer_SD12.aspx">Model SD12</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_link_container">
+                        <h3>
+                            DYNO TUNING CENTERS</h3>
+                        <div class="footer_ul_adj">
+                            <ul>
+                                <li><span>Within the USA</span></li>
+                                <li><a href="../DynoCenters/AutomotiveDynoCenterLocator.aspx">Automotive Dyno Centers</a> </li>
+                                <li><a href="../DynoCenters/MotorcycleDynoCenterLocator.aspx">ATV/Motorcycle Dyno Centers </a></li>
+                                <li><a href="http://www.powercommander.com/powercommander/TuningCenters/powercommander_tuning_center_and_dealer_locator.aspx">Moto Dyno Tuning Center</a></li>
+                                <li><a href="http://www.powercommander.com/powercommander/TuningCenters/powercommander_tuning_center_and_dealer_locator.aspx">PC Dealers</a> </li>
+                                <li><span>International</span> </li>
+                                <li><a href="../DynoCenters/MotorcycleDynoCenterLocator.aspx">Automotive Dyno Centers</a> </li>
+                                <li><a href="../DynoCenters/MotorcycleDynoCenterLocator.aspx">ATV/Motorcycle Dyno Centers </a></li>
+                                <li><a href="http://www.powercommander.com/powercommander/TuningCenters/powercommander_tuning_center_and_dealer_locator.aspx">Moto Dyno Tuning Center</a></li>
+                                <li><a href="http://www.powercommander.com/powercommander/TuningCenters/powercommander_tuning_center_and_dealer_locator.aspx">PC Dealers</a> </li>
+                                <li><a href="../DynoCenters/AddYourShop.aspx">Update your Center's Info. </a></li>
+                                <li><a href="http://www.powercommander.com/powercommander/Contact/powercommander_tuning_center_dealer_inquiry.aspx">Become a Dealer or Tuning Centers </a></li>
+                                    <li><a href="../Distrubutors/Default.aspx">Distributors </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_link_container">
+                        <h3>
+                            SUPPORT</h3>
+                        <div class="footer_ul_adj">
+                            <ul>
+                                <li><span>Powercommander</span></li>
+                                <li><a href="http://www.powercommander.com/powercommander/Support/powercommander_faqs.aspx">FAQs</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Support/Help/Index.html">Self Help Files</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Contact/powercommander_sales_support.aspx">Contact Sales</a></li>
+                                <li><a href="http://www.powercommander.com/powercommander/Contact/powercommander_technical_support.aspx">Contact Tech. Support</a> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Support/Dynojet_remote_support.aspx">Remote Desktop Support</a> </li>
+                                <li><span>Downloads</span> </li>
+                                <li><a href="http://www.powercommander.com/powercommander/Downloads/Default.aspx">PC Software/Firmware/Manuals</a> </li>
+                                <li><a href="http://dynojet.com/powervision/PowerVisionMapsTunesDownloads.aspx">Power Vision Maps</a> </li>
+                                  <li><a href="Default.aspx?ProdType=Power%20Vision">Power Vision Maps Downloads</a> </li>
+                                <li><span>Direct</span></li>
+                                <li><a href="#">1-800-992-4993</a> </li>
+                                <li><span>Dynamometer Downloads</span></li>
+                                <li><a href="Default.aspx?ProdType=Dynos">WinPEP/Run Viewer/Tutorials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_link_container">
+                        <h3>
+                          ABOUT / CONTACT US</h3>
+                        <div class="footer_ul_adj">
+                            <ul>
+                                <li><a href="../About/about_dynojet_research_inc.aspx" id="ctl00_footer_A1">About Dynojet.com</a></li>
+                                <li><a href="../Careers/dynojet_research_inc_careers.aspx" id="ctl00_footer_A2">Careers</a> </li>
+                                <li><a href="http://media.dynojet.com/" id="ctl00_footer_A3">Media</a> </li>
+                                <li><a href="http://blogs.dynojet.com" id="ctl00_footer_A4">Dynojet Blog</a></li>
+                         
+                        
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+       
+
+
+            </div>
+            <!--end footer-->
+
+            <div class="sub_footer">
+                <div class="sub_ftr_copyright">
+                    Dynojet Research, Inc. Copyright, Trademark and Disclaimer Notices | © 1995 -
+                    <script type="text/javascript">
+                        var dteNow = new Date();
+                        var intYear = dteNow.getFullYear();
+                        document.write(intYear);
+                    </script>
+                    Dynojet Research, Inc. All Rights Reserved.
+                </div>
+                <div class="sub_ftr_logo">
+                     <img src="../images/logos/dynojet_truth_in_power.png" id="ctl00_Img33" alt="dynojet truth in power" />
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+
+
+	
+	
+    <!-- wrapper -->
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {AjaxControlToolkit.ModalPopupBehavior.invokeViaServer('ctl00_PageContent_mpe', true); Sys.Application.remove_load(fn);};Sys.Application.add_load(fn);})();Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","OkControlID":"ctl00_PageContent_OKButton","PopupControlID":"ctl00_PageContent_ModalPanel","dynamicServicePath":"/downloads/Default.aspx","id":"ctl00_PageContent_mpe"}, null, null, $get("ctl00_PageContent_ShowModal"));
+});
+//]]>
+</script>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,988 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<!-- copyright
+		This file is part of a software application licensed from
+		TEKgroup International, Inc. (www.tekgroup.com). The application
+		software, database and associated files cannot be duplicated, copied or
+		modified without the written permission of TEKgroup International, Inc.
+		-->
+		
+		
+		
+
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+		
+		<meta name="keywords" content="Lexus, es 350, es350, ES 300h, ES300h, Hybrid, Auto Shows, NY Auto Show, New York International Auto Show">
+		<meta name="description" content="Lexus today unveiled the all-new 2013 ES lineup, including the ES 350 and ES 300h equipped with Lexus Hybrid Drive.">
+
+		<meta name="google-site-verification" content="FjSsdGOsY5hIOoqu5rv50hfXCL11sPu5UIRcogasGcA">
+
+		<title>Lexus | Lexus Unveils All-New 2013 ES 350 and First-Ever ES 300h Hybrid at New York International Auto Show</title>
+
+		
+			<link rel="canonical" href="http://pressroom.lexus.com/releases/lexus+unveils+all-new+2013+es+350+300h+hybrid+ny+auto+show.htm" />
+		
+		<link rel="stylesheet" href="/css/global.css">
+		<link rel="alternate" type="application/rss+xml" title="Lexus" href="/rss.xml">
+
+		 <!--[if IE 9]>
+ 	     <link rel="stylesheet" href="/css/ie9.css" type="text/css" media="screen, projection" />
+ 		 <![endif]-->
+
+		 <!--[if IE 8]>
+ 	     <link rel="stylesheet" href="/css/ie8.css" type="text/css" media="screen, projection" />
+ 		 <![endif]-->
+
+		 <!--[if lte IE 8]>
+ 	     <link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection" />
+ 		 <![endif]-->
+
+		<!--[if lte IE 7]>
+ 	     <link rel="stylesheet" href="/css/ie7.css" type="text/css" media="screen, projection" />
+ 		 <![endif]-->
+
+		<!--[if lte IE 6]>
+ 	     <link rel="stylesheet" href="/css/ie6.css" type="text/css" media="screen, projection" />
+ 		 <![endif]-->
+
+		 
+		
+
+		<style type="text/css">
+			/* theme specific */
+			#wrap_body {
+				background: url(/graphics/9021/theme/14/lexus_bg14.jpg) 0 0 no-repeat;
+			}
+			
+		#wrap_body {background-color:#CCCDD1;}
+
+		.news_contain{
+			float:left; 
+			width:315px; 
+			height:230px;
+			overflow-x: hidden;
+			margin: 0 10px 0 10px;
+			padding:25px 0 0 0px;
+		}
+		.featured_news_ind {
+			float:left;
+			width:340px;
+			height:310px;
+			margin-right:0px;
+			overflow:hidden;
+			background: url(/graphics/9021/bottomBg.png) bottom no-repeat;
+		}
+		.news_contain a:link, .news_contain a:visited {
+			text-decoration:none;
+			font-size:13px;
+			line-height:18px;
+			color:#000000;
+		}
+		.news_contain a:hover {
+			text-decoration:underline;
+			font-size:13px;
+			line-height:18px;
+			color:#333333;
+		}
+		.news_readmore {
+			float:left; 
+			width:315px; 
+			text-align:center;
+			padding: 14px 0 0 3px;
+			height:25px;
+		}
+		.news_readmore a:link, .news_readmore a:visited, .news_readmore a:hover {
+			color:#000000;
+			font-size:13px;
+			line-height:18px;
+			font-family:verdana;
+		}
+	
+		</style>
+
+		
+		<script src="/scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
+
+		
+		<script type="text/javascript">
+		    //this function is used by video links - it embeds the player rather than opening the player up
+			$(function() {
+				$.fn.media.mapFormat('mp3','quicktime'); //the default mp3 player packaged with jquery media is proprietary.  override to quicktime (winmedia, real are other options).
+				$('a.media').media();
+		    });
+
+			$(document).ready(function() {
+				//this function is used by imgage links - it uses fancybox to show low and high versions
+				$("a.imagefancy").fancybox({
+					'titlePosition'  : 'over'
+				});
+
+				//this function is used to display the non-media access denied or login popups.
+				$("a.msgfancy").fancybox({
+					'titlePosition'		: 'inside',
+					'transitionIn'		: 'none',
+					'transitionOut'		: 'none'
+				});
+
+			});
+
+			//This is for the Terms and conditions JTG
+
+
+			function set_tc_cookie() {
+				var photoid = $("#photo_id").val();
+				$.post("/set_tc_cookie.cfm",
+						{photo_id:photoid},
+						function(data){
+							var results_array = data.split("|");
+							if (results_array[0] >= "1") {
+								// TDD - This sets a hidden form field to 1
+								$("#disable_popup_flg").val("1");
+								view_media();
+							};
+						}
+				);
+				$.fancybox.close();
+			};
+
+			function view_media() {
+				var media_id = $("#photo_id").val();
+				var url_string = $("#intended_url").val();
+				window.location = url_string;
+			};
+			function media_link_action(i,j) {
+				var check_popup_flg = $("#disable_popup_flg").val();
+				// TDD - Checks the value in the hidden form field. If the value is zero
+				// 		 indicates the popup should be displayed.
+				if (check_popup_flg == "0") {
+					$("#photo_id").val(i);
+					$("#intended_url").val(j);
+					$.fancybox({
+						'href'			: '#tandcwarning',
+						'titlePosition'	: 'inside'
+					});
+				} else {
+					//var url_string = $("#intended_url").val();
+					window.location = j;
+				}
+			};
+
+			$(document).ready(function() {
+				$("#iagreetotandc").click(set_tc_cookie);
+			});
+		</script>
+
+		
+		
+			<!-- Google Analytics: start -->
+			
+
+			<script type="text/javascript">
+
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-451241-3']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+
+			</script>
+			<!-- Google Analytics: end -->
+
+			
+			
+				<script type="text/javascript">
+
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-11625112-43']);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+
+				</script>
+			
+	</head>
+<body>
+
+
+
+<div id="wrap_site">
+	<div id="wrap_body">
+	<div id="wrap_header">
+		<div id="header">
+			<div id="subnav">
+				<div id="hovernav">
+					<ul>
+						
+						<li class="first-item"><a href="/corporate/">Corporate</a>
+							<ul>
+								<li><a href="/corporate/biographies/" target="_top">Biographies</a></li>
+								<li><a href="/corporate/toyota+production+relief+updates/" target="_top">Production/Relief Updates</a></li>
+								<li><a href="/corporate/speeches/" target="_top">Executive Speeches</a></li>
+								<li><a href="/corporate/awards/" target="_top">Awards</a></li>
+								<li><a href="/corporate/company+history/" target="_top">Company History</a></li>
+								<li><a href="/corporate/multidistrict+litigation/" target="_top">Multidistrict Litigation</a></li>
+							</ul>
+						</li>
+						<li><a href="/toyota/" target="_top">Toyota</a></li>
+						<li><a href="/lexus/" target="_top">Lexus</a></li>
+						<li><a href="/scion/" target="_top">Scion</a></li>
+						<li><a href="/manufacturing+engineering/" target="_top">Manufacturing/Engineering/Design</a></li>
+						<li><a href="/sales-financial/" target="_top">Sales/Financial</a></li>
+						<li><a href="/toyota/advanced-technology/" target="_top">Advanced Technology</a></li>
+						<li><a href="/philanthropy/" target="_top">Philanthropy</a></li>
+						<li><a href="/environmental/" target="_top">Environmental</a></li>
+						<li><a href="/safety-recall/" target="_top">Safety/Recall</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="logo">
+				
+				
+					<div id="logo_lexus"><a href="http://pressroom.lexus.com" class="logo_link" title="Lexus Online Newsroom"></a></div>
+				
+			</div>
+			<div id="search_wrap">
+				<div class="search_top">
+					<form action="/search_results.cfm" method="post">
+						<input type="hidden" name="newsearch" value="">
+						<div style="float: left; padding-right: 2px;">
+							<input type="text" name="keywords" id="keywords" class="search_input" value="Type Search Here" onclick="javascript:this.value=''">
+						</div>
+						<div style="float: left;">
+							<input type="submit" name="search_btn" value="" alt="Search" title="Search" class="search_btn" style="margin-top:7px;">
+						</div>
+						<br clear="all">
+						
+						<select id="stype" name="stype" class="sm_margin" style="margin-top: 5px;">
+							<option value="1,2,3,7,4,5,6">Search all Content</option>
+							<option value="1,2">Limit to Press Releases</option>
+							<option value="4">Limit to Photos/Video</option>
+							<option value="7">Limit to Albums</option>
+							<option value="3">Limit to Press Kits</option>
+						</select>
+						<a href="/search.cfm">Advanced Search</a>
+					</form>
+				</div>
+				<div class="social_med">
+					<ul>
+						<li class="sm_icons_r"><a href="/rss_feeds.cfm" class="ico_rss" title="RSS"></a></li>
+						<li class="sm_icons_e"><a href="/register.cfm" class="ico_email" title="E-Mail Alerts"></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div id="secondarynav_wrap">
+				<div id="secondarynav">
+					<div id="hovernav2">
+					<ul>
+						
+						<li class="nav_news"><a href="/releases/"></a></li>
+						<li class="nav_products"><a href="/press_kit_index.cfm?brand_id=1"></a>
+							<ul>
+								<li><a href="/press_kit_index.cfm?prod_brand_id=1&amp;brand_id=1" target="_top">Toyota</a></li>
+								<li><a href="/press_kit_index.cfm?prod_brand_id=2&amp;brand_id=2" target="_top">Lexus</a></li>
+								<li><a href="/press_kit_index.cfm?prod_brand_id=3&amp;brand_id=3" target="_top">Scion</a></li>
+							</ul>
+						</li>
+						<li class="nav_photos"><a href="#"></a>
+							<ul>
+								<li><a href="/toyota/photos/" target="_top">Toyota</a></li>
+								<li><a href="/lexus/photos/" target="_top">Lexus</a></li>
+								<li><a href="/scion/photos/" target="_top">Scion</a></li>
+								<li><a href="/manufacturing+engineering/photos/" target="_top">Manufacturing/Engineering</a></li>
+								<li><a href="/section_display.cfm?section_id=400" target="_top">Corporate</a></li>
+							</ul>
+						</li>
+						<li class="nav_video"><a href="#"></a>
+							<ul>
+								<li><a href="/toyota/video/" target="_top">Toyota</a></li>
+								<li><a href="/lexus/video/" target="_top">Lexus</a></li>
+								<li><a href="/scion/video/" target="_top">Scion</a></li>
+								<li><a href="/manufacturing+engineering/video/" target="_top">Manufacturing/Engineering</a></li>
+								<li><a href="/section_display.cfm?section_id=399" target="_top">Corporate</a></li>
+							</ul>
+						</li>
+						<li class="nav_factsheets"><a href="/fact-sheets/"></a></li>
+						<li class="nav_social"><a href="/social/"></a></li>
+						<li class="nav_contacts"><a href="/contacts/"></a></li>
+						<li class="nav_tm"><a href="/toyota/"></a>
+							<ul>
+								<li><a href="" target="_top">Cars</a>
+									<ul>
+
+										<li><a href="/press_kits.cfm?presskit_id=141" target="_top">Avalon</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=76" target="_top">Camry</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=102" target="_top">Corolla</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=104" target="_top">Matrix</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=138" target="_top">Yaris</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top">Truck/Utility/Van</a>
+									<ul>
+										<li><a href="/press_kits.cfm?presskit_id=125" target="_top">4Runner</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=128" target="_top">FJ Cruiser</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=129" target="_top">Highlander</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=103" target="_top">Land Cruiser</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=100" target="_top">RAV4</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=133" target="_top">Sequoia</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=134" target="_top">Sienna</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=132" target="_top">Tacoma</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=131" target="_top">Tundra</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=114" target="_top">Venza</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top">Hybrids</a>
+									<ul>
+										<li><a href="/press_kits.cfm?presskit_id=77" target="_top">Camry Hybrid</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=130" target="_top">Highlander Hybrid</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=93" target="_top">Prius</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=107" target="_top">Prius c</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=139" target="_top">Prius v</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=94" target="_top">Prius Plug-In</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top">Electric Vehicles</a>
+									<ul>
+										<li><a href="/press_kits.cfm?presskit_id=117" target="_top">RAV4 EV</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top"><span style="color:#666666;">Future Vehicles</span></a>
+									
+								</li>
+								<li><a href="/toyota/concept+vehicles/" target="_top">Concept Vehicles</a></li>
+
+
+							</ul>
+						</li>
+						<li class="nav_lx"><a href="/lexus/"></a>
+							<ul>
+								<li><a href="" target="_top">Cars</a>
+									<ul>
+										<li><a href="/press_kits.cfm?presskit_id=115" target="_top">ES</a></li>
+										<li><a href="/lexus/f-sport/" target="_top">F Sport</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=75" target="_top">GS</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=122" target="_top">IS</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=123" target="_top">IS C</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=124" target="_top">IS F</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=36" target="_top">LFA</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=120" target="_top">LS</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top">Utility</a>
+									<ul>
+										<li><a href="/press_kits.cfm?presskit_id=118" target="_top">GX</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=106" target="_top">LX</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=112" target="_top">RX</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top">Hybrids</a>
+									<ul>
+										<li><a href="/press_kits.cfm?presskit_id=119" target="_top">CT</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=116" target="_top">ES</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=105" target="_top">GS</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=87" target="_top">HS</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=121" target="_top">LS</a></li>
+										<li><a href="/press_kits.cfm?presskit_id=113" target="_top">RX</a></li>
+									</ul>
+								</li>
+								<li><a href="" target="_top"><span style="color:#666666;">Future Vehicles</span></a></li>
+								<li><a href="/lexus/concept+vehicles/" target="_top">Concept Vehicles</a></li>
+								<li><a href="/section_display.cfm?section_id=116" target="_top">Lifestyle</a></li>
+							</ul>
+						</li>
+						<li class="nav_sc"><a href="/scion/"></a>
+							<ul>
+								<li><a href="/press_kits.cfm?presskit_id=108" target="_top">FR-S</a></li>
+								<li><a href="/press_kits.cfm?presskit_id=3" target="_top">iQ</a></li>
+								<li><a href="/press_kits.cfm?presskit_id=109" target="_top">tC</a></li>
+								<li><a href="/press_kits.cfm?presskit_id=111" target="_top">xB</a></li>
+								<li><a href="/press_kits.cfm?presskit_id=110" target="_top">xD</a></li>
+								<li><a href="" target="_top"><span style="color:#666666;">Future Vehicles</span></a></li>
+								<li><a href="/scion/concept+vehicles/" target="_top">Concept Vehicles</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div> 
+				</div>
+			</div>
+		</div>
+</div>
+<div id="wrap-content">
+
+<div id="wrap_leftrail">
+<div id="leftrail" class="columnTallest">
+	<ul>	
+		
+				<li class="navigation"><a href="/register.cfm">Email Alerts</a></li>
+			
+				<li class="clearType"><br> 
+<DIV CLASS="RAIL_SRCH">
+	<form name="rail_search" action="/search_results.cfm" method="post">
+		<h4>Search:</h4>
+		<input type="hidden" name="stype" value="1,2,3,7,4,5,6" />
+		<input type="hidden" name="newsearch" value="" />
+		
+		<label for="keywords">Keywords:</label><br />
+		<input type="text" name="keywords" id="keywords" size="20" class="railForm">
+		<br />
+		
+		<input type="image" src="/graphics/9021/sub_buttons_search.gif" alt="Search" title="Search" border="0" /><br />
+		<a href="/search.cfm">Advanced Search</a>
+	</form>
+</DIV>
+</li>
+			
+	</ul>
+</div><!-- END leftrail -->
+</div><!-- END wrap_leftrail -->
+
+<div id="wrap_centerwell_twocol">
+<div id="centerwell_twocol" class="columnTallest">
+
+		<div id="breadcrumbsRSS"><a href="/releases/rss.xml" target="_blank" title="RSS"></a></div>
+	
+	
+		<script language="javascript">
+			// this function controls breadcrumb trail on section pages
+			$(document).ready(function(){
+				//activate for style 1:  $('#breadcrumbs-1').xBreadcrumbs();
+	       		//activate for style 2:  $('#breadcrumbs-2').xBreadcrumbs({ collapsible: true });
+	      			$('#breadcrumbs-3').xBreadcrumbs();
+			});
+		</script>
+		
+		<ul class="xbreadcrumbs" id="breadcrumbs-3">
+		<li class="first"><a href="/">Home</a></li>
+			
+				<li class="current "><a href="/releases/" target="_top">News Releases</a>
+					
+				</li>
+			
+		</ul>
+		<br clear="all">
+	
+
+	<div id="articleTools">
+		<table>
+			<tr>
+				
+					<td><a href="/releases/lexus+unveils+all-new+2013+es+350+300h+hybrid+ny+auto+show.print" target="_blank"><img src="/graphics/9021/tools_print.gif" title="Print Friendly Version" alt="Print Friendly Version" name="tools_print" /></a></td>
+				
+						<td><a href="/releases/lexus+unveils+all-new+2013+es+350+300h+hybrid+ny+auto+show.pdf"><img src="/graphics/9021/tools_pdf.gif" title="Convert to PDF" alt="Convert to PDF" name="tools_pdf" /></a></td>
+						<td><a href="/releases/lexus+unveils+all-new+2013+es+350+300h+hybrid+ny+auto+show.rtf"><img src="/graphics/9021/tools_rtf.gif" title="Convert to RTF" alt="Convert to RTF" name="tools_rtf" /></a></td>
+					
+					<td><a href="#rel"><img src="/graphics/9021/tools_related.gif" title="Related Assets" alt="Related Assets" name="tools_related" /></a></td>
+				
+				<td>
+				
+					
+					<div 
+						class="addthis_toolbox addthis_default_style"
+						addthis:url="http://pressroom.lexus.com/article_display.cfm?article_id=3402"
+		       			addthis:title="Lexus Unveils All-New 2013 ES 350 and First-Ever ES 300h Hybrid at New York International Auto Show">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_counter addthis_pill_style"></a>
+					</div>
+					
+					
+				
+				</td>
+			</tr>
+		</table>	
+		
+	</div>
+Categories:
+				
+				
+								<a href=""></a>
+								
+								<a href="/lexus/">Lexus</a>
+								
+								<a href="/lexus/es350/">ES 350</a>
+								
+								<a href="/auto+shows/">Auto Shows</a>
+								
+								<a href="/lexus/ES300h/">ES 300h</a>
+	<br><br>
+
+	<div id="articleDateTitle">
+		
+			<span class="strDate">April 04, 2012</span><br />
+		
+		<h1>Lexus Unveils All-New 2013 ES 350 and First-Ever ES 300h Hybrid at New York International Auto Show</h1>
+	</div>
+
+
+<div id="articleContent">
+	
+		<h6>&bull;	Newest Expression of Lexus Signature Design<br />
+&bull;	Wheelbase Increased to Enhance Interior Roominess<br />
+&bull;	Improved Steering and Suspension Deliver Crisp, Confident Driving Experience<br /></h6><br>
+	
+				<div class="story_mm">						
+					<!-- display preview thumbs and caption -->
+					
+				<a class="msgfancy_tc" href="javascript:media_link_action('21277', '/photo_display.cfm?photo_id=21277&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_350_001_43849_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 350 001">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="msgfancy_tc" href="javascript:media_link_action('21279', '/photo_display.cfm?photo_id=21279&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_350_003_43855_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 350 002">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="msgfancy_tc" href="javascript:media_link_action('21280', '/photo_display.cfm?photo_id=21280&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_350_004_43858_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 350 003">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="msgfancy_tc" href="javascript:media_link_action('21252', '/photo_display.cfm?photo_id=21252&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_300h_001_43773_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 300h 001">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="msgfancy_tc" href="javascript:media_link_action('21260', '/photo_display.cfm?photo_id=21260&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_300h_008_43797_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 300h 008">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="msgfancy_tc" href="javascript:media_link_action('21262', '/photo_display.cfm?photo_id=21262&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_300h_011_43803_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 300h 011">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="msgfancy_tc" href="javascript:media_link_action('21273', '/photo_display.cfm?photo_id=21273&amp;download=true');" title="Terms and Conditions">
+			
+							<img src="/images/2013_Lexus_ES_300h_022_43836_2524_thumb.jpg" alt="2012 NY Auto Show - 2013 Lexus ES 300h 022">
+						
+				</a>
+			
+						<div class="body_small">
+							
+						</div>
+						
+							<hr class="story_mm">
+							<br clear="all">
+						
+				<a class="" href="/video_display.cfm?video_id=21360" title="2012 New York Auto Show - Lexus ES 350/ES 300h Reveal">
+			
+							<img src="/images/esrevealthmb.jpg" alt="2012 New York Auto Show - Lexus ES 350/ES 300h Reveal" border="0">
+						
+				</a>
+			
+						<div class="body_small">
+							
+								<span>Lexus Group Vice President and General Manager Mark Templin unveils the all-new 2013 ES 350 and ES 300h at the New York International Auto Show, Wednesday, April 4, 2012. (video clip)<br /></span>
+							
+						</div>
+						
+				</div>
+			
+			
+			
+			
+			<span>NEW YORK, April 4, 2012 &ndash; Lexus today unveiled the all-new 2013 ES lineup, including the ES 350 and ES 300h equipped with Lexus Hybrid Drive. Featuring a progressive new design and enhanced handling, the 2013 ES sedan is set to continue as a favorite of luxury car buyers.<br />
+<br />
+&ldquo;The Lexus ES brought new levels of refinement, sophistication and quality to the entry luxury segment when it entered the market in 1989, and through the years it has consistently been a sales leader for us,&rdquo; said Mark Templin, Lexus group vice president and general manager. &ldquo;Now, with both gas and hybrid versions, the 2013 ES promises to lead Lexus forward once again.&rdquo;<br />
+<strong><br />
+ES 350 Now Complemented by ES 300h Hybrid</strong><br />
+For the first time, the Lexus ES will be available with Lexus Hybrid Drive. Featuring a 2.5-liter four-cylinder Atkinson cycle engine, the ES 300h hybrid is expected to earn an EPA fuel economy rating of approximately 40 mpg combined city/highway. <br />
+<br />
+This new, low friction twin cam engine utilizes a sophisticated power management system, 12.5:1 compression ratio, and Variable Valve Timing with intelligence (VVT-i). The beltless motor is designed to improve fuel economy and durability, and a near zero evaporative fuel system helps reduce emissions. <br />
+<br />
+The ES 300h hybrid offers the driver four modes: Normal, Sport, Eco and EV. EV mode allows short distance drives, at reduced speed, using only the power from the hybrid battery pack. Normal mode provides a blend of performance and efficiency that is suited to everyday driving, while Eco mode favors fuel economy. Sport mode increases powertrain responsiveness.<br />
+<br />
+The ES 350 is powered by a 3.5-liter V6 engine with Dual VVT-i.  The six-speed automatic Electronically Controlled Transmission with intelligence (ECT-i) provides enhanced performance, fuel efficiency and smooth shifts. Low friction materials further improve efficiency.<br />
+<br />
+<strong>Signature Lexus Design</strong><br />
+The new ES features a lower, progressive profile, and clean, continuous styling lines from front to rear. All four corners are pulled tightly inward to the wheel arches, creating distinctive proportions. The wheelbase of the new ES has been lengthened by 1.8 inches, while the overall length of the vehicle has grown by just one inch, resulting in a more spacious interior.  <br />
+<br />
+The new ES unmistakably bears the new face of Lexus with its distinctive, spindle grille.   The LED daytime running lights and combination rear lamps reflect the &ldquo;L&rdquo; design motif. The ES 350&rsquo;s rear bumper sports dual exhaust pipes, while the ES 300h hybrid features a distinctive rear design with hidden exhaust and an integrated spoiler. New exterior colors for the 2013 ES include Fire Agate Pearl and Silver Lining Metallic. <br />
+<br />
+<strong>Interior Designed for Comfort and Spaciousness</strong><br />
+The modern interior of the 2013 ES has been designed to provide both a sense of openness and security. Sightlines and visibility are improved, controls are logically placed, and new cabin materials express a high level of craftsmanship.<br />
+<br />
+A newly sculptured seat enhances driver comfort. The steering wheel angle has been reduced from 24 degrees to 22 degrees for a more natural control position.  Fluid-filled engine mounts, new sound absorbing materials and a tuned engine intake minimize the intrusion of outside noise.  <br />
+<br />
+Greater rear seat legroom and knee room are the hallmark of the redesigned, more spacious cabin.  Knee room is increased by 2.8 inches and legroom is increased by 4.1 inches. The new design also offers additional foot room below the front seats.  <br />
+<br />
+Available comfort and convenience features include manual door window shades, a power rear shade, and a one-touch power trunk closer.  Optional ambient lighting, discretely placed under the wood trim, softly illuminates the surfaces of the instrument panel and all four doors.<br />
+<br />
+The new ES will feature enhanced NuLuxe seating surfaces, developed to reduce environmental impact. Genuine leather is also available, as is semi-aniline leather for an even more refined look and feel. Interiors are available in Black, Light Gray, and Parchment. Trim colors and materials include Piano Black, Espresso Bird&rsquo;s-eye Maple, and Bamboo.<br />
+<br />
+<strong>Crisp, Confident Driving Dynamics</strong><br />
+Suspension and steering changes and a stiffer body deliver more precise handling.  Opposite-wound coil springs on the front suspension enhance straight-line stability.  Revised rear suspension geometry and improved shock absorber damping characteristics enhance ride comfort. A reduction in the steering gear ratio delivers a more responsive and direct steering feel. Increased body rigidity is achieved through lightweight, high tensile strength steel, added bracing and additional spot welds.  Despite its larger size, roomier interior and additional luxury appointments, the weight of the new ES is reduced by almost 90 pounds. <br />
+<br />
+The ES will be equipped with standard 215/55R17 low rolling resistance tires on 17-inch alloy wheels, and for the first time, available 18-inch high-gloss alloy wheels. <br />
+<br />
+<strong>Driver-Focused Cockpit</strong><br />
+Designed with attention to ergonomics and driver focus, the cockpit features separate display and operation zones to help keep the driver&rsquo;s eyes on the road.  The instrument panel, with its long, layered look, places the main information display directly in the driver&rsquo;s line of sight. Just below the center display is a self-illuminating LED analog clock. Controls are clustered beneath the information zone, on the steering wheel, and on the center console. <br />
+<br />
+The second-generation Remote Touch Interface (RTI) allows the user to operate the climate, audio, phone controls, optional navigation system and more. The screen menus are selected with a controller conveniently located on the center console. RTI reduces eye and hand movement, helping reduce effort and distraction.<br />
+<br />
+<strong>Safety Features</strong><br />
+An array of safety features aid the driver. The available Blind Spot Monitor with Rear Cross Traffic Alert (RCTA) helps detect vehicles in side blind spots. The RCTA alerts the driver to rear cross traffic when backing out of a parking spot. Available Lane Departure Alert (LDA) is integrated with automatic high beam dimming technology. The available Pre-Collision System (PCS) uses sub-millimeter wave radar to detect obstructions and prepare the vehicle for a potential collision. <br />
+<br />
+The ES features a segment-leading 10 airbags as standard equipment, including driver and front passenger knee and front air bags, as well as front and rear seat-mounted side and curtain airbags. Whiplash Injury Lessening (WIL) front seats are designed to limit excessive head movement in certain rear-end collisions helping to decrease the severity of whiplash-type injuries.<br />
+<br />
+Lexus Safety Connect, including Enhanced Roadside Assistance, an Emergency Assistance Button (SOS), Stolen Vehicle Location services, and Automatic Collision Notification to a Safety Connect center is standard on the new ES.  A one-year trial subscription for Safety Connect is included.<br />
+<br />
+<strong>Lexus Multimedia</strong><br />
+The new ES features the next-generation Lexus Enform&reg; system.  Lexus Enform&reg; provides seamless connectivity with Bing&trade; search, iHeartRadio, MovieTickets.com, OpenTable&reg;, Pandora&reg;, Yelp&reg; and Facebook Places through compatible smart phones. Apps are updated through over-the-air downloads, so new apps and content can be added as they become available.  One-year trial subscriptions to Lexus Enform with Safety Connect and the Application Suite are included.<br />
+<br />
+The standard Lexus Premium Sound System features eight speakers with Automatic Sound Levelizer, CD player, USB/iPod&reg; connectivity, Bluetooth&reg; and a SiriusXM receiver. The available Display Audio package adds a seven-inch screen, a backup camera, HD Radio&trade; with iTunes&reg; tagging, Bluetooth audio, phone transfer, and a vehicle information display.  The optional HDD Navigation System includes voice command and an integrated backup camera.<br />
+<br />
+An available 15-speaker Mark Levinson&reg; audio system features an  eight-inch display screen, HD Radio&trade; with iTunes&reg; tagging,  DVD audio/video and a SiriusXM receiver.  Exclusive GreenEdge technology from Mark Levinson doubles the output of the amplifier, while reducing energy consumption by fifty percent. <br />
+<br />
+&ldquo;The new Lexus ES 350 and ES 300h hybrid combine technology, style and performance to please current ES owners and attract new buyers,&rdquo; said Templin. &ldquo;With the addition of the ES 300h, Lexus truly offers something for everyone in the entry luxury segment.&rdquo;<br />
+<br />
+<div align="center">
+<table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+            <div align="center"><b>ES 350</b></div>
+            </td>
+            <td>
+            <div align="center"><b>ES 300h</b></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Seating Capacity</b></div>
+            </td>
+            <td>
+            <div>5</div>
+            </td>
+            <td>
+            <div>5</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Overall Length (in.)</b></div>
+            </td>
+            <td>
+            <div>192.7</div>
+            </td>
+            <td>
+            <div>192.7</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Width (in.)</b></div>
+            </td>
+            <td>
+            <div>71.7</div>
+            </td>
+            <td>
+            <div>71.7</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Height (in.)</b></div>
+            </td>
+            <td>
+            <div>57.1</div>
+            </td>
+            <td>
+            <div>57.1</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Wheelbase (in.)</b></div>
+            </td>
+            <td>
+            <div>111.0</div>
+            </td>
+            <td>
+            <div>111.0</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Driven Wheels</b></div>
+            </td>
+            <td>
+            <div>Front Wheel Drive</div>
+            </td>
+            <td>
+            <div>Front Wheel Drive</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Curb Weight (lbs.)</b></div>
+            </td>
+            <td>
+            <div>3,549</div>
+            </td>
+            <td>
+            <div>3,660</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Wheel size </b></div>
+            <div><b>(front and rear)</b></div>
+            </td>
+            <td>
+            <div>17&rdquo; x 7.0&rdquo; (standard)</div>
+            <div><span>18&rdquo;   x 7.5&rdquo; (optional)</span></div>
+            </td>
+            <td>
+            <div>17&rdquo; x 7.0&rdquo; (standard)</div>
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div><b>Tires size</b></div>
+            </td>
+            <td>
+            <div>215/55/17 (standard)</div>
+            <div>225/45/18 (optional)</div>
+            </td>
+            <td>
+            <div>215/55/17 (standard)</div>
+            <div>&nbsp;</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br />
+<br /></span>
+		
+</div>
+
+
+	<div class="articleContacts">
+		
+				<h6>Media Contacts:</h6>
+			
+				<table><tr><td><strong>Lexus Public Relations</strong><br />
+Michael Kroll &ndash; 310.468.4782 or <a href="mailto:michael_kroll@lexus.com">michael_kroll@lexus.com</a><br />
+Nancy Hubbell &ndash; 310.468.7633 or <a href="mailto:nancy_hubbell@lexus.com">nancy_hubbell@lexus.com</a><br />
+Bill Kwong &ndash; 310.468.3764 or <a href="mailto:bill_kwong@lexus.com">bill_kwong@lexus.com</a><br />
+Allison Takahashi &ndash; 310.468.5315 or <a href="mailto:allison_takahashi@lexus.com">allison_takahashi@lexus.com</a><br /></td></tr></table>
+			
+	</div>
+
+	<div class="articleDisclaimer"><br><strong>Note to Editors:</strong> Press releases and high-resolution images are available at <a href="http://www.LexusNewsroom.com">www.LexusNewsroom.com</a>.<br /></div>
+
+
+
+<div id="articleTags">
+	
+			<p><span class="smallfont">Tags:</span><br />
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=79" class="taglinks">lexus</a>
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=508" class="taglinks">es 350</a>
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=506" class="taglinks">es350</a>
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=1311" class="taglinks">es 300h</a>
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=1312" class="taglinks">es300h</a>
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=64" class="taglinks">hybrid</a>
+			
+				<a href="/search_results.cfm?newsearch=1&stype=1,2,3,7,4,5,6&tag_id=842" class="taglinks">auto shows</a>
+			
+			</p>
+		
+</div>
+
+
+<div id="articleComments">
+	
+</div>
+
+
+
+	
+	<div id="articleRelated">
+		
+			<h6>Related Assets</h6><a name="rel"></a><br>
+			<hr class="ra" />
+		
+			Other articles in News Releases:
+			<ul>
+			
+				<li><a href="/releases/2014+toyota+corolla+pricing.htm" class="relatedlinks">Pricing Announced for 2014 Toyota Corolla</a></li>		
+			
+				<li><a href="/releases/2014+toyota+corolla+features+specs.htm" class="relatedlinks">2014 Toyota Corolla Features and Specifications</a></li>		
+			
+				<li><a href="/releases/2014+toyota+corolla+product+specs.htm" class="relatedlinks">2014 Toyota Corolla Product Information</a></li>		
+			
+				<li><a href="/releases/toyota+2014+corolla+efficiency+driving+dynamics.htm" class="relatedlinks">Toyota's 2014 Corolla Delivers Improved Efficiency and Driving Dynamics</a></li>		
+			
+				<li><a href="/releases/toyota+winners+prius+plug-in+mpg+w2.htm" class="relatedlinks">Toyota Announces Winners of Prius Plug-in MPG Challenge, Wave Two</a></li>		
+			
+			</ul>			
+		
+				Press Kit for the <a href="/press_kits.cfm?presskit_id=115" class="relatedlinks">2013&nbsp;Lexus ES</a><br /><br />
+			
+				Press Kit for the <a href="/press_kits.cfm?presskit_id=116" class="relatedlinks">2013&nbsp;Lexus ES Hybrid</a><br /><br />
+			
+	</div>
+
+	<a href="" class="pagenavlinks">&lt; back</a>
+
+
+</div><!-- END center -->
+</div><!-- END wrap_center -->
+
+	</div>
+	<div id="wrap_footer">
+		<div id="footer_top">
+			<div id="hovernav3">
+				<ul>
+					<li class="first-item"><a href="http://www.toyota.com" target="_blank">Toyota.com</a></li>
+					<li><a href="http://www.Lexus.com" target="_blank">Lexus.com</a></li>
+					<li><a href="http://www.Scion.com" target="_blank">Scion.com</a></li>
+					<li><a href="http://www.Toyotafinancial.com" target="_blank">Toyotafinancial.com</a></li>
+					<li><a href="http://www.toyota.com/esq/" target="_blank">Toyota.com/esq/</a></li>
+					<li><a href="http://www.Toyota-global.com" target="_blank">Toyota-global.com</a></li>
+					<li><a href="http://www.toyota.com/espanol" target="_blank">Toyota.com/espa&ntilde;ol</a></li>
+					<li><a href="/terms-agreements/">Legal Terms</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="copyright">&copy;2013 Toyota Motor Sales, U.S.A., Inc.</div>
+		</div>
+	</div>
+	
+	</div> 
+</div>
+
+
+<div style="display:none;">
+
+<input type="text" name="disable_popup_flg" id="disable_popup_flg" size="2" value="0">
+</div>
+
+<br clear="all">
+
+
+ 
+			<div style="display: none;">
+				<div id="loginwarning" style="width:400px;height:200px;overflow:hidden;">
+					<p>
+						<b>You must be logged in to view this item.</b><br>
+						
+						<form action="/login.cfm" method="post">
+							<label for="login_id">Login:</label><br>
+							<input type="text" name="login_id" id="login_id" size="25"><br>
+
+							<label for="site_pass">Password:</label><br>
+							<input type="password" name="site_pass" id="site_pass" size="25"><br>
+
+							<input type="image" src="/graphics/9021/sub_buttons_login.gif" alt="Login" title="Login">
+							<input type="hidden" name="new_path_info" value="404;http://pressroom.lexus.com:82/releases/lexus+unveils+all-new+2013+es+350+300h+hybrid+ny+auto+show.htm">
+						</form>
+					</p>
+				</div>
+			</div>
+			
+			<div style="display: none;">
+				<div id="nonmediawarning" style="width:400px;height:120px;overflow:hidden;">
+					<p>
+						This area is reserved for members of the news media. If you qualify, please <a href="/user_profile.cfm">update your user
+						profile</a> and check the box marked "Check here to register as an accredited member of the news media". Please include any notes
+						in the "Supporting information for media credentials" box. We will notify you of your status via e-mail in one business day.
+					</p>
+				</div>
+			</div>
+			
+				<div id="wrap_tandc_warning">
+				<div id="tandcwarning">
+			
+					<p><p><b>Copyright Notice</b></p><p>All materials on this site are for editorial use only.  The use of these materials for advertising, marketing or any other commercial purpose is prohibited. They may be cropped but not otherwise modified. To download these materials, you must agree to abide by these terms.</p> <P></p>
+					<p>
+					<form action="/photo_display.cfm" method="post">
+						<input type="hidden" name="photo_id" id="photo_id" value="photo_id">
+						<input type="hidden" name="intended_url" value="intended_url" id="intended_url">
+						<input type="hidden" name="tandc_check" id="tandc_check" value="1">
+						
+							<div align="center"><input type="button" name="iagreetotandc" id="iagreetotandc" value=" I agree to the terms"></div>
+						
+						
+					</form>
+					</p>
+				</div>
+			</div>
+			
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=tekgroupcsm"></script>
+
+</body>
+</html> 

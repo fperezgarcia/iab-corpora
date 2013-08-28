@@ -1,0 +1,655 @@
+
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Honda, Volkswagen, Subaru, Kia, Chery, SsangYong, Holden &amp; Toyota dealer Brisbane - Highway Auto</title>
+        <meta name="description" content="" />
+        <link href="css/../cache/carousel.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/../cache/main.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/../cache/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/../cache/stockSearch.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/../cache/testimonials.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/../cache/slide.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/jquery.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/css_browser_selector.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/timer.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/less.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/cufon.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/carousel.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/common.js"></script>
+<script type="text/javascript" src="scripts/prepend.js"></script>
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/jquery.validate.js"></script>
+<script type="text/javascript" src="scripts/jquery.tweet.js"></script>
+<script type="text/javascript" src="scripts/Zurich_Ex_BT_400.font.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://caradmin.digitaldealer.com.au/cdn/gMaps.js"></script>
+<script type="text/javascript" src="scripts/stockSearch.js"></script>
+        <meta name="google-site-verification" content="lcboqXq5KiRzJ8F3Q58kG8mIkcT9-SqdIcGqz5OUtRY" />
+        <meta name="google-site-verification" content="TvemgPqMH7lxTcxv87HfZ3jlSDg5dyDSE0AEzZkhN7c" />
+        <link rel="shortcut icon" href="favicon.ico" />
+
+    </head>
+
+    <body>
+
+        <!-- Header --> 
+        <div id="header">
+            <div class="wrapper">
+                <div class="head_left">
+                    <div class="logo_wrap">
+                                                    <h1><a href="http://www.highwayauto.com.au/" id="logo">Highway Auto</a></h1>
+                                            </div>
+                    <div class="phone cufon">(07) 3808 1111</div>
+                    <div class="clear"></div>
+                </div>
+                <ul class="head_nav">
+                    <li><a href="aboutus.html" class="head_nav_about ">About Us</a></li>
+                    <li><a href="careers.html" class="head_nav_careers ">Careers</a></li>
+                    <li><a href="contact.html" class="head_nav_contact ">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- /Header --> 
+
+        <!-- Content -->    
+
+        <div class="content index">
+            <div class="wrapper">
+    <div class="content_block_shadow">
+        <div class="home_hero">
+            <div id="SliderHome" class="slideshows">
+                <div id="sh1"><a href=""></a></div>
+                <div id="sh2"><a href=""></a></div>
+            </div>
+            <div class="search_stock_home">
+                <div class="stockSearch">
+                    <div id="stockSearch"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+    
+	    
+    <script language="JavaScript" type="text/javascript">
+	 $(document).ready(function(){
+	 
+	 	var controls = ''
+	 
+		 var imgArr = new Array( // relative paths of images
+		 'http://caradmin.digitaldealer.com.au/images/slideshows/2012-10-25-10-22-145037.png','http://caradmin.digitaldealer.com.au/images/slideshows/2012-10-18-14-41-066473.jpg'		 );
+		 
+		 var linkArr = new Array( // links
+		 '',''		 );
+		 
+		 		 controls += '<li class="active"><span>'+1+'</span></li>';
+		 		 controls += '<li class="bar"><span>'+2+'</span></li>';
+		 		 
+		 
+		 $("#SliderHome").append("<ul>"+controls+"</ul>")
+		 
+		$("#SliderHome ul li").live('click',function(){
+			switchTo($(this).index())
+		})
+		 
+		 var preloadArr = new Array();
+		 var i;
+		 
+		 /* preload images */
+		 for(i=0; i < imgArr.length; i++){
+			 preloadArr[i] = new Image();
+			 preloadArr[i].src = imgArr[i];
+		 }
+		 
+		 Cufon.replace("#SliderHome ul")
+		 
+		 $('#SliderHome #sh1')
+		 	.css('background','url(' + preloadArr[0].src +') center 0 no-repeat')
+			.find('a').attr('href',linkArr[0])
+		 
+		 var currImg = 1;
+		 var intID = setInterval(changeImg, 4000);
+		 var currCont = 1
+		 /* image rotator */
+		 
+		function switchTo(img) {
+			clearInterval(intID) // stop automatic rotation
+			$('#SliderHome #sh'+currCont)
+				.css('background','url(' + preloadArr[img].src +') center 0 no-repeat')
+				.find('a').attr('href',linkArr[img])
+			$("#SliderHome ul li").removeClass("active")
+			$("#SliderHome ul li:eq("+img+")").addClass("active")
+			Cufon.replace("#SliderHome ul")
+		}
+		 
+		 function changeImg(){
+			 
+			 oldCont = currCont
+			 newCont = currCont == 2 ? 1 : 2
+			 
+			 $('#SliderHome #sh'+newCont)
+			 	.css('background','url(' + preloadArr[currImg].src +') center 0 no-repeat')
+				.find('a').attr('href',linkArr[currImg])
+				
+			 $('#SliderHome #sh'+currCont).animate({opacity: 0}, 700,function(){$(this).css('z-index',9)})
+			 
+			 $('#SliderHome #sh'+newCont).animate({opacity: 1}, 700,function(){$(this).css('z-index',10)});
+			
+			$("#SliderHome ul li").removeClass("active")
+			$("#SliderHome ul li:eq("+currImg+")").addClass("active")
+			Cufon.replace("#SliderHome ul")
+			
+			currCont = newCont
+			
+			currImg++
+			
+			if(currImg == preloadArr.length) currImg = 0
+			 
+		 }
+	 
+	 });
+	</script>
+    
+    
+
+    <div class="content_block">
+        <div class="dealer_options">
+            <a href="http://www.highwayauto.com.au/used-cars-brisbane.html" target="_blank"><div class="brand_used_link active" rel="used_panel"></div></a>
+            <a href="http://www.highwayhonda.com.au/" target="_blank"><div class="brand_honda_link" rel="honda_panel"></div></a>
+            <a href="http://www.highwayvolkswagen.com.au/" target="_blank"><div class="brand_vw_link" rel="vw_panel"></div></a>
+            <a href="http://www.highwaysubaru.com.au/" target="_blank"><div class="brand_subaru_link" rel="subaru_panel"></div></a>
+            <a href="http://www.highwaykia.com.au/" target="_blank"><div class="brand_kia_link" rel="kia_panel"></div></a>
+            <a href="http://www.highwaychery.com.au/" target="_blank"><div class="brand_chery_link" rel="chery_panel"></div></a>
+            <a href="http://www.highwayautossangyong.com.au" target="_blank"><div class="brand_ssangyong_link" rel="ssangyong_panel"></div></a>
+        </div>
+        <div class="clear"></div>
+
+        <div class="containers">
+            <!--- Used Brand Container ----->
+            <div class="brandContainer" id="used_panel">
+                <div class="point"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Auto Group Used Cars</h3>
+                    <img src="images/dealerships/used_home.jpg" alt="Used" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3469 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwayauto.com.au/contact.html" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3808 1111</li>
+                            <li><strong>F</strong>: (07) 3290 8182</li>
+                            <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwayauto.com.au/new-cars-brisbane.html" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayauto.com.au/demo-cars-brisbane.html" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayauto.com.au/used-cars-brisbane.html" class="greyBt cufon">Used Cars in Stock</a></li>
+                                                                    </ul>
+                    <a href="http://www.highwayauto.com.au/used-cars-brisbane.html" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End Used Brand Container ----->
+            <!--- Honda Brand Container ----->
+            <div class="brandContainer hidden" id="honda_panel">
+                <div class="point"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Honda</h3>
+                    <img src="images/dealerships/honda_home.jpg" alt="Honda" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3469 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwayhonda.com.au/contact.html" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3808 1111</li>
+                            <li><strong>F</strong>: (07) 3808 5555</li>
+                            <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwayhonda.com.au/new-cars-brisbane.html" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayhonda.com.au/demo-cars-brisbane.html" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayhonda.com.au/used-cars-brisbane.html" class="greyBt cufon">Used Cars in Stock</a></li>
+                                                                    </ul>
+                    <a href="http://www.highwayhonda.com.au/" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End Honda Brand Container ----->
+            <!--- VW Brand Container ----->
+            <div class="brandContainer hidden" id="vw_panel">
+                <div class="point"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Auto Volkswagen</h3>
+                    <img src="images/dealerships/vw_home.jpg" alt="Volkswagen" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3499 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwayvolkswagen.com.au/contact.html" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3290 8188</li>
+                            <li><strong>F</strong>: (07) 3290 8100</li>
+                            <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwayvolkswagen.com.au/new-cars-brisbane.html" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayvolkswagen.com.au/demo-cars-brisbane.html" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                                                    <li><a href="http://www.highwayvolkswagen.com.au/volkswagen-specials-brisbane.html" class="greyBt cufon">Current specials</a></li>
+                                            </ul>
+                    <a href="http://www.highwayvolkswagen.com.au/" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End VW Brand Container ----->
+            <!--- Subaru Brand Container ----->
+            <div class="brandContainer hidden" id="subaru_panel">
+                <div class="point"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Auto Subaru</h3>
+                    <img src="images/dealerships/subaru_home.jpg" alt="Subaru" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3481 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwaysubaru.com.au/" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3290 7888</li>
+                            <li><strong>F</strong>: (07) 3299 5888</li>
+                            <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwaysubaru.com.au/new-cars-brisbane.html" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwaysubaru.com.au/demo-cars-brisbane.html" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwaysubaru.com.au/used-cars-brisbane.html" class="greyBt cufon">Used Cars in Stock</a></li>
+                                                                    </ul>
+                    <a href="http://www.highwaysubaru.com.au/" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End Subaru Brand Container ----->
+            <!--- Kia Brand Container ----->
+            <div class="brandContainer hidden" id="kia_panel">
+                <div class="point"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Auto Kia</h3>
+                    <img src="images/dealerships/kia_home.jpg" alt="Kia" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3483 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwaykia.com.au/" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3290 7877</li>
+                            <li><strong>F</strong>: (07) 3290 7879</li>
+                            <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwaykia.com.au/" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwaykia.com.au/" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwaykia.com.au/" class="greyBt cufon">Used Cars in Stock</a></li>
+                                                                    </ul>
+                    <a href="http://www.highwaykia.com.au/" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End Kia Brand Container ----->
+            <!--- Chery Brand Container ----->
+            <div class="brandContainer hidden" id="chery_panel">
+                <div class="point dark"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Auto Chery</h3>
+                    <img src="images/dealerships/chery_home.jpg" alt="Chery" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3463 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwaychery.com.au/contact.html" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3290 8181</li>
+                            <li><strong>F</strong>: (07) 3290 8182</li>
+                            <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwaychery.com.au/new-chery-brisbane.html" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwaychery.com.au/demo-cars-chery-brisbane.html" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                                                    <li><a href="http://www.highwaychery.com.au/chery-specials-brisbane.html" class="greyBt cufon">Current specials</a></li>
+                                            </ul>
+                    <a href="http://www.highwaychery.com.au/" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End Chery Brand Container ----->
+            <!--- SsangYong Brand Container ----->
+            <div class="brandContainer hidden" id="ssangyong_panel">
+                <div class="point dark"></div>
+                <div class="containerLeft">
+                    <h3 class="cufon">Highway Auto SsangYong</h3>
+                    <img src="images/dealerships/ssangyong_home.jpg" alt="SsangYong" />
+                    <div class="visitUs">
+                        <h4 class="cufon">Address</h4>
+                        <p>3463 Pacific Highway<br />
+                            Springwood, QLD 4127</p>
+                        <a href="http://www.highwayautossangyong.com.au/contact.html" class="mapHoursBt cufon" target="_blank">Map &amp; Hours</a>
+                        <a href="https://maps.google.com.au/maps/ms?msid=207556353862714991808.0004d9e417d9236428e34&msa=0" class="btn-repairers" target="_blank">Recommended Repairers</a>
+                    </div>
+                    <div class="contactUs">
+                        <h4 class="cufon">Contact</h4>
+                        <ul>
+                            <li><strong>T</strong>: (07) 3290 8181</li>
+                                                        <li><strong>F</strong>: (07) 3290 8182</li>
+                                                        <li><strong>E</strong>: <a href="mailto:info"><a class="obfuscate" name="highwayauto.com.au" id="">info</a></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="containerRight">
+                    <ul>
+                                                    <li><a href="http://www.highwayautossangyong.com.au/new-cars-brisbane.html" class="greyBt cufon">New Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayautossangyong.com.au/demo-cars-brisbane.html" class="greyBt cufon">Demo Cars in Stock</a></li>
+                                                                            <li><a href="http://www.highwayautossangyong.com.au/used-cars-brisbane.html" class="greyBt cufon">Used Cars in Stock</a></li>
+                                                                    </ul>
+                    <a href="http://www.highwayautossangyong.com.au" class="visitWebsite cufon">Visit Website</a>
+                </div>
+            </div>
+            <!--- End SsangYong Brand Container ----->
+
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!--- END BRAND CONTAINERS ---->
+
+    <!--- START STOCK SPECIALS ---->
+    <div class="content_block stock_specials carousel">
+        <h3 class="cufon">Used Vehicle Specials</h3>
+        <a href="javascript:void(0)" id="carouselArrowLeft" class="slide_control prev disabled"></a>
+        <a href="javascript:void(0)" id="carouselArrowRight" class="slide_control next"></a>
+        <div id="carouselContainer" class="specials_slide_wrap">
+            <div id="carouselSlider" class="specials_slide_tray">
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="800299a-3393-nissan-murano-2011.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/186876841651315c091ebb6458583622_250_185-c.jpg" alt="Nissan Murano Ti Z51 Series 2 " class="">                                <strong>2011 Nissan Murano Z51 Series 2  Ti Wagon</strong>
+                            </div>
+                            <span class="price cufon">$41,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="uc1132-3398-audi-s3-2003.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/79581820752169cae4c820033056429_250_185-c.jpg" alt="Audi S3" class="">                                <strong>2003 Audi S3 Hatchback</strong>
+                            </div>
+                            <span class="price cufon">$15,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="uc1181-3409-ssangyong-rexton-2010.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/26152139752169ddf1acdf824493009_250_185-c.jpg" alt="Ssangyong Rexton RX270 Y220 II " class="">                                <strong>2010 Ssangyong Rexton Y220 II  RX270 Wagon</strong>
+                            </div>
+                            <span class="price cufon">$29,488<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="uh1224-3418-volkswagen-touareg-2009.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/9350387951f720b11e920470423672_250_185-c.jpg" alt="Volkswagen Touareg V6 7L " class="">                                <strong>2009 Volkswagen Touareg 7L  V6 Wagon</strong>
+                            </div>
+                            <span class="price cufon">$44,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="uk1347-3426-kia-cerato-2009.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/66897424252169de317bd5866820713_250_185-c.jpg" alt="Kia Cerato SLi TD " class="">                                <strong>2009 Kia Cerato TD  SLi Sedan</strong>
+                            </div>
+                            <span class="price cufon">$9,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="uk1351-3427-hyundai-ix35-2010.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/94319607852169de3d301c403016646_250_185-c.jpg" alt="Hyundai Ix35 Highlander LM" class="">                                <strong>2010 Hyundai Ix35 LM Highlander Wagon</strong>
+                            </div>
+                            <span class="price cufon">$29,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="un4408-3430-nissan-murano-2010.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/988759019516fdbc2af7f0406011904_250_185-c.jpg" alt="Nissan Murano Ti Z51 Series 2 " class="">                                <strong>2010 Nissan Murano Z51 Series 2  Ti Wagon</strong>
+                            </div>
+                            <span class="price cufon">$39,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="us1032-3431-nissan-patrol-2004.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/98325248152169cbc174b4629975455_250_185-c.jpg" alt="Nissan Patrol ST GU IV " class="">                                <strong>2004 Nissan Patrol GU IV  ST Wagon</strong>
+                            </div>
+                            <span class="price cufon">$25,990<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                                    <div class="car_detail_item carouselSlide">
+                        <a href="w1223-3439-mazda-2-2011.html">
+                            <div class="specials_content">
+                            	                                <img src="http://resource.digitaldealer.com.au/image/22108393352169de9f3651083804335_250_185-c.jpg" alt="Mazda 2 Neo DE10Y1 " class="">                                <strong>2011 Mazda 2 DE10Y1  Neo Hatchback</strong>
+                            </div>
+                            <span class="price cufon">$12,488<span>Drive Away</span></span>
+                        </a>
+                    </div>
+                            </div>
+        </div>
+        <!--- END STOCK SPECIALS ---->
+
+    </div>
+    <!--- Wrapper End --->
+</div>
+<div class="clear"></div>                    </div>
+
+        <!-- /content -->    
+        
+        <!-- Footer -->
+        <div class="content_block_shadow">
+            <div class="footer">
+                <div class="testimonials">
+                    <a id="htp-arrowLeft" class="disabled"></a>
+                    <a id="htp-arrowRight"></a>
+                    <div id="hpt-container">
+                        <div id="hpt-slider">
+                            <!-- -->
+        
+                	<div class="testimonial even">
+                    <p>Very happy with my recent dealings with Highway. Very professional team.</p>                </blockquote>
+            	<span>Anonymous</span>
+            </div>
+                	<div class="testimonial odd">
+                    <p>Been a Highway customer for 15 years and wouldn't buy my car anywhere else!</p>                </blockquote>
+            	<span>Anonymous</span>
+            </div>
+                
+        <!--  --> 
+                        </div>
+                    </div>
+                    <a href="testimonials.html" class="testimonialReadMore cufon">Read More</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="dealership_links foot_col">
+                    <h3 class="cufon">Our Dealerships In Brisbane</h3>
+                    <ul>
+                        <li><a href="http://www.highwayhonda.com.au/" target="_blank">Highway Honda</a></li>
+                        <li><a href="http://www.highwayvolkswagen.com.au/" target="_blank">Highway Volkswagen</a></li>
+                        <li><a href="http://www.highwaysubaru.com.au/" target="_blank">Highway Subaru</a></li>
+                        <li><a href="http://www.highwaykia.com.au/" target="_blank">Highway Kia</a></li>
+                        <li><a href="http://www.highwaychery.com.au/" target="_blank">Highway Chery</a></li>
+                        <li><a href="http://www.highwayautossangyong.com.au" target="_blank">Highway SsangYong</a></li>
+                    </ul>
+                </div>
+                <div class="stock_links foot_col">
+                    <h3 class="cufon">View our<br />cars in stock</h3>
+                    <ul>
+                        <li><a href="new-cars-brisbane.html">New cars in stock</a></li>
+                        <li><a href="demo-cars-brisbane.html">Demo cars in stock</a></li>
+                        <li><a href="used-cars-brisbane.html">Used cars in stock</a></li>
+                    </ul>
+                </div>  
+                <a href="contact.html" class="foot_map"></a>
+                <div class="foot_right">
+                    <h2 class="cufon">Join our<br />mailing list</h2>
+                    <div id="newsletter_form">
+                        <div id="formResults"></div>
+<form method="post" class="form" id="newsletter" onsubmit="javascript:return false;">
+	<input type="hidden" name="formName" value="newsletter" />
+		    
+		    
+    
+	<div class="formCell">
+		
+		<label>First Name <span>*</span></label>
+		
+        <!-- Text input -->
+				<input type="text" name="name" class="text" value="" />
+		        
+                
+        <!-- Textarea -->
+		        
+                
+                
+	</div>
+				    
+		    
+    
+	<div class="formCell">
+		
+		<label>Email address <span>*</span></label>
+		
+        <!-- Text input -->
+				<input type="text" name="email" class="text" value="" />
+		        
+                
+        <!-- Textarea -->
+		        
+                
+                
+	</div>
+			<div class="clear"></div>
+	<button class="formSubmit redBt" type="submit"><span>Send</span></button>
+</form>
+
+<p class="formTerms">By registering your details, you give consent to receive marketing material from Highway Auto. If you would like more information on Highway Auto's commitment to customer privacy, please <a href="privacy.html" target="_blank">click here</a>.</p>
+
+<script type="text/javascript">
+	$(function(){
+		
+		$("#newsletter").validate({
+			// Validation rules
+			rules: {
+				name: {required: true},email: {required: true,email: true}			}
+		})
+		
+	});
+</script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Footer -->
+        
+        <!-- Notices -->
+        <div class="notices">
+            <div class="notices_border">
+                <div class="notice_content">
+                    <div class="left">
+                        <img src="images/logo_small.jpg" alt="Highway Auto" />
+                        &copy; 2013 All Rights Reserved - Site by <a href="http://phase.com.au" target="_blank">Phase New Media</a>
+                    </div>
+                    <div class="right">
+                        <a href="disclaimer.html">Terms &amp; Conditions</a> - <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Notices -->
+        
+			<script type="text/javascript">
+					
+				aj0 = new ajax();
+				aj0.action = "formSubmit";
+				aj0.container = "#formResults";aj0.args = {};$(".form").live("submit",function(){aj0.call("formItems>>"+$(this).serialize());});
+				aj1 = new ajax();
+				aj1.action = "stockSearchTerms";
+				aj1.openLightBox = true;aj1.lightBoxTitle = "Search by Budget - terms of use";aj1.lightBoxWidth = "650";aj1.args = {};$(".stockSearchTerms").live("click",function(){aj1.call();});
+				aj2 = new ajax();
+				aj2.action = "stockSearch";
+				aj2.container = "#stockSearch";aj2.args = {};aj2.args.page = "index";aj2.call();
+			</script>
+			
+				<script type='text/javascript'>
+  					var _gaq = _gaq || [];
+  					_gaq.push(
+						['_setAccount', 'UA-32627861-1'],
+['_trackPageview']
+
+					  );
+
+				  (function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				</script>
+				    </body>
+</html>

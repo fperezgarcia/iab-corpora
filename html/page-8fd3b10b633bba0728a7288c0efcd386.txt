@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Auto Links Automotive Directory Cars Trucks Motorcycles  </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/templates/Professional/style/main.css" />
+<meta name="keywords" content="Auto Directory" />
+<meta name="description" content=" Auto Directory of links for automotive, motorcycle, ATV, trucks, information and news." />
+<meta name="author" content="Auto Directory" />
+<meta name="copyright" content="Copyright (c) 2009 by Automotive Links Directory. All rights reserved!" />
+<meta name="generator" content="PHP Link Directory 3.4.0" />
+<!--  
+<script type="text/javascript" src="/libs/moodalbox/js/mootools.js"></script>
+<script type="text/javascript" src="/libs/moodalbox/js/moodalbox.js"></script>
+<link rel="stylesheet" href="/libs/moodalbox/css/moodalbox.css" type="text/css" media="screen" />
+-->
+</head>
+<body><script type="text/javascript">
+
+
+function increase_height() {
+   height = parseInt(document.getElementById('slide').style.marginTop);
+   if (height<110) {
+      document.getElementById('slide').style.marginTop = eval(height+2)+"px";
+      setTimeout("increase_height()",0.0001);
+   } else {
+      document.getElementById('panel').style.zIndex = 200;
+   }
+}
+
+function decrease_height() {
+   height = parseInt(document.getElementById('slide').style.marginTop);
+   document.getElementById('panel').style.zIndex = -1;
+   if (height>0) {
+      document.getElementById('slide').style.marginTop = eval(height-2)+"px";
+      setTimeout("decrease_height()",0.0001);
+   }
+}
+
+function show_panel() {
+  
+   height = parseInt(document.getElementById('slide').style.marginTop);
+   if (height>0) {
+      decrease_height();
+   } else {
+      increase_height();
+   }
+   return false;
+}
+
+function ajaxFunction()
+{
+
+var xmlHttp;
+
+try
+  {
+  // Firefox, Opera 8.0+, Safari
+  xmlHttp=new XMLHttpRequest();
+  }
+catch (e)
+  {
+  // Internet Explorer
+  try
+    {
+    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+  catch (e)
+    {
+    try
+      {
+      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    catch (e)
+      {
+      alert("Your browser does not support AJAX!");
+      return false;
+      }
+    }
+  }
+  xmlHttp.onreadystatechange=function()
+    {
+    if(xmlHttp.readyState==4)
+      {
+      }
+    }
+   var url = "http://www.automotivelinksdirectory.com/update_session.php";
+
+   xmlHttp.open("POST", url, false);
+   xmlHttp.setRequestHeader( 
+    'Content-Type', 
+    'application/x-www-form-urlencoded; charset=UTF-8' 
+); 
+   xmlHttp.send('url='+window.location);
+  }
+</script>
+</script>
+<div class="header" style="height: auto; background: transparent;">
+<div class="center" style="background: transparent;">
+<div id="panel" style="z-index: -1;">
+<form method="post" action="/login.php" onsubmit="ajaxFunction();">
+<table border="0" align="center" width="40%" style="padding-top: 10px; padding-bottom: 10px; z-index: -1; height: 0px" id="panel_table" >
+<tr>
+</tr>
+<tr>
+<td>User:</td>
+<td>
+<input type="text" name="user" value="" size="20" maxlength="25" class="text" />
+</td>
+<td>Password:</td>
+<td>
+<input type="password" name="pass" value="" size="20" maxlength="25" class="text" />
+</td>
+<td><input type="submit" name="submit" value="Login" class="btn" /></td>
+</tr>
+<tr>
+<td colspan="5" style="text-align: left;">
+<input type="checkbox" name="rememberMe">&nbsp;&nbsp; Keep me logged in.
+</td>        
+</tr>
+<tr>
+<td colspan="5" style="text-align: right;">
+<a href="/profile.php?mode=register" title="Register">Register</a>
+&nbsp;|&nbsp;
+<a href="/profile.php?mode=sendpassword" title="Recover your password">I forgot my password</a>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<p class="slide" style="z-idex: 100; margin-top: 0px;" id="slide" >
+<a href="" class="btn-slide" onclick="show_panel(); return false;">Login</a>
+&nbsp;|&nbsp;
+<a href="/profile.php?mode=register" title="Register new user">Register</a>
+</p>
+</div></div>
+<div style="clear: both;"></div>
+<div class="header">
+<div class="center">
+<div class="headerLogo">
+<a href="/"><img src="/templates/Professional/images/logo.gif" border="0" alt="logo" /></a>
+</div>
+<form class="headerSearch" action="/index.php" method="get">
+<label class="searchLabel">Search:</label>
+<input class="searchInput" type="text" name="search" maxlength="250" value="" />
+<div class="searchBtn">
+<div class="searchBtnLeft"></div>
+<button class="searchBtnCenter" type="submit">GO</button>
+<div class="searchBtnRight"></div>
+</div>
+</form>
+</div>
+</div>
+<div class="hMenuContainer"><div class="center"><div class="hMenu"><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/submit.php" title="Submit your link to the directory">Submit Link</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/submit_article.php" title="Submit your article to the directory">Submit Article</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/index.php?list=latest" title="Browse latest submitted links">Latest Links</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/index.php?list=latestarticles" title="Browse latest articles">Latest Articles</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/index.php?list=top" title="Browse most popular links">Top Hits</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/contact.php" title="Contact directory owner">Contact</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /><a href="/search.php?type=advanced" title="Go to advanced search page" accesskey="4" rel="nofollow">Advanced Search</a><img src="/templates/Professional/images/hMenuSeparator.gif" alt="" /></div></div></div><div class="path"></div><div class="center1"><div class="leftContainer">
+<div class="box">
+<div class="boxTopLeft"></div>
+<div class="boxTopCenter">CATEGORIES</div>
+<div class="boxTopRight"></div>
+<div class="boxMiddle">
+<ul class="boxPopCats">
+<li >
+<a href="/Blogs_Forums/" title="Blogs &amp; Forums" >Blogs &amp; Forums</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Buy_Sell/" title="Buy &amp; Sell" >Buy &amp; Sell</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Classic_Hobby/" title="Classic/Hobby" >Classic/Hobby</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Clubs_Associations/" title="Clubs &amp; Associations" >Clubs &amp; Associations</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Driving/" title="Driving" >Driving</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Employment/" title="Employment" >Employment</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Films_Videos/" title="Films &amp; Videos" >Films &amp; Videos</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Financing_Insurance/" title="Financing &amp; Insurance" >Financing &amp; Insurance</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Industry/" title="Industry" >Industry</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Internet_Marketing/" title="Internet Marketing" >Internet Marketing</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Jeeps_SUVs/" title="Jeeps &amp; SUVs" >Jeeps &amp; SUVs</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Legal_Information/" title="Legal Information" >Legal Information</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Manufacturers/" title="Manufacturers" >Manufacturers</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Media/" title="Media" >Media</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Motorcycles/" title="Motorcycles" >Motorcycles</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Parts___Services/" title="Parts &amp; Services" >Parts &amp; Services</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Personal_Homepages___Enthusiasts/" title="Personal Homepages &amp; Enthusiasts" >Personal Homepages &amp; Enthusiasts</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Racing/" title="Racing" >Racing</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Rentals/" title="Rentals" >Rentals</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Shows_Events/" title="Shows &amp; Events" >Shows &amp; Events</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Software/" title="Software" >Software</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Travel/" title="Travel" >Travel</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Trucks/" title="Trucks" >Trucks</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Vehicle_Donations/" title="Vehicle Donations" >Vehicle Donations</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Web_Directories/" title="Web Directories" >Web Directories</a>
+<div style="clear: both;"></div>
+</li>
+<li >
+<a href="/Women/" title="Women" >Women</a>
+<div style="clear: both;"></div>
+</li>
+</ul>
+</div>
+<div class="boxBottom"></div>
+</div>
+<div class="box">
+</div>
+</div><div class="centerContainer"><div class="centerContainerT"></div><div class="centerContainerM"><br/><br/><div><p><span style=\"\\\">Welcome to Automotive Links Directory your source for links for cars, trucks, ATV, motorcycles, and RVs. We carry the largest directory of links for vehicles and recreational vehicles. We are fully human edited directory to service the auto industry. Please choose a category below to find websites that serve your need.<br /></span></p>
+<p>&nbsp;</p></div><table border="0" cellpadding="0" cellspacing="2"><tr><td><h2><a href="/Blogs_Forums/" title="Blogs &amp; Forums">Blogs &amp; Forums</a></h2><p class="subcats"><a href="/Blogs_Forums/Usenet_Groups/">Usenet Groups</a>, <a href="/Blogs_Forums/IRC_Channels/">IRC Channels</a>, <a href="/Blogs_Forums/Forums___Boards/">Forums &amp; Boards</a>,  ...</p><h2><a href="/Buy_Sell/" title="Buy &amp; Sell">Buy &amp; Sell</a></h2><p class="subcats"><a href="/Buy_Sell/Appraisal_Services/">Appraisal Services</a>, <a href="/Buy_Sell/Classified_Ads/">Classified Ads</a>, <a href="/Buy_Sell/Hobby__Buy___Sell/">Hobby: Buy &amp; Sell</a>,  ...</p><h2><a href="/Classic_Hobby/" title="Classic/Hobby">Classic/Hobby</a></h2><p class="subcats"><a href="/Classic_Hobby/Art___Photography/">Art &amp; Photography</a>, <a href="/Classic_Hobby/Classified_Ads/">Classified Ads</a>, <a href="/Classic_Hobby/Exotic_Cars/">Exotic Cars</a>,  ...</p><h2><a href="/Clubs_Associations/" title="Clubs &amp; Associations">Clubs &amp; Associations</a></h2><p class="subcats"><a href="/Clubs_Associations/SUV___4WD_Clubs/">SUV &amp; 4WD Clubs</a>, <a href="/Clubs_Associations/Hot_Rod_Clubs/">Hot Rod Clubs</a>, <a href="/Clubs_Associations/Racing_Clubs___Associations/">Racing Clubs &amp; Associations</a>,  ...</p><h2><a href="/Driving/" title="Driving">Driving</a></h2><p class="subcats"><a href="/Driving/Roadside_Assistance/">Roadside Assistance</a>, <a href="/Driving/Drinking___Driving/">Drinking &amp; Driving</a>, <a href="/Driving/Driving___Traffic_Laws/">Driving &amp; Traffic Laws</a>,  ...</p><h2><a href="/Employment/" title="Employment">Employment</a></h2><h2><a href="/Films_Videos/" title="Films &amp; Videos">Films &amp; Videos</a></h2><h2><a href="/Financing_Insurance/" title="Financing &amp; Insurance">Financing &amp; Insurance</a></h2><p class="subcats"><a href="/Financing_Insurance/Leasing/">Leasing</a>, <a href="/Financing_Insurance/Loan_Calculators/">Loan Calculators</a>, <a href="/Financing_Insurance/Warranty/">Warranty</a>,  ...</p><h2><a href="/Industry/" title="Industry">Industry</a></h2><p class="subcats"><a href="/Industry/Alternative_Fuel/">Alternative Fuel</a>, <a href="/Industry/Employment/">Employment</a>, <a href="/Industry/Industry_News/">Industry News</a>,  ...</p><h2><a href="/Internet_Marketing/" title="Internet Marketing">Internet Marketing</a></h2><p class="subcats"><a href="/Internet_Marketing/Resources/">Resources</a>, <a href="/Internet_Marketing/Services/">Services</a>, <a href="/Internet_Marketing/Market_Research/">Market Research</a>,  ...</p><h2><a href="/Jeeps_SUVs/" title="Jeeps &amp; SUVs">Jeeps &amp; SUVs</a></h2><p class="subcats"><a href="/Jeeps_SUVs/Jeep_Enthusiasts/">Jeep Enthusiasts</a>, <a href="/Jeeps_SUVs/Magazines___Reviews/">Magazines &amp; Reviews</a>, <a href="/Jeeps_SUVs/Parts___Accessories/">Parts &amp; Accessories</a>,  ...</p><h2><a href="/Legal_Information/" title="Legal Information">Legal Information</a></h2><p class="subcats"><a href="/Legal_Information/Lemon_Law/">Lemon Law</a>, <a href="/Legal_Information/DUI_Laws___Information/">DUI Laws &amp; Information</a>, <a href="/Legal_Information/Driving___Traffic_Laws/">Driving &amp; Traffic Laws</a>,  ...</p><h2><a href="/Manufacturers/" title="Manufacturers">Manufacturers</a></h2><p class="subcats"><a href="/Manufacturers/Lexus/">Lexus</a>, <a href="/Manufacturers/Lincoln/">Lincoln</a>, <a href="/Manufacturers/McLaren_Automotive/">McLaren Automotive</a>,  ...</p></td><td><h2><a href="/Media/" title="Media">Media</a></h2><p class="subcats"><a href="/Media/Jeep___SUV_Magazines/">Jeep &amp; SUV Magazines</a>, <a href="/Media/Automotive_E-Zines/">Automotive E-Zines</a>, <a href="/Media/Automotive_Magazines/">Automotive Magazines</a>,  ...</p><h2><a href="/Motorcycles/" title="Motorcycles">Motorcycles</a></h2><p class="subcats"><a href="/Motorcycles/Clubs___Associations/">Clubs &amp; Associations</a>, <a href="/Motorcycles/Cruiser_Bikes/">Cruiser Bikes</a>, <a href="/Motorcycles/Manufacturers/">Manufacturers</a>,  ...</p><h2><a href="/Parts___Services/" title="Parts &amp; Services">Parts &amp; Services</a></h2><p class="subcats"><a href="/Parts___Services/Information/">Information</a>, <a href="/Parts___Services/Couriers/">Couriers</a>, <a href="/Parts___Services/Electronics___Equipment/">Electronics &amp; Equipment</a>,  ...</p><h2><a href="/Personal_Homepages___Enthusiasts/" title="Personal Homepages &amp; Enthusiasts">Personal Homepages &amp; Enthusiasts</a></h2><p class="subcats"><a href="/Personal_Homepages___Enthusiasts/Auto_Enthusiasts/">Auto Enthusiasts</a>, <a href="/Personal_Homepages___Enthusiasts/Racing_Enthusiasts/">Racing Enthusiasts</a>, <a href="/Personal_Homepages___Enthusiasts/SUV___4WD_Enthusiasts/">SUV &amp; 4WD Enthusiasts</a>,  ...</p><h2><a href="/Racing/" title="Racing">Racing</a></h2><p class="subcats"><a href="/Racing/Personal_Homepages/">Personal Homepages</a>, <a href="/Racing/Clubs___Associations/">Clubs &amp; Associations</a>, <a href="/Racing/Drag_Racing/">Drag Racing</a>,  ...</p><h2><a href="/Rentals/" title="Rentals">Rentals</a></h2><p class="subcats"><a href="/Rentals/Guides___Directories/">Guides &amp; Directories</a>, <a href="/Rentals/Limousine_Rental/">Limousine Rental</a>, <a href="/Rentals/Chauffeur_Services/">Chauffeur Services</a>,  ...</p><h2><a href="/Shows_Events/" title="Shows &amp; Events">Shows &amp; Events</a></h2><p class="subcats"><a href="/Shows_Events/Events/">Events</a>, <a href="/Shows_Events/Trade_Shows/">Trade Shows</a>,  ...</p><h2><a href="/Software/" title="Software">Software</a></h2><p class="subcats"><a href="/Software/Diagnostics___Repair/">Diagnostics &amp; Repair</a>, <a href="/Software/Dealer_Management/">Dealer Management</a>, <a href="/Software/Fleet_Management___GPS/">Fleet Management &amp; GPS</a>,  ...</p><h2><a href="/Travel/" title="Travel">Travel</a></h2><p class="subcats"><a href="/Travel/Tours/">Tours</a>, <a href="/Travel/Scenic_Highways___Byways/">Scenic Highways &amp; Byways</a>, <a href="/Travel/Car_Camping/">Car Camping</a>,  ...</p><h2><a href="/Trucks/" title="Trucks">Trucks</a></h2><p class="subcats"><a href="/Trucks/Buy___Sell/">Buy &amp; Sell</a>, <a href="/Trucks/Emergency_Trucks/">Emergency Trucks</a>, <a href="/Trucks/Manufacturers/">Manufacturers</a>,  ...</p><h2><a href="/Vehicle_Donations/" title="Vehicle Donations">Vehicle Donations</a></h2><h2><a href="/Web_Directories/" title="Web Directories">Web Directories</a></h2><p class="subcats"><a href="/Web_Directories/Search_Engines/">Search Engines</a>, <a href="/Web_Directories/Links_Pages/">Links Pages</a>, <a href="/Web_Directories/Directories/">Directories</a>,  ...</p><h2><a href="/Women/" title="Women">Women</a></h2></td></tr></table><br /><div id="links"></div><br /><script type="text/javascript">/* <![CDATA[ */var root = '';
+      var a = document.getElementsByTagName("a");
+      for(i = 0; i< a.length; i++)
+         if(a[i].id != '')
+            a[i].onclick = count_link;
+      function count_link() {
+         i = new Image();
+         i.src= root+'/cl.php?id='+this.id;
+         return true;
+      }
+      /* ]]> */</script><div style="clear: both"></div></div><div class="centerContainerB"></div></div><div class="rightContainer">
+<div class="box">
+<div class="boxTopLeft"></div>
+<div class="boxTopCenter">ARTICLES</div>
+<div class="boxTopRight"></div>
+<div class="boxMiddle">
+<div class="boxSponsored" >
+<a class="boxSponsoredA" href="/articles/a-brief-history-of-the-freightliner-sprinter-van-479.php" title="A Brief History of the Freightliner Sprinter Van">
+A Brief History of the Freightliner Sprinter Van
+</a>
+The Mercedes -Benz Sprinter van is a commercial vehicle, designed for business use as opposed to private use, intended for hauling passengers or freight, although there are RV converted models available.
+<br/><br/>
+</div>
+<div class="boxSponsored" >
+<a class="boxSponsoredA" href="/articles/dodge-sprinter-transmissions-made-by-mercedes-438.php" title="Dodge Sprinter Transmissions made by Mercedes">
+Dodge Sprinter Transmissions made by Mercedes
+</a>
+A brief history of the Mercedes 6 Series Transmissions
+<br/><br/>
+</div>
+<div class="boxSponsored" >
+<a class="boxSponsoredA" href="/articles/automobile-reviews--interesting-facts-307.php" title="Automobile Reviews - Interesting Facts">
+Automobile Reviews - Interesting Facts
+</a>
+The article is dedicated to the detailed description of the designation of car news and reviews. Read how to get to know the latest news and car reviews in the automobile world.
+<br/><br/>
+</div>
+<div class="boxSponsored" >
+<a class="boxSponsoredA" href="/articles/vintage-cars-brake-master-cylinders-made-in-italy-243.php" title="Vintage Cars: Brake Master Cylinders Made in Italy">
+Vintage Cars: Brake Master Cylinders Made in Italy
+</a>
+For a classic car the brake system needs particular attention to improve the driving and make it safer: the Italian brakes market shows a non-stop technological innovation with many solutions, alternative to the traditional hydraulic system.
+<br/><br/>
+</div>
+<div class="boxSponsoredLast" >
+<a class="boxSponsoredA" href="/articles/amazing-info-about-car-parts-222.php" title="Amazing Info About Car Parts">
+Amazing Info About Car Parts
+</a>
+The article is dedicated to the description of the important of automobile in the life of any person. Much attention is paid to the opportunities to buy cheap car parts online.
+<br/><br/>
+</div>
+</div>
+<div class="boxBottom"></div>
+</div>
+</div><div style="clear: both; height: 30px;"></div></div><div class="footer"><a href="http://www.plasmaled.com" title="Go To PlasmaLED.com Home Page">Go Buy LED Lights</a></div></body></html>

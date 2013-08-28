@@ -1,0 +1,1830 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Luxury Car Hire, Executive Sports Car Rental, Prestige Car Hire, Luxury Car Rent in Australia, Austria, Dubai, France, Europe, Germany, Italy, Monaco, Spain, UK and many other Countries Worldwide 
+</title><meta id="meta_desc" name="description" content="Instant Online Quotes &amp; Reservations. Enjoy a Fantastic Luxury Car Rental Holiday. Choose from a wide range of Prestige Sports Vehicles including Aston Martin, Audi, Bentley, BMW, Ferrari, Jaguar, Lamborghini,  Maserati, Mercedes, Porsche, Rolls Royce, Spyker, TVR and many others. We have suppliers in Austria, Belgium, Czech Republic, Holland, Luxembourg, New Zealand, Portugal, Switzerland and throughout the world. Luxury Car Hire offers Competitive Prices and Great Service. " /><meta id="meta_key" name="keywords" content="Luxury Sports Car Hire, australia, austria, belgium, czech republic, dubai, france, germany, holland, italy, luxembourg, monaco, new zealand, portugal, spain, switzerland, uk, usa, america, united states, sports auto, prestige vehicle, rent, rental, europe, " />
+    <script type="text/javascript" src="js/searching_car.js"></script>
+    <link rel="stylesheet" href="style/lchbstyle.css" type="text/css" /><link rel="stylesheet" href="style/drivetravelstyle.css" type="text/css" />
+    <script language="javascript" type="text/javascript">
+    function CarCategoryCheckUncheck(is_checked)
+    {
+        if(is_checked)
+            document.getElementById('car_cat_block').style.display = "";
+        else
+            document.getElementById('car_cat_block').style.display = "none";
+    }
+
+    function SelectSameDropOffCountry()
+    {
+        var sel_index_puc = document.getElementById('pick_up_country').options.selectedIndex;
+        var sel_text_puc = document.getElementById('pick_up_country').options[sel_index_puc].text;
+        for(i=0;i<document.getElementById('drop_off_country').options.length;i++)
+        {
+            if(document.getElementById('drop_off_country').options[i].text == sel_text_puc)
+            {
+                document.getElementById('drop_off_country').options[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    function SelectSameDropOffCity()
+    {
+        var sel_index = document.getElementById('pick_up_city').options.selectedIndex;
+        var sel_text = document.getElementById('pick_up_city').options[sel_index].text;
+        
+        for(i=0;i<document.getElementById('drop_off_city').options.length;i++)
+        {
+            if(document.getElementById('drop_off_city').options[i].text == sel_text)
+            {
+                document.getElementById('drop_off_city').options[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    function Clickable(what)
+    {
+        if(what == "yes")
+            return true;
+        else
+            return false;    
+    }
+
+    function PutDropOffDate(pickup_date)
+    {
+        var pickup_date = document.getElementById('pick_up_date').value
+        var pickup_date_arr = pickup_date.split(' ');
+        if(pickup_date_arr.length == 3)
+        {
+            var day = pickup_date_arr[0];
+	if(day == "08")
+                day = "8";
+            day = parseInt(day)+1;
+                    
+            var month = getMonthNo(pickup_date_arr[1]);
+            var year = pickup_date_arr[2];
+            var pick_date = new Date();
+            pick_date.setFullYear(year,month,day);
+            
+            var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+            var drop_date =  pick_date.getDate() + " " + months[pick_date.getMonth()] + " " + pick_date.getFullYear();
+            document.getElementById('drop_off_date').value = drop_date;
+        }
+    }
+
+    function trim(s) 
+    {
+      while (s.substring(0,1) == ' ') 
+      {
+		    s = s.substring(1,s.length);
+      }
+      while (s.substring(s.length-1,s.length) == ' ') 
+      {
+		    s = s.substring(0,s.length-1);
+      }
+      return s;
+    }
+
+    function getMonthNo(strMonth)
+    {
+        var month_no = "0";
+        
+        if(strMonth == "January")
+            month_no = "0";
+        else if(strMonth == "February")
+            month_no = "1";
+        else if(strMonth == "March")
+            month_no = "2";
+        else if(strMonth == "April")
+            month_no = "3";
+        else if(strMonth == "May")
+            month_no = "4";
+        else if(strMonth == "June")
+            month_no = "5";
+        else if(strMonth == "July")
+            month_no = "6";
+        else if(strMonth == "August")
+            month_no = "7";
+        else if(strMonth == "September")
+            month_no = "8";
+        else if(strMonth == "October")
+            month_no = "9";
+        else if(strMonth == "November")
+            month_no = "10";
+        else if(strMonth == "December")
+            month_no = "11";
+        return month_no;                                            
+    }
+
+    function CloseThis(id)
+    {
+	    document.getElementById(id).style.display = "none";
+    }
+
+    function ReportProblem() 
+    {
+      popupWin = window.open("ReportProblem.aspx", "mywindow", 'menubar=0,scrollbars,resizable,width=700,height=400,left=200,top=0')
+    }
+
+
+    function CheckForm()
+    {
+        var is_valid = true;
+        var error_messages = "Please Give OR Correct The Following Detail(s) As Your Search Criteria:\n\n";
+        var focus_on = "";
+        var currency_list = document.getElementById('currency_list').value;
+        var pick_up_country = document.getElementById('pick_up_country').value;
+        var drop_off_country = document.getElementById('drop_off_country').value;
+        var pick_up_city = document.getElementById('pick_up_city').value;
+        var drop_off_city = document.getElementById('drop_off_city').value;
+        var pick_up_date = document.getElementById('pick_up_date').value;
+        var drop_off_date = document.getElementById('drop_off_date').value;
+        
+        if(currency_list.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Select Your Currency.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "currency_list";
+	    }
+	    if(pick_up_country.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Select Pick Up Country.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "pick_up_country";
+	    }
+	    if(drop_off_country.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Select Drop Off Country.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "drop_off_country";
+	    }
+	    if(pick_up_city.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Select Pick Up City.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "pick_up_city";
+	    }
+	    if(drop_off_city.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Select Drop Off City.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "drop_off_city";
+	    }
+	    if(pick_up_date.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Enter Your Pick Up Date.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "pick_up_date";
+	    }
+    	
+        var pickup_date = document.getElementById('pick_up_date').value
+        if(pickup_date != "")
+        {
+            var pickup_date_arr = pickup_date.split(' ');
+            if(pickup_date_arr.length != 3)
+            {
+               error_messages += "* Pick Up Date Must In Format Like (08 January 2008).\n";
+               is_valid = false;
+               if(focus_on == "")
+                    focus_on = "pick_up_date";
+            }
+            else
+            {
+                var day = pickup_date_arr[0];
+                var month = getMonthNo(pickup_date_arr[1]);
+                var year = pickup_date_arr[2];
+                
+                var pick_date = new Date();
+                pick_date.setFullYear(year,month,day);
+                var today = new Date();
+                if (today>pick_date)
+                {
+                   error_messages += "* Pick Up Date Can Not Be Previous Date.\n";
+                   is_valid = false;
+                   if(focus_on == "")
+                        focus_on = "pick_up_date";        
+                }
+             }
+        }
+            
+	    if(drop_off_date.search(/\S/) == -1 )
+	    {
+	       error_messages += "* Please Enter Your Drop Off Date.\n";
+	       is_valid = false;
+	       if(focus_on == "")
+	            focus_on = "drop_off_date";
+	    }
+    	
+        var dropoff_date = document.getElementById('drop_off_date').value
+        if(dropoff_date != "")
+        {
+            var pickup_date_arr = pickup_date.split(' ');
+            var pday = pickup_date_arr[0];
+            var pmonth = getMonthNo(pickup_date_arr[1]);
+            var pyear = pickup_date_arr[2];
+            
+            var dropoff_date_arr = dropoff_date.split(' ');
+            if(dropoff_date_arr.length != 3)
+            {
+               error_messages += "* Drop Off Date Must In Format Like (08 January 2008).\n";
+               is_valid = false;
+               if(focus_on == "")
+                    focus_on = "drop_off_date";
+            }
+            else
+            {
+                var dday = dropoff_date_arr[0];
+                var dmonth = getMonthNo(dropoff_date_arr[1]);
+                var dyear = dropoff_date_arr[2];
+                
+                var pick_date = new Date();
+                pick_date.setFullYear(pyear,pmonth,pday);
+                var drop_date = new Date();
+                drop_date.setFullYear(dyear,dmonth,dday);
+                
+                if (pick_date>drop_date)
+                {
+                   error_messages += "* Drop-Off Date Can Not Be Less Than Pick-Up Date.\n";
+	               is_valid = false;
+	               if(focus_on == "")
+	                    focus_on = "drop_off_date";
+                }
+             }   
+         }   
+    	
+	    if(is_valid == false)
+	    {
+	        alert(error_messages);
+	        document.getElementById(focus_on).focus();
+	        return false;  
+	    }
+	    else
+	    {
+            document.getElementById('topbar_searching').style.display = "";
+            staticbar(); 
+            document.getElementById('loading_page').style.display = "";
+            document.getElementById('whole_page').style.display = "none";
+            document.getElementById('body_tag').style.backgroundColor = "#99CCFF";
+            var supp_type = document.getElementById('supplier_cat').value;
+            var car_type = "";
+            if(supp_type == "luxury_car")
+                car_type = "Luxury Cars";
+            else if(supp_type == "motor_bike")
+                car_type = "Motor Bikes";
+            else
+                car_type = "Cars";
+            document.getElementById('searching_what').innerHTML = car_type;
+            return true;
+	    }
+    }
+    
+    function ReportProblem() 
+    {
+          popupWin = window.open("luxurycarbookingengine/EnqueryQuoteBooking.aspx", "mywindow", 'menubar=0,scrollbars,resizable,width=600,height=500,left=200,top=0')
+    }
+    </script>
+<meta name="googlebot" content="index, follow" /><meta name="robots" content="index, follow" /><meta name="revisit-after" content="2 days" /><meta name="rating" content="General" /><link href="/WebResource.axd?d=VaCrDQl2QwOpc53RbcClaDVHf6M7wBpf9q8xjiWD5K1nzjBzmqQut-wy9RRG5kuJ_XLdakHL_rBC-jla5lsC-A-FEbZWHiWLzZp2_SkuJTl5GH5nPJIWyq9my0CwghcdGzQ0PH2PjFSVQp6FW9ZfDGc0fB01&amp;t=633397295280000000" type="text/css" rel="stylesheet" /></head>
+<body id="body_tag">
+    <form name="form1" method="post" action="index.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzNzE4NzQxNDUPZBYEAgEPZBYEAgEPFgIeB2NvbnRlbnQF4ANJbnN0YW50IE9ubGluZSBRdW90ZXMgJiBSZXNlcnZhdGlvbnMuIEVuam95IGEgRmFudGFzdGljIEx1eHVyeSBDYXIgUmVudGFsIEhvbGlkYXkuIENob29zZSBmcm9tIGEgd2lkZSByYW5nZSBvZiBQcmVzdGlnZSBTcG9ydHMgVmVoaWNsZXMgaW5jbHVkaW5nIEFzdG9uIE1hcnRpbiwgQXVkaSwgQmVudGxleSwgQk1XLCBGZXJyYXJpLCBKYWd1YXIsIExhbWJvcmdoaW5pLCAgTWFzZXJhdGksIE1lcmNlZGVzLCBQb3JzY2hlLCBSb2xscyBSb3ljZSwgU3B5a2VyLCBUVlIgYW5kIG1hbnkgb3RoZXJzLiBXZSBoYXZlIHN1cHBsaWVycyBpbiBBdXN0cmlhLCBCZWxnaXVtLCBDemVjaCBSZXB1YmxpYywgSG9sbGFuZCwgTHV4ZW1ib3VyZywgTmV3IFplYWxhbmQsIFBvcnR1Z2FsLCBTd2l0emVybGFuZCBhbmQgdGhyb3VnaG91dCB0aGUgd29ybGQuIEx1eHVyeSBDYXIgSGlyZSBvZmZlcnMgQ29tcGV0aXRpdmUgUHJpY2VzIGFuZCBHcmVhdCBTZXJ2aWNlLiBkAgIPFgIfAAWCAkx1eHVyeSBTcG9ydHMgQ2FyIEhpcmUsIGF1c3RyYWxpYSwgYXVzdHJpYSwgYmVsZ2l1bSwgY3plY2ggcmVwdWJsaWMsIGR1YmFpLCBmcmFuY2UsIGdlcm1hbnksIGhvbGxhbmQsIGl0YWx5LCBsdXhlbWJvdXJnLCBtb25hY28sIG5ldyB6ZWFsYW5kLCBwb3J0dWdhbCwgc3BhaW4sIHN3aXR6ZXJsYW5kLCB1aywgdXNhLCBhbWVyaWNhLCB1bml0ZWQgc3RhdGVzLCBzcG9ydHMgYXV0bywgcHJlc3RpZ2UgdmVoaWNsZSwgcmVudCwgcmVudGFsLCBldXJvcGUsIGQCAw9kFgICAw9kFgJmD2QWFgIFD2QWAgIDDxYCHgdWaXNpYmxlaGQCBw9kFgICAQ8WAh4LXyFJdGVtQ291bnQCDxYeZg9kFgJmDxUDG2x1eHVyeV9jYXJfaGlyZV9hdXN0cmFsaWFfIAIxNQlBdXN0cmFsaWFkAgEPZBYCZg8VAxlsdXh1cnlfY2FyX2hpcmVfYXVzdHJpYV8gAjE2B0F1c3RyaWFkAgIPZBYCZg8VAyBsdXh1cnlfY2FyX2hpcmVfY3plY2hfcmVwdWJsaWNfIAI1OQ5DemVjaCBSZXB1YmxpY2QCAw9kFgJmDxUDF2x1eHVyeV9jYXJfaGlyZV9kdWJhaV8gAzI0NAVEdWJhaWQCBA9kFgJmDxUDGGx1eHVyeV9jYXJfaGlyZV9mcmFuY2VfIAI3NgZGcmFuY2VkAgUPZBYCZg8VAxlsdXh1cnlfY2FyX2hpcmVfZ2VybWFueV8gAjgzB0dlcm1hbnlkAgYPZBYCZg8VAxJncmVlY2VfY2FyX3JlbnRhbF8DMjQ2BkdyZWVjZWQCBw9kFgJmDxUDF2x1eHVyeV9jYXJfaGlyZV9pdGFseV8gAzEwNwVJdGFseWQCCA9kFgJmDxUDGGx1eHVyeV9jYXJfaGlyZV9tb25hY29fIAMxNDMGTW9uYWNvZAIJD2QWAmYPFQMdbHV4dXJ5X2Nhcl9oaXJlX25ld196ZWFsYW5kXyADMTU1C05ldyBaZWFsYW5kZAIKD2QWAmYPFQMabHV4dXJ5X2Nhcl9oaXJlX3BvcnR1Z2FsXyADMTczCFBvcnR1Z2FsZAILD2QWAmYPFQMXbHV4dXJ5X2Nhcl9oaXJlX3NwYWluXyADMTk5BVNwYWluZAIMD2QWAmYPFQMdbHV4dXJ5X2Nhcl9oaXJlX3N3aXR6ZXJsYW5kXyADMjA0C1N3aXR6ZXJsYW5kZAIND2QWAmYPFQMjbHV4dXJ5X2Nhcl9oaXJlX3VrX3VuaXRlZF9raW5nZG9tXyADMjQ5E1VLIC0gVW5pdGVkIEtpbmdkb21kAg4PZBYCZg8VAy5sdXh1cnlfY2FyX2hpcmVfdXNhX3VuaXRlZF9zdGF0ZXNfb2ZfYW1lcmljYV8gAzI1MA1VU0EgLSBBbWVyaWNhZAILDxBkDxYIZgIBAgICAwIEAgUCBgIHFggQBQ1QbGVhc2UgU2VsZWN0ZWcQBRFBdXN0cmFsaWFuIERvbGxhcgUDQVVEZxAFDUJyaXRpc2ggUG91bmQFA0dCUGcQBQ9DYW5hZGlhbiBEb2xsYXIFA0NBRGcQBQ5FdXJvcGVhbiBFdXJvcwUDRVVSZxAFE05ldyBaZWFsYW5kIERvbGxhcnMFA05aRGcQBRJTb3V0aCBBZnJpY2FuIFJhbmQFA1pBUmcQBQpVU0EgRG9sbGFyBQNVU0RnZGQCDw8QZA8WDWYCAQICAgMCBAIFAgYCBwIIAgkCCgILAgwWDRAFDVBsZWFzZSBTZWxlY3RlZxAFCUF1c3RyYWxpYQUCMTVnEAUHQXVzdHJpYQUCMTZnEAUOQ3plY2ggUmVwdWJsaWMFAjU5ZxAFBkZyYW5jZQUCNzZnEAUHR2VybWFueQUCODNnEAUFSXRhbHkFAzEwN2cQBQZNb25hY28FAzE0M2cQBQtOZXcgWmVhbGFuZAUDMTU1ZxAFCFBvcnR1Z2FsBQMxNzNnEAUFU3BhaW4FAzE5OWcQBQtTd2l0emVybGFuZAUDMjA0ZxAFE1VLIC0gVW5pdGVkIEtpbmdkb20FAzI0OWcWAWZkAhEPEGQPFg1mAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMFg0QBQ1QbGVhc2UgU2VsZWN0ZWcQBQlBdXN0cmFsaWEFAjE1ZxAFB0F1c3RyaWEFAjE2ZxAFDkN6ZWNoIFJlcHVibGljBQI1OWcQBQZGcmFuY2UFAjc2ZxAFB0dlcm1hbnkFAjgzZxAFBUl0YWx5BQMxMDdnEAUGTW9uYWNvBQMxNDNnEAULTmV3IFplYWxhbmQFAzE1NWcQBQhQb3J0dWdhbAUDMTczZxAFBVNwYWluBQMxOTlnEAULU3dpdHplcmxhbmQFAzIwNGcQBRNVSyAtIFVuaXRlZCBLaW5nZG9tBQMyNDlnFgFmZAIdDxBkDxYYZgIBAgICAwIEAgUCBgIHAggCCQIKAgsCDAINAg4CDwIQAhECEgITAhQCFQIWAhcWGBAFAjAwBQIwMGcQBQIwMQUCMDFnEAUCMDIFAjAyZxAFAjAzBQIwM2cQBQIwNAUCMDRnEAUCMDUFAjA1ZxAFAjA2BQIwNmcQBQIwNwUCMDdnEAUCMDgFAjA4ZxAFAjA5BQIwOWcQBQIxMAUCMTBnEAUCMTEFAjExZxAFAjEyBQIxMmcQBQIxMwUCMTNnEAUCMTQFAjE0ZxAFAjE1BQIxNWcQBQIxNgUCMTZnEAUCMTcFAjE3ZxAFAjE4BQIxOGcQBQIxOQUCMTlnEAUCMjAFAjIwZxAFAjIxBQIyMWcQBQIyMgUCMjJnEAUCMjMFAjIzZ2RkAh8PEGQPFgRmAgECAgIDFgQQBQIwMAUCMDBnEAUCMTUFAjE1ZxAFAjMwBQIzMGcQBQI0NQUCNDVnZGQCJw8QZA8WGGYCAQICAgMCBAIFAgYCBwIIAgkCCgILAgwCDQIOAg8CEAIRAhICEwIUAhUCFgIXFhgQBQIwMAUCMDBnEAUCMDEFAjAxZxAFAjAyBQIwMmcQBQIwMwUCMDNnEAUCMDQFAjA0ZxAFAjA1BQIwNWcQBQIwNgUCMDZnEAUCMDcFAjA3ZxAFAjA4BQIwOGcQBQIwOQUCMDlnEAUCMTAFAjEwZxAFAjExBQIxMWcQBQIxMgUCMTJnEAUCMTMFAjEzZxAFAjE0BQIxNGcQBQIxNQUCMTVnEAUCMTYFAjE2ZxAFAjE3BQIxN2cQBQIxOAUCMThnEAUCMTkFAjE5ZxAFAjIwBQIyMGcQBQIyMQUCMjFnEAUCMjIFAjIyZxAFAjIzBQIyM2dkZAIpDxBkDxYEZgIBAgICAxYEEAUCMDAFAjAwZxAFAjE1BQIxNWcQBQIzMAUCMzBnEAUCNDUFAjQ1Z2RkAi0PZBYCAgEPEA8WBh4NRGF0YVRleHRGaWVsZAUNY2F0ZWdvcnlfbmFtZR4ORGF0YVZhbHVlRmllbGQFC2Nhcl9jYXRnX2lkHgtfIURhdGFCb3VuZGdkEBUMC0NvbnZlcnRpYmxlBlNwb3J0cwpMdXh1cnkgVmFuDFN0YW5kYXJkIFNVVg1GdWxsIFNpemUgU1VWB1ByZW1pdW0KTHV4dXJ5IFNVVgNTVVYFU2VkYW4JSGF0Y2hiYWNrDEx1eHVyeSBTZWRhbgZIeWJyaWQVDAI2OAI2OQI3MAI3MQI3MgI3MwI3OAI3OQI4MAI4MQI4MgI4MxQrAwxnZ2dnZ2dnZ2dnZ2dkZAIxD2QWAgIBDw8WAh8BaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYQBRNMY2hiX2xvZ2luMSRyZW1fY2hrBQxJbWFnZUJ1dHRvbjEFDEltYWdlQnV0dG9uMgUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkMAUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkMQUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkMgUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkMwUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkNAUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkNQUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkNgUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkNwUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkOAUZQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkOQUaQ2FyQ2F0ZWdvcnlDaGVja0JveExpc3QkMTAFGkNhckNhdGVnb3J5Q2hlY2tCb3hMaXN0JDExBRpDYXJDYXRlZ29yeUNoZWNrQm94TGlzdCQxMaGMnC7+epfaZjTf0SY/DbEn4JPr" />
+
+
+<script src="/ScriptResource.axd?d=9HmcWzYLsS4bgiIaSVfbhGR7Yg6et1wGv5WtpNzo6BoXZND6sJ0ow5dVCpG4xbn08nNZl7clBCnhHjB0iEuys3_2dU3Auj0MK2XIZwD3V8lscQZWBEQbIG6myNX4jWZUAjLCeV-HtHRvjaWD4Ct8XRW4Hfmp-QYBd_pCcoVUNEaNeMPg0&amp;t=634261399776815905" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=UC9M9K1dsKS3FHfzMGGiDASpdusTd6mdXngrWD18UtlkYm_upjSK0kwVj1nP0pvhHNGZ2HxGS_bkfdmavTLoMKyYrTwuvMQp4dy4uXwg71r9akWu1bau0Mcxlk54ofSJVcZtfRz-6KFdUi_e7ORPLYXWIiY1&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Z-EzCrMMXKcfo-IzTB7nbKw9kkoUNPOS3k5SAkUzpCs95xofWhXIFxMw5XCzffaRHY7yVVNHsAFehf-hmLesup5eMmlz5udN0ax8YBcJuXWXKfmQC9TMc6xuNNH-rUyoHjNF3iR5BA5lRgjtBrdCg3-U9y81&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=tK5q5vvx9E_BcNsRWJaXsoR7NS4Da-9OHj7ORf1nnKLpFZiJyCugVQep5mtV-67yHH_5PYU8sapXa1JTMsqZWkB38asEMaOREXyIdbj0t6vjLXX8--1RzN_gk8lYOlF5zRYS3c0j32docJkeh9j4-GXr4A41&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Y7OFkUebnzpnC-vA9kEZ1YfBSt1KeWeZ0GBSs0y2fGtu695hon_D14-_9YbSf_6AmuZb3Peo1ZAyyJVSPlwiNgPWx-jd4DV1flUhT5ir6St4dWbgZLIUvpLhcFp8X290L1zEY0xl8KVpLnsY_Tg61v3di5w1&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=wIu_HR_c05GQhCUiLckNDdmaFg1uKG_xvw9MWjqGP1cu0xNq6-_tBNBRJZz36XGWgg9BnM67sYiF89SGDrRN-lw4nEjuYwzj31PtTmXODu7PXBeHDh4T5S8hpT1t0s8Z39WyO5QLuTSkD1suoG-iKNS1Rio1&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ouQgelzh266f4Qyzuxiog-DIeBFV2xyQVRXfEgiJDAwuCZ5Zta8h9BuGJSA5BamSqFE6sFpjCi2OjtDb1a4U24uAJANBIWDmOlqqIr-HUZlIpB7ZyUvCgOhrqoha9Cx9HrcxCsqhkKQfifGOn9ycLeSic3I1&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=63ivROBpcJtfvlk2Usol_Cu1R3dXtco-3Yjb4VPh-NtPHarm0niujrzUZJOUdM2v_quOf4mepGV9k2S6z3dif-sC_6A5HusXgJV7e6V30nBfaU3Sn87UJCQqGfqNF9C9y58awZ15a-LSQDRTVnk8aAhjTRI1&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Sr4oJAN74vzRB0rHObLl3zJoPGXpa-cNo3GtE0AjJdHaBdN6yM62pXYY7DyplbUtrrm9ZaUEeUrcq0v7GZd44s2F3ECOZ5hPGppj0jyNMH20c41Yj7Vp655twR_OKzX2DuDaJUBzrtO4ntYYFtTsD0Cr_-w1&amp;t=633397295280000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=6rzxNNcZ05G2xKf6Q-IfT0TiS8LbARdn8r1CD6LbHYcF16nceY11npGjs_aLLxL9sEDQSzcwep1BZ-N__1m_7BpdMMomoJ8GkfA2RSKjQPemzkf-zZn4HSPFqrf8X178zAsZ_HcR4WXDWQnq7jqmNEHKHZs1&amp;t=633397295280000000" type="text/javascript"></script>
+    
+<div id="UpdatePanel1">
+	 
+<input type="hidden" name="supplier_cat" id="supplier_cat" value="luxury_car" />
+<div id="topbar_searching" align="center">
+    <div id="loading_page" align="center">
+        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="popupInner">
+	        <tr>
+		        <td align="left" width="100%" height="20">&nbsp;</td>
+	        </tr>
+	        <tr>
+		        <td width="100%" colspan="2" align="center">
+		        <table border="0" cellpadding="5" cellspacing="5">
+		            <tr>
+		                <td width="20%" class="md_txt_normal" align="left" valign="middle">
+		                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="141" height="141">
+                          <param name="movie" value="images/loading2.swf" />
+                          <param name="quality" value="high" />
+                          <embed src="images/loading2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="141" height="141"></embed>
+		                  </object>
+		                </td>
+		                <td width="80%" class="text_bold_blue" align="left" valign="top">
+		                    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+    		                    <tr>
+    		                        <td class="searching_car" align="left" colspan="2">Searching for the best <label id="searching_what"></label>...this will take a few moments...</td>
+    		                    </tr>
+    		                    <tr>
+    		                        <td class="why_text" align="left" colspan="2">Why Luxury Car Hire?</td>
+    		                    </tr>
+    		                    <tr>
+    		                        <td class="why_points" align="left" valign="top" width="5%"><img src="images/bullet_star.gif" /></td>
+    		                        <td class="why_points" align="left" valign="top" width="95%">Best Price Guarantee!!</td>
+    		                    </tr>
+    		                    
+    		                    <tr>
+    		                        <td class="why_points" align="left" valign="top"><img src="images/bullet_star.gif" /></td>
+    		                        <td class="why_points" align="left" valign="top">24 Hour Reliable Customer Service.</td>
+    		                    </tr>
+    		                    <tr>
+    		                        <td class="why_points" align="left" valign="top"><img src="images/bullet_star.gif" /></td>
+    		                        <td class="why_points" align="left" valign="top">Dedicated Friendly and Knowledgeable Online Specialists To Action Your Requests.</td>
+    		                    </tr>
+		                    </table>		                
+		                </td>
+		            </tr>
+		        </table>	
+		        </td>
+	        </tr>
+	        <tr>
+		        <td align="left" width="100%" height="20">&nbsp;</td>
+	        </tr>
+        </table>
+    </div>
+</div>
+<div id="whole_page">
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+ .car
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/car2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.car a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.car img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.car a:hover img
+{
+visibility:hidden
+}
+
+ .lcar
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/lcar2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.lcar a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.lcar img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.lcar a:hover img
+{
+visibility:hidden
+}
+
+ .bike
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/bike2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.bike a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.bike img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.bike a:hover img
+{
+visibility:hidden
+}
+
+ .mhome
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/mhome2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.mhome a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.mhome img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.mhome a:hover img
+{
+visibility:hidden
+}
+
+ .canal
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/canal2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.canal a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.canal img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.canal a:hover img
+{
+visibility:hidden
+}
+
+ .river
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/river2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.river a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.river img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.river a:hover img
+{
+visibility:hidden
+}
+
+ .yacht
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/yacht2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.yacht a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.yacht img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.yacht a:hover img
+{
+visibility:hidden
+}
+
+ .ocean
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/ocean2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.ocean a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.ocean img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.ocean a:hover img
+{
+visibility:hidden
+}
+
+ .drail
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/drail2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.drail a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.drail img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.drail a:hover img
+{
+visibility:hidden
+}
+
+ .lrail
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/lrail2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.lrail a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.lrail img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.lrail a:hover img
+{
+visibility:hidden
+}
+
+ .accom
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/accom2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.accom a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.accom img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.accom a:hover img
+{
+visibility:hidden
+}
+
+ .corp
+{
+position: relative;
+font-family: arial, helvetica, sans-serif;
+background: url(/images/sitebar/corp2.gif) no-repeat;
+white-space: nowrap;
+display: block;
+width: 125px;
+height: 50px;
+margin: 0;
+padding: 0;
+}
+.corp a
+{
+display: block;
+color: #000000;
+font-size: 11px;
+width: 125px;
+height: 50px;
+display: block;
+float: left;
+color: black;
+text-decoration: none;
+}
+.corp img
+{
+width: 125px;
+height: 50px;
+border: 0
+}
+* html a:hover
+{
+visibility:visible
+}
+.corp a:hover img
+{
+visibility:hidden
+}
+-->
+</style>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top"><table width="951" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="8" colspan="2" align="left" valign="top"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left" valign="bottom">
+<iframe width="100%" height="90" scrolling="no" frameborder="0" src="http://header.globaltravelcorporation.com?site=luxurycarhire"></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td height="5" colspan="2" align="left" valign="top" class="luxcartop_band"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right" valign="bottom"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="295" rowspan="2" align="left"><img src="/images/logo_lch3.jpg" width="250" height="99" /></td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="right" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="right" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="right" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="right" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+            <td align="right" valign="middle">&nbsp;</td>
+            <td align="center" valign="middle">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="110" align="center" valign="middle"><a href="http://www.luxurycarhire.com/index.aspx" class="luxcarindex_button_01">Home</a></td>
+            <td width="1" align="right" valign="middle"><img src="images/button_index_seperator.jpg" width="1" height="33" /></td>
+            <td width="98" align="center" valign="middle"><a href="/vehicle_guide.aspx" class="luxcarindex_button_02">Vehicles</a> </td>
+            <td width="1" align="right" valign="middle"><img src="images/button_index_seperator.jpg" width="1" height="33" /></td>
+            <td width="133" align="center" valign="middle"><a href="/specials.html" class="luxcarindex_button_02">Special Offers</a> </td>
+            <td width="1" align="right" valign="middle"><img src="images/button_index_seperator.jpg" width="1" height="33" /></td>
+            <td width="101" align="center" valign="middle"><a href="/about_us.html" class="luxcarindex_button_02">About
+                Us </a></td>
+            <td width="1" align="right" valign="middle"><img src="images/button_index_seperator.jpg" width="1" height="33" /></td>
+            <td width="100" align="center" valign="middle"><a href="/contact_us.html" class="luxcarindex_button_02">Contact
+                Us</a> </td>
+            <td width="1" align="right" valign="middle"><img src="images/button_index_seperator.jpg" width="1" height="33" /></td>
+            <td width="110" align="center" valign="middle"><a href="/links.html" class="luxcarindex_button_03">Links</a></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="5" colspan="2" align="center" valign="middle" class="luxcar_header_line">
+          </td>
+      </tr>
+      
+    </table></td>
+  </tr>
+</table>
+<script language="javascript" type="text/javascript">
+var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+var today = new Date();
+var day = today.getDate();
+var month = today.getMonth();
+var year = today.getFullYear();
+today.setFullYear(year,month,day);
+var show_day = today.getDate();
+var show_pick_date =  show_day + " " + months[today.getMonth()] + " " + today.getFullYear();
+document.getElementById('current_date_time').innerHTML = show_pick_date;
+
+
+function show2(){
+if (!document.all&&!document.getElementById)
+return
+thelement=document.getElementById("current_time")
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var seconds=Digital.getSeconds()
+var dn="PM"
+if (hours<12)
+dn="AM"
+if (hours>12)
+hours=hours-12
+if (hours==0)
+hours=12
+if (minutes<=9)
+minutes="0"+minutes
+if (seconds<=9)
+seconds="0"+seconds
+var ctime=hours+":"+minutes+":"+seconds+" "+dn
+thelement.innerHTML=ctime
+setTimeout("show2()",1000)
+}
+window.onload=show2
+</script>
+</td>
+      </tr>
+      <tr>
+        <td align="center" valign="top">
+    	
+	    <!--BODY TABLE STARTS -->
+	    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="top"><table width="952" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="14" class="luxcarbody_bg">&nbsp;</td>
+                <td width="315" align="left" valign="top" class="luxcarbody_bg">
+<script language="javascript" type="text/javascript">
+function ForgetPassword() 
+{
+  popupWin = window.open("luxurycarbookingengine/ForgotPassword.aspx", "mywindow", 'menubar=0,scrollbars,resizable,width=500,height=200,left=200,top=0')
+}
+function CheckLogin()
+{
+    var user_name = document.getElementById('Lchb_login1_txt_username').value;
+    var pass = document.getElementById('Lchb_login1_password').value;
+	
+	if(user_name.search(/\S/) == -1 )
+	{
+		alert("Please Enter Your Email...");
+		document.getElementById('Lchb_login1_txt_username').focus();
+		return false;
+	}
+	if(pass.search(/\S/) == -1 )
+	{
+		alert("Please Enter Your Password...");
+		document.getElementById('Lchb_login1_password').focus();
+		return false;
+	}
+	return true;
+}
+
+</script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="5"></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="luxcarround_table_topleft"></td>
+    <td class="luxcarround_bg"></td>
+    <td class="luxcarround_table_topright"></td>
+  </tr>
+  <tr>
+    <td class="luxcarround_bg">&nbsp;</td>
+    <td align="left" valign="top" class="luxcarround_bg">
+    
+    <table id="Lchb_login1_log_in" width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="luxcartbl_cor-topleft">&nbsp;</td>
+			<td align="left" valign="middle" class="luxcartbl_cor_mid">User Login / Agent Login</td>
+			<td class="luxcartbl_cor-topright">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="luxcartbl_left">&nbsp;</td>
+			<td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%" colspan="3" height="5" align="center" valign="middle" class="luxcar_error"></td>
+          </tr>
+          
+        <tr>
+            <td width="100%" colspan="3" height="5" align="center" valign="middle" class="luxcar_error"></td>
+          </tr> 
+          <tr>
+            <td width="30%" height="25" align="left" valign="middle" class="luxcartext_bold">Email</td>
+            <td width="10%" height="25" align="center" valign="middle" class="luxcartext_bold">:</td>
+            <td width="60%" align="left" valign="middle">
+            <input name="Lchb_login1$txt_username" type="text" id="Lchb_login1_txt_username" class="luxcartextfield_1" /></td>
+          </tr>
+          <tr>
+            <td height="29" align="left" valign="middle" class="luxcartext_bold">Password</td>
+            <td height="29" align="center" valign="middle" class="luxcartext_bold">:</td>
+            <td align="left" valign="middle"><input name="Lchb_login1$password" type="password" id="Lchb_login1_password" class="luxcartextfield_1" /></td>
+          </tr>
+          <tr>
+              <td height="25" align="left" valign="middle" class="luxcartext_bold" colspan="3"><b><span class="luxcartext_bold"><input id="Lchb_login1_rem_chk" type="checkbox" name="Lchb_login1$rem_chk" /><label for="Lchb_login1_rem_chk">Remember Me</label></span></b></td>      
+           </tr>
+          <tr>
+            <td height="25" colspan="3" align="left" valign="middle" class="luxcartext_bold"><a href="#" onclick="javascript:ForgetPassword();" class="luxcarlink_01"><b>Forget Password?</b></a></td>
+          </tr>
+          
+          <tr>
+            <td height="25" colspan="3" align="center" valign="middle">
+            <input type="submit" name="Lchb_login1$Submit" value="Login" onclick="return CheckLogin();" id="Lchb_login1_Submit" class="luxcarbutton_submit" />
+            </td>
+            </tr>
+        </table></td>
+			<td class="luxcartbl_right">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="luxcartbl_corbottom_left"></td>
+			<td class="luxcartbl_corbottom"></td>
+			<td class="luxcartbl_corbottom_right"></td>
+		</tr>
+	</table>
+	
+    
+    
+    
+    
+    
+    </td>
+    <td class="luxcarround_bg">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="luxcarround_table_botleft"></td>
+    <td class="luxcarround_bg"></td>
+    <td class="luxcarround_table_botright"></td>
+  </tr>
+</table></td>
+                <td width="622" align="left" valign="top" class="luxcarbody_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="100%" colspan="2" align="left" valign="top" class="luxcar">&nbsp;</td>
+                  </tr>
+                  
+                </table></td>
+                </tr>
+              
+              
+            </table></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"><table width="951" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="238" height="12"></td>
+                <td width="10"></td>
+                <td width="703"></td>
+                </tr>
+              <tr>
+                <td align="left" valign="top">
+
+<script type="text/javascript">
+function CheckEmailForNewsLetter()
+{
+    var newsletter_name = document.getElementById('Lchb_left_panel1$news_email').value;
+   
+	if(newsletter_name.search(/\S/) == -1 )
+	{
+		alert("Please Enter Your Valid Email Address...");
+		document.getElementById('Lchb_left_panel1$news_email').focus();
+		return false;
+	}
+	
+	var reg_email = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
+	if (reg_email.test(document.getElementById('Lchb_left_panel1$news_email').value) == false)
+	{
+		alert("The Specified Email For Newsletter Subscription is Invalid!");
+		document.getElementById('Lchb_left_panel1$news_email').focus();
+		return false;
+	}
+	return true;	
+}
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td colspan="3" height="12" align="left" valign="top" class="md_txt_normal">
+<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/translatemypage.xml&up_source_language=en&w=160&h=60&title=&border=&output=js"></script><br>
+*This is a free service from Google. LuxuryCarHire does not guarantee the accuracy of the translation.
+<p>
+    </td>
+    </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="center" valign="top"><a href="PageRedirect.aspx?target_page=user_signup" class=""><img src="images/button_usersignup.jpg" width="210" height="38" border="0" /></a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="center" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="center" valign="top"><a href="PageRedirect.aspx?target_page=agent_signup" class=""><img src="images/button_agentsignup.jpg" width="210" height="38" border="0" /></a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="left" valign="middle">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcartbl_cor-topleft">&nbsp;</td>
+        <td align="left" valign="middle" class="luxcartbl_cor_mid">Destination Country</td>
+        <td class="luxcartbl_cor-topright">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcartbl_left">&nbsp;</td>
+        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_australia_ &country_id=15&target_page=country_supplier" class="luxcarlink_country">Australia</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_austria_ &country_id=16&target_page=country_supplier" class="luxcarlink_country">Austria</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_czech_republic_ &country_id=59&target_page=country_supplier" class="luxcarlink_country">Czech Republic</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_dubai_ &country_id=244&target_page=country_supplier" class="luxcarlink_country">Dubai</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_france_ &country_id=76&target_page=country_supplier" class="luxcarlink_country">France</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_germany_ &country_id=83&target_page=country_supplier" class="luxcarlink_country">Germany</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=greece_car_rental_&country_id=246&target_page=country_supplier" class="luxcarlink_country">Greece</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_italy_ &country_id=107&target_page=country_supplier" class="luxcarlink_country">Italy</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_monaco_ &country_id=143&target_page=country_supplier" class="luxcarlink_country">Monaco</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_new_zealand_ &country_id=155&target_page=country_supplier" class="luxcarlink_country">New Zealand</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_portugal_ &country_id=173&target_page=country_supplier" class="luxcarlink_country">Portugal</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_spain_ &country_id=199&target_page=country_supplier" class="luxcarlink_country">Spain</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_switzerland_ &country_id=204&target_page=country_supplier" class="luxcarlink_country">Switzerland</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_uk_united_kingdom_ &country_id=249&target_page=country_supplier" class="luxcarlink_country">UK - United Kingdom</a></td>
+                    </tr>
+                
+                    <tr>
+                        <td width="9%" height="25" align="center" valign="middle"><img src="images/bullet_lchb.gif" width="10" height="12" /></td>
+                        <td width="84%" align="left" valign="middle"><a href="PageRedirect.aspx?pagename=luxury_car_hire_usa_united_states_of_america_ &country_id=250&target_page=country_supplier" class="luxcarlink_country">USA - America</a></td>
+                    </tr>
+                
+        </table></td>
+        <td class="luxcartbl_right">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcartbl_corbottom_left"></td>
+        <td class="luxcartbl_corbottom"></td>
+        <td class="luxcartbl_corbottom_right"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="12" align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="luxcartbl_cor-topleft">&nbsp;</td>
+        <td align="left" valign="middle" class="luxcartbl_cor_mid">Newsletter</td>
+        <td class="luxcartbl_cor-topright">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcartbl_left">&nbsp;</td>
+        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="top">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="35" align="center" valign="top" class="luxcartext_specials_01">Receive our exclusive Newsletter</td>
+          </tr>
+          <tr>
+            <td height="38" align="center" valign="top">
+            <input name="Lchb_left_panel1$news_email" type="text" id="Lchb_left_panel1_news_email" class="luxcartextfield_1" />
+            </td>
+          </tr>
+          <tr>
+            <td height="38" align="center" valign="top">
+            <input type="submit" name="Lchb_left_panel1$btn_news_letter" value="Submit" onclick="return CheckEmailForNewsLetter();" id="Lchb_left_panel1_btn_news_letter" class="luxcarbutton_submit" />
+            </td>
+          </tr>
+        </table></td>
+        <td class="luxcartbl_right">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcartbl_corbottom_left"></td>
+        <td class="luxcartbl_corbottom"></td>
+        <td class="luxcartbl_corbottom_right"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
+                <td align="left" valign="top">&nbsp;</td>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                     
+                      <tr>
+                        <td width="469" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                             <td align="center" valign="top" class="custom_text"></td>
+                          </tr>
+                          <tr>
+                            <td align="center" height="30" valign="middle">
+                                <span class="text_2">
+                                    <div id="UpdateProgress1" style="display:none;">
+		<img border="0" src="images/loadding.gif" />
+	</div> 
+                                </span>
+                            </td>
+                        </tr>
+                          <tr>
+                            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td>&nbsp;</td>
+                                  <td align="left" valign="bottom" style="padding-left:12px;"><img src="images/tab_luxurycar_hire.jpg" width="152" height="35" /></td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="luxcarmid_topleft"></td>
+                                  <td class="luxcarmid_top"></td>
+                                  <td class="luxcarmid_topright"></td>
+                                </tr>
+                                <tr>
+                                  <td class="luxcarmid_left">&nbsp;</td>
+                                  <td align="left" valign="top" class="luxcarmid_bg">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">                        
+                                      <tr>
+                                        <td width="4%" align="left" valign="middle">&nbsp;</td>
+                                        <td width="44%" height="22" align="left" valign="bottom" class="text_8">Currency</td>
+                                        <td width="4%" align="left" valign="middle">&nbsp;</td>
+                                        <td width="44%" align="left" valign="bottom" class="text_8">Sort By</td>
+                                        <td width="4%" align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td height="22" align="left" valign="middle"><span class="text_3">
+                                            <select name="currency_list" id="currency_list" class="listmenu_1">
+		<option selected="selected" value="">Please Select</option>
+		<option value="AUD">Australian Dollar</option>
+		<option value="GBP">British Pound</option>
+		<option value="CAD">Canadian Dollar</option>
+		<option value="EUR">European Euros</option>
+		<option value="NZD">New Zealand Dollars</option>
+		<option value="ZAR">South African Rand</option>
+		<option value="USD">USA Dollar</option>
+
+	</select>  
+                                        </span></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td align="left" valign="middle">
+                                        <span class="text_3">
+                                        <select name="sort_by" id="sort_by" class="listmenu_1">
+		<option selected="selected" value="default">Default</option>
+		<option value="rate">Rate</option>
+		<option value="product_category">Car Category</option>
+		<option value="product_name">Car Name</option>
+
+	</select>  
+                                        </span>
+                                        </td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td width="44%" height="22" align="left" valign="bottom" class="text_8">Pick Up Country</td>
+                                        <td align="left" valign="bottom">&nbsp;</td>
+                                        <td width="44%" align="left" valign="bottom" class="text_8">Drop Off Country</td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td height="22" align="left" valign="middle"><span class="text_3">
+                                          <select name="pick_up_country" id="pick_up_country" class="listmenu_1" onchange="javascript:SelectSameDropOffCountry();">
+		<option selected="selected" value="">Please Select</option>
+		<option value="15">Australia</option>
+		<option value="16">Austria</option>
+		<option value="59">Czech Republic</option>
+		<option value="76">France</option>
+		<option value="83">Germany</option>
+		<option value="107">Italy</option>
+		<option value="143">Monaco</option>
+		<option value="155">New Zealand</option>
+		<option value="173">Portugal</option>
+		<option value="199">Spain</option>
+		<option value="204">Switzerland</option>
+		<option value="249">UK - United Kingdom</option>
+
+	</select>
+                                        </span></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td align="left" valign="middle"><span class="text_3">
+                                          <select name="drop_off_country" id="drop_off_country" class="listmenu_1">
+		<option selected="selected" value="">Please Select</option>
+		<option value="15">Australia</option>
+		<option value="16">Austria</option>
+		<option value="59">Czech Republic</option>
+		<option value="76">France</option>
+		<option value="83">Germany</option>
+		<option value="107">Italy</option>
+		<option value="143">Monaco</option>
+		<option value="155">New Zealand</option>
+		<option value="173">Portugal</option>
+		<option value="199">Spain</option>
+		<option value="204">Switzerland</option>
+		<option value="249">UK - United Kingdom</option>
+
+	</select>
+                                        </span></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td width="44%" height="22" align="left" valign="bottom" class="text_8">Pick Up City</td>
+                                        <td align="left" valign="bottom">&nbsp;</td>
+                                        <td width="44%" align="left" valign="bottom" class="text_8">Drop Off City</td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td height="22" align="left" valign="middle"><span class="text_3">
+                                          <select name="pick_up_city" id="pick_up_city" class="listmenu_1" onchange="javascript:SelectSameDropOffCity();">
+		<option value="">Select City</option>
+
+	</select>
+                                        </span></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td align="left" valign="middle"><span class="text_3">
+                                          <select name="drop_off_city" id="drop_off_city" class="listmenu_1">
+		<option value="">Select City</option>
+
+	</select>
+                                        </span></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td height="22" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td height="22" colspan="3" align="left" valign="bottom" class="text_8">Pick Up Date</td>
+                                          </tr>
+                                          <tr>
+                                            <td align="left" colspan="2" valign="top" class="text_8">
+                                            <input name="pick_up_date" type="text" id="pick_up_date" class="textfield_1" onchange="javascript:PutDropOffDate(this.value);" />                          
+                                            <input type="image" name="ImageButton1" id="ImageButton1" src="images/icon_calender.gif" alt="Click to show calendar" border="0" />                                                 
+                                            
+                                            </td>
+                                          </tr>
+                                            
+                                          <tr>
+                                            <td height="22" colspan="3" align="left" valign="bottom" class="text_8">Pick Up Time</td>
+                                          </tr>
+                                          <tr>
+                                            <td height="22" align="left" valign="middle"><span class="text_3">
+                                              <select name="put_hour" id="put_hour" class="listmenu_3">
+		<option value="00">00</option>
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<option value="04">04</option>
+		<option value="05">05</option>
+		<option value="06">06</option>
+		<option value="07">07</option>
+		<option value="08">08</option>
+		<option selected="selected" value="09">09</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+
+	</select>  
+                                              <select name="put_min" id="put_min" class="listmenu_3">
+		<option selected="selected" value="00">00</option>
+		<option value="15">15</option>
+		<option value="30">30</option>
+		<option value="45">45</option>
+
+	</select>
+                                            </span></td>
+                                            <td align="left" valign="middle"><span class="text_3"></span></td>
+                                            <td align="left" valign="middle">&nbsp;</td>
+                                          </tr>
+                                          
+                                        </table></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td height="22" colspan="3" align="left" valign="bottom" class="text_8">Drop Off Date</td>
+                                          </tr>
+                                          <tr>
+                                            <td colspan="3" align="left" valign="top" class="text_8">
+                                            <input name="drop_off_date" type="text" id="drop_off_date" class="textfield_1" />                          
+                                            <input type="image" name="ImageButton2" id="ImageButton2" src="images/icon_calender.gif" alt="Click to show calendar" border="0" />                                                 
+                                            
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td height="22" colspan="3" align="left" valign="bottom" class="text_8">Drop Off Time</td>
+                                          </tr>
+                                          <tr>
+                                            <td height="22" align="left" valign="middle"><span class="text_3">
+                                              <select name="dot_hour" id="dot_hour" class="listmenu_3">
+		<option value="00">00</option>
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<option value="04">04</option>
+		<option value="05">05</option>
+		<option value="06">06</option>
+		<option value="07">07</option>
+		<option value="08">08</option>
+		<option selected="selected" value="09">09</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+
+	</select>   
+                                              <select name="dot_min" id="dot_min" class="listmenu_3">
+		<option selected="selected" value="00">00</option>
+		<option value="15">15</option>
+		<option value="30">30</option>
+		<option value="45">45</option>
+
+	</select>
+                                            </span></td>
+                                            <td align="left" valign="middle"><span class="text_3"></span></td>
+                                            <td align="left" valign="middle">&nbsp;</td>
+                                          </tr>
+                                        </table></td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td height="22" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td height="22" colspan="3" align="left" valign="bottom" class="text_8">Keyword Search</td>
+                                          </tr>
+                                          <tr>
+                                            <td align="left" colspan="2" valign="top" class="text_8">
+                                            <input name="search_keyword" type="text" id="search_keyword" class="textfield_1" />
+                                            </td>
+                                          </tr>   
+                                          </table></td>
+                                          <td align="left" valign="middle">&nbsp;</td>
+                                          <td align="left" valign="top">&nbsp;</td>
+                                       </tr>
+                                      
+                                      <tr>
+                                        <td height="10" align="left" valign="middle" colspan="5" class="text_8"></td>
+                                      </tr>
+                                      <div id="car_cat_block">
+		
+                                     
+                                      <tr>
+                                        <td align="left" id="Td1" colspan="5" valign="middle"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td align="left" valign="middle" width="4%">&nbsp;</td>
+                                            <td><span class="text_8">Car Category: Multiple car categories can be selected</span></td>
+                                          </tr>
+                                        </table></td>
+                                      </tr>
+                                      
+                                      <tr>
+                                            <td align="left" id="Td2" colspan="5" valign="middle" width="100%">
+                                            <table border="0" cellpadding="0" cellspacing="0">                              
+                                              <tr>
+                                                <td align="left" valign="middle" width="4%">&nbsp;</td>
+                                                <td height="22" colspan="3" align="left" valign="top" width="92%">
+                                                    <span id="CarCategoryCheckBoxList" class="text_8" style="display:inline-block;"><input id="CarCategoryCheckBoxList_0" type="checkbox" name="CarCategoryCheckBoxList$0" /><label for="CarCategoryCheckBoxList_0">Convertible</label><input id="CarCategoryCheckBoxList_6" type="checkbox" name="CarCategoryCheckBoxList$6" /><label for="CarCategoryCheckBoxList_6">Luxury SUV</label><br /><input id="CarCategoryCheckBoxList_1" type="checkbox" name="CarCategoryCheckBoxList$1" /><label for="CarCategoryCheckBoxList_1">Sports</label><input id="CarCategoryCheckBoxList_7" type="checkbox" name="CarCategoryCheckBoxList$7" /><label for="CarCategoryCheckBoxList_7">SUV</label><br /><input id="CarCategoryCheckBoxList_2" type="checkbox" name="CarCategoryCheckBoxList$2" /><label for="CarCategoryCheckBoxList_2">Luxury Van</label><input id="CarCategoryCheckBoxList_8" type="checkbox" name="CarCategoryCheckBoxList$8" /><label for="CarCategoryCheckBoxList_8">Sedan</label><br /><input id="CarCategoryCheckBoxList_3" type="checkbox" name="CarCategoryCheckBoxList$3" /><label for="CarCategoryCheckBoxList_3">Standard SUV</label><input id="CarCategoryCheckBoxList_9" type="checkbox" name="CarCategoryCheckBoxList$9" /><label for="CarCategoryCheckBoxList_9">Hatchback</label><br /><input id="CarCategoryCheckBoxList_4" type="checkbox" name="CarCategoryCheckBoxList$4" /><label for="CarCategoryCheckBoxList_4">Full Size SUV</label><input id="CarCategoryCheckBoxList_10" type="checkbox" name="CarCategoryCheckBoxList$10" /><label for="CarCategoryCheckBoxList_10">Luxury Sedan</label><br /><input id="CarCategoryCheckBoxList_5" type="checkbox" name="CarCategoryCheckBoxList$5" /><label for="CarCategoryCheckBoxList_5">Premium</label><input id="CarCategoryCheckBoxList_11" type="checkbox" name="CarCategoryCheckBoxList$11" /><label for="CarCategoryCheckBoxList_11">Hybrid</label></span>                                </td>
+                                                <td align="left" valign="middle" width="4%">&nbsp;</td>
+                                              </tr>
+                                          </table>                          </td>
+                                      </tr>
+                                      
+	</div>
+                                      
+                                      <tr>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                        <td height="22" colspan="3" align="right" valign="middle">
+                                        <input type="submit" name="Search" value="Search" onclick="return CheckForm();" id="Search" class="luxcarbutton_submit" />
+                                        </td>
+                                        <td align="left" valign="middle">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" valign="middle" class="quote_txt" colspan="5">
+                                        If you would prefer us to prepare your quote or if you have any problem with our system - please <a href="#" onclick="javascript:ReportProblem();" class="link_2">Click Here</a> to let us know. THANK YOU.
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td class="luxcarmid_right">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="luxcarmid_botleft"></td>
+                                  <td class="luxcarmid_bot"></td>
+                                  <td class="luxcarmid_botright"></td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                        </table></td>
+                        <td width="11" align="left" valign="top">&nbsp;</td>
+                        <td align="left" valign="top" width="223">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="luxcargrey_tbl_topleft">&nbsp;</td>
+        <td align="left" valign="middle" class="luxcargrey_mid">Car on Special Offers </td>
+        <td class="luxcargrey_tbl_topright">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcargrey_left">&nbsp;</td>
+        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="left" valign="top" class="luxcartext_specials_01">&nbsp;</td>
+            <td align="right" valign="top">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="62%" align="left" valign="top" class="luxcartext_specials_01">Travel Agents Worldwide
+Welcome ! </td>
+            <td width="38%" rowspan="2" align="right" valign="top"><img src="images/image_01.jpg" alt="Image" width="58" height="76"  class="luxcarimage_border" title="Image"/></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" class="luxcartext_body">Rent a car
+Luxury Car in Europe,
+Enjoy the drive and arrive in style</td>
+          </tr>
+          
+        </table></td>
+        <td class="luxcargrey_right">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="luxcargrey_botleft"></td>
+        <td class="luxcargrey_bottom"></td>
+        <td class="luxcargrey_botright"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="12" align="left" valign="top"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="top">
+<table width="100%" border="0" align="center" cellpadding="14" cellspacing="0" class="lowerluxcarbody_bg">
+  <tr>
+    <td colspan="2" align="left" valign="top" class="luxcartext_body" ><p>     If you normally drive a Luxury car, why not drive one whilst you are on holiday or traveling on business?
+      
+      </p>
+      <p>If you would like to experience a luxury, performance or exotic car for a special event like a birthday, engagement, wedding, honeymoon or anniversary &ndash; or simply for that dream holiday you
+        
+      always promised yourself.<br />
+      <br />
+        <strong>Luxurycarhire.com</strong> offers the widest range of specialist, luxury and dream cars in many locations worldwide.      </p>
+      <p>These come in a variety of styles from ultra high performance models like Ferrari, Aston Martin, Lamborghini, and Porsche models to the powerful luxury of Bentley, Mercedes, Audi, BMW, 
+        
+      Jaguar, Rolls-Royce, Lexus, Maserati, Alfa Romeo, Corvette, Cadillac, Chrysler and others.</p>
+      <p>Then there are the nippy Mini, the economical Smart car or luxurious powerful Range Rover
+        
+        Sport and many others.
+        
+        
+        Convertibles, sports cars, sedans, coupes, 4 wheel drives and luxury limousines, even classic cars.
+        
+      We also offer a huge range of Motorbikes, including Harley Davidson&rsquo;s, and every kind of regular car, cabriolet, station wagon, people mover and minibus though <strong>www.MotorbikeRentals.com</strong><em><strong> </strong></em>and <strong>www.DriveTravel.com.</strong></p>
+	  <p>For details about the vehicles we offer and where to find them, consult our new <a href="vehicle_guide.aspx"><strong>Vehicle
+      Guide</strong></a>.</p>
+      <p>We also offer Gift Vouchers if you would like to pay for a rental for someone special. There is something for everyone. Your chance to live your dream and the memories will last forever.
+        
+        Let us help you to find your perfect car &ndash; but please book early as availability can be limited.
+        
+        Enquire now online, or email <a href="mailto:enquiries@luxurycarhire.com">enquiries@luxurycarhire.com</a> and sample our excellent service.</p>
+      <p>We look forward to hearing from you soon.</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <!--<td width="447" align="left" valign="top" class="luxcartext_body" ><span class="luxcartext_specials_01">FREECALL International Reservation Telephone Numbers</span><br />
+      USA or Canada 011 800 8781 1120 <br />
+      Britain / United Kingdom 00 800 8781 1120 <br />
+      Germany 00 800 8781 1120 <br />
+      France 00 800 8781 1120 <br />
+      Australia 1300 880 035 <br />
+      New Zealand 00 800 8781 1120</td>-->
+    <td width="448" align="left" valign="top" class="luxcartext_body" ><span class="luxcartext_specials_01">Contact</span><br />
+      Australia
+      Tel: within Australia (03) 8781 1120 or 1300 883 588<br />
+      Fax: (03) 8781 1109<br />
+      International. code: ( +613 )<br />
+      Email: <a href="mailto:enquiries@luxurycarhire.com" class="luxcarlink_01">enquiries@luxurycarhire.com</a><br />
+      URL  : <a href="/" class="luxcarlink_01">www.luxurycarhire.com</a></td>
+  </tr>
+</table>
+</td>
+                  </tr>
+                </table></td>
+                </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                </tr>
+              
+            </table></td>
+          </tr>
+        </table>
+	    <!--BODY TABLE ENDS	 --></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top" class="luxcarfooter"><table width="951" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="12"></td>
+      </tr>
+       <tr>
+        <td height="20" align="center" valign="top" class="luxcartext_footer"><a href="http://www.luxurycarhire.com/" class="luxcarlink_footer">Home</a> - <a href="http://www.canalboatholidays.com/" class="luxcarlink_footer">Canal
+            Boat Hire</a> - <a href="http://www.motorhomesworldwide.com/" class="luxcarlink_footer">Motorhome
+            Hire</a> - <a href="http://www.motorbikerentals.com/" class="luxcarlink_footer">Motorbike
+            Hire</a>  - <a href="http://www.drivetravel.com/" class="luxcarlink_footer">Car
+            Hire</a> - <a href="http://www.drivetravel.com/carleasingbookingengine.aspx" class="luxcarlink_footer">Car
+            Leasing</a></td>
+      </tr>
+      <tr>
+        <td height="25" align="center" valign="top" class="luxcartext_footer"> <a href="http://www.luxurycarhire.com" class="luxcarlink_footer">Luxury
+            Car</a> - <a href="http://www.yachthireandcharter.com/" class="luxcarlink_footer">Yacht
+            Hire &amp; Charter</a> - <a href="/search.html" class="luxcarlink_footer">Search</a> - <a href="/links.html" class="luxcarlink_footer">Links</a> -
+            <a href="luxurycarbookingengine/affiliatessignup.aspx" class="luxcarlink_footer">Affiliates
+            Signup</a> - <a href="luxurycarbookingengine/affiliateslogin.aspx" class="luxcarlink_footer">Affiliates
+            Login</a> - <a href="http://www.luxurycarhire.com/site_map.html" class="luxcarlink_footer">Site Map</a></td>
+      </tr>
+      <tr>
+        <td height="25" align="center" valign="middle" class="luxcartext_footer">Luxury
+          Car Hire © Copyright 2010 All rights reserved</td>
+      </tr>
+    </table></td>
+  </tr>
+</table><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7510116-9");
+pageTracker._trackPageview();
+} catch(err) {}</script></td>
+      </tr>
+      
+      
+    </table>
+</div>
+
+</div> 
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"button":$get("ImageButton1"),"format":"dd MMMM yyyy","id":"CalendarExtender1"}, null, null, $get("pick_up_date"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"button":$get("ImageButton2"),"format":"dd MMMM yyyy","id":"CalendarExtender2"}, null, null, $get("drop_off_date"));
+});
+//]]>
+</script>
+</form>
+    
+<script language="javascript" type="text/javascript">
+var pickup_date = document.getElementById('pick_up_date').value
+if(pickup_date == "")
+{
+    var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+    var pick_date = new Date();
+    var day = pick_date.getDate();
+    day = parseInt(day)+2;
+    var month = pick_date.getMonth();
+    var year = pick_date.getFullYear();
+    pick_date.setFullYear(year,month,day);
+
+    var show_day = pick_date.getDate();
+
+    var show_pick_date =  show_day + " " + months[pick_date.getMonth()] + " " + pick_date.getFullYear();
+    document.getElementById('pick_up_date').value = show_pick_date;
+    
+    pickup_date = document.getElementById('pick_up_date').value
+    var pickup_date_arr = pickup_date.split(' ');
+    day = pickup_date_arr[0];
+    day = parseInt(day)+1;
+            
+    month = getMonthNo(pickup_date_arr[1]);
+    year = pickup_date_arr[2];
+    pick_date = new Date();
+    pick_date.setFullYear(year,month,day);
+    
+    show_day = pick_date.getDate();
+    
+    var drop_date =  show_day + " " + months[pick_date.getMonth()] + " " + pick_date.getFullYear();
+    document.getElementById('drop_off_date').value = drop_date;
+}
+</script>    
+
+</body>
+</html>

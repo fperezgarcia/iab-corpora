@@ -1,0 +1,1027 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Garmin</title>
+
+<link type="text/css" href="/vehicles/j/jqueryui1.7/css/custom-theme/jquery-ui-1.7.1.custom.css" rel="stylesheet" />
+<link type="text/css" href="/vehicles/c/AudioPlayer.css" rel="stylesheet" />
+<!--[if IE 6]><link type="text/css" href="/vehicles/c/AudioPlayerIE6.css" rel="stylesheet" /><![endif]-->
+
+
+<link rel="stylesheet" href="/vehicles/c/lightwindow.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/vehicles/j/jqueryui1.7/development-bundle/themes/custom-theme/ui.core.css">  
+<link rel="stylesheet" type="text/css" href="/vehicles/j/jqueryui1.7/development-bundle/themes/custom-theme/ui.theme.css">  
+<link rel="stylesheet" type="text/css" href="/vehicles/j/jqueryui1.7/development-bundle/themes/custom-theme/ui.progressbar.css">
+
+<link rel="stylesheet" type="text/css" href="/c/compressed.css">
+<link rel="stylesheet" type="text/css" href="/c/grid.css">
+<link rel="stylesheet" type="text/css" href="/c/suckerfish.css">
+<link rel="stylesheet" type="text/css" href="/c/style.css">
+<link rel="stylesheet" type="text/css" href="/c/spiffybox.css">
+
+<script type="text/javascript" src="/vehicles/j/QueryString.js"></script>
+<!--
+<script type="text/javascript">
+	chooseLang();
+</script>
+-->
+
+<style>
+.fg-button { 
+   outline: 0; 
+   margin:0 4px 0 0; 
+   padding: .4em 1em; 
+   text-decoration:none !important; 
+   cursor:pointer; 
+   position: relative; 
+   text-align: center; 
+   zoom: 1; 
+   }
+</style>
+
+
+
+
+
+<script type="text/javascript" src="/j/suckerfish.js"></script>
+<script src="/vehicles/j/swfobject.js"></script>
+
+
+<!--This section pulls the variables from the URL-->
+<script type="text/javascript">
+	var bundle = QueryString('bundle'); //assigns the "bundle" value from the URL to the "bundle" variable
+	//alert("working");
+</script>
+<!-- end URL query -->
+
+<!-- parse the XML -->
+<script type="text/javascript">
+// This script tag loads the XML and parses the data.
+var date = new Date();
+var req;
+var usingVehicleXML = true;
+function loadXMLDoc(url) {
+	if(url.match("vehicles.xml") == "vehicles.xml"){
+		usingVehicleXML = true;	
+	}else{
+		usingVehicleXML = false;	
+	}
+	req = false;
+    // branch for native XMLHttpRequest object
+    if(window.XMLHttpRequest && !(window.ActiveXObject)) {
+    	try {
+			req = new XMLHttpRequest();
+        } catch(e) {
+			req = false;
+        }
+    // branch for IE/Windows ActiveX version
+    } else if(window.ActiveXObject) {
+       	try {
+        	req = new ActiveXObject("Msxml2.XMLHTTP");
+      	} catch(e) {
+        	try {
+          		req = new ActiveXObject("Microsoft.XMLHTTP");
+        	} catch(e) {
+          		req = false;
+        	}
+		}
+    }
+	if(req) {
+		req.onreadystatechange = processReqChange;
+		req.open("GET", url, true);
+		req.send("");
+	}
+}
+
+function processReqChange() {
+    // only if req shows "loaded"
+    if (req.readyState == 4) {
+        // only if "OK"
+        if (req.status == 200) {
+            // ...processing statements go here...
+			if(usingVehicleXML){
+				useXML();
+			}else{
+				useVoiceXML();	
+			}
+        } else {
+            alert("There was a problem retrieving the XML data:\n" + req.statusText);
+        }
+    }
+}
+
+var bundleName;
+var vehicles;
+var voices;
+var description;
+var displayName;
+var codeName;
+var vehicle_array = new Array();
+var voice_array = new Array();
+
+function useXML(){
+		var breadCrumb = document.getElementById('breadCrumb');
+		var bundleTitle = document.getElementById('bundleTitle');
+		var descriptionArea = document.getElementById('descriptionArea');
+ 		bundleName = req.responseXML.getElementsByTagName(bundle)[0];
+		vehicles = bundleName.getElementsByTagName("vehicle");
+		voices = bundleName.getElementsByTagName("voice");
+		
+		displayName = bundleName.getAttribute("name");
+		description = bundleName.getAttribute("description");
+		codeName = bundleName.getAttribute("codeName");
+		document.title = "Garmin | " + displayName;
+		breadCrumb.innerHTML = displayName;
+		bundleTitle.innerHTML = displayName;
+		descriptionArea.innerHTML = description;
+		
+		var allVehicles = req.responseXML.getElementsByTagName("vehicles")[0];
+		var everyVehicle = allVehicles.getElementsByTagName("vehicle");
+		
+		for(var n=0;n<vehicles.length;n++) {
+			var vehicle = new Object();
+			vehicle.vehicleName = getElementTextNS("", "vehicle", bundleName, n);
+			for(var o=0; o<everyVehicle.length; o++){
+				if(vehicle.vehicleName == everyVehicle[o].getAttribute("vehicleName")){
+					//alert(everyVehicle[o].getAttribute("displayName"));
+					vehicle.displayName = everyVehicle[o].getAttribute("displayName");
+				}
+			}
+			vehicle_array.push(vehicle);
+			
+		}//end for loop
+		
+		if(voices.length > 0){
+			loadXMLDoc('/vehicles/x/voices.xml?' + date.getTime());
+			for(var p=0;p<voices.length;p++) {
+				var voice = new Object();
+				voice.voiceName = getElementTextNS("", "voice", bundleName, p);
+				voice_array[p] = voice;
+			}
+		}else{
+			createTable();	
+			testForCommPlugin();
+		}
+}
+function useVoiceXML(){
+	var voiceGroup = req.responseXML.getElementsByTagName("voices")[0];
+	var voiceElements = voiceGroup.getElementsByTagName("voice");
+	
+	for(var i=0;i<voice_array.length;i++) {
+		//var vehicle = new Object();
+		//vehicle.vehicleName = getElementTextNS("", "vehicle", bundleName, n);
+		for(var j=0; j<voiceElements.length; j++){
+			if(voice_array[i].voiceName == voiceElements[j].getAttribute("voiceName")){
+				//alert(everyVehicle[o].getAttribute("displayName"));
+				voice_array[i].displayName = voiceElements[j].getAttribute("displayName");
+			}
+		}
+	}
+	createTable();
+	testForCommPlugin();
+}
+function getElementTextNS(prefix, local, parentElem, index) {
+    var result = "";
+    if (prefix && isIE) {
+        // IE/Windows way of handling namespaces
+        result = parentElem.getElementsByTagName(prefix + ":" + local)[index];
+    } else {
+        result = parentElem.getElementsByTagName(local)[index];
+    }
+    if (result) {
+        // get text, accounting for possible
+        // whitespace (carriage return) text nodes 
+        if (result.childNodes.length > 1) {
+            return result.childNodes[1].nodeValue;
+        } else {
+            return result.firstChild.nodeValue;    		
+        }
+    } else {
+        return "n/a";
+    }
+}
+</script>
+<!-- end parsing the XML -->
+
+<!-- import for the comm plugin -->
+<!--<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/prototype-1.6.0.2/prototype.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminDevice.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminDeviceControl.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminDeviceDisplay.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminDevicePlugin.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminGeocode.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminGpsDataStructures.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminObjectGenerator.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GarminPluginUtils.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/device/GoogleMapController.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/util/Util-Broadcaster.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/util/Util-BrowserDetect.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/util/Util-DateTimeFormat.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/util/Util-Json2.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/util/Util-PluginDetect.js">&#160;</script>
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/CommunicatorCookie.js">&#160;</script>-->
+<!--<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/garmin/util/Util-XmlConverter.js">&#160;</script>-->
+<!--<script type="text/javascript" src="http://www8.garmin.com/j/json.js">&#160;</script>-->
+<script type="text/javascript" src="/vehicles/j/CommunicatorAPI-includes.js"></script>
+<!-- end import for the comm plugin -->
+
+<!-- test for the comm plugin -->
+<script type="text/javascript">
+		var installButton;
+		var textLabel;
+		var startedProgress = false;
+		var garminController;
+		var findingDivices;
+		var commPlugin;
+		var vehicleInstallPath;
+		var voiceInstallPath;
+		var shortComplete = false;
+		var shortPercent;
+		var errorShowing = false;
+	
+		CommPlugin = Class.create();
+		CommPlugin.prototype = {
+			initialize: function() {
+				try {
+					if (PluginDetect.detectGarminCommunicatorPlugin()) {
+						var unlockKey = ["http://wwwdev.garmin.com", "3e2bab85cbc4e17d3ce5b55c8f2aa652", "http://www.garmin.com","26bc5558551391fca66092d6c931c3fa", "http://www8.garmin.com", "f087d344916ad09fc1fd962b7e941109"];
+						this.controller = new Garmin.DeviceControl();
+						// Show the OS download button, and set the latest version appropriately
+						switch(BrowserDetect.OS) {
+							case "Windows":
+								this.controller.setPluginLatestVersion([2,6,4,0]);
+								break;
+							case "Mac":
+								this.controller.setPluginLatestVersion([2,6,4,0]);
+								break;
+						}
+												
+						//$("transferInstall").innerHTML = '<button id="installButton" onclick="javascript:writeFiles();" class="fg-button ui-state-default ui-state-disabled ui-corner-all"></button>';
+						//installButton = document.getElementById('installButton');
+						this.controller.checkForUpdates();
+						this.controller.register(this);
+						this.controller.unlock(unlockKey);
+						//this.controller.findDevices();
+						//findingDivices = true;
+						garminController = this.controller;
+						
+					} else {
+						var notInstalled = new Error("Garmin Communicator Plugin NOT detected.");
+						notInstalled.name = "PluginNotInstalledException";
+						throw notInstalled;
+					}	
+				} catch(error) {
+					var isMacUser = BrowserDetect.OS == "Mac";
+					if (error.name == "PluginNotInstalledException") {
+						if( isMacUser ) {
+							$("transferInstall").innerHTML = "<button id=\"installButton\" onclick=\"javascript:jumpToCommPage('mac');\" class=\"fg-button ui-state-default ui-corner-all\">Install Communicator</button>";
+						} else {
+							$("transferInstall").innerHTML = "<button id=\"installButton\" onclick=\"javascript:jumpToCommPage('pc');\" class=\"fg-button ui-state-default ui-corner-all\">Install Communicator</button>";
+						}
+						//$("messageBody").innerHTML = "<p>If you're still having problems and need additional support, see our <a href=\"/products/communicator/faq.jsp\">Communicator FAQs</a>.</p>";
+					} else if (error.name == "OutOfDatePluginException" || error.name == "UpdatePluginException") {
+						//$("messageHead").innerHTML = "<h4>Communicator Plugin is properly installed.</h4>";
+						if( isMacUser) {
+							$("transferInstall").innerHTML = "<button id=\"installButton\" onclick=\"javascript:jumpToCommPage('mac');\" class=\"fg-button ui-state-default ui-corner-all\">Install Communicator</button>";
+						} else {
+							$("transferInstall").innerHTML = "<button id=\"installButton\" onclick=\"javascript:jumpToCommPage('pc');\" class=\"fg-button ui-state-default ui-corner-all\">Install Communicator</button>";
+						}
+					} else if (error.name == "BrowserNotSupportedException") {							
+						$("errorHead").innerHTML = "<h4 class=\"hey\">Your Internet Browser is NOT supported by the Garmin Communicator Plugin. <a href=\"http://www8.garmin.com/products/communicator/faq.jsp\">Find a supported browser here.</a></h4>";
+					} else {
+						alert("unhandled exception: " + error.name + ":" + error.message);
+					}
+					
+					//$j(function() {					 
+							//$j("#installButton").removeClass("ui-state-disabled");
+							/*$j("#installButton").hover(
+								function(){ 
+									$j(this).addClass("ui-state-hover");
+								},
+								function(){ 
+									$j(this).removeClass("ui-state-hover"); 
+								}
+							)*/
+					//});
+				}
+			},
+			generatePluginVersion: function() {
+				var version = this.controller.getPluginVersion();
+				var versionString = version[0] + "." + version[1] + "." + version[2] + "." + version[3];
+				return versionString;
+			},
+			onStartFindDevices: function(json) {
+				//$j("#spinner").show('blind');
+				//installButton.disabled = true;
+				//installButton.innerHTML = "Finiding Device ... Please Wait";
+				$j("#transferInstall").hide('blind');
+				//$("transferFinding").innerHTML = '<div class="ui-state-highlight ui-corner-all" style="padding:10px; margin:0;"><strong>Fiding Devices...</strong></div>';
+				//$j("#transferFinding").show('blind');
+				$j("#progressBar").show('blind');
+				textLabel.innerHTML = "Finding devices...";
+				findingDivices = true;
+    	},
+			onFinishFindDevices: function(json) {
+				if(json.controller.numDevices > 0) {
+					findingDivices = false;
+					var deviceXML = this.controller.getCurrentDeviceXml();
+					checkForPathToVehicles(deviceXML);
+					checkForPathToVoices(deviceXML);
+					writeFiles();
+					if(errorShowing){
+						$j("#error").hide('blind');
+					}
+				} else {
+					if(!errorShowing){
+						$j("#transferInstall").show('blind');
+						$j("#progressBar").hide('blind');
+						$j("#errorText").html("No device found. Please connect a device and try again.");
+						$j("#error").show('blind');
+					}else{
+						$j("#transferInstall").show('blind');
+						$j("#progressBar").hide('blind');
+					}
+					errorShowing = true;
+				}
+				
+				
+				//findingDivices = false;
+				//var deviceXML = this.controller.getCurrentDeviceXml();
+				//checkForPathToVehicles(deviceXML);
+				//writeFiles();
+    	},
+			onProgressWriteToDevice: function(json) {
+				//alert(json.progress.text[0]);
+				
+				if(!startedProgress){
+					textLabel.innerHTML = "Transferring...";
+					//$j("#progressBar").show('blind');
+					//$j("#transferInstall").hide('blind');
+					//installButton.disabled = true;
+				}
+				startedProgress = true;
+				
+				
+				var progressText = json.progress.text[0];
+				//$("status").innerHTML += json.progress.text[0] + " <br />";
+				
+				var updateStage = 2;
+				if (typeof(progressText) != 'undefined') {
+							if (progressText.indexOf('Connecting') != -1) {
+										updateStage = 0; // connecting to the server
+							} else if (progressText.indexOf('Downloading') != -1) {
+										updateStage = 1; // downloading files
+							} else {
+										updateStage = 2; // pushing files to unit
+							}
+							
+				} try {
+					var percentage = json.progress.getPercentage();
+					percentage = percentage / 2;
+					if (updateStage == 2) {
+								percentage = percentage + 50;
+					}
+					if(vehicle_array.length > 1 && vehicle_array.length < 6){
+							if (updateStage != 0) {
+										//updater.updateProgressBar(percentage);
+										if(!shortComplete){
+											if(percentage == 100){
+												shortComplete = true;
+												shortPercent = 50;
+												$j("#progressBar").progressbar("option", "value", 50);
+												//textLabel.innerHTML = "Transferring... " + "75" + "%";
+											}else{
+												$j("#progressBar").progressbar("option", "value", percentage);
+												//textLabel.innerHTML = "Transferring... " + percentage + "%";
+											}
+										}else{
+											var addOn;
+											
+											if(vehicle_array.length == 2){
+												addOn = 2;
+											}else if(vehicle_array.length == 3){
+												addOn = 1;
+											}else if(vehicle_array.length == 4){
+												addOn = 0.5;
+											}else if(vehicle_array.length == 5){
+												addOn = 0.25;
+											}											
+											
+											shortPercent += 1;
+											if(shortPercent < 95){
+												$j("#progressBar").progressbar("option", "value", shortPercent);
+												textLabel.innerHTML = "Transferring... " + shortPercent + "%";
+											}else{
+												$j("#progressBar").progressbar("option", "value", 95);
+												textLabel.innerHTML = "Transferring... " + "95" + "%";
+											}
+										}
+							}
+					}else{
+							if (updateStage != 0) {
+										//updater.updateProgressBar(percentage);
+										$j("#progressBar").progressbar("option", "value", percentage);
+										textLabel.innerHTML = "Transferring... " + percentage + "%";
+							}
+					}
+				}	catch(err) {
+					//alert('error writing to device '+err);
+				}
+				
+			},
+			onFinishWriteToDevice: function(success, json) {
+				if(success){
+					urchinTracker('/vehicles/downloaded/' + codeName);
+					urchinTracker('/vehicles/downloaded/viapluginSUCCESS');
+					//pageTracker._trackPageview('/vehicles/downloaded/' + codeName);
+					//pageTracker._trackPageview('/vehicles/downloaded/viapluginSUCCESS');
+					
+					//installButton.innerHTML = "Successfuly Installed";
+					//$("transferSuccess").innerHTML = '<div class="ui-state-highlight ui-corner-all" style="padding:10px; margin:0;"><strong>Installation Successful</strong></div>';
+					//$j("#transferSuccess").show('blind');
+					textLabel.innerHTML = "Installation Successful";
+				}else{
+					urchinTracker('/vehicles/downloaded/viapluginFAIL');
+					//pageTracker._trackPageview('/vehicles/downloaded/viapluginFAIL');
+					
+					$j("#progressBar").hide('blind');
+					$("transferFailure").innerHTML = '<div id="transferFailure" class="ui-state-error ui-corner-all" style="padding:10px; margin:0;"><span class="ui-icon ui-icon-alert left"></span><strong>&nbsp;Installation Failed</strong></div>';
+					$j("#transferFailure").show('blind');
+					//installButton.innerHTML = "Installation Failed";
+				}
+				$j("#progressBar").progressbar("option", "value", 100);
+				//$j("#progressBar").hide('blind');
+				//$("transferInstall").innerHTML =
+				//$j("#transferInstall").show('blind');
+				//$j("#installButton").addClass("ui-state-disabled");
+				//installButton.disabled = true;
+			}
+		};
+		
+		function testForCommPlugin() {
+			commPlugin = new CommPlugin();
+		        /*var theCommunicatorCookie = new CommunicatorCookie();
+		        if( !theCommunicatorCookie.data.referrerIsDefault ) {
+						 document.getElementById( "ReferringUrl" ).href = theCommunicatorCookie.data.referrerURL;
+						 document.getElementById( "ReferringUrl" ).innerHTML = theCommunicatorCookie.data.referrerTitle;
+		        }*/
+		}
+		
+		function jumpToCommPage(os){
+			if(os == 'mac'){
+				location.href = "/support/download_details.jsp?id=3739";
+			}else{
+				location.href = "/support/download_details.jsp?id=3608";
+			}
+		}
+		
+		function findDevices(){
+			garminController.findDevices();
+			findingDivices = true;
+		}
+		
+		function writeFiles(){
+			garminController.downloadToDevice(buildXMLString(), null);
+		}
+		
+		function buildXMLString(){
+			var xmlString = '<?xml version="1.0" encoding="UTF-8"?><DeviceDownload xmlns="http://www.garmin.com/xmlschemas/PluginAPI/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/PluginAPI/v1 http://www.garmin.com/xmlschemas/GarminPluginAPIV1.xsd">';
+			
+			for(var i=0; i<vehicle_array.length; i++) {
+				xmlString += '<File Destination="' + vehicleInstallPath + '/' + vehicle_array[i].vehicleName + '.srf" IsRegionPackage="0" Source="http://www8.garmin.com/vehicles/m/srf/' + vehicle_array[i].vehicleName + '.srf"/>';
+				//alert(vehicle_array[i]);
+			}
+			for(var j=0; j<voice_array.length; j++) {
+				xmlString += '<File Destination="' + voiceInstallPath + '/' + voice_array[j].voiceName + '.vpm" IsRegionPackage="0" Source="http://www8.garmin.com/vehicles/m/voices/' + voice_array[j].voiceName + '.vpm"/>';
+			}
+			
+			xmlString += '</DeviceDownload>';
+			return xmlString;
+		}
+		
+		function onLoad2(){
+			textLabel = document.getElementById('textLabel');
+			installButton = document.getElementById('installButton');
+		}
+		
+		function xmlStringToObject(xmlData) {
+			if (window.ActiveXObject) {
+				//for IE
+				xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+				xmlDoc.async="false";
+				xmlDoc.loadXML(xmlData);
+				return xmlDoc;
+			} else if (document.implementation && document.implementation.createDocument) {
+				//for Mozilla
+				parser=new DOMParser();
+				xmlDoc=parser.parseFromString(xmlData,"text/xml");
+				return xmlDoc;
+			}
+		}
+		
+		function checkForPathToVehicles(xmlstring){
+			//var xmlObject = Garmin.XmlConverter.toDocument(xmlstring);
+			var xmlObject = xmlStringToObject(xmlstring);
+			var dataTypes = xmlObject.getElementsByTagName("DataType");
+			vehicleInstallPath = "Garmin/Vehicle";
+			for(var i=0; i<dataTypes.length; i++) {
+				var name = dataTypes[i].getElementsByTagName("Name")[0].firstChild.nodeValue;
+				if(name == "Vehicle"){
+					var file = dataTypes[i].getElementsByTagName("File");
+					var path = file[0].getElementsByTagName("Path")[0].firstChild.nodeValue;
+					vehicleInstallPath = path;
+				}
+			}
+			//alert(vehicleInstallPath);
+		}
+		function checkForPathToVoices(xmlstring){
+			//var xmlObject = Garmin.XmlConverter.toDocument(xmlstring);
+			var xmlObject = xmlStringToObject(xmlstring);
+			var dataTypes = xmlObject.getElementsByTagName("DataType");
+			voiceInstallPath = "Garmin/Voice";
+			for(var i=0; i<dataTypes.length; i++) {
+				var name = dataTypes[i].getElementsByTagName("Name")[0].firstChild.nodeValue;
+				if(name == "Voices"){
+					var file = dataTypes[i].getElementsByTagName("File");
+					var path = file[0].getElementsByTagName("Path")[0].firstChild.nodeValue;
+					voiceInstallPath = path;
+				}
+			}
+			//alert(vehicleInstallPath);
+		}
+	</script>
+<!-- end test for the comm plugin -->
+
+<!--This set of script is used for downloading the zip file-->
+<script type="text/javascript">
+	function downloadBundle() {
+		urchinTracker('/vehicles/downloaded/' + codeName);
+		//pageTracker._trackPageview('/vehicles/downloaded/' + codeName);
+		window.location='/vehicles/m/srf/' + codeName + '.zip';
+	}
+</script>
+<!--end download zip file-->
+
+<style>
+	#cellReset{vertical-align:bottom;}
+	.audioButton{
+		margin-top:55.5px;
+		margin-bottom:55.5px;
+	}
+</style>
+
+<!--create table-->
+<script type="text/javascript">
+	var audioPairs = new Array();
+	function isInteger(s) {
+		return (s.toString().search(/^-?[0-9]+$/) == 0);
+	}
+	function createTable(){
+		var tableArea = document.getElementById('tableArea');
+		var table=document.createElement("table");
+		var tbody=document.createElement("tbody");
+		var row;
+		var loopTotal = vehicle_array.length + voice_array.length;
+		var cellCount;
+		
+		for(m=0; m<loopTotal; m++){
+			if(isInteger(m/4)){row = document.createElement("tr");tbody.appendChild(row);cellCount = 0;}
+			//alert(m);
+			var cell;
+			var writeThis;
+			if(m < vehicle_array.length){
+				cell = document.createElement("td");
+				cellCount ++;
+				writeThis = '<a href="../product.html?vName=' + vehicle_array[m].vehicleName + '"><img src="/vehicles/m/g/vehicles/' + vehicle_array[m].vehicleName + '.jpg" alt="' + vehicle_array[m].displayName + '" width="150" height="150" border="0" /></a><h6>' + vehicle_array[m].displayName + '</h6>';
+				cell.innerHTML = writeThis;
+				row.appendChild(cell);
+				tbody.appendChild(row);
+			}else{
+				var voiceM = m - vehicle_array.length;
+				if(cellCount <= 3){
+					cell = document.createElement("td");
+					//alert(cellCount);
+					/*if(cellCount == 0){
+						cell.colSpan = "4";
+						writeThis = '<div id="here' + voiceM + '" align="center" style="height:90px; padding-top:30px;"></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+					}else if(cellCount == 1){
+						cell.colSpan = "3";
+						cell.setAttribute("id","cellReset");
+						writeThis = '<div id="here' + voiceM + '" align="center" style="margin-bottom:45px;"></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+					}else{
+						cell.colSpan = "2";
+						cell.setAttribute("id","cellReset");
+						writeThis = '<div id="here' + voiceM + '"><span>Requires the latest version of Flash: <a href="http://get.adobe.com/flashplayer">Download</a></span></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+						//writeThis = '<div id="here' + voiceM + '" align="center" style="margin-bottom:45px;"></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+					}*/
+					cell.setAttribute("id","cellReset");
+					writeThis = '<div id="here' + voiceM + '" class="audioButton"><span>Requires the latest version of Flash: <a href="http://get.adobe.com/flashplayer">Download</a></span></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+				}else{
+					row = document.createElement("tr");tbody.appendChild(row);cellCount = 0;
+					cell = document.createElement("td");
+					//cell.colSpan = "3";
+					//writeThis = '<div id="here' + voiceM + '" align="center" style="height:90px; padding-top:30px;"></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+					cell.setAttribute("id","cellReset");
+					writeThis = '<div id="here' + voiceM + '" class="audioButton"><span>Requires the latest version of Flash: <a href="http://get.adobe.com/flashplayer">Download</a></span></div><h6>' + voice_array[voiceM].displayName + '</h6>';
+				}
+				audioPairs.push("here" + voiceM);
+				audioPairs.push("/vehicles/m/a/" + voice_array[voiceM].voiceName + ".mp3");
+				cell.innerHTML = writeThis;
+				row.appendChild(cell);
+				tbody.appendChild(row);
+				cellCount ++;
+			}
+			
+		}
+		
+		
+		table.appendChild(tbody);
+		tableArea.appendChild(table);
+		//loadAudioPlayer("#here0", "/vehicles/m/a/Elfred.mp3");
+		for(i=0; i<audioPairs.length; i+=2){
+			loadAudioPlayer(audioPairs[i], audioPairs[i + 1]);
+		}
+	}
+</script>
+<!--end create table-->
+</head>
+
+<!--<body onload="loadXMLDoc('/vehicles/x/bundles.xml?' + Date())">-->
+<body onload="loadXMLDoc('/vehicles/x/vehicles.xml?' + date.getTime()); onLoad2();">
+	<script type="text/javascript" src="/vehicles/j/jqueryui1.7/development-bundle/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="/vehicles/j/jqueryui1.7/development-bundle/ui/ui.core.js"></script>
+    <script type="text/javascript" src="/vehicles/j/jqueryui1.7/development-bundle/ui/ui.progressbar.js"></script>
+    <script type="text/javascript" src="/vehicles/j/jqueryui1.7/development-bundle/ui/effects.core.js"></script>
+    <script type="text/javascript" src="/vehicles/j/jqueryui1.7/development-bundle/ui/effects.blind.js"></script>
+    
+	<script type="text/javascript" src="/vehicles/j/jqueryui1.7/js/jquery-ui-1.7.1.custom.min.js"></script>
+    <script type="text/javascript" src="/vehicles/j/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="/vehicles/j/AudioPlayer.js"></script>
+    
+  
+	<script type="text/javascript">
+			var $j = jQuery.noConflict();
+			
+			 $j(function() {
+				//call progress bar constructor			
+				 $j("#progressBar").progressbar({value:1});
+				 $j("#transferFinding").hide();
+				 $j("#progressBar").hide();
+				 $j("#transferSuccess").hide();
+				 $j("#transferFailure").hide();
+				 
+				 $j("#installButton").hover(
+						function(){ 
+							$j(this).addClass("ui-state-hover");
+						},
+						function(){ 
+							$j(this).removeClass("ui-state-hover"); 
+						}
+					)
+					$j("#downloadButton").hover(
+						function(){ 
+							$j(this).addClass("ui-state-hover");
+						},
+						function(){ 
+							$j(this).removeClass("ui-state-hover"); 
+						}
+					)
+			});
+			
+			
+    </script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-31920-1";
+urchinTracker();
+</script>
+<link rel="stylesheet" type="text/css" href="//static.garmincdn.com/shared/c/legacy.css" media="all" />
+<link rel="stylesheet" type="text/css" href="//static.garmincdn.com/shared/c/global/verrocchio.css" media="all" />
+<script type="text/javascript">
+  //set this variable to the locale for which you would like to load the navigation. (e.g. us, be_nl, be_fr, fr, br, fi, etc.)
+  var navCountry = "us"; //if no country is supplied, the default will be US.
+
+  action_a = "Homepage";
+  action_b = "Explore";
+  action_c = "Shop";
+  action_d = "Maps Etc";
+  action_e = "Support";
+  action_f = "Utility Bar: ";
+  action_f1 = action_f + "Cart";
+  action_f2 = action_f + "Country Selector";
+  action_f3 = action_f + "Your Account";
+  action_f4 = action_f + "Search";
+  var header_data = function (a,b) { _gaq.push( ['_trackEvent', 'Global Header', a, b] ); };
+</script>
+<script src="https://static.garmincdn.com/shared/j/global/main_navigation.js" type="text/javascript"></script>
+<div id="nav-container">
+  <!-- copy and paste the appropriate HTML for the specific locale here 
+as a fallback for browsers without javascript or javascript turned off -->
+  
+<!-- global header 
+     compatible with blueprint + 960.gs + THE GRID -->
+
+  <div id="global-header-wrapper">
+    <div class="container container_24"><!--.container: for blueprint and THE GRID-->
+      <div id="global-header" class="span-24 grid_24 span24 global_override">
+        <div id="global-logo">
+          <h1><a href="//www.garmin.com/" title="Homepage" onclick="header_data(action_a, 'Logo');">Garmin</a></h1>
+        </div>
+        <div id="header-primary-nav">              
+            <div id="primary-nav-plus-search-bar">    
+              <div id="global-nav-primary-tier">
+                <ul>              
+                  <li id="primary-explore" class="has-menu">
+                  <h2><a href="//www.garmin.com/" title="Homepage" onclick="header_data(action_a, 'Explore');">Explore<span> Discover Features </span></a></h2><span class="dd-arrow"></span>
+                  <div id="menu-explore" class="dropdown w-icon">
+                      <div class="first last">
+                        <ul>
+                          <li id="road-link" class="first"><a onclick="header_data(action_b, 'On the Road');" href="//www.garmin.com/en-US/explore/ontheroad/">On the Road <span>Automotive, Motorcycles &amp; Trucking</span></a></li>
+                          <li id="sports-link" ><a            onclick="header_data(action_b, 'Into Sports');" href="//www.garmin.com/en-US/explore/intosports/">Into Sports <span>Run, Bike, Swim &amp; Golf</span></a></li>
+                          <li id="trail-link" class="last"><a onclick="header_data(action_b, 'On the Trail');" href="//www.garmin.com/en-US/explore/onthetrail/">On the Trail <span>Hiking, Geocaching &amp; Hunting</span></a></li>                    
+                          <li id="go-link" class="first"><a   onclick="header_data(action_b, 'On the Go');" href="//www.garmin.com/en-US/explore/onthego/">On the Go <span>Apps &amp; Tracking</span></a></li>
+                          <li id="water-link"><a              onclick="header_data(action_b, 'On the Water');" href="//www.garmin.com/en-US/explore/onthewater/">On the Water <span>Boating, Sailing &amp; Fishing</span></a></li>
+                          <li id="air-link" class="last"><a   onclick="header_data(action_b, 'In the Air');" href="//www.garmin.com/en-US/explore/intheair/">In the Air <span>Airplanes &amp; Helicopters</span></a></li>
+                      </ul>
+                    </div><!-- eo: .first.last -->
+                  </div><!-- eo: #menu-explore -->
+                </li><!-- eo: #primary-explore -->
+                <li id="primary-devices" class="has-menu">              
+                  <h2><a href="//buy.garmin.com/" onclick="header_data(action_c, 'Storefront');">Shop<span> Buy Devices </span></a></h2><span class="dd-arrow"></span>
+                  <div id="menu-devices" class="mega dropdown">
+                    <div class="row">
+                      <div class="span-4 span5 append-1 grid_4 suffix_1 first">
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=133" onclick="header_data(action_c, 'On the Road');">On the Road</a></h3>
+                        <ul>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=449" onclick="header_data(action_c, 'On the Road: Automotive');">Automotive</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=135" onclick="header_data(action_c, 'On the Road: Motorcycles');">Motorcycles</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=275" onclick="header_data(action_c, 'On the Road: Trucking');">Trucking</a></li>
+                        </ul><!--eo: on the road shopping-->
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=136" onclick="header_data(action_c, 'On the Go');">On the Go</a></h3>
+                        <ul>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=389" onclick="header_data(action_c, 'On the Go: Apps');">Apps</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=387" onclick="header_data(action_c, 'On the Go: Track &amp; Locate');">Track &amp; Locate</a></li>                
+                        </ul><!-- eo: on the go shopping-->                    
+                      </div><!-- eo: .span4 -->
+                      <div class="span-4 span5 append-1 grid_4 suffix_1">
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=141" onclick="header_data(action_c, 'Into Sports');">Into Sports</a></h3>
+                        <ul>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=261" onclick="header_data(action_c, 'Into Sports: Golfing');">Golfing</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=142" onclick="header_data(action_c, 'Into Sports: Running');">Running</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=160" onclick="header_data(action_c, 'Into Sports: Cycling');">Cycling</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=425" onclick="header_data(action_c, 'Into Sports: Swimming');">Swimming</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=419" onclick="header_data(action_c, 'Into Sports: Multisport');">Multisport</a></li>                
+                        </ul><!-- eo: into sports shopping-->
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=143" onclick="header_data(action_c, 'On the Trail');">On the Trail</a></h3>
+                        <ul>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=145" onclick="header_data(action_c, 'On the Trail: Handhelds');">Handhelds</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=447" onclick="header_data(action_c, 'On the Trail: Wrist-worn');">Wrist-worn</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=146" onclick="header_data(action_c, 'On the Trail: Two-way Radios');">Two-way Radios</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=209" onclick="header_data(action_c, 'On the Trail: Dog Tracking &amp; Training');">Dog Tracking &amp; Training</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=508" onclick="header_data(action_c, 'On the Trail: Pet Obedience');">Pet Obedience</a></li>
+                        </ul><!--eo: on the trail shopping-->
+                      </div><!-- eo: span4 -->
+                      <div id="water-links" class="span-4 span5 append-1 grid_4 suffix_1">
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=147" onclick="header_data(action_c, 'On the Water');">On the Water</a></h3>
+                        <ul>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=148" onclick="header_data(action_c, 'On the Water: Chartplotters');">Chartplotters</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=161" onclick="header_data(action_c, 'On the Water: Handhelds &amp; Wrist-worn');">Handhelds &amp; Wrist-worn</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=150" onclick="header_data(action_c, 'On the Water: Sounders');">Sounders</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=149" onclick="header_data(action_c, 'On the Water: Fishfinders');">Fishfinders</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=151" onclick="header_data(action_c, 'On the Water: Radar');">Radar</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=228" onclick="header_data(action_c, 'On the Water: Autopilots');">Autopilots</a></li>
+                    
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=250" onclick="header_data(action_c, 'On the Water: Communications');">Communications</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=394" onclick="header_data(action_c, 'On the Water: Weather Solutions');">Weather Solutions</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=288" onclick="header_data(action_c, 'On the Water: Instruments &amp; Sensors');">Instruments &amp; Sensors</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=418" onclick="header_data(action_c, 'On the Water: Cameras');">Cameras</a></li>                      
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=395" onclick="header_data(action_c, 'On the Water: Transducers');">Transducers</a></li>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=162" onclick="header_data(action_c, 'On the Water: Networking');">Networking</a></li>
+                        </ul>
+                      </div><!-- eo: #water-links -->
+                      <div class="span-4 grid_4 span4 last">
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=152" onclick="header_data(action_c, 'In the Air');">In the Air</a></h3>
+                        <ul>
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=153" onclick="header_data(action_c, 'In the Air: Flight Decks');">Flight Decks</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=154" onclick="header_data(action_c, 'In the Air: Avionics &amp; Safety');">Avionics &amp; Safety</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=155" onclick="header_data(action_c, 'In the Air: Sport Aviation');">Sport Aviation</a></li>                
+                          <li><a href="//buy.garmin.com/shop/shop.do?cID=156" onclick="header_data(action_c, 'In the Air: Portable GPS');">Portable GPS</a></li>                
+                        </ul>
+                        <h3><a href="//buy.garmin.com/shop/shop.do?cID=157" onclick="header_data(action_c, 'Sensors &amp; Boards');">Sensors &amp; Boards</a></h3><!-- eo: OEM shopping-->
+                      </div><!-- eo: .span-4 -->
+                    </div><!-- eo: .row -->
+                  </div><!-- eo: #menu-devices -->                              
+                </li>                
+                <li id="primary-maps-etc" class="has-menu">
+                  <h2><a href="//www.garmin.com/us/maps-accessories/" onclick="header_data(action_d, 'Maps Etc Landing');">Maps &amp; Accessories<span> Find Content, Services &amp; More </span></a></h2><span class="dd-arrow"></span>
+                  <div id="menu-maps-etc" class="dropdown w-icon">
+                    <div class="first last">
+                      <ul>
+                        <li id="maps-link" class="first"><a href="//www.garmin.com/us/maps/" onclick="header_data(action_d, 'Maps');">Maps <span>Buy &amp; Update Maps</span></a></li>
+                        <li id="accessories-link"><a href="//buy.garmin.com/shop/" onclick="header_data(action_d, 'Accessories (Storefront)');">Accessories <span>Find Cables, Mounts &amp;&nbsp;More</span></a></li>
+                        <li id="extras-link" class="last"><a href="//www.garmin.com/us/extras/" onclick="header_data(action_d, 'Extras');">Extras <span>Download Services, Apps &amp;&nbsp;More</span></a></li>
+                      </ul>
+                    </div><!-- eo: .first -->
+                  </div><!-- eo: #menu-maps-etc -->
+                </li><!-- eo: dropdown menu for Maps, et al-->
+                <li id="primary-support" class="has-menu last">  
+                  <h2><a href="//www.garmin.com/us/support" onclick="header_data(action_e, 'Support Landing');">Support<span> Get Help</span></a></h2><span class="dd-arrow"></span>
+                  <div id="menu-support" class="dropdown w-icon">
+                    <div class="first last">
+                      <ul>
+                        <li id="reg-link" class="first"><a             onclick="header_data(action_e, 'Registration');" href="//my.garmin.com/mygarmin/marketing/register.htm">Registration</a></li>
+                        <li id="software-link"><a                      onclick="header_data(action_e, 'Software');" href="//www.garmin.com/support/download.jsp">Software</a></li>
+                        <li id="manuals-link" class="last"><a          onclick="header_data(action_e, 'Manuals');" href="https://buy.garmin.com/support/manuals/searchManuals.faces?refresh=true">Manuals</a></li>
+                        <li id="faqs-link" class="first"><a            onclick="header_data(action_e, 'FAQs');" href="https://support.garmin.com/support/searchSupport/search.htm">FAQs</a></li>
+                        <li id="repair-link"><a                        onclick="header_data(action_e, 'Repair');" href="https://my.garmin.com/rma/repair/repairLanding.htm">Repair</a></li>
+                        <li id="warranty-link" class="last"><a         onclick="header_data(action_e, 'Warranty');" href="//www.garmin.com/support/warranty.html">Warranty</a></li>
+                        <li id="learning-center-link" class="first"><a onclick="header_data(action_e, 'Learning Center');" href="//www.garmin.com/learningcenter/">Learning Center</a></li>
+                        <li id="contact-support-link"><a               onclick="header_data(action_e, 'Contact Support');" href="//www.garmin.com/us/support/contact">Contact Support</a></li>
+                      </ul>
+                    </div><!-- eo .first -->            
+                  </div><!-- #menu-support -->
+                </li>
+              </ul>
+            </div><!--eo: #global-nav-primary-tier -->
+          </div><!-- end: #primary-nav-plus-search-bar -->
+        </div><!--eo: #header-primary-nav -->  
+      </div><!--eo: #global-header -->
+    </div><!-- eo: .container -->
+  </div><!--eo: #global-header-wrapper -->
+</div><!-- #nav-container -->
+
+
+<div class="container">
+	
+
+
+<!-- begin breadcrumb -->
+<div class="span-24 column ruleB last breadcrumb">
+<div class="left"><a href="/">Home</a> &raquo; <a href="../index.html">Garage</a> &raquo; <a href="index.html">Bundles</a> &raquo; <span id="breadCrumb"></span></div>
+	<div class="right"><div class="right column span-8 last">
+	<script type="text/javascript">
+	function ClearInput(value,id) {
+	               var input = document.getElementById(id);
+	               if(value == input.value) {
+	                       input.value = "";
+	               } else {
+	                       input.value = input.value;
+	               }
+	        }
+	</script>
+	<div id="sitesearch" class="right">
+		<form action="http://support.garmin.com/search/generalResults.faces" method="get" name="searchform" id="suggestion_form">
+			<input id="searchbox" autocomplete="off" value="search" maxlength="256" size="32" name="q" type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Search':this.value;"/>
+			<button class="btn1" onclick="submit()" alt="go" name="GO">Go</button>
+
+ 			<!-- hidden values for info to go to GSA -->
+    		<input value="garmin_fe" name="client" type="hidden"/>
+    		<input value="General" name="site" type="hidden"/>
+		</form>
+	</div>
+</div>
+
+</div>
+</div>
+<!-- end breadcrumb -->
+
+<!-- begin main body column -->
+	<div class="span-17 column market append-1 category">	
+      
+      <div class="clear">
+				<h1 id="bundleTitle"></h1>
+				<span id="descriptionArea"></span>
+        <br />
+        <br />
+        <br />
+			</div>
+      
+      <div class="span-17 column last" style="margin-bottom:15px; background-image:url(/vehicles/m/g/CommPluginBackgroundTop.jpg); background-repeat:no-repeat; background-color:#E5E5E5;">
+        <div class="column" style="width:303px; text-align:left; border-right:1px solid #E6E6E4; padding:15px;"><h3>Install the bundle directly to unit</h3>
+            <div id="error" class="ui-widget ui-helper-hidden" style="margin-bottom:20px;">
+                <div class="ui-state-error ui-corner-all ui-helper-clearfix" style="padding:5px;"> 
+                    
+                    <div style="float:left;"><span style="margin:0; padding:0;"><span class="ui-icon ui-icon-alert" style="float: left; margin-right:5px;"></span> 
+                    <strong>Error: </strong></span></div>
+                    <div style="float:left; width:210px; margin-left:5px;"><span id="errorText"></span></div>
+                </div>
+            </div>
+            
+            <div id="transferInstall" style="overflow:hidden;">
+				<a id="installButton" class="btn1" onclick="javascript:findDevices();">Install Bundle</a>
+				<!--<button id="installButton" onclick="javascript:findDevices();" class="fg-button ui-state-default ui-corner-all">Install Bundle</button>-->
+				</div>
+            <div id="transferFinding"></div>
+            <div id="progressBar"><p id="textLabel" style="margin:0; margin-top:5px; font-size:75%; position:absolute; left:30px; font-weight:bold;"></p></div>
+            <div id="transferSuccess"></div>
+            <div id="transferFailure"></div>
+            <!--<div id="transferSuccess" class="ui-state-highlight ui-corner-all" style="padding:10px; margin:0;"><strong>Installation Successful</strong></div>-->
+            
+            <!--<div id="transferFailure" class="ui-state-error ui-corner-all" style="padding:10px; margin:0;"><span class="ui-icon ui-icon-alert left"></span><strong>&nbsp;Installation Failed</strong></div>-->
+        </div>
+        <div class="column last" style="width:296px; text-align:right; padding:15px;"><h3>Download the vehicle to computer</h3>
+			<a id="downloadButton" class="btn1" onclick="javascript:downloadBundle();">Download Bundle</a>
+            <!--<button id="downloadButton" onclick="javascript:downloadBundle();" class="fg-button ui-state-default ui-corner-all">Download Bundle</button>-->
+        </div>
+        <div class="clear">&nbsp;</div>
+        <div class="span-17 column last" style="background-image:url(/vehicles/m/g/CommPluginBackgroundBottom.jpg); background-repeat:no-repeat; width:670px; height:20px;"></div>
+      </div>
+      
+      <div class="clear"></div>
+      <div id="status"></div>
+      
+      <div class="clear" id="tableArea">
+				
+		</div>
+       
+        
+			
+			
+  </div>
+<!-- end main body column -->
+
+<!-- begin side column -->
+	<div class="span-6 column last">
+	
+		<div class="cssbox">
+	<div class="cssbox_head">  
+		<p id="quicklinksHeadline">quicklinks</p>  
+	</div>  
+	<div class="cssbox_link">
+  	<!--<a href="/vehicles/parkinglot">The Parking Lot</a>-->
+    <a href="/vehicles/howtoinstall">How to Install Vehicles</a>
+    <a href="/vehicles/howtoinstall/voices.html">How to Install Voices</a>
+    <a href="/vehicles/bundles">Bundles</a>
+    <a href="/vehicles/bundles/allvehicles.html">Vehicles</a>
+    <a href="/vehicles/voices/">Voices</a>
+	<a href="/vehicles/dashboards/">Dashboards</a>
+	</div>  
+</div>
+		<div class="cssbox">  
+	<div class="cssbox_head">  
+		<p>vehicle compatible units</p>  
+	</div>
+  <div class="cssbox_link">
+  	<a href="https://buy.garmin.com/shop/shop.do?pID=30018">nüvifone G60</a>
+        <a href="https://buy.garmin.com/en-US/US/cOnTheTrail-cHandheld-bBRAND471-p1.html">Montana series</a>
+        <a href="https://buy.garmin.com/en-US/US/cOnTheRoad-p1.html">nüvi series</a>    
+		<a href="https://buy.garmin.com/en-US/US/cOnTheRoad-cMotorcycles-bBRAND468-p1.html">zumo series</a>
+        <a href="https://buy.garmin.com/en-US/US/cOnTheRoad-cTrucking-bBRAND469-p1.html">dezl series</a>
+		<a href="https://buy.garmin.com/shop/shop.do?pID=383&locale=en_US">StreetPilot&reg; c510</a>
+		<a href="https://buy.garmin.com/shop/shop.do?pID=384&locale=en_US">StreetPilot&reg; c530</a>
+		<a href="https://buy.garmin.com/shop/shop.do?pID=385&locale=en_US">StreetPilot&reg; c550</a>
+		<a href="https://buy.garmin.com/shop/shop.do?pID=8580&locale=en_US">StreetPilot&reg; c580</a>
+	</div>  
+</div>
+		<div class="cssbox">  
+			<div class="cssbox_head">  
+				<p><a href="http://garmin.blogs.com/my_weblog/garmin_garage/">Garmin Garage Feed</a></p>  
+			</div>  
+			<div class="cssbox_body" id="SideFeed">  
+				<p><script src="http://feeds.feedburner.com/GarminGarage?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/GarminGarage"></a><br/>Powered by FeedBurner</p> </noscript></p>  
+			</div>  
+		</div>
+	
+	</div>
+<!-- end side column -->
+
+<!-- begin footer column -->
+	<div class="span-24 column last footer">
+		Copyright &copy; 1996 &ndash; 2009 Garmin Ltd. or its subsidiaries | <a href="http://www.garmin.com/privacy/">Privacy Statement</a> | <a href="http://www.garmin.com/privacy/terms.html">Terms of Use</a> | <a href="http://www.garmin.com/vehicles/terms.html">Garmin Garage Terms of Agreement</a> | <a href="http://www.garmin.com/siteIndex.html">Site Map</a>
+	</div>
+  
+<script language="javascript"> AC_FL_RunContent = 0; </script>
+<script language="javascript"> DetectFlashVer = 0; </script>
+<script src="http://www.garmin.com/j/AC_RunActiveContent.js" language="javascript"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 9;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Revision of Flash required
+var requiredRevision = 115;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+  
+<!--<script type="text/javascript" src="/vehicles/j/prototype.js"></script>-->
+<script type="text/javascript" src="http://www8.garmin.com/j/communicator-api-1.5.1/prototype-1.6.0.2/prototype.js">&#160;</script>
+
+<!--
+<script type="text/javascript" src="/vehicles/j/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="/vehicles/j/lightwindow.js"></script>
+<script type="text/javascript" src="/vehicles/j/styles.js"></script>
+<link rel="stylesheet" href="/vehicles/c/lightwindow.css" type="text/css" media="screen" />
+-->
+
+<!-- end footer column -->
+
+</div>
+[an error occurred while processing this directive]
+</body>
+</html>

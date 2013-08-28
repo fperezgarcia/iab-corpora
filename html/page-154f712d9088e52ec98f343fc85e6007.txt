@@ -1,0 +1,1261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+		<title>011351: &#039;AUTO WHEEL COASTER&#039; ASH &amp; IRON CHILD&#039;S WAGON : Lot 11351</title>
+	<meta name="description" content="Lot:011351: &#039;AUTO WHEEL COASTER&#039; ASH &amp; IRON CHILD&#039;S WAGON, Lot Number:11351, Starting Bid:$150, Auctioneer:DuMouchelles, Auction:DuMouchelles January 16th Auction, Date:07:00 AM PT - Jan 16th, 2010" />
+    
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+        
+        <link type="text/css" rel="stylesheet" href="http://d1zcdlqocabcs9.cloudfront.net/live_styles/v1893845481/live_styles.css" />        <link rel="shortcut icon" href="http://www.liveauctioneers.com/live_design/images/favicon.png">
+                    <link rel="canonical" href="http://www.liveauctioneers.com/item/6943547" />
+                
+                            <script type="text/javascript" src="http://d1zcdlqocabcs9.cloudfront.net/scripts/v1893845481/m_bundle.js"></script>
+        <script type="text/javascript" src="http://snapabug.appspot.com/snapabug.js" async></script><script type="text/javascript" src="http://d1zcdlqocabcs9.cloudfront.net/scripts/v1893845481/i_bundle.js"></script>
+
+        
+        <script type="text/javascript">
+            DEFAULT_HOST = 'www.liveauctioneers.com';
+            DEFAULT_PROTOCOL = 'http';
+            DEFAULT_SSL_PROTOCOL = 'https';
+            RESOURCE_HOST = 'd1zcdlqocabcs9.cloudfront.net';
+            RESOURCE_PROTOCOL = 'http://';
+        </script>
+        
+        
+                
+                <link rel='stylesheet' href='http://d1zcdlqocabcs9.cloudfront.net/live_styles/v1893845481/lot-page-gallery.css'/>
+        <link rel='stylesheet' href='http://d1zcdlqocabcs9.cloudfront.net/live_styles/v1893845481/skin.css'/>
+                        <meta property="fb:app_id" content="143214215739939"/>
+        <meta property="og:image" content="http://p2.la-img.com/359/20347/6943547_1_m.jpg"/>
+
+    <script type='text/javascript'>
+		function submit_share_item_form(){
+			var x=document.forms['share_item_email']['message'].value;
+			if( x.length > 100 ){
+				  alert("Message cannot be greater than 100 characters");
+				  return false;
+			  }
+			toggle_email();
+			var share_email_data = $('#share_item_form').serialize();
+            $.post('../_o/ajax_handler/send_share_item_email.php', share_email_data, function(data){
+				$('#share_email_sent').html( data );
+				$('#share_email_sent').show('slow');
+			});
+		}
+		function hide_share_email_sent(){
+			$('#share_email_sent').hide('slow');
+		}
+        
+        var cur_div_other = 0;
+        var min_lot = '0';
+        var max_lot = '0';
+        function scroll_other_items( cat_id, house_id, cur_lot, scroll_dir ){
+            var prev_div = cur_div_other;
+            cur_div_other = Math.abs( cur_div_other-1 );
+            var min_max = scroll_dir == 'prev' ? min_lot : max_lot;
+            $.get( '/_o/ajax_handler/scroll_other_auction_items.php', {
+                cat_id : cat_id,
+                house_id: house_id,
+                cur_lot : cur_lot,
+                min_max : min_max,
+                direction : scroll_dir},
+                function(data){
+                    if( data == 'empty' )
+                        return false;
+                    $('#oic_'+cur_div_other).html( data );
+                    makePullLinks($('#oic_'+cur_div_other + ' a'));
+                    $('#oic_'+cur_div_other).css({left:(scroll_dir == 'next' ? 1 : -1) * 300 + 'px'});
+                    $('#oic_'+cur_div_other).show();
+                    $('#oic_'+cur_div_other).animate({left:'0px'});
+                    $('#oic_'+prev_div).css({left:'0px'});
+                    $('#oic_'+prev_div).animate({left:(scroll_dir == 'next' ? -1 : 1) * 300 + 'px'});
+            } );
+        }
+        
+        function submit_bid(){
+            if( verifystartbid('&#49;&#x35;&#48;') === false)
+                return false;
+            document.getElementById('bidform').submit();
+            return false;
+        }
+        
+        
+        function login_and_register() {
+            $.facebox(function(){
+                $.post('/nlogin/login', { 'register' : 1, 'catid' : 20347, 'lotid' : 6943547 }, 
+                    function(data) {
+                        $.facebox(data);
+                    });
+            });
+            return false;
+        }
+    
+	</script>
+    <script type="text/javascript">
+        
+    // <![CDATA[
+
+        jQuery(document).ready(function($) {
+                                if( location.search.indexOf('openlogin=1') > -1 ) {
+                                    $('#loginid').trigger('click');
+                            }
+                    
+            /*if ($('.placeholder').length > 0) {
+                                    $('.placeholder').css('color', '#009ddb');
+                            }*/
+
+            
+            $( "#frm_search input, #searchbox").autocomplete({
+                source : function(request, response) {
+					$.ajax({
+						url : "http://auto.liveauctioneers.com/ajax_scripts/suggest.php",
+                        dataType: "jsonp",
+                        data : {
+                            featureClass: "P",
+                            style: "full",
+                            maxRows: 12,
+                            term : request.term
+                        },
+						error: function(xhr,err ) {
+                            //console.log( xhr );
+                            //console.log(err);
+                        },
+                        success : function(data) {//TODO: after release of aliases fix auction links in response
+                            raw = data;
+                            //alert(data);
+                            //console.log(data);
+                            response(data.suggestions);
+                            makePullLinks($("ul.ui-autocomplete a"));
+                        }
+					});
+				},
+				minLength : 2,
+				select : function(event, ui) {
+					//console.log(ui.item ? "Selected: " + ui.item.label : "Nothing selected, input was " + this.value);
+				},
+				open : function() {
+					$(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+				},
+				close : function() {
+					$(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+				}
+				//,       appendTo:"#frm_search"
+			});
+			
+
+                        })
+    // ]]>
+    
+    
+    </script>
+            <script type="text/javascript">
+// <![CDATA[
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+	 '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-30920-1']);
+  _gaq.push(['_setDomainName', '.liveauctioneers.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+// ]]>
+</script>
+
+        </head>
+
+<body id="body_header" class="">
+<div id="overDiv" style="position:absolute;visibility:hidden;z-index:1000;"></div>
+<div class="header-shadow"></div>
+<!--WRAPPER-->
+<div class="wrapper">
+<div class="header-nav">
+  <div class="logo_container">
+      <a href="http://www.liveauctioneers.com/">
+          <img src="http://d1zcdlqocabcs9.cloudfront.net/live_design/images/bidder_logo.png" alt="Live Auctioneers online auctions" class="livebidder">
+          <img src="http://d1zcdlqocabcs9.cloudfront.net/live_design/images/trans.png" alt="Live Auctioneers online auctions" class="logo">
+      </a>
+  </div>
+  <div class="header-menu">
+    <ul class="nav" id="header-menu-nav">
+      <li>
+          <a href="http://www.liveauctioneers.com/">Home</a>
+      </li>
+      <li class="about menu">
+        <div id="about-dropd" class="nav-dropdown">
+          <ul>
+            <li><a href="http://www.liveauctioneers.com/about.html">About Us</a></li>
+            <li><a href="http://www.liveauctioneers.com/team.html">Team</a></li>
+            <li class="last"><a href="http://www.liveauctioneers.com/careers.html">Careers</a></li>
+          </ul>
+        </div>
+          <a href="javascript:void(0);" id="_about">About</a>
+      </li>
+      <li class="news menu">
+          <a href="javascript:void(0);">News</a>
+            <div id="news-dropd" class="nav-dropdown">
+              <ul>
+                <li><a href="http://auctioncentralnews.com/" rel="nofollow">Auction News</a></li>
+                <li class="last"><a href="http://www.liveauctioneers.com/pr/liveauctioneers_press.html">Company Press</a></li>
+              </ul>
+            </div>
+      </li>
+      <li class="help last menu">
+          <a href="javascript:void(0);">Help</a>
+            <div id="help-dropd" class="nav-dropdown">
+              <ul>
+                <li><a href="http://www.liveauctioneers.com/help/bidders/" class="faqs">FAQs</a></li>
+                                <li><a href="javascript:void(0);" onclick="return SnapEngage.startLink();">Live Help</a></li>
+                <li class="last"><a href="http://www.liveauctioneers.com/contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="fr cedemi cblue fs13">
+    
+        <a class="btn_click" rel="facebox" href="http://www.liveauctioneers.com/nlogin/login/?from=hp" onclick="_gaq.push(['_trackEvent', 'Navigation', 'button', 'Sign in - bidders']);"><div class="fl sprites header-nav-btn tc pointer opac-1">Sign In</div></a>
+                <a class="btn_click no_pull" href="http://www.liveauctioneers.com/sign-up"><div class="fl sprites header-nav-btn tc pointer opac-1 ml3">Create Account</div></a>
+
+                <script type="text/javascript">var latb_loggedin=false;</script>
+                  
+  </div>
+</div>
+
+<!--ACTION-->
+<div class="clear tc cedemi">
+  <a rel="nofollow" href="https://www.liveauctioneers.com/dashboard" onclick="_gaq.push(['_trackEvent', 'Navigation', 'tab', 'Sign in - bidders']);" class="a_decor">
+      <div id="bidder_tab" class="fl sprites action-btn cwhite pointer">
+        <div class="headertab">BIDDERS</div>
+        <div class="sprites action-btn-selected"></div>
+      </div></a>
+  <a rel="nofollow" href="http://www.liveauctioneers.com/auctioneers/" class="a_decor">
+    <div id="auctioneer_tab" class="fl sprites action-btn cwhite pointer prelative z9 ml-1">
+        <div class="headertab">
+            SELLERS
+        </div><div class="sprites action-btn-selected"></div>
+    </div></a>
+    <div class="fl sprites search-bg prelative z9 ml-1 tl">
+      <div class="prelative z99">
+    <form class="fl" id="frm_search" method="get" action="/search" onsubmit="return submitSearchForm('Top bar', this);">
+        <div class="prelative z9 tl">
+    <div class="fl sprites search-bar-left_blue" style="">
+        <div class="fr pointer sprites search-bar-right" onclick="$(this).parents('form').submit();"><div align="center" style="color:white; margin-top: 7px; font-size: 12px; font-weight: bold;">GO</div></div>
+        <input type="text" class="search cdgray ml15 jqtransformdone" id="search_top" name="q" value="" placeholder="Search for items"/>
+    </div>
+</div>    </form>
+    </div>
+    <div class="sprites action-btn-search-selected searchbar_tab"></div>
+  </div>
+    </div>
+<!--//ACTION-->
+
+</div>
+<!--//WRAPPER-->    
+<div class="clear"></div>
+<div id="body-content">
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" href="/styles/v1893845481/other_singleie6.css"  />
+<![endif]-->
+
+<script type="text/javascript"> 
+    //<![CDATA[
+        var hashBI = new Object();
+            ranges = new Array(0,40,100,400,900,2000,5000,10000,20000,50000);
+hashBI[0] = 5;
+hashBI[40] = 10;
+hashBI[100] = 25;
+hashBI[400] = 50;
+hashBI[900] = 100;
+hashBI[2000] = 250;
+hashBI[5000] = 500;
+hashBI[10000] = 1000;
+hashBI[20000] = 2500;
+hashBI[50000] = 5000;
+var bidstartprice = 150;
+var currency_symbol = '$';
+prevbids = new Array(0);
+
+
+    //]]>
+</script>
+
+<div class="clear"></div>
+<!--BODY SECTION-->
+<div class="body-content">
+<!--WRAPPER-->
+    <div class="wrapper">
+        <!--PATH OF CURRENT PAGE-->
+        <div>
+            <!--BREADCRUMB-->
+            <div class="fl clgray gothicbook breadcrumb">
+                <ul>
+                    <li><a href="http://www.liveauctioneers.com/">Home</a></li>
+                    <li><span class="pl10 pr10">&gt;</span></li>
+                    <li><a href="/dumouchelles" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Auctioneer title - breadcrumbs', 'Item page']);">DuMouchelles</a></li>
+                    <li><span class="pl10 pr10">&gt;</span></li>
+                    <li><a href="http://www.liveauctioneers.com/catalog/20347/page1" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Catalog title - breadcrumbs', 'Item page']);">DuMouchelles January 16th Auction</a></li>
+                    <li><span class="pl10 pr10">&gt;</span></li>
+                    <li><a href="#">Lot 11351</a></li>
+                </ul>
+            </div>
+            <!--//BREADCRUMB-->   
+        </div>
+        <!--PATH OF CURRENT PAGE-->
+        <div class="clear"></div>
+        <!--IF SELECTED LOT ITEM IS SOLD-->
+                    <div class="fs12 gothicbook">
+                <!--SOLD ITEM DETAILS BOX--> 
+                <div class="mt20 tc lotsold-box">
+                                                                                                        <p class="fs12 mt20 tc">
+                                    <span class="clink">
+                                        <a href="http://www.liveauctioneers.com/nlogin/login/6943547.html" rel="facebox, nofollow"><strong class="cgreen cedemi ">Sign In to see what this sold for</strong></a>
+                                    </span>
+                                </p>
+                                                                                            <div class="clear"></div>
+                                            <div id="nextauct" class="tc">
+                            <br />
+                            <div class="fs12">View DuMouchelles <a href="http://www.liveauctioneers.com/browse/seller/dumoart"><span class="cgreen">next auction.</span></a></div>
+                        </div>
+                                    </div>
+            <!--SOLD ITEM DETAILS BOX-->
+            </div>
+            <!--SIMILAR ITEMS OF SOLD TYPE-->
+            <div id="similarlivelots" id="singlot3" >
+                <h2 class="mt10 cedemi fs16 pt20 mb20">Similar Items</h2>
+                <div class="search-results" >
+                    <div id="gallery-items" class="gallery-itemsCC">
+                                                
+    
+    
+    
+    
+    
+    
+                
+    
+<script type="text/javascript">
+    var currsym = htmlEncode('$');
+</script>
+
+                                        
+<div class="auction_box online" >
+    <div class="box_image_holder">
+                <a href="/item/19561404_painted-wood-wagon-with-iron-wheels-14-l">
+            <img src="http://p1.la-img.com/378/44199/19561404_1_m.jpg" class="box_image" title="Painted Wood Wagon With Iron Wheels, 14&#039;&#039; L." alt="Lot 1238"/>
+        </a>
+            </div>
+    <div class="box_title">
+        <div class="box_truncate">
+            <a href="/item/19561404_painted-wood-wagon-with-iron-wheels-14-l" class="dark_text text_link" title="Painted Wood Wagon With Iron Wheels, 14&#039;&#039; L.">
+                1238: Painted Wood Wagon With Iron Wheels, 14'' L.
+            </a>
+        </div>
+                                <!--  -->
+        
+        
+                                <div class="item_box_descr" title="Painted wood wagon with iron wheels, 14'' l.">
+            Painted wood wagon with iron wheels, 14'' l.
+        </div>
+    </div>  <!-- //box_title -->
+        <div class="house_name">
+            <a href="/pook-and-pook-inc" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Auctioneer title', 'Similar items']);" class="dark_text text_link" title="Pook &amp; Pook, Inc.">                Pook & Pook, Inc.
+            </a>        </div>
+    <div class="box_detail">
+        <div class="box_detail_status">
+                            <div>07:00 PT</div>
+                <div>Sep 7</div>
+                                                         <!-- //remaining -->
+                   
+        </div>  <!-- //light_text_box box_detail -->
+                <div class="box_flag us-flag" title="">
+                    </div>
+        <div class="box_save_icon">
+                                <a href="http://www.liveauctioneers.com/nlogin/login/19561404?lot_status=online&lot_type=STANDARD" title="Click to save" rel="facebox, nofollow"><span class=""></span></a>
+                </div> <!-- //box_save_icon -->
+             </div>  <!-- //box_detail -->
+        <div class="itemFooterSold">
+                    <a href='http://www.liveauctioneers.com/item/19561404' onclick="_gaq.push(['_trackEvent', 'Bidding', 'Bid now', 'Similar items']);" class="btn_a">BID NOW</a>
+                         </div>  <!-- //itemFooterSold -->
+         <div class="bid-box-shadow clear"></div> 
+                                    
+    </div>  <!-- //*auction_box -->                                            
+    
+    
+    
+    
+    
+    
+                
+    
+<script type="text/javascript">
+    var currsym = htmlEncode('$');
+</script>
+
+                                        
+<div class="auction_box ml20 online" >
+    <div class="box_image_holder">
+                <a href="/item/19639538_2-kilgore-graham-autos">
+            <img src="http://p1.la-img.com/308/44301/19639538_1_m.jpg" class="box_image" title="2 Kilgore Graham Autos" alt="Lot 344"/>
+        </a>
+            </div>
+    <div class="box_title">
+        <div class="box_truncate">
+            <a href="/item/19639538_2-kilgore-graham-autos" class="dark_text text_link" title="2 Kilgore Graham Autos">
+                344: 2 Kilgore Graham Autos
+            </a>
+        </div>
+                                <!--  -->
+        
+        
+                                <div class="item_box_descr" title="painted cast iron, 4" long, Coupe & Sedan, C5-6.">
+            painted cast iron, 4" long, Coupe & Sedan, C5-6.
+        </div>
+    </div>  <!-- //box_title -->
+        <div class="house_name">
+            <a href="/lloyd-ralston-gallery" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Auctioneer title', 'Similar items']);" class="dark_text text_link" title="Lloyd Ralston Gallery">                Lloyd Ralston Gallery
+            </a>        </div>
+    <div class="box_detail">
+        <div class="box_detail_status">
+                            <div>07:00 PT</div>
+                <div>Sep 21</div>
+                                                         <!-- //remaining -->
+                   
+        </div>  <!-- //light_text_box box_detail -->
+                <div class="box_flag us-flag" title="">
+                    </div>
+        <div class="box_save_icon">
+                                <a href="http://www.liveauctioneers.com/nlogin/login/19639538?lot_status=online&lot_type=STANDARD" title="Click to save" rel="facebox, nofollow"><span class=""></span></a>
+                </div> <!-- //box_save_icon -->
+             </div>  <!-- //box_detail -->
+        <div class="itemFooterSold">
+                    <a href='http://www.liveauctioneers.com/item/19639538' onclick="_gaq.push(['_trackEvent', 'Bidding', 'Bid now', 'Similar items']);" class="btn_a">BID NOW</a>
+                         </div>  <!-- //itemFooterSold -->
+         <div class="bid-box-shadow clear"></div> 
+                                    
+    </div>  <!-- //*auction_box -->                                            
+    
+    
+    
+    
+    
+    
+                
+    
+<script type="text/javascript">
+    var currsym = htmlEncode('$');
+</script>
+
+                                        
+<div class="auction_box ml20 online" >
+    <div class="box_image_holder">
+                <a href="/item/19639420_3-corgi-autos">
+            <img src="http://p3.la-img.com/308/44301/19639420_1_m.jpg" class="box_image" title="3 Corgi Autos" alt="Lot 285"/>
+        </a>
+            </div>
+    <div class="box_title">
+        <div class="box_truncate">
+            <a href="/item/19639420_3-corgi-autos" class="dark_text text_link" title="3 Corgi Autos">
+                285: 3 Corgi Autos
+            </a>
+        </div>
+                                <!--  -->
+        
+        
+                                <div class="item_box_descr" title="341 Mini Marcos, 300 Corvette Stingray, 275 Rover 2000, all have Golden Jacks wheels, orig boxes minor wear, C9.">
+            341 Mini Marcos, 300 Corvette Stingray, 275 Rover 2000,...
+        </div>
+    </div>  <!-- //box_title -->
+        <div class="house_name">
+            <a href="/lloyd-ralston-gallery" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Auctioneer title', 'Similar items']);" class="dark_text text_link" title="Lloyd Ralston Gallery">                Lloyd Ralston Gallery
+            </a>        </div>
+    <div class="box_detail">
+        <div class="box_detail_status">
+                            <div>07:00 PT</div>
+                <div>Sep 21</div>
+                                                         <!-- //remaining -->
+                   
+        </div>  <!-- //light_text_box box_detail -->
+                <div class="box_flag us-flag" title="">
+                    </div>
+        <div class="box_save_icon">
+                                <a href="http://www.liveauctioneers.com/nlogin/login/19639420?lot_status=online&lot_type=STANDARD" title="Click to save" rel="facebox, nofollow"><span class=""></span></a>
+                </div> <!-- //box_save_icon -->
+             </div>  <!-- //box_detail -->
+        <div class="itemFooterSold">
+                    <a href='http://www.liveauctioneers.com/item/19639420' onclick="_gaq.push(['_trackEvent', 'Bidding', 'Bid now', 'Similar items']);" class="btn_a">BID NOW</a>
+                         </div>  <!-- //itemFooterSold -->
+         <div class="bid-box-shadow clear"></div> 
+                                    
+    </div>  <!-- //*auction_box -->                                            
+    
+    
+    
+    
+    
+    
+                
+    
+<script type="text/javascript">
+    var currsym = htmlEncode('$');
+</script>
+
+                                        
+<div class="auction_box ml20 online" >
+    <div class="box_image_holder">
+                <a href="/item/19639944_4-marklin-autos">
+            <img src="http://p2.la-img.com/308/44301/19639944_1_m.jpg" class="box_image" title="4 Marklin Autos" alt="Lot 547"/>
+        </a>
+            </div>
+    <div class="box_title">
+        <div class="box_truncate">
+            <a href="/item/19639944_4-marklin-autos" class="dark_text text_link" title="4 Marklin Autos">
+                547: 4 Marklin Autos
+            </a>
+        </div>
+                                <!--  -->
+        
+        
+                                <div class="item_box_descr" title="die cast, 1805 Volkswagen, 1811 NSU, 1800 Porsche, 1817 Mercedes Benz, 3 cars have melting wheel hubs, C6-7.">
+            die cast, 1805 Volkswagen, 1811 NSU, 1800 Porsche, 1817...
+        </div>
+    </div>  <!-- //box_title -->
+        <div class="house_name">
+            <a href="/lloyd-ralston-gallery" onclick="_gaq.push(['_trackEvent', 'Navigation', 'Auctioneer title', 'Similar items']);" class="dark_text text_link" title="Lloyd Ralston Gallery">                Lloyd Ralston Gallery
+            </a>        </div>
+    <div class="box_detail">
+        <div class="box_detail_status">
+                            <div>07:00 PT</div>
+                <div>Sep 21</div>
+                                                         <!-- //remaining -->
+                   
+        </div>  <!-- //light_text_box box_detail -->
+                <div class="box_flag us-flag" title="">
+                    </div>
+        <div class="box_save_icon">
+                                <a href="http://www.liveauctioneers.com/nlogin/login/19639944?lot_status=online&lot_type=STANDARD" title="Click to save" rel="facebox, nofollow"><span class=""></span></a>
+                </div> <!-- //box_save_icon -->
+             </div>  <!-- //box_detail -->
+        <div class="itemFooterSold">
+                    <a href='http://www.liveauctioneers.com/item/19639944' onclick="_gaq.push(['_trackEvent', 'Bidding', 'Bid now', 'Similar items']);" class="btn_a">BID NOW</a>
+                         </div>  <!-- //itemFooterSold -->
+         <div class="bid-box-shadow clear"></div> 
+                                    
+    </div>  <!-- //*auction_box -->                                    
+                    </div>
+                </div>
+            </div>
+            <!--SIMILAR ITEMS OF SOLD TYPE-->
+                <!--IF SELECTED LOT ITEM IS SOLD-->
+        <div class="clear"></div>
+            <!--LEFT CONTENT-->
+            <div class="lot-left-content fs12 gothicbook">
+                <div class="pt40">
+                                        <h5 class="clgray gothicbook">Lot 11351</h5>
+                    <p class="cdgray cedemi fs18 pt10">011351: 'AUTO WHEEL COASTER' ASH & IRON CHILD'S WAGON</p>
+                    <p class="fs14 mt7">
+                    	<a href="http://www.liveauctioneers.com/catalog/20347/page1" class="cgreen">View Catalog</a>
+                    </p>
+                </div>
+
+                <div class="clear"></div>
+
+                <!--GALLERY-->
+                <div id="container">
+                    <div class="mainframe">
+                        <div id="largephoto" align="center">
+                            <div id="loader"></div>
+                            <div id="largetrans" align="center"></div>   
+                        </div>
+                    </div>
+
+                    <!--THUMBNAILS--> 
+                    <div class="thumbnails">
+                        <!--PRODUCT-->
+                                                    <div class="thumbnailimage" align="center">
+                                <div class="thumb_container_sold"> 
+                                    <div class="large_thumb" id="large_thumb_0"> 
+                                        <img src="http://p2.la-img.com/359/20347/6943547_1_l.jpg" class="large_thumb_image masterTooltip thumb_img" alt="img0" title="011351: &#039;AUTO WHEEL COASTER&#039; ASH &amp; IRON CHILD&#039;S WAGON"/> 
+                                                                                                                        <img src="http://p2.la-img.com/359/20347/6943547_1_l.jpg" class="large_image thumb_img nox" alt="1" />
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="thumbnailimage" align="center">
+                                <div class="thumb_container_sold"> 
+                                    <div class="large_thumb" id="large_thumb_1"> 
+                                        <img src="http://p2.la-img.com/359/20347/6943547_2_c.jpg" class="large_thumb_image masterTooltip thumb_img" alt="img1" title="011351: &#039;AUTO WHEEL COASTER&#039; ASH &amp; IRON CHILD&#039;S WAGON"/> 
+                                                                                                                        <img src="http://p1.la-img.com/359/20347/6943547_2_l.jpg" class="large_image thumb_img nox" alt="2" />
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="thumbnailimage" align="center">
+                                <div class="thumb_container_sold"> 
+                                    <div class="large_thumb" id="large_thumb_2"> 
+                                        <img src="http://p1.la-img.com/359/20347/6943547_3_c.jpg" class="large_thumb_image masterTooltip thumb_img" alt="img2" title="011351: &#039;AUTO WHEEL COASTER&#039; ASH &amp; IRON CHILD&#039;S WAGON"/> 
+                                                                                                                        <img src="http://p2.la-img.com/359/20347/6943547_3_l.jpg" class="large_image thumb_img nox" alt="3" />
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                                                <!--//PRODUCT-->          
+                    </div>
+                    <!--//THUMBNAILS-->
+
+                    <!--POPUP BUTTONS-->
+                    <div class="prelative">
+                        <div id="prevnext" class="large-overlay" style="display:none;" align="center">
+                            <div id="prev" class="sprites prev-arrow pointer" style="display:none;"></div>
+                            <div id="next" class="sprites next-arrow pointer ml10" style="display:none;"></div>
+                            <div id="nav_page" class="fl cdgray tc lh30 fs14 w815" align="center"></div>
+                            <div id="close-btn" class="fr sprites close-icon pointer"></div>
+                            <div class="clear"></div>
+                            <div id="large" class="mt10"></div>
+                        </div>
+                    </div>
+                    <!--POPUP BUTTONS-->
+                    <div id="background"></div>
+                    <div class="clear"></div>  
+                </div>
+                <!--GALLERY-->
+                <div class="clear"></div>
+
+                <div class="mt10">
+                    <!--SOCIALS-->
+                    <div class="fl" id="toolbox">
+                        <a class="addthis_button_facebook fl sprites fb pointer" title="Facebook" href="#"><span><span class="at_a11y">Share on facebook</span></span></a>
+                        <a class="addthis_button_twitter fl sprites twit ml5 pointer" title="Tweet" href="#"><span><span class="at_a11y">Share on Twitter</span></span></a>
+                        <a class="addthis_button_pinterest_share fl sprites pinterest ml5 pointer" title="Pinterest" href="#"><span class="at_a11y">Share on Pinterest</span></a>
+                        <a class="addthis_button_email fl sprites mail ml5 pointer" title="Email" href="#"><span><span class="at_a11y">Share on Email</span></span></a>
+                        <a class="addthis_button_compact fl sprites dd ml5 pointer" href="#"><span><span class="at_a11y">More Sharing Services</span></span></a>
+                    </div> 
+                    <!--//SOCIALS--> 
+
+                    <!--ZOOM ICON-->
+                    <div class="fl sprites zoom-icon ml285 pointer" id="zoomImg"></div>
+                    <!--ZOOM ICON-->
+                </div>
+
+                <div class="clear"></div>
+                <!--DESCRIPTION & CONDITION-->
+                <div class="mt20 gothicbook fs12 lh15 clgray">
+                    <h3 class="cedemi cdgray">Description</h3>
+                    <p class="item_full_desc">'AUTO WHEEL COASTER' ASH & IRON CHILD'S WAGON, C. 1900, L 41" (NOT INCLUDING HANDLE):Original stenciling, with hand brake and eight-spoke wheels. From the collection of June J. Morsord, Flat Rock, Mi.</p>
+                                    </div>
+                <!--DESCRIPTION & CONDITION-->
+
+                <div class="clear"></div>
+                                    <div class="clear"></div>
+                                <div class="clear"></div>  
+            </div>
+        <!--//LEFT CONTENT-->
+
+        <!--RIGHT CONTENT-->
+        <div class="lot-right-content mb40">
+            <!--TRANSLATE HIDDEN CONTENT-->
+            <div style="display:none;" id="g2">
+                <table class="trans_content">
+                    <tr>
+                        <td class="normal_txt">
+                            LiveAuctioneers LLC does not warrant such translations and disclaims any responsibility, including all alleged 
+                            direct and consequential damages, for inaccurate translations. Readers relying on precise information should 
+                            check the original versions.
+                        </td>
+                    </tr>
+                    <tr><td style="background-color:#F5F5F5;"><div id="google_translate_element"></div></td></tr>
+                </table>
+            </div>
+            <!--TRANSLATE HIDDEN CONTENT-->
+            <div class="icons-outer">
+                <!--TRANSLATE-->
+                <div class="icons-holder">
+                    <a rel='nofollow' onclick="showtrans();" href="javascript:void(0);">
+                        <div class="sprites translate" align="center">
+                            <div class="icon_titles" style="left:-30px;">Translate</div>
+                        </div>
+                    </a>
+                </div>
+                <!--//TRANSLATE-->
+
+                <!--BID ALERT-->
+                                <!--//BID ALERT-->
+                <!--SAVE ITEM-->
+                                    <div class="icons-holder">
+                        <a href="http://www.liveauctioneers.com/nlogin/login/6943547" rel="facebox, nofollow">
+                            <div class="sprites saveitem" align="center">
+                                <div class="icon_titles">Save Item</div>
+                            </div>
+                        </a>
+                                </div>
+                <!--//SAVE ITEM-->
+
+                             </div>
+
+            <div class="clear"></div>
+
+            <div class="mt40 fl">
+            <!--RIGHT CONTENT FIRST BOX-->
+            <div class="prelative lot-dgray-bg">
+                <!--DETAILS OF SOLD ITEM-->
+                                                                                        <p class="fs12 mt20 tc clink">
+                                <span><a href="http://www.liveauctioneers.com/nlogin/login/6943547.html" rel="facebox, nofollow"><strong class="cgreen cedemi ">Sign In to see what this sold for</strong></a></span>
+                            </p>
+                                                                            <!--DETAILS OF SOLD ITEM-->
+
+                <!--DETAILS  UNSOLD ITEM-->
+                                <div class="clear"></div>
+                <!--DETAILS  UNSOLD ITEM-->  
+
+                <!--BID HISTORY & OTHER DETAILS-->
+                <div class="pt15 fs12 gothicbook lh15">
+                                
+                                <div class="clear"></div>
+                                    <div>
+                        <!-- MY BIDS -->
+                                                <div class="clear"></div>
+                        <!-- //MY BIDS -->
+                        <!-- OTHER BIDS -->
+                                                <div class="clear"></div>
+                                                <p class="pt15 clink">
+                            <a rel="facebox, nofollow" href="http://www.liveauctioneers.com/binc/20347" class="cgreen" >View Bid Increments & Buyer's Premium</a>
+                        </p>
+                                                <!-- //OTHER BIDS -->
+                        <!-- ESTIMATE & STARTING BID-->
+                                                    <table border="0" cellpadding="0" cellspacing="0" class="fs12 gothicbook clgray mt15">
+                                <tr>
+                                    <td class="cedemi cdgray">Estimate</td>
+                                    <td class="pl10">$&#x33;&#x30;&#x30; - $&#53;&#48;&#48;</td>
+                                </tr>
+                                <tr>
+                                    <td class="cedemi cdgray">Starting Bid</td>
+                                    <td class="pl10">$&#49;&#x35;&#48;</td>
+                                </tr>
+                            </table>
+                                                <!-- ESTIMATE & STARTING BID-->
+                        <!-- SIMILAR ITEMS LINK-->
+                        <p class="pt15 clink">
+                            <a href="http://www.liveauctioneers.com/search?q=auto+OR+wheel+OR+coaster+OR+iron" rel="nofollow" class="cgreen">Similar Items</a>
+                        </p>
+                        <p class="pt15 clink">
+                            <a href="http://www.liveauctioneers.com/search?q=auto+OR+wheel+OR+coaster+OR+iron&fq=auction_house%3A%28%22DuMouchelles%22%29" rel="nofollow" class="cgreen">Similar Items by this auctioneer</a>
+                        </p>
+                        <!-- SIMILAR ITEMS LINK-->
+                        <script type="text/javascript">
+                        var addthis_config = {"data_track_clickback":true};
+                        var script = 'http://s7.addthis.com/js/250/addthis_widget.js#username=liveauctioneers';
+                        $.getScript(script);
+                        </script>
+                                            </div>
+                </div>
+                <!--//BID HISTORY & OTHER DETAILS-->
+                <div class="bid-box-shadow clear"></div>
+                <div class="clear"></div> 
+            </div>
+            <!--RIGHT CONTENT FIRST BOX-->
+            <div class="clear"></div>
+            <!--RIGHT CONTENT SECOND BOX-->
+            <div class="prelative lot-dgray-bg mt25">
+                <div class="gothicbook clgray fs12">
+                    <!--FLAG-->
+                                                                        <div class="fl" id="flag_icon">
+                                <img src="http://d1zcdlqocabcs9.cloudfront.net/static/images/flags/US.png" alt="Us Auction" title="" />
+                            </div>
+                                                                <!--FLAG-->
+
+                    <!--DATE & TIME-->
+                    <div class="sale_time_date" id="stdate" align="center">Jan 16, 2010</div>
+                                            <div class="fr cedemi cgreen mt5" id='sale_status'>Ended</div>
+                                        <script>
+                        var flag_width = $('#flag_icon').outerWidth(true)>0 ? $('#flag_icon').outerWidth(true) : 24 ;
+                        var stat_width = $('#sale_status').outerWidth(true);
+                        var date_width = 266-flag_width-stat_width;
+                        $('#stdate').css( 'width', date_width+'px' );
+                    </script>
+                    
+                                                        </div>
+                <div class="bid-box-shadow clear"></div>
+                <div class="clear"></div> 
+            </div>
+            <!--RIGHT CONTENT SECOND BOX-->
+            <!--OTHER ITEMS IN THIS AUCTION-->
+                        <!--OTHER ITEM IN THIS AUCTION-->
+            <div class="clear"></div>
+            <!--AUCTION HOUSE DETAILS-->     
+            
+<!--Auctione house details are displayed-->
+<div class="prelative lot-dgray-bg mt25">
+          <h5 style="margin-bottom:10px;" class="cedemi cdgray">Auctioneer</h5>
+          <!--AUCTION HOUSE IMAGE-->
+                    <div align="center"><div class="auct_house_img_cont">
+                <img src="http://d3sbm51utxzt5m.cloudfront.net/houses/logos/hm/dumoart_hm.jpg" class="auction_house_img" alt="DuMouchelles" />
+            </div></div>
+	        
+        <!--AUCTION HOUSE CONTACT INFORMATION-->
+        <div class="contact_auct-itempage">
+          	<p class="heavy_reg_header">Contact</p>
+            <div class="normal_txt">409 East Jefferson Ave<br/>Detroit, MI 48226<br />United States<br /><br />
+                                  <span id="auctphonenum"></span>
+            <script type="text/javascript">
+                //formatNum('(313)963-6255', 'us', 'auctphonenum');
+            </script>
+            </div>
+            
+                        
+         </div> 
+        <!--AUCTION HOUSE CONTACT INFORMATION-->
+                  <br />
+         <!--ASK QUESTION-->
+                         <a href="http://www.liveauctioneers.com/nlogin/login/6943547.html" onclick='simpleSetCookie("email","email",1);' rel="facebox, nofollow" class="btn_a">
+                                            <div class="cedemi gree-btn pointer mt20 fs12">ASK SELLER A QUESTION</div>
+                                    
+                </a>
+                         
+        <!--ASK QUESTION-->
+                    <div class="bid-box-shadow clear"></div>
+      </div>
+<!--AUCTION HOUSE DETAILS-->            <!--AUCTION HOUSE DETAILS--> 
+            <div class="clear"></div>
+                        <!--OTHER AUTIONS FROM THIS AUCTION HOUSE-->
+            <div class="prelative lot-white-bg mt25">
+                <h5 class="cedemi cdgray">Other auctions from this auctioneer</h5>
+                <div class="clear"></div> 
+                    <div class="mt15">
+                    <!--AUCTION HOUSE IMAGES--> 	
+                                                                 
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943222">
+                                    <img class="other_lot_imag" id="1" src="http://p2.la-img.com/359/20347/6943222_1_t.jpg" alt="Auction 0" title="011015: JAPANESE SATSUMA VASE BY KOZAN TSUKURU, KYOTO, " />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943388">
+                                    <img class="other_lot_imag" id="2" src="http://p2.la-img.com/359/20347/6943388_1_t.jpg" alt="Auction 1" title="011191: CHINESE CIZHOU POTTERY LOTUS FORM PILLOW, H 8&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943219">
+                                    <img class="other_lot_imag" id="3" src="http://p2.la-img.com/359/20347/6943219_1_t.jpg" alt="Auction 2" title="011012: JAPANESE SATSUMA VASE BY KINKOZAN, 19TH C., " />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold mr-5 other_auction_item" align="center">
+                                                                <a href="/item/6943218">
+                                    <img class="other_lot_imag" id="4" src="http://p2.la-img.com/359/20347/6943218_1_t.jpg" alt="Auction 3" title="011011: JAPANESE SATSUMA VASE BY KINKOZAN C. 1880 H 15&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943226">
+                                    <img class="other_lot_imag" id="5" src="http://p2.la-img.com/359/20347/6943226_1_t.jpg" alt="Auction 4" title="011019: JAPANESE SATSUMA CONDIMENT SET BY MEIZAN, H 5&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943216">
+                                    <img class="other_lot_imag" id="6" src="http://p2.la-img.com/359/20347/6943216_1_t.jpg" alt="Auction 5" title="011009: JAPANESE SATSUMA VASE SIGNED BY KOZAN C.1915-20" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943217">
+                                    <img class="other_lot_imag" id="7" src="http://p2.la-img.com/359/20347/6943217_1_t.jpg" alt="Auction 6" title="011010: JAPANESE SATSUMA VASES, PAIR, C. 1900, H 15&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold mr-5 other_auction_item" align="center">
+                                                                <a href="/item/6943317">
+                                    <img class="other_lot_imag" id="8" src="http://p2.la-img.com/359/20347/6943317_1_t.jpg" alt="Auction 7" title="011116: 6.3CT NATURAL EMERALD &amp; 3.55CT DIAMOND BRACELET" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943353">
+                                    <img class="other_lot_imag" id="9" src="http://p2.la-img.com/359/20347/6943353_1_t.jpg" alt="Auction 8" title="011152: PERSIAN SULTANABAD CARPET, 19&#039; 0&quot; X 13&#039; 0&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943215">
+                                    <img class="other_lot_imag" id="10" src="http://p2.la-img.com/359/20347/6943215_1_t.jpg" alt="Auction 9" title="011008: JAPANESE SATSUMA VASES, PAIR, C. 1860-70, H 14&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943220">
+                                    <img class="other_lot_imag" id="11" src="http://p2.la-img.com/359/20347/6943220_1_t.jpg" alt="Auction 10" title="011013: JAPANESE SATSUMA PLANTER ATTRIBUTED TO HODOTA" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold mr-5 other_auction_item" align="center">
+                                                                <a href="/item/6943316">
+                                    <img class="other_lot_imag" id="12" src="http://p2.la-img.com/359/20347/6943316_1_t.jpg" alt="Auction 11" title="011115: 16.50CT NATURAL CITRINE &amp; DIAMOND MAN&#039;S RING" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943365">
+                                    <img class="other_lot_imag" id="13" src="http://p2.la-img.com/359/20347/6943365_1_t.jpg" alt="Auction 12" title="011164: 2.00CT EMERALD &amp; 1.65CT DIAMOND BRACELET, L 7&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943221">
+                                    <img class="other_lot_imag" id="14" src="http://p2.la-img.com/359/20347/6943221_1_t.jpg" alt="Auction 13" title="011014: JAPANESE SATSUMA VASE BY KINKOZAN, H 9 3/4&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold other_auction_item" align="center">
+                                                                <a href="/item/6943258">
+                                    <img class="other_lot_imag" id="15" src="http://p2.la-img.com/359/20347/6943258_1_t.jpg" alt="Auction 14" title="011051: JAPANESE SATSUMA TEA CADDY BY RYOZAN, H 6 1/4&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                                                                                        <div class="other_lot_items_sold mr-5 other_auction_item" align="center">
+                                                                <a href="/item/6943208">
+                                    <img class="other_lot_imag" id="16" src="http://p2.la-img.com/359/20347/6943208_1_t.jpg" alt="Auction 15" title="011001: MING WUCAI PORCELAIN VASES, PAIR, H 9 3/4&quot;" />
+                                </a>
+                                </div>
+                             
+                          
+                                             
+                                                     
+                          
+                                             
+                                                     
+                          
+                                             
+                                                     
+                          
+                                             
+                                                     
+                          
+                                        <!--AUCTION HOUSE IMAGES-->     
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!--OTHER AUTION FROM THIS AUCTION HOUSE-->
+            </div>
+                        <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--//WRAPPER-->
+    <div class="clear"></div>  
+</div>
+<!--BODY SECTION-->
+<div class="clear"></div> 
+<table>
+</table>
+
+<script type="text/javascript">
+    function imgCenter(){
+        var img = document.getElementById('item-image'); 
+        //or however you get a handle to the IMG
+        var width = img.clientWidth;
+        var height = img.clientHeight;
+        img.style.width="460px";
+        img.style.height=height+"px"; 
+        img.src=img.src;
+    }
+
+    var showingtrans=false;
+    function showtrans(){
+        var trans=document.getElementById('g2');
+        if(showingtrans){
+            showingtrans=false;
+            $(trans).hide('slow'); //.style.display='none';
+        }else{
+            $(trans).show('slow');//.style.display='block';
+            showingtrans=true;
+            window.scrollTo(0,0);
+        }
+    }
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en'
+        }, 'google_translate_element');
+        window.scrollTo(0,0);
+    }
+
+    var show_email_box = 0;
+    function toggle_email() {      
+        if( show_email_box == 0 ) {
+            $('#email-form').show('slow');
+            show_email_box = 1;
+        } else {
+            $('#email-form').hide('slow');
+            show_email_box = 0;
+        }                             
+    }
+
+    function changeimg(nxtPrev){
+        if(nxtPrev == "prev"){
+            document.getElementById("prv_img").src="/static/images/new_images/lot_left_bold.png";
+        }else{
+            document.getElementById("nxt_img").src="/static/images/new_images/lot_right_bold.png";
+        }
+    }
+
+    function bknorImg(nxtPrev){
+        if(nxtPrev == "prev"){
+            document.getElementById("prv_img").src="/static/images/new_images/lot_left_normal.png";
+        }else{
+            document.getElementById("nxt_img").src="/static/images/new_images/lot_right_normal.png";
+        }
+    }
+
+    var fst_selct="img0";
+    function loadImg(img_anch){
+        document.getElementById(fst_selct).className="unselected_img";
+        document.getElementById(img_anch.id).className="selected_img";
+        fst_selct=img_anch.id;
+        document.getElementById('img_anchor').innerHTML="<img id='item-image' style='max-width:460px;min-width:460px;' src='"+document.getElementById(img_anch.id).src.replace(/_c./g,"_l.")+"' />";
+        imgCenter();
+    }
+
+</script>
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+	$.get( '/statistics/s/ajax_add_statistic.php', {cat_id : 20347,lot_id: 6943547, referer: ''});
+</script>
+</div>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<div class="clear"></div>
+<!--NEWS-->
+<div class="search-news-holder">
+	<!--WRAPPER-->
+  <div class="wrapper">
+    
+    <!--ACTION-->
+    <div class="tc cedemi">
+      <a rel="nofollow" href="http://www.liveauctioneers.com/login/" class="a_decor">
+            <div class="fl sprites action-btn cwhite pointer" id="bidder_tab">
+                <div class="headertab fs16">
+                    BIDDERS
+                </div>
+                <div class="sprites search-action-btn-selected"></div>
+            </div></a>
+      <a rel="nofollow" href="http://www.liveauctioneers.com/auctioneers/" class="a_decor">
+          <div class="fl sprites action-btn cwhite pointer prelative z9 ml-1" id="auctioneer_tab"><div class="headertab fs16">
+              SELLERS
+              </div>
+              
+                <div class="sprites search-action-btn-selected"></div>
+          </div>
+      </a>
+      <div class="fl sprites search-bg prelative z9 ml-1 tl">
+        <div class="prelative z9 ml-1">
+        <form class="fl" id="frm_search" method="get" action="/search" onsubmit="return submitSearchForm('Bottom bar', this);">
+        
+        <div class="prelative z9 tl">
+    <div class="fl sprites search-bar-left_blue" style="">
+        <div class="fr pointer sprites search-bar-right" onclick="$(this).parents('form').submit();"><div align="center" style="color:white; margin-top: 7px; font-size: 12px; font-weight: bold;">GO</div></div>
+        <input type="text" class="search cdgray ml15 jqtransformdone" id="search_bottom" name="q" value="" placeholder="Search for items"/>
+    </div>
+</div>        </form>
+        </div>
+        <div class="sprites search-footer-btn-selected dis_none searchbar_tab"></div>
+      </div>
+    </div>
+    <!--//ACTION-->
+    
+    <!--Footer links-->
+    <div class="footer_block">
+    	<!--ABOUT/CONTACT-->
+    	<div class="fl clgrayftr w220 lh17">
+      	<h6 class="cedemi fs15">Bid in an Auction!</h6>
+        <p class="gothicbook fs12 pt10">Leave a bid or bid LIVE online in art, antique, jewelry and collectibles auctions across the globe.</p>
+        <div class="clear"></div>
+        <h6 class="cedemi mt20 fs15">Contact</h6>
+        <div class="gothicbook fs12 pt10">
+          <p>LiveAuctioneers</p>
+          <p>220 12th Avenue</p>
+          <p>New York, NY 10001</p>
+          <p><a href="mailto:info@liveauctioneers.com" class="a_decor clgrayftr">info@liveauctioneers.com</a></p>
+        </div>
+        <div class="clear"></div>
+        <div class="fs12 pt10"><a href="http://www.liveauctioneers.com/suggestion">Suggestions</a></div>
+      </div>
+      <!--//ABOUT/CONTACT-->
+      
+      <!--FOR BIDDERS LINKS-->
+      <div class="fl clgrayftr ml20 gothicbook w220 lh17">
+      	<h6 class="cedemi fs15">For Bidders</h6>
+        <ul class="bottom-links fs12">
+            <li><a href="http://www.liveauctioneers.com/search?q=&org=yes">Search Live Items</a></li>
+            <li><a href="http://www.liveauctioneers.com/search_auctioneers.html">Search Auctioneers</a></li>
+            <li><a href="http://www.liveauctioneers.com/all-auctions">All Auctions</a></li>
+            <li><a href="http://www.liveauctioneers.com/browse/archive/page1">Past Auctions</a></li>
+            <li><a href="http://www.liveauctioneers.com/video">Auctions with Video</a></li>
+            <li><a href="http://www.liveauctioneers.com/auction_results.html">Auction Results Database</a></li>
+            <li><a href="http://www.liveauctioneers.com/bidder_features.html">Bidder Features</a></li>
+            <li><a href="http://www.liveauctioneers.com/terminology.html">Auction Terminology</a></li>
+            <li><a href="http://www.liveauctioneers.com/how_it_works.html">How It Works</a></li>
+        </ul>
+        <h5 class="clink pt10"><a href="http://www.liveauctioneers.com/sign-up" class="bigboldlink">Become a Live Bidder</a></h5>
+      </div>
+      <!--//FOR BIDDERS LINKS-->
+      
+      <!--FOR ACUTIONEERS LINKS-->
+      <div class="fl clgrayftr ml20 gothicbook w220 lh17">
+      	<h6 class="cedemi fs15">For Sellers</h6>
+        <ul class="bottom-links fs12">
+            <li><a href="http://www.liveauctioneers.com/features.html">Services & Features</a></li>
+            <li><a href="http://www.liveauctioneers.com/prservices.html">PR Services</a></li>
+            <li><a href="http://www.liveauctioneers.com/testimonials.html">Seller Testimonials</a></li>
+            <li><a href="http://www.liveauctioneers.com/video">Auctions with Video</a></li>
+            <li><a href="http://www.liveauctioneers.com/charity/index.html">Charity Auctions</a></li>
+            <!-- li><a href="http://www.liveauctioneers.com/how_it_works_auctioneer.php">How It Works</a></li -->
+            <li><a rel="nofollow" class="pull_link" href="http://www.liveauctioneers.com/LIVE2012">2012 In Review</a></li>
+            <li><a rel="nofollow" href="http://www.liveauctioneers.com/auctioneers/">Seller Sign-In</a></li>
+        </ul>
+        <h5 class="clink pt10"><a href="http://www.liveauctioneers.com/becomealiveauctioneer" class="bigboldlink">Become a Live Seller</a></h5>
+      </div>
+      <!--//FOR ACUTIONEERS LINKS-->
+      
+      <!--FOR CONSIGNER LINKS-->
+      <div class="fl clgrayftr ml20 gothicbook w220 lh17">
+      	<h6 class="cedemi fs15">For Consignors</h6>
+        <ul class="bottom-links fs12">
+          <li><a href="http://www.liveauctioneers.com/top20-visit-live-at-auction">Top 20 Visited Live Items</a></li>
+          <li><a href="http://www.liveauctioneers.com/top20-sold-today-at-auction">Top 20 Highest Price Items Sold</a></li>
+        </ul>
+        <h5 class="clink pt10"><a href="http://www.liveauctioneers.com/consignments/" class="bigboldlink">Become a Consignor</a></h5>
+      </div>
+      <!--//FOR CONSIGNER LINKS--> 
+    </div>
+    <!--Footer links-->
+    
+  <div class="clear"></div>
+  </div>
+	<!--//WRAPPER-->
+</div>
+<!--//NEWS-->
+
+
+<!--BID ITEMS-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $.ajax({
+        url:"/ajax_scripts/footerhotitems.php",
+        success:function(data){
+            $(".bid-items-container .wrapper").html(data);
+        }
+    });
+});
+</script>
+
+<div class="bid-items-container">
+	<!--WRAPPER-->
+	<div class="wrapper pt20">
+	      </div>
+  <!--//WRAPPER-->
+</div>
+
+<!--//BID ITEMS-->
+<!--SITEMAP-->
+<div class="footer-container">
+	<!--WRAPPER-->
+	<div class="wrapper">
+  	<div class="logo-footer"></div>
+    <div class="footer_copyright">Copyright &copy; 2002&ndash;2013 LiveAuctioneers. All Rights Reserved.</div>
+    <div class="fr footer cedemi fs15">
+    	<ul class="mt25">
+      	<li><a href="http://www.liveauctioneers.com/mobile">Mobile</a></li>
+        <li class="ml15"><a href="https://www.facebook.com/LiveAuctioneers" onclick="_gaq.push(['_trackEvent', 'Social media', 'Contact', 'Facebook']);" target="_blank">Facebook</a></li>
+        <li class="ml15"><a href="https://twitter.com/liveauctioneers" onclick="_gaq.push(['_trackEvent', 'Social media', 'Contact', 'Twitter']);" target="_blank">Twitter</a></li>
+        <li class="ml15"><a href="http://www.liveauctioneers.com/newsletter.html">Newsletter</a></li>
+        <li class="ml15"><a href="http://www.liveauctioneers.com/sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div style="margin-left: 100px;">
+        <ul class="nav mt20 ml250">
+          <li class="lowest-footer-item pr15"><a href="http://www.liveauctioneers.com/termsandconditions.html" target="_blank">Terms &amp; Conditions</a></li>
+          <li class="lowest-footer-item pr15"><a href="http://www.liveauctioneers.com/intellectualproperty.html" target="_blank">Intellectual Property</a></li>
+          <li class="lowest-footer-item last"><a href="http://www.liveauctioneers.com/privacy.html" target="_blank">Privacy Policy</a></li>
+        </ul>
+    </div>
+  </div>
+	  <!--//WRAPPER-->
+</div>
+<!--//SITEMAP-->
+<!-- begin SnapEngage code -->
+<script type="text/javascript">
+    (function() {
+    var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+    se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/333752fd-6349-4e52-91e0-0d6d55fb71a9.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+    })();
+</script>
+<!-- end SnapEngage code -->
+
+<!-- Google Code for Remarketing tag -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+    var google_conversion_id = 1069283117;
+    var google_conversion_label = "5Hd8CP-tpwUQre7v_QM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+/* ]]> */
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1069283117/?value=0&amp;label=5Hd8CP-tpwUQre7v_QM&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+</html>
+

@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NAPA Roadside Assistance</title>
+        
+        <!-- Meta info -->
+        
+        <!-- Include Stylesheets -->
+        
+            <link rel="stylesheet" type="text/css" href="themes/default/css/NAPA.css" media="screen"/>
+            
+<style type="text/css">
+    
+    #steps {width:500px; height:42px; margin:0px auto; float:left; margin-left:70px;}
+        .step1 {background:url(/themes/default/images/step1.png) no-repeat bottom center;}
+        .step2 {background:url(/themes/default/images/step2.png) no-repeat bottom center;}
+        .step3 {background:url(/themes/default/images/step3.png) no-repeat bottom center;}
+    
+</style>
+        
+        
+        <!-- Include jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        
+                
+        <div id="wrapper">
+            
+            
+<div id="headerWrap">
+
+    <div id="header">
+        
+        <header>
+        
+        <div id="logo">
+            
+            <img src="/logo/en/NAPA/logo.png"/>
+            
+        </div>
+            
+            <div id="headerShadow"></div>
+
+        <div id="nav">
+
+            <nav>
+
+                
+<ul>
+    <li><a href="/scripts/lang.php?l=fr">FranÃ§ais</a></li>
+    <li><a href="/howitworks">How it Works</a></li>
+    <li><a href="/">Activate</a></li>
+    <li><a href="/">Home</a></li></ul>
+            </nav>
+
+        </div>
+
+        <div id="headerTitle">
+
+            <img src="/themes/default/images/newNapaRap.png" alt="NAPA Roadside Assistance Program"/>
+        </div>
+            
+        </header>
+
+    </div>
+
+</div>            
+            
+            
+            
+            
+            
+
+
+<div id="contentWrap">
+
+    <div id="content">
+
+        <content>
+            
+            <div class="single">
+                
+                <section>
+                    
+                    <div id="steps" class="step1"></div>
+                    
+                </section>
+                
+            </div>
+
+            <div class="triple">
+                
+                <section>
+                    
+                    <div id="keys">
+                        
+                        <script type="text/javascript">
+                        
+                            $(document).ready(function () {
+                               $('#activate').focus(); 
+                            });
+                    
+                        </script>
+                        
+                        <h6>Activate Now</h6>
+                        <form action="/scripts/activate.php" method="post">
+                            
+                            <label for="activate">Enter Your Pin</label><br/>
+                            <input type="text" name="activate" id="activate" value=""/><br/>
+                            <center><input type="submit" class="submit" value="Activate"/></center>
+                            
+                        </form>
+                        
+                    </div>
+                    
+                </section>
+                
+            </div>
+            
+            <div class="double">
+                
+                <section>
+                    
+                    <h1>Activate Your Pin</h1>
+                    
+                    *Activate your NAPA Roadside Assistance now and together with our NAPA Peace of Mind Warranty, We've Got You Covered anywhere in North America 24/7!
+                    <p/>
+                    <span class="note">*See <a href="/howitworks">"How it Works & FAQ's"</a> for complete details. Some restrictions and limitations apply.</span>
+                    
+                </section>
+                
+            </div>          
+
+        </content>
+        
+        <div class="clear"></div>
+
+    </div>
+
+</div>
+
+<div id="footerWrap">
+    
+                <footer>
+                
+                <div id="footer">
+                    
+                    <div id="footerLeft"><img alt="Napa NAPA" src="/logo/en/NAPA/footerLeft.png"/></div>
+                    <div id="footerRight"><img alt="Napa NAPA" src="/logo/en/NAPA/footerRight.png"/></div>
+                    <div class="clear"></div>
+                    
+                </div> 
+                    
+                </footer>
+                
+            </div>
+            
+            <div id="footerShadow">&copy; NAPA 2012</div> 
+        
+</div>
+        
+        <div id="bgr"></div>
+        
+        <script type="text/javascript">
+        
+            $(document).ready(function () {
+                $("#bgr").hover(function() {
+                    $(this).fadeOut(500);
+                });
+                $("#wrapper").hover(function() {
+                    $("#bgr").fadeIn(500);
+                });
+            });
+    
+        </script>
+        
+        
+<script type="text/javascript">
+
+    var body = $("body");
+    body.html(body.html().replace(/Ã/g, "&Agrave;"));
+    body.html(body.html().replace(/Ã /g, "&agrave;"));
+    body.html(body.html().replace(/Ã/g, "&Acirc;"));
+    body.html(body.html().replace(/Ã¢/g, "&acirc;"));
+    body.html(body.html().replace(/Ã/g, "&AElig;"));
+    body.html(body.html().replace(/Ã¦/g, "&aelig;"));
+    body.html(body.html().replace(/Ã/g, "&Ccedil;"));
+    body.html(body.html().replace(/Ã§/g, "&ccedil;"));
+    body.html(body.html().replace(/Ã/g, "&Egrave;"));
+    body.html(body.html().replace(/Ã¨/g, "&egrave;"));
+    body.html(body.html().replace(/Ã/g, "&Eacute;"));
+    body.html(body.html().replace(/Ã©/g, "&eacute;"));
+    body.html(body.html().replace(/Ã/g, "&Ecirc;"));
+    body.html(body.html().replace(/Ãª/g, "&ecirc;"));
+    body.html(body.html().replace(/Ã/g, "&Euml;"));
+    body.html(body.html().replace(/Ã«/g, "&euml;"));
+    body.html(body.html().replace(/Ã/g, "&Icirc;"));
+    body.html(body.html().replace(/Ã®/g, "&icirc;"));
+    body.html(body.html().replace(/Ã/g, "&Iuml;"));
+    body.html(body.html().replace(/Ã¯/g, "&iuml;"));
+    body.html(body.html().replace(/Ã/g, "&Ocirc;"));
+    body.html(body.html().replace(/Ã´/g, "&ocirc;"));
+    body.html(body.html().replace(/Å/g, "&OElig;"));
+    body.html(body.html().replace(/Å/g, "&oelig;"));
+    body.html(body.html().replace(/Ã/g, "&Ugrave;"));
+    body.html(body.html().replace(/Ã¹/g, "&ugrave;"));
+    body.html(body.html().replace(/Ã/g, "&Ucirc;"));
+    body.html(body.html().replace(/Ã»/g, "&ucirc;"));
+    body.html(body.html().replace(/Ã/g, "&Uuml;"));
+    body.html(body.html().replace(/Ã¼/g, "&uuml;"));
+    body.html(body.html().replace(/Â«/g, "&laquo;"));
+    body.html(body.html().replace(/Â»/g, "&raquo;"));
+    body.html(body.html().replace(/â£/g, "&8355;"));
+    body.html(body.html().replace(/â¬/g, "&euro;"));
+
+</script>        
+    </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder V6.0.0 Trial for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<title>Auto Gallery; muscle cars; classic cars; collector cars</title>
+
+
+<style type="text/css">
+<!--
+    A:visited {color:#00CC99;}
+	A:hover {color:"#FFFF00";}
+.style8 {color: #66CCFF; }
+body {
+	background-color: #FFFFFF;
+}
+.style11 {
+	color: #FFFFFF;
+	font-size: 24;
+}
+.style20 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+.style21 {color: #FFFFFF}
+-->
+</style>
+
+<script>
+// (C) 2000 www.CodeLifter.com
+// http://www.codelifter.com
+// Free for all users, but leave in this  header
+// NS4-6,IE4-6
+// Fade effect only in IE; degrades gracefully
+
+// =======================================
+// set the following variables
+// =======================================
+
+// Set slideShowSpeed (milliseconds)
+var slideShowSpeed = 3000
+
+// Duration of crossfade (seconds)
+var crossFadeDuration = 3
+
+// Specify the image files
+var Pic = new Array() // don't touch this
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'Images/Slides/Slide1.jpg'
+Pic[1] = 'Images/Slides/Slide2.jpg'
+Pic[2] = 'Images/Slides/Slide3.jpg'
+Pic[3] = 'Images/Slides/Slide4.jpg'
+Pic[4] = 'Images/Slides/Slide5.jpg'
+
+// =======================================
+// do not edit anything below this line
+// =======================================
+
+var t
+var j = 0
+var p = Pic.length
+
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+   preLoad[i] = new Image()
+   preLoad[i].src = Pic[i]
+}
+
+function runSlideShow(){
+   if (document.all){
+      document.images.SlideShow.style.filter="blendTrans(duration=2)"
+      document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)"
+      document.images.SlideShow.filters.blendTrans.Apply()      
+   }
+   document.images.SlideShow.src = preLoad[j].src
+   if (document.all){
+      document.images.SlideShow.filters.blendTrans.Play()
+   }
+   j = j + 1
+   if (j > (p-1)) j=0
+   t = setTimeout('runSlideShow()', slideShowSpeed)
+}
+</script>
+
+</head>
+<BODY background="Images/Back/AgHdrBackTile.jpg" BGPROPERTIES="fixed" text="#cccc99" onLoad="runSlideShow()">
+
+<!--  Display Logo -->
+<div style="position:absolute; top:10px; left:17px; height: 240; border: 1px none #000000;">
+    <img src= "Images/Back/Logo6-4.gif" width="354" height="175" align="left">
+</div>
+
+<!--  Display Consignment, etc -->
+<div style="position:absolute; top:40px; left:100px; height: 194px; border: 0px none #000000; width: 800px;">
+  <blockquote>
+    <blockquote>
+      <blockquote>
+          <p align="left"><A HREF="about.html" class="style8">C O N S I G N M E N T * S A L E S * S T O R A G E </A>
+            <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<A HREF="about.html" class="style8"
+			>A P P R A I S A L S</A></p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+	
+    <p align="center"><span class="style11"><strong>
+	<BR>
+	2807 N. U.S. Highway 12    
+	<br>  
+    Spring Grove, IL 60081 
+    <br>
+  Ph 815-675-3222 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax 815-675-1752</span>	</span>    </p>
+    <div align="center"><span class="style8"><a href="mailto:autogallerymuseum@yahoo.com" class="style8">E-Mail us:</a></span><span class="style20"></span></div>
+</div>
+<!--  Display image of building front -->
+<div style="position:absolute; top:30px; left:730px; height: 162px; border: 0px none #000000;"><img src= "Images/Back/AutoGallFront.gif" height="186"></div>
+
+    	  
+<!--  Display image of Old Village -->
+<div style="position:absolute; top:240px; left:750px; width: 350px;" align="center">
+           <a href="Party.htm" class="style8"><B>**Old Village Area for Rent**</a> <img src="Images/Facility/Vill1.jpg" width="350" height="215"></td>
+</div>
+
+<!--  Display navigation and slide show -->
+<div style="position:absolute; top:250px; left:27px; width: 622px; height: 200px;"> 
+  <table width="624" height="250" border="0">
+    <tr>
+      <td align="center"><B><a href="agdetail.asp?Search_Type=CV" class="style8">Convertibles</a><BR>
+        <a href="agdetail.asp?Search_Type=49" class="style8">Pre 1950's</a><BR>
+        <a href="agdetail.asp?Search_Type=50" class="style8">1950's</a><BR>
+        <a href="agdetail.asp?Search_Type=60" class="style8">1960's</a><BR>
+        <a href="agdetail.asp?Search_Type=70" class="style8">1970's</a><BR>
+        <a href="agdetail.asp?Search_Type=80" class="style8">1980's and Newer</a><BR>
+        <a href="agdetail.asp?Search_Type=FS" class="style8">Imports</a><BR>
+        <a href="agdetail.asp?Search_Type=TR" class="style8">Trucks</a><BR>      
+        <a href="agdetail.asp?Search_Type=RC" class="style8">Other</a><BR>
+        <a href="Events.html" class="style8">Events</a><BR>
+        <a href="Party.htm" class="style8">Old Village</a>
+	 </B></td>
+      
+	  <td>
+	    <img src="Images/Slides/Slide1.jpg" name='SlideShow' width=400 height=180>
+	  </td>
+    </tr><marquee width="8" height="8" scrollamount="9370"><a href="http://www.toryburchsale.us/tory-burch-flats-c-6.html">tory burch reva</a><a href="http://www.ladydesignerhandbags.com/chanel-handbags-c-1.html">Chanel handbags</a><a href="http://www.louboutinshoelike.com/">Christian Louboutin Shoes</a><a href="http://www.justforbag.com/">Handbags Designer</a><a href="http://www.justforbag.com/">Handbags For Cheap</a><a href="http://www.netnewbalance.com/specials.html">new balance stores</a><a href="http://www.olasics.com/">onitsuka tiger sneakers</a><a href="http://www.louboutinshoelike.com/">Christian Louboutin Sale</a><a href="http://www.olasics.com/">onitsuka tiger shoes</a><a href="http://www.designerbagssale.co.uk/">designer bags sale</a></marquee>
+  </table>
+</div>
+
+<!--  Display foriegn flags -->
+  <div style = "position:absolute; top:520px; left:5px; width:1100;" align="center">
+           
+	 <p>
+	    <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=ar"><img  src="images/flags/arabic_flag.png" alt="Arabic" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=bg">
+        <img  src="images/flags/bg.png" alt="Bulgarian" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=zh-CN">
+        <img  src="images/flags/zh.png" alt="Chinese" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=hr">
+        <img  src="images/flags/hr.png" alt="Croatian" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=cs">
+        <img  src="images/flags/cs.png" alt="Czech" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=da">
+        <img  src="images/flags/da.png" alt="Danish" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=nl">
+        <img  src="images/flags/nl.png" alt="Dutch" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=fi">
+        <img  src="images/flags/fi.png" alt="Finnish" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=fr">
+        <img  src="images/flags/fr.png" alt="French" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=de">
+        <img  src="images/flags/de.png" alt="German" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=el">
+        <img  src="images/flags/el.png" alt="Greek" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=hi">
+        <img  src="images/flags/hi.png" alt="Hindi" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=it">
+        <img  src="images/flags/it.png" alt="Italian" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=ja">
+        <img  src="images/flags/ja.png" alt="Japanese" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=ko">
+        <img  src="images/flags/ko.png" alt="Korean" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=es">
+        <img  src="images/flags/mexican_flag.jpg" alt="Mexican" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=no">
+        <img  src="images/flags/norway_flag.jpg" alt="Norwegian" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=pl">
+        <img  src="images/flags/pl.png" alt="Polish" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=pt">
+        <img  src="images/flags/pt.png" alt="Portuguese" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=ro">
+        <img  src="images/flags/ro.png" alt="Romanian" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=ru">
+        <img  src="images/flags/ru.png" alt="Russian" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=es">
+        <img  src="images/flags/es.png" alt="Spanish" border="0"></a> 
+        <a href="http://translate.google.com/translate?u=http://www.AutoGalleryMuseum.com/%3F&hl=en&ie=UTF8&sl=en&tl=sv">
+        <img  src="images/flags/sv.png" alt="Swedish" border="0"></a> 
+        <a href="http://www.AutoGalleryMuseum.com/">
+        <img  src="images/flags/usa_uk_flag.jpg" alt="English" border="0"></a>
+        
+     </p>
+</div>
+
+
+</BODY>
+</html>
+

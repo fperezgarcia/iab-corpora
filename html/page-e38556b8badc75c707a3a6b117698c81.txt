@@ -1,0 +1,866 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<title>Coast to Coast Imports | Luxury Dealer Indianapolis | New & Used Luxury Vehicles IN</title>
+<meta name="description" content="Coast to Coast Imports used luxury cars serving the Indianapolis area (Fishers, East, Keystone). Used Cars, Pre-owned cars, Used Import cars, used import cars Indianapolis, used cars, used cars indianapolis, used BMW, used Mercedes, used Lexus, used Infiniti, used Jaguar, used cars Fishers, used luxury cars, used luxury, Excellent selection of used cars, used trucks, used SUVs, used Crossovers, used convertible , used Acura, used Honda, used cars for sale, used cars for sale in indiana, used bmw for sale, used bmw indianapolis, used bmw, used mercedes indianapolis, used mercedes convertible, used mercedes suv, used lexus indianapolis, used lexus suv, luxury cars, credit approval for bad credit, certified bmw, certified mercedes, certified lexus, certified infiniti, certified jaguar, certified porsche, certified honda, certified nissan, certified cadillac, certified bentley, certified audi, used audi, used land rover, certified land rover, used range rover, certified range rover, pre owned cars, pre owned bmw, pre owned mercedes, pre owned lexus, pre owned audi, pre owned jaguar, pre owned porsche, pre owned land rover, pre owned range rover, pre owned cadillac, pre owned infiniti, used import cars indiana, used cars indiana, shop for a car, auto shopping, shop used cars, discount cars, auto sales, auto specials, best auto deals ." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:title" name="og:title" content="Coast To Coast Imports">
+<meta property="og:url" name="og:url" content="http://coasttocoastimports.com/home">
+<meta property="og:description" name="og:description"
+	content="Coast to Coast Imports, Excellent selection of used cars, used trucks, used SUVs and used Crossovers.">
+<meta property="og:image" name="og:image"
+	content="http://coasttocoastimports.com:80/resources/img/logo-coast-to-coast-imports-b.png;jsessionid=8C05512774E4B5495C08283CF279D1B7">
+<link rel="shortcut icon" href="/resources/img/webClip.png;jsessionid=8C05512774E4B5495C08283CF279D1B7">
+<!-- Bootstrap -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css">
+<link href="/resources/bootstrap/css/bootstrap.css;jsessionid=8C05512774E4B5495C08283CF279D1B7?version=1.0" rel="stylesheet" media="screen">
+<link href="/resources/bootstrap/css/bootstrap-responsive.css;jsessionid=8C05512774E4B5495C08283CF279D1B7?version=1.0" rel="stylesheet" media="screen">
+<link href="/resources/css/font-awesome.min.css;jsessionid=8C05512774E4B5495C08283CF279D1B7" rel="stylesheet" media="screen">
+<link href="/resources/css/c2c-style.css;jsessionid=8C05512774E4B5495C08283CF279D1B7?version=1.3" rel="stylesheet" media="screen">
+
+
+<link href="/resources/jquery/css/smoothness/jquery-ui-1.10.2.custom.min.css;jsessionid=8C05512774E4B5495C08283CF279D1B7" rel="stylesheet" media="screen">
+<link href="/resources/jquery/placeholder/jquery.placeholder.css;jsessionid=8C05512774E4B5495C08283CF279D1B7" rel="stylesheet" media="screen">
+
+<script src="/resources/jquery/js/jquery-1.9.1.js;jsessionid=8C05512774E4B5495C08283CF279D1B7"></script>
+<script src="/resources/jquery/js/jquery-ui-1.10.2.custom.min.js;jsessionid=8C05512774E4B5495C08283CF279D1B7"></script>
+
+<script src="/resources/jquery/placeholder/jquery.placeholder.js;jsessionid=8C05512774E4B5495C08283CF279D1B7"></script>
+<script src="/resources/bootstrap/js/bootstrap.js;jsessionid=8C05512774E4B5495C08283CF279D1B7"></script>
+
+<script>
+	var CONTEXT_PATH = '/';
+	var SERVER_URL = 'http://coasttocoastimports.com:80';
+	$(document)
+			.ready(
+					function() {
+
+						$(":input[placeholder]").placeholder();
+
+						$('#disclaimerLink').popover({
+							content : $('#disclaimerText').html(),
+							html : true
+						});
+						$('.chat-icon')
+								.click(
+										function() {
+											window
+													.open(
+															'http://applications.contactatonce.com/caoclientcontainer.aspx?ProviderId=6695&MerchantId=145710&PlacementId=12&OriginationUrl=http://coasttocoastimports.com/home',
+															'',
+															'resizable=yes,toolbar=no,menubar=no,location=no,scrollbars=no,status=no,height=400,width=600');
+										});
+					});
+</script>
+<link href="/resources/css/jquery.vegas.css;jsessionid=8C05512774E4B5495C08283CF279D1B7" rel="stylesheet">
+
+<script src="/resources/js/jquery.vegas.js;jsessionid=8C05512774E4B5495C08283CF279D1B7"></script>
+
+<script src="http://applications.contactatonce.com/scripts/PopIn.js" type="text/javascript"></script>
+<!--
+this is to display the popup for who is available
+ <script src="http://applications.contactatonce.com/PopInGenerator.aspx?ProviderId=6695&MerchantId=145710&PlacementId=3" type="text/javascript"></script>
+ -->
+
+<script>
+	$(document).ready(function() {
+		
+		$('#filterDropdown li select').click(function(e) {
+			e.stopPropagation();
+		});
+		$('#filterDropdown li input').click(function(e) {
+			e.stopPropagation();
+		});
+		
+		$('#priceRange').change(function() {
+			var value = $(this).val();
+
+			$('#priceFrom').val('');
+			$('#priceTo').val('');
+
+			if (value == '') {
+				return;
+			}
+			var fromTo = value.split(',');
+			if (fromTo[0] != '*') {
+				$('#priceFrom').val(fromTo[0]);
+			}
+			if (fromTo[1] != '*') {
+				$('#priceTo').val(fromTo[1]);
+			}
+		});
+
+		$('#mileageRange').change(function() {
+			var value = $(this).val();
+
+			$('#mileageFrom').val('');
+			$('#mileageTo').val('');
+
+			if (value == '') {
+				return;
+			}
+			var fromTo = value.split(',');
+			if (fromTo[0] != '*') {
+				$('#mileageFrom').val(fromTo[0]);
+			}
+			if (fromTo[1] != '*') {
+				$('#mileageTo').val(fromTo[1]);
+			}
+		});
+		
+		$('#make').change(function() {
+			var selectedValue = $(this).val();
+			$('#model > option[value != ""]').detach();
+			$('#model').attr('disabled', 'disabled');
+			$('#model').val(1);
+			$(this).attr('disabled', 'disabled');
+			$.ajax({
+				url : CONTEXT_PATH + 'models',
+				method : 'GET',
+				data : {
+					'carMake' : selectedValue,
+					'inInventory' : true
+				},
+				dataType : 'json',
+				success : function(json) {
+					var error = json.errorCode;
+					if (error == '0') {
+						var items = json.items;
+						if (items != null && items.length > 0) {
+							$.each(items, function(index, item) {
+								$('#model').append('<option value="' + item.id + '">' + item.id + '</option>');
+							});
+							$('#model').removeAttr('disabled');
+						}
+					} else {
+						alert('Failed while getting makes');
+					}
+				},
+				error : function(xhr, status) {
+					alert('Failed while getting makes');
+				},
+				complete : function(xhr, status) {
+					$('#make').removeAttr('disabled');
+				}
+			});
+		});
+		
+		
+		$.vegas('slideshow', {
+			delay : 4000,			
+			backgrounds :[
+            
+            {src : "/image-stnd/361-NORMAL.jpg;jsessionid=8C05512774E4B5495C08283CF279D1B7",fade : 500},
+            {src : "/image-stnd/365-NORMAL.jpg;jsessionid=8C05512774E4B5495C08283CF279D1B7",fade : 500},
+            {src : "/image-stnd/4132-NORMAL.jpg;jsessionid=8C05512774E4B5495C08283CF279D1B7",fade : 500},
+            {src : "/image-stnd/4133-NORMAL.jpg;jsessionid=8C05512774E4B5495C08283CF279D1B7",fade : 500}],
+		     walk:function(step) {
+		    	 
+		     }
+		});
+		
+
+		//this it to display the popup for chat
+		//popIn();
+	});
+</script>
+</head>
+<body lang="en">
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('.nav .dropdown-toggle').mouseenter(function() {
+			if (!$(this).parent().hasClass('open')) {
+				$(this).dropdown('toggle');
+			}
+		});
+
+		$('.nav .dropdown').mouseleave(function() {
+			$('.dropdown-toggle', $(this)).dropdown('toggle');
+		});
+	});
+</script>
+
+<div id="navBar" class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<!-- <img src="/resources/img/bg-header.png;jsessionid=8C05512774E4B5495C08283CF279D1B7" class="header-shade-image"></img> -->
+		<div class="container-fluid">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="/;jsessionid=8C05512774E4B5495C08283CF279D1B7"><img src="/resources/img/logo-coast-to-coast-imports-b.png;jsessionid=8C05512774E4B5495C08283CF279D1B7"
+				alt="Coast To Coast Imports"></a>
+			<div class="nav-collapse collapse">
+				<ul class="nav pull-right">
+					<li class="active"><a href="/home;jsessionid=8C05512774E4B5495C08283CF279D1B7">HOME</a></li>
+					<li class="dropdown "><a class="dropdown-toggle"
+						data-toggle="dropdown">INVENTORY<b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7">ALL INVENTORY</a></li>
+							<li class="dropdown-submenu"><a href="#">BY LOCATION</a>
+								<ul class="dropdown-menu">
+									<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7">All Locations</a></li>
+									<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=1">Fishers</a></li>
+									<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=2">East</a></li>
+									<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=3">Keystone</a></li>
+									</ul></li>
+
+							<li class="divider"></li>
+
+							<li class="dropdown-submenu"><a href="#">ACURA</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=MDX">MDX ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=RDX">RDX ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=RL">RL ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=TL">TL ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=TSX">TSX ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">ASTON MARTIN</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ASTON MARTIN&model=DB9">DB9 ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">AUDI</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=A4">A4 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=A5">A5 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=A6">A6 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=Q7">Q7 ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">BENTLEY</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BENTLEY&model= CONTINENTAL"> CONTINENTAL ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">BMW</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=328I">328I ( 7 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=328I XDRIVE">328I XDRIVE ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=328XI">328XI ( 4 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=335I">335I ( 3 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=335I XDRIVE">335I XDRIVE ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=335XI">335XI ( 7 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=525I">525I ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=525XI">525XI ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=530I">530I ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=530XI">530XI ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=535I">535I ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=535XI">535XI ( 5 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=550 GRANTURISMO">550 GRANTURISMO ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=550XI">550XI ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=6 SERIES">6 SERIES ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=650I">650I ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=7 SERIES">7 SERIES ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=750LI">750LI ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=M3">M3 ( 3 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=M6">M6 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=X3">X3 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=X5">X5 ( 5 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=X6">X6 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=Z4">Z4 ( 2 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">BUICK</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BUICK&model=REGAL">REGAL ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">CADILLAC</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CADILLAC&model=ESCALADE">ESCALADE ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CADILLAC&model=ESCALADE EXT">ESCALADE EXT ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">CHEVORLET</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHEVORLET&model=AVALANCHE">AVALANCHE ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHEVORLET&model=COBALT">COBALT ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHEVORLET&model=TAHOE">TAHOE ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">CHRYSLER</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHRYSLER&model=CROSSFIRE">CROSSFIRE ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">DODGE</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=DODGE&model=JOURNEY">JOURNEY ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=DODGE&model=RAM">RAM ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">FORD</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=FORD&model=EXPEDITION">EXPEDITION ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=FORD&model=FUSION">FUSION ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">GMC</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=GMC&model=ACADIA">ACADIA ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=GMC&model=YUKON">YUKON ( 2 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">HONDA</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HONDA&model=ACCORD LX">ACCORD LX ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HONDA&model=CIVIC">CIVIC ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HONDA&model=CRV">CRV ( 2 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">HUMMER</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HUMMER&model=H3 ALPHA">H3 ALPHA ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HUMMER&model=H3 LUXURY">H3 LUXURY ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">HYUNDAI</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HYUNDAI&model=GENESIS">GENESIS ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HYUNDAI&model=SONATA">SONATA ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HYUNDAI&model=VERACRUZ">VERACRUZ ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">INFINITI</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=FX35">FX35 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=G35X">G35X ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=G37">G37 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=G37X">G37X ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=M35">M35 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=M35X">M35X ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=M37X">M37X ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">JAGUAR</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF LUXURY">XF LUXURY ( 3 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF PORTFOLIO">XF PORTFOLIO ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF PREMIUM">XF PREMIUM ( 3 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF SUPERCHARGED">XF SUPERCHARGED ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XJ SUPERCHARGED">XJ SUPERCHARGED ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XJ8-L">XJ8-L ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XJL PORTFOLIO">XJL PORTFOLIO ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XK">XK ( 2 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">JEEP</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=COMMANDER">COMMANDER ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=GRAND CHEROKEE">GRAND CHEROKEE ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=LIBERTY">LIBERTY ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=WRANGLER">WRANGLER ( 2 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">KIA</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=KIA&model=FORTE">FORTE ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">LAND ROVER</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=LR2">LR2 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=LR4">LR4 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER">RANGE ROVER ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER SPORT HSE">RANGE ROVER SPORT HSE ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER SPORT LUXURY">RANGE ROVER SPORT LUXURY ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER SPORT SUPER CHARGED">RANGE ROVER SPORT SUPER CHARGED ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">LEXUS</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=ES330">ES330 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=ES350">ES350 ( 5 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=GS300">GS300 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=GS350">GS350 ( 4 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=GX460">GX460 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=IS250">IS250 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=LS430">LS430 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=LS460">LS460 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=RX300">RX300 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=RX350">RX350 ( 4 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">LINCOLN</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LINCOLN&model=MKX">MKX ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LINCOLN&model=NAVIGATOR">NAVIGATOR ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">MASERATI</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MASERATI&model=QUATTROPORTE">QUATTROPORTE ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">MAZDA</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MAZDA&model=CX-7">CX-7 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MAZDA&model=MX-5 MIATA">MX-5 MIATA ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">MERCEDES</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C230">C230 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C250">C250 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C280">C280 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C300 4MATIC">C300 4MATIC ( 3 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C300 4MATIC LUXURY">C300 4MATIC LUXURY ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C300 4MATIC SPORT">C300 4MATIC SPORT ( 10 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=CL550">CL550 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=CLK350">CLK350 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=CLS550">CLS550 ( 5 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=E320">E320 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=E350">E350 ( 12 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=E430">E430 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=GL450">GL450 ( 6 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=GL550">GL550 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=GLK350">GLK350 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=ML350">ML350 ( 5 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=R350">R350 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=S400">S400 ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=S430">S430 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=S550">S550 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=SLK350">SLK350 ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">MINI</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MINI&model=COOPER CLUBMAN">COOPER CLUBMAN ( 3 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">NISSAN</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=NISSAN&model=MURANO">MURANO ( 2 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">PONTIAC</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PONTIAC&model=GRAND PRIX">GRAND PRIX ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">PORSCHE</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=911">911 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=CAYENNE">CAYENNE ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=PANAMERA 4S">PANAMERA 4S ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=PANAMERA S">PANAMERA S ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">SAAB</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=SAAB&model=9-3">9-3 ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=SAAB&model=9-3 ARC">9-3 ARC ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">TOYOTA</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=CAMRY">CAMRY ( 2 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=CAMRY SOLARA">CAMRY SOLARA ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=HIGHLANDER">HIGHLANDER ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=TACOMA">TACOMA ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=TUNDRA">TUNDRA ( 1 )</a></li>
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=YARIS">YARIS ( 1 )</a></li>
+										</ul></li>
+							<li class="dropdown-submenu"><a href="#">VW</a>
+									<ul class="dropdown-menu">
+										<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=VW&model=NEW BEETLE">NEW BEETLE ( 1 )</a></li>
+										</ul></li>
+							</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">FINANCING<b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<li><a href="/finance;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=1">Fishers</a></li>
+							<li><a href="/finance;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=2">East</a></li>
+							<li><a href="/finance;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=3">Keystone</a></li>
+							</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">SERVICE<b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<li><a href="/service;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=1">Fishers</a></li>
+							<li><a href="/service;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=2">East</a></li>
+							<li><a href="/service;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=3">Keystone</a></li>
+							</ul></li>
+					<li class=""><a href="/content/company;jsessionid=8C05512774E4B5495C08283CF279D1B7">COMPANY</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">contact<b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<li><a href="/contact;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=1">Fishers</a></li>
+							<li><a href="/contact;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=2">East</a></li>
+							<li><a href="/contact;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=3">Keystone</a></li>
+							</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div><div class="homepage-slideshow">
+	<div class="pattern">
+		<a class="btn btn-compare active" href="/compare;jsessionid=8C05512774E4B5495C08283CF279D1B7"> <i class="icon-star"></i>&nbsp;Saved&nbsp;(0)
+		</a>
+		<form id="inventoryFilterForm" class="inventory-filter" action="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7" method="get">
+	<input type="hidden" name="priceFrom" id="priceFrom" value="" /> <input type="hidden" name="priceTo" id="priceTo" value="" /> <input type="hidden"
+		name="mileageFrom" id="mileageFrom" value="" /> <input type="hidden" name="mileageTo" id="mileageTo" value="" />
+
+	<!-- Filter -->
+	<div id="filterDropdown" class="btn-group">
+		<a href="#" class="btn dropdown-toggle btn-inventory-search" data-toggle="dropdown"><i class="icon-search"></i>&nbsp;Search&nbsp;<span
+			class="caret"></span> </a>
+		<ul class="dropdown-menu-content dropdown-menu pull-right">
+			<li>Filters:<br /> <select name="locationId" class="select-locations">
+					<option value="">All Locations</option>
+
+					<option value="1" >Fishers</option>
+					<option value="2" >East</option>
+					<option value="3" >Keystone</option>
+					</select> <br /> <select id="make" name="make" class="select-models">
+					<option value="">All Makes</option>
+					<option value="ACURA">ACURA</option>
+					<option value="ASTON MARTIN">ASTON MARTIN</option>
+					<option value="AUDI">AUDI</option>
+					<option value="BENTLEY">BENTLEY</option>
+					<option value="BMW">BMW</option>
+					<option value="BUICK">BUICK</option>
+					<option value="CADILLAC">CADILLAC</option>
+					<option value="CHEVORLET">CHEVORLET</option>
+					<option value="CHRYSLER">CHRYSLER</option>
+					<option value="DODGE">DODGE</option>
+					<option value="FORD">FORD</option>
+					<option value="GMC">GMC</option>
+					<option value="HONDA">HONDA</option>
+					<option value="HUMMER">HUMMER</option>
+					<option value="HYUNDAI">HYUNDAI</option>
+					<option value="INFINITI">INFINITI</option>
+					<option value="JAGUAR">JAGUAR</option>
+					<option value="JEEP">JEEP</option>
+					<option value="KIA">KIA</option>
+					<option value="LAND ROVER">LAND ROVER</option>
+					<option value="LEXUS">LEXUS</option>
+					<option value="LINCOLN">LINCOLN</option>
+					<option value="MASERATI">MASERATI</option>
+					<option value="MAZDA">MAZDA</option>
+					<option value="MERCEDES">MERCEDES</option>
+					<option value="MINI">MINI</option>
+					<option value="NISSAN">NISSAN</option>
+					<option value="PONTIAC">PONTIAC</option>
+					<option value="PORSCHE">PORSCHE</option>
+					<option value="SAAB">SAAB</option>
+					<option value="TOYOTA">TOYOTA</option>
+					<option value="VW">VW</option>
+					</select> <br /> <select id="model" disabled name="model" class="select-models">
+					<option value="">All Models</option>
+			</select> <br /> <select name="bodyType">
+					<option value="">All Bodies</option>
+					<option value="5">CONVERTIBLE</option>
+					<option value="6">COUPE</option>
+					<option value="7">HATCHBACK </option>
+					<option value="8">SEDAN</option>
+					<option value="11">SUV</option>
+					<option value="12">VAN</option>
+					<option value="13">TRUCK</option>
+					<option value="181">JEEP</option>
+					</select> <br /> <select id="priceRange" class="select-priceRange">
+					<option value="">Any Price</option>
+					<option value="50000,*">$50K - *</option>
+					<option value="40000,49999">$40 - $49K</option>
+					<option value="30000,39999">$30 - $39K</option>
+					<option value="20000,29999">$20 - $29K</option>
+					<option value="10000,19999">$10 - $19K</option>
+					<option value="*,10000">0 - $10K</option>
+			</select> <br /> <select id="mileageRange" class="select-priceRange">
+					<option value="">Any Mileage</option>
+					<option value="50000,*">50-*K Miles</option>
+					<option value="40000,49999">40-49K Miles</option>
+					<option value="30000,39999">30-39K Miles</option>
+					<option value="20000,29999">20-29K Miles</option>
+					<option value="10000,19999">10-19K Miles</option>
+					<option value="*,10000">0-10K Miles</option>
+			</select> <br /> <select name="yearTo" class="select-yearTo">
+					<option value="">Newest</option>
+					<option value="1999">1999</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					</select> To <select name="yearFrom" class="select-yearFrom">
+					<option value="">Oldest</option>
+					<option value="1999">1999</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					</select> <!-- Sort --> <br />Sort By:<br /> <select name="sortBy" id="sortBy">
+					<option value="MAKE">Make & Model</option>
+					<option value="LOCATION">Location</option>
+					<option value="PRICE">Price</option>
+					<option value="MILEAGE">Mileage</option>
+					<option value="YEAR">Year</option>
+					</select> <br /> Sort Direction:<br /> <select name="sortDir" id="sortDir">
+					<option value="ASC">Ascending</option>
+					<option value="DESC">Descending</option>
+			</select> <br />
+				<div class="command-line">
+					<div class="pull-right">
+						<button class="btn btn-small btn-info">Search</button>
+						&nbsp;<input type="reset" value="Reset" class="btn btn-small" />
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</form><!-- BEGIN Homepage Inventory Navigation -->
+		<div class="homenav">
+			<ul class="dropdown-menu">
+				<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7">All Inventory</a></li>
+				<li class="dropdown-submenu"><a href="#">By Location</a>
+					<ul class="dropdown-menu">
+						<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7">All Locations</a></li>
+						<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=1">Fishers</a></li>
+						<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=2">East</a></li>
+						<li><a href="/inventory;jsessionid=8C05512774E4B5495C08283CF279D1B7?locationId=3">Keystone</a></li>
+						</ul></li>
+				<li class="divider"></li>
+				<li class="dropdown-submenu"><a href="#">ACURA</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=MDX">MDX ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=RDX">RDX ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=RL">RL ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=TL">TL ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ACURA&model=TSX">TSX ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">ASTON MARTIN</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=ASTON MARTIN&model=DB9">DB9 ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">AUDI</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=A4">A4 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=A5">A5 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=A6">A6 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=AUDI&model=Q7">Q7 ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">BENTLEY</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BENTLEY&model= CONTINENTAL"> CONTINENTAL ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">BMW</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=328I">328I ( 7 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=328I XDRIVE">328I XDRIVE ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=328XI">328XI ( 4 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=335I">335I ( 3 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=335I XDRIVE">335I XDRIVE ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=335XI">335XI ( 7 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=525I">525I ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=525XI">525XI ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=530I">530I ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=530XI">530XI ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=535I">535I ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=535XI">535XI ( 5 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=550 GRANTURISMO">550 GRANTURISMO ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=550XI">550XI ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=6 SERIES">6 SERIES ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=650I">650I ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=7 SERIES">7 SERIES ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=750LI">750LI ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=M3">M3 ( 3 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=M6">M6 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=X3">X3 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=X5">X5 ( 5 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=X6">X6 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BMW&model=Z4">Z4 ( 2 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">BUICK</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=BUICK&model=REGAL">REGAL ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">CADILLAC</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CADILLAC&model=ESCALADE">ESCALADE ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CADILLAC&model=ESCALADE EXT">ESCALADE EXT ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">CHEVORLET</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHEVORLET&model=AVALANCHE">AVALANCHE ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHEVORLET&model=COBALT">COBALT ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHEVORLET&model=TAHOE">TAHOE ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">CHRYSLER</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=CHRYSLER&model=CROSSFIRE">CROSSFIRE ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">DODGE</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=DODGE&model=JOURNEY">JOURNEY ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=DODGE&model=RAM">RAM ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">FORD</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=FORD&model=EXPEDITION">EXPEDITION ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=FORD&model=FUSION">FUSION ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">GMC</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=GMC&model=ACADIA">ACADIA ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=GMC&model=YUKON">YUKON ( 2 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">HONDA</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HONDA&model=ACCORD LX">ACCORD LX ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HONDA&model=CIVIC">CIVIC ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HONDA&model=CRV">CRV ( 2 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">HUMMER</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HUMMER&model=H3 ALPHA">H3 ALPHA ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HUMMER&model=H3 LUXURY">H3 LUXURY ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">HYUNDAI</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HYUNDAI&model=GENESIS">GENESIS ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HYUNDAI&model=SONATA">SONATA ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=HYUNDAI&model=VERACRUZ">VERACRUZ ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">INFINITI</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=FX35">FX35 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=G35X">G35X ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=G37">G37 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=G37X">G37X ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=M35">M35 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=M35X">M35X ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=INFINITI&model=M37X">M37X ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">JAGUAR</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF LUXURY">XF LUXURY ( 3 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF PORTFOLIO">XF PORTFOLIO ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF PREMIUM">XF PREMIUM ( 3 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XF SUPERCHARGED">XF SUPERCHARGED ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XJ SUPERCHARGED">XJ SUPERCHARGED ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XJ8-L">XJ8-L ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XJL PORTFOLIO">XJL PORTFOLIO ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JAGUAR&model=XK">XK ( 2 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">JEEP</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=COMMANDER">COMMANDER ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=GRAND CHEROKEE">GRAND CHEROKEE ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=LIBERTY">LIBERTY ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=JEEP&model=WRANGLER">WRANGLER ( 2 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">KIA</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=KIA&model=FORTE">FORTE ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">LAND ROVER</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=LR2">LR2 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=LR4">LR4 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER">RANGE ROVER ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER SPORT HSE">RANGE ROVER SPORT HSE ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER SPORT LUXURY">RANGE ROVER SPORT LUXURY ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LAND ROVER&model=RANGE ROVER SPORT SUPER CHARGED">RANGE ROVER SPORT SUPER CHARGED ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">LEXUS</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=ES330">ES330 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=ES350">ES350 ( 5 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=GS300">GS300 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=GS350">GS350 ( 4 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=GX460">GX460 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=IS250">IS250 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=LS430">LS430 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=LS460">LS460 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=RX300">RX300 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LEXUS&model=RX350">RX350 ( 4 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">LINCOLN</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LINCOLN&model=MKX">MKX ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=LINCOLN&model=NAVIGATOR">NAVIGATOR ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">MASERATI</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MASERATI&model=QUATTROPORTE">QUATTROPORTE ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">MAZDA</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MAZDA&model=CX-7">CX-7 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MAZDA&model=MX-5 MIATA">MX-5 MIATA ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">MERCEDES</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C230">C230 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C250">C250 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C280">C280 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C300 4MATIC">C300 4MATIC ( 3 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C300 4MATIC LUXURY">C300 4MATIC LUXURY ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=C300 4MATIC SPORT">C300 4MATIC SPORT ( 10 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=CL550">CL550 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=CLK350">CLK350 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=CLS550">CLS550 ( 5 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=E320">E320 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=E350">E350 ( 12 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=E430">E430 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=GL450">GL450 ( 6 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=GL550">GL550 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=GLK350">GLK350 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=ML350">ML350 ( 5 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=R350">R350 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=S400">S400 ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=S430">S430 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=S550">S550 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MERCEDES&model=SLK350">SLK350 ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">MINI</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=MINI&model=COOPER CLUBMAN">COOPER CLUBMAN ( 3 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">NISSAN</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=NISSAN&model=MURANO">MURANO ( 2 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">PONTIAC</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PONTIAC&model=GRAND PRIX">GRAND PRIX ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">PORSCHE</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=911">911 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=CAYENNE">CAYENNE ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=PANAMERA 4S">PANAMERA 4S ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=PORSCHE&model=PANAMERA S">PANAMERA S ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">SAAB</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=SAAB&model=9-3">9-3 ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=SAAB&model=9-3 ARC">9-3 ARC ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">TOYOTA</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=CAMRY">CAMRY ( 2 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=CAMRY SOLARA">CAMRY SOLARA ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=HIGHLANDER">HIGHLANDER ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=TACOMA">TACOMA ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=TUNDRA">TUNDRA ( 1 )</a></li>
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=TOYOTA&model=YARIS">YARIS ( 1 )</a></li>
+							</ul></li>
+				<li class="dropdown-submenu"><a href="#">VW</a>
+						<ul class="dropdown-menu">
+							<li><a href="/inventory/;jsessionid=8C05512774E4B5495C08283CF279D1B7?make=VW&model=NEW BEETLE">NEW BEETLE ( 1 )</a></li>
+							</ul></li>
+				</ul>
+		</div>
+		<!-- END Homepage Inventory Navigation -->
+	</div>
+</div><div class="container-footer footer-home">
+	<footer>
+		<div class="copyright">
+			<p>
+				&copy; Copyright 2013. &nbsp;Coast To Coast Imports. &nbsp;All rights reserved.&nbsp;&nbsp;<a href="#" id="disclaimerLink" data-toggle="popover"
+					data-placement="top" data-trigger="hover" data-original-title="Disclaimer">Disclaimer</a>
+			</p>
+		</div>
+		<div class="footer-links">
+			<p>
+				<a href="#" class="chat-icon icon-sprite sprite-chat">Click To Chat</a> <a href="/content/testimonials;jsessionid=8C05512774E4B5495C08283CF279D1B7"
+					class="icon-sprite sprite-testimonials">Client Testimonials</a> <a href="https://www.facebook.com/pages/Coast-To-Coast-Imports/153903097965482"
+					class="icon-sprite sprite-facebook">&nbsp;</a> <a href="" class="icon-sprite sprite-twitter">&nbsp;</a>
+			</p>
+		</div>
+	</footer>
+</div>
+<div id="disclaimerText" style="display: none;">
+		<p><span style="color: #666699; font-family: arial, helvetica, sans-serif; background-color: #ffffff;">*Internet Special/Discount Price may <em>NOT</em> be compatible with dealer sponsored or subsidized sub-prime financing; Internet discount price only applies to customers with approved credit. Furthermore, inventory is subject to prior sale and prices are subject to change without notice, cannot be combined with any other offer(s), do not include Taxes, Title Fees ($25), Documentation Fees ($150); To ensure your complete satisfaction, please contact us to verify accuracy. While we make every effort to present information that is accurate, errors may appear from time to time. However, it is based on data provided by the vehicle manufacturer and/or other sources; therefore, the information contained on this site should be used as a guide only and is not guaranteed. Under no circumstances Coast to Coast will we be liable for any inaccuracies, claims or losses of any nature.</span></p></div>
+</body>
+</html>

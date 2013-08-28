@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Show Cars Automotive</title>
+<meta name="keywords" content="Chevy, 348, 409, Chevrolet, 1958-1964, 1958,1964, performance, parts" />
+<meta name="description" content="Quality Chevy 348 - 409 Parts for 1958-1964 Chevrolet" />
+
+<style type="text/css">
+ol,ul { list-style:none;}
+#logo{display: none;}
+</style>
+
+ <link rel="stylesheet" type="text/css" href="css/carousel.css" />
+<link rel="stylesheet" type="text/css" href="jquery.horizontal.scroll.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/gridNavigation.css" />
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$('[placeholder]').focus(function() {  
+	var input = $(this); 
+	 if (input.val() == input.attr('placeholder')) {    
+	 	input.val('');    
+		input.removeClass('placeholder');  
+	}
+	}).blur(function() { 
+	 var input = $(this); 
+	  if (input.val() == '' || input.val() == input.attr('placeholder')) { 
+	     input.addClass('placeholder');   
+		 input.val(input.attr('placeholder'));  
+	}
+	}).blur().parents('form').submit(function() { 
+	 $(this).find('[placeholder]').each(function() {  
+	   var input = $(this);    
+	   if (input.val() == input.attr('placeholder')) {   
+	      input.val('');    
+	}  
+  })
+});
+
+</script>
+
+<script type="text/javascript" src="js/category-carousel.js"></script>
+<script type="text/javascript" src="js/touchwipe.js"></script>
+  <script type="text/javascript">
+			$(document).ready(function($){
+				$('#div-carousel').infiniteCarousel();
+				$('#div-carousel-logo').infiniteCarousel();
+			});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function() 
+{
+
+$("#edelbrock-home img").hover(
+function () {
+$(this).addClass('hover-shadow');
+ },
+function () {
+ $(this).removeClass('hover-shadow');
+  }
+);
+		$("#logo").fadeIn("slow");
+});
+</script>
+
+
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+function mycarousel_initCallback(carousel)
+{
+//this is the vendor carousel
+// Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+ // Pause autoscrolling if the user moves with the cursor over the clip.
+	carousel.clip.hover(function() {
+	carousel.stopAuto();
+    }, function() {
+    carousel.startAuto();
+    });
+    };
+    jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 5, //seconds between autoscroll
+        carouselWrap: 'circular',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+});
+</script>
+
+<!--the script & css for the homepage media content-->
+<script type="text/javascript" src="js/coin-slider.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="sc-styles.css" />
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="ie.css" />
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+if ( $.browser.msie ) {
+$.get("directory.php", function(data) {
+$('.tj_wrapper').css('overflow', 'hidden');
+$('.tj_gallery').append(data);
+ $('#tj_container').gridnav(); 
+ });
+ } else {
+$.get("directory.php", function(data) {
+$('.tj_wrapper').css('overflow', 'hidden');
+$('.tj_gallery').append(data);
+	$('#tj_container').gridnav({
+    rows    : 2,
+    navL    : '#tj_prev',
+    navR    : '#tj_next',
+    type    : {
+        mode        : 'sequpdown',  
+        speed       : 400,          
+        easing      : '',           
+        factor      : 50,           
+        reverse     : false        
+    }
+	});
+});
+}
+});
+</script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.gridnav.js"></script>
+</head>
+<body onLoad="P7_ExpMenu()" id="top">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=383659198374978";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="wrapper">
+  <div id="header">
+    	<div id="header-left">
+<a href="index.html"><img src="images/sc-parts-logo.png" width="259" height="263" alt="show-cars-logo" id="logo"  /></a>
+         <!--end #header-left--></div>
+         
+      
+   	<div id="header-right">
+        	<div id="top-info">
+           	<div id="welcome">
+<div style="float: left;">            
+<ul style="margin-left: 200px;">
+<li style="padding-top: 15px; margin-right: 15px"><a href="http://www.show-cars.com/cgi-bin/commerce.cgi?login">Login</a></li>		
+<li style="padding-top: 15px; margin-right: 15px"><a href="https://www.show-cars.com/cgi-bin/commerce.cgi?register" >Register</a></li>
+<li style="padding-top: 10px;"><a href="http://www.show-cars.com/cgi-bin/commerce.cgi?display=action"><img src="images/cart-icon.png" alt="view-cart" width="32" height="30" /></a></li>
+<li style="padding-top: 15px;"><a href="http://www.show-cars.com/cgi-bin/commerce.cgi?display=action">View Cart</a></li></ul></div>
+<ul style="float: right; margin-top: 5px; height: 26px;">
+<li style="float: right;  width: 180px; margin-top: 10px;"><form  name="form1" method="post" action="/cgi-bin/commerce.cgi">
+<input type="hidden"  name="defaction" value="search" />
+<input name="keywords" type="text" id="search-input" placeholder="Search Site" size="20"  >
+<input type="image" src="images/go-search-button.jpg" id="submit-search-all" name="search" alt="go"/>
+</form></li></ul></div>
+             <!--end #top-info--></div>
+             <div id="subtitle">
+             	<p style="text-align: left;">Show Cars specializes in quality reproduction parts and restoration of classic Chevrolets</p>
+			 <!--end #subtitle--></div>
+             <script type="text/javascript">
+
+$(window).load(function() { //start after HTML, images have loaded
+ 
+    var InfiniteRotator =
+    {
+        init: function()
+        {
+            //initial fade-in time (in milliseconds)
+            var initialFadeIn = 5000;
+ 
+            //interval between items (in milliseconds)
+            var itemInterval = 10000;
+ 
+            //cross-fade time (in milliseconds)
+            var fadeTime = 5000;
+ 
+            //count number of items
+            var numberOfItems = $('.rotating-item').length;
+ 
+            //set current item
+            var currentItem = 0;
+ 
+            //show first item
+            $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+ 
+            //loop through the items
+            var infiniteLoop = setInterval(function(){
+                $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+ 
+                if(currentItem == numberOfItems -1){
+                    currentItem = 0;
+                }else{
+                    currentItem++;
+                }
+                $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+ 
+            }, itemInterval);
+        }
+    };
+ 
+    InfiniteRotator.init();
+ 
+});</script>
+           <div id="rotating-item-wrapper">
+<img src="images/car-reflection-one.png" width="334px" height="189px" border="0" alt="car-one" class="rotating-item" />
+<img src="images/car-reflection-two.png" width="334px" height="189px" border="0" alt="car-two" class="rotating-item"/>
+<img  src="images/car-reflection-three.png" width="334px" height="189px" border="0" alt="car-three" class="rotating-item"/>
+<img  src="images/car-reflection-four.png" width="334px" height="189px" border="0" alt="car-four" class="rotating-item"/>
+<img  src="images/car-reflection-five.png" width="334px" height="189px" border="0" alt="car-five" class="rotating-item"/>
+<img  src="images/car-reflection-one.png" width="334px" height="189px" border="0" alt="car-six" class="rotating-item"/>
+
+</div>  
+        <!--end #header-right--></div>
+    <!--end #header--></div>
+<div id="top-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="catalog-request.html">Free Catalog</a></li>
+<li><a href="faqs.html">FAQs</a></li>
+<li><a href="information.html">Information</a></li>
+<li><a href="gallery">Photo Gallery</a></li>
+<li><a href="http://www.show-cars.com/cgi-bin/commerce.cgi?display=action">View Cart</a></li>
+<li><a href="contact-us.html">Contact Us</a></li>
+</ul>
+<!--end #top-nav--></div>
+
+<div class="clear"></div>
+
+<div id="container">
+
+<div id="sidebar">
+  <h4 style="padding-bottom: 5px; font-size: 20px; text-align: center;">Product Search</h4>
+<form  style="text-align: center;" method="post" action="/cgi-bin/commerce.cgi">
+         <input type="hidden" name="defaction" value="search" />
+         <input name="keywords" size="20" style="border: 1px solid #000;"/>
+         <br />
+         <input type="image" src="images/search-store.jpg" name="search" id="search-button" alt="search-store" width="97" height="27"/></form>
+         <a href="http://www.show-cars.com/cgi-bin/commerce.cgi?display=search"><p style="text-align: center; margin-bottom: 10px;">advanced search</p></a>
+<ul id="side-nav">
+     <li><a href="Edelbrock.html">Edelbrock Inventory</a></li>
+     <li><a href="01_Fuel_1.html">Fuel</a></li>
+     <li><a href="02_Engine_Ext_1.html">Engine External</a></li>
+     <li><a href="03_Engine-Int_01.html">Engine Internal</a></li>
+     <li><a href="04_Brakes.html">Brakes</a></li>
+     <li><a href="05_Clutch-Trans_01.html">Clutch &amp; Transmission</a></li>
+     <li><a href="06_Exhaust_01.html">Exhaust</a></li>
+     <li><a href="07_Cooling_01.html">Cooling &amp; Heating</a></li>
+     <li><a href="08_Glass_01.html">Glass</a></li>
+     <li><a href="09_Undercarriage_01.html">Undercarriage</a></li>
+     <li><a href="10_Steering_01.html">Steering &amp; Suspension</a></li>
+     <li><a href="11_Front-End_01.html">Front End</a></li>
+     <li><a href="12_Interior_01.html">Interior</a></li>
+     <li><a href="13_Rear-End_01.html">Rear Axle &amp; Drivetrain</a></li>
+     <li><a href="14_Doors_01.html">Doors</a></li>
+     <li><a href="15_Sheet-Metal_01.html">Sheet Metal</a></li>
+     <li><a href="16_Battery_01.html">Battery</a></li>
+     <li><a href="17_Decals_01.html">Decals</a></li>
+     <li><a href="18_Moulding_01.html">Molding, Emblems &amp; Lights</a></li>
+     <li><a href="19_Electric_01.html">Electrical</a></li>
+     <li><a href="20_Trunk_01.html">Trunk</a></li>
+     <li><a href="21_Accessories_01.html">Accessories</a></li>
+     <li><a href="22_Convertible_01.html">Convertible</a></li>
+     <li><a href="23_Literature_01.html">Literature</a></li>
+     <li><a href="25_Bolt_01.html">Bolts, Clips &amp; Screws</a></li>
+     <li><a href="26_Bumpers_01.html">Bumpers</a></li>
+     <li><a href="28_Weatherstripping_01.html">Weatherstripping</a></li>
+     <li><a href="29_Paint_01.html">Paint</a></li>
+     <li><a href="27_Misc_01.html">Miscellaneous</a></li>
+     <li><a href="UsedParts.html">Used Parts</a></li>
+     <br /> 
+    </ul>
+    
+
+<!--end #sidebar--></div>
+
+
+<div id="main-page">
+<div id="slideshow">
+<div id="mygallery" class="stepcarousel">
+ <div class="belt">
+ <div class="panel"><a href="http://www.show-cars.com/12_Interior_02.html#12.6701"><img src="images/ciadella-interior.jpg" alt="Interior Kits" title="interior-kits" width="451" height="227" /> </a></div> 
+<div class="panel"><img src="images/sema-nov-2013.jpg" alt="Find Show Cars on the SEMA-Map" title="SEMA Map" width="460px" height="265px" border="0" usemap="#Map" target="_blank">
+ <map name="Map">
+   <area shape="rect" coords="376,226,421,264" href="http://www.expocad.com/host/fx/sema/sema12/centralhall.html">
+ </map>
+      </div>
+<div class="panel">
+ <img src="images/specialize.jpg" alt="show-cars-specializes-in-chevy-reproduction-parts" title="Show Cars Specialization" width="451" height="227" />
+      </div>
+	  
+	  <div class="panel">
+ <a href="gallery"><div style="width: 25%; background-color: #000; color: #fff; float: left; padding-left: 4px; height: 260px; z-index: 5; position: relative; opacity: 0.8;">
+ <span style="margin: 10px; padding-left: 4px;">View Our Customer Pics</span></div> </a>
+ <img src="images/customer-pics-slide.jpg" width="468px" height="260px" style="z-index: 3; position: absolute; left: 0px;"/> 
+      </div>
+	  
+       <div class="panel">
+ <img src="images/rebuild.jpg" alt="Rebuild your 348 409 Engine with Show Cars Parts" title="Rebuild your 348 409" width="460" height="227" border="0" usemap="#Map2" />
+ <map name="Map2">
+   <area shape="rect" coords="457,111,521,182" href="http://www.facebook.com/pages/Show-Cars-Automotive-Inc/180567349797" target="_new">
+ </map>
+       </div>
+       <div class="panel" style="padding-left: 80px;"> 
+<video controls poster="http://www.show-cars.com/video/crash-poster.jpg" width="240" height="180">
+	<source src="http://www.show-cars.com/video/Carcrash_x264.mp4" type="video/mp4" />
+	<source src="http://www.show-cars.com/video/Carcrash.webm" type="video/webm" />
+	<source src="http://www.show-cars.com/video/Carcrash.ogv" type="video/ogg" />
+	<object type="application/x-shockwave-flash" data="http://flashfox.googlecode.com/svn/trunk/flashfox.swf" width="240" height="180">
+		<param name="movie" value="http://flashfox.googlecode.com/svn/trunk/flashfox.swf" />
+		<param name="allowFullScreen" value="true" />
+		<param name="wmode" value="transparent" />
+		<param name="flashVars" value="controls=true&amp;poster=http%3A%2F%2Fwww.show-cars.com%2Fvideo%2Fcrash-poster.jpg&amp;src=http%3A%2F%2Fwww.show-cars.com%2Fvideo%2FCarcrash_x64.mp4" />
+<img alt="Crash Test for a 1959 Bel Air vs 2009 Malibu" src="http://www.show-cars.com/video/crash-poster.jpg" width="320" height="180" title="Chevy Bel Air and a Chevy Malibu Crash Test" />
+	</object>
+</video>
+<p style="margin-left: -18px;">
+	<small><a href="http://www.show-cars.com/video/Carcrash_x264.mp4">MP4 format</a> | <a href="http://www.show-cars.com/video/Carcrash.ogv">Ogg format</a> | <a href="http://www.show-cars.com/video/Carcrash.webm">WebM format</a></small>
+</p>
+      </div>
+      
+  <div class="panel">
+  <a href="http://www.show-cars.com/23_Literature_01.html">
+ <img src="images/show-season.jpg" alt="Get ready for Classic Car show Season" title="Car Shows" width="451" height="227" /></a>
+      </div>
+
+</div><!--belt-->
+
+ </div><!--mygallery-->
+ <div class="clear"></div>
+
+<p id="mygallery-paginate" style="width: 250px; height: 10px; text-align:center; margin: auto; margin-top: 0;" >
+ <img src="images/open-circle.png" data-over="images/closed-circle.png" data-select="images/closed-circle.png" data-moveby="1" alt="slide-position" />
+ </p>
+<!--end #slideshow--></div>
+<br />
+<div class="clear"></div>
+<p style="margin-top: 15px; text-align: center; font-size: 13pt; color: #333333; font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-style:italic; ">All the Parts and Information You Need For Chevy 348-409 1958 to 1964 Chevrolet</p>
+<br />
+
+<div style="width: 710px; margin: auto;"><h3>58-64 Chevy Parts Categories</h3></div>
+
+<div id="div-carousel" class="infiniteCarousel">
+<div class="wrapper">
+<ul class="tablet-carousel">
+  <li><a href="02_Engine_Ext_1.html"><img src="images/engine-external-category.jpg" width="122px" height="117px" alt="external engine parts" title="Chevy External Engine Parts"/></a></li>
+  <li><a href="01_Fuel_1.html"><img src="images/engine-internal-category.jpg" width="122px" height="117px" alt="Chevrolet Internal Engine Parts" title="Internal Engine Parts"/></a></li>
+   <li><a href="02_Engine_Ext_1.html"><img src="images/fuel-category.jpg" width="122px" height="117px" alt="Fuel Lines" title="Fuel Line"/></a></li>
+  <li><a href="04_Brakes.html"><img src="images/brakes-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="05_Clutch-Trans_01.html"><img src="images/clutch-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="06_Exhaust_01.html"><img src="images/exhaust-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="07_Cooling_01.html"><img src="images/cooling-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="08_Glass_01.html"><img src="images/glass-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="09_Undercarriage_01.html"><img src="images/undercarriage-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="10_Steering_01.html"><img src="images/steering-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="11_Front-End_01.html"><img src="images/frontend-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="12_Interior_01.html"><img src="images/interior-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="13_Rear-End_01.html"><img src="images/rearend-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="14_Doors_01.html"><img src="images/doors-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="15_Sheet-Metal_01.html"><img src="images/sheetmetal-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="16_Battery_01.html"><img src="images/battery-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="17_Decals_01.html"><img src="images/decals-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="18_Moulding_01.html"><img src="images/molding-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="19_Electric_01.html"><img src="images/electrical-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="20_Trunk_01.html"><img src="images/trunk-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="21_Accessories_01.html"><img src="images/accessories-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="22_Convertible_01.html"><img src="images/convertible-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="23_Literature_01.html"><img src="images/literature-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="25_Bolt_01.html"><img src="images/bolts-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="26_Bumper_01.html"><img src="images/bumper-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="28_Weatherstripping_01.html"><img src="images/weatherstripping-category.jpg" width="122px" height="117px" /></a></li>
+  <li><a href="29_Paint_01.html"><img src="images/paint-category.jpg" width="122px" height="117px" /></a></li> 
+</ul>
+</div>
+</div>
+
+<a href="http://www.show-cars.com/cgi-bin/commerce.cgi?search=action&sortkey=order&sortorder=descending" style="display: block; clear: both;"><h3 style="padding-left: 25px; color: #990000; font-size: 20px; width: 690px;">View our Newest Inventory</h3></a>
+<div id="newparts"> 
+<div id="tj_container" class="tj_container">
+					<div class="tj_nav">
+						<span id="tj_prev" class="tj_prev">Previous</span>
+						<span id="tj_next" class="tj_next">Next</span>
+					</div>
+					<div class="tj_wrapper">
+						<ul class="tj_gallery" >
+
+	</ul>
+					</div>
+				</div>
+</div> 
+<div id="home-blocks" style="">
+
+<div id="edelbrock-home" style="">
+	<br /> 
+    <a href="http://www.show-cars.com/Edelbrock.html" style="border: none;">
+	<p style="margin:auto; text-align: center; font-family: 'Palatino Linotype','Book Antiqua',Palatino,FreeSerif,serif; font-size: 16px;">
+	Proudly an Authorized <b>Edelbrock Dealer!</b></p> 
+	<br /> 
+      <img src="images/view-edelbrock-link.png" width="130px" height="49px" alt="view Edelbrock inventory" style="margin: auto;">
+    </a>
+    <br /> 
+      <p style="margin: auto;"><small><a href="http://www.show-cars.com/Edelbrock.html"> view our Edelbrock inventory</a></small></p>
+</div>
+
+
+
+<div id="catalog-home" style="">
+<br />
+	<a href="2013Catalog.pdf" style="border: none;">
+	  <img src="images/download-catalogPDF.jpg" width="213px" height="103px" alt="download-catalog" />
+    </a>
+	<a href="InteractiveCatalog.html" style="font-weight: bold; size: 15px; text-transform: uppercase; font-family: 'Palatino Linotype','Book Antiqua',Palatino,FreeSerif,serif;">View our 2013 Catalog</a>
+    <a href="http://www.show-cars.com/cgi-bin/commerce.cgi?display=search">
+      <img src="images/advanced-search-button.png" width="213px" height="52px" alt="advanced-search" />
+    </a>
+</div>
+
+<div id="social-home" style="">
+	<br /> 
+	<p style="line-height: 1em;">Connect with Us!</p>
+	<br /> 
+    <div style="width: 128px; margin: auto;">
+    <a href="http://www.facebook.com/pages/Show-Cars-Automotive-Inc/180567349797" style="border: none;" >
+    	<img style="float: left; padding: 0px 3px 3px 3px;" src="images/facebook-link.png" width="53" height="62" alt="connect-with-us-on-facebook" />
+    </a>
+<fb:like href="https://www.facebook.com/pages/Show-Cars-Automotive-Inc/180567349797?fref=ts" send="true" layout="box_count" width="450" show_faces="true"></fb:like>
+    
+    </div>
+    
+</div>
+
+</div>
+
+<div class="clear"></div>
+<br />
+<div><p style="width: 660px; text-align: justify; margin: auto; margin-bottom: 0;">Show Cars Automotive offers top quality name brands at wholesale prices. Show Cars Automotive 348 and 409 Performance Engine Kits are made from the highest quality parts from some of the most respected names in the auto parts industry. You can be assured that the finest quality and workmanship goes into every kit. </p></div>
+
+<br/>
+<div id="table-two" style="float: right; margin-right: 15px; width: 716px; padding-bottom: 20px;">
+<table cellspacing="0">
+<tr>
+<td>
+<img src="images/magazine-articles.jpg" width="425" height="205" usemap="#awardMap" id="award" alt="magazine-articles"/>
+</td>
+
+<td>
+<img src="images/awards.jpg" width="291" height="205" usemap="#Map5" alt="awards"/>
+</td>
+
+  </tr>
+</table>
+
+</div><!--table-two-->
+
+<br /> 
+
+
+  <!--end #main-page--></div>
+
+<div class="clear"></div>
+<!--end #container--></div> 
+
+
+<map name="awardMap" id="awardMap">
+  <area shape="rect" coords="209,100,395,127" href="http://www.hotrod.com/techarticles/engine/hrdp_0911_chevy_w_series_engine_build/" alt="hotrod-article" />
+  <area shape="rect" coords="22,68,199,182" href="http://www.show-cars.com/Diagrams/SuperChevy.html" alt="SuperChevy-Feature-Article" />
+</map>
+
+<map name="Map5" id="Map5">
+  <area shape="rect" coords="135,139,272,165" href="gallery.php" alt="ShowCars-Pics" />
+</map>
+<div id="footer">
+  <!--<div id="carousel">
+<div id="Carouselwrap" >-->
+<div id="div-carousel-logo" class="infiniteCarousel">
+<div class="wrapper">
+<ul class="tablet-carousel">
+       <!--<ul class="jcarousel-skin-tango" id="mycarousel" style="margin-bottom: 0; margin: auto;" >-->
+        <li><img src="images/callies.jpg" width="48" height="25" alt="callies-logo" /></li>
+        <li><img src="images/americanwire.jpg" width="68" height="24" alt="americanwire-logo" /></li>
+        <li><img src="images/compcams.jpg" width="97" height="24" alt="compcams-logo" /></li>
+        <li><img src="images/DragonSlayer-Logo.jpg" width="93" height="25" alt="ds-logo" /></li>
+        <li><img src="images/hooker-headers.jpg" width="36" height="27" alt="hooker-logo" /></li>
+        <li><a href="http://www.eaglerod.com/"> <img  src="images/Eaglewebedit.jpg" width="50" height="24" alt="eagle-logo" /></a></li>
+        <li><a href="http://www.edelbrock.com/"><img  src="images/Edelbrock.jpg" width="66" height="26" alt="edelbrock-logo" /></a></li>
+        <li><a href="http://www.melling.com/"><img  src="images/mellingEP.jpg" width="67" height="25" alt="melling-logo" /></a> </li>
+        <li><a href="http://www.griffinrad.com/"> <img  src="images/Griffin.jpg" width="90" height="25" alt="griffin-logo" /></a> </li>
+        <li><a href="http://www.sandersonheaders.com/"> <img  src="images/sandersonheaders.jpg" width="46" height="25" alt="sanderson-logo" /></a></li>
+        <li><a href="http://www.cloyes.com/"><img  src="images/cloyes.jpg" width="54" height="25" alt="cloyes-logo" /></a></li>
+        <li><a href="http://www.manleyperformance.com/"> <img  src="images/logo_manley.jpg" width="88" height="24" alt="manley-logo" /></a> </li>
+        <li><a href="http://www.originalheaders.com/"> <img  src="images/dougorigheaders.jpg" width="58" height="25" alt="doug-logo" /></a></li>
+        <li><a href="http://www.americanautowire.com/factoryfit.html"> <img  src="images/factoryfit.jpg" width="50" height="25" alt="factoryfit-logo" /></a> </li>
+        <li><a href="http://www.scatcrankshafts.com/"><img  src="images/scat_logo_small.jpg" width="46" height="24" alt="scat-logo" /></a></li>
+        <li><a href="http://www.iskycams.com/"><img  src="images/Isky.jpg" width="92" height="24" alt="isky-logo" /></a></li>
+        <li><a href="http://www.melling.com/Aftermarket/HighPerformance.aspx"><img  src="images/mellingSP.jpg" width="51" height="25" alt="melling-logo" /></a> </li>
+        <li><a href="http://www.rosspistons.com/"><img  src="images/Ross.jpg" width="75" height="25" alt="ross-logo" /></a> </li>
+        <li><a href="http://102ironworks.com"><img  src="images/ironworks.jpg" width="32" height="26" alt="ironworks-logo" /></a> </li>
+        <li><a href="http://www.scorpionracingproducts.com/"> <img  src="images/scorpionracing.jpg" width="43" height="24" alt="scorpion-logo" /></a></li>
+        <li><a href="http://www.soffseal.com/store/main.aspx"><img  src="images/SoffSeal.jpg" width="64" height="24" alt="soffseal-logo" /></a></li>
+        <li><a href="http://www.trimparts.com/"><img  src="images/TrimPartsweb.jpg" width="36" height="26" alt="trimparts-logo" /></a> </li>
+        <li><a href="http://www.prothane.com/"> <img  src="images/prothane.jpg" width="105" height="24" alt="prothane-logo" /></a> </li>
+        <li><a href="http://www.hilborninjection.com/"> <img  src="images/Hilborn_Logo.jpg" width="60" height="25" alt="hilborninjection-logo" /></a></li>
+        <li> <a href="http://www.flamingriver.com/"><img  src="images/flamingriver.jpg" width="43" height="26" alt="flamingriver-logo" /></a> </li>
+        <li><a href="http://www.wilwood.com/"><img  src="images/wilwood.jpg" width="52" height="27" alt="wilwood-logo" /></a></li>
+        <li><a href="http://www.dynacorn.com/index.html"><img  src="images/dynacorn.jpg" width="124" height="27" alt="dynacorn-logo" /></a></li>
+        <li><a href="http://www.worldcastings.com/"><img  src="images/WorldProducts.jpg" width="72" height="26" alt="worldcastings-logo" /></a></li>
+        <li><a href="http://www.strangeengineering.net/"><img  src="images/strange.jpg" width="72" height="26" alt="strange-logo" /></a></li>
+        <li><a href="http://www.marchperformance.com/"><img  src="images/marchperformancepulleys.jpg" width="100" height="39" alt="marchperformance-logo" /></a></li>
+        <li><a href="http://www.billetspecialties.com/"><img  src="images/billet.jpg" width="63" height="24" alt="billet-logo" /></a></li>
+        <li><a href="http://www.kb-silvolite.com/icon/index.html"><img  src="images/icon.jpg" width="63" height="24" alt="icon-logo" /></a></li>
+        <li><a href="http://www.dakotadigital.com/"><img  src="images/dakotadigital.jpg" width="52" height="24" alt="dakotadigital-logo" /></a></li>
+        <li><a href="http://www.powermastermotorsports.com/"><img  src="images/powermaster.jpg" width="58" height="24" alt="powermaster-logo" /></a></li>
+        <li><a href="http://www.currieenterprises.com/"><img  src="images/currie.jpg" width="51" height="24" alt="currieenterprises-logo" /></a></li>
+       
+        <li><a href="http://arp-bolts.com/"><img  src="images/arp.jpg" width="62" height="24" alt="arp-logo" /></a></li>
+        <li><a href="http://hushmat.com/"><img  src="images/hushmat.jpg" width="60" height="24" alt="hushmat-logo" /></a></li>
+        <li><a href="http://www.lokar.com/"><img  src="images/lokar.jpg" width="55" height="30" alt="lokar-logo" /></a></li>
+        <li><a href="http://www.tciauto.com/"><img  src="images/tci.jpg" width="34" height="24" alt="tci-logo" /></a></li>
+        <li><a href="http://www.ppg.com/coatings/autooem/Pages/default.aspx"><img  src="images/ppg.jpg" width="34" height="24" alt="ppg-logo" /></a></li>
+        <li><a href="http://artmorrison.com/homepage.html"><img  src="images/morrison.jpg" width="62" height="24" alt="morrison-logo" /></a></li>
+        <li><a href="http://www.iedls.com/"><img  src="images/driveline.jpg" width="172" height="24" alt="driveline-logo" /></a></li>
+       </ul>
+      </div><!--Carouselwrap--></div><!--carousel-->
+<!--end #footer--></div>
+
+<div id="bottom-nav">
+<ul> 
+<li><a href="Book-of-Numbers.html">Book of Numbers</a></li>
+<li><a href="DiagramsandIllustrations.html">Diagrams and Illustrations</a></li>
+<li><a href="links.html">Links</a></li>
+<li><a href="catalog-index.html">Catalog Index</a></li></ul>
+
+<!--end #bottom-nav--></div>
+<div class="clear"></div>
+
+
+<div class="clear"></div>
+<div id="bottom-info"><br />
+<div id="contact-info">
+<ul style="margin-bottom: 0"> 
+	<li>Order Desk: 507-233-1958</li>
+    <li>Phone: 507-354-1958</li>
+    <li><a href="mailto:showcars@newulmtel.net">ShowCars@newulmtel.net</a></li>
+	<li><a href="http://www.show-cars.com/store">Check out new site -----></a> </li>
+    </ul><div class="clear"></div>
+	<br /> 
+<p style="color: #900; font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size: 12px; text-align: center;">*Please note that all prices are subject to change</p></div>
+
+<!--end #bottom-info--></div>
+
+
+<!--end #wrapper--></div>
+
+
+ 
+<script type="text/javascript">
+
+stepcarousel.setup({
+ galleryid: 'mygallery', //id of carousel DIV
+ beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+ panelclass: 'panel', //class of panel DIVs each holding content
+ autostep: {enable:true, moveby:1, pause:7000},
+ panelbehavior: {speed:500, wraparound:true, wrapbehavior:'slide', persist:true},
+ defaultbuttons: {enable: true, moveby: 1, leftnav: ['images/slide-left.jpg', -70, 100], rightnav: ['images/slide-right.jpg', 20, 100]},
+ statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+ contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
+ })
+
+</script>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11198495-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

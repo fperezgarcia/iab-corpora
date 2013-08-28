@@ -1,0 +1,2179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+	<!-- Core CSS and JS files for site -->
+    	<!-- CSS for generic YUI -->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+
+	<!-- CSS for FEG Home Page -->
+	<link rel="stylesheet" type="text/css" href="/feg/includes/home.css">
+    
+    <!-- CSS for Top Nav Mega Menu -->
+    <link rel="stylesheet" href="/feg/includes/mainmenu.css" type="text/css" media="screen" >
+
+	<!-- CSS for left navigation and main content -->
+	<link rel="stylesheet" type="text/css" href="/feg/includes/main-content.css">
+	<link rel="stylesheet" type="text/css" href="/feg/includes/left-nav.css">
+    
+    <!-- CSS for Breadcrumbs -->
+	<style type="text/css">
+		.breadcrumbs{font-size: 93%; color:#666666; padding-bottom: .308em; *padding-bottom: .3em;}
+		.breadcrumbs a:visited{color:#000099}
+	</style>
+
+	<!-- Dependency source files -->
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/utilities/utilities.js"></script>
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/animation/animation-min.js"></script>
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/container/container-min.js"></script>
+
+	<!-- Menu source file -->
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/menu/menu-min.js"></script>
+
+	<!-- Script for Mega-Menu -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/feg/includes/jquery.megamenu.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#megamenu").megamenu();
+			$('#megamenu').show();
+        });
+    </script>
+   
+      
+    <!-- CSS AND JS INCLUDES FOR ACCORDIONS, TABS, CAROUSELS, ETC. HERE --> 
+    <!-- include file="includes/accordion-yui3.html" -->
+    <!-- include file="includes/rounded-tabs.html" -->
+    <!-- include file="includes/carousel.html" -->
+    
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2/build/tabview/assets/skins/sam/tabview.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/button/assets/skins/sam/button.css" />
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/element/element-min.js"></script>
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/tabview/tabview-min.js"></script>  
+    <script type="text/javascript" src="http://yui.yahooapis.com/2.9.0/build/button/button-min.js"></script>
+    
+    
+    <!-- ADD LOCAL STYLES HERE --> 
+	<style type="text/css">
+		#sbs table td, #sbs table th {margin: 0; padding: 0;} 
+		#sbs .allTabs {padding-bottom: 0;}  
+		#sbs .allTabs td {border-left: none; text-align: center; font-size: .85em; padding: 5px 3px;}
+        #sbs .allTabs td.photo {padding-left: 0; padding-right: 0;}
+		#sbs .allTabs th {color:#666666; padding: 5px 3px; font-size: .85em; font-weight: 600; text-align: left;}
+		#sbs .allTabs table {padding-bottom: 0;}
+		#sbs .specs {font-size:.85em; color:#333333;}
+		#sbs .yui-content {padding-left: 0; padding-top: 0;}
+		#sbs .yui-content th {color:#666666; padding: 5px 3px; font-size: .85em; font-weight:600; border: solid 1px #cccccc; text-align: left;}
+		#sbs .yui-content td {font-size: .85em; border-bottom: solid 1px #cccccc; border-top:none; text-align: center;}
+		#sbs sup {vertical-align: super}
+		#sbs .even {background-color:#f6f6f6}
+		#sbs .valignTop {vertical-align: top;}
+		#sbs .rowGroup {background: url(yui270/accordionview/assets/skins/sam/sprite.png) repeat-x; border: #cccccc thin solid; background-position:0 -1520px; text-align: center; padding-top: 10px; padding-bottom: 4px; color:#ffffff}
+		#sbs .safetyTable th {background-color: #efefef; padding: 2px; text-align:center;}
+		#sbs th.safetyModel {background-color: #2647A0; color:#ffffff}
+		#sbs .safetyTable td {font-weight: 300;}
+		#sbs .safetyTable tr {border: solid 1px #cccccc;}
+		#sbs .yourMpg {font-size: 1.4em; color: #0066ff; font-weight:600;}
+		#sbs .combined {font-size: 1.5em; color: #990000; font-weight:600; text-align: center;}
+		#sbs div.mpgLeft {float: left; width: 25%; margin-left: 15px; margin-right: 0; padding-left: 5px; padding-top:0.1em; margin-bottom: 5px; font-size: 1.3em; color: #003366; font-weight:600;}
+		#sbs div.mpgLeft p {text-align: center; text-indent: 0; font-size:.7em; color:#333333; font-weight:300;}
+		#sbs div.mpgRight{float: right; width: 25%; margin-right: 15px; margin-left: 0; padding-right: 5px; padding-top:0.1em; margin-bottom: 5px; font-size: 1.3em; color: #003366; font-weight:600;}
+		#sbs div.mpgRight p {text-align: center; text-indent: 0; font-size:.7em; color:#333333; font-weight:300;} 
+		#sbs .barrels img {padding-top:5px; padding-bottom:5px;}
+		#sbs .barrels td {border-bottom: solid 1px #ffffff; border-top: solid 1px #ffffff;}
+		#sbs .barrelsLabel {font-size:1.2em; color:#2647A0; font-weight: bold; padding-bottom: 0;}
+		#sbs .ghgLabel {font-size:1.2em; color:#333333;	font-weight: bold;}
+		#sbs .footnote {font-size:.85em; font-weight:300;}
+		#sbs th.colheader, #sbs div.colheader {color: #036; font-size: 12px; font-family: Verdana, Helvetica, sans-serif; padding:2px; text-align: center; font-variant: small-caps; font-weight:600;}
+		#sbs td.altfuel, #sbs th.altfuel {background:#FFFFCC;}
+		#sbs th.mpge {border-bottom: dashed #cccccc 1px;}
+		#sbs td.electricity {background-color: #FFF;}
+		#sbs td.mpge, #sbs th.mpge {border-bottom:dashed #cccccc 1px;}
+		#sbs td.kw {vertical-align:top;}
+		#sbs td.kw, #sbs th.kw {border-top:dashed #cccccc 1px;}	
+		#sbs td.econRow2, #sbs th.econRow2{border-top:dashed #cccccc 1px; padding: 3px;}
+		#sbs td.econRow1, #sbs th.econRow1{border-bottom:dashed #cccccc 1px; padding: 3px;}	
+		#sbs span.personalize {background:#214197 url(yui270/build/assets/skins/sam/sprite.png) repeat-x left -1300px; color:#fff; color:#000; text-decoration:none; padding:0.2em 0.5em; border:solid 1px #a3a3a3;}
+		#sbs table.trucks .left-column, #sbs table.cars .left-column {width: 200px;}
+		#sbs table.trucks .data-column, #sbs table.cars .data-column {width: 180px;}
+		#sbs .yui-navset {}
+		#sbs ul {margin: 0;}
+		#sbs table td, #sbs table th {border-color: #ccc; vertical-align: middle; padding: 3px;}
+		#sbs .yui-content .rowGroup, #sbs .allTabs th.veh-name {text-align: center;}
+		#sbs ul li {margin: 0 .2em 0 0; padding: 1px 0 0; line-height: 1em;}
+		#sbs p {margin-bottom: 0;}
+		#sbs .allTabs .msrp, #sbs .allTabs .config {border-top: 1px solid #ccc;}
+        #sbs ul#main-tab li {border: medium #fff solid; width: 90px; margin: 0 15px 0 0; *margin: 0 10px 0 0; vertical-align: middle; padding: 4px 2px 1px 2px;}
+        #sbs ul#main-tab li.selected {border-color: #7099cc;}
+        #sbs ul#main-tab li a {background: none; border: none; margin-right: auto; margin-left: auto; top: 0;}
+        #sbs ul#main-tab li a em {font-style: normal; font-size: 85%; border: none; padding: 0; text-align: center; font-weight: bold; color: #666; margin-left: auto; margin-right: auto;}
+        #sbs ul#main-tab li.selected a em {font-style: normal; font-size: 85%; color: #003366; text-align: center; font-weight: bold; border: none; padding: 0; margin-left: auto; margin-right: auto;}
+        #sbs ul#main-tab img {margin-left: auto; margin-right: auto;}
+        #sbs #pick-veh ul {margin: 20px 0 10px 0;}
+        .ev-header {margin-left: auto; margin-right: auto; padding: 3px 0 3px 0; background-image:url(images/findacar/greenbackground.jpg); text-align: center; font-weight:500; color:#ffffff; width: 150px;}
+        #sbs .allTabs td img {padding: 0; margin: 0;}
+        #sbs td.mpge {padding-left: 0; padding-right: 0;}
+        #sbs #main-tab li {text-align: center;}
+        #sbs .yui-content th.personalize {font-weight: normal; font-size: 100%; text-align: center;}
+        #main-content .yui-navset em {font-style: normal}
+	</style>  
+    
+    <!--[if lte IE 7]>
+    <style type="text/css">
+    	#sbs table .left-column {width: 214px;}
+        #sbs .allTabs .data-column {width: 166px;}
+    </style>
+    <![endif]-->
+       
+    <!-- ADD LOCAL SCRIPT HERE --> 
+
+    
+    <title>Electric Vehicles: Compare Side-by-Side</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="Fuel Economy, Electric Vehicles, EPA, Fuel Efficiency">
+    <meta name="description" content="EPA Fuel Economy Estimates for 2011 Electric Vehicles">
+
+  
+</head>
+<body class="yui-skin-sam">
+<div id="doc4" class="yui-t2">
+  <!-- Skip navigation for accessbility -->
+<div class="skipnav"><a href="#content">Skip to main content</a></div>
+
+<!--(50% each column) for sponsors below-->
+<div class="sponsor">
+	<div class="yui-g">
+		<div class="yui-u first">
+			<a href="http://www.eere.energy.gov" target="_parent"><img src="http://www.fueleconomy.gov/feg/images/home/energy.gif" alt="U.S. Department of Energy - Energy Efficiency and Renewable Energy" width="224" height="34"></a>
+		</div>
+  		<div class="yui-u" style="text-align:right; padding-bottom:0">
+			<a href="http://www.epa.gov/otaq/" target="_parent"><img src="http://www.fueleconomy.gov/feg/images/home/EPAheadersm2.gif" alt="U.S. Environmental Protection Agency - Office of Transportation and Air Quality" width="300" height="34"></a>
+        </div>
+    
+	</div>
+</div>
+<!-- end sponsor -->
+
+ 
+<!-- Start banner & banner menu -->    
+<div id="hd" role="banner">
+    <div class="yui-g">
+        <div class="yui-u first">
+            <h1><a href="http://www.fueleconomy.gov" target="_parent"><img src="http://www.fueleconomy.gov/feg/images/home/fueleconomy.jpg" alt="www.fueleconomy.gov - the official government source for fuel economy information" width="462" height="64"></a></h1>	  
+        </div>
+        <div class="yui-u" style="text-align:right; padding-bottom:0">
+            <div class="headerNav"><a href="http://fueleconomy.gov/m">Mobile</a> | <a href="http://www.fueleconomy.gov/feg/esIndex.shtml">Espa&ntilde;ol</a> |<a href="http://www.fueleconomy.gov/feg/sitemap.shtml">Site Map</a> | <a href="http://www.fueleconomy.gov/feg/links.shtml">Links</a> | <a href="http://www.fueleconomy.gov/feg/info.shtml">FAQ</a> | <a href="http://www.fueleconomy.gov/feg/motorweek.jsp">Videos</a> | <a href="http://www.fueleconomy.gov/feg/contacts.shtml">Contacts</a></div>
+        </div>
+    </div>
+    <!-- Start megamenu -->
+
+    <ul id="megamenu" class="megamenu" style="display:none">
+        <li>
+            <a href="javascript:void(0)">Find a Car</a>
+            <div class="submenu" style="width: 56.154em; *width: 54em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Searches</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Find a Car &ndash; Home</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/Find.do?action=sbsSelect">Compare Side by Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/powerSearch.jsp">Power Search</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/make.shtml">Search by Make</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/alternatives.shtml">Cars That Don't Need Gasoline</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/smartWay.jsp">Find a SmartWay Vehicle</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/best-worst.shtml">Best and Worst Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/mostViewed.shtml">Today's Most Viewed Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/printGuides.shtml">Print the Guide</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Find a Car &ndash; Home</a></h3>
+                    <div class="img-caption" style="width: 15.385em; height: 14.23em; *width: 15em; height: 13.875em;">
+                        <a href="http://www.fueleconomy.gov/feg/findacar.shtml">
+                            <img class="img-caption" src="/feg/images/topnav/findacar2_mm.jpg" alt="">
+                        </a>
+                        <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Find a fuel efficient vehicle that meets your needs</a></li>
+                        </ul>
+                  	</div>
+                </div>
+    
+                <div class="pnlSubmenu"  style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/printGuides.shtml">Print the Guide</a></h3>
+                    <div class="img-caption" style="width: 15.385em; height: 14.23em; *width: 15em; height: 13.875em;">
+                        <a href="http://www.fueleconomy.gov/feg/printGuides.shtml">
+                            <img src="/feg/images/topnav/guide-cover-partial-2013.jpg" alt="2013 Fuel Economy Guide">
+                        </a>
+                        <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/printGuides.shtml">Guides available back to the 2000 model year</a></li>
+                      </ul>
+                  	</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </li>
+    
+        <li>
+            <a href="javascript:void(0)">Save Money &amp; Fuel</a>
+            <div class="submenu" style="width: 70em; *width: 67em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/drive.shtml">Gas Mileage Tips</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/driveHabits.shtml">Driving More Efficiently</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/maintain.shtml">Keeping Your Car in Shape</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/planning.shtml">Planning and Combining Trips</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/choosing.shtml">Choosing a More Efficient Vehicle</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/moinfo.shtml">More Information</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/taxcenter.shtml">Tax Incentives</a></h3>
+                    <ul> 
+                        <li><a href="http://www.fueleconomy.gov/feg/taxevb.shtml">Electric Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxphevb.shtml">Plug-in Hybrids</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_hybrid.shtml">Hybrids</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxLeanburn.shtml">Diesels</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_afv.shtml">Alternative Fuel Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxfaqs.shtml">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/gasprices/index.shtml">Gasoline Prices</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/gasprices/states/index.shtml">Local Prices</a></li>
+                        <li><a href="http://fuelgaugereport.aaa.com/?redirectto=http://fuelgaugereport.opisnet.com/index.asp">State and Metro Area Prices</a></li>
+                        <li><a href="http://www.eia.gov/oog/info/gdu/gasdiesel.asp">National &amp; Regional Prices</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/gasprices/faq.shtml">Questions About Gas Prices</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3>Cost Calculators</h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/savemoney.shtml">Fuel Savings Calculator</a></li>
+                        <li><a href="http://www.fueleconomy.gov/trip">Trip Calculator</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybridCompare.jsp">Can a Hybrid Save Me Money?</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/Find.do?action=phev1Prompt">My Plug-in Hybrid Calculator</a></li>
+                    </ul>   
+                </div>
+                <div style="clear: both"></div>
+            </div><!-- submenu -->
+        </li>
+    
+        <li>
+            <a href="javascript:void(0)">Benefits</a>
+            <div class="submenu" style="width: 43.846em; *width: 43.7em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/why.shtml">Why is fuel economy important?</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/climate.shtml">Climate Change</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/oildep.shtml">Oil Dependence Costs</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/consres.shtml">Sustainability</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/savemoney.shtml">Save Money</a></li>
+                    </ul>
+                </div>
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <div class="img-caption" style="width: 19.23em; *width: 18.75em">
+                        <a href="http://www.fueleconomy.gov/feg/climate.shtml">
+                            <img src="/feg/images/topnav/HouseholdCO2Pie_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      	<ul>
+                    		<li><a href="http://www.fueleconomy.gov/feg/climate.shtml">Vehicles produce about half of the greenhouse gases from a typical U.S. household.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </li>
+        <li>
+		<a href="javascript:void(0)">My&nbsp;MPG</a>
+            <div class="submenu" style="width: 42.3em; *width: 41.25em;">
+			<div class="pnlSubmenu">
+            	<h3><a href="https://www.fueleconomy.gov/mpg/MPG.do">My MPG - Home</a></h3>
+                    <div class="img-caption" style="width: 15.385em;  height: 16.08em; *width: 15em; *height: 15.68em;">
+                    <a href="https://www.fueleconomy.gov/mpg/MPG.do">
+                            <img src="/feg/images/topnav/fuel_pump_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      	<ul>
+                            <li><a href="https://www.fueleconomy.gov/mpg/MPG.do">We can help you calculate and track your fuel economy.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/mpg/MPG.do?action=browseList">MPG Estimates from Drivers Like You!</a></h3>
+                    <div class="img-caption" style="width: 20.69em;  height: 16.08em; *width: 20.12em; *height: 15.68em;">
+                        <a href="http://www.fueleconomy.gov/mpg/MPG.do?action=browseList">
+                            <img src="/feg/images/topnav/my-mpg-graph.gif" alt="" class="img-caption">
+                    </a>
+                </div>
+            </div>
+            
+            <div style="clear: both"></div>
+        </div>
+	</li>
+        <!-- Advanced Vehicles and Fuels -->
+        <li>
+            <a href="javascript:void(0)">Advanced Vehicles &amp; Fuels</a>
+            <div class="submenu" style="width: 70.2em; *width: 70em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/hybrids.jsp">Hybrids</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybrids.jsp">Compare Side by Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybridtech.shtml">How Hybrids Work</a></li>
+                    	<li><a href="http://www.fueleconomy.gov/feg/hybridCompare.jsp">Can a Hybrid Save Me Money?</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybrid_news.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_hybrid.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybrid_links.shtml">Links</a></li>
+                    </ul>
+    
+                    <h3 class="stacked"><a href="http://www.fueleconomy.gov/feg/phevsbs.shtml">Plug-In Hybrids</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/phevsbs.shtml">Compare Side by Side</a></li>        
+                        <li><a href="http://www.fueleconomy.gov/feg/Find.do?action=phev1Prompt">My Plug-in Hybrid Calculator</a></li>        
+                        <li><a href="http://www.fueleconomy.gov/feg/phevtech.shtml">About Plug-in Hybrids</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/phevnews.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxphevb.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/phevlinks.shtml">Links</a></li>
+                    </ul> 
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/evsbs.shtml">Electric Vehicles</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/evsbs.shtml">Compare Side by Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/evtech.shtml">About Electrics</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/evnews.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxevb.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/evlinks.shtml">Links</a></li>
+                    </ul>
+                    
+                    <h3 class="stacked"><a href="http://www.fueleconomy.gov/feg/flextech.shtml">Flex-Fuel Vehicles</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/flextech.shtml">Flex-Fuel Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/flexlinks.shtml">Links</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/diesels.jsp">Diesels</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/diesels.jsp">Compare Side-by-Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/di_diesels.shtml">About Diesels</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/dieselnews.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/lowsulfurdiesel.shtml">Ultra-Low Sulfur Diesel</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/biodiesel.shtml">Biodiesel</a></li> 
+                        <li><a href="http://www.fueleconomy.gov/feg/taxLeanburn.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/diesellinks.shtml">Diesel Links</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/fcv_sbs.shtml">Fuel Cell Vehicles</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_PEM.shtml">How They Work</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_benefits.shtml">Benefits and Challenges</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_sbs.shtml">Fuel Economy</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_whatsnew.jsp">Videos </a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_links.shtml">Fuel Cell Links</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/current.shtml">Alternative Fuels</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/current.shtml">Alternative Fuels</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/ethanol.shtml">Ethanol</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/bifueltech.shtml">Natural Gas</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/lpg.shtml">Propane</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hydrogen.shtml">Hydrogen</a></li> 
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_afv.shtml">Tax Incentives</a></li>  
+                    </ul>
+                </div>
+    
+                <div style="clear: both"></div>
+    
+            </div><!-- submenu -->
+        </li><!-- End of Advanced Vehicles and Fuels -->
+    
+        <li>
+            <a href="javascript:void(0)">About EPA Ratings</a>
+            <div class="submenu" style="width: 72.3em; *width: 71.5em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/label/">New Window Sticker</a></h3>
+    
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/label/">About the New Label</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/label/calculator.jsp">Beyond Tailpipe Emissions</a></li>
+                        <li><p>Sample Labels:</p>
+                            <ul style="margin-left: 1em; *margin-left: .975em;">
+                                <li><a href="http://www.fueleconomy.gov/feg/label/learn-more-gasoline-label.shtml">Gasoline Vehicles</a></li>
+                                <li><a href="http://www.fueleconomy.gov/feg/label/learn-more-PHEV-label.shtml">Plug-in Hybrid Vehicles</a></li>
+                                <li><a href="http://www.fueleconomy.gov/feg/label/learn-more-electric-label.shtml">Electric Vehicles</a></li>                                               
+                            </ul>
+                        </li>
+                        <li><a href="http://www.fueleconomy.gov/feg/label/video.shtml">QR Codes</a></li>      
+                    </ul>
+                </div>
+                
+                <div class="pnlSubmenu">
+                    <div class="img-caption" style="width: 17.692em; *width: 17.25em; background-color: #fff;">
+                        <a href="http://www.fueleconomy.gov/feg/label/"><img src="/feg/images/topnav/new_epa_label_mm.gif" alt="New EPA Fuel Economy and Environment Label"></a>
+                        <ul>
+                            <li><a style="color: #003366;" href="http://www.fueleconomy.gov/feg/label/">Check out the new sticker!</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/ratings2008.shtml">New vs. Old Ratings</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/ratings2008.shtml">2008 Ratings Changes</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/calculatorSelectYear.jsp">Compare Old and New MPG</a></li>
+                    </ul>
+                
+                    <h3 class="stacked"><a href="http://www.fueleconomy.gov/feg/how_tested.shtml">Fuel Economy Tests</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/how_tested.shtml">How Vehicles Are Tested</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/which_tested.shtml">Which Vehicles Are Tested</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fe_test_schedules.shtml">Detailed Test Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/why_differ.shtml">Your Mileage Will Still Vary</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/why_differ.shtml">Your Mileage Will Still Vary</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/factors.shtml">Factors That Affect MPG</a></li>
+                    </ul>
+                </div>
+                
+                <div style="clear: both"></div>
+            </div><!-- submenu -->
+        </li><!-- About EPA Ratings -->
+    
+        <li>
+            <a href="javascript:void(0)">More...</a>
+            <div class="submenu" style="width: 57.692em; *width: 56.25em;">
+              <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp">Extreme MPG</a></h3>
+                    
+                    <div class="img-caption" style="width: 15.385em; *width: 15em; height: 15.077em; *height: 14.7em;">
+                        <a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp">
+                            <img src="/feg/images/topnav/2011_VW_XL1_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp">Learn about vehicles and technologies that are pushing the fuel efficiency envelope.</a></li>
+                        </ul>
+                    </div>
+              </div>   
+                  
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/tech_adv.shtml">Fuel-Saving Technologies</a></h3>
+                    <div class="img-caption" style="width: 15.385em; *width: 15em; height: 15.077em; *height: 14.7em;">
+                        <a href="http://www.fueleconomy.gov/feg/tech_adv.shtml">
+                            <img src="/feg/images/tech_trans_multilink.gif" alt="" class="img-caption">
+                        </a>
+                      <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/tech_engine_more.shtml">Engine Technologies</a></li>
+                            <li><a href="http://www.fueleconomy.gov/feg/tech_transmission.shtml">Transmission Technologies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/atv.shtml">Where the Energy Goes</a></h3>
+                    <div class="img-caption" style="width: 15.385em; *width: 15em; height: 15.077em; *height: 14.7em;">
+                        <a href="http://www.fueleconomy.gov/feg/atv.shtml">
+                            <img src="/feg/images/topnav/energyloss_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/atv.shtml">Only about 14%&ndash;26% of the energy from the fuel you put in your tank gets used to move your car down the road.</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                
+                <div style="clear: both;"></div>
+            </div>
+        </li>
+    </ul>
+
+</div> 
+<!-- End banner and banner menu --> 
+   <div id="bd" role="main">
+		<div id="yui-main">
+			<div class="yui-b">
+        		<div class="yui-g">
+    				<div id="main-content">
+                    
+                        <a name="content"></a><a name="top"></a>
+                        
+                        <!-- Begin AddThis social sharing toolbox -->
+                        <!-- AddThis Buttons BEGIN -->
+<div class="addthis_toolbox addthis_default_style" style="float: right; margin: .25em 1em .5em 1em;">
+	<a class="addthis_button_facebook"></a>
+	<a class="addthis_button_twitter"></a>
+	<a class="addthis_button_email"></a>
+	<a class="addthis_button_print"></a>
+	<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=300&amp;username=fueleconomy" class="addthis_button_compact">Share</a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=fueleconomy#async=1#domready=1"></script>
+<!-- AddThis Buttons END -->
+
+<!-- initialize addthis -->
+<script type="text/javascript">
+function initAddThis() {
+	addthis.init();
+}
+
+ // After the DOM has loaded...
+$(document).ready(function() {
+    initAddThis();
+})
+</script>
+
+                        <!-- End AddThis -->
+                    
+                        <h1>Electric Vehicles: Compare Side-by-Side</h1> 
+                        
+						<div id="sbs">
+                        
+                            <div id="pick-veh" class="yui-navset">
+                                <ul id="main-tab" class="yui-nav" style="border: none;">
+                                	<li class="selected">
+                                    	<a href="#two-seaters">
+                                    		<em><img src="images/ev/twoseater.jpg" height="40" width="75" border="0"><br>Two Seaters<br>&nbsp;</em>
+                                        </a>
+                                    </li>
+                                	<li>
+                                    	<a href="#mini-cars">
+                                    		<em><img src="images/ev/2013_Scion_iQ_white.jpg" height="40" width="75"><br>Minicompacts<br>&nbsp;</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    	<a href="#small-cars">
+                                        	<em><img src="images/vehicleClass/2012_Coda_Background_Removed.jpg" height="40" width="75"><br>Compacts &amp; Subcompacts</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    	<a href="#midsize-cars">
+                                        	<em><img src="images/vehicleClass/2011_Nissan_LEAF_No_Background.jpg" height="40" width="75"><br>
+                                        	Midsize Cars<br>&nbsp;</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    	<a href="#larger-cars">
+                                        	<em><img src="images/ev/2013_Tesla_Model_th.jpg" height="40" width="75"><br>Large Cars<br>&nbsp;</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    	<a href="#wagons">
+                                        	<em><img src="photos/2013_Honda_Fit_EV.jpg" height="40" width="75"><br>Station<br>Wagons</em>
+                                        </a>
+                                    </li>
+                                    <li style="margin-right: 0">
+                                    	<a href="#trucks">
+                                        	<em><img src="images/ev/TransitConnectElectric_sm.jpg" height="40" width="75"><br>SUVs &amp; Vans<br>&nbsp;</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="yui-content" style="padding: 0px; border: none; background: none">
+
+
+									<!-- ============= BEGIN TWO-SEATERS ============= -->
+                                    <div id="two-seaters"> 
+                                        
+                                        <div id="sbs-two-seaters" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#ts-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab2"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab3"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#ts-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab5"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- ============= TWO-SEATERS ALL TABS CONTENT ============= -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="cars">
+                                                	<colgroup>
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                    </colgroup>
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink0" href="Find.do?action=customize&return=http%3A%2F%2Ffegdev.ornl.gov%2Ffeg%2FFind.do%3Faction%3Dsbs%26id%3D33305%26id%3D33306%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2013 Smart fortwo Electric Drive Convertible</th>
+                                                    <th class="veh-name">2013 Smart fortwo Electric Drive Coupe</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2011_Smart_ForTwo_Cabriolet_EV.jpg" alt="2013 Smart fortwo Electric Drive Convertible" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2011_Smart_ForTwo_Coupe_Electric.jpg" alt="2013 Smart fortwo Electric Drive Coupe" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 55 kW<br>
+                                                      Transmission: Auto (1 speed)</td>
+                                                    <td class="config">Motor: 55 kW<br>
+                                                    Transmission: Auto (1 speed)</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">Not Available</td>
+                                                    <td class="msrp">Not available</td>
+                                                  </tr>
+                                                 </table>    
+           						      		  </div> 
+                                            <!-- End .allTabs -->
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none"> 
+                                    
+                                    			<!--  TWO SEATER FUEL ECONOMY TAB -->
+                                    
+                                                <div id="ts-fe">
+                                                    <table class="cars">
+                                                     <colgroup>
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                     </colgroup>
+                                                         <tr>
+                                                            <th colspan="3" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">107</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">122
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">93
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div></td>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">107</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">122
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">93
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                           </td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">32</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">28
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">36
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div></td>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">32</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">28
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">36
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th colspan="3" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$0.96</td>
+                                                            <td>$0.96</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>68 miles</td>
+                                                            <td>68 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td>6 hrs @ 240 V</td>
+                                                            <td>6 hrs @ 240 V</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$600</td>
+                                                            <td>$600</td>
+                                                          </tr>
+                    
+                                               	  </table> 
+
+                                       		  </div> 
+                                                <!-- End #ts-fe -->
+                                                
+                                              		<!--  TWO-SEATER SPECS TAB -->
+                                              
+                                                   <div id="ts-specs">
+                                                     <table class="cars">
+                                                      <colgroup>
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                       </colgroup>
+                                                      <tr>
+                                                        <th colspan="4" class="rowGroup">Vehicle Specification Data</th>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>EPA Size Class</th>
+                                                        <td>Two Seaters</td>
+                                                        <td>Two Seaters</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Drive</th>
+                                                        <td>Rear-Wheel</td>
+                                                        <td>Rear-Wheel</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Gas Guzzler</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Turbocharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Supercharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even valignTop">
+                                                        <th>Passenger Volume</th>
+                                                        <td>Not Available<sup></sup></td>
+                                                        <td>Not Available<sup></sup></td>
+                                                       </tr>
+                                                      <tr class="valignTop">
+                                                        <th>Luggage Volume</th>
+                                                        <td>Not Available<sup></sup></td>
+                                                        <td>Not Available<sup></sup></td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Motor Descriptor</th>
+                                                        <td>55 kW DC Permanent Magnet, brushless</td>
+                                                        <td>55 kW DC Permanent Magnet, brushless</td>                                                       
+                                                       </tr>
+                                                      
+                                                      <tr >
+                                                        <th>Battery Descriptor</th>
+                                                        <td>339 V Li-Ion</td>
+                                                        <td>339 V Li-Ion</td>
+                                                       </tr>
+                                                     </table>
+                                                    <div class="footnote-table">
+                                                      <p>NA= Not available</p>
+                                                    </div>
+                                              </div> <!-- End of #ts-specs -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of #sbs-car -->
+                                    </div> <!-- End of #two-seaters -->
+                       
+                       
+									<!-- ============= BEGIN MINI-CARS ============= -->
+                                    <div id="mini-cars"> 
+                                        
+                                        <div id="sbs-mini-cars" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#mini-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab2"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab3"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#mini-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab5"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- ============= MINI CARS ALL TABS CONTENT ============= -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="cars">
+                                                	<colgroup>
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                    </colgroup>
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink1" href="http://fegdev.ornl.gov/feg/Find.do?action=customize&return=http%3A%2F%2Ffegdev.ornl.gov%2Ffeg%2FFind.do%3Faction%3Dsbs%26id%3D33396%26id%3D33307%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2013 Fiat 500e</th>
+                                                    <th class="veh-name">2013 Scion iQ EV</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2013_Fiat_500e.jpg" alt="2013 Fiat 500e" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2013_Scion_iQ.jpg" alt="2013 Scion iQ EV" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 82 kW<br>
+                                                      Transmission: Auto (1 speed)</td>
+                                                    <td class="config">Motor: 49 kW<br>
+                                                    Transmission: Auto (variable gear ratio)</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">Not Available</td>
+                                                    <td class="msrp">Not Available</td>
+                                                  </tr>
+                                                 </table>    
+       						      		    </div> <!-- End .allTabs -->
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none"> 
+                                    
+                                    			<!--  MINI CARS FUEL ECONOMY TAB -->
+                                    
+                                                <div id="mini-fe">
+                                                    <table class="cars">
+                                                     <colgroup>
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                     </colgroup>
+                                                         <tr>
+                                                            <th colspan="3" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">116</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">122
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">108
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                           </td>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">121</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">138
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">105
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                           </td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">29</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">28
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">31
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div></td>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">28</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">24
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">32
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th colspan="4" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$0.87</td>
+                                                            <td>$0.84</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>87 miles</td>
+                                                            <td>38 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td>4 hrs @ 240 V</td>
+                                                            <td>4 hrs @ 240 V</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$500</td>
+                                                            <td>$500</td>
+                                                          </tr>
+                    
+                                                  	 </table> 
+
+	            </div> <!-- End #mini-fe -->
+                                                
+                                              		<!--  MINI CARS SPECS TAB -->
+                                              
+                                                   <div id="mini-specs">
+                                                     <table class="cars">
+                                                      <colgroup>
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                       </colgroup>
+                                                      <tr>
+                                                        <th colspan="4" class="rowGroup">Vehicle Specification Data</th>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>EPA Size Class</th>
+                                                        <td>Minicompact Cars</td>
+                                                        <td>Minicompact Cars</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Drive</th>
+                                                        <td>Front-Wheel</td>
+                                                        <td>Front-Wheel</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Gas Guzzler</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Turbocharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Supercharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even valignTop">
+                                                        <th>Passenger Volume</th>
+                                                        <td>Not Available<sup></sup></td>
+                                                        <td>Not Available<sup></sup></td>
+                                                       </tr>
+                                                      <tr class="valignTop">
+                                                        <th>Luggage Volume</th>
+                                                        <td>Not Available<sup></sup></td>
+                                                        <td>Not Available<sup></sup></td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Motor Descriptor</th>
+                                                        <td>82 kW AC Induction Permanent Magnet</td>                                                       
+                                                        <td>Not Available<sup></sup></td>
+                                                       </tr>
+                                                      
+                                                      <tr >
+                                                        <th>Battery Descriptor</th>
+                                                        <td>364 V Li-Ion</td>
+                                                        <td>278 V Li-Ion</td>
+                                                       </tr>
+                                                     </table>
+                                                    <div class="footnote-table">
+                                                      <p>NA= Not available</p>
+                                                    </div>
+                                              </div> <!-- End of #mini-specs -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of #sbs-mini-cars -->
+                                    </div> <!-- End of #minicars -->
+
+                                
+                                
+                                    <!-- ============= BEGIN SMALL-CARS ============= -->
+                                    <div id="small-cars"> 
+                                        
+                                        <div id="sbs-small-cars" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#small-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab2"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab3"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#small-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab5"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- ============= SMALL-CARS ALL TABS CONTENT ============= -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="cars">
+                                                	<colgroup>
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                    </colgroup>
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink2" href="Find.do?action=customize&return=Find.do%3Faction%3Dsbs%26id%3D33337%26id%3D33024%26id%3D33358%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2013 CODA Automotive CODA</th>
+                                                    <th class="veh-name">2013 Ford Focus Electric</th>
+                                                    <th class="veh-name">2013 Mitsubishi i-MiEV</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2012_Coda_Sedan.jpg" alt="2013 Coda" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2012_Ford_Focus_EV.jpg" alt="2013 Ford Focus Electric" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2012_Mitsubishi_iMiEV.jpg" alt="2013 Mitsubishi i-MiEV" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 100 kW<br>
+                                                      Transmission: Auto (1 speed)</td>
+                                                    <td class="config">Motor: 107 kW<br>
+                                                    Transmission: Auto (1 speed)</td>
+                                                    <td class="config">Motor: 49 kW<br>Transmission: Auto (1 speed)</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">$37,250</td>
+                                                    <td class="msrp">$39,200</td>
+                                                    <td class="msrp">Not Available</td>
+                                                  </tr>
+                                                 </table>    
+           						      </div> 
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none"> 
+                                    
+                                    			<!-- SMALL-CARS FUEL ECONOMY TAB -->
+                                    
+                                                <div id="small-fe">
+                                                    <table class="cars">
+                                                     <colgroup>
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                     </colgroup>
+                                                         <tr>
+                                                            <th colspan="4" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">73</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">77
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">68
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div></td>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">105</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">110
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">99
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                           </td>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">112</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">126
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">99
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                           </td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">46</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">44
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">50
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div></td>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">32</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">31
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">34
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div>
+                                                            </td>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">30</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">27
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">34
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th colspan="4" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$1.38</td>
+                                                            <td>$0.96</td>
+                                                            <td>$0.90</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>88 miles</td>
+                                                            <td>76 miles</td>
+                                                            <td>62 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td>6 hrs @ 240 V</td>
+                                                            <td>4 hrs @ 240 V</td>
+                                                            <td>7 hrs @ 240 V</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$850</td>
+                                                            <td>$600</td>
+                                                            <td>$550</td>
+                                                          </tr>
+                    
+                                                  </table> 
+
+                                              	</div>
+                                                
+                                              		<!-- SMALL-CARS SPECS TAB -->
+                                              
+                                                   <div id="small-specs">
+                                                     <table class="cars">
+                                                      <colgroup>
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                       </colgroup>
+                                                      <tr>
+                                                        <th colspan="4" class="rowGroup">Vehicle Specification Data</th>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>EPA Size Class</th>
+                                                        <td>Subcompact Cars</td>
+                                                        <td>Compact Cars</td>
+                                                        <td>Subcompact Cars</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Drive</th>
+                                                        <td>Front-Wheel</td>
+                                                        <td>Front-Wheel</td>
+                                                        <td>Rear-Wheel</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Gas Guzzler</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Turbocharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Supercharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even valignTop">
+                                                        <th>Passenger Volume</th>
+                                                        <td>72 ft<sup>3</sup></td>
+                                                        <td>90 ft<sup>3</sup></td>
+                                                        <td>85 ft<sup>3</sup></td>
+                                                       </tr>
+                                                      <tr class="valignTop">
+                                                        <th>Luggage Volume</th>
+                                                        <td>14 ft<sup>3</sup></td>
+                                                        <td>
+                                                        	13 ft<sup>3</sup> (4-door)<br>
+                                                            23 ft<sup>3</sup> (hatchback)
+                                                        </td>
+                                                        <td>13 ft<sup>3</sup></td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Motor Descriptor</th>
+                                                        <td>100 kW DC Permanent Magnet, brushless</td>
+                                                        <td>107 kW AC Permanent Magnet Synchronous </td>                                                       
+                                                        <td>49 kW DC Permanent Magnet, brushless</td>
+                                                       </tr>
+                                                      
+                                                      <tr >
+                                                        <th>Battery Descriptor</th>
+                                                        <td>333 V Li-Ion</td>
+                                                        <td>350 V Li-Ion</td>
+                                                        <td>330 V Li-Ion</td>
+                                                       </tr>
+                                                     </table>
+                                                    <div class="footnote-table">
+                                                      <p>NA= Not available</p>
+                                                    </div>
+                                              </div> <!-- End of #tab4 -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of #sbs-small-cars -->
+                                    </div> <!-- End of #small-cars -->
+                                
+                                
+                                    <!-- ============= BEGIN MIDSIZE-CARS ============= -->
+                                    <div id="midsize-cars"> 
+                                        
+                                        <div id="sbs-midsize-cars" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#midsize-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab2"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab3"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#midsize-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab5"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- BEGIN midsize-CARS ALL TABS CONTENT -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="cars">
+                                                	<colgroup>
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                    </colgroup>
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink3" href="Find.do?action=customize&return=http%3A%2F%2Fwww.fueleconomy.gov%2Ffeg%2FFind.do%3Faction%3Dsbs%26id%3D33558%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2013 Nissan Leaf</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2012_Nissan_Leaf.jpg" alt="2012 Nissan Leaf" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;">
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 80 kW<br>
+                                                      Transmission: Auto (1 speed)</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">$28,800&ndash;$34,840</td>
+                                                  </tr>
+                                                 </table>    
+						            </div> 
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none"> 
+                                    
+                                    			<!-- BEGIN midsize-CARS FUEL ECONOMY TAB -->
+                                    
+                                                <div id="midsize-fe">
+                                                    <table class="cars">
+                                                     <colgroup>
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                     </colgroup>
+                                                         <tr>
+                                                            <th colspan="2" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">115</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">129
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">102
+                                                               <p>Hwy</p>
+                                                             </div></td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">29</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">26
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">33
+                                                                <p>Hwy</p>
+                                                              </div></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th colspan="2" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$0.87</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>75 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td>
+                                                            	7.25 hrs @ 240 V<br>
+                                                                (3.6 kW charger),<br>
+                                                                4 hrs @ 240 V<br>
+                                                                (6.6 kW charger)
+                                                            </td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$500</td>
+                                                          </tr>
+                    
+                                                  </table> 
+
+										      </div>
+                                                
+                                                   <!-- BEGIN midsize-CARS SPECS TAB -->
+                                              
+                                                   <div id="midsize-specs">
+                                                     <table class="cars">
+                                                      <colgroup>
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                      </colgroup>
+                                                      <tr>
+                                                        <th colspan="2" class="rowGroup">Vehicle Specification Data</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>EPA Size Class</th>
+                                                        <td>Midsize Cars</td>
+                                                      </tr>
+                                                      <tr class="even">
+                                                        <th>Drive</th>
+                                                        <td>Front-Wheel</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Gas Guzzler</th>
+                                                        <td>No</td>
+                                                      </tr>
+                                                      <tr class="even">
+                                                        <th>Turbocharger</th>
+                                                        <td>No</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Supercharger</th>
+                                                        <td>No</td>
+                                                      </tr>
+                                                      <tr class="even valignTop">
+                                                        <th>Passenger Volume</th>
+                                                        <td>92 ft<sup>3</sup> (4 door)</td>
+                                                       </tr>
+                                                      <tr class="valignTop">
+                                                        <th>Luggage Volume</th>
+                                                        <td>24 ft<sup>3</sup> (4 door)</td>
+                                                      </tr>
+                                                      <tr class="even">
+                                                        <th>Motor Descriptor</th>
+                                                        <td>80 kW DC Permanent Magnet, brushless</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th>Battery Descriptor</th>
+                                                        <td>360 V Li-Ion</td>
+                                                       </tr>
+                                                     </table>
+                                                    <div class="footnote-table">
+                                                      <p>NA= Not available</p>
+                                                    </div>
+                                              </div> <!-- End of #tab4 -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of #sbs-midsize-cars -->
+                                    </div> <!-- End of #midsize-cars -->
+            
+            
+                                
+                                
+                                    <!-- ============= BEGIN LARGER-CARS ============= -->
+                                    <div id="larger-cars"> 
+                                        
+                                        <div id="sbs-larger-cars" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#larger-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab2"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab3"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#larger-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab5"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- BEGIN LARGER-CARS ALL TABS CONTENT -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="cars">
+                                                	<colgroup>
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                    </colgroup>
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink6" href="Find.do?action=customize&return=http%3A%2F%2Fwww.fueleconomy.gov%2Ffeg%2FFind.do%3Faction%3Dsbs%26id%3D33368%26id%3D33367%26id%3D33612%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2013 Tesla Model S</th>
+                                                    <th class="veh-name">2013 Tesla Model S</th>
+                                                    <th class="veh-name">2013 Tesla Model S</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2013_Tesla_Model_S.jpg" alt="2013 Tesla Model S" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2013_Tesla_Model_S.jpg" alt="2013 Tesla Model S" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2013_Tesla_Model_S.jpg" alt="2013 Tesla Model S" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 270 kW<br>
+Transmission: Auto (1 speed)<br>
+Battery Pack: 85 kWh</td>
+                                                    <td class="config">
+                                                      Motor: 270 kW<br>
+                                                      Transmission: Auto (1 speed)<br>
+                                                      Battery Pack: 60 kWh
+                                                    </td>
+                                                    <td class="config">Motor: 270 kW<br>
+                                                      Transmission: Auto (1 speed)<br>
+                                                      Battery Pack: 40 kWh
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">$94,900</td>
+                                                    <td class="msrp">$69,900</td>
+                                                    <td class="msrp">NA</td>
+                                                  </tr>
+                                                 </table>    
+						            </div> 
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none"> 
+                                    
+                                    			<!-- BEGIN LARGER-CARS FUEL ECONOMY TAB -->
+                                    
+                                                <div id="larger-fe">
+                                                    <table class="cars">
+                                                     <colgroup>
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                     </colgroup>
+                                                         <tr>
+                                                            <th colspan="4" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity">
+                                                             <div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">89</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">88
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">90
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                             </td>
+                                                           <td class="mpge electricity">
+                                                             <div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">95</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">94
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">97
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div>
+                                                           </td>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">94</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">93
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">96
+                                                               <p>Hwy</p>
+                                                             </div>
+                                                             <div style="clear: both;"></div></td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                            <td class="kw electricity">
+                                                            <div style="text-align: center;"><span class="combined">38</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">38
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">37
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div>
+                                                            </td>
+                                                            <td class="kw electricity">
+                                                            <div style="text-align: center;"><span class="combined">35</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">36
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">35
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div>
+                                                            </td>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">36</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">36
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">35
+                                                                <p>Hwy</p>
+                                                              </div>
+                                                              <div style="clear: both;"></div></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th colspan="4" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$1.14</td>
+                                                            <td>$1.05</td>
+                                                            <td>$1.08</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>265 miles</td>
+                                                            <td>208 miles</td>
+                                                            <td>139 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td><p>12 hrs @ 240 V<br>(single charger),</p>
+                                                            <p>4.75 hrs @ 240 V<br>(dual charger)</p></td>
+                                                            <td><p>10 hrs @ 240 V<br>(single charger), </p>
+                                                            <p>3.75 hrs @ 240 V<br>(dual charger)</p></td>
+                                                            <td><p>6 hrs @ 240 V<br>(single charger), </p>
+                                                            <p>2.5 hrs @ 240 V<br>(dual charger)</p></td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$700</td>
+                                                            <td>$650</td>
+                                                            <td>$650</td>
+                                                          </tr>
+                    
+                                                       </table> 
+
+												   </div>
+                                                
+                                                   <!-- BEGIN LARGER-CARS SPECS TAB -->
+                                              
+                                                   <div id="larger-specs">
+                                                     <table class="cars">
+                                                      <colgroup>
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                       </colgroup>
+                                                      <tr>
+                                                        <th colspan="4" class="rowGroup">Vehicle Specification Data</th>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>EPA Size Class</th>
+                                                        <td>Large Cars</td>
+                                                        <td>Large Cars</td>
+                                                        <td>Large Cars</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Drive</th>
+                                                        <td>Rear-wheel</td>
+                                                        <td>Rear-wheel</td>
+                                                        <td>Rear-wheel</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Gas Guzzler</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Turbocharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Supercharger</th>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even valignTop">
+                                                        <th>Passenger Volume</th>
+                                                        <td>94 ft<sup>3</sup></td>
+                                                        <td>94 ft<sup>3</sup></td>
+                                                        <td>94 ft<sup>3</sup></td>
+                                                       </tr>
+                                                      <tr class="valignTop">
+                                                        <th>Luggage Volume</th>
+                                                        <td>26 ft<sup>3</sup></td>
+                                                        <td>26 ft<sup>3</sup></td>
+                                                        <td>26 ft<sup>3</sup></td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Motor Descriptor</th>
+                                                        <td>270 kW AC Induction</td>
+                                                        <td>270 kW AC Induction</td>
+                                                        <td>270 kW AC Induction</td>
+                                                       </tr>
+                                                      
+                                                      <tr >
+                                                        <th>Battery Descriptor</th>
+                                                        <td>400 V Li-Ion, 85 kWh</td>
+                                                        <td>400 V Li-Ion, 60 kWh</td>
+                                                        <td>400 V Li-Ion, 40 kWh</td>
+                                                       </tr>
+                                                     </table>
+                                                    <div class="footnote-table">
+                                                      <p>NA= Not available</p>
+                                                    </div>
+                                              </div> <!-- End of #tab4 -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of #sbs-larger-cars -->
+                                    </div> <!-- End of #larger-cars -->            
+                                
+                                    <!-- ============= BEGIN WAGONS ============= -->
+                                    <div id="wagons"> 
+                                        
+                                        <div id="sbs-wagons" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#wagons-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab2"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab3"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#wagons-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab5"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- BEGIN LARGER-CARS ALL TABS CONTENT -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="cars">
+                                                	<colgroup>
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                    </colgroup>
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink4" href="Find.do?action=customize&return=Find.do%3Faction%3Dsbs%26id%3D33265%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2013 Honda Fit EV</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="photo"><div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2013_Honda_Fit_EV.jpg" alt="2013 Honda Fit EV" width="150" height="80" style="margin-left: auto; margin-right: auto; padding: 0;">
+                                                    </td>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 92 kW<br>
+                                                      Transmission: Auto (1 speed)</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">$36,625</td>
+                                                  </tr>
+                                                 </table>    
+       							        </div> 
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none"> 
+                                    
+                                    			<!-- BEGIN LARGER-CARS FUEL ECONOMY TAB -->
+                                    
+                                                <div id="wagons-fe">
+                                                    <table class="cars">
+                                                     <colgroup>
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column">
+                                                     </colgroup>
+                                                         <tr>
+                                                            <th colspan="2" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">118</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">132
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">105
+                                                               <p>Hwy</p>
+                                                             </div></td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                            <td class="kw electricity"><div style="text-align: center;"><span class="combined">29</span><br>
+                                                              Combined <br>
+                                                            </div>
+                                                              <div class="mpgLeft">26
+                                                                <p>City</p>
+                                                              </div>
+                                                              <div class="mpgRight">32
+                                                                <p>Hwy</p>
+                                                              </div></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th colspan="2" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$0.87</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>82 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td>4 hrs @ 240 V</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$500</td>
+                                                          </tr>
+                    
+                                                       </table> 
+                                                      
+                                              		</div>
+                                                
+                                                   <!-- BEGIN LARGER-CARS FUEL ECONOMY TAB -->
+                                              
+                                                   <div id="wagons-specs">
+                                                     <table class="cars">
+                                                      <colgroup>
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                       </colgroup>
+                                                      <tr>
+                                                        <th colspan="2" class="rowGroup">Vehicle Specification Data</th>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>EPA Size Class</th>
+                                                        <td>Small Station Wagon</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Drive</th>
+                                                        <td>Front-Wheel</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Gas Guzzler</th>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Turbocharger</th>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Supercharger</th>
+                                                        <td>No</td>
+                                                       </tr>
+                                                      <tr class="even valignTop">
+                                                        <th>Passenger Volume</th>
+                                                        <td>91 ft<sup>3</sup></td>
+                                                       </tr>
+                                                      <tr class="valignTop">
+                                                        <th>Luggage Volume</th>
+                                                        <td>21 ft<sup>3</sup></td>
+                                                       </tr>
+                                                      <tr class="even">
+                                                        <th>Motor Descriptor</th>
+                                                        <td>92 kW DC Permanent Magnet, brushless</td>
+                                                       </tr>
+                                                      <tr>
+                                                        <th>Battery Descriptor</th>
+                                                        <td>339 V Li-Ion</td>
+                                                       </tr>
+                                                     </table>
+                                                    <div class="footnote-table">
+                                                      <p>NA= Not available</p>
+                                                    </div>
+                                              </div> <!-- End of #tab4 -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of #sbs-wagons -->
+                                    </div> <!-- End of #smaller-cars -->
+            
+            
+            
+            
+            
+            						<!-- ============= BEGIN TRUCKS ============= -->
+                                    <div id="trucks">
+
+                                        <div id="sbs-truck" class="yui-navset">
+                                            <ul class="yui-nav">
+                                                <li class="selected"><a href="#trucks-fe"><em>Fuel Economy</em></a></li>
+                                                <!-- <li><a href="#tab7"><em>Safety</em></a></li> -->
+                                                <!-- <li><a href="#tab8"><em>Energy and Environment</em></a></li> -->
+                                                <li><a href="#trucks-specs"><em>Specs</em></a></li>
+                                                <!-- <li><a href="#tab10"><em>Show All</em></a></li> -->
+                                            </ul>
+                                        
+                                        	<!-- TRUCKS ALL TAB CONTENT -->
+                                        
+                                            <div class="allTabs">
+                                                <table class="trucks">
+                                                     <col class="left-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                     <col class="data-column">
+                                                  <tr>
+                                                    <th rowspan="2" class="personalize">
+                                                    	<a id="personalizeLink5" href="http://fegdev.ornl.gov/feg/Find.do?action=customize&return=http%3A%2F%2Ffegdev.ornl.gov%2Ffeg%2FFind.do%3Faction%3Dsbs%26id%3D31893%26id%3D31894%26id%3D33397%26%23tab1">Personalize</a>
+                                                    </th>
+                                                    <th class="veh-name">2012 Azure Dynamics Transit Connect Electric Van</th>
+                                                    <th class="veh-name">2012 Azure Dynamics Transit Connect Electric Wagon</th>
+                                                    <th class="veh-name">2013 Toyota RAV4 EV</th>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ev-header">Electric Vehicle</div>
+                                                      <img src="images/ev/TransitConnectElectric_sm.jpg" alt="Azure Dynamics Transit Connect Electric Van" width="150" height="80">
+                                                    </td>
+                                                    <td>
+                                                      <div class="ev-header">Electric Vehicle</div>
+                                                      <img src="images/ev/TransitConnectElectric_sm.jpg" alt="Azure Dynamics Transit Connect Electric Wagon" width="150" height="80">
+                                                    </td>
+                                                    <td>
+                                                      <div class="ev-header">Electric Vehicle</div>
+                                                      <img src="photos/2011_Toyota_RAV4.jpg" alt="Toyota RAV4 EV" width="150" height="80">
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="config">Configuration</th>
+                                                    <td class="config">Motor: 52 kW<br>Transmission: Auto (1 speed)</td>
+                                                    <td class="config">Motor: 52 kW<br>Transmission: Auto (1 speed)</td>
+                                                    <td class="config">Motor: NA<br>
+                                                    Transmission: Auto (variable gear ratio) </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="msrp">Manufacturer's Suggested Retail Price (MSRP)</th>
+                                                    <td class="msrp">Not available</td>
+                                                    <td class="msrp">Not available</td>
+                                                    <td class="msrp">Not available</td>
+                                                  </tr>
+                                                 </table>    
+                                   		  </div> 
+                                            
+                                            <!-- TRUCKS FUEL ECONOMY TAB -->
+                                                      
+                                            <div class="yui-content" style="padding:0px; border:none; background:none">
+                                              
+                                    
+                                                <div id="wagons-fe">
+                                                    <table class="trucks">
+                                                      <col class="left-column">
+                                                      <col class="data-column">
+                                                      <col class="data-column"> 
+                                                      <col class="data-column">   
+                                                         <tr>
+                                                            <th colspan="4" class="rowGroup">EPA Fuel Economy</th>
+                                                         </tr>
+                                                         <tr>
+                                                           <th class="mpge">Miles per Gallon of Gasoline Equivalent (MPGe)<p class="footnote">1 gallon of gasoline=33.7 kWh</p></th>
+                                                           <td class="mpge electricity">
+                                                                <div class="colheader">Electricity</div>
+                                                                <div style="text-align: center;"><span class="combined">62</span><br>Combined</div>
+                                                                <div class="mpgLeft">62
+                                                                <p>City</p></div>
+                                                                <div class="mpgRight">62
+                                                                <p>Hwy</p></div>
+                                                           </td>
+                                                           <td class="mpge electricity">
+                                                                <div class="colheader">Electricity</div>
+                                                                <div style="text-align: center;"><span class="combined">62</span><br>Combined</div>
+                                                                <div class="mpgLeft">62
+                                                                <p>City</p></div>
+                                                                <div class="mpgRight">62
+                                                                <p>Hwy</p></div>
+                                                           </td>
+                                                           <td class="mpge electricity"><div class="colheader">Electricity</div>
+                                                             <div style="text-align: center;"><span class="combined">76</span><br>
+                                                               Combined</div>
+                                                             <div class="mpgLeft">78
+                                                               <p>City</p>
+                                                             </div>
+                                                             <div class="mpgRight">74
+                                                               <p>Hwy</p>
+                                                             </div></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <th class="kw">kWh/100 mi</th>
+                                                              <td class="kw electricity">
+                                                                <div style="text-align: center;"><span class="combined">54</span><br>
+                                                                  Combined<br></div>
+                                                                <div class="mpgLeft">55
+                                                                  <p>City</p></div>
+                                                                <div class="mpgRight">54
+                                                                  <p>Hwy</p></div>  
+                                                             </td>
+                                                         <td class="kw electricity">
+                                                                <div style="text-align: center;"><span class="combined">54</span><br>Combined<br></div>
+                                                                <div class="mpgLeft">55
+                                                      <p>City</p></div>
+                                                                <div class="mpgRight">54
+                                                         <p>Hwy</p></div>  
+                                                             </td>
+                                                         <td class="kw electricity"><div style="text-align: center;"><span class="combined">44</span><br>
+                                                           Combined<br>
+                                                         </div>
+                                                           <div class="mpgLeft">43
+                                                             <p>City</p>
+                                                           </div>
+                                                           <div class="mpgRight">46
+                                                             <p>Hwy</p>
+                                                           </div></td>
+                                                         </tr>
+                                                          <tr>
+                                                            <th colspan="4" class="rowGroup">Fuel Economics</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Cost to Drive 25 Miles</th>
+                                                            <td>$1.62</td>
+                                                            <td>$1.62</td>
+                                                            <td>$1.32</td>
+                                                          </tr>
+                                                         
+                                                          <tr class="even">
+                                                            <th>Miles on a Charge </th>
+                                                            <td>56 miles</td>
+                                                            <td>56 miles</td>
+                                                            <td>103 miles</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Time to Charge Battery&#8224;</th>
+                                                            <td>8 hrs @ 240 V</td>
+                                                            <td>8 hrs @ 240 V</td>
+                                                            <td>6 hrs @ 240 V</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Annual Fuel Cost*</th>
+                                                            <td>$950</td>
+                                                            <td>$950</td>
+                                                            <td>$800</td>
+                                                          </tr>
+                                                       </table> 
+                                        </div> <!-- End of #tab6 -->
+                                                
+                                                	<!-- TRUCKS SPECS TAB -->
+                                              
+                                                    <div id="wagons-specs">
+                                                       <table class="trucks">
+                                                          <col class="left-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                          <col class="data-column">
+                                                          <tr>
+                                                            <th colspan="4" class="rowGroup">Vehicle Specification Data</th>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>EPA Size Class</th>
+                                                            <td>Special Purpose Vehicle 2WD</td>
+                                                            <td>Special Purpose Vehicle 2WD</td>
+                                                            <td>Small Sport Utility Vehicle, 2WD</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Drive</th>
+                                                            <td>Front-Wheel</td>
+                                                            <td>Front-Wheel</td>
+                                                            <td>Front-Wheel</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Gas Guzzler</th>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Turbocharger</th>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th>Supercharger</th>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                          </tr>
+                                                          <tr class="even valignTop">
+                                                            <th>Passenger Volume</th>
+                                                            <td>NA</td>
+                                                            <td>NA</td>
+                                                            <td>NA</td>
+                                                          </tr>
+                                                          <tr class="valignTop">
+                                                            <th>Luggage Volume</th>
+                                                            <td>NA</td>
+                                                            <td>NA</td>
+                                                            <td>NA</td>
+                                                          </tr>
+                                                          <tr class="even">
+                                                            <th>Motor Descriptor</th>
+                                                            <td>52 kW AC Induction</td>
+                                                            <td>52 kW AC Induction</td>
+                                                            <td>NA</td>
+                                                          </tr>
+                                                          
+                                                          <tr >
+                                                            <th>Battery Descriptor</th>
+                                                            <td>345 V Li-Ion</td>
+                                                            <td>345 V Li-Ion</td>
+                                                            <td>386 V Li-Ion</td>
+                                                          </tr>
+                                                       </table>
+                                                      <div class="footnote-table">
+                                                        <p>NA= Not available</p>
+                                                      </div>
+                                                </div> <!-- End of #tab9 -->
+                                            </div> <!-- End of .yui-content -->
+                                        </div> <!-- End of .yui-navset -->
+
+                                    </div> <!-- End of #trucks -->
+                                    
+                                    
+                            	</div> <!-- End of .yui-content -->
+							</div> <!-- End of #pick-veh -->
+
+						</div> <!-- End of #sbs -->
+
+                      <div class="footnote-table">
+                       	<p>* Values rounded to the nearest $50. Based on 15,000 miles annual driving and an electricity cost of $0.12/kWh.</p>
+                       	  <p>&#8224; Charge time may vary  due to battery state of charge, charging options, and other  factors.</p>
+                        </div>
+
+                  	</div>
+                    <!-- End of "main-content" container -->
+                </div>
+                <!-- End of class "yui-b" container -->
+            </div>
+            <!-- End of class "yui-g" container -->
+        </div>
+        <!-- End of "yui-main" container -->
+		<div id="nav" class="yui-b">
+            <div id="leftNav">
+            	<!-- leftNav include for evsbs.shtml -->
+<ul>
+    <li>
+      <div class="lnmenubaritem"><a href="/feg/evtech.shtml" class="lnmenubaritemlabel">Electric Vehicles</a></div></li>
+    <li>
+      <div id="selected-page"><div class="lnmenubaritem"><a href="/feg/evsbs.shtml" class="lnmenubaritemlabel">Compare Side by Side</a></div></div></li>
+    <li>
+      <div class="lnmenubaritem"><a href="/feg/evnews.shtml" class="lnmenubaritemlabel">New & Upcoming Electric Vehicles</a></div></li>
+    <li>
+     <div class="lnmenubaritem"><a href="/feg/taxevb.shtml" class="lnmenubaritemlabel">Tax Incentives</a></div></li>
+    <li>
+     <div class="lnmenubaritem"><a href="/feg/evlinks.shtml" class="lnmenubaritemlabel">Links</a></div></li>
+</ul>  
+
+				
+			</div>
+            <!-- End of leftNav Container -->
+    	</div>
+        <!-- End of "nav" container -->	
+
+	</div>
+    <!-- End of "bd" container -->
+     <div id="ft" role="contentinfo">
+					<a href="/m/" >Mobile</a>
+                  | <a href="/feg/download.shtml" >Download EPA's MPG Ratings</a> 
+                  | <a href="/feg/bymake/bymanuNF.shtml" >Find and Compare Cars</a>
+                  | <a href="http://www.usa.gov" >USA.gov</a>
+                  | <a href="/feg/dealers.shtml" >Info for Auto Dealers</a>
+                  | <a href="/feg/ORNL-disclaimer.htm" >Privacy/Security</a>
+  | <a href="mailto:fueleconomy@ornl.gov" >Feedback</a><p>This site last modified Tuesday August 27 2013</p></div>
+
+</div>
+<!-- End of "doc4" container -->
+
+<script type="text/javascript"> 
+(function() {
+	var tabView = new YAHOO.widget.TabView('sbs-two-seaters');
+    var tabView = new YAHOO.widget.TabView('sbs-mini-cars');
+	var tabView = new YAHOO.widget.TabView('sbs-small-cars');
+	var tabView = new YAHOO.widget.TabView('sbs-midsize-cars');
+	var tabView = new YAHOO.widget.TabView('sbs-larger-cars');
+	var tabView = new YAHOO.widget.TabView('sbs-wagons');
+    var tabView = new YAHOO.widget.TabView('sbs-truck');
+	var tabView = new YAHOO.widget.TabView('pick-veh');
+    YAHOO.log("The example has finished loading; as you interact with it, you'll see log messages appearing here.", "info", "example");
+})();
+</script>
+
+<script type="text/javascript">
+	YAHOO.util.Event.onDOMReady(function() {
+		new YAHOO.widget.Button("personalizeLink0");
+		new YAHOO.widget.Button("personalizeLink1");
+		new YAHOO.widget.Button("personalizeLink2");
+		new YAHOO.widget.Button("personalizeLink3");
+		new YAHOO.widget.Button("personalizeLink4");
+		new YAHOO.widget.Button("personalizeLink5");
+		new YAHOO.widget.Button("personalizeLink6");
+	});
+</script>
+
+</body>
+</html>
+

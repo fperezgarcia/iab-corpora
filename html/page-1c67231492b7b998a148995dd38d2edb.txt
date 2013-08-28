@@ -1,0 +1,883 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+
+<script language="javascript" src="/omniture/s_code.js" type="text/javascript"></script>
+<script language="javascript" src="/omniture/mbox.js" type="text/javascript"></script>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/ui/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+<script src="/js/common.js" type="text/javascript"></script>
+
+<!-- Popup Message Service Start-->
+<script src="/JS/MessageService.js" type="text/javascript"></script>
+<div id="MessageDialog" style="padding:15px; display:none" >
+<a href="#" class="close"><img src="/images/close_pop.png" class="btn_close_pop" title="Close Window" alt="Close" /></a>
+    <div id="popupContent" class="popupContent" ></div>
+    <div style="float:right; padding-right:15px; padding-top:15px; padding-bottom:15px;">
+    <label for="display" class="socialtext" style="float:left; padding-left:5px; padding-right:5px;"><input type="checkbox" name="chkPopup" id="chkPopup" checked />
+          Do not display this message again</label>
+    <div class="closebutton" id="closebutton" style="float:right; ">close</div>	
+    </div>
+</div>
+<!-- Popup Message Service End-->
+
+
+<!-- DemandBase START -->
+<script type="text/javascript" src="https://dkj2m377b0yzw.cloudfront.net/clients/javascript/demandbase-1.0.0-min.js"></script>
+<script src="/js/demandbase/demandbase.js" type="text/javascript"></script>
+<!-- DemandBase END-->
+
+<!-- Google Analytics START -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-410365-1']);
+  _gaq.push(['_setDomainName', 'maplesoft.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytics code snippet END -->
+
+
+
+<script language="javascript" type="text/javascript">
+    //populates the MSegment variable with the value of the .MemberSegment cookie
+    var MSegment = "";
+
+    var found = 1;
+
+    var dc = document.cookie;
+    var prefix = ".MemberSegment=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) found = 0;
+    } else {
+        begin += 2;
+    }
+
+    if (found != 0) {
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+            end = dc.length;
+        }
+        MSegment = unescape(dc.substring(begin + 15, end));
+    }
+</script>
+
+
+
+<script language="javascript">
+	var optimizelyLanguage;
+</script>
+
+<script language="javascript">
+	optimizelyLanguage = "english";
+</script>
+
+
+<script src="//cdn.optimizely.com/js/118774194.js"></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Maplesoft, Waterloo Maple, Waterloo, maple, mathematics software, mathematics education, mathematics teaching, computer algebra, symbolic computation, mathematical modeling software, mathematics assessment software, distance education software, e-learning software">
+<meta name="description" content="Maplesoft's suite of engineering tools supports the modeling and analysis of electric and hybrid-electric vehicle systems, such as powertrains, electric motors, generators, and batteries.">
+	<title>Automotive - Electric and Hybrid Electric Vehicles - Maplesoft</title>
+
+<link href="/common/includes/styles.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+</head>
+<body>
+<div id="sitecontainer">
+
+<table width="1024" height="62" border="0" align="center" cellpadding="0" cellspacing="0" background="/images/header/menubk25.jpg">
+  <tr>
+    <td width="163"><a href="/index.aspx"><img src="/images/header/trans.png" width="159" height="48" /></a></td>
+    <td width="861" valign="top">
+
+	<ul id="menu">  
+  
+    <li><a href="/products/" class="drop2">PRODUCTS<br /></a><!-- Begin Home Item -->  
+  
+        <div class="dropdown_2columns">  
+  
+                <div class="col_2">  
+				<a href="/products/Maple/"><h2>Maple</h2></a>
+				<p><a href="/products/Maple/professional/">Maple Professional</a></p>
+				<p><a href="/products/Maple/academic/">Maple Academic</a></p>
+				<p><a href="/products/Maple/students/">Maple Student Edition</a></p>
+                <p><a href="/products/Maple/personal_edition/">Maple Personal Edition</a></p>
+				<p><a href="/products/maple/Mapleplayer/">Maple Player</a></p>
+				<p><a href="/products/mapleplayer/">Maple Player for iPad</a></p>
+				
+				<a href="/products/maplesim/"><h2>MapleSim</h2></a>
+				<p><a href="/products/maplesim/">MapleSim Professional</a></p>
+				<p><a href="/products/maplesim/academic/">MapleSim Academic</a></p>
+				
+				<a href="/solutions/education/solutions/testing.aspx"><h2>Testing &amp; Assessment</h2></a>
+				<p><a href="/products/mapleta/">Maple T.A.</a></p>
+				<p><a href="/products/placement/">Maple T.A. MAA Placement Test Suite</a></p>
+				<p><a href="/products/mapleta/blackboard.aspx">Maple T.A. Connector for Blackboard Software</a></p>
+                
+                <a href="/products/MobiusProject/"><h2>The M&ouml;bius Project</h2></a>
+				<p><a href="/products/mobiusproject/">M&ouml;bius Project Home Page</a></p>
+                <p><a href="http://mobius.maplesoft.com/maplenet/mobius/">View M&ouml;bius Apps</a></p>
+				
+				<h3></h3>
+				
+				<h3><a href="/products/maplenet/">MapleNet</a></h3>
+				<h3> <a href="/products/thirdparty/">Toolboxes &amp; Connectors</a></h3>
+				<h3><a href="/products/studyguides/">E-Books &amp; Study Guides</a></h3>
+				<h3><a href="/products/proservices/">Professional Services</a></h3>
+  
+                </div>  
+  
+        </div>   
+  
+        </div><!-- End 2 columns container -->  
+  
+    </li><!-- End Home Item -->  
+  
+      <li><a href="/solutions/" class="drop2">SOLUTIONS<br /></a><!-- Begin Home Item -->  
+  
+        <div class="dropdown_2columns"><!-- Begin 2 columns container -->  
+  
+            <div class="col_2">  
+				<a href="/solutions/engineering/index.aspx#industrysolutions"><h2>Engineering: Industry Solutions</h2></a>
+				<p><a href="/solutions/engineering/index.aspx#industrysolutions">Vehicle Engineering</a></p>
+				<p><a href="/solutions/engineering/index.aspx#industrysolutions">Motion Control</a></p>
+				<p><a href="/solutions/engineering/index.aspx#industrysolutions">Power Industries</a></p>
+				<p><a href="/solutions/engineering/index.aspx#industrysolutions">Aerospace</a></p>
+				
+				<a href="/solutions/engineering/"><h2>Engineering: Application Areas</h2></a>
+				<p><a href="/solutions/engineering/AppAreas/plantmodeling.aspx">Plant Modeling for Control Design</a></p>
+				<p><a href="/solutions/engineering/AppAreas/virtualpro.aspx">Virtual Prototyping</a></p>
+				<p><a href="/solutions/engineering/AppAreas/realtime.aspx">Real-Time Simulation</a></p>
+				<p><a href="/solutions/engineering/AppAreas/optanalysis.aspx">Optimization and Analysis</a></p>
+				
+				<a href="/solutions/education/"><h2>Education</h2></a>
+				<p><a href="/solutions/education/solutions/matheducation.aspx">Mathematics Education</a></p>
+				<p><a href="/solutions/education/solutions/engineeringedu.aspx">Engineering Education</a></p>
+				<p><a href="/solutions/education/solutions/college.aspx">High Schools &amp; Two-Year Colleges</a></p>
+				<p><a href="/solutions/education/solutions/testing.aspx">Testing &amp; Assessment</a></p>
+				<p><a href="/solutions/education/solutions/students.aspx">Students</a></p>
+				
+				<a href="/solutions/applied_research/"><h2>Applied Research</h2></a>
+				<p><a href="/solutions/applied_research/solutions/financial.aspx">Financial Modeling</a></p>
+				<p><a href="/solutions/applied_research/solutions/opresearch.aspx">Operations Research</a></p>
+				<p><a href="/solutions/applied_research/solutions/highperformance.aspx">High Performance Computing</a></p>
+				<p><a href="/solutions/applied_research/solutions/physics.aspx">Physics</a></p>
+			   
+            </div>  
+  
+        </div><!-- End 2 columns container -->  
+  
+    </li>
+          <li><a href="/purchase/" class="drop2">PURCHASE<br /></a><!-- Begin Home Item -->  
+  
+        <div class="dropdown_2columns"><!-- Begin 2 columns container -->  
+  
+            <div class="col_2">  
+				<h3><a href="/pricing/">Purchase &amp; Pricing Details</a></h3>
+				<h3> <a href="http://webstore.maplesoft.com/">Maplesoft Web Store</a></h3>
+				<h3><a href="/contact/webforms/requestquote.aspx">Request a Price Quote</a></h3>
+				<h3><a href="/contact/webforms/contact_sales.aspx">Contact Maplesoft Sales</a></h3>
+				<h3><a href="/elite/index.aspx">Elite Maintenance Program</a></h3>
+            </div>  
+  
+        </div><!-- End 2 columns container -->  
+  
+    </li>
+         <li><a href="/customer_support/" class="drop2">SUPPORT<br /></a><!-- Begin Home Item -->  
+  
+        <div class="dropdown_2columns"><!-- Begin 2 columns container -->  
+  
+            <div class="col_2">  
+				<h3><a href="/support/">Tech Support &amp; Customer Service</a></h3>
+				<h3> <a href="/support/faqs/index.aspx">Frequently Asked Questions</a></h3>
+				<h3><a href="/support/help/index.aspx">Online Product Help</a></h3>
+				<h3><a href="/support/training/index.aspx">Training</a></h3>
+				<h3><a href="/documentation_center">Product Documentation</a></h3>
+				<h3><a href="/support/downloads/index.aspx">Download Product Updates</a></h3>
+            </div>  
+  
+        </div><!-- End 2 columns container -->  
+  
+    </li>
+             <li><a href="/site_resources/" class="drop2">RESOURCES<br /></a><!-- Begin Home Item -->  
+  
+        <div class="dropdown_2columns"><!-- Begin 2 columns container -->  
+  
+            <div class="col_2">
+				<h2>Webinars &amp; Events</h2>
+				<p><a href="/webinars/live/index.aspx">Live Webinars</a></p>
+				<p><a href="/webinars/recorded/index.aspx">Recorded Webinars</a></p>
+				<p><a href="/company/events/index.aspx">Upcoming Events</a></p>
+				
+				<h2>Community</h2>
+				<p><a href="http://www.mapleprimes.com/">MaplePrimes</a></p>
+				<p><a href="/blog">Maplesoft Blog</a></p>
+				<p><a href="/members/member_center_main.aspx">Maplesoft Membership</a></p>
+				<p><a href="http://www.pmconsortium.org/">Plant Modeling Consortium</a></p>
+				
+				<h2>Publications</h2>
+				<p><a href="/whitepapers/index.aspx">Technical Whitepapers</a></p>
+				<p><a href="/applicationbriefs/">Application Briefs</a></p>
+				<p><a href="/subscribe/">E-Mail Newsletters</a></p>
+    			<p><a href="/books/index.aspx">Maple Books</a></p>
+				<p><a href="/mathmatters/index.aspx">Math Matters</a></p>
+				
+				<h2>Examples & Applications</h2>
+				<p><a href="/applications/index.aspx">Application Center</a></p>
+				<p><a href="/products/maplesim/ModelGallery/">MapleSim Model Gallery</a></p>
+                <p><a href="/company/casestudies/">User Case Studies</a></p>
+				<p><a href="/teachingconcepts/">Teaching Concepts with Maple</a></p>
+				<p><a href="/tacontent/index.aspx">Maple T.A. Content Center</a></p>
+				
+				<h2>Resources</h2>
+				<p><a href="/welcome/">Maplesoft Welcome Center</a></p>
+				<p><a href="/teachercenter/index.aspx">Teacher Resource Center</a></p>
+				<p><a href="/studentcenter/index.aspx">Student Help Center</a></p>
+            </div>  
+  
+        </div><!-- End 2 columns container -->  
+  
+    </li>
+            
+        <li><a href="/company/" class="drop2">COMPANY<br /></a><!-- Begin Home Item -->  
+  
+        <div class="dropdown_2columns"><!-- Begin 2 columns container -->  
+  
+            <div class="col_2">  
+				<h3><a href="/company/about/index.aspx">About Maplesoft</a></h3>
+				<h3> <a href="/contact/index.aspx">Contact</a></h3>
+				<h3><a href="/company/careers/index.aspx">Careers</a></h3>
+				<h3><a href="/media/index.aspx">Media Center</a></h3>
+				<h3><a href="/company/partners/">Partners</a></h3>
+                <h3><a href="/25anniversary/">25th Anniversary</a></h3>
+            </div>  
+  
+        </div><!-- End 2 columns container -->  
+  
+    </li>
+  
+</ul>
+<script language="javascript" type="text/javascript">
+function watermark(inputId,text){
+  var inputBox = document.getElementById(inputId);
+    if (inputBox.value.length > 0){
+      if (inputBox.value == text)
+        inputBox.value = '';
+    }
+    else
+      inputBox.value = text;
+}
+</script>
+        <form name="gs" method="get" action="http://search.maplesoft.com/search?q=" id="sitesearch">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td id="sitesearchboxcontainer"><input type="text" name="q" id="mainSearch" value="Search..." onfocus="watermark('mainSearch','Search...');" onblur="watermark('mainSearch','Search...');"/></td>
+				<td><input type="image" src="/images/template/images/search_03.png" alt="go" width="23" height="20" name="btnG" value="Maplesoft Site Search" style="display:none;" id="searchGo" /></td>
+			</tr>
+		</table>
+        </form>
+
+    </td>
+  </tr>
+</table><!-- SiteCatalyst code version: H.14. Copyright 1997-2007 Omniture, Inc. More info available at http://www.omniture.com --><script language="JavaScript">/* You may give each page an identifying name, server, and channel on the next lines. */
+s.pageName="Portal:Electric and Hybrid Electric Vehicles"
+s.server="North America"
+s.channel="Portal Page"
+s.pageType=""
+s.prop3="english"
+s.prop13="Non-Member"
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.currencyCode=""
+s.eVar13="Non-Member"
+s.eVar17="Professional"
+s.hier1="Portal Page|Electric and Hybrid Electric Vehicles"
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code);//-->
+</script><!-- End SiteCatalyst code version: H.14. -->
+
+<table width="99%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+      
+    <td width="162" valign="top" background="/Common/redesign04/images2/eclightorangebar.gif">
+       <table width="160" border="0" cellspacing="0" cellpadding="1">
+  <tr>
+    <td>&nbsp;</td>
+    <td width="153" height="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="4" bgcolor="#FFFFFF">&nbsp;</td>
+    <td bgcolor="#FFFFFF"><span class="subheaderblue"><strong>Products &amp; Solutions</strong></span></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><span class="body">
+	<a href="/solutions/index.aspx" class="leftnavlist">Maplesoft Solutions<BR></A>
+	<a href="/products/Maple/academic/index.aspx" class="leftnavlist">Maple<BR></A> 
+	<a href="/products/maplesim/index.aspx" class="leftnavlist">MapleSim<BR></A>
+	<a href="/products/testing_solutions/index.aspx" class="leftnavlist">Testing &amp; Assessment<BR></A> 
+	<a href="/products/maplenet/index.aspx" class="leftnavlist">MapleNet<BR></A>
+	<a href="/products/thirdparty/index.aspx" class="leftnavlist">Toolboxes &amp; Connectors<BR></A>
+	 <a href="/products/studyguides/index.aspx" class="leftnavlist">E-Books &amp; Study Guides<BR></A>
+	 <a href="/products/proservices/index.aspx" class="leftnavlist">Professional Services<BR></A>
+      <br>
+    </span></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+    <td bgcolor="#FFFFFF"><span class="subheaderblue"><strong>How to Proceed</strong></span></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="4">&nbsp;</td>
+    <td><span class="body"><!-- <a href="#" class="leftnavlist">Purchasing Options<BR>
+    </A> --><a href="http://webstore.maplesoft.com" class="leftnavlist">Maplesoft Web Store<BR>
+    </A> <a href="/contact/webforms/requestquote.aspx" class="leftnavlist">Request a Quote<BR>
+    </A> <a href="/contact/webforms/contact_sales.aspx" class="leftnavlist">Contact Sales<br></A><br>
+    </span></td>
+  </tr>
+  
+    <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+    <td bgcolor="#FFFFFF"><span class="subheaderblue"><strong>Featured</strong></span></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="4">&nbsp;</td>
+    <td><span class="body"><a href="/applications" class="leftnavlist">Application Center<BR></A>
+	<a href="http://www.mapleprimes.com" class="leftnavlist">MaplePrimes<BR></A>
+ <a href="http://www.maplesoft.com/blog/" class="leftnavlist">Maplesoft Blog<BR></A>
+ <a href="/demo/recorded-seminars.aspx" class="leftnavlist">Product Demonstrations<BR></A>
+ <a href="/brochures/" class="leftnavlist">Product Information Sheets<BR></A>
+ <a href="/products/testimonials/index.aspx" class="leftnavlist">User Testimonials<br></A>
+ <a href="/company/casestudies/index.aspx" class="leftnavlist">User Stories<br></A>
+ <a href="/books/" class="leftnavlist">Maple Books<br></A>
+ <a href="/media/index.aspx" class="leftnavlist">Media Center<br><br></A></span>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+    <td bgcolor="#FFFFFF"><span class="subheaderblue"><strong>Stay Informed</strong></span></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF"><table width="160" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Common/redesign04/images2/greydarkpixel.gif" width="160" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><span class="body">	<a href="/company/reporter/subscribe.aspx" class="leftnavlist" onclick="ShowSubscribeDialog([9,8]); return false;">Subscribe
+          to the Maple Reporter<BR></A>
+	<a href="/Members/sign_up_form.aspx" class="leftnavlist">Become a Maplesoft Member<BR></A>
+	<a href="http://www.maplesoft.com/feeds.aspx" class="leftnavlist">RSS Feeds<img src="http://www.maplesoft.com/images/feed-icon.png" border="0" hspace="5" align="texttop" /><br></a>
+    </span></td>
+  </tr>
+</table>
+</td>
+      <td width="1" valign="top" background="/Common/redesign04/images2/vert_line.gif"><img src="/Common/redesign04/images2/vert_line.gif" width="1" height="5"></td>
+      <td valign="top"><p><img src="/Common/redesign04/images2/spacer.gif" width="600" height="5"><br>
+        <span class="legal">&nbsp;&nbsp;&nbsp;&nbsp;<a href="/" class="bottomnav">Home</a> 
+        : <a href="/solutions/" class="bottomnav">Solutions</a> :  <a href="/solutions/automotive/" class="bottomnav">Automotive</a> : Electrical and Hybrid-Electric Vehicle Systems</span>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="1" valign="top" background="/Common/redesign04/images2/vert_line_trans.gif"><img src="/Common/redesign04/images2/vert_line_trans.gif" width="1" height="5"></td>
+          </tr>
+        </table>
+        <table width="700" border="0" cellpadding="20" cellspacing="0">
+        <tr> 
+          <td width="856" id="bg">
+<table width="702" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="2" valign="top">
+                  <div class="gradient2">
+	<h1><span></span>Automotive: Electrical and Hybrid-Electric</h1>
+                </div></td>
+              </tr>
+              <tr> 
+                <td width="388" valign="top"><table width="382" border="0" align="left" cellpadding="3" cellspacing="0">
+                  <tr>
+                    <td valign="top" class="body"><span class="body"><br>
+                      Maplesoft's suite of engineering tools supports the modeling and analysis of electric vehicle systems, such as powertrains, electric motors, generators, and batteries. These tools allow engineers to easily combine the multi-domain systems required in electric and hybrid-electric vehicles into a single model. Unlike the time and effort typically required to develop high-fidelity system models using traditional simulation tools, Maplesoft's next-generation graphical tools for model development and analysis dramatically reduce the time and cost of up-front analysis, virtual prototyping, and parameter optimization of system designs.</span><br><br>
+                      Maple and MapleSim are used extensively for modeling  complex multi-domain systems. The product suite also includes tools for easily  transferring work into an existing design toolchain, such as MATLAB&reg; and Simulink&reg;,  and is especially useful for hardware-in-the-loop simulations.
+					  <div align="center" class="body" style="padding-top:10px;"><a href="#" style="cursor:pointer" color="#990000" onClick="MM_openBrWindow('/products/maplesim/demo/RealWorldExperiencesMapleSim.aspx','a','scrollbars=yes,resizable=yes,width=860,height=570')"><img src="/products/maplesim/images/RealWorldExperiences_sm.png" border="0"></a></div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                    <td valign="top"><p><span class="bodybg"><img src="/academic_math/images/products_heading.png" alt="Products:" width="382" height="26"></span></p>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                          <tr>
+                            <td valign="top"><div align="center"><a href="http://www.maplesoft.com/products/maplesim/index.aspx"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim" width="60" height="60" border="0"></a></div></td>
+                            <td valign="top"><span class="body2"><a href="http://www.maplesoft.com/products/maplesim/index.aspx" class="body2"><font color="#006699">MapleSim</font></a> </span><span class="body"><br>
+High-performance multi-domain modeling and simulation.
+                            </span></td>
+                          </tr>
+                          <tr>
+                            <td width="20%" valign="top"><div align="center"><a href="/products/maple/index.aspx"><img src="/academic_math/images/maple_icon.png" alt="Maple" width="60" height="60" border="0"></a></div></td>
+                            <td width="80%"  valign="top"><span class="body2"><a href="/products/maple/index.aspx" class="body2"><font color="#006699">Maple</font></a> </span><span class="body"><br>
+The essential technical computing software for today&rsquo;s automotive engineers.</span></td>
+                          </tr>
+                          <tr>
+                            <td valign="top"><div align="center"><a href="http://www.maplesoft.com/products/toolboxes/globaloptimization/"><img src="/applied_research/Financial/go_icon.jpg" alt="Global Optimization Toolbox" width="60" height="60" border="0"></a></div></td>
+                            <td valign="top"><span class="body2"><a href="http://www.maplesoft.com/products/toolboxes/globaloptimization/" class="body2"><font color="#006699">Global Optimization Toolbox</font></a> </span><span class="body"><br>
+                            World-class optimization technology in an intuitive environment. Ideal for parameter estimation, model fitting and controller tuning.</span><br></td>
+                          </tr>
+                          <tr>
+                            <td valign="top"><div align="center"><a href="/products/toolboxes/maplesim_connectivity/"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim Simulink Connector" width="60" height="60" border="0"></a></div></td>
+                            <td valign="top"><span class="body2"><a href="/products/toolboxes/maplesim_connectivity/" class="body2"><font color="#006699">MapleSim Connector</font></a><br>
+                            </span><span class="body">Automatic generation of Simulink&reg; S-functions from MapleSim models. The generated ANSI-C code is compatible with Simulink&reg; Coder&trade; for simulation on supported platforms such as dSPACE, xPC Target, and B&amp;R Automation Studio Target for Simulink&reg;.</span></td>
+                          </tr>
+						  <tr>
+                            <td valign="top"><div align="center"><a href="/products/toolboxes/control_design/"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim Control Design Connector" width="60" height="60" border="0"></a></div></td>
+                            <td valign="top"><span class="body2"><a href="/products/toolboxes/control_design/" class="body2"><font color="#006699">MapleSim Control Design Toolbox</font></a><br>
+                            </span><span class="body">A solid set of essential control design tools that extend MapleSim's exceptional plant modeling capabilities to support control design.</span></td>
+                          </tr>
+						  <tr>
+						    <td valign="top"><div align="center"><a href="/products/toolboxes/labview_connector/"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim LabVIEW Connector" width="60" height="60" border="0"></a></div></td>
+						    <td valign="top"><span class="body2"><a href="/products/toolboxes/labview_connector/" class="body2"><font color="#006699">MapleSim&trade; Connector for LabVIEW&trade; and NI VeriStand&trade; Software</font></a><br>
+                            </span><span class="body">Automatic generation of LabVIEW&trade; user-code blocks for fast execution within LabVIEW&trade; and the LabVIEW&trade; real-time platform.</span></td>
+					      </tr>
+						  <tr>
+						    <td valign="top"><div align="center"><a href="/products/toolboxes/dspace/"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim Connector for dSpace" width="60" height="60" border="0"></a></div></td>
+						    <td valign="top"><span class="body2"><a href="/products/toolboxes/dspace/" class="body2"><font color="#006699">MapleSim Connector for dSPACE&reg; Systems</font></a></span><br>
+                            <span class="body">With the MapleSim Connector for dSPACE&reg; Systems, you can streamline your development process by automatically converting your high-performance, high-fidelity MapleSim models into real-time applications running on a dSPACE platform.</span></td>
+					      </tr>
+						  <tr>
+						    <td valign="top"><div align="center"><a href="/products/toolboxes/tire_component/"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim Tire Component Library" width="60" height="60" border="0"></a></div></td>
+						    <td valign="top"><span class="body2"><a href="/products/toolboxes/tire_component/" class="body2"><font color="#006699">MapleSim Tire Component Library</font></a></span><br>
+                            <span class="body">The MapleSim Tire Component Library provides MapleSim users with industry standard tire force model components such as Fiala, Calspan, and Pacejka&rsquo;s magic tire formula.</span></td>
+					      </tr>
+						  <tr>
+                            <td valign="top"><div align="center"><a href="/products/toolboxes/driveline/"><img src="/applied_research/operations/sim_icon.jpg" alt="MapleSim Driveline Component Library" width="60" height="60" border="0"></a></div></td>
+                            <td valign="top"><span class="body2"><a href="/products/toolboxes/driveline/" class="body2"><font color="#006699">MapleSim Driveline Component Library</font></a></span><br>
+                            <span class="body">The MapleSim Driveline Component Library is a collection of components, transmission sub-assemblies, and complete powertrain examples that show the use of these components in driveline applications.</span></td>
+                          </tr>
+                           <tr>
+						    <td valign="top"><div align="center"><a href="/products/thirdparty/optimus/index.aspx"><img src="/Engineering/Machine_design/optimus_icon.png" width="60" height="60" alt="Optimus"></a></div></td>
+						    <td valign="top"><span class="body2"><a href="/products/thirdparty/optimus/index.aspx" class="body2"><font color="#006699">Optimus</font></a><br>
+                            </span><span class="body">Identify optimal design parameters for complex Maple and MapleSim design problems. (Third-party product)</span></td>
+					      </tr>
+                        </table>
+		                <p><br>
+	                    <img src="/industries/Aerospace/sample_head.gif" alt="Sample Applications" width="308" height="26" border="0"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+	                    
+	                        <td width="6%" valign="top"><img src="/applied_research/physics/sim_icon_sm.jpg" width="16" height="16" border="0"></td>
+	                        <td width="94%"><span class="body"><a href="http://www.maplesoft.com/products/maplesim/gallery/simplehybridelectric.aspx" class="plainlink">Simple Hybrid Electric Vehicle Optimization</a></span></td>
+                          </tr>
+	                      <tr>
+	                        <td><img src="/applied_research/physics/sim_icon_sm.jpg" width="16" height="16" border="0"></td>
+	                        <td><p class="body"><a href="http://www.maplesoft.com/products/maplesim/gallery/simpleelectricvehicle.aspx" class="plainlink">Simple Electric Vehicle</a></p></td>
+                          </tr>
+                        </table>
+                      <p>&nbsp; </p></td>
+                  </tr>
+                </table></td>
+                <td valign="top" style="padding-left:15px;"><br>
+                     
+					 
+					 <div id="blanket" style="display:none;"></div>
+										<div id="popUpDiv" style="display:none;">
+										<div align="right"><a href="#" onClick="popup('popUpDiv')" class"legal"><img src="/products/Maple/new_features/images/close_buttons.gif" width="121px" height="23px" border="0" /></a></div><br /><br /><center><img src="/applied_research/operations/sensitivity.jpg" /><br><br></center>
+	</div>
+	
+									<div id="blanket" style="display:none;"></div>
+										<div id="popUpDiv2" style="display:none;">
+										<div align="right"><a href="#" onClick="popup('popUpDiv2')" class"legal"><img src="/products/Maple/new_features/images/close_buttons.gif" width="121px" height="23px" border="0" /></a></div><br /><br /><center><img src="/applied_research/operations/analytical.jpg" /><br><br></center>
+	</div>
+	
+									<div id="blanket" style="display:none;"></div>
+										<div id="popUpDiv3" style="display:none;">
+										<div align="right"><a href="#" onClick="popup('popUpDiv3')" class"legal"><img src="/products/Maple/new_features/images/close_buttons.gif" width="121px" height="23px" border="0" /></a></div><br /><br /><center><img src="/applied_research/operations/deterministic.jpg" /><br><br></center>
+	</div>
+					 
+					 
+					 
+					                    <table width="315" border="0" cellspacing="0" cellpadding="5">
+                                          <tr>
+                                            <td bgcolor="#ececec"><div align="center"><img src="/industries/Automotive/Hybrid/main.jpg" width="290" height="290" border="0"></div></td>
+                                          </tr>
+                                        </table>
+										<p><a href="http://www.maplesoft.com/lp/maplesim/sae/"><img src="/solutions/automotive/sae_webinar.jpg" width="315" height="164"></a><br>
+				  </p>
+										<div align="left"><img src="/products/testing_solutions/images/us_heading.png" alt="User Stories"></div>
+                      
+<div id="userStories">
+    <div id="top">
+        <div id="greener" class="first">
+            <a href="http://www.maplesoft.com/applicationbriefs/greener_cars.aspx">
+                <img src="/industries/Automotive/Hybrid/greener_lg.jpg" alt="High Fidelity, High Performance Battery Models Help Manufacturers Build Greener Cars" width="130" height="75" border="0"></a>
+          <h3><a href="http://www.maplesoft.com/applicationbriefs/greener_cars.aspx" style="color:#006699">High Fidelity, High Performance Battery Models Help Manufacturers Build Greener Cars</a></h3>
+            <p>The automotive industry requires computationally efficient, high-fidelity battery models for their electric vehicle development.</p>
+        </div>
+        <div id="battery">
+            <a href="http://www.maplesoft.com/applicationbriefs/battery_model.aspx">
+                <img src="/Engineering/mechatronics/battery.jpg" alt="Automotive Battery Model Gives Better Results" width="130" height="75" border="0"></a>
+            <h3><a href="http://www.maplesoft.com/applicationbriefs/battery_model.aspx" style="color:#006699">Automotive battery model gives better results</a></h3>
+            <p>Creating an electrical and thermal model of a lead-acid automotive battery.</p>
+        </div>
+      <div id="376">
+            <a href="http://www.maplesoft.com/company/publications/articles/view.aspx?SID=5671">
+                <img src="/industries/Automotive/Powertrain/car_story.jpg" alt="Modeling and simulation of vehicle dynamics for better design process" width="130" height="75" border="0"></a>
+            <h3><a href="http://www.maplesoft.com/company/publications/articles/view.aspx?SID=5671" style="color:#006699">Modeling and simulation of vehicle dynamics for better design process</a></h3>
+            <p>Exploring new design frontiers in the automotive industry.</p>
+        </div>
+    </div>
+    <div id="thumbs">
+      <div id="choiceBorder">&nbsp;</div>
+	  	<div name="greener" class="thumb">
+            <img src="/industries/Automotive/Hybrid/greener_thumb.jpg" alt="High Fidelity, High Performance Battery Models Help Manufacturers Build Greener Cars" width="40" height="40" border="0"></div>
+      	<div name="battery" class="thumb">
+            <img src="/Engineering/mechatronics/battery_sm.jpg" alt="Automotive battery model gives better results" width="40" height="40" border="0"></div>
+        <div name="376" class="thumb">
+            <img src="/industries/Automotive/Powertrain/car_story_sm.jpg" alt="Modeling and simulation of vehicle dynamics for better design process" width="40" height="40" border="0"></div>
+    </div>
+    <div id="bottom">
+        <a href="/company/casestudies/index.aspx">
+            <img src="/products/testing_solutions/images/us2_icon.png" width="30" height="30"
+                border="0" align="middle"/></a><a href="/company/casestudies/index.aspx" id="message" class="body" style="color:#006699">See other examples</a>
+    </div>
+</div>
+
+                      <p><a href="http://www.maplesoft.com/company/sponsoredwebinars/index.aspx"><img src="/engineering/mechatronics/Sponsored_webinar_rev.jpg" width="315" height="81"></a></p>
+			      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+				        <tr>
+				          <td colspan="2"><img src="/products/testing_solutions/images/VideoCS_heading.png" width="312" height="26" ></td>
+		            </tr>
+				        <tr>
+				          <td width="13%" valign="top"><div align="center"><img src="/images/homepage/images/videocase_icon.jpg" alt="" width="20" height="20" border="0"></div></td>
+				          <td width="87%"><a href="#" onClick="MM_openBrWindow('/demo/streaming/maplecasestudy_mcpheeHEV.aspx','demo','resizable=yes,width=875,height=800')" class="body"><strong>John McPhee</strong> talking about HEV Vehicles and the need for sophisticated models</a></td>
+		            </tr>
+				        <tr>
+				          <td valign="top"><div align="center"><img src="/images/homepage/images/videocase_icon.jpg" alt="" width="20" height="20" border="0"></div></td>
+				          <td><a href="#" onClick="MM_openBrWindow('/demo/streaming/maplecasestudy_mcpheetoyota.aspx','demo','resizable=yes,width=875,height=800')" class="body"><strong>John McPhee</strong> talking about his work with Toyota</a></td>
+		            </tr>
+		          </table>
+			      <br>
+			      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+					  <tr>
+						<td colspan="2"><img src="/industries/Automotive/Noise_Vibration/auto_res.jpg" alt="Automotive Resources"></td>
+					  </tr>
+					  <tr>
+						<td valign="top"><div align="center"><img src="/images/homepage/images/demo_icon.jpg" width="20" height="20" border="0"></div></td>
+						<td valign="top"><a href="http://www.maplesoft.com/lp/maplesim/controldesign_HIL/" class="body"><strong>Recorded Webinar Series: </strong>Simplifying Advanced Engineering Modeling with MapleSim</a></td>
+					  </tr>
+					  <tr>
+						<td valign="top"><div align="center"><img src="/images/homepage/images/speech.jpg" width="20" height="20" border="0"></div></td>
+						<td valign="top"><a href="http://www.maplesoft.com/blog/view.aspx?sid=33691" class="body"><strong>Blog:</strong> Hardware-in-the-Loop Vehicle Stability Control Test Application with MapleSim and LabVIEW</a></td>
+					  </tr>
+					  <tr>
+						<td width="13%" valign="top"><div align="center"><img src="/images/homepage/images/speech.jpg" width="20" height="20" border="0"></div></td>
+						<td width="87%" valign="top"><a href="http://www.maplesoft.com/blog/view.aspx?sid=34139" class="body"><strong>Blog:</strong>  A battery isn&rsquo;t just a voltage source </a></td>
+					  </tr>
+					  <tr>
+					    <td valign="top"><div align="center"><img src="/images/homepage/images/speech.jpg" width="20" height="20" border="0"></div></td>
+					    <td valign="top"><a href="http://www.maplesoft.com/company/publications/articles/view.aspx?SID=97845" class="body"><strong>Press release:</strong> GM and Maplesoft to Collaborate on Electric Vehicle Technologies at the University of Waterloo</a></td>
+				    </tr>
+					<tr>
+						<td valign="top"><div align="center"><img src="/high_school_college/link_icon.png" width="20" height="20" border="0"></div></td>
+						<td valign="top"><a href="http://www.mapleprimes.com/" class="body"><strong>MaplePrimes:</strong> Blogs, forums, help, musings, anwers... all things Maple and math </a></td>
+                    </tr>
+                  </table>
+              </td></tr>
+          </table></td>
+          </tr>
+    </table> </td>
+     
+  <tr>
+      <table width="101%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="/Common/redesign04/images2/horizontal_line_grey.gif" width="100%" height="1"></td>
+        </tr>
+      </td></table>
+  </tr>
+</table>
+</div>
+<div id="sitefooter">
+
+
+<div id="sitefootercontainer">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td valign="top">
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><a href="/products/" class="legalfooter"><strong>Products</strong></a></div>
+			<div class="sitefooterlinks">
+				<ul>
+					<li><a href="/products/Maple/" class="legalfooter">Maple</a></li>
+					<li><a href="/products/Maplesim/" class="legalfooter">MapleSim</a></li>
+					<li><a href="/products/mapleta/" class="legalfooter">Maple T.A.</a></li>
+					<li><a href="/products/proservices/" class="legalfooter">Professional Services and Consulting</a></li>
+					<li><a href="/products/maplenet/" class="legalfooter">MapleNet</a></li>
+					<li><a href="/products/thirdparty/" class="legalfooter">Toolboxes &amp; Connectors</a></li>
+					<li><a href="/products/studyguides/" class="legalfooter">E-books &amp; Study Guides</a></li>
+				</ul>
+			</div>
+		</div>
+	</td>
+	<td valign="top">
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><a href="/solutions/engineering/" class="legalfooter"><strong>Industry Solutions</strong></a></div>
+			<div class="sitefooterlinks">
+				<ul>
+					<li><a href="/solutions/engineering/index.aspx#vehicleengineering" class="legalfooter">Vehicle Engineering</a></li>
+					<li><a href="/solutions/engineering/index.aspx#motioncontrol" class="legalfooter">Motion Control</a></li>
+					<li><a href="/solutions/engineering/index.aspx#powerindustries" class="legalfooter">Power Industries</a></li>
+					<li><a href="/solutions/engineering/index.aspx#areospace" class="legalfooter">Aerospace</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><a href="/solutions/engineering/" class="legalfooter"><strong>Engineering Applications</strong></a></div>
+			<div class="sitefooterlinks">
+				<ul>
+					<li><a href="/solutions/engineering/AppAreas/plantmodeling.aspx" class="legalfooter">Plant Modeling for Control Design</a></li>
+					<li><a href="/solutions/engineering/AppAreas/virtualpro.aspx" class="legalfooter">Virtual Prototyping</a></li>
+					<li><a href="/solutions/engineering/AppAreas/realtime.aspx" class="legalfooter">Real-Time Simulation</a></li>
+					<li><a href="/solutions/engineering/AppAreas/optanalysis.aspx" class="legalfooter">Optimization &amp; Analysis</a></li>
+				</ul>
+			</div>
+		</div>
+	</td>
+	<td valign="top">
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><a href="/solutions/education/" class="legalfooter"><strong>Education Solutions</strong></a></div>
+			<div class="sitefooterlinks">
+				<ul>
+					<li><a href="/solutions/education/solutions/matheducation.aspx" class="legalfooter">Mathematics Education</a></li>
+					<li><a href="/solutions/education/solutions/engineeringedu.aspx" class="legalfooter"> Engineering Education</a></li>
+					<li><a href="/solutions/education/solutions/college.aspx" class="legalfooter">High Schools &amp; 2-Year Colleges</a></li>
+					<li><a href="/solutions/education/solutions/testing.aspx" class="legalfooter">Testing &amp; Assessment</a></li>
+					<li><a href="/solutions/education/solutions/students.aspx" class="legalfooter">Students</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><a href="/solutions/applied_research/" class="legalfooter"><strong>Applied Research</strong></a></div>
+			<div class="sitefooterlinks">
+				<ul>
+					<li><a href="/solutions/applied_research/solutions/financial.aspx" class="legalfooter">Financial Modeling</a></li>
+					<li><a href="/solutions/applied_research/solutions/opresearch.aspx" class="legalfooter">Operations Research</a></li>
+					<li><a href="/solutions/applied_research/solutions/highperformance.aspx" class="legalfooter">High Performance Computing</a></li>
+					<li><a href="/solutions/applied_research/solutions/physics.aspx" class="legalfooter">Physics</a></li>
+				</ul>
+			</div>
+		</div>
+	</td>
+	<td valign="top">
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><span class="legalfooter"><strong>Connect &amp; Share</strong></span></div>
+			<div class="sitefooterlinks">
+				<div class="sitefootersocialmedia">
+				<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="top" class="socialmediaicon"><a href="http://www.mapleprimes.com/"><img src="/products/maplesim/images5/mapleprimes_icon.png" width="21" height="21" border="0" /></a></td>
+					<td valign="top" class="socialmediatext"><a href="http://www.mapleprimes.com/" class="legalfooter">MaplePrimes</a></td>
+				</tr>
+				<tr>
+					<td valign="top" class="socialmediaicon">
+					<a href="http://www.facebook.com/maplesoft" onclick="var s=s_gi('maplesoftcom'); 
+					s.linkTrackVars='None'; 
+					s.linkTrackEvents='None'; 
+					s.tl(this,'o','Header:Facebook');"><img src="/images/social/facebook-icon.png" alt="Facebook" width="21" height="21" border="0" /></a></td>
+					<td valign="top" class="socialmediatext">
+					<a href="http://www.facebook.com/Maplesoft" onclick="var s=s_gi('maplesoftcom'); 
+					s.linkTrackVars='None'; 
+					s.linkTrackEvents='None'; 
+					s.tl(this,'o','Header:Facebook');" class="legalfooter">Facebook</a></td>
+				</tr>
+				<tr>
+					<td valign="top" class="socialmediaicon"> 
+					<a href="http://www.twitter.com/maplesoft" onclick="var s=s_gi('maplesoftcom'); 
+					s.linkTrackVars='None'; 
+					s.linkTrackEvents='None'; 
+					s.tl(this,'o','Header:Twitter');"><img src="/images/social/twitter-icon.png" alt="Twitter" width="21" height="21" border="0" /></a></td>
+					<td valign="top" class="socialmediatext">
+					<a href="http://www.twitter.com/maplesoft" onclick="var s=s_gi('maplesoftcom'); 
+					s.linkTrackVars='None'; 
+					s.linkTrackEvents='None'; 
+					s.tl(this,'o','Header:Twitter');" class="legalfooter">Twitter</a></td>
+				</tr>
+				<tr>
+					<td valign="top" class="socialmediaicon"><img src="/images/social/googleplus-icon.png" width="21" height="21" /></td>
+					<td valign="top" class="socialmediatext"><a href="#" class="legalfooter">Google+</a></td>
+				</tr>
+				<tr>
+					<td valign="top" class="socialmediaicon">
+					<a href="http://www.youtube.com/MaplesoftVideo" onclick="var s=s_gi('maplesoftcom'); 
+						s.linkTrackVars='None'; 
+						s.linkTrackEvents='None'; 
+						s.tl(this,'o','Header:YouTube');"><img src="/images/social/youtube-icon.png" alt="YouTube" width="21" height="21" border="0" /></a>
+					</td>
+					<td valign="top" class="socialmediatext">
+					<a href="http://www.youtube.com/MaplesoftVideo" onclick="var s=s_gi('maplesoftcom'); 
+						s.linkTrackVars='None'; 
+						s.linkTrackEvents='None'; 
+						s.tl(this,'o','Header:YouTube');" class="legalfooter">YouTube</a></td>
+				</tr>
+				<tr>
+					<td valign="top" class="socialmediaicon">
+					<a href="http://www.linkedin.com/groups?home=&gid=1782256" onclick="var s=s_gi('maplesoftcom'); 
+					s.linkTrackVars='None'; 
+					s.linkTrackEvents='None'; 
+					s.tl(this,'o','Header:LinkedIn');"><img src="/images/social/linkedin-icon.png" alt="LinkedIn" width="21" height="21" border="0" /></a>
+					</td>
+					<td valign="top" class="socialmediatext">
+					<a href="http://www.linkedin.com/groups?home=&gid=1782256" onclick="var s=s_gi('maplesoftcom'); 
+					s.linkTrackVars='None'; 
+					s.linkTrackEvents='None'; 
+					s.tl(this,'o','Header:LinkedIn');" class="legalfooter">LinkedIn</a></td>
+				</tr>
+				</table>
+				</div>
+			</div>
+		</div>
+		<div class="sitefootergroup">
+			<div class="sitefootergroupheader"><a href="/subscribers/subscription_list.aspx" class="legalfooter"><strong>Subscriptions &amp; Accounts</strong></a></div>
+			<div class="sitefooterlinks">
+				<ul>
+					<li><a href="/subscribers/subscription_list.aspx" class="legalfooter">Subscribe</a></li>
+                    <li><a href="/Members/login_forgot_password.aspx" class="legalfooter">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</td>
+</tr>
+</table>
+</div>
+
+
+
+
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr id="bottomlinks"></tr>
+  <tr id="bottomlinks">
+    <td valign="top" bgcolor="#ffffff"><div align="center"> <span class="body">
+      
+      <br />
+      <a href="/products/index.aspx" class="bottomnav">Products</a>&nbsp; |&nbsp; <a href="/solutions/"
+                        class="bottomnav">Solutions</a>&nbsp; |&nbsp; <a href="/purchase/index.aspx" class="bottomnav"> Purchase</a>&nbsp; |&nbsp; <a href="/customer_support/index.aspx" class="bottomnav"> Support</a> &nbsp; |&nbsp; <a href="/site_resources/index.aspx" class="bottomnav">Resources</a>&nbsp;
+      | &nbsp;<a href="/community/index.aspx" class="bottomnav">Community</a>&nbsp; |&nbsp; <a href="/company/index.aspx" class="bottomnav">Company</a>&nbsp; |&nbsp; <a href="/site-map/index.aspx"
+                        class="bottomnav">Site-Map</a>&nbsp; |&nbsp;<a href="/members/login_forgot_password.aspx"
+                            class="bottomnav">Login</a><br>
+      
+      </span>
+      <table border="0" cellpadding="3" cellspacing="0" bordercolor="#CCCCCC">
+        <tr>
+          <td><div align="right">
+            
+            <span class="legal">Language: </span>
+            
+          </div></td>
+          <td nowrap><span class="body">
+            <a id="hlEnglish" class="bottomnav activeLang" href="index.aspx?L=E"> <strong>English</strong></a>
+            &nbsp;|&nbsp;
+            <a id="hlFrench" class="bottomnav" href="index.aspx?L=F"> <strong>Fran&ccedil;ais</strong></a>
+            &nbsp;|&nbsp;
+            <a id="hlDeutsch" class="bottomnav" href="index.aspx?L=G"> <strong>Deutsch</strong></a>
+          </span></td>
+        </tr>
+      </table>
+      <br>
+    </div></td>
+    <td align="right" valign="top" bgcolor="#ffffff"><img src="/images/header/cybernet_group_company.png" width="200" height="35" hspace="10" vspace="10" /></td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr>
+    <td><div align="center">
+      
+      <span class="legal">&nbsp;&nbsp;&nbsp;&copy; Maplesoft, a division of Waterloo Maple
+        Inc. 2013. | <a href="/terms/" class="bottomnav">Terms of Use</a> | <a href="/privacy/"
+                        class="bottomnav">Privacy</a> | <a href="/trademark/" class="bottomnav">Trademarks</a></span><br />
+      <span class="legal">MATLAB, Simulink, and Simulink Coder are trademarks or registered trademarks of The MathWorks, Inc.</span>
+      <br /><br />
+      </div>
+	  </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr></tr>
+</table>
+</div></div>
+<!-- Start Quantcast Tag -->
+<script type="text/javascript"> 
+_qoptions={qacct:"p-3bEod1OYxUFqE",labels:"_fp.channel.automotive,_fp.event.hybrid"};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-3bEod1OYxUFqE.gif?labels=_fp.channel.automotive,_fp.event.hybrid" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+</body>
+
+</html>

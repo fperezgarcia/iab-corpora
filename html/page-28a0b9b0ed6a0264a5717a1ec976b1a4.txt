@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Automotive, Auto Body, Motorcycle, Marine, Diesel Mechanic Repair Training</title>
+	<link href="http://resources.wyotech.com/themes/wyotech_programs//css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="http://resources.wyotech.com/themes/wyotech_programs//css/ie_screen.css" />
+	<![endif]-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="http://malsup.github.io/jquery.cycle.all.js"></script> 	
+	<script type="text/javascript" src="http://resources.wyotech.com/themes/wyotech_programs/script.js"></script> 	
+	<script type="text/javascript">if (!window.jQuery){ document.write('<scrip' + 't type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></scrip' + 't>'); }</script>
+
+<script type="text/javascript" src="http://www.cci.edu/js/shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" href="http://www.cci.edu/js/shadowbox/shadowbox.css" type="text/css" media="screen" />
+  <script type="text/javascript">Shadowbox.init({
+   skipSetup: true,
+   language: "en",
+   overlayOpacity: 0.6,
+   players: ["iframe"]
+  });
+  </script>
+<script type="text/javascript">
+	var lastzip = '';
+	jQuery(document).ready(function(event) {
+		$zipcode = jQuery('#zipcode');
+		if ($zipcode.length > 0) {
+			if ($zipcode.val() != '') {
+				jQuery(document).trigger('leadform:zipchange', ['']);
+			}
+			$zipcode.on('blur', function(event) {
+				jQuery(document).trigger('leadform:zipchange');
+			});
+		}
+		
+		$email = jQuery('#email');
+		if ($email.length > 0) {
+			$email.on('blur', function(event) {
+				jQuery(document).trigger('leadform:emailblur');
+			});
+		}
+		
+		jQuery('#zipcode').closest('form').find('input[type="text"]').on('change', function(event) {
+			var $zipcode = jQuery('#zipcode');
+			if ($zipcode.val() != lastzip) {
+				jQuery(document).trigger('leadform:zipchange');
+			}
+		});
+	});
+	
+	jQuery(document).on('leadform:zipchange', function(event, selectedProgram) {
+		var $zipcode = jQuery('#zipcode');
+		if ($zipcode.val()=='' || $zipcode.val()==lastzip) {
+			return;
+		}
+		
+		jQuery(document).trigger('leadform:ziplookup');
+		
+		var program_type = '';
+		var $inputs = jQuery('input[name="program_type"]');
+		if ($inputs.length > 0) {
+			if ($inputs.eq(0).attr('type') == 'radio') {
+				program_type = '&program_type=' + $inputs.filter(':checked').val();
+			} else {
+				program_type = '&program_type=' + $inputs.eq(0).val();
+			}
+		}
+		
+		lastzip = $zipcode.val();
+		jQuery.ajax({
+			dataType: 'json',
+			url: '/themes/_leadform/ziplookup.php?zipcode=' + $zipcode.val() + program_type,
+			success: function(json) {
+				$programs = jQuery('#program');
+				if (json.programs && $programs.length>0 && $programs.prop('tagName')=='SELECT') {
+					jQuery(document).trigger('leadform:programupdate');
+					
+					var count = 0;
+					for (var i in json.programs) {
+						if (typeof(json.programs[i]) == 'function') {
+							continue;
+						}
+						count++;
+					}
+					
+					$programs.empty();
+					if (count > 0) {
+						$programs.append(jQuery('<option></option>').val('').text('-- Select a Program --'));
+						if (jQuery('#custom_programs').length>0 && jQuery('#custom_programs').val()!='') {
+							var custom_programs = jQuery('#custom_programs').val().toUpperCase().split(/[^\w]+/);
+							for (var i in json.programs) {
+								if (i.match(/OL$/)) {
+									continue;
+								}
+								if (custom_programs.indexOf(i.toUpperCase()) == -1) {
+									delete json.programs[i];
+								}
+							}
+						}
+						
+						for (var i in json.programs) {
+							$programs.append(jQuery('<option></option>').val(i).text(json.programs[i]));
+						}
+						
+						if (selectedProgram) {
+							$programs.val(selectedProgram);
+						}
+						
+						if (json.online == true) {
+							jQuery(document).trigger('leadform:onlinenotice');
+						} else {
+							jQuery(document).trigger('leadform:groundnotice');
+						}
+					} else {
+						$programs.append(jQuery('<option></option>').val('').text('No Programs in Your Area'));
+					}
+					
+					jQuery(document).trigger('leadform:programupdated');
+				}
+				
+				if (json.location) {
+					if (jQuery('#city') && json.location.city) {
+						jQuery('#city').val(json.location.city);
+						jQuery(document).trigger('leadform:city-update');
+					}
+					
+					if (jQuery('#state').length>0 && json.location.state) {
+						jQuery('#state').val(json.location.state);
+						jQuery(document).trigger('leadform:state-update');
+					}
+					
+					if (jQuery('#country') && json.location.country) {
+						jQuery('#country').val(json.location.country);
+						jQuery('leadform:country-update');
+					}
+				}
+				
+				jQuery(document).trigger('leadform:endziplookup');
+			}
+		});
+	});
+	
+	jQuery(document).on('leadform:onlinenotice', function(event) {
+		$programs = jQuery('#program');
+		if ($programs.length == 0) {
+			return;
+		}
+		
+		jQuery('body').append(jQuery('<div></div>').attr('id', 'leadform-nocampuses').css({'position': 'absolute', 'display': 'none'}).text('Unfortunately, there is no Everest campus currently in your area.  We suggest you consider one of our many online programs.').prepend('<span></span>'));
+		jQuery('#leadform-nocampuses').css({'position': 'absolute', 'top': $programs.offset().top - (jQuery('#leadform-nocampuses').height() / 2), 'left': $programs.offset().left + ($programs.width() + 14)});
+		
+		if (jQuery('input[name=program_type]').length>0) {
+			jQuery('#leadform-nocampuses').show();
+		}
+	});
+	
+	jQuery(document).on('leadform:groundnotice', function(event) {
+		if (jQuery('#leadform-nocampuses').length > 0) {
+			jQuery('#leadform-nocampuses').hide();
+		}
+	});
+</script>
+<style type="text/css">
+#leadform-nocampuses{
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	border: 2px solid #a7d4fc;
+	padding: 10px;
+	padding-left: 46px;
+	background: url(http://www.cci.edu/images/ppc/ppc_nocampuses_info.png) no-repeat 5px 50% #dbf6ff;
+	background: url(http://www.cci.edu/images/ppc/ppc_nocampuses_info.png) no-repeat 5px 50%,
+		-webkit-gradient(linear, left bottom, left top, color-stop(0, #dbf6ff), color-stop(0.65, #FFFFFF));
+	background: url(http://www.cci.edu/images/ppc/ppc_nocampuses_info.png) no-repeat 5px 50%,
+		-moz-linear-gradient(center bottom, #dbf6ff 0%, #FFFFFF 65%);
+	color: #333;
+	width: 200px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 1px #666;
+	-webkit-box-shadow: 2px 2px 1px #666;
+	box-shadow: 2px 2px 1px #666;
+}
+
+#leadform-nocampuses span{
+	width: 10px;
+	height: 19px;
+	background: url(http://www.cci.edu/images/ppc/ppc_nocampuses_arrow.png) no-repeat;
+	position: absolute;
+	left: -12px;
+	top: 50%;
+	margin-top: -10px;
+}
+</style><script type="text/javascript">
+        jQuery(document).ready(function (event) {
+			if(Shadowbox) {
+				Shadowbox.setup("a[href$=privacy.html]:not([rel*=shadowbox]),a.ppc-shadowbox:not([rel*=shadowbox])", {
+					player: 'iframe',
+					width:	500,
+					height: 500
+				});
+			}
+			jQuery(document).on('leadform:address-update', function(event) {
+				var $field = jQuery('#address');
+				if ($field.length>0) {
+					var id = jQuery('#address').attr('id');
+					if(!$field.val().match(/^.{2,300}$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:adkey-update', function(event) {
+				var $field = jQuery('#adkey');
+				if ($field.length>0) {
+					var id = jQuery('#adkey').attr('id');
+					if(!$field.val().match(/[^0]/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:campus-update', function(event) {
+				var $field = jQuery('#campus');
+				if ($field.length>0) {
+					var id = jQuery('#campus').attr('id');
+					if(!$field.val().match(/^[^$]/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:city-update', function(event) {
+				var $field = jQuery('#city');
+				if ($field.length>0) {
+					var id = jQuery('#city').attr('id');
+					if(!$field.val().match(/^[^$]/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:country-update', function(event) {
+				var $field = jQuery('#country');
+				if ($field.length>0) {
+					var id = jQuery('#country').attr('id');
+					if(!$field.val().match(/^([^0]+)$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:course-update', function(event) {
+				var $field = jQuery('#course');
+				if ($field.length>0) {
+					var id = jQuery('#course').attr('id');
+					if(!$field.val().match(/^[a-zA-Z]{2,15}$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:email-update', function(event) {
+				var $field = jQuery('#email');
+				if ($field.length>0) {
+					var id = jQuery('#email').attr('id');
+					if(!$field.val().match(/^((?:(?:(?:[a-zA-Z0-9\-\+_][\.]?)*)[a-zA-Z0-9\-\+_])+)\@((?:(?:(?:[a-zA-Z0-9][\.\-_]?){0,62})[a-zA-Z0-9])+)\.([a-zA-Z0-9]{2,6})$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:fname-update', function(event) {
+				var $field = jQuery('#fname');
+				if ($field.length>0) {
+					var id = jQuery('#fname').attr('id');
+					if(!$field.val().match(/^.{2,150}$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:graddate-update', function(event) {
+				var $field = jQuery('#graddate');
+				if ($field.length>0) {
+					var id = jQuery('#graddate').attr('id');
+					if(!$field.val().match(/^((19|20)\d\d|[A-Z]+)$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:lname-update', function(event) {
+				var $field = jQuery('#lname');
+				if ($field.length>0) {
+					var id = jQuery('#lname').attr('id');
+					if(!$field.val().match(/^.{2,150}$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:phone_area-update', function(event) {
+				var $field = jQuery('#phone_area');
+				if ($field.length>0) {
+					var id = jQuery('#phone_area').attr('id');
+					if(!$field.val().match(/^(\d{3}|\(?[1]?[-. ]?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4})$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:phone_pre-update', function(event) {
+				var $field = jQuery('#phone_pre');
+				if ($field.length>0) {
+					var id = jQuery('#phone_pre').attr('id');
+					if(!$field.val().match(/^\d{3}$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:phone_suf-update', function(event) {
+				var $field = jQuery('#phone_suf');
+				if ($field.length>0) {
+					var id = jQuery('#phone_suf').attr('id');
+					if(!$field.val().match(/^\d{4}$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:program_type-update', function(event) {
+				var $field = jQuery('#program_type');
+				if ($field.length>0) {
+					var id = jQuery('#program_type').attr('id');
+					if(!$field.val().match(/^(online|ground)$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:state-update', function(event) {
+				var $field = jQuery('#state');
+				if ($field.length>0) {
+					var id = jQuery('#state').attr('id');
+					if(!$field.val().match(/^[^$]/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});
+			jQuery(document).on('leadform:zipcode-update', function(event) {
+				var $field = jQuery('#zipcode');
+				if ($field.length>0) {
+					var id = jQuery('#zipcode').attr('id');
+					if(!$field.val().match(/^(\d{5}(\-\d{4})?|[a-zA-Z]\d[a-zA-Z](\s?\d[a-zA-Z]\d)?)$/)) {
+						$field.addClass('error');
+						jQuery(document).trigger('leadform:haserror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-haserror');
+					} else {
+						$field.removeClass('error');
+						jQuery(document).trigger('leadform:noerror', [id]);
+						jQuery(document).trigger('leadform:' + id + '-noerror');
+					}
+				}
+			});		if(jQuery('#phone_area').length > 0) {
+			jQuery('#phone_area').on('change', function(event) {
+				jQuery.ajax({
+					url: document.location.pathname + '?EXPRESS-CONSENT-CHECK=' + jQuery('#phone_area').val(),
+					success: function(json) {
+						if (jQuery('#Express_consent').length == 0) {
+							var $el = jQuery('<input></input>').attr('type', 'hidden').attr('name', 'Express_consent').attr('id', 'Express_consent');
+							jQuery('#phone_area').parent().append($el);
+						}
+						
+						if (json == 'true') {
+							var name = document.location.hostname.match(/wyo/i) ? 'WyoTech' : (document.location.hostname.match(/heald/i) ? 'Heald' : 'Everest');
+							var conf = confirm('By selecting "OK", you give ' + name + ' express consent to contact you at the phone number(s) provided for the purposes of servicing this inquiry, contacting you in the future and removal of this number(s) from ' + name + '\'s Do Not Call list.');
+							if (conf) {
+								jQuery('#Express_consent').val('Y');
+							} else {
+								jQuery('#Express_consent').val('N');
+							}
+						} else {
+							jQuery('#Express_consent').val('');
+						}
+					}
+				});
+			});
+		}
+		
+		jQuery(document).on('leadform:phone_area-updatesubmit', function(event) {
+			if (jQuery('#phone_pre').length == 0) {
+				var value = jQuery('#phone_area').val().replace(/[^\d]/g, '');
+				
+				if (value.length<10) {
+					jQuery('#phone_area').addClass('error');
+						jQuery(document).trigger('leadform:haserror', ['phone_area']);
+						jQuery(document).trigger('leadform:phone_area-haserror');
+						return;
+				}
+				
+				var matches = [/1{7}$/, /2{7}$/, /3{7}$/, /4{7}$/, /5{7}$/, /6{7}$/, /7{7}$/, /8{7}$/, /9{7}$/, /0{7}$/, /5551212$/, /2345678$/, /3456789$/, /4567890$/, /5551234$/, /2223334444$/, /3334445555$/, /4445556666$/, /5556667777$/, /6667778888$/, /8889990000$/, /^999/, /\d{3}555\d{4}/];
+				for (var i=0; i<matches.length; i++) {
+					if (value.match(matches[i])) {
+						jQuery('#phone_area').addClass('error');
+						jQuery(document).trigger('leadform:haserror', ['phone_area']);
+						jQuery(document).trigger('leadform:phone_area-haserror');
+						return;
+					}
+				}
+			}
+		});
+		
+		jQuery(document).on('leadform:fname-updatesubmit', function(event) {
+			if(jQuery('#fname').val().match(/[bcdfghjklmnpqrstvwxz]{6,}/i) || jQuery('#fname').val().match(/^\d+$/) || jQuery('#fname').val().match(/^asdf/i)) {
+				jQuery('#fname').addClass('error');
+				jQuery(document).trigger('leadform:haserror', ['fname']);
+				jQuery(document).trigger('leadform:fname-haserror');
+				return;
+			}
+		});
+
+		jQuery(document).on('leadform:lname-updatesubmit', function(event) {
+			if(jQuery('#lname').val().match(/[bcdfghjklmnpqrstvwxz]{6,}/i) || jQuery('#lname').val().match(/^\d+$/) || jQuery('#lname').val().match(/^asdf/i)) {
+				jQuery('#lname').addClass('error');
+				jQuery(document).trigger('leadform:haserror', ['lname']);
+				jQuery(document).trigger('leadform:lname-haserror');
+				return;
+			}
+		});
+		
+		jQuery(document).on('leadform:lasterrors', function(event) {
+			var name = jQuery('#fname').val() + ' ' + jQuery('#lname').val();
+			var fullnames = [/john doe/i, /jane doe/i];
+			for(var i=0; i<fullnames.length; i++) {
+				if(name.match(fullnames[i])) {
+					jQuery('#lname').addClass('error');
+					jQuery(document).trigger('leadform:haserror', ['lname']);
+					jQuery(document).trigger('leadform:lname-haserror');
+					jQuery('#fname').addClass('error');
+					jQuery(document).trigger('leadform:haserror', ['fname']);
+					jQuery(document).trigger('leadform:fname-haserror');
+					return;
+				}
+			}
+		});
+
+		jQuery(document).on('leadform:useragreesubmit', function(event) {
+			$useragree = jQuery('#useragree');
+			if ($useragree.length > 0) {
+				if ($useragree.prop('checked') == false) {
+					$useragree.addClass('error');
+					$useragree.parent().addClass('error');
+					jQuery(document).trigger('leadform:haserror', ['useragree']);
+					jQuery(document).trigger('leadform:useragree-haserror');
+					return;
+				} else {
+					$useragree.removeClass('error');
+					$useragree.parent().removeClass('error');
+					jQuery(document).trigger('leadform:noerror', ['useragree']);
+					jQuery(document).trigger('leadform:useragree-noerror');
+					return;
+				}
+			}
+		});
+		
+		jQuery(document).on('leadform:emailblur', function(event) {
+			var replacements =[{"find":"\/\\@yahoo\\.co$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.cm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.con$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.om$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.comm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.ocm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.coom$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahhoo\\.com$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.cpm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.vom$\/i","replace":"@yahoo.com"},{"find":"\/\\@yagoo\\.com$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.cpr$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.comn$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahyoo\\.com$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.copm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.come$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.comk$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.cok$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.ccom$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.conm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahooc\\.om$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.como$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.comj$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.cocm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahoo\\.colm$\/i","replace":"@yahoo.com"},{"find":"\/\\@yahii\\.com$\/i","replace":"@yahoo.com"},{"find":"\/\\@hotmai\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@homail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmial\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.co$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmal\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.om$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.con$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmaill\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotamil\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@homtail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hoymail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.ocm$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotnail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.net$\/i","replace":"@hotmail.com"},{"find":"\/\\@hottmail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.comm$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmailc\\.om$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotamail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmmail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hormail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.coml$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.cpm$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmaail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hootmail\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmail\\.coom$\/i","replace":"@hotmail.com"},{"find":"\/\\@hotmaol\\.com$\/i","replace":"@hotmail.com"},{"find":"\/\\@gmial\\.com$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.co$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.con$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.ca$\/i","replace":"@gmail.com"},{"find":"\/\\@gmaill\\.com$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.om$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.cm$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.cxom$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.cim$\/i","replace":"@gmail.com"},{"find":"\/\\@gmale\\.com$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.ocm$\/i","replace":"@gmail.com"},{"find":"\/\\@gmail\\.cpm$\/i","replace":"@gmail.com"},{"find":"\/\\@aol\\.con$\/i","replace":"@aol.com"},{"find":"\/\\@aol\\.om$\/i","replace":"@aol.com"},{"find":"\/\\@aol\\.co$\/i","replace":"@aol.com"},{"find":"\/\\@aool\\.com$\/i","replace":"@aol.com"},{"find":"\/\\@aol\\.xom$\/i","replace":"@aol.com"},{"find":"\/\\@live\\.om$\/i","replace":"@live.com"},{"find":"\/\\@live\\.con$\/i","replace":"@live.com"},{"find":"\/\\@ymail\\.cpr$\/i","replace":"@ymail.com"},{"find":"\/\\@ymail\\.om$\/i","replace":"@ymail.com"},{"find":"\/\\@comcat\\.net$\/i","replace":"@comcast.net"},{"find":"\/\\@msn\\.con$\/i","replace":"@msn.com"},{"find":"\/\\@msn\\.co$\/i","replace":"@msn.com"},{"find":"\/\\@msn\\.comm$\/i","replace":"@msn.com"},{"find":"\/\\@sbcglobal\\.com$\/i","replace":"@sbcglobal.net"},{"find":"\/\\@sbcglbal\\.net$\/i","replace":"@sbcglobal.net"},{"find":"\/\\@sbglobal\\.net$\/i","replace":"@sbcglobal.net"}];			for (var i in replacements) {
+				if (replacements[i].find) {
+					replacements[i].find = eval(replacements[i].find);
+					jQuery('#email').val(jQuery('#email').val().replace(replacements[i].find, replacements[i].replace));
+				}
+			}
+		});
+		
+		jQuery(document).on('leadform:zipcode-updatesubmit', function(event) {
+			var badzips = [/^0{5}/, /^1{5}/, /^3{5}/, /^6{5}/, /^7{5}/, /^8{5}/, /^9{5}/];
+			var $zipcode = jQuery('#zipcode');
+			for (var i=0; i<badzips.length; i++) {
+				if ($zipcode.val().match(badzips[i])) {
+					$zipcode.addClass('error');
+					jQuery(document).trigger('leadform:haserror', ['zipcode']);
+					jQuery(document).trigger('leadform:zipcode-haserror');
+					return;
+				}
+			}
+		});
+		
+		jQuery('#form1').on('submit', function(event) {
+			jQuery(document).trigger('leadform:formsubmitted');
+			jQuery(document).trigger('leadform:address-update');
+			jQuery(document).trigger('leadform:address-updatesubmit');
+			jQuery(document).trigger('leadform:adkey-update');
+			jQuery(document).trigger('leadform:adkey-updatesubmit');
+			jQuery(document).trigger('leadform:campus-update');
+			jQuery(document).trigger('leadform:campus-updatesubmit');
+			jQuery(document).trigger('leadform:city-update');
+			jQuery(document).trigger('leadform:city-updatesubmit');
+			jQuery(document).trigger('leadform:country-update');
+			jQuery(document).trigger('leadform:country-updatesubmit');
+			jQuery(document).trigger('leadform:course-update');
+			jQuery(document).trigger('leadform:course-updatesubmit');
+			jQuery(document).trigger('leadform:email-update');
+			jQuery(document).trigger('leadform:email-updatesubmit');
+			jQuery(document).trigger('leadform:fname-update');
+			jQuery(document).trigger('leadform:fname-updatesubmit');
+			jQuery(document).trigger('leadform:graddate-update');
+			jQuery(document).trigger('leadform:graddate-updatesubmit');
+			jQuery(document).trigger('leadform:lname-update');
+			jQuery(document).trigger('leadform:lname-updatesubmit');
+			jQuery(document).trigger('leadform:phone_area-update');
+			jQuery(document).trigger('leadform:phone_area-updatesubmit');
+			jQuery(document).trigger('leadform:phone_pre-update');
+			jQuery(document).trigger('leadform:phone_pre-updatesubmit');
+			jQuery(document).trigger('leadform:phone_suf-update');
+			jQuery(document).trigger('leadform:phone_suf-updatesubmit');
+			jQuery(document).trigger('leadform:program_type-update');
+			jQuery(document).trigger('leadform:program_type-updatesubmit');
+			jQuery(document).trigger('leadform:state-update');
+			jQuery(document).trigger('leadform:state-updatesubmit');
+			jQuery(document).trigger('leadform:zipcode-update');
+			jQuery(document).trigger('leadform:zipcode-updatesubmit');			jQuery(document).trigger('leadform:useragreesubmit');
+			jQuery(document).trigger('leadform:lasterrors');
+			
+			var $errors = jQuery('#form1').find('input.error,select.error');
+			if ($errors.length > 0) {
+				event.preventDefault();
+				jQuery(document).trigger('leadform:haserrors');
+				jQuery('html,body').animate({
+					scrollTop: $errors.eq(0).offset().top - 10
+				}, 500, function() {
+					$errors.eq(0).focus();
+				});
+			} else {
+				var $submit_button = jQuery('#form1 input[type="submit"]');
+				var count = 0;
+				
+				if ($submit_button.length > 0) {
+					$submit_button.prop('disabled', true);
+					$submit_button.addClass('disable');
+					window.setInterval(function() {
+						var dots = '.';
+						if (count == 1) {
+							dots = '..';
+						}
+						if (count == 2) {
+							dots = '...';
+							count = -1;
+						}
+						count++;
+						$submit_button.val('Submitting' + dots);
+					}, 750);
+				}
+			}
+		});
+	});
+</script><link rel="canonical" href="http://resources.wyotech.com/" />
+</head>
+	<body>
+		<div class="wrapper clearfix">
+			<div class="header">
+				<span class="call">Call Today 1 (888) 741-4270</span>
+				<ul id="main_nav">
+</ul>			</div>
+			<div class="wrapper_inside clearfix">
+				<div class="form_holder">
+					<div class="logo_holder">
+						<a class="logo" href="http://resources.wyotech.com/"></a>
+					</div>
+					<div class="form_content">
+						<div class="form_headline"><span>Request Information</span></div><form id="form1" name="form1" method="post" action="/"><p><label for="fname" class="noerror">First Name:</label>
+					 			<input name="fname" class="noerror" type="text" id="fname" value="" size="20"  />
+					 		</p><p><label for="lname" class="noerror">Last Name:</label>
+					 			<input name="lname" class="noerror" type="text" id="lname" value="" size="20"  />
+					 		</p><p><label for="address" class="noerror">Address:</label>
+					 			<input name="address" class="noerror" type="text" id="address" value="" size="20"  />
+					 		</p><p><label for="zipcode" class="noerror">Zip:</label>
+					 			<input name="zipcode" class="noerror" type="text" id="zipcode" value="" size="20"  />
+					 		</p><p><label for="city" class="noerror">City:</label>
+					 			<input name="city" class="noerror" type="text" id="city" value="" size="20"  />
+					 		</p><p><label for="state" class="noerror">State:</label>
+								<select class="dropdown noerror" name="state" id="state">
+							  		<option value="" >Choose A State</option>
+							  		<option	value="AL"  >Alabama</option><option	value="AK"  >Alaska</option><option	value="AB"  >Alberta</option><option	value="AZ"  >Arizona</option><option	value="AR"  >Arkansas</option><option	value="BC"  >British Columbia</option><option	value="CA"  >California</option><option	value="CO"  >Colorado</option><option	value="CT"  >Connecticut</option><option	value="DE"  >Delaware</option><option	value="DC"  >District of Columbia</option><option	value="FL"  >Florida</option><option	value="GA"  >Georgia</option><option	value="GU"  >Guam</option><option	value="HI"  >Hawaii</option><option	value="ID"  >Idaho</option><option	value="IL"  >Illinois</option><option	value="IN"  >Indiana</option><option	value="IA"  >Iowa</option><option	value="KS"  >Kansas</option><option	value="KY"  >Kentucky</option><option	value="LA"  >Louisiana</option><option	value="ME"  >Maine</option><option	value="MB"  >Manitoba</option><option	value="MH"  >Marshall Islands</option><option	value="MD"  >Maryland</option><option	value="MA"  >Massachusetts</option><option	value="MI"  >Michigan</option><option	value="MN"  >Minnesota</option><option	value="MS"  >Mississippi</option><option	value="MO"  >Missouri</option><option	value="MT"  >Montana</option><option	value="NE"  >Nebraska</option><option	value="NV"  >Nevada</option><option	value="NH"  >New Hampshire</option><option	value="NJ"  >New Jersey</option><option	value="NM"  >New Mexico</option><option	value="NY"  >New York</option><option	value="NC"  >North Carolina</option><option	value="ND"  >North Dakota</option><option	value="NP"  >Northern Mariana Islands</option><option	value="NS"  >Nova Scotia</option><option	value="OH"  >Ohio</option><option	value="OK"  >Oklahoma</option><option	value="ON"  >Ontario</option><option	value="OR"  >Oregon</option><option	value="PW"  >Palau</option><option	value="PA"  >Pennsylvania</option><option	value="PR"  >Puerto Rico</option><option	value="QC"  >Qu&eacute;bec</option><option	value="RI"  >Rhode Island</option><option	value="SK"  >Saskatchewan</option><option	value="SC"  >South Carolina</option><option	value="SD"  >South Dakota</option><option	value="TN"  >Tennessee</option><option	value="TX"  >Texas</option><option	value="UT"  >Utah</option><option	value="VT"  >Vermont</option><option	value="VI"  >Virgin Islands</option><option	value="VA"  >Virginia</option><option	value="WA"  >Washington</option><option	value="WV"  >West Virginia</option><option	value="WI"  >Wisconsin</option><option	value="WY"  >Wyoming</option>
+								</select>
+							</p><p><label for="phone_area" class="noerror">Phone:</label>
+					 			<input name="phone_area" class="noerror" type="text" id="phone_area" value="" size="20"  />
+					 		</p><p><label for="email" class="noerror">Email:</label>
+					 			<input name="email" class="noerror" type="text" id="email" value="" size="20"  />
+					 		</p><p><label for="graddate" class="noerror">HS Grad Year:</label>
+			 					<select name="graddate" id="graddate" class="noerror">
+									<option value="">Choose one</option>
+									<option value="2018" >2018</option><option value="2017" >2017</option><option value="2016" >2016</option><option value="2015" >2015</option><option value="2014" >2014</option><option value="2013" >2013</option><option value="2012" >2012</option><option value="2011" >2011</option><option value="2010" >2010</option><option value="2009" >2009</option><option value="2008" >2008</option><option value="2007" >2007</option><option value="2006" >2006</option><option value="2005" >2005</option><option value="2004" >2004</option><option value="2003" >2003</option><option value="2002" >2002</option><option value="2001" >2001</option><option value="2000" >2000</option><option value="1999" >1999</option><option value="1998" >1998</option><option value="1997" >1997</option><option value="1996" >1996</option><option value="1995" >1995</option><option value="1994" >1994</option><option value="1993" >1993</option><option value="1992" >1992</option><option value="1991" >1991</option><option value="1990" >1990</option><option value="1989" >1989</option><option value="1988" >1988</option><option value="1987" >1987</option><option value="1986" >1986</option><option value="1985" >1985</option><option value="1984" >1984</option><option value="1983" >1983</option><option value="1982" >1982</option><option value="1981" >1981</option><option value="1980" >1980</option><option value="1979" >1979</option><option value="1978" >1978</option><option value="1977" >1977</option><option value="1976" >1976</option><option value="1975" >1975</option><option value="1974" >1974</option><option value="1973" >1973</option><option value="1972" >1972</option><option value="1971" >1971</option><option value="1970" >1970</option><option value="1969" >1969</option><option value="1968" >1968</option><option value="1967" >1967</option><option value="1966" >1966</option><option value="1965" >1965</option><option value="1964" >1964</option><option value="1963" >1963</option>
+								</select>
+							</p><p><label for="program">Program:</label>
+						 	<span align="left" id="program_wrapper">
+						   	<select class="dropdown" id="program" name="program">
+							 	<option value="">-- Enter a Zip First --</option>
+						   	</select>
+						   	</span>
+					   	</p><input type="hidden" name="adkey" value="INC02300" /><input type="hidden" id="affiliate_id" name="affiliate_id" value="ccimicrosites" /><input type="hidden" name="lead_url" id="lead_url" value="resources.wyotech.com" /><p class="tcenter"><input id="submitform" name="Submit" type="submit" value="Submit"/></p></form><div class="disclaimer">
+						<p>We Value Your Privacy<br/>We know you are anxious to get started on your new career. By pressing the button in the form on this page, I understand that WyoTech may call and/or text me about educational services at the phone number provided, including a wireless number, using automated technology.  Your information will only be used by WyoTech. We do not and will not sell your information to any other party. Please note, that you are not required to provide this consent to attend our institutions.</p>
+						<div class="privacy"><p><a href="http://resources.wyotech.com/privacy" target="_top" rel="nofollow" >Privacy Policy</a></p></div>
+					</div>					</div>
+				</div>
+				<div class="content">
+					<div class="banner">
+<ul id="rotator">
+<li><img class="uploaded_image" src="http://resources.wyotech.com/uploads/105/auto_banner.jpg" alt="" width="490" height="200" /></li>
+<li><img class="uploaded_image" src="http://resources.wyotech.com/uploads/105/auto_banner2.jpg" alt="" width="490" height="200" /></li>
+<li><img class="uploaded_image" src="http://resources.wyotech.com/uploads/105/auto_banner3.jpg" alt="" width="490" height="200" /></li>
+<li><img class="uploaded_image" src="http://resources.wyotech.com/uploads/105/auto_banner4.jpg" alt="" width="490" height="200" /></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<h1>WyoTech</h1>
+<p>WyoTech, formerly known as Wyoming Technical Institute, is dedicated to superior quality, career-oriented education in the automotive, diesel, motorcycle, watercraft, collision/refinishing, and trade industries.</p>
+<p>Most WyoTech diploma programs can be completed in less than a year and a half. Programs include:</p>
+<ul>
+<li><a href="http://automotivetechnology.wyotech.edu">Automotive Technology<br /><br /></a></li>
+<li><a href="http://dieseltechnology.wyotech.edu">Diesel Technology<br /><br /></a></li>
+<li><a href="http://collisionrefinishing.wyotech.edu">Collision/Refinishing Technology<br /><br /></a></li>
+<li><a href="http://motorcycletechnology.wyotech.edu">Motorcycle Technology<br /><br /></a></li>
+<li><a href="http://marine.wyotech.edu">Marine Specialist<br /><br /></a></li>
+<li><a title="Heating Ventilation and Air Conditioning (HVAC)" href="http://hvac.wyotech.edu">Heating Ventilation and Air Conditioning (HVAC)<br /><br /></a></li>
+<li><a href="http://plumbing.wyotech.edu">Plumbing Technology<br /><br /></a></li>
+<li><a href="http://electrician.wyotech.edu">Electrician<br /></a></li>
+</ul>
+<p>The dynamic industry that is served by WyoTech is part of every one of us, and the passion we share in helping you reach your goals is unique.  Our team of dedicated instructors, industry advisors, and administrators, are all committed to providing the essential groundwork to help you become successful.</p>
+<p>You may already have a solid idea of where your path leads in life, or you might still be deciding.  The one thing you be sure of, is that education will help to provide a foundation for your future and provide the working knowledge and experience valued by employers.</p>
+<p>Find out more about WyoTech&mdash;including details about tuition and financial aid (available for those who qualify) by simply completing this request form.</p>				</div>
+			</div>
+			<div class="footer">© Copyright 2013 Wyotech</div>
+		</div>
+	<img src="//cci.edu/c.gif" alt="tr p" />
+<div id="cci-disclosure-disclaimer" style="background: #cecece; color: #444; padding: 15px; margin:0; font-family: Arial, sans-serif; font-size: 13px; text-align: center; clear: both; overflow: hidden;">For more information about our graduation rates, the median debt of students who completed a program, and other important information, please visit our website at <a href="http://www.wyotech.edu/disclosures?dmredirect=INC02300" target="_blank" rel="nofollow">http://www.wyotech.edu/disclosures</a>.</div>
+<!-- Omniture Begin -->
+<script type="text/javascript">var s_account = 'ccimicrosites';</script>
+<script type="text/javascript" src="http://cci.edu/om.js"></script>
+<script type="text/javascript">
+	s.pageName = 'Wyotech - Resources - Home';
+	s.server = 'resources.wyotech.com';
+	s.eVar3 = 'resources.wyotech.com';
+	s.campaign = 'INC02300';
+	s.linkInternalFilters = 'resources.wyotech.com';
+	s.eVar5 = 'ccimicrosites';
+	var s_code=s.t();
+	if(s_code) {
+		document.write(s_code);
+	}
+</script>
+<noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://ccippc.112.2O7.net/b/ss/ccimicrosites/1/H.20.3--NS/0" height="1" width="1" border="0" alt="" /></a></noscript>
+<!-- Omniture End -->
+
+</body>
+</html>
+<!-- 14 in 0.064393 -->

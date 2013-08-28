@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://base.google.com/ns/1.0" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <title>Paramount Performance Automotive Developments</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="description" content="Paramount Performance specialises in car tuning, remap as well exhaust systems and sports catalytic converters and exhaust mufflers for most cars, carrying out ecu remapping, diesel tuning, chip tuning and engine conversions and performance exhaust systems on-line with worldwide shipping. " />
+  <meta name="keywords" content="Remap, car tuning, ecu remapping, chip tuning, Diesel tuning, ecu mapping, tuning box, tdi tuning, Audi tuning,  VW tuning, Exhaust system, Catalytic converter, Exhaust muffler, Car exhaust,  car muffler, Performance exhaust, Stainless steel exhaust,  Sports exhaust, Performance muffler,  Sports muffler, Performance exhaust system, Jaguar remap, aston martin remap, Ferrari remap, Lamborghini remap, Audi remap, Maserati remap, jaguar exhaust, Aston martin remap, Ferrari exhaust, Lamborghini..." />
+<script type="text/javascript">
+//<![CDATA[
+var number_format_dec = '.';
+var number_format_th = '';
+var number_format_point = '2';
+var store_language = 'en';
+var xcart_web_dir = "";
+var images_dir = "/skin/common_files/images";
+var alt_images_dir = "/skin/3-columns/images";var lbl_no_items_have_been_selected = 'No items have been selected';
+var current_area = 'C';
+var currency_format = "£x";
+var lbl_product_minquantity_error = "Sorry, the minimum order quantity for this product is {{min}}.";
+var lbl_product_maxquantity_error = "Sorry, the maximum order quantity for this product is {{max}}.";
+var lbl_product_quantity_type_error = "You can specify a number from {{min}} to {{max}}.";
+var is_limit = true;
+var lbl_required_field_is_empty = "The required field \'~~field~~\' is empty!";
+var lbl_field_required = "Field is required";
+var lbl_field_format_is_invalid = "The format of the \'~~field~~\' field is invalid.";
+var txt_required_fields_not_completed = "The following required fields have not been completed: {{fields}} Do you wish to submit the form with these fields empty?";
+var lbl_blockui_default_message = "Please wait...";
+var lbl_error = 'Error';
+var lbl_warning = 'Warning';
+var lbl_ok = 'OK';
+var lbl_yes = 'Yes';
+var lbl_no = 'No';
+var txt_minicart_total_note = 'Order subtotal does not cover discounts and extra costs like shipping charges, etc. The final cost of the order will be calculated at the checkout page.';
+var txt_ajax_error_note = 'An error occurred while processing a request. Please <a href=\"javascript:void(0);\" onclick=\"javascript:window.location.reload();\">refresh the page.<a><br /><br />If the problem still persists after refreshing the page please <a href=\"javascript:void(0);\" onclick=\"javascript:self.location=\'help.php?section=contactus&amp;mode=update\'\">contact us<\/a> on the matter.';
+var txt_email_invalid = "Email address is invalid! Please correct";
+var email_validation_regexp = new RegExp("^[a-z0-9!#$%&\'*+\\/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+\\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z](?:[a-z0-9-]*[a-z0-9])$", "gi");
+var is_admin_editor = false;
+
+//]]>
+</script>
+
+<script type="text/javascript" src="/skin/common_files/js/common.js"></script>
+  <script type="text/javascript" src="/skin/common_files/js/browser_identificator.js"></script>
+
+
+  <script type="text/javascript" src="/skin/common_files/lib/swfobject-min.js"></script>
+
+
+  
+
+<script type="text/javascript" src="/skin/common_files/lib/jquery-min.js"></script>
+<script type="text/javascript" src="/skin/common_files/lib/jquery.bgiframe.min.js"></script>
+
+
+<script type="text/javascript" src="/skin/common_files/lib/jqueryui/jquery-ui.custom.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/skin/common_files/lib/jqueryui/jquery.ui.theme.css" />
+<script type="text/javascript" src="/skin/common_files/js/ajax.js"></script>
+<script type="text/javascript" src="/skin/common_files/lib/cluetip/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/skin/common_files/js/popup_open.js"></script>
+<script type="text/javascript" src="/skin/common_files/lib/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/skin/common_files/lib/jquery.blockUI.defaults.js"></script>
+
+<script type="text/javascript" src="/skin/common_files/lib/jquery.cookie.js"></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+//  Fix a.href if base url is defined for page
+function anchor_fix() {
+var links = document.getElementsByTagName('A');
+var m;
+var _rg = new RegExp("(^|" + self.location.host + xcart_web_dir + "/)#([\\w\\d_]+)$")
+for (var i = 0; i < links.length; i++) {
+  if (links[i].href && (m = links[i].href.match(_rg))) {
+    links[i].href = 'javascript:void(self.location.hash = "' + m[2] + '");';
+  }
+}
+}
+
+if (window.addEventListener)
+window.addEventListener("load", anchor_fix, false);
+
+else if (window.attachEvent)
+window.attachEvent("onload", anchor_fix);
+
+
+
+function initDropOutButton() {
+
+  if ($(this).hasClass('activated-widget'))
+    return;
+
+  $(this).addClass('activated-widget');
+
+  var dropOutBoxObj = $(this).parent().find('.dropout-box');
+
+  // Process the onclick event on a dropout button 
+  $(this).click(
+    function(e) {
+      e.stopPropagation();
+      $('.dropout-box').removeClass('current');
+      dropOutBoxObj
+        .toggle()
+        .addClass('current');
+      $('.dropout-box').not('.current').hide();
+      if (dropOutBoxObj.offset().top + dropOutBoxObj.height() - $('#center-main').offset().top - $('#center-main').height() > 0) {
+        dropOutBoxObj.css('bottom', '-2px');
+      }
+    }
+  );
+ 
+  // Click on a dropout layer keeps the dropout content opened
+  $(this).parent().click(
+    function(e) { 
+      e.stopPropagation(); 
+    }
+  );
+
+  // shift the dropout layer from the right hand side 
+  // if it's out of the main area
+  var borderDistance = ($("#center-main").offset().left + $("#center-main").outerWidth()) - ($(this).offset().left + dropOutBoxObj.outerWidth());
+  if (!isNaN(borderDistance) && borderDistance < 0) {
+    dropOutBoxObj.css('left', borderDistance+'px');
+  }
+
+  // Fix for IE6
+  if ($.browser.msie && $.browser.version < 7) {
+    dropOutBoxObj.bgiframe();
+  }
+}
+
+$(document).ready( function() {
+  $('body').click(
+    function() {
+      $('.dropout-box')
+        .filter(function() { return $(this).css('display') != 'none'; } )
+        .hide();
+    }
+  );
+  $('div.dropout-container div.drop-out-button').each(initDropOutButton);
+}
+);
+
+
+
+
+// Position:absolute elements will not move when window is resized 
+// if a sibling contains float elements and a clear:both element
+// https://bugzilla.mozilla.org/show_bug.cgi?id=442542
+// FireFox 3.0+
+if (navigator.userAgent.toLowerCase().search(/firefox\/(3\.\d+)/i) != -1 && typeof(window.$) != 'undefined') {
+$.event.add( window, 'resize', function() {
+  var h = document.getElementById('header');
+  if (!h || $(h).css('position') != 'absolute')
+    return;
+
+  document.getElementById('header').style.position = 'static';
+  setTimeout(
+    function() {
+      document.getElementById('header').style.position = 'absolute';
+    },
+  20);
+});
+}
+
+
+var md = 10*1000;
+
+
+$(document).ready( function() {
+
+$('form').not('.skip-auto-validation').each(function() {
+  applyCheckOnSubmit(this);
+});
+
+$('a.toggle-link').live(
+  'click',
+  function(e) {
+    $('#' + $(this).attr('id').replace('link', 'box')).toggle();
+  }
+);
+
+$("#dialog-message").fadeIn('slow').delay(md).fadeOut('slow');
+
+});
+
+
+
+
+//]]>
+</script>
+
+<script type="text/javascript" src="/skin/common_files/modules/Product_Options/func.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="/skin/common_files/css/main.css" />
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/skin/common_files/lib/cluetip/jquery.cluetip.css" />
+
+
+
+                    <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Upselling_Products/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Recently_Viewed/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Magnifier/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Manufacturers/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Image_Verification/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Advanced_Order_Management/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Detailed_Product_Images/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Special_Offers/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Product_Options/main.css" />
+                                <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/One_Page_Checkout/main.css" />
+                                            <link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Flyout_Menus/Icons/main.css" />
+                        
+
+  <link rel="stylesheet" type="text/css" href="/skin/3-columns/css/altskin.css" />
+  
+  <link rel="canonical" href="http://www.paramount-performance.com/home.php" />
+  <base href="http://www.paramount-performance.com/" />
+
+  
+<link rel="stylesheet" type="text/css" href="/skin/common_files/modules/Socialize/main.css" />
+
+
+
+<link type="text/css" rel="stylesheet" href="/skin/common_files/menus/megadrop/css/megadrop.css" />
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="/skin/common_files/menus/megadrop/css/megadrop_ie6.css" />
+<![endif]--></head>
+<body class="fancycat-page-skin-icons fancycat-page-subskin-e ">
+<div id="page-container">
+  <div id="page-container2">
+    <div id="content-container">
+      <div id="content-container2">
+
+                  <div id="fb-root"></div>
+        
+        <div id="center">
+  <div id="center-main">
+    <!-- central space -->
+
+    
+      
+                            
+      
+                
+      
+      
+      
+      
+  <h1>Welcome to Paramount Performance Automotive Developments</h1>
+
+
+<p style="text-align: center;">
+	<img alt="" src="/skin/common_files/images/paramount_banner.jpg" style="width:650px; height: 217px;" /></p>
+<p style="text-align: center;">
+	<a href="/Car-Manufacturers.html"><img alt="Click here to shop" src="/skin/common_files/images/shopanimation.gif" /></a></p>
+
+
+	<b>Car Tuning, ECU Remapping and Performance Specialist </b></p>
+<p>
+	Paramount Performance Tuning UK, have been carrying out car engine tuning conversions and styling enhancements on performance cars since 1986. As well as the more traditional routes of car tuning and Engine tuning to increase power, Paramount also carries out state of the art car ECU remapping and chip tuning, Performance parts and exhaust systems. Car remapping carried out includes both petrol and diesel tuning. We offer worldwide service via mail order and our international tuning partners</p>
+<p>
+	<b>&quot;&pound;1 million insurance backed guarantee on all tuning files!&quot; </b></p>
+<p>
+	Paramount Performance offer the very latest in Engine tuning, ECU remapping, ECU tuning, chip tuning engine remapping, high performance exhaust systems, super charger upgrades, air induction kits, performance suspension kits, high performance brake upgrade kits as well as interior styling and exterior car body styling.</p>
+<p>
+	The team at Paramount Performance can cater for one off performance items, to full performance makeovers and conversions. Car tuning packages comprising of performance exhaust system, air induction system, Engine tuning and ECU upgrades are available for most vehicles, offering unrivalled value and performance.</p>
+<p>
+	<b><a href="http://www.paramount-performance.com/Paramount_Performance_ECU_Tuning.html">ECU Tuning / Rolling Road Tuning</a></b></p>
+<p>
+	Paramount Performance has developed a range of performance ECU remapping services, including ECU Tuning, ECU programming, Engine tuning, chip tuning and ECU remapping / car engine remapping. We are able offer performance ECU engine tuning upgrades for nearly all cars, with multiple performance tuning approaches, including OBD, flash programs, BDM remaps, piggy back units, ECU chip tuning (engine chipping) and live ECU remapping. Car remapping carried out includes both petrol and diesel tuning.</p>
+<p>
+	<b>&quot;Ask about our money back ECU remapping guarantee !&quot; </b></p>
+<p>
+	<b><a href="http://www.paramount-performance.com/paramount_diesel_economy.html">Performance Diesel Tuning Boxes - MPG and fuel saving tuning boxes</a></b></p>
+<p>
+	Diesel engines are particularly tuneable for increases in economy and power tuning and MPG tuning, especially developed for fuel saving and economy. Paramount can also supply and fit a range of diesel tuning boxes, tune it, diesel TDi tuning boxes, programmable diesel tuning boxes, (DPT diesel tuning boxes) piggy back diesel power tuning boxes, tunit diesel units, digital pd tuning boxes, rapid tuning solutions and plug and play performance tuning boxes suitable for a very wide range of applications and diesel engine tuning.</p>
+<p>
+	<b><a href="http://www.paramount-performance.com/paramount_diesel_economy.html">Economy Tuning</a></b></p>
+<p>
+	Paramount Performance specialise in engine tuning conversions and engine power and economy tuning. As well as a range of DPT, and tunit diesel tuning boxes, paramount can carry out ECU remapping especially aimed at MPG tuning, fuel saving, fuel reduction tuning and engine economy tuning, (Engine chipping fuel economy) and chip tuning, this can offer both strong increases in fuel economy, whilst still offering diesel power and torque. ECU chip tuning is suitable for a very wide range of applications, including 4x4 tuning, (Range Rover tuning specialists) diesel tuning, Taxi economy tuning, van tuning and commercial vehicles.</p>
+<p>
+	<b><a href="http://www.paramount-performance.com/astonmartin.html">Aston Martin Tuning &amp; Aston Martin Performance </a></b></p>
+<p>
+	Paramount has developed an extensive range of Aston Martin performance tuning products and services. Paramount offers a comprehensive range of quality Aston Martin performance services, models covered include, the Aston Martin DB7, Aston martin DB9, the Aston Martin Vantage and Vanquish. Paramount Performance has an unbeatable range Aston Martin engine power conversions, including ECU remapping and Aston Martin ECU engine chipping. Paramount Performance also has a stunning range of Aston Martin performance exhaust systems, these Aston Martin performance exhaust systems both look and sound amazing.</p>
+<p>
+	<b><a href="http://www.paramount-performance.com/Paramount_Performance_Jaguar.html">Jaguar Tuning and jaguar Performance Parts and Upgrades</a></b></p>
+<p>
+	Paramount Performance is a name synonymous with the Jaguar Car marque and high performance engineering solutions. Performance has developed into the leading modern Jaguar performance specialist worldwide with extensive performance products for the whole Jaguar range including XK, XJ, XF, S Type and X Type. Paramount can exclusively carry out engine ECU remapping on the complete Jaguar range of cars.</p>
+<p>
+	<b><a href="http://www.paramount-performance.com/Paramount_Performance_4X4_Specialists.html">Range Rover Tuning and Performance Accessories</a></b></p>
+<p>
+	Paramount Performance Land Rover and Range Rover tuning, Range Rover performance upgrades and Range Rover accessories are available for most modern Land Rover and Range Rover vehicles. From full vehicle conversions personally tailored with the individual in mind, to single performance and styling components manufactured to the highest standards. Paramount can supply an extensive range of Land Rovers exhaust systems and Range Rover ECU remapping carried out includes both petrol and diesel tuning.</p>
+<p>
+	<b><a href="http://www.paramount-performance.com/paramount_commercial_vehicle_tuning.html">Paramount Commercial Vehicle Tuning and Engine Remapping</a></b></p>
+<p>
+	Paramount Performance can carry out nearly all forms of commercial vehicle tuning, this includes HGV tuning, Truck tuning, Lorry tuning, 7.5 tone and Van tuning as well as most Tractors, Excavators and other farm and industrial machinery, generators and even Marine engines.<br />
+	<br />
+	The tuning of commercial vehicles is not just about the additional power, torque, driveability and BHP that can be delivered, which can be very considerable, but with the correct engine ECU remap very significant improvements in diesel fuel consumption can be achieved. Factory set speed-limiters can also be removed at the same time.</p>
+<p>
+	<b>Paramount Motorsport Tuning </b></p>
+<p>
+	As well as high performance car tuning, Paramount can carry out a whole range of road and track car tuning and race car preparation services. ECU remapping, engine tuning and mapping race car tuning services include, GT Cup car tuning, (Porsche race tuning, BMW race car tuning, Aston Martin and Jaguar race car tuning and Ferrari&rsquo;s amongst many other Manufactures) Motor sport tuning, Auto cross and rally car tuning, Road race tuning including Gumball rally, Carbon Black tuning, Cannon ball run tuning, and other types of specialist car and motorsport tuning work.</p>
+<br />
+
+
+
+
+    
+<!-- /central space -->
+
+  </div><!-- /center -->
+</div><!-- /center-main -->
+
+<div id="left-bar">
+  	<div class="search">
+  <div class="valign-middle">
+    <form method="post" action="search.php" name="productsearchform">
+
+      <input type="hidden" name="simple_search" value="Y" />
+      <input type="hidden" name="mode" value="search" />
+      <input type="hidden" name="posted_data[by_title]" value="Y" />
+      <input type="hidden" name="posted_data[by_descr]" value="Y" />
+      <input type="hidden" name="posted_data[by_sku]" value="Y" />
+      <input type="hidden" name="posted_data[search_in_subcategories]" value="Y" />
+      <input type="hidden" name="posted_data[including]" value="all" />
+
+      <span class="search">Search:</span><input type="text" name="posted_data[substring]" class="text" value="" />
+  
+    
+
+
+  
+    <input class="image-button" type="image" src="/skin/common_files/images/spacer.gif" alt="" />
+
+  
+<a href="search.php" class="search" rel="nofollow">Advanced search</a>
+
+    </form>
+
+  </div>
+</div><br>
+
+
+
+  
+
+
+
+<div class="menu-dialog menu-help">
+  <div class="title-bar  link-title">
+    <span class="title-link"><a href="help.php" class="title-link"><img src="/skin/common_files/images/spacer.gif" alt=""  /></a></span><img class="icon ajax-minicart-icon" src="/skin/common_files/images/spacer.gif" alt="" /><h2>Help</h2>
+  </div>
+  <div class="content">
+    
+  <ul>
+    <li><a href="help.php?section=contactus&amp;mode=update">Contact us</a></li>
+                  <li><a href="http://www.paramount-performance.com/Milltek-sport-Exhaust.html">Milltek Exhausts  </a></li>
+                        <li><a href="http://www.paramount-performance.com/Page8.html">Mansory</a></li>
+                        <li><a href="http://www.paramount-performance.com/Performance-Tuning.html">Performance Tuning</a></li>
+                        <li><a href="http://www.paramount-performance.com/Paramount-Fuel-Economy.html">Paramount Economy</a></li>
+                        <li><a href="http://www.paramount-performance.com/Fuel-Economy.html">Fuel Economy</a></li>
+                        <li><a href="http://www.paramount-performance.com/Economy-Tips.html">Economy Tips</a></li>
+                        <li><a href="http://www.paramount-performance.com/Page6.html">Commercial Vehicles</a></li>
+                        <li><a href="http://www.paramount-performance.com/Performance-Exhausts.html">Performance Exhausts</a></li>
+                        <li><a href="http://www.paramount-performance.com/Suspension.html">Suspension</a></li>
+                        <li><a href="http://www.paramount-performance.com/Air-Filter-Induction.html">Air Filter Induction</a></li>
+                        <li><a href="http://www.paramount-performance.com/Motor-Sport-Tuning.html">Motor Sport Tuning  </a></li>
+                        <li><a href="http://www.paramount-performance.com/Styling.html">Styling</a></li>
+                        <li><a href="http://www.paramount-performance.com/Servicing.html">Servicing</a></li>
+                        <li><a href="http://www.paramount-performance.com/Home-Tuning.html">Home Tuning</a></li>
+                        <li><a href="http://www.paramount-performance.com/Training-Courses.html">Training Courses</a></li>
+                        <li><a href="http://www.paramount-performance.com/ECU-Tuning.html">ECU Tuning</a></li>
+                        <li><a href="http://www.paramount-performance.com/Privacy-statement.html">Privacy &amp; Cookies</a></li>
+                        <li><a href="http://www.paramount-performance.com/Terms-and-Conditions.html">Terms &amp; Conditions</a></li>
+            </ul>
+
+
+  </div>
+</div>    <div class="menu-dialog menu-auth">
+  <div class="title-bar ">
+    <img class="icon ajax-minicart-icon" src="/skin/common_files/images/spacer.gif" alt="" /><h2>Authentication</h2>
+  </div>
+  <div class="content">
+    
+<div class="login-text item">
+
+  
+  <ul>
+    <li><a href="https://www.paramount-performance.com/login.php?xid_24d38=f2296d5333a239b621083b996a6ae89d" title="Sign in"  id="href_Sign_in">Sign in</a></li>
+    <li><a href="register.php" title="Register">Register</a></li>
+    <li><a href="help.php?section=Password_Recovery" title="Forgot password?">Forgot password?</a></li>
+  </ul>
+
+
+</div>
+
+
+  </div>
+</div></div>
+
+<div id="right-bar">
+  
+
+  <script type="text/javascript">
+//<![CDATA[
+var lbl_error = 'Error';
+var txt_minicart_total_note = 'Order subtotal does not cover discounts and extra costs like shipping charges, etc. The final cost of the order will be calculated at the checkout page.';
+
+//]]>
+</script>
+<script type="text/javascript" src="/skin/common_files/js/ajax.minicart.js"></script>
+
+  <div class="menu-dialog menu-minicart">
+  <div class="title-bar ">
+    <img class="icon ajax-minicart-icon" src="/skin/common_files/images/spacer.gif" alt="" /><h2>Your cart</h2>
+  </div>
+  <div class="content">
+    
+<div class="minicart">
+  
+    <div class="valign-middle empty">
+
+      <strong>Cart is empty</strong>
+
+    </div>
+
+  
+</div>
+<div class="cart-checkout-links">
+</div>
+<ul>
+  
+  
+  
+</ul>
+
+  </div>
+</div>
+
+<div class="phones">
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<table width="160" border="0" cellpadding="0" cellspacing="0" bordercolor="#000000">
+  <tr background="/skin/common_files/images/menu_bg.gif"> 
+    <td height="20" background="/skin/common_files/images/menu_bg.gif"><p align="left"> 
+        &nbsp;&nbsp;<a href="/Gallery.html">GALLERY</a></td>
+  </tr>
+  <tr valign="middle""> 
+    <td height="1">&nbsp;</td>
+  </tr>
+  <tr valign="middle" background="/skin/common_files/images/menu_bg.gif"> 
+    <td height="20" background="/skin/common_files/images/menu_bg.gif"><p align="left">&nbsp;&nbsp;<a href="http://www.youtube.com/user/ParamountPerformance">VIDEOS</a>&nbsp;&nbsp;<font color="#FFFFFF"> 
+        <a href="http://www.youtube.com/user/ParamountPerformance" target="_blank"><img src="/youtube.jpg" alt="You Tube" width="30" height="25" border="0" align="absmiddle"></a> 
+        </font></td>
+  </tr>
+  <tr> 
+    <td> <BR> <a href="http://www.youtube.com/watch?v=YR2U7cTnNuc" target="_blank">Paramount 
+      Makes Channel 4 News </a><br> <a href="Quentin__Willsons_Range_Rover.html">Quentin 
+      Willson thinks fuel economy is Paramount</a><br> <br> <a href="AVGP_Paramount_384k-001.wmv">Jeremy 
+      Clarkson test drives our Jaguar XKR conversion... Download the Video Now</a><br> 
+      <br> <a href="http://www.youtube.com/watch?v=LjXrmpQLs-8" target="_blank">Listen 
+      to the Aston Martin DB9 Exhaust ! </a><br> <br> <a href="http://www.youtube.com/watch?v=0QC8k5KB8m0" target="_blank">The 
+      Jaguar XKR ! </a><br> <br> <a href="gt40.wmv">The Legendary Ford GT40 ! 
+      </a><br>
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td height="30" background="/skin/common_files/images/menu_bg.gif">&nbsp;<a href="/Worldwide-Shipping.html">&nbsp;WORLDWIDE SHIPPING</a></td>
+  </tr>
+  <tr> 
+    <td height="10" >&nbsp;</td>
+  </tr>
+  <tr > 
+    <td width="511" height="10"><p align="center"><a href="http://www.paramount-performance.com/Become-a-Dealer.html"><img src="/skin/common_files/images/become-a-dealer.gif" width="143" height="43" border="0"></a> 
+    </td>
+  </tr>
+</table>
+
+
+
+
+</div>
+
+
+    <div class="menu-dialog menu-special">
+  <div class="title-bar ">
+    <img class="icon ajax-minicart-icon" src="/skin/common_files/images/spacer.gif" alt="" /><h2>Special</h2>
+  </div>
+  <div class="content">
+        <ul>
+      <li>
+    <a href="http://www.paramount-performance.com/offers.php">Special offers</a>
+  </li>  
+      <li>
+  <a href="http://www.paramount-performance.com/sitemap.php">Sitemap</a>
+</li>  
+      <li>
+  <a href="http://www.paramount-performance.com/products_map.php">Products Map</a>
+</li>
+    </ul>
+  
+  </div>
+</div>
+
+
+
+</div>
+
+      </div>
+    </div>
+
+    <div class="clearing">&nbsp;</div>
+
+    <div id="header">
+      <div class="line1">
+  <div class="logo">
+    <a href="http://www.paramount-performance.com/home.php"><img src="/skin/common_files/images/paramount_logo_500.png" alt="" /></a>
+  </div>
+
+    <div class="tabs">
+    <ul>
+
+              <li class="first"><a href="http://www.paramount-performance.com/Blog.html">Blog</a></li>
+              <li class="highlight"><a href="help.php?section=contactus&amp;mode=update">Contact Us</a></li>
+              <li><a href="http://www.paramount-performance.com/Milltek-Exhaust/">Milltek</a></li>
+              <li class="highlight"><a href="http://www.paramount-performance.com/Page8.html">Mansory</a></li>
+              <li><a href="http://www.paramount-performance.com/Car-Manufacturers.html">Shop</a></li>
+              <li class="highlight"><a href="http://www.paramount-performance.com/acatalog/economy.html">Economy Tuning</a></li>
+              <li><a href="http://www.paramount-performance.com/About-Us.html">About Us</a></li>
+              <li class="highlight last"><a href="home.php">Home</a></li>
+      
+    </ul>
+  </div>
+
+ 
+
+</div>
+
+
+<noscript>
+  <div class="noscript-warning">
+    <div class="content">This site requires JavaScript to function properly.<br />Please enable JavaScript in your web browser.</div>
+  </div>
+</noscript>
+<ul id="megadrop">
+<li><a href="http://www.paramount-performance.com/Manufacturers-A-C/" class="drop">Manufacturers A - C</a>
+<div class="dropdown_5columns">
+<div class="col_5"><h2><img src="image.php?type=C&amp;id=331" alt="Manufacturers A - C" /><table width="660" height="20">
+  <tr>
+    <td width="300"><img src="images/C/78_aston-martin100.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C/audi.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C//81_bentley100.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C/82_bmw100.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C/86_chrysler100.jpg" width="80" height="80"></td>
+  </tr>
+</table>
+</h2></div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Aston-Martin/">Aston Martin</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Aston-Martin-Classic/">Aston Martin - Classic</a></li>
+<li><a href="http://www.paramount-performance.com/DB5-DB6/">Aston Martin DB5 / DB6</a></li>
+<li><a href="http://www.paramount-performance.com/DB7/">Aston Martin DB7</a></li>
+<li><a href="http://www.paramount-performance.com/DB9/">Aston Martin DB9</a></li>
+<li><a href="http://www.paramount-performance.com/DBS/">Aston Martin DBS</a></li>
+<li><a href="http://www.paramount-performance.com/Rapide/">Aston Martin Rapide</a></li>
+<li><a href="http://www.paramount-performance.com/Vanquish/">Aston Martin Vanquish</a></li>
+<li><a href="http://www.paramount-performance.com/Vantage/">Aston Martin Vantage</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Audi/">Audi</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Audi-Q7/">Audi Q7</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-S3/">Audi S3</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-S4/">Audi S4</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-S5/">Audi S5</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-TT/">Audi TT</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-RS4/">Audi RS4</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-RS5/">Audi RS5</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-RS6/">Audi RS6</a></li>
+<li><a href="http://www.paramount-performance.com/Audi-R8/">Audi R8</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Bentley/">Bentley</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Continental/">Continental</a></li>
+<li><a href="http://www.paramount-performance.com/Flying-Spur/">Flying Spur</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/BMW/">BMW</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/335d/">335d</a></li>
+<li><a href="http://www.paramount-performance.com/335i/">335i</a></li>
+<li><a href="http://www.paramount-performance.com/M3/">M3</a></li>
+<li><a href="http://www.paramount-performance.com/M5/">M5</a></li>
+<li><a href="http://www.paramount-performance.com/X6/">X6</a></li>
+<li><a href="http://www.paramount-performance.com/Z4/">Z4</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Chrysler/">Chrysler</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/300c/">300c</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="http://www.paramount-performance.com/Manufacturers-D-L/" class="drop">Manufacturers D - L</a>
+<div class="dropdown_5columns">
+<div class="col_5"><h2><img src="image.php?type=C&amp;id=332" alt="Manufacturers D - L" /><table width="700" height="20" align="left">
+  <tr>
+    <td width="300"><img src="images/C/95_ferrari100-01.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C/97_ford100-01.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C/103_jaguar100-01.jpg" width="80" height="80"></td>
+    <td width="300"><img src="images/C/lamborghini_icon.jpg" width="70" height="80"></td>
+    <td width="300"><img src="images/C/107_landrover100-01.jpg" width="80" height="80"></td>
+  </tr>
+</table></h2></div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Ferrari/">Ferrari</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Classic-Ferrari/">Classic Ferrari</a></li>
+<li><a href="http://www.paramount-performance.com/308/">Ferrari 308 / 328</a></li>
+<li><a href="http://www.paramount-performance.com/355/">Ferrari 355</a></li>
+<li><a href="http://www.paramount-performance.com/360/">Ferrari 360</a></li>
+<li><a href="http://www.paramount-performance.com/F430/">Ferrari F430</a></li>
+<li><a href="http://www.paramount-performance.com/458-Italia/">Ferrai 458 Italia</a></li>
+<li><a href="http://www.paramount-performance.com/Ferrari-550/">Ferrari 550</a></li>
+<li><a href="http://www.paramount-performance.com/575/">Ferrari 575</a></li>
+<li><a href="http://www.paramount-performance.com/599-Fiorano/">Ferrari 599 Fiorano</a></li>
+<li><a href="http://www.paramount-performance.com/612-Scaglietti/">Ferrari 612 Scaglietti</a></li>
+<li><a href="http://www.paramount-performance.com/California/">Ferrari California</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Ford/">Ford</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Focus-ST/">Focus ST</a></li>
+<li><a href="http://www.paramount-performance.com/Mondeo-225/">Mondeo 225</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Jaguar/">Jaguar</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/S-type/">Jaguar S Type</a></li>
+<li><a href="http://www.paramount-performance.com/X-type/">Jaguar X Type</a></li>
+<li><a href="http://www.paramount-performance.com/XF/">Jaguar XF</a></li>
+<li><a href="http://www.paramount-performance.com/XJ/">Jaguar XJ</a></li>
+<li><a href="http://www.paramount-performance.com/XK-1998-2006/">Jaguar XK 1998 - 2006</a></li>
+<li><a href="http://www.paramount-performance.com/XK-2006/">Jaguar XK 2006 -</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Lamborghini/">Lamborghini</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Aventador/">Aventador</a></li>
+<li><a href="http://www.paramount-performance.com/Gallardo/">Gallardo</a></li>
+<li><a href="http://www.paramount-performance.com/Murcielago/">Murcielago</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Land-Rover/">Land Rover</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Defender/">Defender</a></li>
+<li><a href="http://www.paramount-performance.com/Discovery/">Discovery</a></li>
+<li><a href="http://www.paramount-performance.com/Evoque/">Evoque</a></li>
+<li><a href="http://www.paramount-performance.com/Range-Rover/">Range Rover</a></li>
+<li><a href="http://www.paramount-performance.com/Range-Rover-Sport/">Range Rover Sport</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Fiat/">Fiat</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Fiat-500/">Fiat 500</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="http://www.paramount-performance.com/Manufacturers-M-P/" class="drop">Manufacturers M - P</a>
+<div class="dropdown_5columns">
+<div class="col_5"><h2><img src="image.php?type=C&amp;id=333" alt="Manufacturers M - P" /><table width="700" height="20" align="left">
+  <tr> 
+    <td width="300"><div align="left"><img src="images/C/109_maserati-01.png" width="76" height="80"></div></td>
+    <td width="300"><div align="left"><img src="images/C/111_mercedes-benz100-01.jpg" width="80" height="80"></div></td>
+    <td width="300"><div align="left"><img src="images/C/114_mini100-01.jpg" width="80" height="80"></div></td>
+  <td width="300"><div align="left"><img src="images/C/117_nissan100-01.jpg" width="80" height="80"></div></td>
+<td width="300"><div align="left"><img src="images/C/121_porsche100-01.jpg" width="80" height="80"></div></td>
+
+  </tr>
+</table></h2></div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Maserati/">Maserati</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Maserati-Classic-1957-1995/">Maserati Classic 1957-1995</a></li>
+<li><a href="http://www.paramount-performance.com/3200-4200-GT/">3200 / 4200 GT</a></li>
+<li><a href="http://www.paramount-performance.com/Gran-Turismo/">Gran Turismo</a></li>
+<li><a href="http://www.paramount-performance.com/Quattroporte/">Quattroporte</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mercedes/">Mercedes</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Mercedes-C63/">Mercedes C63</a></li>
+<li><a href="http://www.paramount-performance.com/E-Class/">Mercedes E Class</a></li>
+<li><a href="http://www.paramount-performance.com/ML/">Mercedes ML</a></li>
+<li><a href="http://www.paramount-performance.com/S-Class/">Mercedes S Class</a></li>
+<li><a href="http://www.paramount-performance.com/SL/">Mercedes SL</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mini/">Mini</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/R50-R57/">R50-R57</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Nissan/">Nissan</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/350/">350</a></li>
+<li><a href="http://www.paramount-performance.com/Navara/">Navara</a></li>
+<li><a href="http://www.paramount-performance.com/Skyline/">Skyline</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Porsche/">Porsche</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/993/">993</a></li>
+<li><a href="http://www.paramount-performance.com/996/">996</a></li>
+<li><a href="http://www.paramount-performance.com/997/">997</a></li>
+<li><a href="http://www.paramount-performance.com/Boxster/">Boxster</a></li>
+<li><a href="http://www.paramount-performance.com/Cayanne/">Cayanne</a></li>
+<li><a href="http://www.paramount-performance.com/Cayman/">Cayman</a></li>
+<li><a href="http://www.paramount-performance.com/Panamera/">Panamera</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="http://www.paramount-performance.com/manufacturers-r-z/" class="drop">Manufacturers R - Z</a>
+<div class="dropdown_3columns">
+<div class="col_3"><h2><img src="image.php?type=C&amp;id=334" alt="Manufacturers R - Z" /><table width="280" height="20" align="left">
+  <tr> 
+    <td width="300"><div align="left"><img src="images/C/rolls_royce.jpg" width="80" height="80"></div></td>
+    
+    <td width="300"><div align="left"><img src="images/C/134_volkswagen100.jpg" width="80" height="80"></div></td>
+  </tr>
+</table></h2></div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Rolls-Royce/">Rolls Royce</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Rolls-Royce-c-340/">Rolls Royce</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Volkswagen/">Volkswagen</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/Bora/">Bora</a></li>
+<li><a href="http://www.paramount-performance.com/Golf/">Golf</a></li>
+<li><a href="http://www.paramount-performance.com/Passat/">Passat</a></li>
+<li><a href="http://www.paramount-performance.com/Polo/">Polo</a></li>
+<li><a href="http://www.paramount-performance.com/Scirocco/">Scirocco</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="http://www.paramount-performance.com/Milltek-Exhaust/" class="drop">Milltek Exhausts</a>
+<div class="dropdown_3columns">
+<div class="col_3"><h2><img src="image.php?type=C&amp;id=372" alt="Milltek Exhausts" /><p>
+	<span style="color:#000000;"><strong>Milltek Exhausts &ndash; Probably the Finest After-market and performance exhaust systems in production. </strong></span></p>
+<p>
+	<span style="color:#000000;">Paramount Performance are approved Milltek exhaust dealers, we stock many exhaust systems and can supply the full range or Milltek Sport Exhaust systems and Milltek Exhaust Mufflers. International shipping is available the world over, and Tax free sales where applicable are available too. We can arrange fitting of your Milltek exhaust too at a number of our approved installers. In our shop you will see just a very small sample of the Milltek exhaust systems, if you don&rsquo;t see the Milltek exhaust you are looking for or have any questions please e-mail us at info@paramount-performance.com</span></p>
+</h2></div>
+
+<div class="col_1">
+<ul>
+<li><a href="http://www.paramount-performance.com/Astom-Martin-Milltek/">Aston Martin Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/Audi-Milltek/">Audi Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/Bentley-Milltek/">Bentley Milltek</a></li>
+</ul>
+</div>
+<div class="col_1">
+<ul>
+
+<li><a href="http://www.paramount-performance.com/BMW-Milltek/">BMW Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/Jaguar-Milltek/">Jaguar Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/Mercedes-Milltek/">Mercedes Milltek</a></li>
+</ul>
+</div>
+<div class="col_1">
+<ul>
+
+<li><a href="http://www.paramount-performance.com/Mini-Milltek/">Mini Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/Nissan-Milltek/">Nissan Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/Porsche-Milltek/">Porsche Milltek</a></li>
+</ul>
+</div>
+<div class="col_1">
+<ul>
+
+<li><a href="http://www.paramount-performance.com/Range-Rover-Milltek/">Range Rover Milltek</a></li>
+
+<li><a href="http://www.paramount-performance.com/VW-Milltek/">VW Milltek</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="http://www.paramount-performance.com/Akrapovic/" class="drop">Akrapovic</a>
+<div class="dropdown_3columns">
+
+<div class="col_1">
+<ul>
+<li><a href="http://www.paramount-performance.com/Akarapovic-Mercedes-Exhaust/">Akarapovic Mercedes Exhausts</a></li>
+</ul>
+</div>
+<div class="col_1">
+<ul>
+
+<li><a href="http://www.paramount-performance.com/Akrapovic-Ferrari-Exhaust/">Akrapovic Ferrari Exhausts</a></li>
+</ul>
+</div>
+<div class="col_1">
+<ul>
+
+<li><a href="http://www.paramount-performance.com/Akrapovic-Lamborghini-Exhaust/">Akrapovic Lamborghini Exhausts</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="http://www.paramount-performance.com/mansory-styling/" class="drop">Mansory Shop</a>
+<div class="dropdown_3columns">
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Aston-Martin/">Mansory Aston Martin</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All Mansory Aston Martin Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Audi/">Mansory Audi</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/mansory-audi-prices/">All Mansory Audi Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Bentley/">Mansory Bentley</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Bentlley-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All Mansory Bentley Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-BMW/">Mansory BMW</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-BMW-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All Mansory BMW Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Ferrari/">Mansory Ferrari</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Ferrari-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All Mansory Ferrari Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Lamborghini/">Mansory Lamborghini</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Lamborghini-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory Lamborghini Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Land-Rover/">Mansory Land Rover</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Land-Rover-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory Land Rover Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Masarati/">Mansory Masarati</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Masarati-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory Masarati Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-McLaren/">Mansory McLaren</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-mclaren-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory McLaren Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Mercedes/">Mansory Mercedes</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Mercedes-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory Mercedes Styling and Tuning Parts Available - e-mail for details info@paramount-performance.cominfo@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Mansory-Rolls-Royce/">Mansory Rolls Royce</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Rolls-Royce-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory Rolls Royce Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+<div class="col_1">
+<h3><a href="http://www.paramount-performance.com/Masory-Porsche/">Masory Porsche</a></h3>
+<ul>
+<li><a href="http://www.paramount-performance.com/2013-Mansory-Porsche-Prices-coming-soon-e-mail-for-details-info-paramount-performance.com/">All 2013 Mansory Porsche Styling and Tuning Parts Available - e-mail for details info@paramount-performance.com</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<div class="clearing"></div>    </div>
+
+    <div id="footer">
+
+      
+      <div class="box">
+  <div class="subbox">
+    <div class="left"> </a>
+</div>
+    <div class="right">Copyright &copy; 2012-2013 Paramount Performance Automotive Developments
+
+  </div>
+  </div>
+</div>
+    </div>
+
+    
+    
+  </div>
+</div>
+
+
+</body>
+</html>

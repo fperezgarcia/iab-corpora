@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html id="ie7" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 8]><html id="ie8" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 9]><html id="ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if !(IE 7) | !(IE 8) | !(IE 9) ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<head>
+    <!--[if lt IE 9]><script src="/scripts/lib/html5shiv.js"></script><![endif]-->
+<link href="http://cdn2.btrstatic.com/content/global-imports-dist.cache.5cd9a8e7.css" rel="stylesheet"/>
+
+
+
+<script>
+var UserAccount = {
+    cookie: '',
+    userCookie: '',
+    isAuthenticated: false,
+    isHost: false,
+    isPremium: false,
+    hasAccount: false,
+    isTrafficDriving: false,
+
+    init: function () {
+        this.parseCookie();
+
+        this.setTrafficDrivingStatus();
+        this.setAuthenticationStatus();
+        this.setUserAccountStatus();
+    },
+    parseCookie: function () {
+        this.cookie = document.cookie.toLowerCase();
+        var userCookieIndex = this.cookie.indexOf('user=');
+        var userCookieTerminatorIndex = this.cookie.substring(userCookieIndex).indexOf(';');
+        this.userCookie = userCookieTerminatorIndex > -1 ? this.cookie.substr(userCookieIndex, userCookieTerminatorIndex) : this.cookie.substring(userCookieIndex);
+    },
+    setTrafficDrivingStatus: function () {
+        var aidCookieValueKeys = ['jema', 'adon', 'adcom', 'adkno', 'tab', '65687978','7376','90277','4806'];
+        for (var i = 0; i < aidCookieValueKeys.length; i++) {
+            if (this.cookie.indexOf('aid=' + aidCookieValueKeys[i] + ';') > -1)
+                this.isTrafficDriving = true;
+        }
+    },
+    setAuthenticationStatus: function () {
+        var authedCookieKey = 'authed=';
+        var authedCookieIndex = this.cookie.indexOf(authedCookieKey);
+        this.isAuthenticated = (authedCookieIndex > -1 && !isNaN(this.cookie.substr(authedCookieIndex + authedCookieKey.length, 1)));
+    },
+    setUserAccountStatus: function () {
+        if (this.userCookie.length == 0) return;
+
+        var hostIdCookieKey = 'hid=';
+        var hostIdFirstCharacter = this.userCookie.substr(this.userCookie.indexOf(hostIdCookieKey) + hostIdCookieKey.length, 1);
+        this.isHost = (!isNaN(hostIdFirstCharacter) && Number(hostIdFirstCharacter) > 0);
+
+        var hasPremiumAccountKey = 'prem=';
+        this.isPremium = this.userCookie.substr(this.userCookie.indexOf(hasPremiumAccountKey) + hasPremiumAccountKey.length, 4).toLowerCase() == 'true';
+        
+        this.hasAccount = this.cookie.indexOf('hasbtracct=true') > -1;
+    }
+};
+
+;UserAccount.init();
+</script>
+<script>
+var EarlyLoadingCssManager = {
+    init: function () {
+        this.addHideCssClassesBasedOnUserStatus();
+    },
+    addHideCssClassesBasedOnUserStatus: function () {
+        var hideCssClasses = [];
+
+        if (UserAccount.isAuthenticated)        hideCssClasses.push('IfAuthenticated');
+        else                                    hideCssClasses.push('IfNotAuthenticated');
+        if (UserAccount.isTrafficDriving)       hideCssClasses.push('IfTrafficDrivingUser');
+        if (UserAccount.isHost)                 hideCssClasses.push('IfUserIsAHost');
+        else                                    hideCssClasses.push('IfUserIsNotAHost');
+        if (UserAccount.isPremium)              hideCssClasses.push('IfCurrentIsPremium');
+        else                                    hideCssClasses.push('IfCurrentIsNotPremium');
+        if (UserAccount.hasAccount)             hideCssClasses.push('IfUserHasAnAccount');
+
+        if (UserAccount.isAuthenticated &&
+           !UserAccount.isHost)                 hideCssClasses.push('IfAuthenticatedAndIsNotAHost');
+
+        for (var i = 0; i < hideCssClasses.length; i++) {
+            hideCssClasses[i] = '.hide' + hideCssClasses[i] + ' { display: none; }';
+        }
+
+        this.addCssToHead(hideCssClasses.join(''));
+    },
+    addCssToHead: function (cssString) {
+        var styleElement = document.createElement('style');
+        styleElement.type = 'text/css';
+
+        if (styleElement.styleSheet)
+            styleElement.styleSheet.cssText = cssString;
+        else
+            styleElement.appendChild(document.createTextNode(cssString));
+
+        document.getElementsByTagName('head')[0].appendChild(styleElement);
+    }
+};
+;EarlyLoadingCssManager.init();
+</script>
+    <script>window.__mvcPage = true;</script>
+    <script src="http://cdn1.btrstatic.com/scripts/lib/mbox.js"></script>
+    
+    <title>Business Radio | Management Podcasts & Interviews  | Blog Talk Radio </title>
+<meta content="Business Radio | Management Podcasts &amp; Interviews  | Blog Talk Radio " name="title" />
+<meta content="best business podcast, daily business podcast" name="keywords" />
+<meta content="Listen to live and archived Business talk radio podcasts on Blog Talk Radio - the leading talk radio network." name="description" />
+
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script></head>
+<body>
+
+
+
+
+
+<div id="header">
+    <div id="headerAd" class="clearfix visible-desktop">
+        <div id="Ad6_OpenXAd" class="banmanad" style="min-height:90px;">
+    <div id="Ad6_divJsAd">
+        
+    </div>
+    <iframe id="Ad6_OpenXIframe" scrolling="No" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="0" width="0" height="0"></iframe>
+</div>
+    </div>
+    <div id="secondaryNav">
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="http://www.blogtalkradio.com" class="brand" data-tracker-category="HeaderLogo" data-tracker-action="Link Click"><span class="btr-nav-img img-sprite">BlogTalkRadio</span></a>
+                    <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li id="nav-live" class="">
+                                <a href="http://www.blogtalkradio.com/live" data-tracker-category="Nav-OnAir" data-tracker-action="Link Click">Live</a>
+                            </li>
+                            <li id="nav-categories" class="dropdown active">
+                                <a href="/categories" class="dropdown-toggle" data-tracker-category="Nav-Categories" data-tracker-action="Link Click">Categories <b class="caret"></b></a>
+                                <div class="categories-menu dropdown-menu">
+                                    <div class="row">
+                                        <div class="span3">
+                                            <ul class="categories-list">
+        <li><a href="/art" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Art">Art</a></li>
+        <li><a href="/business" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Business">Business</a></li>
+        <li><a href="/education" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Education">Education</a></li>
+        <li><a href="/entertainment" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Entertainment">Entertainment</a></li>
+        <li><a href="/family" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Family">Family</a></li>
+        <li><a href="/food" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Food">Food</a></li>
+        <li><a href="/health" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Health">Health</a></li>
+        <li><a href="/hobbies" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Hobbies">Hobbies</a></li>
+        <li><a href="/life" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Life">Life</a></li>
+        <li><a href="/music" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Music">Music</a></li>
+        <li><a href="/news" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="News">News</a></li>
+        <li><a href="/politics" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Politics">Politics</a></li>
+        <li><a href="/religion" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Religion">Religion</a></li>
+        <li><a href="/science" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Science">Science</a></li>
+        <li><a href="/self_help" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Self Help">Self Help</a></li>
+        <li><a href="/spirituality" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Spirituality">Spirituality</a></li>
+        <li><a href="/sports" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Sports">Sports</a></li>
+        <li><a href="/technology" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Technology">Technology</a></li>
+        <li><a href="/women" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Women">Women</a></li>
+</ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="nav-explore" class="dropdown ">
+                                <a href="/popular" class="dropdown-toggle">Explore <b class="caret"></b></a>
+                                <div class="explore-menu dropdown-menu">
+                                    <div class="row">
+                                        <div class="span3">
+                                            <ul class="explore-list">
+                                                <li class="">
+                                                    <a href="http://www.blogtalkradio.com/popular" data-tracker-category="Nav-Popular" data-tracker-action="Link Click">Popular</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="http://www.blogtalkradio.com/staff-picks" data-tracker-category="Nav-StaffPicks" data-tracker-action="Link Click">Staff Picks</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="http://www.blogtalkradio.com/best-of" data-tracker-category="Nav-BestOf" data-tracker-action="Link Click">Best Of</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/featured-hosts">Featured Hosts</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="nav-networks" class=" dropdown">
+                                <a href="http://www.blogtalkradio.com/networks" data-tracker-category="Nav-Networks" data-tracker-action="Link Click" class="dropdown-toggle">Networks <b class="caret"></b></a>
+                                <div class="stations-menu dropdown-menu">
+    <div class="row">
+        <div class="span3">
+            <ul class="explore-list">
+                    <li><a href="http://www.blogtalkradio.com/tsn">TSN: Tavis Smiley Network</a></li>
+                    <li><a href="http://www.blogtalkradio.com/DIY">DIY</a></li>
+                    <li><a href="http://www.blogtalkradio.com/enespanol">En Espa&#241;ol</a></li>
+                    <li><a href="http://www.blogtalkradio.com/sbnation-network">SB Nation</a></li>
+                    <li><a href="http://www.blogtalkradio.com/healthyvision">Healthy Vision</a></li>
+                    <li><a href="http://cinchcast.com/the-convo/">The ConVo</a></li>
+                <li><br/></li>
+                <li><strong><a href="/networks">view all networks</a></strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+                            </li>
+                        </ul>
+                        <form id="headerSearchForm" class="search-form navbar-search visible-desktop">
+                            <input id="headerSearchBox" name="search" type="text" class="search-query-input span2" data-provide="typeahead" placeholder="Search BlogTalkRadio" autocomplete="off" />
+                            <button type="submit" class="btn btn-small span1"><span class="icon-search-black">Search</span></button>
+                        </form>
+	                    <ul id="user-menu" class="nav pull-right">
+	                        <li class="hideIfNotAuthenticated"><a id="faq-link" href="http://blogtalkradio.desk.com" data-tracker-category="Header-Help" data-tracker-action="Link Click">Help</a></li>
+	                        <li class="hideIfTrafficDrivingUser">
+	                            <a id="premium-link" class="highlight-link hideIfTrafficDrivingUser" href="http://hosts.blogtalkradio.com/go-premium/?aid=GoPremH&utm_source=Header&utm_medium=Link&utm_content=GoPremH&utm_campaign=GoPremH" title="Premium">
+	                                <span class="hideIfNotAuthenticated hideIfUserIsNotAHost hideIfCurrentIsNotPremium">Upgrade</span>
+	                                <span class="hideIfCurrentIsPremium hideIfAuthenticatedAndIsNotAHost">Go Premium</span>
+	                                <span class="hideIfNotAuthenticated hideIfUserIsAHost">Start your show</span>
+                                </a>
+	                        </li>
+	                        <li class="hideIfAuthenticated"><a id="login-link" href="https://secure.blogtalkradio.com/login.aspx?f=h&aid=Signin&utm_source=Header&utm_medium=Link&utm_content=Signin&utm_campaign=Signin">Log in</a></li>
+	                        <li class="hideIfAuthenticated hideIfTrafficDrivingUser"><a id="signup-link" href='https://secure.blogtalkradio.com/register.aspx?aid=CRMTS&utm_source=Header&utm_medium=Banner&utm_content=CRMTS&utm_campaign=CRMTS' title="Create My Talk Show" data-tracker-category="Header-RegisterTalkShow" data-tracker-action="Link Click" class="btn btn-small btn-primary">Sign Up</a></li>
+	                        <li id="profileTab" class="hideIfNotAuthenticated">
+	                            <ul class="profileTab">
+	                                <li>
+	                                    <a class="tabHeader" data-tracker-category="Header-HomeImg" data-tracker-action="Link Click"><img id="profileTab-userimage" style="height:35px;width:35px;" /></a>
+	                                    <div class="subnav2 dropdown-menu">
+	                                    	<div class="user-card">
+		                                    	<div class="profilename"><a id="usercard-displayName" class="center"></a></div>
+		                                    	<p><a id="userimage-link" href="#"><img id="usercard-userimage" /></a></p>
+		                                        <p><a id="aLogOut" href="http://www.blogtalkradio.com/logout.aspx" data-tracker-category="Header-Logout" data-tracker-action="Link Click">Log Out</a></p>
+	                                    	</div>
+		                                    <ul class="user-menu">
+		                                        <li class="hideIfUserIsNotAHost"><a href="http://my.blogtalkradio.com/host/segments.aspx" data-tracker-category="Header-CreateShow" data-tracker-action="Link Click">Schedule Episode</a></li>
+		                                        <li class="hideIfUserIsNotAHost"><a href="http://sb.blogtalkradio.com/host/studio.aspx" data-tracker-category="Header-Studio" data-tracker-action="Link Click">Studio</a></li>
+		                                        <li><a href="http://my.blogtalkradio.com/user/home.aspx" data-tracker-category="Header-MyBTR" data-tracker-action="Link Click">My Account</a></li>
+		                                        <li class="hideIfUserIsNotAHost"><a href="http://my.blogtalkradio.com/reports/default.aspx" data-tracker-category="Header-Reports" data-tracker-action="Link Click">Reporting</a></li>
+		                                        <li><a href="http://my.blogtalkradio.com/user/settings.aspx" data-tracker-category="Header-Settings" data-tracker-action="Link Click">Settings</a></li>
+		                                        <li><a href="http://my.blogtalkradio.com/user/messaging.aspx" data-tracker-category="Header-Messages" data-tracker-action="Link Click">Messages</a></li>
+		                                        <li><a href="http://blogtalkradio.desk.com" data-tracker-category="Header-Learning" data-tracker-action="Link Click">Help &amp; Support</a></li>
+		                                        <li class="hideIfUserIsNotAHost">
+		                                            <a class="premium-link" href="http://www.blogtalkradio.com/host/premium.aspx" data-tracker-category="Header-PremiumUpgrade" data-tracker-action="Link Click">
+		                                                <span class="hideIfCurrentIsNotPremium">Premium Services</span>
+                                                        <span class="hideIfCurrentIsPremium">Go Premium</span>
+                                                    </a>
+		                                        </li>
+		                                    </ul>
+										</div>
+	                                </li>
+	                            </ul>
+	                        </li>
+	                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div id="breadcrumb" class="masthead"><!-- rename this div id -->
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <ul class="breadcrumb">
+	<li class="home-link">
+		<a href="http://www.blogtalkradio.com">Home</a>
+		<span class="divider">/</span>
+	</li>
+	<li >
+
+<a href='/categories'>Categories</a>
+
+<span class='divider'>/</span>
+		</li>
+<li class='active'>
+<h1>
+Business
+</h1>
+
+		</li>
+
+</ul>
+
+                    <img src="/content/images/banners/category-business.jpg" alt="" />
+                        <div class="sub-header-list dropdown">
+                            <a id="sub-category-link" data-toggle="collapse" data-target="#body-top" href="javascript:void(0);">
+                                SUB-CATEGORIES
+                                <span class="icon-chevron-down icon-white"></span>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="body-top" class="collapse in">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <ul class="categories-list">
+        <li><a href="/business/only" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Business">Business</a></li>
+        <li><a href="/entrepreneur" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Entrepreneur">Entrepreneur</a></li>
+        <li><a href="/finance" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Finance">Finance</a></li>
+        <li><a href="/jobs" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Jobs">Jobs</a></li>
+        <li><a href="/legal" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Legal">Legal</a></li>
+        <li><a href="/management" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Management">Management</a></li>
+        <li><a href="/marketing" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Marketing">Marketing</a></li>
+        <li><a href="/realestate" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Real Estate">Real Estate</a></li>
+        <li><a href="/social_networking" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Social Networking">Social Networking</a></li>
+        <li><a href="/work" data-tracker-category="Categories" data-tracker-action="Link Click" data-tracker-label="Work">Work</a></li>
+</ul>
+
+                        <a class="close-link" data-toggle="collapse" data-target="#body-top" href="javascript:void(0);">close <span class="icon-chevron-up icon-white"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="body">
+            <div class="container">
+                <div class="row">
+                    <div id="mainContent" class="span8">
+                        
+<div class="episodes">
+    
+    <div data-widget="episode.list.carousel.with.thumbnail.nav" class="episode-list-carousel-with-thumbnail-nav">
+        <h3><i class="featured-img"></i>Featured in Business</h3>
+        <div class="carousel-body">
+            <div class="carousel-frames-container">
+                <ul class="carousel-frames">
+                    <li data-show-id="5233799" class="current animate-in">
+                             <div class="carousel-frame">
+                                 <div class="detail-image-border">
+                                     <a class="detail-image-link" href="/marketticker/2013/08/26/the-drums-of-war">
+
+                                        <img src="http://cdn.btrcdn.com/pics/showpics/large/57db044b-8de3-4f51-8ef2-12548aacf7e1_img_0834-cut-square-twitter.jpg" width="400" alt="" />
+                                     </a>
+                                 </div>
+                                 <div class="box-text">
+                                     <h4>
+                                         <a href="/marketticker/2013/08/26/the-drums-of-war">
+The Drums of War
+                                        </a>
+                                     </h4>
+                                     <p>
+                                         by <a href="/marketticker">TickerGuy</a>
+                                         in <a href="/business">Business</a>
+                                     </p>
+                                     <p><a class="button-link" href="/marketticker/2013/08/26/the-drums-of-war">LISTEN NOW</a></p>
+                                 </div>
+                             </div>
+                         </li>
+<li data-show-id="5304477" class="">
+                             <div class="carousel-frame">
+                                 <div class="detail-image-border">
+                                     <a class="detail-image-link" href="/civilalertworld/2013/08/21/nationality-details-part-3-motu-propio-u--taj-tarik-bey">
+
+                                        <img src="http://cdn.btrcdn.com/pics/showpics/large/8fb2e0fb-871b-4322-8b76-83d868e6c5d7_300logo.jpg" width="400" alt="" />
+                                     </a>
+                                 </div>
+                                 <div class="box-text">
+                                     <h4>
+                                         <a href="/civilalertworld/2013/08/21/nationality-details-part-3-motu-propio-u--taj-tarik-bey" title="NATIONALITY DETAILS PART 3, MOTU PROPIO &amp; U! - Taj Tarik Bey">
+NATIONALITY DETAILS PART 3, MOTU PROPIO ...
+                                        </a>
+                                     </h4>
+                                     <p>
+                                         by <a href="/civilalertworld">civilalert</a>
+                                         in <a href="/legal">Legal</a>
+                                     </p>
+                                     <p><a class="button-link" href="/civilalertworld/2013/08/21/nationality-details-part-3-motu-propio-u--taj-tarik-bey">LISTEN NOW</a></p>
+                                 </div>
+                             </div>
+                         </li>
+<li data-show-id="5281657" class="">
+                             <div class="carousel-frame">
+                                 <div class="detail-image-border">
+                                     <a class="detail-image-link" href="/injustice-anywhere/2013/08/21/the-ryan-ferguson-case-an-innocent-mans-fight-for-freedom">
+
+                                        <img src="http://cdn.btrcdn.com/pics/showpics/large/550003_AI28AUBM.jpg" width="400" alt="" />
+                                     </a>
+                                 </div>
+                                 <div class="box-text">
+                                     <h4>
+                                         <a href="/injustice-anywhere/2013/08/21/the-ryan-ferguson-case-an-innocent-mans-fight-for-freedom" title="The Ryan Ferguson case: an innocent man&#39;s fight for freedom">
+The Ryan Ferguson case: an innocent man'...
+                                        </a>
+                                     </h4>
+                                     <p>
+                                         by <a href="/injustice-anywhere">Injustice Anywhere</a>
+                                         in <a href="/legal">Legal</a>
+                                     </p>
+                                     <p><a class="button-link" href="/injustice-anywhere/2013/08/21/the-ryan-ferguson-case-an-innocent-mans-fight-for-freedom">LISTEN NOW</a></p>
+                                 </div>
+                             </div>
+                         </li>
+<li data-show-id="3894697" class="">
+                             <div class="carousel-frame">
+                                 <div class="detail-image-border">
+                                     <a class="detail-image-link" href="/marketingtech/2012/10/19/paul-dunay-of-maxymiser">
+
+                                        <img src="http://cdn.btrcdn.com/pics/hostpics/ae092f9a-8c85-4bf4-9c48-bda07bfd1325_douglas-karr-sq.jpg" width="400" alt="" />
+                                     </a>
+                                 </div>
+                                 <div class="box-text">
+                                     <h4>
+                                         <a href="/marketingtech/2012/10/19/paul-dunay-of-maxymiser">
+Paul Dunay of Maxymiser
+                                        </a>
+                                     </h4>
+                                     <p>
+                                         by <a href="/marketingtech">Marketing Technology</a>
+                                         in <a href="/marketing">Marketing</a>
+                                     </p>
+                                     <p><a class="button-link" href="/marketingtech/2012/10/19/paul-dunay-of-maxymiser">LISTEN NOW</a></p>
+                                 </div>
+                             </div>
+                         </li>
+<li data-show-id="5298517" class="">
+                             <div class="carousel-frame">
+                                 <div class="detail-image-border">
+                                     <a class="detail-image-link" href="/scottfox/2013/08/21/clickmillionairescom-birthday-party-qa-show">
+
+                                        <img src="http://cdn.btrcdn.com/pics/showpics/large/a14aa55d-5a98-471d-83fb-d9d282de5947_click-millionaires-radio-sc.jpg" width="400" alt="" />
+                                     </a>
+                                 </div>
+                                 <div class="box-text">
+                                     <h4>
+                                         <a href="/scottfox/2013/08/21/clickmillionairescom-birthday-party-qa-show" title="ClickMillionaires.com Birthday Party Q&amp;A Show!">
+ClickMillionaires.com Birthday Party Q&A...
+                                        </a>
+                                     </h4>
+                                     <p>
+                                         by <a href="/scottfox">Scott Fox</a>
+                                         in <a href="/business">Business</a>
+                                     </p>
+                                     <p><a class="button-link" href="/scottfox/2013/08/21/clickmillionairescom-birthday-party-qa-show">LISTEN NOW</a></p>
+                                 </div>
+                             </div>
+                         </li>
+
+                </ul>
+            </div>
+            <ul class="carousel-list">
+                <li data-show-id="5233799" frame-index="0" class="current">
+                         <span class="selected-list-item-border"></span>
+                         <a href="javascript:void(0);">
+
+                             <img src="http://cdn.btrcdn.com/pics/showpics/large/57db044b-8de3-4f51-8ef2-12548aacf7e1_img_0834-cut-square-twitter.jpg" width="114" alt="" />
+                         </a>
+                     </li>
+<li data-show-id="5304477" frame-index="1">
+                         <span class="selected-list-item-border"></span>
+                         <a href="javascript:void(0);">
+
+                             <img src="http://cdn.btrcdn.com/pics/showpics/large/8fb2e0fb-871b-4322-8b76-83d868e6c5d7_300logo.jpg" width="114" alt="" />
+                         </a>
+                     </li>
+<li data-show-id="5281657" frame-index="2">
+                         <span class="selected-list-item-border"></span>
+                         <a href="javascript:void(0);">
+
+                             <img src="http://cdn.btrcdn.com/pics/showpics/large/550003_AI28AUBM.jpg" width="114" alt="" />
+                         </a>
+                     </li>
+<li data-show-id="3894697" frame-index="3">
+                         <span class="selected-list-item-border"></span>
+                         <a href="javascript:void(0);">
+
+                             <img src="http://cdn.btrcdn.com/pics/hostpics/ae092f9a-8c85-4bf4-9c48-bda07bfd1325_douglas-karr-sq.jpg" width="114" alt="" />
+                         </a>
+                     </li>
+<li data-show-id="5298517" frame-index="4">
+                         <span class="selected-list-item-border"></span>
+                         <a href="javascript:void(0);">
+
+                             <img src="http://cdn.btrcdn.com/pics/showpics/large/a14aa55d-5a98-471d-83fb-d9d282de5947_click-millionaires-radio-sc.jpg" width="114" alt="" />
+                         </a>
+                     </li>
+
+            </ul>
+        </div>
+    </div>
+
+        <ul class="tab-list ">
+        <li class="archived-list-item current">
+
+<a href='/business/archived'><i></i>Archived Episodes (5396)</a>
+             </li>
+<li class="live-and-upcoming-list-item ">
+
+<a href='/business/live-and-upcoming'><i></i>Live & Upcoming Episodes (1478)</a>
+             </li>
+
+    </ul>
+
+    
+    <ul class="episode-list">
+        
+
+
+        
+        <li class="episode-list-item featured
+                                              
+                                              " data-episode-id="5174159">
+            <div class="item-image">
+                <a href="/inflammatorytalk/2013/08/23/inflammatory-talk-special-guest-allison-margolin-1">
+
+                    <figure>
+                            <img data-src="http://cdn.btrcdn.com/pics/hostpics/60fbfd04-0290-4523-ac01-e9c5d8708ebc_mr_midnight_movie_logo_official_072211.jpg" src="/img/spacer.gif" class="deferredLoad" width="164" height="164" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 49 mins">01:49</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/inflammatorytalk/2013/08/23/inflammatory-talk-special-guest-allison-margolin-1">
+Inflammatory Talk: Special Guest Allison Margolin
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/inflammatorytalk">JewishProducer</a></span>
+                    <span class="episode-category">in <a href="/legal">Legal</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-23 03:30:00Z" data-duration="6540000" data-time-label="#episode_archived" data-time-tooltip>8/23/2013 3:30 AM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=marijuana" rel="nofollow">marijuana</a>
+<a href="/search?q=california" rel="nofollow">california</a>
+<a href="/search?q=pot growers" rel="nofollow">pot growers</a>
+<a href="/search?q=legalization" rel="nofollow">legalization</a>
+<a href="/search?q=hits from the bong" rel="nofollow">hits from the bong</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="160">
+  Tonight&#39;s special guest is Allison Margolin, a lawyer focused on criminal defense,&nbsp; civil litigation, and trademark and employment discrimination - with a specialty in California&#39;s pot laws. California marijuana law is a &quot;f&#39;ucking mess,&quot; claims Margolin, and she&#39;s involved in some of the most incredible strategies for helping get this straight. LA&#39;s DOPEST lawyer is visiting with Mr. Midnight Movie and Jewish Producer!&nbsp; Tune in and learn from the mouth o
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              two-per-row
+                                                                                                  clear
+" data-episode-id="5302869">
+            <div class="item-image">
+                <a href="/animal/2013/08/21/jason-ginsburg--facebook-vs-linkedin">
+
+                    <figure>
+                            <img data-src="http://cdn1.btrstatic.com/pics/hostpics/thumbs/dd26a42b-0664-4636-a814-dd8b09e824ccrecruiting animal 300x300.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 31 mins">01:31</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/animal/2013/08/21/jason-ginsburg--facebook-vs-linkedin">
+Jason Ginsburg - Facebook vs Linkedin
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/animal">Recruiting Animal</a></span>
+                    <span class="episode-category">in <a href="/jobs">Jobs</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-21 16:00:00Z" data-duration="5460000" data-time-label="#episode_archived" data-time-tooltip>8/21/2013 4:00 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=brandemix" rel="nofollow">brandemix</a>
+<a href="/search?q=recruiting" rel="nofollow">recruiting</a>
+<a href="/search?q=recruitment" rel="nofollow">recruitment</a>
+<a href="/search?q=social recruiting" rel="nofollow">social recruiting</a>
+<a href="/search?q=jason ginsburg" rel="nofollow">Jason Ginsburg</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="0">
+  @Brandemix -- LINKEDIN -- BLOG @Ginsburg was here in August 2011 - His predictions didn&#39;t come true so he&#39;s come back to try again. Socialize Your Talent Strategy
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              two-per-row
+                                              " data-episode-id="5137449">
+            <div class="item-image">
+                <a href="/moneyforlunch/2013/08/15/october-29-2012">
+
+                    <figure>
+                            <img data-src="http://cdn2.btrstatic.com/pics/hostpics/thumbs/d893513c-47e9-4826-88de-7cc64fad0af9_bert_social_buttons_leaders_tag.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 14 mins">01:14</span></div>
+
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/moneyforlunch/2013/08/15/october-29-2012">
+Bert Martinez speaks with Doug Eastland and Tony Horton
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/moneyforlunch">MoneyForLunch</a></span>
+                    <span class="episode-category">in <a href="/business">Business</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-15 17:00:00Z" data-duration="4440000" data-time-label="#episode_archived" data-time-tooltip>8/15/2013 5:00 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=doug eastland" rel="nofollow">Doug Eastland</a>
+<a href="/search?q=luis vicente garcia" rel="nofollow">Luis Vicente Garcia</a>
+<a href="/search?q=james h abrams" rel="nofollow">James H Abrams</a>
+<a href="/search?q=tony horton" rel="nofollow">Tony Horton</a>
+<a href="/search?q=best selling authors" rel="nofollow">Best Selling Authors</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="0">
+ Doug Eastland&nbsp;Top-Producing Realtor serving the Central Texas market and the owner of Eastland Systems, a real estate coaching and training company. Doug is also a best-selling author on real estate with his newly released book &quot;The Ultimate Home Buyers Guide&quot;. &nbsp; Luis Vicente Garcia&nbsp;FocalPoint Certified Business Coach, a motivational speaker, and a best-selling author, who has studied how motivation and attitude influence the performance and success of Businesses and Bu
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              two-per-row
+                                                                                                  clear
+" data-episode-id="5152793">
+            <div class="item-image">
+                <a href="/rebelbroker/2013/08/18/real-estate-realities--with-the-rebelbroker">
+
+                    <figure>
+                            <img data-src="http://cdn1.btrstatic.com/pics/hostpics/thumbs/e36100b8-5a74-4265-b2d3-2228132cced9_real_estate_realities_podcast_logo_5.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="00 hs 57 mins">00:57</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/rebelbroker/2013/08/18/real-estate-realities--with-the-rebelbroker">
+Real Estate Realities - With The RebelBroker
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/rebelbroker">The RebelBroker</a></span>
+                    <span class="episode-category">in <a href="/realestate">Real Estate</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-18 17:00:00Z" data-duration="3420000" data-time-label="#episode_archived" data-time-tooltip>8/18/2013 5:00 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=real estate" rel="nofollow">real estate</a>
+<a href="/search?q=morgan hill" rel="nofollow">morgan hill</a>
+<a href="/search?q=silicon valley" rel="nofollow">silicon valley</a>
+<a href="/search?q=california" rel="nofollow">california</a>
+<a href="/search?q=foreclosure" rel="nofollow">foreclosure</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="0">
+We discuss all the latest current events of real estate from the perspective of a 20+ year real estate veteran!
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              two-per-row
+                                              " data-episode-id="5297765">
+            <div class="item-image">
+                <a href="/freedomordeath/2013/08/20/black-power-radio-presents-dr-umar-abdullah-johnson">
+
+                    <figure>
+                            <img data-src="http://cdn1.btrstatic.com/pics/hostpics/thumbs/742359f9-8147-4a14-9a75-7f2af78db559_logo.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="02 hs 50 mins">02:50</span></div>
+
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/freedomordeath/2013/08/20/black-power-radio-presents-dr-umar-abdullah-johnson">
+BLACK POWER RADIO PRESENTS: DR. UMAR ABDULLAH JOHNSON 
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/freedomordeath">NBPP BLACK POWER RADIO</a></span>
+                    <span class="episode-category">in <a href="/social_networking">Social Networking</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-20 00:00:00Z" data-duration="10200000" data-time-label="#episode_archived" data-time-tooltip>8/20/2013 12:00 AM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=khallid muhammad" rel="nofollow">Khallid Muhammad</a>
+<a href="/search?q=malik zulu shabazz" rel="nofollow">Malik Zulu Shabazz</a>
+<a href="/search?q=chawn saddam kweli" rel="nofollow">Chawn Saddam Kweli</a>
+<a href="/search?q=new black panther party" rel="nofollow">New Black Panther Party</a>
+<a href="/search?q=umar abdullah johnson million youth march" rel="nofollow">Umar Abdullah Johnson Million Youth March</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="0">
+ mar Abdullah-Johnson is a Nationally Certified School Psychologist who practices privately throughout Pennsylvania and lectures throughout the country. Umar is a blood relative of Frederick Douglass, the great Black abolitionist and orator. As a school psychologist Umar evaluates children ages 3-21 in an effort to determine if they have educational disabilities and a need for special education services. Umar is considered a national expert on learning disabilities and their effect on Black chil
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              two-per-row
+                                                                                                  clear
+" data-episode-id="5285529">
+            <div class="item-image">
+                <a href="/prodmgmttalk/2013/08/19/tatiana-josephy-head-of-products-at-crowdflower">
+
+                    <figure>
+                            <img data-src="http://cdn2.btrstatic.com/pics/hostpics/thumbs/a29c8fbb-5f56-4c04-aed3-e3921cc68911_prodmgmttlk.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="00 hs 53 mins">00:53</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/prodmgmttalk/2013/08/19/tatiana-josephy-head-of-products-at-crowdflower">
+Tatiana Josephy, Head of Products At Crowdflower
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/prodmgmttalk">ProdMgmtTalk</a></span>
+                    <span class="episode-category">in <a href="/business">Business</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-19 17:00:00Z" data-duration="3180000" data-time-label="#episode_archived" data-time-tooltip>8/19/2013 5:00 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=product management" rel="nofollow">product management</a>
+<a href="/search?q=technology" rel="nofollow">technology</a>
+<a href="/search?q=agile" rel="nofollow">Agile</a>
+<a href="/search?q=business woman" rel="nofollow">business woman</a>
+<a href="/search?q=startup" rel="nofollow">startup</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="0">
+  Tatiana Josephy studied public policy, ethics, and development in college and considered becoming a director, but saw a strong similarity between product management and directing. &nbsp;She&#39;ll discuss Being A Woman In Technology, Bootstrapping A Mobile Application, And Agile Culture &nbsp; She pushed back a sprint to join host Cindy F. Solomon in honor of Women in Product month on the Global Product Management Talk. &nbsp; Tatiana is speaking at Startup Product Summit SF2 Oct 11, 2013 Regi
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              two-per-row
+                                              " data-episode-id="5302861">
+            <div class="item-image">
+                <a href="/playgroundradio/2013/08/21/matthew-harrigan-media-analyst-wunderlich-securities">
+
+                    <figure>
+                            <img data-src="http://cdn2.btrstatic.com/pics/hostpics/thumbs/0903c97e-90ad-49a4-8ddc-a060e0758246_mailedd31-150x150.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 04 mins">01:04</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/playgroundradio/2013/08/21/matthew-harrigan-media-analyst-wunderlich-securities">
+Matthew Harrigan, Media Analyst, Wunderlich Securities 
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/playgroundradio">Playground Radio</a></span>
+                    <span class="episode-category">in <a href="/finance">Finance</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-21 00:00:00Z" data-duration="3840000" data-time-label="#episode_archived" data-time-tooltip>8/21/2013 12:00 AM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=demian russian" rel="nofollow">Demian Russian</a>
+<a href="/search?q=matthew harrigan" rel="nofollow">Matthew Harrigan</a>
+<a href="/search?q=wunderlich securities" rel="nofollow">Wunderlich Securities</a>
+<a href="/search?q=sirius xm radio" rel="nofollow">Sirius XM Radio</a>
+<a href="/search?q=satellite radio" rel="nofollow">satellite radio</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="0">
+  Playground Radio brings you market news straight from The Playground. Join your host Demian Russian from Satellite Radio Playground and Market Playground, along with Spencer Osborne from SiriusBuzz, for a discussion on all of the latest news in the world of Sirius XM Radio (NASDAQ:SIRI). Listeners are welcome to participate in the live discussion by dialing (347) 934-0239.&nbsp; &nbsp; Our special guest this week:&nbsp;Matthew Harrigan, Media Analyst, Wunderlich Securities&nbsp;
+                </p>
+            </div>
+        </li>
+        
+
+<li class="list-item-interrupt list-item-reset">    <div class="tags-box">
+        <img src="/content/images/popular-tags.gif" alt="" />
+        <h3>Most Popular Tags in Business</h3>
+        <ul>
+                <li><a href="/search?q=tba" rel="nofollow">tba</a></li>
+                <li><a href="/search?q=social media" rel="nofollow">social media</a></li>
+                <li><a href="/search?q=success" rel="nofollow">success</a></li>
+                <li><a href="/search?q=small business" rel="nofollow">small business</a></li>
+                <li><a href="/search?q=sales" rel="nofollow">sales</a></li>
+                <li><a href="/search?q=networking" rel="nofollow">networking</a></li>
+                <li><a href="/search?q=leadership" rel="nofollow">leadership</a></li>
+                <li><a href="/search?q=coaching" rel="nofollow">coaching</a></li>
+                <li><a href="/search?q=linked local network" rel="nofollow">linked local network</a></li>
+                <li><a href="/search?q=facebook" rel="nofollow">facebook</a></li>
+                <li><a href="/search?q=don todrin" rel="nofollow">don todrin</a></li>
+                <li><a href="/search?q=based" rel="nofollow">based</a></li>
+        </ul>
+    </div>
+</li>
+
+        
+        <li class="episode-list-item 
+                                              
+                                              " data-episode-id="5211605">
+            <div class="item-image">
+                <a href="/thepowerhouroptometry/2013/08/22/wellpoint--blues">
+
+                    <figure>
+                            <img data-src="http://cdn1.btrstatic.com/pics/hostpics/thumbs/ce75eb40-1bf6-49c3-b91b-8da8bbeb8777_powerhour_logo_22march2012.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 31 mins">01:31</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/thepowerhouroptometry/2013/08/22/wellpoint--blues">
+Wellpoint - Blues
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/thepowerhouroptometry">The Power Hour1</a></span>
+                    <span class="episode-category">in <a href="/entrepreneur">Entrepreneur</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-22 00:30:00Z" data-duration="5460000" data-time-label="#episode_archived" data-time-tooltip>8/22/2013 12:30 AM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=optometry" rel="nofollow">Optometry</a>
+<a href="/search?q=optometry" rel="nofollow">Optometry</a>
+<a href="/search?q=optometry" rel="nofollow">Optometry</a>
+<a href="/search?q=optometry" rel="nofollow">Optometry</a>
+<a href="/search?q=optometry" rel="nofollow">Optometry</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="160">
+Richard Hom
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              
+                                              " data-episode-id="5169643">
+            <div class="item-image">
+                <a href="/clubwealth/2013/08/21/club-wealth-radio-with-michael-hellickson">
+
+                    <figure>
+                            <img data-src="http://cdn1.btrstatic.com/pics/hostpics/thumbs/906acb95-ed6c-404a-b8da-df9cc8ced698_lalogo.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 24 mins">01:24</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/clubwealth/2013/08/21/club-wealth-radio-with-michael-hellickson">
+Join Luxury Estates Specialist Jo Ellen Nash to the next CW
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/clubwealth">ClubWealth</a></span>
+                    <span class="episode-category">in <a href="/realestate">Real Estate</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-21 17:00:00Z" data-duration="5040000" data-time-label="#episode_archived" data-time-tooltip>8/21/2013 5:00 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=club wealth" rel="nofollow">Club Wealth</a>
+<a href="/search?q=michael hellickson" rel="nofollow">Michael Hellickson</a>
+<a href="/search?q=sales management" rel="nofollow">Sales Management</a>
+<a href="/search?q=real estate investments" rel="nofollow">Real Estate Investments</a>
+<a href="/search?q=jo ellen nash" rel="nofollow">Jo Ellen Nash</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="160">
+    Jo Ellen Nash specializes in luxury estates, waterfront homes and golf communities in Naples, Florida. She is a Broker Associate with Royal Shell Real Estate, with offices in the heart of the luxury shopping and dining areas on 5th Avenue and in the beachfront community of Park Shore.   During her 30 year career she has been licensed in Oregon, Colorado and Florida. &nbsp;Jo Ellen and her team have served more than 2,000 families with their real estate needs.   Well known in the real estate 
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              
+                                              " data-episode-id="5163717">
+            <div class="item-image">
+                <a href="/radiofreequickbooks/2013/08/21/woody-dawn-stacy-answer-questions">
+
+                    <figure>
+                            <img data-src="http://cdn2.btrstatic.com/pics/hostpics/thumbs/77c72bee-e69c-4ead-936b-db51395ca4c2_qb-talkshow-logo-v3.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="01 hs 30 mins">01:30</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/radiofreequickbooks/2013/08/21/woody-dawn-stacy-answer-questions">
+Woody, Dawn & Stacy Answer Questions
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/radiofreequickbooks">RadioFree QuickBooks</a></span>
+                    <span class="episode-category">in <a href="/business">Business</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-21 23:30:00Z" data-duration="5400000" data-time-label="#episode_archived" data-time-tooltip>8/21/2013 11:30 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=quickbooks" rel="nofollow">quickbooks</a>
+<a href="/search?q=dawn brolin" rel="nofollow">Dawn Brolin</a>
+<a href="/search?q=woody adams" rel="nofollow">Woody Adams</a>
+<a href="/search?q=stacy kildal" rel="nofollow">Stacy Kildal</a>
+<a href="/search?q=intuit" rel="nofollow">Intuit</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="160">
+  Join us for another fun filled evening of QuickBooks! Each week we&#39;ll be live answering your questions about all things QuickBooks. Join nationally known experts Woody Adams, Dawn Brolin &amp; Stacy Kildal and guests as they enlighten listeners to the wonders of QuickBooks.
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              
+                                              " data-episode-id="5313027">
+            <div class="item-image">
+                <a href="/steve-boese/2013/08/23/hr-happy-hour-170--driving-performance-with-technology-1">
+
+                    <figure>
+                            <img data-src="http://cdn1.btrstatic.com/pics/hostpics/thumbs/081e2042-cfa8-455c-bdf6-4832ba4b40e9_happyhour_logo_vertical4.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="00 hs 42 mins">00:42</span></div>
+<div class='featured-box'>Featured</div>
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/steve-boese/2013/08/23/hr-happy-hour-170--driving-performance-with-technology-1">
+HR Happy Hour 170 - Driving Performance with Technology
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/steve-boese">Steve Boese</a></span>
+                    <span class="episode-category">in <a href="/business">Business</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-23 12:00:00Z" data-duration="2520000" data-time-label="#episode_archived" data-time-tooltip>8/23/2013 12:00 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=hr" rel="nofollow">HR</a>
+<a href="/search?q=hr technology" rel="nofollow">HR technology</a>
+<a href="/search?q=management" rel="nofollow">management</a>
+<a href="/search?q=human resources" rel="nofollow">Human Resources</a>
+<a href="/search?q=steve boese" rel="nofollow">Steve Boese</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="160">
+  HR Happy Hour 170 - Driving Performance with Technology Recorded Thursday August 15, 2013 This week on the HR Happy Hour Show, Steve Boese sat down with Tom Porter,&nbsp;Director of Human Resources and Administration, Kawasaki Motors Corporation, U.S.A, and David Ludlow, Global Vice President of Product Marketing, HCM Solutions for SAP and SuccessFactors for an interesting and informative conversation about how HR Technology can help transform organizational performance, and impact and change 
+                </p>
+            </div>
+        </li>
+        
+
+
+
+        
+        <li class="episode-list-item 
+                                              
+                                              " data-episode-id="5293889">
+            <div class="item-image">
+                <a href="/joyofbusiness/2013/08/21/being-marketing-with-cynthia-torp">
+
+                    <figure>
+                            <img data-src="http://cdn2.btrstatic.com/pics/hostpics/thumbs/f9426d5f-78c7-46a2-86cd-ba44622a2835_draft02_job.jpg" src="/img/spacer.gif" class="deferredLoad" width="80" height="80" alt="" />
+                    </figure>
+                </a>
+                <div class="item-box-list clearfix">
+<div class='duration-box'><div class='arrow'></div><span title="00 hs 31 mins">00:31</span></div>
+
+
+                </div>
+            </div>
+            <div class="item-body">
+                <h2>
+                    <a href="/joyofbusiness/2013/08/21/being-marketing-with-cynthia-torp">
+Being Marketing Naturally with Cynthia Torp
+                    </a>
+                </h2>
+                <p class="schedule-text">
+                    <span class="episode-byline">by <a href="/joyofbusiness">Joy of Business</a></span>
+                    <span class="episode-category">in <a href="/business">Business</a></span>
+                    <span class="episode-dateline">    <time datetime="2013-08-21 23:30:00Z" data-duration="1860000" data-time-label="#episode_archived" data-time-tooltip>8/21/2013 11:30 PM</time>
+</span>
+                </p>
+                <p class="tags-link show-tags hide">
+                    <strong>Tags: </strong>
+<a href="/search?q=being marketing" rel="nofollow">Being Marketing</a>
+<a href="/search?q=cynthia torp" rel="nofollow">Cynthia Torp</a>
+<a href="/search?q=simone milasas" rel="nofollow">Simone Milasas</a>
+<a href="/search?q=joy of business" rel="nofollow">joy of business</a>
+<a href="/search?q=marketing" rel="nofollow">marketing</a>
+
+                </p>
+                <p class="description-text" data-truncate-after="160">
+  This week Cynthia Torp joins Simone as they talk about marketing with a difference. &nbsp; Cynthia works with private clients who are interested in getting their voices out into the world on a very big scale. She tends to work with people who are visionaries, who know they are making a difference in the world, and offer a unique perspective or solution. &nbsp; Most people don&rsquo;t see any joy in business. Simone Milasas offers a different possibility using the tools of Access Consciousness.
+                </p>
+            </div>
+        </li>
+        
+
+    </ul>
+    <div class="search-results-per-page">
+        Results Per Page: 
+            <a class="current pagerAction" href="/business/archived/1/12" rel="nofollow">12</a>
+                 | 
+            <a class="pagerAction" href="/business/archived/1/24" rel="nofollow">24</a>
+                 | 
+            <a class="pagerAction" href="/business/archived/1/48" rel="nofollow">48</a>
+    </div>
+     <div id="search-results-pagination" class="pagination">
+        <ul>
+                    <li class="disabled"><span>&lt;</span></li>
+        
+
+            
+
+<li class=active><a href="/business/archived/1/12" class="pagerAction">1</a></li><li ><a href="/business/archived/2/12" class="pagerAction">2</a></li><li ><a href="/business/archived/3/12" class="pagerAction">3</a></li><li ><a href="/business/archived/4/12" class="pagerAction">4</a></li><li ><a href="/business/archived/5/12" class="pagerAction">5</a></li><li ><a href="/business/archived/6/12" class="pagerAction">6</a></li>            
+                    <li class="empty-item"><span>...</span></li>
+<li ><a href="/business/archived/449/12" class="pagerAction">449</a></li><li ><a href="/business/archived/450/12" class="pagerAction">450</a></li>            
+<li ><a href="/business/archived/2/12" class="pagerAction">&gt;</a></li>        </ul>
+    </div>      
+
+</div>
+
+                    </div>
+                        <div id="rightColumn" class="span4">
+                            
+    <div id="Ad1_OpenXAd" class="banmanad" style="min-height:250px;">
+    <div id="Ad1_divJsAd">
+        
+    </div>
+    <iframe id="Ad1_OpenXIframe" scrolling="No" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="0" width="0" height="0"></iframe>
+</div>
+
+    <div class="box-description">
+        <h3>About Business</h3>
+        <p data-truncate-after="250">If you&#39;re looking to launch a business or take your career to the next level, don&#39;t underestimate the power of BlogTalkRadio as both an educational tool and a social network – with 23 million listeners a month and 12,000 hosts, you can join discussions lead by the world&#39;s leading entrepreneurs, analysts, authors and coaches, and ask all your pressing questions via our chat rooms and live call-ins! It doesn&#39;t get much better than financial advice from money-management mogul Suze Orman or brand-building strategy from celebrity chef Emeril Lagasse. Need to get up to speed on how to maximize your Twitter, Facebook, Google+ or Pinterest presence? You&#39;ll find plenty of shows on social media marketing, including tips from tech legend Guy Kawasaki. Network with professionals on every level, on everything from job interviews, career consulting, sales training, productivity, legal advice, financial planning, solopreneurship, real estate trends, product design, work-life balance, mentoring and more.</p>
+    </div>
+
+<div id="staff-picks" class="ad ad-slider box-content">
+    <h3><a href="/staff-picks">BTR Staff Picks</a></h3>
+
+    <div class="slider">
+        <div class="slider-div">
+            <ul class="slides">
+                    <li class="current slide">
+                        
+                            <img src="/img/ajax-loader-blue-circle.gif" width="16" height="16" alt="Loading" class="loader" />
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49363" href="/tarvino/2013/08/26/weigh-in-sports-talk">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/287319_hmrtg07w.jpg" src="/img/bg1.gif" class="staffPickImage" alt="College Football Preview" />
+                            <span>College Football Preview</span>
+                            <p class="show-description">Getting set for week one of the College Football season, making predictions and breaking down all of the big games.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49337" href="/mobileinsightsradio/2013/08/26/mobile-and-online-privacy">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/47a25793-37de-4803-b89f-b158dbe16ae9_mobileinsights.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Staying Private Online" />
+                            <span>Staying Private Online</span>
+                            <p class="show-description">Michelle Dennedy, Chief Privacy Officer at McAfee, joins the show to talk about what you can do to stay secure online.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49361" href="/northwestprime/2013/08/26/bryce-thompson-hot-model-hollywood-eyes-for-new-leading-man">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/406555_b1l3nac6.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Supermodel Bryce Thompson" />
+                            <span>Supermodel Bryce Thompson</span>
+                            <p class="show-description">Supermodel Bryce Thompson stops by to discuss his position as Hollywood's next leading man.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49343" href="/bgr/2013/08/24/its-story-time-with-jd-holiday-8-24-13">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/314be4e4-2514-4a47-b0d4-ad7bd211211d_book_garden_radio_logo_for_btr_500x600_7-13.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Story Time for Kids" />
+                            <span>Story Time for Kids</span>
+                            <p class="show-description">Three more children's stories including, "The Tickle that Dropped the Moon" by Gabriela Nicole Gonzalez.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49359" href="/moviegeeksunited/2013/08/26/directors-john-badham-and-renny-harlin">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/moviegeeksunited2.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Filmmaker John Badham" />
+                            <span>Filmmaker John Badham</span>
+                            <p class="show-description">"Saturday Night Fever" director John Badham chats about his new film "Devil's Pass."</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49349" href="/savvycentral/2013/08/26/tovah-paglaro-the-queen-of-green-with-back-to-school-tips">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/300443_4qoao4tn.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Back to School Survival Tips" />
+                            <span>Back to School Survival Tips</span>
+                            <p class="show-description">Tovah Paglaro, the "Queen of Green,” joins the show to share her back to school lifestyle tips.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49327" href="/travelbrigade/2013/08/25/art-and-waves-in-laguna-beach">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/4f1328bc-9aec-4175-92e5-4b1a90b686bb_tb_profile_300.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Laguna Beach Travel Guide" />
+                            <span>Laguna Beach Travel Guide</span>
+                            <p class="show-description">Travel Brigade visits Laguna Beach, a Californian coastal town with a thriving arts scene and inspirational beach views.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49347" href="/survive365/2013/08/25/ex-wnba-baller-carolyn-moos-more">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/collins1n-2web.jpg" src="/img/bg1.gif" class="staffPickImage" alt="WNBA Player Carolyn Moos" />
+                            <span>WNBA Player Carolyn Moos</span>
+                            <p class="show-description">Former WNBA star Carolyn Moos discusses her relationship with the NBA's first openly gay player Jason Collins.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49319" href="/johndalytv/2013/08/26/jfk-assassination-50th-gary-mack">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/a6827cd3-8c0b-4ac7-8dab-837ca8395016_johndaly.jpg" src="/img/bg1.gif" class="staffPickImage" alt="JFK Assassination 50 Years On" />
+                            <span>JFK Assassination 50 Years On</span>
+                            <p class="show-description">Gary Mack, curator of the Sixth Floor Museum, discusses the 50th anniversary of the assassination of President Kennedy, and the conspiracy theories that still exist.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49357" href="/biteradiome/2013/08/26/stop-raising-einstein-discover-the-brilliance-in-your-child">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/0d5ddaf5-f2b5-42b2-843b-c0308576e491_brmlogo.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Discovering Your Child&#39;s Brilliance" />
+                            <span>Discovering Your Child&#39;s Brilliance</span>
+                            <p class="show-description">Author Tara Kennedy-Kline discusses how to improve communication with your children.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49355" href="/pwpradio/2013/08/26/greg-demarco-show-headlocked-comic-eric-ryan">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/bdc59ffa-ec49-4654-8cc3-0d5ed88bc323_pwp-radio-logo-600.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Wrestling Comic Book Creator" />
+                            <span>Wrestling Comic Book Creator</span>
+                            <p class="show-description">The team are joined by Michael Kingston, creator and author of the wrestling comic book series "Headlocked."</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49353" href="/thisisinfamousradio/2013/08/26/wrath-of-the-kidd">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/7ee8b6d4-7f44-4e76-988f-8fba55a6ba6a_thisisinfamous-blogtalkbanner.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Is Ben Right for Batman?" />
+                            <span>Is Ben Right for Batman?</span>
+                            <p class="show-description">Discussing this week's movie news, including the announcement that Ben Affleck will be the new Batman.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49351" href="/take2radio/2013/08/25/noel-calloway-his-award-winning-film-life-love-soul">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/369741_ha7b7new.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Award Winning Director Noel Calloway" />
+                            <span>Award Winning Director Noel Calloway</span>
+                            <p class="show-description">Director Noel Calloway talks about his award winning film "Life, Love, Soul."</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49345" href="/ponytoast/2013/08/25/ter-episode-70-wait-seriously-70-what-the-heck">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/236437_iicu8idx.jpg" src="/img/bg1.gif" class="staffPickImage" alt="The Best of True Equestria Radio" />
+                            <span>The Best of True Equestria Radio</span>
+                            <p class="show-description">The best of brony-culture, with highlights from True Equestria Radio's first 70 shows.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49341" href="/hamptonblu/2013/08/24/50-years-later-remembering-the-march-on-washington">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/hamptonblu1.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Remembering the March on Washington" />
+                            <span>Remembering the March on Washington</span>
+                            <p class="show-description">Discussing how much progress we've seen since the March on Washington 50 years ago. </p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49339" href="/libertydrive/2013/08/25/kirsten-haglund-miss-america-2008">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/7b9d0766-67cf-418f-8f53-1e933958b12b_libertydrive_copy_copy.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Miss America Talks Eating Disorders" />
+                            <span>Miss America Talks Eating Disorders</span>
+                            <p class="show-description">Former Miss America Kirsten Haglund discusses political issues and her efforts to create hope for those seeking freedom from eating disorders. </p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49335" href="/nyhiphopreport/2013/08/26/new-york-hip-hop-radio-hot-97-and-more-1">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/64d5859e-2365-46ec-bcb9-78518080e7ea_nyhhr-ad-02sq.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Hip-Hop News from New York" />
+                            <span>Hip-Hop News from New York</span>
+                            <p class="show-description">Asking whether New York's hip-hop radio stations do enough to support the development of new artists and their music.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49333" href="/lesersense/2013/08/25/irs-scandal-explosive-new-info">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/a979f1b1-d323-4ed6-a70a-5882b0a3aa68_steve3.jpg" src="/img/bg1.gif" class="staffPickImage" alt="IRS Scandal and Manning Sentencing" />
+                            <span>IRS Scandal and Manning Sentencing</span>
+                            <p class="show-description">Current affairs discussion show, taking a look at the scandal developing with the IRS, plus the recent conviction of Bradley Manning.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49331" href="/chefalexcardinale2013/2013/08/25/lets-talk-brownies">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/images1.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Baking Brownies with Chef Alex" />
+                            <span>Baking Brownies with Chef Alex</span>
+                            <p class="show-description">New tips for baking brownies, including recipes for chocolate chip blondes, red velvet cheesecake brownies, and a peanut butter brownie.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49325" href="/bbqsuperstars/2013/08/24/ibca-panhandle-championship-results">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/hostpics/842a5f09-6272-4515-91f7-1fe8ab92d9e1_555256_535350833155389_1834827976_n.jpg" src="/img/bg1.gif" class="staffPickImage" alt="International Barbecue Championship" />
+                            <span>International Barbecue Championship</span>
+                            <p class="show-description">The latest action from the Texas Tech Red Raider Campus as four teams battle it out for the top prize.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49329" href="/conxroad/2013/08/25/live-on-site-broadcast-from-dream-ride-2013">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/dream-ride-2013-186x186.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Dream Ride 2013" />
+                            <span>Dream Ride 2013</span>
+                            <p class="show-description">Coverage of this year's Dream Ride, attended by over 8000 motorcyclists, including "Cheers" actor John Ratzenburger.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49323" href="/marketingtech/2013/08/24/business-video-tools-rundown">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/countdown_film.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Making Video for Business" />
+                            <span>Making Video for Business</span>
+                            <p class="show-description">Reviewing the best video publishing options for small businesses, including editing software, animation tools, and production systems.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49321" href="/nybaseballtalk/2013/08/26/weekend-watchdog-podcast">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/1jets-vs-giants-helmet-to-helmet.jpg" src="/img/bg1.gif" class="staffPickImage" alt="NFL: Jets vs. Giants Recap" />
+                            <span>NFL: Jets vs. Giants Recap</span>
+                            <p class="show-description">Mike Silva and Steve Keane recap the wild Saturday night preseason game between the Jets and Giants, Rex Ryan's meltdown, and NFL concussions.</p>
+                        </a>
+                    </li>  
+                    <li class="slide">
+                        
+                        <a data-tracker-category="ImageRotatorCaption" data-tracker-action="/business" data-tracker-label="49159" href="/davidrutherfordnavysealspeaker/2013/08/24/seal-team-ops--battle-plan-patience">
+                            <img imageSrc="http://cdn.btrcdn.com/pics/highlights/davidrutherfordnavyseal2.jpg" src="/img/bg1.gif" class="staffPickImage" alt="Battle Plan: Patience" />
+                            <span>Battle Plan: Patience</span>
+                            <p class="show-description">David Rutherford shares the importance of a patient mindset when conducting life's operations, including tips from his training in the Navy SEALs.</p>
+                        </a>
+                    </li>  
+            </ul>
+        </div>
+        <div class="slider-nav-div">
+            <a href="javascript:void(0);" class="prev-link prevSlide">
+                <span class="icon-chevron-left"></span>
+            </a>
+            <a href="javascript:void(0);" class="next-link nextSlide">
+                <span class="icon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="PremiumAd1_ucBanMan_BanManAd" class="banmanad" style="height:60px;min-height:60px;">
+    <div id="PremiumAd1_ucBanMan_divFirstAd" class="banmanad"></div>
+    <iframe id="PremiumAd1_ucBanMan_BanManIframe" scrolling="No" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="0" width="0" height="0"></iframe>
+</div>
+
+<div id="live-chats" class="ad ad-live-chats box-content">
+	<h3><span class="comments-img"></span>Join Host Live Chats</h3>
+	<div class="box-content">
+            <ul class="live-chat-list">
+                    <li><a href="http://www.blogtalkradio.com/cfp-radio/2013/08/28/the-hagmann-hagmann-report" data-tracker-category="ChatBox" data-tracker-action="Hagmann and Hagmann Report-Index:0">Hagmann and Hagmann Report</a> <span>(473 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/runt/2013/08/28/rr-in-august-show" data-tracker-category="ChatBox" data-tracker-action="Rundgren Radio-Index:1">Rundgren Radio</a> <span>(41 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/avoiceformen/2013/08/28/avfm-news-and-activism-mens-rights-edmonton" data-tracker-category="ChatBox" data-tracker-action="AVoiceforMen-Index:2">AVoiceforMen</a> <span>(35 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/newcolony/2013/08/28/patriot-militia-news" data-tracker-category="ChatBox" data-tracker-action="New Colony Network-Index:3">New Colony Network</a> <span>(32 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/theprophetico/2013/08/28/syria-crisis-the-cyprus-buildup-to-attack" data-tracker-category="ChatBox" data-tracker-action="THE PROPHETICO-Index:4">THE PROPHETICO</a> <span>(31 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/nteb/2013/08/28/overcoming-your-besetting-sins" data-tracker-category="ChatBox" data-tracker-action="NTEB-Index:5">NTEB</a> <span>(24 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/knowtheledgeradio/2013/08/28/ktl-radio-presents-the-roundtable" data-tracker-category="ChatBox" data-tracker-action="KNOW THE LEDGE RADIO-Index:6">KNOW THE LEDGE RADIO</a> <span>(23 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/rcr/2013/08/28/rc-radio" data-tracker-category="ChatBox" data-tracker-action="RCRadio-Index:7">RCRadio</a> <span>(19 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/symmetryofsoul/2013/08/28/the-betrayal-begets-default-part-4" data-tracker-category="ChatBox" data-tracker-action="Symmetry of Soul-Index:8">Symmetry of Soul</a> <span>(18 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/journeyintothelight/2013/08/28/return-psychic-medium-roundtable-call-in-readings" data-tracker-category="ChatBox" data-tracker-action="Journey Into Light-Index:9">Journey Into Light</a> <span>(17 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/theconservativewatchtower/2013/08/28/prime-time-rants-3" data-tracker-category="ChatBox" data-tracker-action="dana smearman-Index:10">dana smearman</a> <span>(15 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/easgcradio/2013/08/28/game-changers-radio" data-tracker-category="ChatBox" data-tracker-action="gamechangersradio-Index:11">gamechangersradio</a> <span>(15 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/daxlineradio/2013/08/28/daxline-radio-take-over" data-tracker-category="ChatBox" data-tracker-action="The Daxline Radio Show-Index:12">The Daxline Radio Show</a> <span>(13 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/curious-times/2013/08/28/curious-times--solana-psychic-energy-medium" data-tracker-category="ChatBox" data-tracker-action="Curious Times-Index:13">Curious Times</a> <span>(12 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/theelf/2013/08/28/the-unstoppable-super-show" data-tracker-category="ChatBox" data-tracker-action="BacktoBasicsRadio-Index:14">BacktoBasicsRadio</a> <span>(11 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/minsotagirl/2013/08/28/min-and-the-pontoon-patriots-off-kilter" data-tracker-category="ChatBox" data-tracker-action="Minsotagirl-Index:15">Minsotagirl</a> <span>(11 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/cstc/2013/08/28/the-programme-w-matt-and-ben" data-tracker-category="ChatBox" data-tracker-action="CSTC Podcast Network-Index:16">CSTC Podcast Network</a> <span>(10 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/lovingrelationships/2013/08/28/no-finance-no-romance-love-and-money" data-tracker-category="ChatBox" data-tracker-action="The Black Womans Guide To Love-Index:17">The Black Womans Guide To Love</a> <span>(10 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/positiveperspectives/2013/08/28/positive-perspectives-dance-of-the-electric-hummingbird" data-tracker-category="ChatBox" data-tracker-action="Psychic Melinda-Index:18">Psychic Melinda</a> <span>(9 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/wyms/2013/08/28/50-years-spent-dreaming-measuring-black-progress" data-tracker-category="ChatBox" data-tracker-action="WYMS Radio-Index:19">WYMS Radio</a> <span>(9 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/cajun-wraslin-federation/2013/08/28/from-the-top-rope" data-tracker-category="ChatBox" data-tracker-action="CSWF Cajun Radio Studio 1-Index:20">CSWF Cajun Radio Studio 1</a> <span>(9 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/ordinarywmn/2013/08/28/living-ordinary-extraordinary" data-tracker-category="ChatBox" data-tracker-action="Ordinarywmn-Index:21">Ordinarywmn</a> <span>(9 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/paranormalgeeksradio/2013/08/28/angie-johnson-sharon-day" data-tracker-category="ChatBox" data-tracker-action="Paranormal Geeks Radio-Index:22">Paranormal Geeks Radio</a> <span>(8 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/akamac/2013/08/28/special-guest-to-be-announced" data-tracker-category="ChatBox" data-tracker-action="Music Art and Comedy Show-Index:23">Music Art and Comedy Show</a> <span>(8 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/daniel-michael/2013/08/28/susun-weed-green-magic-green-medicine-power-plants" data-tracker-category="ChatBox" data-tracker-action="Main Street Universe-Index:24">Main Street Universe</a> <span>(8 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/intothenightwithstone/2013/08/28/round-table-special" data-tracker-category="ChatBox" data-tracker-action="Israeli Stone-Index:25">Israeli Stone</a> <span>(8 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/discoveringthetruth/2013/08/28/interview-with-a-former-illumined-one-part-7-the-finale" data-tracker-category="ChatBox" data-tracker-action="Discovering The Truth w Dan Duval-Index:26">Discovering The Truth w Dan Duval</a> <span>(8 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/worldofinknetwork/2013/08/28/a-good-story-is-a-good-story" data-tracker-category="ChatBox" data-tracker-action="WorldOfInkNetwork-Index:27">WorldOfInkNetwork</a> <span>(8 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/apostlerobbiecpeters/2013/08/28/purposeful-living" data-tracker-category="ChatBox" data-tracker-action="Real Empowement Talk Live-Index:28">Real Empowement Talk Live</a> <span>(7 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/mhhs-eyeswideopen/2013/08/28/principals-of-nationality-in-action" data-tracker-category="ChatBox" data-tracker-action="MHHS Eyes Wide Open-Index:29">MHHS Eyes Wide Open</a> <span>(7 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/witchschool/2013/08/28/ptrn-presents-circle-craft-study-and-pagan-priest" data-tracker-category="ChatBox" data-tracker-action="Pagans Tonight Radio-Index:30">Pagans Tonight Radio</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/olivia/2013/08/28/kyle-keller" data-tracker-category="ChatBox" data-tracker-action="Olivia Wilder-Index:31">Olivia Wilder</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/mealtime/2013/08/28/meal-time" data-tracker-category="ChatBox" data-tracker-action="MealTime-Index:32">MealTime</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/lorries-talk-news-radio/2013/08/28/whowhat-is-the-government" data-tracker-category="ChatBox" data-tracker-action="Lorries Talk News Radio-Index:33">Lorries Talk News Radio</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/tiffani3/2013/08/28/ghost-chat-radio-1" data-tracker-category="ChatBox" data-tracker-action="dtm wicked-Index:34">dtm wicked</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/civilalertworld/2013/08/28/civil-alert-rising-every-tues-thurs-930-1130-pm-est" data-tracker-category="ChatBox" data-tracker-action="civilalert-Index:35">civilalert</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/ron-reck/2013/08/28/bankers-wars" data-tracker-category="ChatBox" data-tracker-action="Ron Reck-Index:36">Ron Reck</a> <span>(6 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/prommanowradio/2013/08/28/bluegrassmma-episode-140" data-tracker-category="ChatBox" data-tracker-action="Pro MMA Now Radio-Index:37">Pro MMA Now Radio</a> <span>(5 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/talk2q/2013/08/28/pay-day-moans" data-tracker-category="ChatBox" data-tracker-action="Talk2Q-Index:38">Talk2Q</a> <span>(5 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/walk-in-darkness/2013/08/28/justin-chase-mullins" data-tracker-category="ChatBox" data-tracker-action="Walk in the Darkness-Index:39">Walk in the Darkness</a> <span>(5 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/zaiyahs-house/2013/08/28/dating-a-mom" data-tracker-category="ChatBox" data-tracker-action="Zaiyahs House-Index:40">Zaiyahs House</a> <span>(5 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/growl-radio/2013/08/28/tuesday-night-dotball-827" data-tracker-category="ChatBox" data-tracker-action="Growl Radio-Index:41">Growl Radio</a> <span>(5 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/honeydripradio/2013/08/28/hdr-live" data-tracker-category="ChatBox" data-tracker-action="HONEY DRIP RADIO-Index:42">HONEY DRIP RADIO</a> <span>(5 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/honeysoul/2013/08/28/sexual-flavor-compatibility-and-communication" data-tracker-category="ChatBox" data-tracker-action="HoneySoul-Index:43">HoneySoul</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/hiswordhisway/2013/08/28/his-word-his-way-broadcast" data-tracker-category="ChatBox" data-tracker-action="HisWordHisWay-Index:44">HisWordHisWay</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/nickylove/2013/08/28/are-psychics-seers-diviners-always-accurate" data-tracker-category="ChatBox" data-tracker-action="Love Productions-Index:45">Love Productions</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/ndbmedia/2013/08/28/fandom-access-week-in-review" data-tracker-category="ChatBox" data-tracker-action="NDB Media-Index:46">NDB Media</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/ponytoast/2013/08/28/ter-episode-705-staff-pick" data-tracker-category="ChatBox" data-tracker-action="PonyToast-Index:47">PonyToast</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/angelheartradio/2013/08/28/joy-filled-living" data-tracker-category="ChatBox" data-tracker-action="Angel Heart Radio-Index:48">Angel Heart Radio</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/cdnews/2013/08/28/confederate-corner-with-george-neat" data-tracker-category="ChatBox" data-tracker-action="CDNews Radio-Index:49">CDNews Radio</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/talkteachtestify/2013/08/28/kingdom-word-study-the-hebraic-new-year-5774-on-tishrei-1" data-tracker-category="ChatBox" data-tracker-action="1GodFearingMan EstX1969-Index:50">1GodFearingMan EstX1969</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/aeonline/2013/08/28/beards-on-mma-with-bellators-munah-holland" data-tracker-category="ChatBox" data-tracker-action="AEOnline-Index:51">AEOnline</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/annoyingpeasantradio/2013/08/28/the-stateless-society-recap-and-nik" data-tracker-category="ChatBox" data-tracker-action="The Annoying Peasants-Index:52">The Annoying Peasants</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/thelarryloveshow/2013/08/28/black-communityr-we-lostour-kids" data-tracker-category="ChatBox" data-tracker-action="The Larry Love Show-Index:53">The Larry Love Show</a> <span>(4 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/thematthewbrowershow/2013/08/28/the-matthew-brower-show-with-chris-berardi-1" data-tracker-category="ChatBox" data-tracker-action="The Matthew Brower Show-Index:54">The Matthew Brower Show</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/unscripted/2013/08/28/uncensored-radio" data-tracker-category="ChatBox" data-tracker-action="Uncensored Radio-Index:55">Uncensored Radio</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/xpozeradio/2013/08/28/the-xpoze-radio-show" data-tracker-category="ChatBox" data-tracker-action="Xpoze Radio-Index:56">Xpoze Radio</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/pwpradio/2013/08/28/pwp-radio-49--wrestling-news" data-tracker-category="ChatBox" data-tracker-action="PWP Radio-Index:57">PWP Radio</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/uncompromisingtruth/2013/08/28/the-tithing-heresy-part-12--new-testament-giving" data-tracker-category="ChatBox" data-tracker-action="Bible Truth by Benny-Index:58">Bible Truth by Benny</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/bikersofamerica/2013/08/28/the-bikers-of-america-the-phil-bill-show" data-tracker-category="ChatBox" data-tracker-action="Bikers of America-Index:59">Bikers of America</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/caribbeanradioshow/2013/08/28/aztecaapache-dj-queen-hailing-from-the-rocky-mountains" data-tracker-category="ChatBox" data-tracker-action="Caribbean Radio Show CrsRadio-Index:60">Caribbean Radio Show CrsRadio</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/dial-in-channel-up/2013/08/28/dial-in-channel-up" data-tracker-category="ChatBox" data-tracker-action="Dial In Channel Up-Index:61">Dial In Channel Up</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/gritgraceradio/2013/08/28/war-in-syria-and-technocracy-the-global-smart-grid" data-tracker-category="ChatBox" data-tracker-action="Grit and Grace-Index:62">Grit and Grace</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/edc1/2013/08/28/edit" data-tracker-category="ChatBox" data-tracker-action="Ed Ymiah The Gospel Revealed-Index:63">Ed Ymiah The Gospel Revealed</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/musicwithelijahjamal/2013/08/28/freedom-of-speech-how-far-is-too-far" data-tracker-category="ChatBox" data-tracker-action="Elijah Jamal-Index:64">Elijah Jamal</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/drunkenradio/2013/08/28/tom-and-jerry-radio-show" data-tracker-category="ChatBox" data-tracker-action="Drunken Radio-Index:65">Drunken Radio</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/thatradioshow/2013/08/28/that-radio-show" data-tracker-category="ChatBox" data-tracker-action="Jon Matthews-Index:66">Jon Matthews</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/smokesignals/2013/08/28/smoke-signals" data-tracker-category="ChatBox" data-tracker-action="Indians Baseball Insider-Index:67">Indians Baseball Insider</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/inthepaint/2013/08/28/afc-preview-matt-harvey-injured-lamar-odom-on-drugs" data-tracker-category="ChatBox" data-tracker-action="InThePaint-Index:68">InThePaint</a> <span>(3 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/hellraiser-ent/2013/08/28/hells-home" data-tracker-category="ChatBox" data-tracker-action="HELLRAISER ENT-Index:69">HELLRAISER ENT</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/lancescurv/2013/08/28/dr-vibert-white-phd-on-the-recent-march-on-washington" data-tracker-category="ChatBox" data-tracker-action="Lance Scurv-Index:70">Lance Scurv</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/mutha-wit/2013/08/28/it-is-what-it-ischoices-featuring-william-stokes" data-tracker-category="ChatBox" data-tracker-action="MUTHA WIT WISDOM-Index:71">MUTHA WIT WISDOM</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/garrettmiller/2013/08/28/rated-g-radio" data-tracker-category="ChatBox" data-tracker-action="Garrett Miller Radio-Index:72">Garrett Miller Radio</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/fanvsfanradio/2013/08/28/the-lone-star-state-of-hockey-show" data-tracker-category="ChatBox" data-tracker-action="FanvsFan0-Index:73">FanvsFan0</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/fouracespresents/2013/08/28/nvttriu-master-lock-theatre" data-tracker-category="ChatBox" data-tracker-action="Four Aces Presents-Index:74">Four Aces Presents</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/contending4truthradio/2013/08/28/parental-sovereignty-radio" data-tracker-category="ChatBox" data-tracker-action="Contending 4 Truth Radio-Index:75">Contending 4 Truth Radio</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/stonesoupmovingfeast/2013/08/28/the-cosmic-view-with-shankari-friends-live-from-hawaii" data-tracker-category="ChatBox" data-tracker-action="Stone Soup Moving Feast-Index:76">Stone Soup Moving Feast</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/the-crack-conqueror/2013/08/28/dream-again" data-tracker-category="ChatBox" data-tracker-action="The Crack Conqueror-Index:77">The Crack Conqueror</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/theexchange/2013/08/28/the-exchange--big-men-on-campus" data-tracker-category="ChatBox" data-tracker-action="The Exchange-Index:78">The Exchange</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/wblok/2013/08/28/the-heaven-hollywood-experience" data-tracker-category="ChatBox" data-tracker-action="WBLOK Radio-Index:79">WBLOK Radio</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/theexceptionalconservativeshow/2013/08/28/the-exceptional-conservative-show" data-tracker-category="ChatBox" data-tracker-action="TheExceptionalConservativeShow-Index:80">TheExceptionalConservativeShow</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/truenubia/2013/08/28/hatshepsut-our-children-82713" data-tracker-category="ChatBox" data-tracker-action="True Nubia-Index:81">True Nubia</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/twosidesproductions/2013/08/28/the-skybox" data-tracker-category="ChatBox" data-tracker-action="Two Sides Of The Story Productions-Index:82">Two Sides Of The Story Productions</a> <span>(2 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/urnradionetwork/2013/08/28/terror-fi-radio" data-tracker-category="ChatBox" data-tracker-action="URN Radio Network-Index:83">URN Radio Network</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/wolfcc/2013/08/28/will-the-real-christians-please-stand-up" data-tracker-category="ChatBox" data-tracker-action="Word of Love and Faith-Index:84">Word of Love and Faith</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/hebrewtruth/2013/08/28/niv-exposed" data-tracker-category="ChatBox" data-tracker-action="The Hebrew Truth-Index:85">The Hebrew Truth</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/talk2theanimals/2013/08/28/best-of-t2taradio-adopting-a-cat" data-tracker-category="ChatBox" data-tracker-action="Talk2theAnimals-Index:86">Talk2theAnimals</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/rrradio/2013/08/28/speak-out-america-now-with-peter-j-dawson" data-tracker-category="ChatBox" data-tracker-action="Red River Radio-Index:87">Red River Radio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/romancesexradio/2013/08/28/dating-911-every-tuesday-night-at-7" data-tracker-category="ChatBox" data-tracker-action="Renessa Rios-Index:88">Renessa Rios</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/freedomizerradio/2013/08/28/proof-negative-show-real-patriot-news-" data-tracker-category="ChatBox" data-tracker-action="FreedomizerRadio-Index:89">FreedomizerRadio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/gamergirlsradio/2013/08/28/pixinista" data-tracker-category="ChatBox" data-tracker-action="Gamer Girls Radio-Index:90">Gamer Girls Radio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/drinkfive/2013/08/28/2013-preseason-just-one-more-week" data-tracker-category="ChatBox" data-tracker-action="drinkfive Fantasy Football Podcast-Index:91">drinkfive Fantasy Football Podcast</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/ellengee/2013/08/28/real-talk-with-pinpoint-krack--resume-interview-skills" data-tracker-category="ChatBox" data-tracker-action="Ellen Gee-Index:92">Ellen Gee</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/enough-iz-enough/2013/08/28/news-and-topics" data-tracker-category="ChatBox" data-tracker-action="Enough Iz Enough-Index:93">Enough Iz Enough</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/fantasytrade411radio/2013/08/28/perusing-the-perimeter-2013-bold-predictions" data-tracker-category="ChatBox" data-tracker-action="FantasyTrade411 Radio-Index:94">FantasyTrade411 Radio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/navywiferadio/2013/08/28/sears-heroes-at-home-wish-registry-plus-denise-albert" data-tracker-category="ChatBox" data-tracker-action="Navy Wife Radio-Index:95">Navy Wife Radio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/niacom/2013/08/28/niacom-express-is-on-track-tonight-8pm-cst" data-tracker-category="ChatBox" data-tracker-action="Michael Anthony Johnson-Index:96">Michael Anthony Johnson</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/masterteacher33/2013/08/28/generational-poverty--part-3--the-curse-is-the-cure" data-tracker-category="ChatBox" data-tracker-action="MASTERTEACHER33-Index:97">MASTERTEACHER33</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/tayreal/2013/08/28/orange-is-the-new-black-review" data-tracker-category="ChatBox" data-tracker-action="Its Real Talk Radio-Index:98">Its Real Talk Radio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/thehometeam/2013/08/28/the-hometeam-show-present-we-demand-attention" data-tracker-category="ChatBox" data-tracker-action="HomeTeam-Index:99">HomeTeam</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/igniteinspiredliving/2013/08/28/problem-makeover-on-ignite-inspired-living-with-melanie" data-tracker-category="ChatBox" data-tracker-action="Ignite Inspired Living Radio-Index:100">Ignite Inspired Living Radio</a> <span>(1 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/getliftedradio/2013/08/28/turn-it-up-tuesdays-w-pretty-mac-ill-redd-1" data-tracker-category="ChatBox" data-tracker-action="Get Lifted Radio-Index:101">Get Lifted Radio</a> <span>(0 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/americas-most-haunted/2013/08/28/amh-radio-welcomes-monsters-wanted-director-brian-cunningham" data-tracker-category="ChatBox" data-tracker-action="Americas Most Haunted-Index:102">Americas Most Haunted</a> <span>(0 chatters)</span></li>
+                    <li><a href="http://www.blogtalkradio.com/aacons/2013/08/28/interview-with-james-phillips-and-diana-west" data-tracker-category="ChatBox" data-tracker-action="AACONS-Index:103">AACONS</a> <span>(0 chatters)</span></li>
+            </ul>
+	</div>
+</div><div id="Ad2_OpenXAd" class="banmanad" style="min-height:250px;">
+    <div id="Ad2_divJsAd">
+        
+    </div>
+    <iframe id="Ad2_OpenXIframe" scrolling="No" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="0" width="0" height="0"></iframe>
+</div><div id="seo-topic-pages" class="box-content">
+    <h3>Related Topics</h3>
+    <ul class="unstyled">
+            <li><a href="http://www.blogtalkradio.com/business_economics/business">Business Economics</a></li>
+            <li><a href="http://www.blogtalkradio.com/user_choices_business/business">Business Favorites</a></li>
+            <li><a href="http://www.blogtalkradio.com/business_legal/business">Business Legal</a></li>
+            <li><a href="http://www.blogtalkradio.com/business_top_choices/business">Business Picks</a></li>
+            <li><a href="http://www.blogtalkradio.com/business_strategy/business">Business Strategy </a></li>
+            <li><a href="http://www.blogtalkradio.com/start_up/business">Business-Start-Up</a></li>
+            <li><a href="http://www.blogtalkradio.com/finance_investing/business">Finance and Investing</a></li>
+            <li><a href="http://www.blogtalkradio.com/home_business/business">Home Business</a></li>
+            <li><a href="http://www.blogtalkradio.com/management_leadership/business">Management/ Leadership</a></li>
+            <li><a href="http://www.blogtalkradio.com/marketing/business">Marketing</a></li>
+            <li><a href="http://www.blogtalkradio.com/social_media/business">Social Media and New Marketing</a></li>
+            <li><a href="http://www.blogtalkradio.com/top_markets/business">Top Markets</a></li>
+            <li><a href="http://www.blogtalkradio.com/wealth_management/business">Wealth Management</a></li>
+            <li><a href="http://www.blogtalkradio.com/women_business/business">Women in Business</a></li>
+    </ul>
+</div>
+<div id="social" class="box-content">
+    <h3>Get Social with BTR</h3>
+    <ul class="social-links-list">
+        
+        <li><a href="http://www.facebook.com/blogtalkradio.official?ref=ts" target="_blank" data-tracker-category="SocialLinks-Facebook" data-tracker-action="Icon Click"><span class="facebook-gray-img">Facebook</span></a></li>
+        <li><a href="http://twitter.com/blogtalkradio" target="_blank" data-tracker-category="SocialLinks-Twitter" data-tracker-action="Icon Click"><span class="twitter-gray-img">Twitter</span></a></li>
+        <li><a href="https://plus.google.com/u/0/117841845288490541498" target="_blank" data-tracker-category="SocialLinks-GooglePlus" data-tracker-action="Icon Click"><span class="gplus-gray-img">Google+</span></a></li>
+        <li><a href="http://blog.blogtalkradio.com" target="_blank" data-tracker-category="SocialLinks-Blog" data-tracker-action="Icon Click"><span class="wordpress-gray-img">Wordpress</span></a></li>
+        <li><a href="http://www.youtube.com/user/BlogTalkRadio" target="_blank" data-tracker-category="SocialLinks-Youtube" data-tracker-action="Icon Click"><span class="youtube-gray-img">YouTube</span></a></li>
+        <li><a href="http://www.blogtalkradio.com/faq.aspx" data-tracker-category="SocialLinks-Help" data-tracker-action="Icon Click"><span class="help-gray-img">Help</span></a></li>
+    </ul>
+</div><div id="blog-posts" class="box-content hideIfTrafficDrivingUser">
+    <h3 data-tracker-category="BlogBox" data-tracker-action="VisitBottomBar">From the BTR Blog</h3>
+        <ul>
+                <li>
+                    <span class="arrow"></span>
+                    <a href="http://blog.blogtalkradio.com/blogtalkradio/intel-podcast-macafees-chief-privacy-officer-talks-online-security/" data-tracker-category="BlogBox" data-tracker-action="0">Intel Podcast: MacAfee’s Chief Privacy Officer Talks Online Security</a> <span>    <time datetime="2013-08-26 17:00:48Z" data-duration="" data-time-label="#humanized" data-time-tooltip>8/26/2013 5:00:48 PM</time>
+</span>
+                </li>
+                <li>
+                    <span class="arrow"></span>
+                    <a href="http://blog.blogtalkradio.com/comedy/blogtalkradios-featured-stations-41/" data-tracker-category="BlogBox" data-tracker-action="1">What’s New on BlogTalkRadio’s Featured Stations</a> <span>    <time datetime="2013-08-21 13:00:26Z" data-duration="" data-time-label="#humanized" data-time-tooltip>8/21/2013 1:00:26 PM</time>
+</span>
+                </li>
+                <li>
+                    <span class="arrow"></span>
+                    <a href="http://blog.blogtalkradio.com/host-highlight/start-run-podcasting-network/" data-tracker-category="BlogBox" data-tracker-action="2">How to Start &amp; Run a Podcasting Network</a> <span>    <time datetime="2013-08-06 15:19:44Z" data-duration="" data-time-label="#humanized" data-time-tooltip>8/6/2013 3:19:44 PM</time>
+</span>
+                </li>
+        </ul>
+</div>
+
+                        </div>
+                </div>
+            </div>
+    </div>
+
+
+
+<div id="footer">
+    <div class="footer">
+        <div class="container">
+            <div class="row top-content">
+                <div class="span4">
+                    <a href="javascript:void(0);">
+                        <span class="btr-img img-sprite">Blog Talk Radio</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <p class="footer-message">It's good to talk.</p>
+                    <h2>Follow Us</h2>
+                    <ul class="social-list">
+                        <li><a href="http://www.facebook.com/blogtalkradio.official?ref=ts" target="_blank" data-tracker-category="Footer-Facebook" data-tracker-action="Icon Click"><span class="facebook-img img-sprite">Facebook</span></a></li>
+                        <li><a href="http://twitter.com/blogtalkradio" target="_blank" data-tracker-category="Footer-Twitter" data-tracker-action="Icon Click"><span class="twitter-img img-sprite">Twitter</span></a></li>
+                        <li><a href="https://plus.google.com/u/0/117841845288490541498" target="_blank" data-tracker-category="Footer-GooglePlus" data-tracker-action="Icon Click"><span class="gplus-img img-sprite">Google+</span></a></li>
+                        <li><a href="http://www.youtube.com/user/blogtalkradio" target="_blank" data-tracker-category="Footer-YouTube" data-tracker-action="Icon Click"><span class="youtube-img img-sprite">YouTube</span></a></li>
+                    </ul>
+                </div>
+                <div class="span8">
+                    <div class="sitemap-content row">
+                        <div class="span3">
+                            <h3>Company Info</h3>
+                            <ul>
+                                <li><a href="http://www.blogtalkradio.com/whatis.aspx"  class="hideIfTrafficDrivingUser" title="Free Internet Radio - Social Broadcasting | BlogTalkRadio" data-tracker-category="Footer-Whatis" data-tracker-action="Link Click">What Is BlogTalkRadio?</a></li>
+                                <li><a href="http://www.blogtalkradio.com/about.aspx"  class="hideIfTrafficDrivingUser" title="Free Internet Radio - Social Broadcasting | BlogTalkRadio" data-tracker-category="Footer-AboutUs" data-tracker-action="Link Click">About Us</a></li>
+                                <li><a href="http://www.blogtalkradio.com/press.aspx" title="Web Radio and Podcast Press Releases | BlogTalkRadio" data-tracker-category="Footer-Press" data-tracker-action="Link Click">Press</a></li>
+                                <li><a href="http://cinchcast.com/about/join-the-team/"  class="hideIfTrafficDrivingUser" rel="nofollow" title="Careers" data-tracker-category="Footer-Careers" data-tracker-action="Link Click">Careers</a></li>
+		                        <li class="hideIfTrafficDrivingUser"><a href="http://blog.blogtalkradio.com" target="_blank" data-tracker-category="Footer-Blog" data-tracker-action="Icon Click">Our Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="span3">
+                            <h3>Resources / Support</h3>
+                            <ul>
+                                <li id="footerBecomeHost" class="hideIfTrafficDrivingUser hideIfUserIsAHost"><a href="https://secure.blogtalkradio.com/register.aspx?aid=BEHOF&utm_source=Footer&utm_medium=Link&utm_content=BEHOF&utm_campaign=BEHOF" data-tracker-category="Footer-BecomeHost" data-tracker-action="Link Click">Become a Host</a></li>
+                                <li id="footerGoPremium" class="hideIfTrafficDrivingUser hideIfNotAuthenticated hideIfUserIsNotAHost"><a href="http://hosts.blogtalkradio.com/go-premium/?aid=GoPremF&utm_source=Footer&utm_medium=Link&utm_content=GoPremF&utm_campaign=GoPremF" rel="nofollow" data-tracker-category="Footer-Premium" data-tracker-action="Link Click">View Plans / Upgrade</a></li>
+                                <li><a class="hideIfTrafficDrivingUser" href="http://www.blogtalkradio.com/revshareprogram.aspx"  title="Internet Radio Sitemap | BlogTalkRadio" data-tracker-category="Footer-RevShare" data-tracker-action="Link Click">Revenue Sharing Program</a></li>
+                                <li><a href="http://blogtalkradio.desk.com" data-tracker-category="Footer-Help" data-tracker-action="Link Click">Help &amp; Support</a></li>
+                                <li class="hideIfTrafficDrivingUser"><a href="http://www.blogtalkradio.com/ajax2.aspx?arg=getsatisfactionurl&url=http://getsatisfaction.com/blogtalkradio" target="_blank" data-tracker-category="Footer-GetSatisfaction" data-tracker-action="Link Click">Community Forum</a></li>
+                                <li><a href="http://www.blogtalkradio.com/hostuniversity" data-tracker-category="Footer-BlogTalkRadioUniversity" data-tracker-action="Link Click">BlogTalkRadio University</a></li>
+                                <li><a href="http://www.blogtalkradio.com/contactus.aspx"  rel="nofollow" data-tracker-category="Footer-Contact" data-tracker-action="Link Click">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="span2 hideIfTrafficDrivingUser">
+                            <h3>For Business</h3>
+                            <ul>
+                                <li><a href="http://www.blogtalkradio.com/affiliate" title="Affiliate Program | BlogTalkRadio" data-tracker-category="Footer-Affiliate" data-tracker-action="Link Click">Affiliate Program</a></li>
+                                <li><a href="http://www.blogtalkradio.com/advertising.aspx" rel="nofollow" data-tracker-category="Footer-Advertise" data-tracker-action="Link Click">Advertisers</a></li>
+                                <li><a href="http://www.blogtalkradio.com/transcription.aspx" rel="nofollow" data-tracker-category="Footer-Transcripton" data-tracker-action="Link Click">Transcription Services</a></li>
+                                <li><a href="http://www.cinchcast.com" target="_blank" data-tracker-category="Footer-WhiteLabelSolutions" data-tracker-action="Link Click">White Label Solutions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-content row">
+                <a class="powered-link span2" href="http://www.cinchcast.com" data-tracker-category="Footer-Cinchcast" data-tracker-action="Link Click"><span class="powerby-img img-sprite">Powered by Cinchcast</span></a>
+                <div class="span10">
+                    <ul class="footer-list">
+                        <li>&copy <script type="text/javascript">document.write(new Date().getFullYear());</script> BlogTalkRadio.com. All Rights Reserved.</li>
+                        <li> 
+                            <a href="http://www.blogtalkradio.com/termsofuse.aspx" rel="nofollow" data-tracker-category="Footer-Privacy" data-tracker-action="Link <li<>Click">Privacy Policy</a>
+                            <a href="http://www.blogtalkradio.com/termsofuse.aspx"  class="hideIfTrafficDrivingUser" rel="nofollow" data-tracker-category="Footer-TOS" data-tracker-action="Link Click">Terms of Use</a>
+                            <a href="http://www.blogtalkradio.com/sitemap.aspx"  class="hideIfTrafficDrivingUser" title="Internet Radio Sitemap | BlogTalkRadio" data-tracker-category="Footer-Sitemap" data-tracker-action="Link Click">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="loading">
+    <div class="loading-box">
+        Loading...<br />
+        <img data-src="/Content/images/shared/ajax-loader.gif" src="/img/spacer.gif" class="deferredLoad" alt="Loading..." />
+    </div>
+</div>
+<div id="messageBox" class="modal hide fade">
+    <div class="alert alert-block" style="margin-bottom: 0px">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <span class="label"></span> <span class="message"></span>
+    </div>
+</div>
+<div id="modalUserDelinquent" class="modal hide fade" data-show-if="isDelinquent" data-show-effect="modal" tabindex="-1" role="dialog" aria-labelledby="modalReminderTitle" aria-hidden="true">
+    <div class="modal-header">
+        <h3 id="modalReminderTitle">Reminder...</h3>
+    </div>
+    <div class="modal-body">
+        <p>We were unable to process payment for your premium services.  Please update your billing information so that you can continue using your premium services </p> 
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary"  href="https://secure.blogtalkradio.com/host/premiumbilling.aspx?tab=9">Billing Information </a>
+        <button class="btn btn-close" data-dismiss="modal" aria-hidden="true">close window</button>
+    </div>
+</div>
+
+<div id="modalUserDisabled" class="modal hide fade" data-show-if="isDisabled" data-show-effect="modal" tabindex="-1" role="dialog" aria-labelledby="modalReminderTitle" aria-hidden="true">
+    <div class="modal-header">
+        <h3 id="modalReminderTitle">Sorry to see you go</h3>
+    </div>
+    <div class="modal-body">
+        <p>Your premium service was canceled because we were unable to process payment. </p>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary" href="https://secure.blogtalkradio.com/host/premiumsignup.aspx?resignup=1">Reactivate My Premium Account</a>
+        <button class="btn btn-close" data-dismiss="modal" aria-hidden="true">close window</button>
+    </div>
+</div>
+    
+<script type="text/javascript">(function(){window['globalConstants']={"appRootUrl":"http://www.blogtalkradio.com","userAdminRootUrl":"http://my.blogtalkradio.com","registrationUrl":"https://secure.blogtalkradio.com/register.aspx","studioUrl":"http://sb.blogtalkradio.com/","gigyaApiKey":"2_Rjx2fUtr3F4O28iJQEddgBuGHz26TPRZt5YUQu1Q8xSq_dfQ3tQuJqnwDpj__99w","secureUrl":"https://secure.blogtalkradio.com","enableBundling":true,"playerHost":"http://player.cinchcast.com","playerPlatformId":"1","profilePlayerItemCount":"6","sailthruDomain":"horizon.blogtalkradio.com","defaultCookieDomain":".blogtalkradio.com","hasBtrAccountCookieName":"HasBTRAcct","sailthruCookieName":"sailthru_hid"};})();</script>
+<script type="text/javascript">
+    (function () {
+        var mainBundle = document.createElement('script');
+        // automatically hashed url
+        mainBundle.src = 'http://cdn1.btrstatic.com/scripts/dist/main.cache.2e2fabce.js';
+        mainBundle.setAttribute('async', 'true');
+        var head = document.getElementsByTagName("head")[0] || document.documentElement;
+        head.appendChild(mainBundle);
+    })();
+</script>
+<script type="text/javascript">(function(){var loadPageScripts=function(){
+
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ function OpenXAdAd6_OpenXIframe(){
+var browDateTime = (new Date()).getTime();  var adiFrame = document.getElementById('Ad6_OpenXIframe');  if (adiFrame) {  adiFrame.src='http://ox-d.blogtalkradio.com/w/1.0/afr?auid=259756&c.aid='+ escape(MYBTR.COOKIE.read('_aid'))+'&c.qdsd='+escape(MYBTR.COOKIE.read('DG3'))+'&c.tpt=BZ'+escape(MYBTR.COOKIE.read('BZ'))+'|'+ escape(MYBTR.COOKIE.read('cto_btr'))+'&c.adm='+ escape(MYBTR.COOKIE.read('adm'))+'&cb='+browDateTime; adiFrame.height=90;
+ adiFrame.width=728;
+   }}
+if(typeof(window.require) === 'undefined') { $(window).load(OpenXAdAd6_OpenXIframe) } else { var OpenXAdAd6_OpenXIframeLoader = function(){
+                                if(window.__requireReady){
+                                    require(['jquery'], function($){
+                                        var loaderDelayed = function(){
+                                            $(document).off('modulesReady', loaderDelayed);
+                                            setTimeout(OpenXAdAd6_OpenXIframe, 10);
+                                        }
+                                        if(window.__showElementsIfCompleted){
+                                            loaderDelayed();
+                                        }
+                                        else{
+                                            $(document).on('modulesReady', loaderDelayed);
+                                        }
+                                    });
+                                } else{
+                                    setTimeout(OpenXAdAd6_OpenXIframeLoader, 100);
+                                }
+                            };
+                            OpenXAdAd6_OpenXIframeLoader(); }
+
+ });
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ function OpenXAdAd1_OpenXIframe(){
+var browDateTime = (new Date()).getTime();  var adiFrame = document.getElementById('Ad1_OpenXIframe');  if (adiFrame) {  adiFrame.src='http://ox-d.blogtalkradio.com/w/1.0/afr?auid=265317&c.aid='+ escape(MYBTR.COOKIE.read('_aid'))+'&c.qdsd='+escape(MYBTR.COOKIE.read('DG3'))+'&c.tpt=BZ'+escape(MYBTR.COOKIE.read('BZ'))+'|'+ escape(MYBTR.COOKIE.read('cto_btr'))+'&c.adm='+ escape(MYBTR.COOKIE.read('adm'))+'&cb='+browDateTime; adiFrame.height=250;
+ adiFrame.width=300;
+   }}
+if(typeof(window.require) === 'undefined') { $(window).load(OpenXAdAd1_OpenXIframe) } else { var OpenXAdAd1_OpenXIframeLoader = function(){
+                                if(window.__requireReady){
+                                    require(['jquery'], function($){
+                                        var loaderDelayed = function(){
+                                            $(document).off('modulesReady', loaderDelayed);
+                                            setTimeout(OpenXAdAd1_OpenXIframe, 10);
+                                        }
+                                        if(window.__showElementsIfCompleted){
+                                            loaderDelayed();
+                                        }
+                                        else{
+                                            $(document).on('modulesReady', loaderDelayed);
+                                        }
+                                    });
+                                } else{
+                                    setTimeout(OpenXAdAd1_OpenXIframeLoader, 100);
+                                }
+                            };
+                            OpenXAdAd1_OpenXIframeLoader(); }
+
+ });
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ 
+ });
+
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ if (MYBTR && MYBTR.COOKIE && MYBTR.COOKIE.isAidRestricted() == 1) { $("#PremiumAd1_ucBanMan_BanManIframe").remove(); $("#PremiumAd1_ucBanMan_BanManAd").remove(); }
+ });
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ window.premiumAdConfig = { hostPremium: '748764', hostNoPremium: '741214', listnerNoHost: '732069', listnerNoRegister: '732051'};
+                    window.PremiumAd1_ucBanMan_BanManIframezoneID;
+                    if (User && User.isAuthenticated && (User.hostID > 0 || window.location.href.toLowerCase().indexOf('register.aspx') > -1))
+                        window.PremiumAd1_ucBanMan_BanManIframezoneID = User.hasPremiumPackage ? window.premiumAdConfig.hostPremium : window.premiumAdConfig.hostNoPremium;
+                    else if (User && User.isAuthenticated)
+                        window.PremiumAd1_ucBanMan_BanManIframezoneID = window.premiumAdConfig.listnerNoHost;
+                    else
+                        window.PremiumAd1_ucBanMan_BanManIframezoneID = window.premiumAdConfig.LISTNER_NO_REGISTER;
+ });
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ 
+if (typeof window.PremiumAd1_ucBanMan_BanManIframezoneID == 'undefined') { window.PremiumAd1_ucBanMan_BanManIframezoneID = '732051'; }
+(function () {
+if (typeof window.PremiumAd1_ucBanMan_BanManIframezoneID != 'undefined') {
+function async_loadPremiumAd1_ucBanMan_BanManIframe() {
+addBanManZone ('http://ads.blogtalkradio.com/', window.PremiumAd1_ucBanMan_BanManIframezoneID,'PremiumAd1_ucBanMan_BanManIframe','300','60','','1','','','','','%2fbusiness%7c');}
+
+                        }
+                        
+                        if(typeof(window.require) === 'undefined'){
+                            if (window.attachEvent)
+                                window.attachEvent('onload', async_loadPremiumAd1_ucBanMan_BanManIframe);
+                            else
+                                window.addEventListener('load', async_loadPremiumAd1_ucBanMan_BanManIframe, false);
+                        }
+                        else{
+                            var async_loadPremiumAd1_ucBanMan_BanManIframeLoader = function(){
+                                if(window.__requireReady){
+                                    require(['jquery'], function($){
+                                        var loaderDelayed = function(){
+                                            $(document).off('modulesReady', loaderDelayed);
+                                            setTimeout(async_loadPremiumAd1_ucBanMan_BanManIframe, 10);
+                                        }
+                                        if(window.__showElementsIfCompleted){
+                                            loaderDelayed();
+                                        }
+                                        else{
+                                            $(document).on('modulesReady', loaderDelayed);
+                                        }
+                                    });
+                                } else{
+                                    setTimeout(async_loadPremiumAd1_ucBanMan_BanManIframeLoader, 100);
+                                }
+                            };
+                            async_loadPremiumAd1_ucBanMan_BanManIframeLoader();
+                        }
+                })();
+
+ });
+require(['jquery', 'underscore', 'user', 'mybtr'], function(){ function OpenXAdAd2_OpenXIframe(){
+var browDateTime = (new Date()).getTime();  var adiFrame = document.getElementById('Ad2_OpenXIframe');  if (adiFrame) {  adiFrame.src='http://ox-d.blogtalkradio.com/w/1.0/afr?auid=260141&c.aid='+ escape(MYBTR.COOKIE.read('_aid'))+'&c.qdsd='+escape(MYBTR.COOKIE.read('DG3'))+'&c.tpt=BZ'+escape(MYBTR.COOKIE.read('BZ'))+'|'+ escape(MYBTR.COOKIE.read('cto_btr'))+'&c.adm='+ escape(MYBTR.COOKIE.read('adm'))+'&cb='+browDateTime; adiFrame.height=250;
+ adiFrame.width=300;
+   }}
+if(typeof(window.require) === 'undefined') { $(window).load(OpenXAdAd2_OpenXIframe) } else { var OpenXAdAd2_OpenXIframeLoader = function(){
+                                if(window.__requireReady){
+                                    require(['jquery'], function($){
+                                        var loaderDelayed = function(){
+                                            $(document).off('modulesReady', loaderDelayed);
+                                            setTimeout(OpenXAdAd2_OpenXIframe, 10);
+                                        }
+                                        if(window.__showElementsIfCompleted){
+                                            loaderDelayed();
+                                        }
+                                        else{
+                                            $(document).on('modulesReady', loaderDelayed);
+                                        }
+                                    });
+                                } else{
+                                    setTimeout(OpenXAdAd2_OpenXIframeLoader, 100);
+                                }
+                            };
+                            OpenXAdAd2_OpenXIframeLoader(); }
+
+ });
+
+
+if (typeof window.console !='undefined') { console.log('page scripts loaded'); }
+};
+if (window.__requireReady) { loadPageScripts(); } else { window.__loadPageScripts = loadPageScripts; } })();</script>
+<script data-modules type="application/json">{"view":{"views/episodelist/index":"","views/episodelist/detailedlist":"","views/shared/_layout":"","views/shared/header":"","views/wpo/staffpicks":"","views/shared/footer":""},"behavior":{"reminder":"","datetime":"","iefixes":""}}</script>
+
+
+    
+
+<script>var utag={sender:{},dbi:[],loader:{q:[],l:[],f:{},p:0,o:0,ol:0,wq:[],w:0},view:function(e){this.handler.trigger("view",e)},link:function(e){this.handler.trigger("link",e)},handler:{trigger:function(e,t){utag.loader.q.push({a:e,b:t})},test:function(){return 1}}},_kmq=_kmq||[],_kiq=_kiq||[],pageTracker={_trackEvent:function(e,t,i,n,o){o={ga_eventCat:e,ga_eventAction:t,ga_eventLabel:i,ga_eventValue:n},utag.link(o)}};</script>
+<script type="text/javascript" language="javascript">
+var utag_data = {
+	load_ga:"1",
+	load_performable:"1",
+	category:"Business"
+}
+</script>
+    <script type="text/javascript" language="javascript">
+(function() {
+    if(window.apeend_to_utag_data !== undefined) for (var prop in apeend_to_utag_data) utag_data[prop] = apeend_to_utag_data[prop];
+    function async_utagload(){
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '/includefilesource/utag.loader-hqd1amaJi64wjYAduhSg.js';
+        var x = document.getElementsByTagName('head')[0];
+        x.appendChild(s);
+    }
+    if (window.attachEvent)
+        window.attachEvent('onload', async_utagload);
+    else
+        window.addEventListener('load', async_utagload, false);
+})();
+</script>
+
+
+<script type="text/javascript"> if (!NREUMQ.f) {NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script"); e.type="text/javascript"; e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" + "js-agent.newrelic.com/nr-100.js"; document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","8ee72d222e","2423635","NAYDYxBRCBJSVUNQCw1MJVgWfgMVcFlZTRYMDw1SEB8jEVpFWF0BLwoSQ01jAwJHX1hXMwoXCXQDRAMGXEReXBc=",0,296,new Date().getTime(),"CFED9A8D9B3D1CD8","","","",""]);</script></body>
+</html>

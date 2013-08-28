@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head">
+<!--**********************************************************************************-->
+<!-- DotNetNuke� - http://www.dotnetnuke.com                                          -->
+<!-- Copyright (c) 2002-2010                                                          -->
+<!-- by DotNetNuke Corporation                                                        -->
+<!--**********************************************************************************-->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaDescription" name="DESCRIPTION" content="Public Auctions of state-owned Surplus Property and Automotive Equipment. Receive e-mail notifications of auctions." /><meta id="MetaKeywords" name="KEYWORDS" content="#Programs&amp;Services$SPR^10,DotNetNuke,DNN" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2009 by DotNetNuke Corporation" /><meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " /><meta id="MetaAuthor" name="AUTHOR" content="Office of Fleet and Asset Management" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link id="APortals__default_" rel="stylesheet" type="text/css" href="/Portals/_default/default.css" /><link id="APortals_6_Skins_Division_" rel="stylesheet" type="text/css" href="/Portals/6/Skins/Division/skin.css" /><link id="APortals_6_Containers_Division_" rel="stylesheet" type="text/css" href="/Portals/6/Containers/Division/container.css" /><link id="APortals_6_" rel="stylesheet" type="text/css" href="/Portals/6/portal.css" /><!--[if IE]><link id="AnyIE" rel="stylesheet" type="text/css" href="/DGSAdmin/css/ie.css" /><![endif]--><!--[if lt IE 7]><link id="IEbelow7" rel="stylesheet" type="text/css" href="/DGSAdmin/css/ie_below7.css" /><![endif]--><script type="text/javascript" src="/Resources/Shared/Scripts/jquery/jquery.min.js" ></script><link rel="SHORTCUT ICON" href="/Portals/6/favicon.ico" /><title>
+	Public Auctions
+</title></head>
+<body id="Body">
+    <form name="Form" method="post" action="/ofam/Programs/StSurplus/Auctions.aspx" id="Form" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NDIyOTEzMjkPZBYGZg8WAh4EVGV4dAV5PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRyYW5zaXRpb25hbC5kdGQiPmQCAQ9kFg4CBA8WAh4HVmlzaWJsZWhkAgUPFgIeB2NvbnRlbnQFc1B1YmxpYyBBdWN0aW9ucyBvZiBzdGF0ZS1vd25lZCBTdXJwbHVzIFByb3BlcnR5IGFuZCBBdXRvbW90aXZlIEVxdWlwbWVudC4gUmVjZWl2ZSBlLW1haWwgbm90aWZpY2F0aW9ucyBvZiBhdWN0aW9ucy5kAgYPFgIfAgUoI1Byb2dyYW1zJlNlcnZpY2VzJFNQUl4xMCxEb3ROZXROdWtlLEROTmQCBw8WAh8CBShDb3B5cmlnaHQgMjAwOSBieSBEb3ROZXROdWtlIENvcnBvcmF0aW9uZAIIDxYCHwIFC0RvdE5ldE51a2UgZAIJDxYCHwIFJE9mZmljZSBvZiBGbGVldCBhbmQgQXNzZXQgTWFuYWdlbWVudGQCDA8WAh8CBQ1JTkRFWCwgRk9MTE9XZAICD2QWAgIBD2QWBmYPZBYCZg8WAh8BaBYCZg9kFgJmD2QWBgIDDxBkZBYAZAIPD2QWAmYPDxYGHghJbWFnZVVybAUUL2ltYWdlcy9jb2xsYXBzZS5naWYeDUFsdGVybmF0ZVRleHQFCE1pbmltaXplHgdUb29sVGlwBQhNaW5pbWl6ZWRkAhEPZBYCAgEPZBYCAgEPZBYQAgEPEGRkFgBkAgUPEGRkFgBkAgcPEGRkFgBkAgsPEGRkFgBkAg8PEGRkFgBkAhUPEGRkFgBkAhkPEGRkFgFmZAIdDxBkZBYAZAIFD2QWAmYPZBYGAgIPZBYEZg9kFgJmDw8WAh8ABQhSZWdpc3RlcmRkAgEPZBYCZg8PFgIfAAUFTG9naW5kZAIGD2QWBmYPFgIeBWNsYXNzBStEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS0yNTAzFgICAQ9kFgJmD2QWAgIBDw9kFgIfBgUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQ2QCAQ8WAh8GBTtEbm5Nb2R1bGUgRG5uTW9kdWxlLURHU0FjY29yZGlvbkRHU0FjY29yZGlvbiBEbm5Nb2R1bGUtMzA5NRYCAgEPZBYIAgEPDxYCHwFoZBYEAgEPZBYCZg8QZBAVAQEgFQEBMBQrAwFnFgFmZAIDDw9kFgIeB29uY2xpY2sFcmlmIChjbWRHb19PbkNsaWNrKGRubi5kb20uZ2V0QnlJZCgnZG5uX2N0cjMwOTVfZG5uRFJPUERPV05BQ1RJT05TX2N0bGRubkRST1BET1dOQUNUSU9OUycpKSA9PSBmYWxzZSkgcmV0dXJuIGZhbHNlO2QCAg9kFgICAg8WAh8BaBYGZg8WAh8FBQRFZGl0ZAIBDxYCHwUFBlVwZGF0ZWQCAg8WAh8FBQZDYW5jZWxkAgQPZBYCAgEPD2QWAh8GBS1ETk5Nb2R1bGVDb250ZW50IE1vZERHU0FjY29yZGlvbkRHU0FjY29yZGlvbkMWAgIBD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIDFgpmD2QWAgIBDxYCHwAFggo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQogICAgICAgICAgICAkKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHsNCiAgICAgICAgICAgICAgICAkKCIjREdTQWNjb3JkaW9uMzA5NSIpLmFjY29yZGlvbih7IGNvbGxhcHNpYmxlOiB0cnVlLCBhY3RpdmU6IGZhbHNlIH0pOw0KICAgICAgICAgICAgICAgICQoIiNER1NBY2NvcmRpb24zMDk1IikuYWNjb3JkaW9uKHsgYXV0b0hlaWdodDogZmFsc2UsIG5hdmlnYXRpb246IGZhbHNlIH0pOw0KICAgICAgICAgICAgICAgICQoIiNER1NBY2NvcmRpb24zMDk1IikuYWNjb3JkaW9uKHsgJ2ZpbGxTcGFjZSc6IHRydWUsICdjbGVhclN0eWxlJzogdHJ1ZSB9KTsNCiAgICAgICAgICAgICAgICAkKCcjREdTQWNjb3JkaW9uMzA5NScpLmJpbmQoJ2FjY29yZGlvbmNoYW5nZScsIGZ1bmN0aW9uKGV2ZW50LCB1aSkgew0KICAgICAgICAgICAgICAgICAgICBpZiAodHlwZW9mIHVpLm9sZEhlYWRlciAhPSAidW5kZWZpbmVkIikgew0KICAgICAgICAgICAgICAgICAgICAgICAgaWYgKHVpLm9sZEhlYWRlci5hdHRyKCJpZCIpICE9IG51bGwpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXIgb0ggPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCh1aS5vbGRIZWFkZXIuYXR0cigiaWQiKSk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgb0guY2xhc3NOYW1lID0gb0guY2xhc3NOYW1lLnJlcGxhY2UoJ0FjY29yZGlvbkhlYWRlclNlbGVjdGVkJywgJ0FjY29yZGlvbkhlYWRlcicpDQogICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgaWYgKHR5cGVvZiB1aS5uZXdIZWFkZXIgIT0gInVuZGVmaW5lZCIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIGlmICh1aS5uZXdIZWFkZXIuYXR0cigiaWQiKSAhPSBudWxsKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFyIG5IID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQodWkubmV3SGVhZGVyLmF0dHIoImlkIikpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5ILmNsYXNzTmFtZSA9IG5ILmNsYXNzTmFtZS5yZXBsYWNlKCdBY2NvcmRpb25IZWFkZXInLCAnQWNjb3JkaW9uSGVhZGVyU2VsZWN0ZWQnKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0pOw0KICAgICAgICAgICAgfSk7ICAgIA0KICAgICAgICA8L3NjcmlwdD4NCjxkaXYgaWQ9IkRHU0FjY29yZGlvbjMwOTUiPg0KZAIBD2QWBmYPFQESQWNjb3JkaW9uSGVhZGVyOTk0ZAIBDw8WAh8ABRZPbmxpbmUgUHVibGljIEF1Y3Rpb25zZGQCAw8PFgIfAAWqB09GQU0gaXMgbm93IGhvbGRpbmcgPGEgaHJlZj0iaHR0cDovL3d3dy5wdWJsaWNzdXJwbHVzLmNvbS9zbXMvY2FsaWZvcm5pYSxjYS9saXN0L2N1cnJlbnQ/b3JnaWQ9ODUxMTUiIGNsYXNzPSJpZnJhbWUiIHRpdGxlPSJTdGF0ZSBTdXJwbHVzIE9ubGluZSBQdWJsaWMgQXVjdGlvbiI+b25saW5lIHZlaGljbGUgYXVjdGlvbnM8L2E+IChuZXcgdGFiKSBpbiBhZGRpdGlvbiB0byBvdXIgY3VycmVudCBtb250aGx5IGxpdmUgYXVjdGlvbnMgYXQgdGhlIERhdmlzIHZlaGljbGUgYXVjdGlvbiB5YXJkLiBZb3Ugd2lsbCBiZSByZXF1aXJlZCB0byByZWdpc3RlciBhcyBhbiBvZmZpY2lhbCBiaWRkZXIgb25saW5lLiBUaGVuIHlvdSBtYXkgdmlldyBhbmQgYmlkIG9uIGEgdmFyaWV0eSBvZiB2ZWhpY2xlcyBhbmQgb3RoZXIgc3VycGx1cyBpdGVtcyBmcm9tIHRoZSBjb21mb3J0IG9mIHlvdXIgb3duIGhvbWUuPGJyIC8+PGJyIC8+PHN0cm9uZz5QdWJsaWMgSW5mb3JtYXRpb246PC9zdHJvbmc+IDxhIGhyZWY9Imh0dHA6Ly93d3cucHVibGljc3VycGx1cy5jb20vc21zL2NhbGlmb3JuaWEsY2EvbGlzdC9wYXN0P29yZ2lkPTg1MTE1IiBjbGFzcz0iaWZyYW1lIiB0aXRsZT0iUmVzdWx0cyBvZiBDbG9zZWQgT25saW5lIEF1Y3Rpb25zIj5SZXN1bHRzIG9mIENsb3NlZCBPbmxpbmUgQXVjdGlvbnM8L2E+PGJyIC8+PGJyIC8+UXVlc3Rpb25zIG9yIGNvbmNlcm5zIGFib3V0IHRoZSBPbmxpbmUgQXVjdGlvbnMsIGNvbnRhY3Q6IEpvbiBIaWNrcywgT25saW5lIEF1Y3Rpb24gY29vcmRpbmF0b3IgfCBPZmZpY2U6IDkxNi45MjguNTgxMiB8IEVtYWlsOiA8YSBocmVmPSJtYWlsdG86Sm9uLkhpY2tzQGRncy5jYS5nb3Y/c3ViamVjdD1PbmxpbmUgQXVjdGlvbnMiIHRpdGxlPSJlbWFpbCBKb24uSGlja3NAZGdzLmNhLmdvdiI+Sm9uLkhpY2tzQGRncy5jYS5nb3Y8L2E+ZGQCAg9kFgZmDxUBEkFjY29yZGlvbkhlYWRlcjk5NWQCAQ8PFgIfAAUiU3VycGx1cyBQZXJzb25hbCBQcm9wZXJ0eSBBdWN0aW9uc2RkAgMPDxYCHwAFtwVBcHByb3hpbWF0ZWx5IGV2ZXJ5IHNpeCB3ZWVrcyBhJm5ic3A7PGEgaHJlZj0iaHR0cDovL3d3dy5kZ3MuY2EuZ292L29mYW0vUHJvZ3JhbXMvU3RTdXJwbHVzL0F1Y3Rpb25zL1N1cnBsdXNQcm9wQXVjdGlvbi5hc3B4IiB0aXRsZT0iUHVibGljIFN1cnBsdXMgUHJvcGVydHkgQXVjdGlvbiI+cHVibGljIGF1Y3Rpb248L2E+IGlzIGhlbGQgdG8gZGlzcG9zZSBvZiBzdGF0ZSBzdXJwbHVzIHBlcnNvbmFsIHByb3BlcnR5IGF0IHRoZSBTdXJwbHVzIFByb3BlcnR5IGFuZCBSZXV0aWxpemF0aW9uIChTUCZhbXA7UikgV2FyZWhvdXNlLiBDb21tb24gaXRlbXMgYXZhaWxhYmxlIGFyZSBsYXB0b3BzLCBwcmludGVycywgY2VsbCBwaG9uZXMsIG9mZmljZSBmdXJuaXR1cmUsIGNvbXB1dGVycywgYmlrZXMsIHRvb2xzLCBjYW1lcmFzLCBqZXdlbHJ5IGFuZCBtdWNoIG1vcmUuIDxiciAvPg0KPGJyIC8+DQpUaGUgbmV4dCBTdXJwbHVzIFByb3BlcnR5IEF1Y3Rpb24gaXMgc2NoZWR1bGVkIGZvciA8YSBocmVmPSJodHRwOi8vd3d3LmRncy5jYS5nb3Yvb2ZhbS9Qcm9ncmFtcy9TdFN1cnBsdXMvQXVjdGlvbnMvU3VycGx1c1Byb3BBdWN0aW9uLmFzcHgiIHRpdGxlPSJOZXh0IFN1cnBsdXMgUHJvcGVydHkgQXVjdGlvbiI+PHN0cm9uZz5TYXR1cmRheSwgU2VwdGVtYmVyIDE0LCAyMDEzPC9zdHJvbmc+PC9hPi48YnIgLz4NCjxiciAvPmRkAgMPZBYGZg8VARJBY2NvcmRpb25IZWFkZXI5OTZkAgEPDxYCHwAFJVN1cnBsdXMgQXV0b21vdGl2ZSBFcXVpcG1lbnQgQXVjdGlvbnNkZAIDDw8WAh8ABcAFT24gdGhlIHNlY29uZCBXZWRuZXNkYXkgb2YgZXZlcnkgbW9udGggYSZuYnNwOzxhIGhyZWY9Imh0dHA6Ly93d3cuZGdzLmNhLmdvdi9vZmFtL1Byb2dyYW1zL1N0U3VycGx1cy9BdWN0aW9ucy9BdXRvQXVjdGlvbi5hc3B4IiB0aXRsZT0iUHVibGljIFN1cnBsdXMgQXV0b21vdGl2ZSBBdWN0aW9ucyI+cHVibGljIGF1Y3Rpb248L2E+IGlzIGhlbGQgdG8gZGlzcG9zZSBvZiBzdGF0ZSBzdXJwbHVzIHZlaGljbGVzIGFuZCBtb2JpbGUgZXF1aXBtZW50IGF0IG91ciBEYXZpcyBBdWN0aW9uIFlhcmQuIElmIHlvdSBhcmUgaW4gdGhlIG1hcmtldCBmb3IgYSBjYXIsIHRydWNrLCBTVVYsIHZhbiwgYWx0ZXJuYXRpdmUgZnVlbCB2ZWhpY2xlLCBib2F0LCB0cmFpbGVyLCBnb2xmIGNhcnQgb3IgY29uc3RydWN0aW9uIGVxdWlwbWVudCB0aGVuIGxvb2sgbm8gZnVydGhlci4gPGJyIC8+DQo8YnIgLz4NClRoZSBuZXh0IFN1cnBsdXMgQXV0b21vdGl2ZSBFcXVpcG1lbnQgQXVjdGlvbiBpcyZuYnNwO3RlbnRhdGl2ZWx5IHNjaGVkdWxlZCZuYnNwO2ZvciA8YSBocmVmPSJodHRwOi8vd3d3LmRncy5jYS5nb3Yvb2ZhbS9Qcm9ncmFtcy9TdFN1cnBsdXMvQXVjdGlvbnMvQXV0b0F1Y3Rpb24uYXNweCIgdGl0bGU9IkF1dG9tb3RpdmUgQXVjdGlvbiBJbmZvIj48c3Ryb25nPldlZG5lc2RheSwgT2N0b2JlciA5LCAyMDEzPC9zdHJvbmc+PC9hPi48YnIgLz5kZAIED2QWAgIBDxYCHwAFBjwvZGl2PmQCBg9kFgJmDw8WAh8BaGRkAgIPFgIfBgUrRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtMzA5NhYCAgEPZBYIAgEPDxYCHwFoZBYEAgEPZBYCZg8QZBAVAQEgFQEBMBQrAwFnFgFmZAIDDw9kFgIfBwVyaWYgKGNtZEdvX09uQ2xpY2soZG5uLmRvbS5nZXRCeUlkKCdkbm5fY3RyMzA5Nl9kbm5EUk9QRE9XTkFDVElPTlNfY3RsZG5uRFJPUERPV05BQ1RJT05TJykpID09IGZhbHNlKSByZXR1cm4gZmFsc2U7ZAICD2QWAgICDxYCHwFoFgZmDxYCHwUFBEVkaXRkAgEPFgIfBQUGVXBkYXRlZAICDxYCHwUFBkNhbmNlbGQCBA9kFgICAQ8PZBYCHwYFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAgYPZBYCZg8PFgIfAWhkZAIHD2QWBGYPFgIfBgUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fWE1MIERubk1vZHVsZS0xMDYwFgICAQ9kFggCAQ8PFgIfAWhkFgQCAQ9kFgJmDxBkEBUBASAVAQEwFCsDAWcWAWZkAgMPD2QWAh8HBXJpZiAoY21kR29fT25DbGljayhkbm4uZG9tLmdldEJ5SWQoJ2Rubl9jdHIxMDYwX2RubkRST1BET1dOQUNUSU9OU19jdGxkbm5EUk9QRE9XTkFDVElPTlMnKSkgPT0gZmFsc2UpIHJldHVybiBmYWxzZTtkAgMPZBYCAgIPFgIfAWgWBmYPFgIfBQUERWRpdGQCAQ8WAh8FBQZVcGRhdGVkAgIPFgIfBQUGQ2FuY2VsZAIFD2QWAgIBDw9kFgIfBgUbRE5OTW9kdWxlQ29udGVudCBNb2RETk5YTUxDZAIHD2QWAmYPDxYCHwFoZGQCAQ8WAh8GBSpEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS01NDIWAgIBD2QWCAIBDw8WAh8BaGQWBAIBD2QWAmYPEGQQFQEBIBUBATAUKwMBZxYBZmQCAw8PZBYCHwcFcWlmIChjbWRHb19PbkNsaWNrKGRubi5kb20uZ2V0QnlJZCgnZG5uX2N0cjU0Ml9kbm5EUk9QRE9XTkFDVElPTlNfY3RsZG5uRFJPUERPV05BQ1RJT05TJykpID09IGZhbHNlKSByZXR1cm4gZmFsc2U7ZAIDD2QWAgICDxYCHwFoFgZmDxYCHwUFBEVkaXRkAgEPFgIfBQUGVXBkYXRlZAICDxYCHwUFBkNhbmNlbGQCBQ9kFgICAQ8PZBYCHwYFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAgcPZBYCZg8PFgIfAWhkZAILDxQrAAIUKwADZGRkZGRk/mCXN48rg2i1cWm27r6tVsPzdj4=" />
+</div>
+
+
+<script src="/js/dnncore.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=qefuQHyVTIYR50iqSzPtxRDAGYsqIgOpsYwu2YoAVypww0M9O8E2D0BxWlv4I5C_wfNLiGSPnBFH1XjXMcEX9Hg9r80oagwm95ch3myw3cUDRrOhoaGBVGkfz6jEdHeKRqfSgBmDp5pNPqlwYushhzCtvmuVrLw7ooKIYA2&amp;t=ffffffff85c2fd3f" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBALh86rOCgLR+OfABwL+5PGyAgLR9YnYDm1WyBYpp3KI5eeW23e/yjhRKuKe" />
+</div>
+
+        
+        
+
+<!-- version 2.0 of generic division skin with vertical tabs -->
+
+<!-- script for OTech Google search engine -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/Portals/6/Skins/Division/ssincludes/googleSearchSpecific.js"></script>
+<script type="text/javascript" src="/DGSAdmin/Search/googleSearch.js"></script>
+
+<link href="/DGSAdmin/css/v_tabs.css" rel="stylesheet" type="text/css" />
+
+<!-- scripts moved from the head -->
+
+<script src="/DGSAdmin/javascript/AC_ActiveX.js" type="text/javascript"></script>
+<script src="/DGSAdmin/javascript/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="/DGSAdmin/javascript/jquery.tools.min.js"></script>
+<script type="text/javascript" src="/DGSAdmin/javascript/jquery.scrollTo-min.js"></script>
+<script type="text/javascript" src="/DGSAdmin/javascript/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/DGSAdmin/javascript/init.js"></script>
+<script type="text/javascript" src="/DGSAdmin/javascript/easySlider1.7.js"></script>
+<script type="text/javascript" src="/DGSAdmin/javascript/jquery.slideshow.lite-0.5.3.js"></script>
+
+<script type="text/javascript" src="/DGSAdmin/javascript/Jscript1.js"></script>
+<!-- Color Box -->
+<script type="text/javascript" src="/DGSAdmin/javascript/Jscript2.js"></script>
+
+<!-- DNN control replaces conditional comment loading additional stylesheet -->
+
+
+
+
+<!-- but that below remains since it loads a javascript -->
+
+<!--[if lt IE 7]>
+    <script type="text/javascript"  src="/DGSAdmin/javascript/ds-sleight.js" ></script>
+<![endif]-->
+
+<!-- MAIN WRAPPER -->
+
+<div id="wrapper">
+    <div id="top">
+
+<!-- HEADER -->
+
+
+
+<!-- this user control is common to ALL sites except the DGS main site -->
+
+		<script src="/DGSAdmin/javascript/printerFriendly.js" type="text/javascript"></script>
+
+        <div id="header">
+
+            <div id="logos_container">
+                <a href="http://www.ca.gov/"><img src="/DGSAdmin/images/header_ca_gov.jpg" alt="CA.gov Logo" width="121" height="91" /></a>
+                <a href="/dgs/"><img src="/DGSAdmin/images/header_dgs_logo.jpg" alt="DGS_logo" width="350" height="91" /></a>
+            </div>
+
+<!-- SKIP TO & SEARCH -->
+
+            <div id="skipto_search_container">
+                <div id="search_container">
+                    <fieldset>
+                        <label for="search" class="hideMe">
+                            enter search keywords
+                        </label>                            
+                        <input type="text" id="search" name="q" size="20" maxlength="32" value="Search" onfocus="if(this.value=='Search')this.value=''" onblur="if(this.value=='')this.value='Search'" onkeydown="if (event.keyCode == 13) getGoogleSearch();" />&nbsp;
+						<input type="hidden" name="dummyField"  />
+                        <img id="searchButton" onclick="javascript:getGoogleSearch()" onkeydown="if (event.keyCode == 13) getGoogleSearch();" alt="Search"  src="/DGSAdmin/images/header_search_button_grey.png" />
+                    </fieldset>
+                    <span class="clear"></span>
+                </div>
+                <div id="skipto">
+                    Skip to: <a onclick="javascript:$.scrollTo( '#main_center', 1000 );" title="Skip to Content">Content</a> | <a onclick="javascript:$.scrollTo( '#footer', 1000 );" title="Skip to Footer">Footer</a> | <a class='iframe_accessibility' href="/accessibility.html">Accessibility</a>
+				
+				</div>
+            </div>
+
+<!-- HEADER ADVERTISMENTS -->
+
+            
+			
+			<span class="clear"></span>
+			
+
+<!-- NAVIGATION -->
+
+            <div id="main_nav">
+                <ul class="division">
+                    <li><a href="/dgs/Home.aspx" title="DGS Homepage">Home</a></li>
+                    <li><a href="/dgs/ProgramsServices.aspx" title="DGS Programs and Services">Programs&nbsp;&amp;&nbsp;Services</a></li>
+                    <li><a href="/dgs/Newsroom.aspx" title="DGS Press Releases and Media Materials">Newsroom</a></li>
+                    <li><a href="/dgs/Careers.aspx" title="Careers at DGS">Careers</a></li>
+                    <li><a href="/dgs/About.aspx" title="About DGS">About</a></li>
+                </ul>
+                <span class="clear"></span>
+            </div>
+
+<!-- END NAVIGATION -->
+
+        </div>
+
+
+
+<!-- END HEADER-->
+
+    </div>
+  
+<!-- END top -->
+
+<!-- DIVISION BANNER -->
+
+    
+
+<!-- DIVISION BANNER -->
+
+<div id="banner" class="ofa">
+    <div id="banner_ofa">
+        <div id="banner_content" class="ofa">
+            <img src="/DGSAdmin/images/division_banner_logo_ofam.jpg" alt="Office of Fleet and Asset Management Logo" /> 
+        </div>
+    </div>
+</div>
+
+<!-- END DIVISION BANNER -->
+
+
+
+
+<!-- END DIVISION BANNER -->
+
+<!-- MAIN -->
+
+    <div id="main_container">
+        <div id="main_container_content_wrapper">
+            <div id="main_container_content_wrapper_inner">
+                <div id="main_container_content">
+
+<!-- LEFT COLUMN -->
+
+                    <div id="main_left_nav">
+                        <div id="main_left_nav_blue">
+
+                            
+
+
+<!-- DIVISION LeftNav -->
+  <ul class="red">
+                <li><a href="/ofam/Home.aspx" title="OFAM Homepage">OFAM Home</a> </li>
+                <li><a href="/ofam/Programs.aspx" title="OFAM Programs and Services">Programs &amp; Services</a> </li>
+                <li><a href="/ofam/Forms.aspx" title="OFAM Forms">Forms</a> </li>
+                <li><a href="/ofam/Resources.aspx" title="OFAM Resources">Resources</a> </li>
+                <li><a href="/ofam/NewsEvents.aspx" title="OFAM News and Events">News &amp; Events</a> </li>
+                <li><a href="/ofam/AboutUs.aspx" title="OFAM About Us">About Us</a> </li>
+            </ul> 
+  <!-- END DIVISION LeftNav -->
+
+
+
+             
+                        </div>   
+
+                    </div>
+
+<!-- END LEFT COLUMN -->
+
+<!-- CENTER COLUMN -->
+
+                    <div id="center_wrapper">
+                        <div id="main_center">
+							<div id="crumbyBox">
+                                <span id="dnn_dnnBreadCrumb_lblBreadCrumb"><a href="http://www.dgs.ca.gov/ofam/Programs.aspx" class="SkinObject">Programs & Services</a> » <a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus.aspx" class="SkinObject">Surplus Property & Reutilization</a> » <a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions.aspx" class="SkinObject">Public Auctions</a></span>
+
+                            </div>
+                            <div id="dnn_ContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-2503"><a name="2503"></a><div id="dnn_ctr2503_ContentPane"><!-- Start_Module_2503 --><div id="dnn_ctr2503_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr2503_HtmlModule_lblContent" class="Normal">
+	The Office of Fleet and Asset Management (OFAM) currently provides three types of public auction services to dispose of state vehicles, mobile equipment and surplus property: online, vehicle and surplus property.<br />
+<br />
+<a href="http://www.arb.ca.gov/msprog/publicfleets/retirement.htm ">Fleet Rule for Public Agencies &amp; Utilities - Vehicle Retirement<br />
+</a>
+<h2>Receive E-mail Notifications of Public Auctions </h2>
+To receive e-mail notification of upcoming <strong>Surplus Personal Property auctions</strong>, <a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions/SurplusPropAuction/Subscribe.aspx" title="Go to Auction Subscription Info Webpage"><span style="color: #ff0000;"><strong>subscribe your e-mail address</strong></span></a> to the Surplus Property Auction page.<br />
+<br />
+To receive e-mail notification of upcoming <strong>Suplus Automotive Equipment auctions</strong>, <a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions/AutoAuction/Subscribe.aspx" title="Go to Auction Subscription Info Webpage"><span style="color: #ff0000;"><strong>subscribe your e-mail address</strong></span></a> to the Surplus Automotive Auction page.<br />
+<br />
+</div>
+
+</div><!-- End_Module_2503 --></div>
+</div><div class="DnnModule DnnModule-DGSAccordionDGSAccordion DnnModule-3095"><a name="3095"></a>
+<div class="content_title_plain"><span id="dnn_ctr3095_dnnTITLE_lblTitle" class="Head">OFAM offers three types of public auctions</span>
+
+
+</div><br/>
+<div id="dnn_ctr3095_contentpane" class="content_plain"><!-- Start_Module_3095 --><div id="dnn_ctr3095_ModuleContent" class="DNNModuleContent ModDGSAccordionDGSAccordionC">
+	
+<script type="text/javascript" src="/DGSAdmin/javascript/jQuery170.js"></script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#DGSAccordion3095").accordion({ collapsible: true, active: false });
+                $("#DGSAccordion3095").accordion({ autoHeight: false, navigation: false });
+                $("#DGSAccordion3095").accordion({ 'fillSpace': true, 'clearStyle': true });
+                $('#DGSAccordion3095').bind('accordionchange', function(event, ui) {
+                    if (typeof ui.oldHeader != "undefined") {
+                        if (ui.oldHeader.attr("id") != null) {
+                            var oH = document.getElementById(ui.oldHeader.attr("id"));
+                            oH.className = oH.className.replace('AccordionHeaderSelected', 'AccordionHeader')
+                        }
+                    }
+                    if (typeof ui.newHeader != "undefined") {
+                        if (ui.newHeader.attr("id") != null) {
+                            var nH = document.getElementById(ui.newHeader.attr("id"));
+                            nH.className = nH.className.replace('AccordionHeader', 'AccordionHeaderSelected');
+                        }
+                    }
+                });
+            });    
+        </script>
+<div id="DGSAccordion3095">
+        
+    
+        <div id='AccordionHeader994' class="AccordionHeader">
+            <div class="AccordionPaneTitle">
+                <table class="AccordionPanelTitleInnerTable">
+                    <tr>
+                        <td style="vertical-align:middle;">
+                            <span id="dnn_ctr3095_View_AccordionRepeater_ctl01_Label1">Online Public Auctions</span>
+                        </td>
+                    </tr>
+                </table>                
+            </div>
+        </div>
+        <div class="AccordionHTMLContent">
+            <!--Static HTML For the Accordion Pane (i.e. an image) -->
+            <span id="dnn_ctr3095_View_AccordionRepeater_ctl01_Label2">OFAM is now holding <a href="http://www.publicsurplus.com/sms/california,ca/list/current?orgid=85115" class="iframe" title="State Surplus Online Public Auction">online vehicle auctions</a> (new tab) in addition to our current monthly live auctions at the Davis vehicle auction yard. You will be required to register as an official bidder online. Then you may view and bid on a variety of vehicles and other surplus items from the comfort of your own home.<br /><br /><strong>Public Information:</strong> <a href="http://www.publicsurplus.com/sms/california,ca/list/past?orgid=85115" class="iframe" title="Results of Closed Online Auctions">Results of Closed Online Auctions</a><br /><br />Questions or concerns about the Online Auctions, contact: Jon Hicks, Online Auction coordinator | Office: 916.928.5812 | Email: <a href="mailto:Jon.Hicks@dgs.ca.gov?subject=Online Auctions" title="email Jon.Hicks@dgs.ca.gov">Jon.Hicks@dgs.ca.gov</a></span>
+            <!--End of Static HTML For the Accordion Pane -->
+        </div>
+    
+        <div id='AccordionHeader995' class="AccordionHeader">
+            <div class="AccordionPaneTitle">
+                <table class="AccordionPanelTitleInnerTable">
+                    <tr>
+                        <td style="vertical-align:middle;">
+                            <span id="dnn_ctr3095_View_AccordionRepeater_ctl02_Label1">Surplus Personal Property Auctions</span>
+                        </td>
+                    </tr>
+                </table>                
+            </div>
+        </div>
+        <div class="AccordionHTMLContent">
+            <!--Static HTML For the Accordion Pane (i.e. an image) -->
+            <span id="dnn_ctr3095_View_AccordionRepeater_ctl02_Label2">Approximately every six weeks a&nbsp;<a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions/SurplusPropAuction.aspx" title="Public Surplus Property Auction">public auction</a> is held to dispose of state surplus personal property at the Surplus Property and Reutilization (SP&amp;R) Warehouse. Common items available are laptops, printers, cell phones, office furniture, computers, bikes, tools, cameras, jewelry and much more. <br />
+<br />
+The next Surplus Property Auction is scheduled for <a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions/SurplusPropAuction.aspx" title="Next Surplus Property Auction"><strong>Saturday, September 14, 2013</strong></a>.<br />
+<br /></span>
+            <!--End of Static HTML For the Accordion Pane -->
+        </div>
+    
+        <div id='AccordionHeader996' class="AccordionHeader">
+            <div class="AccordionPaneTitle">
+                <table class="AccordionPanelTitleInnerTable">
+                    <tr>
+                        <td style="vertical-align:middle;">
+                            <span id="dnn_ctr3095_View_AccordionRepeater_ctl03_Label1">Surplus Automotive Equipment Auctions</span>
+                        </td>
+                    </tr>
+                </table>                
+            </div>
+        </div>
+        <div class="AccordionHTMLContent">
+            <!--Static HTML For the Accordion Pane (i.e. an image) -->
+            <span id="dnn_ctr3095_View_AccordionRepeater_ctl03_Label2">On the second Wednesday of every month a&nbsp;<a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions/AutoAuction.aspx" title="Public Surplus Automotive Auctions">public auction</a> is held to dispose of state surplus vehicles and mobile equipment at our Davis Auction Yard. If you are in the market for a car, truck, SUV, van, alternative fuel vehicle, boat, trailer, golf cart or construction equipment then look no further. <br />
+<br />
+The next Surplus Automotive Equipment Auction is&nbsp;tentatively scheduled&nbsp;for <a href="http://www.dgs.ca.gov/ofam/Programs/StSurplus/Auctions/AutoAuction.aspx" title="Automotive Auction Info"><strong>Wednesday, October 9, 2013</strong></a>.<br /></span>
+            <!--End of Static HTML For the Accordion Pane -->
+        </div>
+    
+        </div>
+    
+<!--<div style="text-align:right; font-size:10px;">
+    <a id="dnn_ctr3095_View_PrintViewLinkButton" href="javascript:__doPostBack('dnn$ctr3095$View$PrintViewLinkButton','')">Print View</a>
+</div>-->
+</div><!-- End_Module_3095 --></div>
+<div></div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-3096"><a name="3096"></a>
+<div class="content_title_plain"><span id="dnn_ctr3096_dnnTITLE_lblTitle" class="Head">Delivery and Contact Information</span>
+
+
+</div><br/>
+<div id="dnn_ctr3096_contentpane" class="content_plain"><!-- Start_Module_3096 --><div id="dnn_ctr3096_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr3096_HtmlModule_lblContent" class="Normal">
+	<h2>Deliveries to SP&amp;R Warehouse and Davis Auction Yard</h2>
+State agencies and transporters disposing of state vehicles, equipment, and surplus property <strong>must</strong> call ahead to coordinate deliveries with staff for any state work day <strong>except</strong> the day of the auctions. <br />
+<br />
+<strong>SP&amp;R Warehouse</strong> | 1700 National Drive, Sacramento, CA 95834 | <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1700+National+Dr,+Sacramento,+CA+95834&amp;sll=37.0625,-95.677068&amp;sspn=51.310143,78.837891&amp;ie=UTF8&amp;hq=&amp;hnear=1700+National+Dr,+Sacramento,+California+95834&amp;z=16" title="driving directions">driving directions</a> | All deliveries to be made at the Transit Storage entrance at the back of the SP&amp;R Warehouse. To schedule delivery, contact: Warren Horsley | Office: 916.928.5839 | Fax: 916.928.5840 | Email: <a href="mailto:Warren.Horsley@dgs.ca.gov?subject=Schedule Surplus Property Delivery" title="email Warren Horsley">Warren.Horsley@dgs.ca.gov</a><br />
+<br />
+<strong>Davis Auction Yard</strong> | 5950 Chiles Road, Davis, CA 95618 | Located behind the CalFire Equipment Facility | <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=5950+Chiles+Road,+Davis,+CA+95618&amp;sll=38.554372,-121.679732&amp;sspn=0.012485,0.019248&amp;ie=UTF8&amp;hq=&amp;hnear=5950+Chiles+Rd,+Davis,+Yolo,+California+95618&amp;z=16&amp;iwloc=r1" title="Vehicle Auction Lot">driving directions</a> | To schedule delivery, contact: Bob Turk | Office: 530.757.6832 | Fax: 530.757.1064 | Email: <a href="mailto:Bob.Turk@dgs.ca.gov?subject= Schedule Surplus Vehicle Delivery " title="email Bob Turk">Bob.Turk@dgs.ca.gov </a><br />
+</div>
+
+</div><!-- End_Module_3096 --></div>
+<div></div>
+</div></div>
+							<script type="text/javascript" src="/DGSAdmin/javascript/Jscript3.js"></script>
+                        </div>
+                    </div>      
+
+<!-- END CENTER COLUMN -->
+
+<!-- RIGHT COLUMN -->
+
+                    <div id="main_right_nav">
+          	            <div id="dnn_RightPane"><div class="DnnModule DnnModule-DNN_XML DnnModule-1060"><a name="1060"></a>
+<div class="content_title_rightBox">
+
+<span id="dnn_ctr1060_dnnTITLE_lblTitle" class="Head">What's New</span>
+
+
+</div>
+<br/>
+<div id="box_wrapper"><div id="box">
+<div id="dnn_ctr1060_contentpane" class="content_rightBox"><!-- Start_Module_1060 --><div id="dnn_ctr1060_ModuleContent" class="DNNModuleContent ModDNNXMLC">
+	<span class="normal"><ul>
+  <li><a href="/ofam/NewsEvents.aspx#826">Surplus Property Warehouse closed 7/8-7/26/2013 ...</a><br></li>
+  <li><a href="/ofam/NewsEvents.aspx#842">2013 ZEV Action Plan ...</a><br></li>
+  <li><a href="/ofam/NewsEvents.aspx#387">*New* Public Auction Schedules ...</a><br></li>
+  <li><a href="/ofam/NewsEvents.aspx#767">MM 12-08, 13-01, 13-02, 13-03, 13-04: Recent Fleet ...</a><br></li>
+  <li><a href="/ofam/NewsEvents.aspx#717">EO B-16-12 Implementation Plan ...</a><br></li>
+  <li><a href="/ofam/NewsEvents.aspx#688">AB 236 2012 Petroleum Reduction Status Report ...</a><br></li>
+</ul>
+<p style="margin-top: 8px;"><a href="/ofam/NewsEvents.aspx" class="readMoreAcc">View All</a></p></span>
+</div><!-- End_Module_1060 --></div>
+<div></div>
+</div></div><span class="clear" ></span>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-542"><a name="542"></a>
+<div class="content_title_rightBox">
+
+<span id="dnn_ctr542_dnnTITLE_lblTitle" class="Head">OFAM Quick Links</span>
+
+
+</div>
+<br/>
+<div id="box_wrapper"><div id="box">
+<div id="dnn_ctr542_contentpane" class="content_rightBox"><!-- Start_Module_542 --><div id="dnn_ctr542_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr542_HtmlModule_lblContent" class="Normal">
+	<ul><a href="/ofam/Programs/FARS/ZEV.aspx" title="2013 ZEV Action Plan" originalPath="http://www.dgs.ca.gov/ofam/Programs/FARS/ZEV.aspx" originalAttribute="href">
+    <li>EO B-16-12 Implementation Plan</li>
+    </a>
+    <li><a href="/ofam/Programs/CallCenter.aspx" title="Visit the Call Center's Webpage" target="_self">Fleet Services Call Center</a> </li>
+    <li><a href="/ofam/Programs/StSurplus/Auctions.aspx" title="Go to Subscription Info Webpage"><span style="color: #ff0000;">Subscribe to the Public Auction e-mail notification system</span></a> </li>
+    <li><a href="/ofam/Programs/StSurplus/forschools.aspx" title="Surplus Property for Schools">Surplus Property for Schools</a> </li>
+    <li><a href="/ofam/Resources/Publications/Reports.aspx" title="EO S-14-09 15% Vehicle Reduction Final Report - July 2010">2009/10 Fleet Reduction Final Report</a> </li>
+    <li><a href="/ofam/Programs/FARS/VendorPrgm/VendorApp.aspx" title="Find Repair Vendors near you">Approved Auto Repair Vendor Query</a> </li>
+    <li><a href="/default.aspx?tabid=1208#Road" title="What to do when you have a Roadside Emergency">Emergency Roadside Assistance</a> </li>
+    <li><a href="/ofam/Programs/FleetReduction.aspx" title="Fleet Reduction Plan">EO B-2-11 Fleet Reduction Plan</a> </li>
+    <li><a href="/ofam/Resources/PetrolReduc.aspx" title="Petroleum Reduction">Petroleum Reduction Plan</a> </li>
+    <li><a href="/ofam/Home/PublicInfo.aspx" title="Programs and Services for the General Public">Programs &amp; Services for the General Public</a> </li>
+    <li><a href="/ofam/Programs/FleetOps/Mileage.aspx" title="Log on to submit your Monthly Mileage">Report your Mileage Log information</a> </li>
+    <li><a href="/ofam/Programs/FleetOps/VehicleLease/VehicleResv.aspx" title="Lease a Sedan from the Sacramento State Garage online">Reserve a State Vehicle</a> </li>
+    <li><a href="/ofam/Resources.aspx" title="State Fleet Handbook">State Fleet Handbook</a> </li>
+    <li><a href="/ofam/Programs/StSurplus/Reutilization/CSPS.aspx" title="Log into the CA Surplus Property System">Submit your Surplus Property Information (STD 152 &amp; 158)</a> </li>
+    <li><a href="/ofam/Programs/Parking/TransitVouchers.aspx" title="Order Transit Vouchers Online">Transit Voucher Program</a> </li>
+    <li><a href="/default.aspx?tabid=1358#Accident" title="What to do when you have a vehicle accident">Vehicle Accident Reporting procedures &amp; requirements</a> </li>
+    <li><a href="/default.aspx?tabid=1208#voyager" title="Voyager Fuel Card Services">Voyager Fuel Card Services</a> </li>
+</ul>
+</div>
+
+</div><!-- End_Module_542 --></div>
+<div></div>
+</div></div><span class="clear" ></span>
+</div></div>
+                    </div>
+        
+<!-- END RIGHT COLUMN -->
+        
+                </div>
+<!-- Close Main Container Content -->
+
+            </div>
+<!-- Close Main Container Content Wrapper_inner-->
+
+        </div>
+<!-- Close Main Container Content Wrapper-->
+
+    </div>
+<!-- Close Main Container -->    
+
+<!-- END MAIN -->
+
+<!-- BOTTOM STUFF -->
+
+    
+
+<!-- FOOTER -->
+ <div id="footer">
+    <div id="footer_content">
+    <div id="address">
+           
+                    
+                    
+                    
+           
+                    
+                    <strong>OFAM Headquarters</strong> | 
+                    <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1700+National+Drive,+Sacramento+95834&sll=38.643833,-121.487618&sspn=0.011799,0.019119&gl=us&ie=UTF8&hq=&hnear=1700+National+Dr,+Sacramento,+California+95834&ll=38.642651,-121.501107&spn=0.011799,0.019119&z=16&iwloc=A" target="_blank">1700 National Drive, Sacramento 95834</a> | 916.928.2550
+                    
+    </div> 
+    <img src="/DGSAdmin/images/common_back_to_top.gif" alt="Back to Top" width="11" height="11" />&nbsp;&nbsp;
+		<a onclick="javascript:$.scrollTo( '#top', 1000 );" title="Back to Top">Back to Top</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="http://www.dgs.ca.gov/dgs/Home/feedback.aspx">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a class='iframe_accessibility' href="/reader.html">Download Free Readers</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a onclick="printBuddy()" style="cursor: pointer;" title="Print-Friendly Center Content">Text Only Version</a>
+    </div>
+  </div>
+<!-- END FOOTER --> 
+    
+
+<!-- COPYRIGHT - TERMS OF SERVICE -->
+
+<div id="copyright">
+    <div id="copyright_content">
+		<a href="/conditions.html" class="iframe">Conditions of Use</a>&nbsp;|&nbsp;
+		<a href="/privacy.html" class="iframe">Privacy Policy</a>&nbsp;|&nbsp;
+		<a href="/disclaimer.html" class="iframe">Disclaimer</a>&nbsp;|&nbsp;
+		Copyright &copy; 2013 State of California
+	</div>
+</div><span class="clear"></span>
+
+
+
+<!-- END UNIVERSAL BOTTOM STUFF -->
+
+    <span class="clear"></span>
+    
+</div>
+
+<!-- END MAIN WRAPPER -->
+ 
+
+
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!-- Home page for CompareHybridCars.net -->
+
+
+
+
+  
+
+<html>
+<head>
+  <title>Compare all Electric Cars</title>
+  
+    <meta name="KEYWORDS" content="compare Electric Cars, best Electric Cars, top Electric Cars, compare mpg, best MPG, top mpg, 0-60 mph">
+    <meta name="DESCRIPTION" content="Compare  Electric Cars side-by-side on a single chart including cost, MPG and 0-60MPH acceleration time.  See hybrid car reviews and photos.">
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="netinsert" content="0.0.1.12.1.4.1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <style type="text/css">
+    body {font-family: arial, helvetica, sans-serif; font-size:80%;
+    
+    }
+    td {font-size:78%;text-align:center;}
+    th {font-size:78%; font-weight:bold; background-color:lightsteelblue;}
+    h1 {font-size:160%; color:midnightblue; font-style:italic;
+      margin-top:0px; margin-bottom:7px; text-align:left; margin-left:4px;}
+    h2 {font-size:90%; color:midnightblue; text-align:left; margin-top:0px;
+      margin-bottom:0px; margin-left:6px;}
+    a {color: midnightblue;}
+    a:hover {color:red;}
+    .img1 {border-width:1px; border-color:white;}
+    .tb {font-style:italic; font-size:92%; font-weight:bold; border-right:outset 2px #FFFFFF;
+      border-left:outset 2px #FFFFFF; border-top:solid 1px #E8E8E8;
+      border-top-left-radius:15px; border-top-right-radius:15px;
+       }
+    .aq {background-color:#C0FFD8;}
+    .ye {background-color:#FFFF99;}
+  </style>
+
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+
+<script type="text/javascript">
+var save = new Array(50);
+var saveColor = new Array(50);
+for (i=0; i<50; i++) {
+  save[i] = new Array(50);
+  saveColor[i] = new Array(50);
+}
+
+function borYes(fld) { // Make image border blue (must set border=1 to take effect)
+  fld.style.borderColor='red'; fld.border=1; fld.style.cursor="hand";}
+
+function borNo(fld) {   // Make image border white (must set border=1 to take effect)
+  fld.style.borderColor="white"; fld.border=1;}
+
+function big(fld) {     // Make the image bigger when clicked upon (or smaller if clicked again)
+  var w=fld.width;
+  var h=fld.height;
+  var ratiox1000=w*1000/h;
+  if (fld.width==49) {fld.width=150; fld.height=1000*150/ratiox1000;} else {fld.width=49; fld.height=1000*49/ratiox1000;}
+  fld.style.borderColor="white";
+}
+
+function makeVertical(label) {  // Make the car label be vertical & discard all but 2nd word
+  var sawSpace; var sawSpace2; var newLabel = "";
+  label = label.replace(/<br>/ig, " ");	// Get rid of forced line breaks
+  for (idx = 1; idx < label.length; idx++) {
+    if (sawSpace && !sawSpace2) sawSpace2 = (label.substr(idx,1)==' ');
+    if (!sawSpace) sawSpace = (label.substr(idx-1,1)=='>');
+    if (sawSpace && !sawSpace2 && label.substr(idx,1)!=' ')
+      newLabel += label.substr(idx,1) + "<br>";
+  }
+  return newLabel;
+}
+
+function hide(col) {    // Hide a column
+  for (row = 1; row <= 31; row++) {
+    if (row!=4 && row!=5) {
+      if (document.getElementById(""+row+"_"+col)) {
+        save[row][col] = document.getElementById(""+row+"_"+col).innerHTML;
+        saveColor[row][col] = document.getElementById(""+row+"_"+col).style.backgroundColor;
+        if (row==1)
+          document.getElementById(""+row+"_"+col).innerHTML =
+            makeVertical(document.getElementById(""+row+"_"+col).innerHTML);
+        else if (row==3)
+          document.getElementById(""+row+"_"+col).innerHTML =
+            "S<br>h<br>o<br>w<br><input type=\"checkbox\"" +
+            "onclick=\"show(" + col + ");\">";
+        else {
+          document.getElementById(""+row+"_"+col).style.backgroundColor = "white";
+          document.getElementById(""+row+"_"+col).innerHTML = "";
+        }
+      }
+    }
+  }
+}
+
+function show(col) {    // Show a column
+  for (row = 1; row <= 31; row++)
+    if (row!=4 && row!=5)
+      if (document.getElementById(""+row+"_"+col)) {
+        document.getElementById(""+row+"_"+col).innerHTML = save[row][col];
+        document.getElementById(""+row+"_"+col).style.backgroundColor = saveColor[row][col];
+      }
+}
+</script>
+</head>
+
+<body style="margin-top:9px;">
+
+
+<table cellpadding="0" cellspacing="0">
+ <tr>
+  <td style="background-image:url(images/f1b.jpg);" width="320" valign="top">
+    <a style="text-decoration:none;" href="./"><h1>
+      Compare Electric Cars</h1></a>
+    <h2>
+      
+        <nobr>An easy printable spreadsheet-paste-able comparison</nobr>
+        <nobr>of all US 
+          Electric Cars showing MPG, 0-60 time &amp; MSRP </nobr>
+      
+    </h2>
+  
+    </td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td valign="top" height="60" width="480">
+  
+    
+      <script type="text/javascript"><!--
+        google_ad_client = "pub-9446098551442907";
+        //CHC Home 468x60
+        google_ad_slot = "6591477100";
+        google_ad_width = 468;
+        google_ad_height = 60;
+      //--></script>
+      <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    
+  
+    <td>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td border="1" bgcolor="#E6F4FF" style="padding-left:20px; padding-right:20px;">
+      <a href="http://www.kqzyfj.com/click-3847174-10475281" target="_top">
+      Save as much as 75%
+      on dealer pricing on all Performance and <nobr>Replacement Auto Parts</nobr> from Parts Train
+      </a><img src="http://www.ftjcfx.com/image-3847174-10475281" width="1" height="1" border="0"/>
+    </td>
+   </tr>
+  </table>
+  
+<font size="1"><br></font>
+
+<table cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="10%" align="left" valign="top" style="text-align:left; color:midnightblue;">
+  See our reviews:&nbsp;&nbsp;&nbsp;
+</td>
+<td align="left" valign="top" style="text-align:left;">
+  &#149;&nbsp;&nbsp;<a rel="nofollow" href="vs.jsp?year=&a="
+      ><nobr>Review of top two MPG cars in USA</nobr></a>
+  <br>
+  &#149;&nbsp;&nbsp;<a rel="nofollow" href="design.jsp?year=&a="
+      >Hybrid Car Drive Comparison</a>
+  <br>
+  &#149;&nbsp;&nbsp;<nobr><a rel="nofollow" href="savings.jsp?year=&a="
+      >Fuel Savings Calculator (hybrid vs gas)&nbsp;&nbsp;</a></nobr>
+  <br>
+  <br>
+
+  </td><td>&nbsp;&nbsp;&nbsp;
+  </td><td><a rel="nofollow" href="compare.htm?year=&a="><img border="0" src="images/compare/compare1.gif"></a>
+  </td><td>&nbsp;&nbsp;&nbsp;
+  </td><td align="right">
+
+	<!-- Search Google -->
+	<form action="http://www.google.com/cse" id="cse-search-box">
+	<i>Search the Web showing only car sites ... try it!</i>
+	  <div>
+		<input type="hidden" name="cx" value="partner-pub-9446098551442907:hczv7p-owag" />
+		<input type="hidden" name="ie" value="ISO-8859-1" />
+		<input type="text" name="q" size="31" />
+		<input type="submit" name="sa" value="Search" />
+	  </div>
+	</form>
+	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+	<!-- Search Google -->
+
+
+	</td>
+	<td valign="top" align="right">
+	  Tell Google<br>
+	  you like our site:&nbsp;
+	</td>
+	<td valign="top" align="right">
+	  <!-- Place this tag where you want the +1 button to render -->
+	  <g:plusone></g:plusone>
+	  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</td>
+</tr></table>
+
+<table cellpadding="0" cellspacing="0" style="margin-top:3px;"><tr>
+
+<td class="tb" style="background-color:aliceblue;
+  border-bottom:outset 2px lightgray;">
+  <a rel="nofollow" href="./?year=&a=" style="text-decoration:none;
+    color: #777777;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='#777777'">
+  <div style="height:100%; width:100%;"><nobr>&nbsp;Compare Hybrid Sedans&nbsp;</nobr></div></a></td>
+<td style="width:5px;">&nbsp;</td>
+<td class="tb" style="background-color:aliceblue;
+  border-bottom:outset 2px lightgray;">
+  <a rel="nofollow" href="./?year=&a=&type=suv" style="text-decoration:none;
+    color: #777777;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='#777777'">
+    <div style="height:100%; width:100%;"><nobr>&nbsp;Hybrid SUV's/Trucks&nbsp;</nobr></div></a></td>
+<td style="width:5px;">&nbsp;</td>
+<td class="tb" style="background-color:#D0E0FF;
+  border-bottom:none;">
+  <nobr><a rel="nofollow" href="./?year=&a=&type=electric" style="text-decoration:none;
+    color: midnightblue;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='midnightblue'">
+  <span style="vertical-align:15%;">&nbsp;Electric Cars&nbsp;</span>
+    <sup><b>now</b></sup></a>/<a href="/?year=fut&a=&type=electric" style="font-size:75%;color:midnightblue;">future</a>&nbsp;</nobr></td>
+
+<td style="width:5px;">&nbsp;</td>
+<td class="tb" style="background-color:aliceblue;
+  border-bottom:outset 2px lightgray;">
+  <a rel="nofollow" href="./?year=&a=&type=gas" style="text-decoration:none;
+    color: #777777;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='#777777'">
+    <div style="height:100%; width:100%;"><nobr>&nbsp;Top Non-Hybrids&nbsp;</nobr></div></a></td>
+<td style="width:5px;">&nbsp;</td>
+<td class="tb" style="background-color:aliceblue;
+  border-bottom:outset 2px lightgray;">
+  <a rel="nofollow" href=".?year=&a=&type=fuel cell" style="text-decoration:none;
+    color: #777777;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='#777777'">
+    <div style="height:100%; width:100%;"><nobr>&nbsp;Fuel Cell&nbsp;</nobr></div></a></td>
+<td style="width:5px;">&nbsp;</td>
+<td class="tb" style="background-color:aliceblue;
+  border-bottom:outset 2px lightgray;">
+  <a rel="nofollow" href="review.jsp?year=&a=" style="text-decoration:none;
+    color: #777777;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='#777777'">
+    <div style="height:100%; width:100%;"><nobr>&nbsp;Reviews&nbsp;</nobr></div></a></td>
+<td style="width:5px;">&nbsp;</td>
+<td class="tb" style="background-color:aliceblue;
+  border-bottom:outset 2px lightgray;">
+  <a rel="nofollow" href="./?year=&a=&type=faq" style="text-decoration:none;
+    color: #777777;"
+    onmouseover="this.style.color='red'" onmouseout="this.style.color='#777777'">
+    <div style="height:100%; width:100%;"><nobr>&nbsp;Pros &amp; Cons&nbsp;</nobr></div></div></a></td>
+
+ 
+  
+    <td valign="top" style="width:100%;">
+    &nbsp;&nbsp;<a href="/?year=fut&type=electric" style="font-size:78%; color:red;"><nobr>See future
+    EV's</font></nobr></a></td>
+  
+ 
+
+</tr></table> <table border="1" width="100%"><tr><td style="border-style:none;">Year:<select onchange="location='?year='+this.options[this.selectedIndex].value +'&type=electric'"><option value="2012" selected>2013</option><option value="fut">future</option></select></td>
+  <th id="1_0" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Audi A4&a=">Audi A4 Electric<br>Conversion</a></th>  <th id="1_1" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Chevy&a=">Chevy Volt</a></th>  <th id="1_2" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Corvette&a=">Corvette Lithium<br>Conversion</a></th>  <th id="1_3" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Ford&a=">Ford Focus Electric (limited produc.)</a></th>  <th id="1_4" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Mitsubishi&a=">Mitsubishi i-MiEV</a></th>  <th id="1_5" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Nissan&a=">Nissan Leaf</a></th>  <th id="1_6" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Smart&a=">Smart Electric (select dlrs)</a></th>  <th id="1_7" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Tesla&a=">Tesla Model S</a></th>  <th id="1_8" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Tesla&a=">Tesla Roadster</a></th>  <th id="1_9" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Toyota&a=">Toyota RAV4 EV<br></a></th>  <th id="1_10" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Wheego&a=">Wheego LiFe</a></th>  <th id="1_11" valign="top" style="color:midnightblue; "><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Zap&a=">Zap Xebra Sedan</a></th>  <td class="aq" style="font-style:italic">
+    (best in each row shown in green)</td></tr>
+  <tr height="53"><th>Image (click to enlarge)</th>  <td id="2_0"><img src="images/2009_Audi_conv.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_1"><img src="images/2008_Chevy_Volt.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_2"><img src="images/2009_Corvette_conv.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_3"><img src="images/2012_Ford_Focus_EV.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_4"><img src="images/2012_Mitsu_i-MiEV.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_5"><img src="images/2010_Nissan_Leaf.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_6"><img src="images/2008_Smart_Car.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_7"><img src="images/2010_TesModS.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_8"><img src="images/2008_Tesla_Roadster.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_9"><img src="images/2012_Rav4_EV.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_10"><img src="images/2010_wheego.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <td id="2_11"><img src="images/2008_Zap_Xebra.jpg" onmouseover="borYes(this)" onmouseout="borNo(this)" onload="borNo(this)" width="49" onclick="big(this)" class="img1"> </td>  <th>Image (click to enlarge)</th>  </tr>
+  <tr><th>Year (click to hide column)</th>  <td id="3_0">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(0);"></td>  <td id="3_1">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(1);"></td>  <td id="3_2">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(2);"></td>  <td id="3_3">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(3);"></td>  <td id="3_4">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(4);"></td>  <td id="3_5">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(5);"></td>  <td id="3_6">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(6);"></td>  <td id="3_7">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(7);"></td>  <td id="3_8">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(8);"></td>  <td id="3_9">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(9);"></td>  <td id="3_10">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(10);"></td>  <td id="3_11">2012-13<br><input type="button" value="hide" onmouseover="this.style.cursor='hand'" onclick="hide(11);"></td>  <th>Year (click to hide column)</th>  </tr>
+  <tr><th>Gas Type</th>  <td id="6_0">All-electric</td>  <td id="6_1">Electric w/gas recharge</td>  <td id="6_2">All-electric</td>  <td id="6_3">All-electric</td>  <td id="6_4">All-electric</td>  <td id="6_5">All-electric</td>  <td id="6_6">All-electric</td>  <td id="6_7">All-electric</td>  <td id="6_8">All-electric</td>  <td id="6_9">All-electric</td>  <td id="6_10">All-electric</td>  <td id="6_11">All-electric</td>  <th>Gas Type</th>  </tr>
+  <tr><th>Transmission</th>  <td id="7_0">Manual 5spd</td>  <td id="7_1">-</td>  <td id="7_2">Manual 5spd</td>  <td id="7_3">1spd</td>  <td id="7_4">Autom.</td>  <td id="7_5">-</td>  <td id="7_6">-</td>  <td id="7_7">-</td>  <td id="7_8">Manual<br>2spd</td>  <td id="7_9">-</td>  <td id="7_10">-</td>  <td id="7_11">-</td>  <th>Transmission</th>  </tr>
+  <tr><th><nobr>Gas-Equiv MPG-cmb<nobr></th>  <td id="10_0">-</td>  <td id="10_1">93 batt then 37 motor</td>  <td id="10_2">-</td>  <td id="10_3" class="aq">100</td>  <td id="10_4">30</td>  <td id="10_5">99</td>  <td id="10_6">-</td>  <td id="10_7">-</td>  <td id="10_8">99</td>  <td id="10_9">-</td>  <td id="10_10">-</td>  <td id="10_11">-</td>  <th><nobr>Gas-Equiv MPG-cmb<nobr></th>  </tr>
+  <tr><th>Mi on a Full Charge</th>  <td id="12_0">70</td>  <td id="12_1">40 batt then 260 motor</td>  <td id="12_2">100</td>  <td id="12_3">100</td>  <td id="12_4">80</td>  <td id="12_5">100</td>  <td id="12_6">87</td>  <td id="12_7" class="aq">300</td>  <td id="12_8">245</td>  <td id="12_9">80-110</td>  <td id="12_10">100</td>  <td id="12_11">37</td>  <th>Mi on a Full Charge</th>  </tr>
+  <tr><th>Car Class</th>  <td id="16_0">Electric</td>  <td id="16_1">Sports</td>  <td id="16_2">Electric</td>  <td id="16_3">Electric</td>  <td id="16_4">Electric</td>  <td id="16_5">Electric</td>  <td id="16_6">Electric</td>  <td id="16_7">Sports</td>  <td id="16_8">Sports</td>  <td id="16_9">Electric</td>  <td id="16_10">Electric</td>  <td id="16_11">3-Wheel</td>  <th>Car Class</th>  </tr>
+  <tr><th>Top Speed on Flat Rd</th>  <td id="19_0">80</td>  <td id="19_1">100</td>  <td id="19_2" class="aq">150</td>  <td id="19_3">84</td>  <td id="19_4">81</td>  <td id="19_5">90</td>  <td id="19_6">75</td>  <td id="19_7">120</td>  <td id="19_8">130</td>  <td id="19_9">-</td>  <td id="19_10">65</td>  <td id="19_11">40</td>  <th>Top Speed on Flat Rd</th>  </tr>
+  <tr><th>Drive Type</th>  <td id="20_0"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_1"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_2"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_3"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_4"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_5"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_6"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_7"><span style="font-size:87%">Rear-wheel</span></td>  <td id="20_8"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_9"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_10"><span style="font-size:87%">Front-wheel</span></td>  <td id="20_11"><span style="font-size:87%">Front-wheel</span></td>  <th>Drive Type</th>  </tr>
+  <tr><th>0-60MPH (sec)</th>  <td id="21_0">-</td>  <td id="21_1">9.0</td>  <td id="21_2">-</td>  <td id="21_3">10</td>  <td id="21_4">15</td>  <td id="21_5">-</td>  <td id="21_6">6.5</td>  <td id="21_7">4.2-5.6</td>  <td id="21_8" class="aq">4.0</td>  <td id="21_9">-</td>  <td id="21_10">-</td>  <td id="21_11">-</td>  <th>0-60MPH (sec)</th>  </tr>
+  <tr><th>Base Model MSRP</th>  <td id="24_0"><font style="font-size:70%;">$34,950</font></td>  <td id="24_1"><font style="font-size:70%;">$31,645</font></td>  <td id="24_2"><font style="font-size:70%;">$59,950</font></td>  <td id="24_3"><font style="font-size:70%;">$39,200</font></td>  <td id="24_4"><font style="font-size:70%;">$21,625</font></td>  <td id="24_5"><font style="font-size:70%;">$35,200</font></td>  <td id="24_6"><font style="font-size:70%;">$25,000</font></td>  <td id="24_7"><font style="font-size:70%;">$50K-98K</font></td>  <td id="24_8"><font style="font-size:70%;">$109,000</font></td>  <td id="24_9"><font style="font-size:70%;">$49,800</font></td>  <td id="24_10"><font style="font-size:70%;">$32,995</font></td>  <td id="24_11" class="aq"><font style="font-size:70%;">$12,500</font></td>  <th>Base Model MSRP</th>  </tr>
+  <tr><th>Tax Credit (see Notes)</th>  <td id="27_0">-</td>  <td id="27_1" class="aq">$7,500 +</td>  <td id="27_2">-</td>  <td id="27_3" class="aq">$7,500 +</td>  <td id="27_4" class="aq">$7,500 +</td>  <td id="27_5" class="aq">$7,500 +</td>  <td id="27_6">-</td>  <td id="27_7" class="aq">$7,500 +</td>  <td id="27_8" class="aq">$7,500 +</td>  <td id="27_9" class="aq">$7,500 +</td>  <td id="27_10" class="aq">$7,500 +</td>  <td id="27_11">-</td>  <th>Tax Credit (see Notes)</th>  </tr>
+  <tr><th>Mfr's Web Site</th>  <td id="28_0"><a rel="nofollow" href="http://www.electriccars.com/SHOWROOM_1/VIEWcar.cfm?CAR_id=81&AD_type=NEW&SHOWROOMtype=HIWAY-EV" style="font-size:82%">electriccars.<br>com</a></td>  <td id="28_1"><a rel="nofollow" href="http://www.chevrolet.com/electriccar/" style="font-size:82%">chevrolet.com</a></td>  <td id="28_2"><a rel="nofollow" href="http://www.electriccars.com/SHOWROOM_1/VIEWcarPURCHASE.cfm?CAR_id=83&FUNC=RETURN&AD_type=NEW            HIWAY-EV       CC&CARpage=VIEWcarPURCHASE" style="font-size:82%">electriccars.<br>com</a></td>  <td id="28_3"><a rel="nofollow" href="http://www.ford.com/electric/focuselectric/2012/" style="font-size:82%">ford.com</a></td>  <td id="28_4"><a rel="nofollow" href="http://i.mitsubishicars.com/miev/features" style="font-size:82%">mitsubishicars.<br>com</a></td>  <td id="28_5"><a rel="nofollow" href="http://www.nissanusa.com/leaf-electric-car" style="font-size:82%">nissanusa.<br>com</a></td>  <td id="28_6"><a rel="nofollow" href="http://www.smartusa.com/models/electric-drive/overview.aspx" style="font-size:82%">smartusa.<br>com</a></td>  <td id="28_7"><a rel="nofollow" href="http://www.teslamotors.com/models/index.php" style="font-size:82%">teslamotors.<br>com</a></td>  <td id="28_8"><a rel="nofollow" href="http://www.teslamotors.com/roadster" style="font-size:82%">teslamotors.<br>com</a></td>  <td id="28_9"><a rel="nofollow" href="http://www.plugincars.com/price/104389" style="font-size:82%">plugincars.<br>com</a></td>  <td id="28_10"><a rel="nofollow" href="http://www.wheego.net" style="font-size:82%">wheego.net</a></td>  <td id="28_11"><a rel="nofollow" href="http://www.zapworld.com/zap-xebra-electric-sedan" style="font-size:82%">zapword.<br>com</a></td>  <th>Mfr's Web Site</th>  </tr>
+  <tr><th>More Info</th>  <td id="29_0">-</td>  <td id="29_1"><a rel="nofollow" href="wiki.jsp?c=Chevy Volt&a=&w=Chevy_Volt" style="font-size:87%">car history</a><br></td>  <td id="29_2">-</td>  <td id="29_3"><a rel="nofollow" href="wiki.jsp?c=Ford Focus Electric (limited produc.)&a=&w=Ford_Focus_Electric" style="font-size:87%">car history</a><br></td>  <td id="29_4"><a rel="nofollow" href="wiki.jsp?c=Mitsubishi i-MiEV&a=&w=Mitsubishi_i-MiEV" style="font-size:87%">car history</a><br></td>  <td id="29_5"><a rel="nofollow" href="wiki.jsp?c=Nissan Leaf&a=&w=Nissan_Leaf" style="font-size:87%">car history</a><br></td>  <td id="29_6"><a rel="nofollow" href="wiki.jsp?c=Smart Electric (select dlrs)&a=&w=Smart_electric_drive" style="font-size:87%">car history</a><br></td>  <td id="29_7"><a rel="nofollow" href="wiki.jsp?c=Tesla Model S&a=&w=Tesla_Model_S" style="font-size:87%">car history</a><br></td>  <td id="29_8"><a rel="nofollow" href="wiki.jsp?c=Tesla Roadster&a=&w=Tesla_motors" style="font-size:87%">car history</a><br></td>  <td id="29_9"><a rel="nofollow" href="wiki.jsp?c=Toyota RAV4 EV<br>&a=&w=Toyota_RAV4_EV" style="font-size:87%">car history</a><br></td>  <td id="29_10"><a rel="nofollow" href="wiki.jsp?c=Wheego LiFe&a=&w=Mike_McQuary~Wheego_Electric_Cars" style="font-size:87%">car history</a><br></td>  <td id="29_11"><a rel="nofollow" href="wiki.jsp?c=Zap Xebra Sedan&a=&w=Zap_Motors" style="font-size:87%">car history</a><br></td>  <th>More Info</th>  </tr>
+  <tr><td></td>  <th id="31_0" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Audi A4&a=">Audi A4 Electric<br>Conversion</a></b></th>  <th id="31_1" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Chevy&a=">Chevy Volt</a></b></th>  <th id="31_2" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Corvette&a=">Corvette Lithium<br>Conversion</a></b></th>  <th id="31_3" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Ford&a=">Ford Focus Electric (limited produc.)</a></b></th>  <th id="31_4" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Mitsubishi&a=">Mitsubishi i-MiEV</a></b></th>  <th id="31_5" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Nissan&a=">Nissan Leaf</a></b></th>  <th id="31_6" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Smart&a=">Smart Electric (select dlrs)</a></b></th>  <th id="31_7" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Tesla&a=">Tesla Model S</a></b></th>  <th id="31_8" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Tesla&a=">Tesla Roadster</a></b></th>  <th id="31_9" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Toyota&a=">Toyota RAV4 EV<br></a></b></th>  <th id="31_10" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Wheego&a=">Wheego LiFe</a></b></th>  <th id="31_11" valign="top"><b><a rel="nofollow" style="text-decoration:none;" href="find.jsp?m=Zap&a=">Zap Xebra Sedan</a></b></th>  </tr>
+ </table>
+ 
+
+<center>
+ <br> 
+
+  
+  <table><tr>
+  
+
+    <td>
+      <script type="text/javascript"><!--
+        google_ad_client = "pub-9446098551442907";
+        //CHC Home 468x60
+        google_ad_slot = "6591477100";
+        google_ad_width = 468;
+        google_ad_height = 60;
+      //--></script>
+      <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;
+      <script type="text/javascript"><!--
+        google_ad_client = "pub-9446098551442907";
+        //CHC Home 468x60
+        google_ad_slot = "6591477100";
+        google_ad_width = 468;
+        google_ad_height = 60;
+      //--></script>
+      <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    <td>
+  <tr></table>
+
+</center>
+
+
+ <br>
+ <table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="text-align:left;" valign="top">
+  Notes:<br>
+  
+   Prices and data shown are for 2012 models except where year shown in top row differs
+  <br>
+  
+   Tax Credit shown is federal; some states have additional rebates; see
+   <a href="http://en.wikipedia.org/wiki/Government_incentives_for_plug-in_electric_vehicles#Other_states">chart</a>
+  <br>
+  
+  Data displayed is believed to be accurate; if you have questions or corrections
+    please <a href="mailto:info@comparehybridcars.net">email us</a><br>
+  
+  <br>
+  <a href="javascript:alert('To cut/paste into a spreadsheet, first close this
+   help dialog box, then in your browser click on Edit, SelectAll, Edit, Copy,
+   then open a new Excel document, and in Excel click Edit, Paste.
+   Then remove all unwanted rows/columns.')">How to cut/paste into Excel</a>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="javascript:alert('To print background shading (e.g. the green color showing best-figure-in-each-row), 
+in your browser click on File, PageSetup, and check the PrintBackgound box; also recommend either setting Landscape or the scale-to-fit-page option')">How to print including cell shadings</a><br>
+  <br>
+  <a href="mailto:info@comparehybridcars.net">Contact Us</a><br>
+  <br>
+  <a href="mailto:?subject=Check out this hybrid car comparison Web site&body=Hi, I found this website and thought you might like it: http://www.CompareHybridCars.net">
+   Email this URL to a friend</a> (uses your local Outlook client - we can't record your address)
+ </td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     </td><td valign="top" align="right">
+  
+   
+     <a href="http://www.jdoqocy.com/click-3847174-10662559" target="_top">
+     <img src="images/10713034.jpg" width="125" height="125" alt="DP American Made Car Care Products" border="0"/></a>
+   
+  
+ </td><td>&nbsp;</td></tr></table>
+
+
+<br> <!-- Google Analytics visit/click tracker -->
+<script type="text/javascript">
+  _uacct = "UA-3554854-1";
+  if (window.urchinTracker) urchinTracker();
+</script>
+<script src="/javascript/astracker.js" type="text/javascript">
+</script>
+
+
+
+
+
+  <center>
+   <table style="border:solid; border-width:1px; border-color:#C3D9FF; background-color:#F0F8FF;" cellpadding="0" cellspacing="0"><tr><td>
+    <!-- Begin BidVertiser code -->
+      <SCRIPT LANGUAGE="JavaScript1.1" SRC="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=185659&bid=450869" type="text/javascript"></SCRIPT>
+      <noscript><a rel="nofollow" href="http://www.bidvertiser.com/bdv/BidVertiser/bdv_advertiser.dbm">advertising</a></noscript>
+    <!-- End BidVertiser code -->
+   </td></tr></table>
+  </center>
+
+
+
+
+<div>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <script type="text/javascript"><!--
+    google_ad_client = "pub-9446098551442907";
+    //Home 728x15 Bottom
+    google_ad_slot = "7782222728";
+    google_ad_width = 728;
+    google_ad_height = 15;
+  //--></script>
+  <script type="text/javascript"
+//    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+</div>
+
+
+
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    _uacct = "UA-3554854-1";
+    urchinTracker();
+  </script>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- BidVertiser Performance Tracker Code
+var bdv_Performance_Ver = "1.0";
+var bdv_AID = 67535154;
+var bdv_protocol="http://";
+if(location.protocol == "https:")
+{
+	bdv_protocol="https://";
+}
+var bdv_queryStr = "?" + "ver=" + bdv_Performance_Ver + "&AID=" + bdv_AID +"&ref=" + escape(document.referrer);
+var bdv_imageUrl = bdv_protocol + "secure.bidvertiser.com/performance/pc.dbm" + bdv_queryStr;
+var bdv_imageObject = new Image();
+bdv_imageObject.src = bdv_imageUrl;
+// -->
+</SCRIPT>
+
+<noscript>
+	<img height=1 width=1 border=0 src="https://secure.bidvertiser.com/performance/pc.dbm?ver=1.0&AID=67535154">
+</noscript>
+
+
+</body>
+</html>

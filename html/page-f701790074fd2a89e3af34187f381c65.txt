@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head">
+<!--**********************************************************************************-->
+<!-- DotNetNuke� - http://www.dotnetnuke.com                                          -->
+<!-- Copyright (c) 2002-2010                                                          -->
+<!-- by DotNetNuke Corporation                                                        -->
+<!--**********************************************************************************-->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaDescription" name="DESCRIPTION" content="Business Tax Information for filing and paying business Trasaction Priviledge Tax (TPT), Withholding and Corporate Income Tax in Arizona" /><meta id="MetaKeywords" name="KEYWORDS" content=",DotNetNuke,DNN" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2013 by Arizona Department of Revenue" /><meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " /><meta id="MetaAuthor" name="AUTHOR" content="Arizona Department of Revenue" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link id="APortals__default_" rel="stylesheet" type="text/css" href="/Portals/_default/default.css" /><link id="APortals__default_Skins_AZDORskin_" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/AZDORskin/skin.css" /><link id="APortals__default_Skins_AZDORskin_azdor_01_css" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/AZDORskin/azdor-01.css" /><link id="APortals_0_Containers_AZGITA_" rel="stylesheet" type="text/css" href="/Portals/0/Containers/AZGITA/container.css" /><link id="APortals__default_Containers_AZGITA_" rel="stylesheet" type="text/css" href="/Portals/_default/Containers/AZGITA/container.css" /><link id="APortals_0_" rel="stylesheet" type="text/css" href="/Portals/0/portal.css" /><script type="text/javascript" src="/Resources/Shared/Scripts/jquery/jquery.min.js" ></script><link rel="SHORTCUT ICON" href="/Portals/0/favicon.ico" /><title>
+	Business Tax Information - Arizona Department of Revenue
+</title></head>
+<body id="Body">
+    <form method="post" action="/Business.aspx" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NDIyOTEzMjkPZBYGZg8WAh4EVGV4dAV5PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRyYW5zaXRpb25hbC5kdGQiPmQCAQ9kFg4CBA8WAh4HVmlzaWJsZWhkAgUPFgIeB2NvbnRlbnQFiAFCdXNpbmVzcyBUYXggSW5mb3JtYXRpb24gZm9yIGZpbGluZyBhbmQgcGF5aW5nIGJ1c2luZXNzIFRyYXNhY3Rpb24gUHJpdmlsZWRnZSBUYXggKFRQVCksIFdpdGhob2xkaW5nIGFuZCBDb3Jwb3JhdGUgSW5jb21lIFRheCBpbiBBcml6b25hZAIGDxYCHwIFDyxEb3ROZXROdWtlLEROTmQCBw8WAh8CBS9Db3B5cmlnaHQgMjAxMyBieSBBcml6b25hIERlcGFydG1lbnQgb2YgUmV2ZW51ZWQCCA8WAh8CBQtEb3ROZXROdWtlIGQCCQ8WAh8CBR1Bcml6b25hIERlcGFydG1lbnQgb2YgUmV2ZW51ZWQCDA8WAh8CBQ1JTkRFWCwgRk9MTE9XZAICD2QWAgIBD2QWBmYPZBYCZg8WAh8BaBYCZg9kFgJmD2QWBgIDDxBkZBYAZAIPD2QWAmYPDxYGHghJbWFnZVVybAUUL2ltYWdlcy9jb2xsYXBzZS5naWYeDUFsdGVybmF0ZVRleHQFCE1pbmltaXplHgdUb29sVGlwBQhNaW5pbWl6ZWRkAhEPZBYCAgEPZBYCAgEPZBYQAgEPEGRkFgBkAgUPEGRkFgBkAgcPEGRkFgBkAgsPEGRkFgBkAg8PEGRkFgBkAhUPEGRkFgBkAhkPEGRkFgFmZAIdDxBkZBYAZAIFD2QWAmYPZBYSAgcPZBYCZg8PFgIfAWhkZAILD2QWAmYPDxYEHwUFHUFyaXpvbmEgRGVwYXJ0bWVudCBvZiBSZXZlbnVlHgtOYXZpZ2F0ZVVybAUeaHR0cDovL3d3dy5hemRvci5nb3YvSG9tZS5hc3B4ZGQCEQ9kFgRmD2QWBgIBDxAPFgoeCENzc0NsYXNzBQxzZWFyY2hidXR0b24fAAUDV2ViHwUFEUdvb2dsZSBXZWIgU2VhcmNoHgRfIVNCAgIfAWhkZGRkAgMPEA8WCh8HBQxzZWFyY2hidXR0b24fAAUEU2l0ZR8FBQtTaXRlIFNlYXJjaB8IAgIfAWhkZGRkAgcPDxYGHwcFDHNlYXJjaGJ1dHRvbh8ABQZTZWFyY2gfCAICZGQCAg9kFgRmDw8WBB8EBRZTZWxlY3QgdGhlIHNlYXJjaCB0eXBlHwUFFlNlbGVjdCB0aGUgc2VhcmNoIHR5cGVkZAICDw8WBh8HBQxzZWFyY2hidXR0b24fAAUGU2VhcmNoHwgCAmRkAhMPZBYCAgEPDxYCHgtVcmxSZWZlcnJlcmVkZAIZD2QWCAICD2QWDgIBDw8WAh8BaGRkAgMPDxYCHwFoZGQCBQ9kFgICAg8WAh8BaBYGZg8WAh8FBQRFZGl0ZAIBDxYCHwUFBlVwZGF0ZWQCAg8WAh8FBQZDYW5jZWxkAgcPZBYCAgIPD2QWAh4FY2xhc3MFC01vZEROTkhUTUxDZAIJD2QWAmYPDxYCHwFoZGQCCw9kFgJmDw8WAh8BaGRkAg0PZBYCZg8PFgIfAWhkZAIED2QWDgIBDw8WAh8BaGRkAgMPDxYCHwFoZGQCBQ9kFgICAg8WAh8BaBYGZg8WAh8FBQRFZGl0ZAIBDxYCHwUFBlVwZGF0ZWQCAg8WAh8FBQZDYW5jZWxkAgcPZBYCAgIPD2QWAh8KBQtNb2RETk5IVE1MQ2QCCQ9kFgJmDw8WAh8BaGRkAgsPZBYCZg8PFgIfAWhkZAIND2QWAmYPDxYCHwFoZGQCBg9kFg4CAQ8PFgIfAWhkZAIDDw8WAh8BaGRkAgUPZBYCAgIPFgIfAWgWBmYPFgIfBQUERWRpdGQCAQ8WAh8FBQZVcGRhdGVkAgIPFgIfBQUGQ2FuY2VsZAIHD2QWAgICDw9kFgIfCgULTW9kRE5OSFRNTENkAgkPZBYCZg8PFgIfAWhkZAILD2QWAmYPDxYCHwFoZGQCDQ9kFgJmDw8WAh8BaGRkAggPZBYOAgEPDxYCHwFoZGQCAw8PFgIfAWhkZAIFD2QWAgICDxYCHwFoFgZmDxYCHwUFBEVkaXRkAgEPFgIfBQUGVXBkYXRlZAICDxYCHwUFBkNhbmNlbGQCBw9kFgICAg8PZBYCHwoFC01vZEROTkhUTUxDZAIJD2QWAmYPDxYCHwFoZGQCCw9kFgJmDw8WAh8BaGRkAg0PZBYCZg8PFgIfAWhkZAIbDxYCHwoFFE1pZFBhbmUgRE5ORW1wdHlQYW5lZAIdDxYCHwoFFE1pZFBhbmUgRE5ORW1wdHlQYW5lZAIfDxYCHwoFGENvbnRlbnRQYW5lIEROTkVtcHR5UGFuZWQCIQ9kFgICAg9kFg4CAQ8PFgIfAWhkZAIDDw8WAh8BaGRkAgUPZBYCAgIPFgIfAWgWBmYPFgIfBQUERWRpdGQCAQ8WAh8FBQZVcGRhdGVkAgIPFgIfBQUGQ2FuY2VsZAIHD2QWAgICDw9kFgIfCgULTW9kRE5OSFRNTENkAgkPZBYCZg8PFgIfAWhkZAILD2QWAmYPDxYCHwFoZGQCDQ9kFgJmDw8WAh8BaGRkAgsPFCsAAhQrAANkZGRkZGR/AgMPCYuAbPt9K7aukCy8bPdU3g==" />
+</div>
+
+
+<script src="/js/dnncore.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=JLV13-jSyl_MQHFbhFZ9oep3cqaduiDTSXHOS3oEjGsTQYjWUzvwIHjB40BTYchoaUpZsXYAhCUAlJnexm02fn0CeQ2mp2F8Z7UtoiiPyCt2dJ0Pj9BjuSkTPH_IsOqDP9gBDKr8R70G_MdkZpEg3mDPpAI1&amp;t=ffffffff940d030f" type="text/javascript"></script>
+
+        
+        
+<div id="headerTop">
+    <div id="helpmenu">
+        <a id="dnn_faqLink" href="/About/FAQs.aspx">FAQs</a>
+        &nbsp;|&nbsp;
+        <a id="dnn_contactLink" href="/contact.aspx">Contact Us</a>
+        &nbsp;|&nbsp;
+        <a id="dnn_mapLink" href="/directory.aspx">Site Map</a>&nbsp;
+        
+        &nbsp; <a href="#">
+            <img id="dnn_Image1" src="Portals/_default/Skins/AZDORskin/images/spacer.gif" alt="skip navigation" /></a>
+        <!-- Do not remove this link! -->
+    </div>
+    <div class="topmenu_wrapper">
+        <table align="center" class="topMenu" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="topMenuTab">
+                        <a href="/Home.aspx">Home</a>
+                    </td>
+                    <td class="topMenuTab">
+                        <a href="/Forms.aspx">Forms</a>
+                    </td>
+                    <td class="topMenuTab">
+                        <a href="/Business.aspx">Business</a>
+                    </td>
+                    <td class="topMenuTab">
+                        <a href="/Individual.aspx">Individual</a>
+                    </td>
+                    <td class="topMenuTab">
+                        <a href="/EServices.aspx">E-Services</a>
+                    </td>
+                    <td class="topMenuTab">
+                        <a href="/News.aspx">News</a>
+                    </td>
+                    <td class="topMenuTab">
+                        <a href="/About.aspx">About</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="bnr_wrapper">
+        <div id="bnr_center">
+            <a id="dnn_dnnLOGO_hypLogo" title="Arizona Department of Revenue" href="http://www.azdor.gov/Home.aspx"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/0/azdor-logo.gif" alt="Arizona Department of Revenue" style="border-width:0px;" /></a>
+            <a href="http://www.az.gov" target="_self">
+                <img id="dnn_Image2" border="0" align="right" src="Portals/_default/Skins/AZDORskin/images/spacer.gif" alt="AZ.gov Arizona&#39;s Official Web Site" style="height:75px;width:250px;" /></a>
+            <div class="bnr_text">
+                State of Arizona<br />
+                Department of Revenue</div>
+        </div>
+        <div id="bnr2_wrapper">
+            <div id="slogan">
+                <span id="dnn_sloganTEXT_lblText" class="Normal">Setting the Standard for Tax Services</span>
+
+            </div>
+            <div id="searchbar">
+                <span id="dnn_dnnSEARCH_ClassicSearch">
+  
+  
+  <input name="dnn$dnnSEARCH$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSEARCH_txtSearch" class="NormalTextBox" onkeydown="return __dnn_KeyDown(&#39;13&#39;, &#39;javascript:__doPostBack(%27dnn$dnnSEARCH$cmdSearch%27,%27%27)&#39;, event);" />&nbsp;
+  <a id="dnn_dnnSEARCH_cmdSearch" class="searchbutton" href="javascript:__doPostBack(&#39;dnn$dnnSEARCH$cmdSearch&#39;,&#39;&#39;)">Search</a>
+</span>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content_wrapper">
+    <table class="ContentTable" border="0" cellpadding="0" cellspacing="0" align="center"
+        style="margin-bottom: 0px">
+        <tr>
+            <td id="dnn_LeftPane" class="LeftPane">
+                <div class="inventua_sidemenu">
+	<script language="javascript">
+		var previousSelection;
+		var previousSelectionNormal;
+		function selectmenuitem(which, toggle, statusdescription, Normalcssclass, highlightcssclass)
+		{
+		  if (toggle==true)
+		  {
+		    if (previousSelection != null)
+		      previousSelection.className=previousSelectionNormal;
+		    which.className=highlightcssclass;
+		    previousSelection=which;
+		    previousSelectionNormal=Normalcssclass;
+		  }
+		  else
+		    which.className=previousSelectionNormal;
+		  window.status=statusdescription;
+		  return true;
+		}
+
+	</script><table cellspacing="0" cellpadding="0" style="width:100%;">
+		<tr>
+			<td valign="top"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+				<tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Home" class="MenuItem0"><a href="http://www.azdor.gov/Home.aspx">Home</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Tax Forms - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Forms" class="MenuItem0"><a href="http://www.azdor.gov/Forms.aspx">Forms</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Individual Tax Information - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Individual" class="MenuItem0"><a href="http://www.azdor.gov/Individual.aspx">Individual</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Business Tax Information - Arizona Department of Revenue&#39;, &#39;MenuItem0 currentItemHighlight0&#39;, &#39;MenuItemMouseOver0 currentItemHighlight0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Business" class="MenuItem0 currentItemHighlight0"><a href="http://www.azdor.gov/Business.aspx">Business</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;AZTaxes Newsletter&#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-AZTaxesNewsletter" class="MenuItem1"><a href="http://www.azdor.gov/Business/AZTaxesNewsletter.aspx">AZTaxes Newsletter</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Bingo in Arizona&#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Bingo" class="MenuItem1"><a href="http://www.azdor.gov/Business/Bingo.aspx">Bingo</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Interest Rates for Tax Types Other Than Transaction Privilege Tax &#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-InterestRates" class="MenuItem1"><a href="http://www.azdor.gov/Business/InterestRates.aspx">Interest Rates</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Licensing Guide - Arizona Department of Revenue&#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-LicensingGuide" class="MenuItem1"><a href="http://www.azdor.gov/Business/LicensingGuide.aspx">Licensing Guide</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Luxury Tax - Liquor &amp; Tobacco in Arizona&#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-LuxuryTax" class="MenuItem1"><a href="http://www.azdor.gov/Business/LuxuryTax.aspx">Luxury Tax</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Use Tax Direct Payment Permit Holders&#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-UseTaxDirectPermitHolders" class="MenuItem1"><a href="http://www.azdor.gov/Business/UseTaxDirectPermitHolders.aspx">Use Tax Direct Permit Holders</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Transaction Privilege Tax - Arizona Department of Revenue&#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-TransactionPrivilegeTax" class="MenuItem1"><a href="http://www.azdor.gov/Business/TransactionPrivilegeTax.aspx">Transaction Privilege Tax</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Arizona Withholding Tax &#39;, &#39;MenuItem1&#39;, &#39;MenuItemMouseOver1&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-WithholdingTax" class="MenuItem1"><a href="http://www.azdor.gov/Business/WithholdingTax.aspx">Withholding Tax</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Corporate Audits - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Audits" class="MenuItem0"><a href="http://www.azdor.gov/Audits.aspx">Audits</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Collections&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Collections" class="MenuItem0"><a href="http://www.azdor.gov/Collections.aspx">Collections</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;E-Services - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-E-Services" class="MenuItem0"><a href="http://www.azdor.gov/EServices.aspx">E-Services</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Legal Research on Decisions, Rulings, Procedures - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-LegalResearch" class="MenuItem0"><a href="http://www.azdor.gov/LegalResearch.aspx">Legal Research</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Class Action Notices&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-ClassActionNotices" class="MenuItem0"><a href="http://www.azdor.gov/ClassActionNotices.aspx">Class Action Notices</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Model City Tax Code &#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-ModelCityTaxCode" class="MenuItem0"><a href="http://modelcitytaxcode.az.gov/">Model City Tax Code </a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Arizona Property Tax - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-PropertyTax" class="MenuItem0"><a href="http://www.azdor.gov/PropertyTax.aspx">Property Tax</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Brochures and Publications from Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Publications" class="MenuItem0"><a href="http://www.azdor.gov/Publications.aspx">Publications</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Reports and Research from Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Reports&Research" class="MenuItem0"><a href="http://www.azdor.gov/ReportsResearch.aspx">Reports & Research</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Tax Credits&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-TaxCredits" class="MenuItem0"><a href="http://www.azdor.gov/TaxCredits.aspx">Tax Credits</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Unclaimed Property&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-UnclaimedProperty" class="MenuItem0"><a href="http://www.azunclaimed.gov">Unclaimed Property</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;AZ TPT News&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-News" class="MenuItem0"><a href="http://www.azdor.gov/News.aspx">News</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Meeting Notices&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-MeetingNotices" class="MenuItem0"><a href="http://www.azdor.gov/MeetingNotices.aspx">Meeting Notices</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;Contact Us - Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-Contact" class="MenuItem0"><a href="http://www.azdor.gov/Contact.aspx">Contact</a></td>
+				</tr><tr>
+					<td onmouseover="selectmenuitem(this, true, &#39;About Arizona Department of Revenue&#39;, &#39;MenuItem0&#39;, &#39;MenuItemMouseOver0&#39;); return 0;" onmouseout="selectmenuitem(this, false, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="invsidemenu-About" class="MenuItem0"><a href="http://www.azdor.gov/About.aspx">About</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table>
+</div>
+                &nbsp;
+            </td>
+
+            <td class="contentCell">
+                <div id="breadcrumb">
+                    <span id="dnn_dnnTEXT_lblText" class="breadcrumb">You are here ></span>
+
+                    &nbsp;<span>
+                        <span id="dnn_dnnBREADCRUMB_lblBreadCrumb"><a href="http://www.azdor.gov/Business.aspx" class="breadcrumb">Business</a></span>
+
+                    </span>
+                </div>
+                <table class="ContentTable" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td id="dnn_ContentPane" colspan="2" class="ContentPane">
+                        <a name="379"></a>
+<div class="c_head">
+    <div class="head_title">
+        <div class="c_actions">
+            
+        </div>
+        <div class="c_icon">
+            
+        </div>
+        <h1>
+            <span id="dnn_ctr379_dnnTITLE_lblTitle" class="TitleHead">Where do I get an Arizona business license to operate my business?</span>
+
+
+
+        </h1>
+    </div>
+    <div class="clear_float"></div>
+</div>
+<div class="c_content">
+    <div id="dnn_ctr379_ContentPane" class="Normal c_contentpane">
+    <!-- Start_Module_379 --><div id="dnn_ctr379_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr379_HtmlModule_lblContent" class="Normal">
+	In Arizona, not all businesses are required to have a license and some businesses are required to have more than one license. There is not a "generic" state business license.&nbsp;&nbsp; The basic types of licensing in Arizona are described in our <A href="/Business/LicensingGuide.aspx">Licensing Guide</A>.
+</div>
+
+</div><!-- End_Module_379 --></div>
+</div>
+<div class="c_footer">
+    
+    
+    
+</div>
+
+
+
+
+
+<a name="825"></a>
+<div class="c_head">
+    <div class="head_title">
+        <div class="c_actions">
+            
+        </div>
+        <div class="c_icon">
+            
+        </div>
+        <h1>
+            <span id="dnn_ctr825_dnnTITLE_lblTitle" class="TitleHead">Business Basics in Arizona</span>
+
+
+
+        </h1>
+    </div>
+    <div class="clear_float"></div>
+</div>
+<div class="c_content">
+    <div id="dnn_ctr825_ContentPane" class="Normal c_contentpane">
+    <!-- Start_Module_825 --><div id="dnn_ctr825_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr825_HtmlModule_lblContent" class="Normal">
+	<p><a target="_blank" href="/LinkClick.aspx?fileticket=BPeFIxQ09vY%3d&amp;tabid=60">A Guide to Taxes for Arizona Businesses</a> is designed to help Arizona businesses comply with the state’s basic tax and licensing requirements. In addition to describing the types of licenses and taxes that are applicable in Arizona, a few other agencies that impose taxes and require licensing are identified. This publication is part of a series of publications that discuss in detail transaction privilege and other tax issues administered by the state. For questions, please see the websites and telephone numbers listed on the last pages of the publication.</p>
+</div>
+
+</div><!-- End_Module_825 --></div>
+</div>
+<div class="c_footer">
+    
+    
+    
+</div>
+
+
+
+
+
+<a name="811"></a>
+<div class="c_head">
+    <div class="head_title">
+        <div class="c_actions">
+            
+        </div>
+        <div class="c_icon">
+            
+        </div>
+        <h1>
+            <span id="dnn_ctr811_dnnTITLE_lblTitle" class="TitleHead">Transaction Privilege Tax (TPT)/Licensing</span>
+
+
+
+        </h1>
+    </div>
+    <div class="clear_float"></div>
+</div>
+<div class="c_content">
+    <div id="dnn_ctr811_ContentPane" class="Normal c_contentpane">
+    <!-- Start_Module_811 --><div id="dnn_ctr811_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr811_HtmlModule_lblContent" class="Normal">
+	<p>If you are selling a product or engaging in a service subject to transaction privilege tax, you will most likely need to obtain the state transaction privilege tax (TPT) license from the Arizona Department of Revenue (commonly referred to as a sales tax, resale, wholesale, vendor or tax license) and a transaction privilege tax or business/occupational license from the city(ies) in which you are based and/or operate.&#160; Details on TPT Licensing can be found on our <a href="/Business/TransactionPrivilegeTax.aspx">TPT page</a>.</p>
+<ul>
+    <li><a href="/Business/TransactionPrivilegeTax/TPTRates.aspx">Transaction Privilege (Sales) Tax Rate Tables</a> contain rates for Transaction Privilege and other taxes imposed by the State of Arizona, the counties, and most Arizona cities.</li>
+    <li><span id="dnn_ctr826_dnnTITLE_lblTitle" class="TitleHead LabelEditOverClass"><a href="/Business/TransactionPrivilegeTax/TaxFactoring.aspx">Transaction Privilege (Sales) Tax Factoring</a> - If you do not seperately state the transaction privilege tax on your customer's invoice or contract, you may <strong>FACTOR </strong>the tax for purposes of reporting the tax to the state and cities.&#160; See the <a href="/Business/TransactionPrivilegeTax/TaxFactoring.aspx">Tax Factor page</a> for details or download an <a target="_blank" href="/LinkClick.aspx?fileticket=jiPsacmY6h4%3d&amp;tabid=60">Automatic Factoring Worksheet</a> (Excel).</span></li>
+    <li><span class="TitleHead LabelEditOverClass"><span id="dnn_ctr826_dnnTITLE_lblTitle" class="TitleHead LabelEditOverClass">TPT Due Dates - <a target="_blank" href="/LinkClick.aspx?fileticket=_FdQMJPSeSw%3d&amp;tabid=60">Download Calendar</a></span></span></li>
+</ul>
+</div>
+
+</div><!-- End_Module_811 --></div>
+</div>
+<div class="c_footer">
+    
+    
+    
+</div>
+
+
+
+
+
+<a name="812"></a>
+<div class="c_head">
+    <div class="head_title">
+        <div class="c_actions">
+            
+        </div>
+        <div class="c_icon">
+            
+        </div>
+        <h1>
+            <span id="dnn_ctr812_dnnTITLE_lblTitle" class="TitleHead">Arizona Withholding Tax</span>
+
+
+
+        </h1>
+    </div>
+    <div class="clear_float"></div>
+</div>
+<div class="c_content">
+    <div id="dnn_ctr812_ContentPane" class="Normal c_contentpane">
+    <!-- Start_Module_812 --><div id="dnn_ctr812_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr812_HtmlModule_lblContent" class="Normal">
+	For Arizona purposes, an employer must withhold Arizona income tax from the payment of wages to an employee whose compensation is for services performed in Arizona.&nbsp; Details can be found on the <A href="/Business/WithholdingTax.aspx">Withholding Tax page</A>.
+</div>
+
+</div><!-- End_Module_812 --></div>
+</div>
+<div class="c_footer">
+    
+    
+    
+</div>
+
+
+
+
+
+</td>
+
+                    </tr>
+                    <tr>
+                        <td id="dnn_MidLeftPane" class="MidPane DNNEmptyPane">
+                        </td>
+
+                        <td id="dnn_MidRightPane" class="MidPane DNNEmptyPane">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td id="dnn_BottomPane" colspan="2" class="ContentPane DNNEmptyPane">
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+            <td id="dnn_RightPane" class="RightPane">
+            <a name="440"></a>
+<div class="c_head c_head_white">
+    <div class="head_title">
+        <div class="c_actions">
+            
+        </div>
+        <div class="c_icon">
+            
+        </div>
+        <h1>
+            <span id="dnn_ctr440_dnnTITLE_lblTitle" class="TitleHead">Online Services</span>
+
+
+
+        </h1>
+    </div>
+</div>
+<div class="c_content c_content_white">
+    <div id="dnn_ctr440_ContentPane" class="Normal c_contentpane">
+    <!-- Start_Module_440 --><div id="dnn_ctr440_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr440_HtmlModule_lblContent" class="Normal">
+	<p style="text-align: center"><br />
+<a target="_blank" href="https://www.aztaxes.gov"><img border="0" alt="www.AzTaxes.gov" width="160" height="43" complete="complete" src="/Portals/0/images/aztaxes.png" /></a></p>
+<ul>
+    <li><a title="https://www.aztaxes.gov/default.aspx?target=Introduction" target="_blank" href="https://www.aztaxes.gov/default.aspx?target=Introduction">License a New Business</a></li>
+    <li><a title="https://www.aztaxes.gov/default.aspx?target=AZTaxReg" target="_blank" href="https://www.aztaxes.gov/default.aspx?target=AZTaxReg">Enroll to File and Pay Online</a></li>
+    <li><a title="https://www.aztaxes.gov/default.aspx?target=LicenseVerification" target="_blank" href="https://www.aztaxes.gov/default.aspx?target=LicenseVerification">Verify a TPT License</a></li>
+</ul>
+<p style="text-align: center">&#160;&#160;<a href="/Collections/CanNotPayTaxes.aspx"><img border="0" alt="Can't pay your taxes? We can help!" src="/Portals/0/images/cantPay.jpg" width="160" height="160" /></a></p>
+</div>
+
+</div><!-- End_Module_440 --></div>
+</div>
+<div class="c_footer">
+    
+    
+    
+</div>
+
+
+
+
+</td>
+
+        </tr>
+    </table>
+</div>
+<div id="footer">
+    <a id="dnn_HyperLink1" class="footerText" href="/Home.aspx">Home</a>
+    &nbsp;|&nbsp;
+    <a id="dnn_HyperLink2" class="footerText" href="/Contact/ReportFraud.aspx">Report Fraud</a>
+    &nbsp;|&nbsp;
+    <a id="dnn_dnnPRIVACY_hypPrivacy" class="footerText" rel="nofollow" href="http://www.azdor.gov/privacy.aspx">Privacy Statement</a>
+    &nbsp;|&nbsp;
+    <a id="dnn_accessLink" class="footerText" href="http://aset.azdoa.gov/sites/default/files/media/docs/P130%20Web%20Site%20Accessibility%20Policy.pdf" target="_blank">Accessibility Policy</a>
+    &nbsp;|&nbsp;
+    <span id="dnn_dnnCOPYRIGHT_lblCopyright" class="footerText">Copyright 2013 by Arizona Department of Revenue</span>
+
+</div>
+
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script></form>
+
+            
+                <script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+
+                <script type="text/javascript">
+                var pageTracker = _gat._getTracker("UA-8052559-1");
+                pageTracker._trackPageview();
+                </script>
+
+            
+            </body>
+</html>

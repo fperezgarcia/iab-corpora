@@ -1,0 +1,2606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+
+<head>
+	<meta name="google-site-verification" content="ysicNvG46UnTl8MZIoQ1SpBAD_5F5nRooSJ6-yE9SV4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="http://www.typepad.com/" />
+	
+
+	
+	
+	<link rel="stylesheet" href="http://blogs.cars.com/kickingtires/styles2.css" type="text/css" />
+
+
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="http://blogs.cars.com/kickingtires/atom.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://blogs.cars.com/kickingtires/index.rdf" />
+
+
+<script type="text/javascript" src="http://www.cars.com/js/lib/jquery/1_3_2/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.cars.com/js/cars/lib.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   $('a[href*=flickr]').each(function() {
+     linkClass = "lightbox";
+     entryTitle = $(this).parents('.entry').children('.entry-header').text();
+	$(this).attr('class',linkClass);	
+	$(this).attr('rel',entryTitle);	
+    }); 
+});
+</script>
+
+
+<script type="text/javascript" src="/js/jquery.lightbox.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.lightbox').lightbox();
+$('.lightbox').click(function () { 
+         try {trackLink(this, 'Flickr_Images: ' +$(this).attr('rel'))} catch (e) {};
+        });
+  });
+</script>
+
+<script type="text/javascript" src="http://www.cars.com/js/cars/carsAdTagGenerator.js"></script>
+
+<script type="text/javascript">
+function turnip() {
+             var make = "";
+             make = $("select#navmakes_dropdown").val();
+             if (make != "no") {
+                  blogurl = "http://blogs.cars.com/kickingtires/";
+                  window.location.href = blogurl + make;
+             }
+}
+</script>
+
+<link rel="stylesheet" href="/js/thickbox.css" type="text/css" media="screen" />
+
+
+
+	<title>Would You Buy It? Chevrolet Cruze Station Wagon - KickingTires</title>
+        <link  rel="canonical"  href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html" />
+	<link rel="start" href="http://blogs.cars.com/kickingtires/" title="Home" />
+	<link rel="prev" href="http://blogs.cars.com/kickingtires/2012/02/most-read-car-reviews-of-the-week-3.html" title="Most-Read Car Reviews of the Week" />
+	<link rel="next" href="http://blogs.cars.com/kickingtires/2012/02/recall-alert-2011-2012-infiniti-m-qx-and-nissan-juke.html" title="Recall Alert: 2011-2012 Infiniti M, QX and Nissan Juke" />
+
+        <link rel="stylesheet" href="http://blogs.cars.com/kickingtires/learnMore.css" type="text/css" />
+<script type="text/javascript" src="http://www.cars.com/configurator/js/lib/jquery/jquery.vsprintf.js"></script>
+<script type="text/javascript">
+var msrpHeader = 'MSRP';
+var VEHICLE_ROW_TEMPLATE = '<tr><td style="font-weight:bold;text-align:left;width:45%">%(vehicle)s</td><td class="right">%(msrpRange)s</td><td>%(mpgCity)s%(mpgHwy)s</td></tr><tr class="borderless"><td colspan="3"><a href="http://www.cars.com/go/search/provideZip.jsp?mknm=%(make)s&mdnm=%(model)s&year=%(year)d&tracktype=%(tracktype)s">Find This Car Near You</a> | <a href="http://www.cars.com/go/crp/research.jsp?year=%(year)d&makeid=%(carsmake)d&modelid=%(carsmodel)d"> Research and Compare</a></td></tr>';
+
+$(function() {
+
+var vehicleQuery = '';
+$('.carsReference').each(function() {
+    vehicleQuery += '&vehicle=' + $(this).text();
+});
+
+if (vehicleQuery.length > 0) {
+    $.getJSON('http://www.cars.com/go/crp2/json/fromCarsMulti.jsp?callback=?'+vehicleQuery, function(vehicleList) {
+        if (typeof vehicleList == 'undefined' || vehicleList.length == 0) return;
+        
+        var tableContent = '';
+        $.each(vehicleList, function(index, vehicle) {
+            if (!vehicle.isNew) msrpHeader = 'Original MSRP';
+            tableContent += $.sprintf(VEHICLE_ROW_TEMPLATE, {
+                'vehicle': vehicle.year+' '+vehicle.make+' '+vehicle.model,
+                'make': vehicle.make,
+                'model': vehicle.model,
+                'year': vehicle.year,
+                'msrpRange': vehicle.modelInfo.startingMSRP.min == vehicle.modelInfo.startingMSRP.max? vehicle.modelInfo.startingMSRP.minFormatted : vehicle.modelInfo.startingMSRP.minFormatted+' - '+vehicle.modelInfo.startingMSRP.maxFormatted,
+                'carsmake': vehicle.ids.carscom.make,
+                'carsmodel': vehicle.ids.carscom.model,
+                'mpgCity': vehicle.modelInfo.mpgCity.max > 0? vehicle.modelInfo.mpgCity.max+' city' : 'NA',
+                'mpgHwy': vehicle.modelInfo.mpgHwy.max > 0? ' / '+vehicle.modelInfo.mpgHwy.max+' highway' : '',
+                'tracktype': vehicle.isNew? 'newcc' : 'usedcc'
+            });
+        });
+        $('div#NextPrev').before('<div id="learnMore"><h3>Learn More on Cars.com</h3><table cellspacing="0" cellpadding=0" border="0" width="100%"><tr><th colspan="2" class="right">'+msrpHeader+'</th><th>Fuel Economy</th></tr>'+tableContent+'</table></div>');
+        $('#learnMore').show();
+        if ($.browser.msie) {
+            $('div.google_units').prepend($('#google_ads_frame1').remove().css('position','relative'));
+            $('div.google_units ins').remove();
+        }
+    });
+}
+
+});
+</script>
+
+	
+</head>
+<body class="layout-two-column-right">
+
+
+	
+
+	<div id="container">
+		<div id="container-inner" class="pkg">
+
+<script type="text/javascript" src="/js/querystring.js"></script>
+<script type="text/javascript" src="/js/cookies.js"></script>
+<script type="text/javascript">
+// Syntax: http://adamv.com/dev/javascript/querystring
+var qs = new Querystring();
+var affvalue = qs.get("aff");
+// Make sure to put spaces around each name
+var nopersist = " usatoday recycler carskbb msn msnbc forbesautos ketv tribe drivered driveone automotv iaguide whypay carprice fsbo cp capone ";
+// Syntax: http://techpatterns.com/downloads/javascript_cookies.php
+// remember, these are the possible parameters for Set_Cookie:
+// name, value, expires, path, domain, secure
+// If test if there is an affiliate value, and said value is not in the list of affiliates that shouldn't get a cookie
+if (affvalue == "cartalk") { var duration = 1 }
+else if (nopersist.indexOf(" " + affvalue + " ") > -1 ) { 1 }
+else { var duration = 21 }
+if ( affvalue ) Set_Cookie( 'affiliate', affvalue, duration, '/', '.cars.com', '' );
+if ( !(Get_Cookie('affiliate')) || Get_Cookie('affiliate') == "null" ) Set_Cookie( 'affiliate', 'national', duration, '/', '.cars.com', '' );
+</script>
+<div id="carsHeader">
+
+<!-- leaderboard here -->
+<div id="leaderboard">
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript"> 
+   CARS.adtag.drop({'sz':'728x90'});
+</SCRIPT>
+</div>
+
+<a href="/kickingtires/"><div id="headerLink"></div></a>
+<a href="http://www.cars.com"><div id="carsLogo"></div></a>
+</div>
+
+	
+			<div id="pagebody">
+				<div id="pagebody-inner" class="pkg">
+					<div id="alpha">
+						<div id="alpha-inner" class="pkg">
+							<!-- entry -->
+
+
+<div class="entry" id="entry-6a00d83451b3c669e2016762dbe89d970b">
+	
+		<h1 class="entry-header">Would You Buy It? Chevrolet Cruze Station Wagon</h1>
+	
+	<div class="entry-content">
+		<div class="entry-body">
+			<p><img alt="Chevrolet cruze station wagon" border="0" class="asset  asset-image at-xid-6a00d83451b3c669e2016301e72d03970d" src="http://blogs.cars.com/.a/6a00d83451b3c669e2016301e72d03970d-800wi" title="Chevrolet cruze station wagon" /><br />In advance of the Geneva International Auto Show next month, Chevrolet announced plans to sell a wagon version of its <a href="http://www.cars.com/chevrolet/cruze/2012/expert-reviews/" target="_self">Cruze</a> compact in Europe. This news was followed quickly by a statement that Chevy won’t sell it in the United States. But why not?</p>
+<p>In America&#39;s ongoing love affair with the automobile, hatchbacks and wagons have often taken the role of jilted paramour. For   whatever reason, wagons are not part of the &quot;in crowd&quot; in the U.S., and Americans continually choose coupes and sedans over their   trunk-less counterparts. Although many automakers have tried to shift the tide of public opinion, wagons don&#39;t usually last long   in a vehicle&#39;s lineup, especially if that automaker isn&#39;t European.</p>
+
+		</div>
+		
+			<a id="more"></a>
+				
+
+<p>For example, Hyundai recently announced that its Elantra Touring wagon won&#39;t live past model-year 2012; a <a href="http://blogs.cars.com/kickingtires/2012/02/2013-hyundai-elantra-gt-at-the-2012-chicago-auto-show.html" target="_self">hatchback</a> replaces it   for 2013. The Touring trim joined the Elantra family in 2009 and was a perennial slow seller. Through August 2011, Hyundai sold   just 10,318 units of the wagon, compared with 123,218 Elantra sedans sold during the same time.</p>
+<p>Would the Cruze wagon fare any better here? The car seems popular enough: Chevrolet says it has already sold more than 1   million Cruzes globally since the vehicle debuted in 2009. The U.S. version hit the market as a 2011 model, and 231,732 Cruzes   were sold here last year.</p>
+<p>To Chevrolet of Europe, offering a Cruze station wagon seems like a no-brainer. &quot;In Europe, the most popular body styles in the   compact segment are hatchbacks with around 60 percent, followed by station wagons with around 20 percent of the segment,&quot;   Chevrolet Product Communication Manager Cornelia Harodt told us.</p>
+<p><img alt="2012_Chevr_Cruze_LT_0894.jp" border="0" class="asset  asset-image at-xid-6a00d83451b3c669e20168e7de05e0970c" src="http://blogs.cars.com/.a/6a00d83451b3c669e20168e7de05e0970c-800wi" title="2012_Chevr_Cruze_LT_0894.jp" /><br />Set to hit the stage next month at the Geneva auto show, the Cruze wagon will join sedan and hatchback models in Europe. At   184.1 inches long, the station wagon is slightly longer than the sedan, which is 181 inches long. Cargo room ranges from 17.6   cubic feet with the seats up to 52.9 cubic feet with the rear seats folded. In comparison, the Cruze sedan offers 15.4 cubic feet   of trunk space.</p>
+<p>&quot;The Cruze station wagon caters to an important market segment. It ticks all the right boxes for European drivers in terms of   distinctive design, dynamic driving, space and economy,&quot; Chevrolet Europe President and Managing Director Susan Docherty said in a   statement.</p>
+<p>Aren&#39;t Americans interested in ticking the same boxes when it comes to what we need in a vehicle? Not really, says Chevrolet   Communications Manager Annalisa Esposito Bluhm. She explained to Cars.com that there isn&#39;t enough market interest in the U.S. to   sustain both a Chevy wagon and a compact crossover, like the <a href="http://www.cars.com/chevrolet/equinox/2012/expert-reviews/" target="_self">Equinox</a>. It&#39;s a non-issue in Europe because the Equinox isn&#39;t sold   there.</p>
+<p>A Cruze wagon would likely cannibalize sales of Chevy&#39;s popular compact SUV, and the Equinox is a strong seller. According to   Automotive News, the bow-tie brand sold 193,274 Equinoxes in the U.S. last year, a 29% increase over the previous year. To   Chevrolet, she explained, the Equinox makes more sense in the U.S. because crossovers are much more popular than wagons. The brand   simply can&#39;t make room for two similar vehicles that meet practically the same consumer need.</p>
+<p>Bluhm did say, though, that if gas prices spike, consumer need and market realities will shift in the U.S., prompting a re-  evaluation of the Cruze wagon&#39;s stateside future.</p>
+<p>To us, this means a U.S. Cruze wagon is a long shot. Tell us, would you buy it?</p>
+		
+	</div>
+<div id="entryFooter">
+   <div class="header"></div>
+<div class="shareButtons">
+<!-- FACEBOOK LIKE BUTTON -->
+<div class="fbLike">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html&amp;layout=button_count&amp;show_faces=false&amp;width=80&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:20px;" allowTransparency="true"></iframe>
+</div>
+<!-- END FACEBOOK LIKE BUTTON -->
+</div>
+  <div class="content">
+	By <a href="mailto:jgeiger@cars.com">Jennifer Geiger</a> | February 27, 2012 | <a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comments">Comments (96)</a></div>
+
+        
+       <div class="content" id="tag">
+        <div class="rule"></div>
+Tags: <a href="http://blogs.cars.com/kickingtires/2012/"><!--http://blogs.cars.com/kickingtires/2012/ -->2012</a>, <a href="http://blogs.cars.com/kickingtires/2012-geneva-motor-show/"><!--http://blogs.cars.com/kickingtires/2012-geneva-motor-show/ -->2012 Geneva Motor Show </a>, <a href="http://blogs.cars.com/kickingtires/chevrolet/"><!--http://blogs.cars.com/kickingtires/chevrolet/ -->Chevrolet</a>, <a href="http://blogs.cars.com/kickingtires/chevrolet-cruze/"><!--http://blogs.cars.com/kickingtires/chevrolet-cruze/ -->Chevrolet Cruze</a>, <a href="http://blogs.cars.com/kickingtires/chevrolet-equinox/"><!--http://blogs.cars.com/kickingtires/chevrolet-equinox/ -->Chevrolet Equinox</a>, <a href="http://blogs.cars.com/kickingtires/geneva-motor-show/"><!--http://blogs.cars.com/kickingtires/geneva-motor-show/ -->Geneva Motor Show</a>
+</div>
+<!-- -->
+<div class="bottom"></div>
+</div>		
+			
+</div>
+
+
+<div id="NextPrev">
+
+<a id="previouspost" href="http://blogs.cars.com/kickingtires/2012/02/most-read-car-reviews-of-the-week-3.html"><span><img src="/images/arrowOrangeSmall1.gif" width="4" height="7">&nbsp;Previous</span></a>
+
+</MTIfEntryPrevious>
+
+
+
+
+<a id="nextpost" href="http://blogs.cars.com/kickingtires/2012/02/recall-alert-2011-2012-infiniti-m-qx-and-nissan-juke.html"><span>Next&nbsp;<img src="/images/arrowOrangeSmall2.gif" width="4" height="7"></span></a>
+
+</MTIfEntryNext>
+
+
+</div>
+
+<!--
+
+-->
+
+
+	<a id="comments"></a>
+	<div class="comments">
+		<h3 class="comments-header">Comments&nbsp;<img src="/images/commentBubble1.gif" /></h3>
+		<div class="comments-content">
+
+<div class="comment-upper"></div>
+		<div class="inside">	
+<!-- comment list -->
+
+  
+	<a id="c6a00d83451b3c669e20168e81155e4970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e81155e4970c">
+             <div id="comment-by">
+              cody
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e81155e4970c">Feb 27, 2012 6:46:05 AM</a></div>
+
+		<div class="comment-content">
+			<p>it&#39;s a shame that crossovers are so popular. they&#39;re just station wagons/minivans for people that want to pretend they&#39;re driving suvs...and getting worse mileage and handling in the process.</p>
+
+<p>personally, i&#39;d love to see the cruze wagon here. it would definitely return better mileage than the equinox.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016763101db9970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016763101db9970b">
+             <div id="comment-by">
+              2sk21
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016763101db9970b">Feb 27, 2012 8:08:09 AM</a></div>
+
+		<div class="comment-content">
+			<p>Had this car been available, I would have definitely considered it when I was in the market for a small wagon last year. I ultimately would up buying a Prius v which has turned out to be just perfect for my needs.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e812024d970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e812024d970c">
+             <div id="comment-by">
+              Skankzilla
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e812024d970c">Feb 27, 2012 8:51:51 AM</a></div>
+
+		<div class="comment-content">
+			<p>If it had an outsourced diesel - Yes.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e8120d1b970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e8120d1b970c">
+             <div id="comment-by">
+              j_carson
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e8120d1b970c">Feb 27, 2012 8:59:48 AM</a></div>
+
+		<div class="comment-content">
+			<p>Seriously, if it had a diesel and wasn&#39;t outrageously priced, it could give the Jetta TDI Wagon a serious run for its money. I spoke to a VW dealer in California who said practically all of the wagon business is diesel. But Jetta TDI Wagons are typically $26-31,000. If Chevy comes in with a Cruze Diesel Wagon in the $23-$30,000 range, I think they could give VW some serious competition. Last I saw, the Jetta wagon was doing at least 2,000 units/mo, and probably restricted by inventory. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201676310824c970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201676310824c970b">
+             <div id="comment-by">
+              Jim
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201676310824c970b">Feb 27, 2012 9:19:35 AM</a></div>
+
+		<div class="comment-content">
+			<p>Hatchbacks and sport wagons are so short that they don&#39;t really give you any more cargo space than a sedan.  I would be very interested in a cruze wagon if the mileage was better than crossovers.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e8122ebd970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e8122ebd970c">
+             <div id="comment-by">
+              boeingboy
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e8122ebd970c">Feb 27, 2012 9:23:10 AM</a></div>
+
+		<div class="comment-content">
+			<p>I&#39;d definitely consider a Cruze wagon.  When the Matrix dies, I don&#39;t know what I&#39;ll get but it won&#39;t be a CUV.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20163021c1c95970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20163021c1c95970d">
+             <div id="comment-by">
+              Harold Moritz
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20163021c1c95970d">Feb 27, 2012 9:52:50 AM</a></div>
+
+		<div class="comment-content">
+			<p>This must be a new development as Subaru Legacy/Outback wagons are everywhere. I drove 3 Legacies into the ground, with over 260K on my latest. Then they stopped making the Legacy wagon, just the overpriced &quot;upgraded&quot; Outback, and now they&#39;ve turned that car into a crossover, so I&#39;m done with them. I&#39;d consider this car as the niche is underserved. In the USA small cars just get bigger with newer models. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20163021c336d970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20163021c336d970d">
+             <div id="comment-by">
+              DC
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20163021c336d970d">Feb 27, 2012 10:09:00 AM</a></div>
+
+		<div class="comment-content">
+			<p>In &#39;08 when we were shopping for a new car we wanted a wagon and were surprised by the lack of selection. It pretty much came down to Subaru or VW in the affordable range, and Audi/BMW/Mercedes in the high end (out of our budget). Somewhere in the middle was the Magnum with lots of blind spots. We ended up in the VW Passat Wagon and to this day love it. If GM offered a wagon we would probably own it today. Minivans are bloat. Wagons will rule. Less frontal area = lower wind drag = better fuel economy than a minivan no matter which way you slice it. The Passat regularly gets us 25 cty 33 hwy, much better than the &#39;rated&#39; MPG.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e8127a61970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e8127a61970c">
+             <div id="comment-by">
+              skinner
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e8127a61970c">Feb 27, 2012 10:19:22 AM</a></div>
+
+		<div class="comment-content">
+			<p>Oh, so it would cannabalize sales of a less efficient vehicle?  Doesn&#39;t GM need to raise their standards to meet the new CAFE requirements anyway? </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20167631106aa970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20167631106aa970b">
+             <div id="comment-by">
+              jstant01
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20167631106aa970b">Feb 27, 2012 11:06:07 AM</a></div>
+
+		<div class="comment-content">
+			<p>I can&#39;t understand why Americans seem to dislike hatchbacks so much. I&#39;ve owned two hatchbacks, including my current Pontiac Vibe, and they offer the best of both worlds. Seats up, it is a comfortable ride for the back seat passengers with plenty of cargo space. Seats down, and I have more than enough room to haul unbelievable quantities of stuff. I easily average well over 30mpg. I&#39;d buy another one in a heartbeat. The only reason I can see a preference for CUVs is that they sit higher off the ground, usually. That can have its advantages if you live somewhere with deep snow, but otherwise...what advantage do they offer?</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e812c7d2970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e812c7d2970c">
+             <div id="comment-by">
+              VT
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e812c7d2970c">Feb 27, 2012 11:26:00 AM</a></div>
+
+		<div class="comment-content">
+			<p>My family doesn&#39;t need two SVUs but I&#39;d love to have a wagon as the second car. It would be great for road trips. My fingers crossed for a Malibu wagoon though. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e812d676970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e812d676970c">
+             <div id="comment-by">
+              Ron Rodriguez 
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e812d676970c">Feb 27, 2012 11:36:42 AM</a></div>
+
+		<div class="comment-content">
+			<p>Easier access to stuff in a crossover. Too much stooping with a wagon; backache. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20163021cb25d970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20163021cb25d970d">
+             <div id="comment-by">
+              bozaman
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20163021cb25d970d">Feb 27, 2012 11:57:54 AM</a></div>
+
+		<div class="comment-content">
+			<p>personally, i just don&#39;t understand the aversion to hatchback/wagon designs in the us market. with that said i think there some anecdotal evidence that the purchase decision-making influences may play a large role, i think.</p>
+
+<p>when i was looking for a new car a couple of years ago, i was very interested in wagons (jetta tdi, volvo v50, audi a4 avant, bmw 3-series touring, etc.) because of the very benefits they offer (fuel economy over a crossover/suv, utility, driving characteristics, etc.) but my wife was vehemently against them. in her view, they were far too &quot;mom-ish&quot; - a stigma that&#39;s been attached to them for decades now. not that a suv or minivan is any better (they&#39;re not, and my wife conceded as much - but, we weren&#39;t considering either of those categories either).</p>
+
+<p>if that view is widespread, then it stands to reason that the crossover/suv will play better for a variety of other factors, most notably with women. in that context, hatchbacks and wagons will continue to have a very difficult time gaining market share. couple that with manufacturer resistance/indifference and we will continue to offered the equinox over any variety of a cruze wagon.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20167631141b9970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20167631141b9970b">
+             <div id="comment-by">
+              M3
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20167631141b9970b">Feb 27, 2012 11:58:48 AM</a></div>
+
+		<div class="comment-content">
+			<p>Very nice wagon!  4-door hatchbacks have less room and look funny, crossovers are too big and bulky. A good wagon like this is perfect.  Would also be nice to see a Cruze coupe.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e81321eb970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e81321eb970c">
+             <div id="comment-by">
+              Six
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e81321eb970c">Feb 27, 2012 12:46:19 PM</a></div>
+
+		<div class="comment-content">
+			<p>I would be much more likely to buy the wagon than the Sedan -- and there&#39;s a trend there for me, I never look at Subaru or Volvo sedans, only wagons &amp; hatchbacks.</p>
+
+<p>Why settle for less utility + space on a given wheelbase?  The only bummer is the death of real wagons.  I was next to an 88 Taurus wagon yesterday and the deliberate expansiveness of the wagon area was amazing vs. today&#39;s &quot;sport wagon&quot; hatchback shape.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201676311a643970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201676311a643970b">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://www.oilchangecouponslink.com/" href="http://www.oilchangecouponslink.com/">oil change coupons</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201676311a643970b">Feb 27, 2012 1:19:27 PM</a></div>
+
+		<div class="comment-content">
+			<p>Great post, A Wagon would be great for road trips</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201676312813a970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201676312813a970b">
+             <div id="comment-by">
+              Jonathan
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201676312813a970b">Feb 27, 2012 4:15:48 PM</a></div>
+
+		<div class="comment-content">
+			<p>Cannibalize sales of the Equinox? Of course it would. Welcome to the party. Could it be that SUVs are just higher-margin products and GM enjoys ripping off its customers? No, not really, but I still want the damn wagon in the US market.</p>
+
+<p>Anyway, of course I would consider a Cruze wagon. The Sonic is too small. </p>
+
+<p>But why the sad face about the Elantra wagon replaced by the new hatch?</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201676312b82e970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201676312b82e970b">
+             <div id="comment-by">
+              Fix it again
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201676312b82e970b">Feb 27, 2012 5:07:37 PM</a></div>
+
+		<div class="comment-content">
+			<p>It&#39;s a shame that they&#39;re trying to make station wagons so popular. They&#39;re just a low rider version of a crossover for people who want to pretend they&#39;re cool...with worse visibility, safety and utility. Personally I would rather see the equinox here and leave the cruze wagon to Europe where it belongs.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20163021eefc8970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20163021eefc8970d">
+             <div id="comment-by">
+              D
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20163021eefc8970d">Feb 27, 2012 6:27:02 PM</a></div>
+
+		<div class="comment-content">
+			<p>Why are the taillights on the wagon different? The white bar doesn&#39;t stretch across to the trunklid piece on the left...</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20163021f7e68970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20163021f7e68970d">
+             <div id="comment-by">
+              300zx_guy
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20163021f7e68970d">Feb 27, 2012 7:21:22 PM</a></div>
+
+		<div class="comment-content">
+			<p>I would be interested in a Cruze wagon, but not at all in an Equinox.  Jonathan is not far off with his suspicion that GM would rather sell you the higher margin Equinox.  Also, CAFE rules come into play, which paradoxically favor the less efficient CUVs over wagons because they fall in different CAFE categories even though they are functionally the same thing in a slightly different form factor.  Say thank you for this nonsense next time you see a lobbyist.  I suspect we&#39;ll see more people willing to choose wagons over CUVs as gas price rise.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016763140ca7970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016763140ca7970b">
+             <div id="comment-by">
+              300zx_guy
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016763140ca7970b">Feb 27, 2012 7:28:05 PM</a></div>
+
+		<div class="comment-content">
+			<p>To D: the rear lights are different because this is a European spec car, the red light on the left side is a rear fog lamp, which is a Euro requirement.  Not sure why they didn&#39;t just make the two lamps appear the same, with a functioning fog lamp only on the left, other than maybe to save a few dollars by not making a Euro-specific right taillamp assembly (with GM, I could believe that).</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016763154837970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016763154837970b">
+             <div id="comment-by">
+              LJS
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016763154837970b">Feb 27, 2012 9:46:04 PM</a></div>
+
+		<div class="comment-content">
+			<p>or....</p>
+
+<p><a href="http://www.holden.com.au/vehicles/series-ii-cruze/exterior" rel="nofollow">http://www.holden.com.au/vehicles/series-ii-cruze/exterior</a></p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e83e9e6c970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e83e9e6c970c">
+             <div id="comment-by">
+              g
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e83e9e6c970c">Mar 1, 2012 4:56:49 PM</a></div>
+
+		<div class="comment-content">
+			<p>YES! BRING CRUZE WAGON! Especially if it&#39;s as efficient as the sedan. And who says Americans don&#39;t like wagons? Seems to me every block I see at least one Subaru Outback, Passat Wagon, or Jetta Wagon. This could be the vehicle for the wagon faithful when their old cars burn out.<br />
+</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016763853709970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016763853709970b">
+             <div id="comment-by">
+              vipkat
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016763853709970b">Mar 7, 2012 9:40:19 AM</a></div>
+
+		<div class="comment-content">
+			<p>if its less than 20k id buy it! it will sell at least 10k units</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016302ae0617970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016302ae0617970d">
+             <div id="comment-by">
+              Cyrus
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016302ae0617970d">Mar 10, 2012 11:34:28 AM</a></div>
+
+		<div class="comment-content">
+			<p>Why are the folks at GM so dumb? Don&#39;t they remember the Pontiac Vibe? That&#39;s what I have and that&#39;s what I&#39;d like when I buy a new car. The Cruz station wagon would appeal to all the Vibe owners, whose Vibes are &quot;getting on.&quot; I would never own a cross over--to bulky and big.</p>
+
+<p>Wake up, GM!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016763a426b8970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016763a426b8970b">
+             <div id="comment-by">
+              Max Reid
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016763a426b8970b">Mar 10, 2012 5:54:30 PM</a></div>
+
+		<div class="comment-content">
+			<p>It will sell,  but 1 condition.</p>
+
+<p>Raise the height by 2 - 3 inches and call it CUV (Crossover),  Prius V is a hot seller.  Wagon is just a old term,  call it CUV.  CUVs have captured 22% of market share in USA and this will increase.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201676402eaae970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201676402eaae970b">
+             <div id="comment-by">
+              Aaron
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201676402eaae970b">Mar 20, 2012 1:08:10 AM</a></div>
+
+		<div class="comment-content">
+			<p>Yes I would buy one I love the look and it&#39;s a chevy must I say more.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168e9d8a2f1970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168e9d8a2f1970c">
+             <div id="comment-by">
+              JudyG46
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168e9d8a2f1970c">Apr 9, 2012 7:44:08 AM</a></div>
+
+		<div class="comment-content">
+			<p>I would love to own one of these station wagons!  I&#39;m actually considering buying a classic GM wagon just because I want a wagon!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016764eff41b970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016764eff41b970b">
+             <div id="comment-by">
+              Rich H
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016764eff41b970b">Apr 11, 2012 9:47:52 AM</a></div>
+
+		<div class="comment-content">
+			<p>I love my Cruze and would like it even more if it were a Wagon! Come on Chevy!!!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20163042be7d4970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20163042be7d4970d">
+             <div id="comment-by">
+              Johnnypell
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20163042be7d4970d">Apr 14, 2012 5:54:35 PM</a></div>
+
+		<div class="comment-content">
+			<p>LCome on Chevy bring it to the US </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168ea21678c970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168ea21678c970c">
+             <div id="comment-by">
+              Johnnypell
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168ea21678c970c">Apr 14, 2012 5:58:17 PM</a></div>
+
+		<div class="comment-content">
+			<p>I have two Chevy Astro vans that 300,000 miles on them waiting to by another Chevy but there is nothing that I like , may I also add I own 7 chevrolets I have  a 66  nova wagon , I&#39;ll buy the Cruze wagon if it comes to the USA , I don&#39;t want to be forced to by a foreign car but GMs not making it easy </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168ea596df2970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168ea596df2970c">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://myspace.com/583438864" href="http://myspace.com/583438864">Doug McDonald</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168ea596df2970c">Apr 18, 2012 8:59:53 PM</a></div>
+
+		<div class="comment-content">
+			<p>Why GM, oh Why??  Force me to buy another VW because I need an economical and efficient wagon to carry grandchildren and loads between home and cottage.  Born and raised in Detroit and eagerly awaiting a hometown vehicle, I remain...<br />
+Frustrated in Ann Arbor.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016765fc3062970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016765fc3062970b">
+             <div id="comment-by">
+              Andrew Kubik
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016765fc3062970b">May 1, 2012 5:05:46 PM</a></div>
+
+		<div class="comment-content">
+			<p>I would buy a Cruze Wagon in heartbeat. That goes for a Ford Focus Wagon as well. I really want to buy a true &#39;Made in the USA&#39; car, but if our own people aren&#39;t going to offer it, I&#39;m not spending over 20K on a &#39;compromise vehicle&#39;. Maybe it&#39;s VW or some other brand again ...</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20168eaffd43f970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20168eaffd43f970c">
+             <div id="comment-by">
+              Max Reid
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20168eaffd43f970c">May 1, 2012 7:57:19 PM</a></div>
+
+		<div class="comment-content">
+			<p>Earlier CUVs like Escape &amp; CR-V were the trade off vehicles between Sedans &amp; SUVs.  Now with higher gas prices,  we need a trade off vehicle between Sedan and CUV and thats the Wagon.</p>
+
+<p>Slowly many foreign wagons like Prius V, Fiat 500L is coming and its high time, GM &amp; Ford also launch the wagons.  Also launch the Diesel version.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20167668e5808970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20167668e5808970b">
+             <div id="comment-by">
+              Chrisb
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20167668e5808970b">May 17, 2012 1:45:02 AM</a></div>
+
+		<div class="comment-content">
+			<p>I like the idea, but I&#39;d have to see it in the flesh.  The aggresively sloped rear glass looks great and implies some sportiness, but it really eats into interior volume.  If the overall length of the wagon is the same as the sedan, then paying a (likely) premium for a modest increase in interior space is a head scratcher.  Wagons are about fuel efficiency WITH extra space, right?</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017742921e69970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017742921e69970d">
+             <div id="comment-by">
+              Bill Rymer
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017742921e69970d">Jun 20, 2012 2:40:56 PM</a></div>
+
+		<div class="comment-content">
+			<p>I bought a Elabtra Touring because I like station wagons.  Now they will not be available.   The Chevy cruze really looks good to me.  So why not here in the USA</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017742a08356970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017742a08356970d">
+             <div id="comment-by">
+              Shawn
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017742a08356970d">Jun 22, 2012 4:55:08 PM</a></div>
+
+		<div class="comment-content">
+			<p>I would look at it to replace my Pontiac Vibe. Equal or better fuel economy and cargo room and it would be a serious consideration.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017742a0e5ca970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017742a0e5ca970d">
+             <div id="comment-by">
+              Volume Van
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017742a0e5ca970d">Jun 22, 2012 6:02:18 PM</a></div>
+
+		<div class="comment-content">
+			<p>Yes, wagon has lot of interior volume.  Especially if you fold the rear seat, you get a room like space to carry much bigger items which cannot be done in sedan.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017742a8c1b8970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017742a8c1b8970d">
+             <div id="comment-by">
+              Heidi
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017742a8c1b8970d">Jun 23, 2012 9:33:13 PM</a></div>
+
+		<div class="comment-content">
+			<p>What is WRONG with car makers?  There is nothing over there that isn&#39;t a small hatch or a large SUV, I need space for a large dog and carrying things like bales of straw and mulch, but SUV/CUV are too big, crap on gas, and too expensive. Why do automakers insist that what we want wont sell here? Diesels? Check. Wagons? Check.  Larger hatches/people carriers? Check.  I&#39;m very disappointed with the lack of choice, and seemingly nothing to replace my aging Kia Rondo, hands down the most functional car I have ever had.  And of course, it&#39;s gone too....</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2016767f31af0970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2016767f31af0970b">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://www.hotelmandarina.com" href="http://www.hotelmandarina.com">Gary</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2016767f31af0970b">Jun 28, 2012 1:40:49 PM</a></div>
+
+		<div class="comment-content">
+			<p>The tired old comments about Americans not liking hatches and wagons are exactly that... tired and untrue.</p>
+
+<p>On Long Island there are tons of new hatches and wagons... Matrix, Versa, Impreza, Jetta, Mazda 3... I don&#39;t know why Mazda stopped selling the 6 hatch here... they were getting popular just as they changed the body style. Car companies are just looking for a reason to keep selling their SUV&#39;s because they make a better profit than hatches and wagons.<br />
+While it is true that many people consider wagons uncool it is no way as bad as the industry wants you to believe.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20177432ef225970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20177432ef225970d">
+             <div id="comment-by">
+              Hydiesel
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20177432ef225970d">Jul 9, 2012 3:00:18 PM</a></div>
+
+		<div class="comment-content">
+			<p>GM is fixing to lose a customer. My last three vehicles were GM. I did like them but I want a Cruze Hatchback Diesel. Now looking at VW Sportwagen TDI, Ford C Max (if it ever gets here) and Prius V.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017616750adb970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017616750adb970c">
+             <div id="comment-by">
+              RG
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017616750adb970c">Jul 14, 2012 12:25:19 PM</a></div>
+
+		<div class="comment-content">
+			<p>I have a jetta TDI sportwagen and will only buy diesels.  Way better mileage and torque.  The wagon is very practical, as you can fit way more into the trunk.  The Europeans have it figured out.  I would buy the chevy cruze wagon diesel if they sold it in the US.  Until then I&#39;m sticking with VW and Audi.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20177437492bf970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20177437492bf970d">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://tirecouponssale.com/" href="http://tirecouponssale.com/">sachin</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20177437492bf970d">Jul 18, 2012 10:09:53 PM</a></div>
+
+		<div class="comment-content">
+			<p>Efficiency wheels usually use out quicker, <br />
+while wheels that give a more relaxed trip may <br />
+be less nimble in the sides.This is the reason why <br />
+we must be cautious of the quality of the wheels before purchasing.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017616975a56970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017616975a56970c">
+             <div id="comment-by">
+              paul
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017616975a56970c">Jul 20, 2012 5:20:36 PM</a></div>
+
+		<div class="comment-content">
+			<p>I want to tell that agree completely with most previous posts. It seems to me that: - first - American brands do not want to produce wagons (they have better margin with SUVs) and keep saying that people don&#39;t like them; - second - lots o fpeople so dull that it is enough to say in the ad that SUV is something very special and they even don&#39;t think themeselves. The SUV is, actualli, the same hated Hatchback &amp; Station Wagon breded in one car. Just the SUV owners can not put long enough subjects, which Station Wagon can accomodate; SUV consumes much more gas; SUV is considerabely less stable on the road due to its hight. To American car producers: think why the VW, Audi, BMW and Subaru Station Wagons are still popular. Really - no big brainers needed....</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20177438e93a1970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20177438e93a1970d">
+             <div id="comment-by">
+              morgan
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20177438e93a1970d">Jul 23, 2012 8:01:43 PM</a></div>
+
+		<div class="comment-content">
+			<p>YES, station wagons are great road cars. A,B,C,and D pillars for strength and rigidity. Please offer it with a 6 cyl.and beef up the suspension,folks with wagons go places and haul stuff. Great looking vehicle, too bad you can only see them in Europe.  Hang in there people, it will arrive soon.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017616dd2823970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017616dd2823970c">
+             <div id="comment-by">
+              randy
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017616dd2823970c">Jul 29, 2012 10:04:46 PM</a></div>
+
+		<div class="comment-content">
+			<p>another vibe owner here.looked at the cruze just a little bit to small.but would really like a cruze wagon.i guess its a kia soul then for me.<br />
+all the cool gms are overseas</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017743e395ba970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017743e395ba970d">
+             <div id="comment-by">
+              DC2
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017743e395ba970d">Aug 3, 2012 3:48:58 PM</a></div>
+
+		<div class="comment-content">
+			<p>Had this been available I would not have purchased a Dodge Caliber for my wife.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20167694b25fd970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20167694b25fd970b">
+             <div id="comment-by">
+              Barbin
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20167694b25fd970b">Aug 15, 2012 1:30:41 PM</a></div>
+
+		<div class="comment-content">
+			<p>We are looking for a small-ish vehicle for daughter who needs to carry guitars and other music accoutrements as well as materials used in home remodeling.  A Chevy Cruze wagon would be perfect. On our next trip to Europe can we purchase one there and bring it back? </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20167694b3b7a970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20167694b3b7a970b">
+             <div id="comment-by">
+              robert
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20167694b3b7a970b">Aug 15, 2012 1:50:15 PM</a></div>
+
+		<div class="comment-content">
+			<p>I&#39;ll take 1 if it is an AWD 6MT diesel</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c31592f85970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c31592f85970b">
+             <div id="comment-by">
+              Ralph Daehn
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c31592f85970b">Aug 18, 2012 11:31:52 PM</a></div>
+
+		<div class="comment-content">
+			<p>I want an American Wagon with a diesel engine, but it seems like it is not going to happen.  My next car probably will be a VW Sport Wagen/TDI.  My favorite car was the Buick Estate Wagon.  I had two of them.  The 1st was driven 270,000 miles.  I can&#39;t understand why we have no more U.S. Wagons.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c317c8555970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c317c8555970b">
+             <div id="comment-by">
+              wolfer
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c317c8555970b">Aug 26, 2012 4:45:52 PM</a></div>
+
+		<div class="comment-content">
+			<p>GM has a way to drive people nuts. The Cruze wagon is a no brainer. It is not going to cannibalize Equinox sales, because those who buy crossovers don&#39;t buy wagons. What it will do is add a new set of buyers who hate SUV and crossovers, like me who like the driving dynamics of a car but with versatility. I now have Passat wagon that I love but needs replacing and lo and behold no more Passat wagons. My previous wagon was a Saab. By the way GM, I also  have 09 Silverado, it&#39;s my fourth and their great trucks. Use it for work only.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c3184457c970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c3184457c970b">
+             <div id="comment-by">
+              Rob
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c3184457c970b">Aug 28, 2012 8:27:05 AM</a></div>
+
+		<div class="comment-content">
+			<p>I drive a tdi, and would love to drive a diesel Cruze wagon as my next car.  GM makes horrible marketing decisions, and if you recall, just a year or two ago claimed there was no interest in a diesel.  They will change their minds, but probably too late for me.  My jetta is going to need replacing in another couple years, and another VW looks like it will be the only option.  The comment about SUV drivers looking &quot;cooler&quot; made me lol.  Try not paying more than 60 bucks to fill up and go for 600 miles like I do regularly in my uncool car.  Cool is as cool does, throw your money away, cool cat.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3bd5599d970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3bd5599d970c">
+             <div id="comment-by">
+              carlover
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3bd5599d970c">Sep 4, 2012 6:49:31 PM</a></div>
+
+		<div class="comment-content">
+			<p>I wouldblove a Chevy cruse wagon! </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c31d132ab970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c31d132ab970b">
+             <div id="comment-by">
+              Aunt Bee
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c31d132ab970b">Sep 12, 2012 2:07:29 PM</a></div>
+
+		<div class="comment-content">
+			<p>I want a wagon, but I don&#39;t want a VW or a Ford.  I would love to see the Chevy Cruze Wagon in the United States.  Come on Chevrolet...you have a market here!!!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c31d1e347970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c31d1e347970b">
+             <div id="comment-by">
+              drewdown1
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c31d1e347970b">Sep 12, 2012 5:03:51 PM</a></div>
+
+		<div class="comment-content">
+			<p>Look at the Juke &amp; the Rouge....?????????????Do I need to say more?</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c320336b8970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c320336b8970b">
+             <div id="comment-by">
+              Murat Tanyel
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c320336b8970b">Sep 20, 2012 1:40:40 PM</a></div>
+
+		<div class="comment-content">
+			<p>If Chevy does not offer a hatchback or SW Cruze or a hatchback sonic with automatic climate control, I&#39;ll opt for a Focus or a Subaru.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c3214d351970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c3214d351970b">
+             <div id="comment-by">
+              Ian
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c3214d351970b">Sep 23, 2012 12:50:55 PM</a></div>
+
+		<div class="comment-content">
+			<p>If they offered a Cruze Wagon with a diesel with 45+ mpg I would buy it. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee3b9ee24970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee3b9ee24970d">
+             <div id="comment-by">
+              Volume Van
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee3b9ee24970d">Sep 23, 2012 5:21:35 PM</a></div>
+
+		<div class="comment-content">
+			<p>Raise the height of Cruze Wagon and brand it as CUV with some other name,  how about Cruzer.</p>
+
+<p>Rogue is selling @ 10,000 units / month, although Juke sells at much lower level since that is a new segment.<br />
+</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3c48a1c4970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3c48a1c4970c">
+             <div id="comment-by">
+              Randall
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3c48a1c4970c">Sep 24, 2012 10:10:50 AM</a></div>
+
+		<div class="comment-content">
+			<p>I am about to buy a Chevy Spark. If chevy comes out in2014 with a diesel wagon I will give the spark to my son and go get a wagon . I have really wanted to replace my 2006 suzuki forenza wagon but could find nothing. The forenza was sold in canada as the chevy optra. and in europe as the chevy lacetia (sp?) It would have been a Daewoo Nubira replacement had that comapny survived.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee3d2fcfd970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee3d2fcfd970d">
+             <div id="comment-by">
+              Will
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee3d2fcfd970d">Sep 27, 2012 8:28:50 PM</a></div>
+
+		<div class="comment-content">
+			<p>I agree with all of the positive comments here in favor of a Cruze wagon. Marketing people are often very wrong and are influenced by accountants that run the car companies. GM has always tried to tell the public what they want by clever advertising, and keep-up-with-the-Joneses mentality, and the SUV segment is clear indication of consumer stupidity. Sure, 2 percent of people that buy an SUV really need a behemoth vehicle, but the other 99 per cent have never needed such huge vehicles. Station wagons were very popular until the accountants discovered how much profit they could get from turning trucks into passenger vehicles. GM, Ford and the Japanese-Korean companies should be ashamed of themselves for not offering compact and mid-size wagon versions of their sedans in North America. For many years the Eurpoeans and others have had a much greater and more sensible selection of vehicles. The SUVs make no more sense than having an elephant as a pet.<br />
+A Cruze wagon would sell quite well in North America, but GM prefers the greater profit margins of SUVs and whatever you want to call those other overweight and inefficient vehicles.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c322fb988970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c322fb988970b">
+             <div id="comment-by">
+              DENNY WINTERSTEEN
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c322fb988970b">Sep 27, 2012 10:03:39 PM</a></div>
+
+		<div class="comment-content">
+			<p>I presently drive a 2009 HHR and this configuration fits us just fine. But--the HHR is now gone. I am a retired GM employ and if the Cruze station wagon comes out I definitely would consider one. About a 2.0 diesel or 2.0 turbo diesel, would be the icing on the cake !! I have looked at Subaru Outback for some time and they are talking about a diesel in the US, as they already have one in Europe, but EPA standards in the US are much stricter. Also the Subaru CVT transmission is a tried and true design and has held up well. GM is worried that a Cruze wagon will hurt Equinox sales. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3c79dc11970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3c79dc11970c">
+             <div id="comment-by">
+              Larry
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3c79dc11970c">Oct 3, 2012 7:17:44 AM</a></div>
+
+		<div class="comment-content">
+			<p>I would buy a Chevy Cruze Station Wagon, I have been looking for an American Station wagon for some time now.  I currently drive a Dodge Magnum and have been driving station wagons for over 20 years.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3c854ce1970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3c854ce1970c">
+             <div id="comment-by">
+              Kelly
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3c854ce1970c">Oct 5, 2012 10:13:31 AM</a></div>
+
+		<div class="comment-content">
+			<p>I now have an Eco Cruze with a manual transmission.  I&#39;m have great luck with it and have always liked the look of a sport wagon.  I&#39;d get a Cruze wagon.  If the price was reasonable I&#39;d get it with a turbo diesel.  A little more room and the ease of putting in a stroller or boxes into a wagon would make life so much easier for a small family.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3d7246b7970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3d7246b7970c">
+             <div id="comment-by">
+              Tom Gerhart
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3d7246b7970c">Nov 9, 2012 11:55:26 AM</a></div>
+
+		<div class="comment-content">
+			<p>Yes, I would buy it in a minute!  My son bought a Cruze sedan earlier this year, and I said I would really like the Cruze if it was available as a sport wagon, and here it is only in Europe, Why?</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c335b6c09970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c335b6c09970b">
+             <div id="comment-by">
+              ohx
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c335b6c09970b">Nov 12, 2012 12:21:19 AM</a></div>
+
+		<div class="comment-content">
+			<p>I would definitely buy this</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee62a06ab970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee62a06ab970d">
+             <div id="comment-by">
+              Dino
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee62a06ab970d">Dec 11, 2012 10:05:29 PM</a></div>
+
+		<div class="comment-content">
+			<p>GM = A$$Clowns!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c34ecd18d970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c34ecd18d970b">
+             <div id="comment-by">
+              DesignerX
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c34ecd18d970b">Dec 23, 2012 9:16:29 AM</a></div>
+
+		<div class="comment-content">
+			<p>GM LISTEN! People want WAGONS! not a soccer mom mobile = Equinox!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee6904c35970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee6904c35970d">
+             <div id="comment-by">
+              DesignerY
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee6904c35970d">Dec 23, 2012 9:18:18 AM</a></div>
+
+		<div class="comment-content">
+			<p>BOYCOTT GM, Buy other USA automobiles! - Ford and that other one.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3f1bbb70970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3f1bbb70970c">
+             <div id="comment-by">
+              Tate
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3f1bbb70970c">Dec 23, 2012 9:21:05 AM</a></div>
+
+		<div class="comment-content">
+			<p>It&#39;s truly sad. I want to buy a Cruze wagon, but if they don&#39;t offer it here,then I will go to another manufacturer for a wagon, enough said. GM is still losing sales because of this.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c34ecde62970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c34ecde62970b">
+             <div id="comment-by">
+              Jake
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c34ecde62970b">Dec 23, 2012 9:25:37 AM</a></div>
+
+		<div class="comment-content">
+			<p>GM = Worst managed corp in US and globally, but we will still bail them out after each of their failures. Tragic! Give the consumer what they want! DesignerY is correct, BOYCOTT them.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c34ece729970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c34ece729970b">
+             <div id="comment-by">
+              Jim
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c34ece729970b">Dec 23, 2012 9:32:07 AM</a></div>
+
+		<div class="comment-content">
+			<p>How you spend your dollar speaks volumes to manufacturers. That is the true power of the consumer.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d3f88c1a8970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d3f88c1a8970c">
+             <div id="comment-by">
+              Andrea
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d3f88c1a8970c">Jan 5, 2013 7:44:03 PM</a></div>
+
+		<div class="comment-content">
+			<p>If manufacturer&#39;s catered to the right market, they would be pleasantly surprised. Sport wagons look cool, handle great, get good gas mileage, and can haul almost anything.  Audi knows, Subaru is going the wrong direction. Just bought a used Saab A-3 and love it.  </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c3632b56f970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c3632b56f970b">
+             <div id="comment-by">
+              Emmett
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c3632b56f970b">Jan 23, 2013 9:05:33 PM</a></div>
+
+		<div class="comment-content">
+			<p>It&#39;s all about profit margin. GM is currently at 6% and want to get to 10% for 2013. I will go buy a wagon from a different automaker. They will not get there with my next purchase.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d40622448970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d40622448970c">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://www.rantlets.net" href="http://www.rantlets.net">Alan</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d40622448970c">Jan 23, 2013 10:01:57 PM</a></div>
+
+		<div class="comment-content">
+			<p>Of course people hate station wagons.  They&#39;re the perfect vehicle.  </p>
+
+<p>All they need to be is a little higher so old guys like me don&#39;t have to get on our hands and knees to crawl in anymore.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d40f05d6e970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d40f05d6e970c">
+             <div id="comment-by">
+              Smokerr
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d40f05d6e970c">Feb 10, 2013 6:33:05 PM</a></div>
+
+		<div class="comment-content">
+			<p>We bought a diesel Passat wagon as we had no use for a cross over with its much higher fuel use and excess size.  </p>
+
+<p>I find it insane that neither Chevy or Ford  will offer a wagon in the Cruz or  Ford Fusion,    Both are a natural fit.   </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d40f060ff970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d40f060ff970c">
+             <div id="comment-by">
+              Smokerr
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d40f060ff970c">Feb 10, 2013 6:36:03 PM</a></div>
+
+		<div class="comment-content">
+			<p>I will add in that I did not want to buy a VW but they were the only ones that offered that kind of fuel economy and performance (not hot rod but very good).   32 mpg in town and a solid 42 to 44 on the highway.   The Passat replaced a SUV for 95% or better of our use.  You can&#39;t do that with a Sedan and no cross over has the economy in gas, and not diesels offered.   </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017c375b9661970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017c375b9661970b">
+             <div id="comment-by">
+              Elda Zoorain
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017c375b9661970b">Mar 6, 2013 9:32:53 AM</a></div>
+
+		<div class="comment-content">
+			<p>This is why Ford is kicking the pants off Chevy, Chrysler and VW. Ford is the only company to think globally, and offer great vehicles world wide. The Transit Connect and the new T-series are only the latest examples. I was a Chevy buyer for decades, and always disparaged Ford. But the tide has turned and now it&#39;s just the opposite. And what happened to VW? Their mismanagement is now legendary (think Routan instead of Eurovan).</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d41b09eb9970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d41b09eb9970c">
+             <div id="comment-by">
+              Tommy Fryar
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d41b09eb9970c">Mar 10, 2013 10:41:12 AM</a></div>
+
+		<div class="comment-content">
+			<p>My wife wanted a Chevrolet Station Wagon in 2011.  We were told that no one made a wagon to be sold in America.  We did find wagons at Volkswagen (but not the Passat Wagon), BMW did not have any in stock, the Subaru was no longer a wagon, And Volvo was the only true wagon to be found.  We bought the V50 and were told that was the last wagon that the Austin, TX dealer would be able to sell.  We love the wagon, but really wanted to buy a Chevy!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee925d6bb970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee925d6bb970d">
+             <div id="comment-by">
+              RadarAl
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee925d6bb970d">Mar 10, 2013 1:24:25 PM</a></div>
+
+		<div class="comment-content">
+			<p>News for Chevrolet Communications Manager Annalisa Esposito Bluhm. I am in the market for a wagon and never will buy a crossover or SUV - so an Equinox is out of the question. So Chevy&#39;s refusal to sell Cruze wagons in the US will send me elsewhere to purchase. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee97adf2a970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee97adf2a970d">
+             <div id="comment-by">
+              merle
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee97adf2a970d">Mar 18, 2013 5:00:16 AM</a></div>
+
+		<div class="comment-content">
+			<p>I need a wagon like my 1987 Pontiac 600 LE,by G.M. immediately.<br />
+It is perfect for wheelchair access- 60-40 driver seat, lower height seat for tranferring in and out,gear shift on column,ample leg room,huge rear loading space for wheelchairs, great visibility, good mileage-love G.M. wagons!!!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee9b0b216970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee9b0b216970d">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://yahoo.com" href="http://yahoo.com">Paul</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee9b0b216970d">Mar 23, 2013 8:07:02 PM</a></div>
+
+		<div class="comment-content">
+			<p>We need this car here. It would make Chevy more competitive in the segment. As far as taking away sales of said Equinox: BS people seem to buy it because that&#39;s all they&#39;ve got. It&#39;s bigger, gets worse mileage etc. Besides  G.M. and the public need to realize the tougher gas mileage regulations that are coming. But all they have to do is offer it so it gets into the corporate average. How many get sold is another story. then it also has to be profitable as well. that part I&#39;m not sure would go well.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017ee9da5ffd970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017ee9da5ffd970d">
+             <div id="comment-by">
+              Joseph Reed
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017ee9da5ffd970d">Mar 30, 2013 8:36:59 AM</a></div>
+
+		<div class="comment-content">
+			<p>I don&#39;t want a truck (SUV,CRV,CUV, et.al.).  I want a Cruze Wagon!  A General Motors Chevrolet Cruze Wagon.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d429678ef970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d429678ef970c">
+             <div id="comment-by">
+              Brian Woodburn
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d429678ef970c">Apr 6, 2013 7:49:02 PM</a></div>
+
+		<div class="comment-content">
+			<p>We had to replace our 2001 Saturn LW300 last year and settled for a sedan. We have had a hatchback or wagon since 1987 until 2012. The answer is YES!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017d429d914d970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017d429d914d970c">
+             <div id="comment-by">
+              Others
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017d429d914d970c">Apr 7, 2013 9:56:42 PM</a></div>
+
+		<div class="comment-content">
+			<p>Mr Brian</p>
+
+<p>You could have gone for Prius which has plenty of trunk space.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017eea819141970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017eea819141970d">
+             <div id="comment-by">
+              Tom
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017eea819141970d">Apr 23, 2013 12:13:27 PM</a></div>
+
+		<div class="comment-content">
+			<p>I have been driving a 2001 Volvo V70 wagon since purchased new. My model is a 5 cylinder gasoline miser with highway numbers at or above 30 mpg many, many times. No joke. It is a comfortable and well designed vehicle. Interestingly, Volvo has dropped that series in favor of models that get LESS mpg than mine. Amazing how little progress has been made by that car maker. Anyway, IF Chevrolet introduced their Cruz wagon into the USA, I would purchase one to replace my LOW mileage Volvo - only 58xxx miles since new. GM is a prime example of what is WRONG with the marketing aspect of US vehicles. I&#39;d consider a Ford ONLY because my tax dollars didn&#39;t get thrown at them, but am not interested in SUV/Crossover type cars. Oh well - keep on chugging in my &quot;vintage&quot; Volvo wagon.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2017eea81b4fa970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2017eea81b4fa970d">
+             <div id="comment-by">
+              Des Alba
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2017eea81b4fa970d">Apr 23, 2013 12:41:58 PM</a></div>
+
+		<div class="comment-content">
+			<p>I owned a couple of Volvos during the seventies, a 262 and later a 245.  </p>
+
+<p>They were great for their day and lasted a long time.  My wife loved both.  We used them both for more than twenty years.</p>
+
+<p>But Volvo, in spite of their past innovations, is a dying brand that has lost most of its following.</p>
+
+<p>Chinese ownership hasn&#39;t helped and the brand has fallen out of favor with all but the most ardent fans.  </p>
+
+<p>A young married couple I know own a Cruze but as their family is expanding almost yearly, they are considering buying a station wagon so they don&#39;t have to lift the kiddies so high into their car seats.</p>
+
+<p>Although a Cruze wagon is a nice twist on the plot, it is still the size of a Cruze, without the trunk.</p>
+
+<p>So for growing families who increasingly need more space as their family grows, something larger may be more appropriate.</p>
+
+<p>There are plenty of other choices out there so in my estimation a Cruze wagon would be aimed at a very small, select group of buyers.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201901bbaa405970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201901bbaa405970b">
+             <div id="comment-by">
+              NN
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201901bbaa405970b">Apr 30, 2013 10:59:22 PM</a></div>
+
+		<div class="comment-content">
+			<p>Chevy&#39;s bosses make more profit on SUVs and trucks.  That&#39;s why they feed American public (which eats commercials for breakfast) with whatever they THINK is better for it.  And that&#39;s why Toyota&#39;s Prius is 10 years ahead of Chevy that has been losing money on Volt all along... </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20192aa35986b970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20192aa35986b970d">
+             <div id="comment-by">
+              Matt C. 
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20192aa35986b970d">May 22, 2013 6:45:21 PM</a></div>
+
+		<div class="comment-content">
+			<p>Yes.   Definitely.   I am thinking of importing a Cruz wagon.   I was floored when I was told they are not available in the US. I had gone to the dealer specifically to buy a Cruz wagon I saw on line.  This is really a bummer.  I have been looking for a small wagon, 36+ mpg, made in USA ever since my Nissan wagon died in the mid nineties.  Who needs a hybrid when a simple car like this will do the job. </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20192aac513cf970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20192aac513cf970d">
+             <div id="comment-by">
+              jb
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20192aac513cf970d">Jun 5, 2013 12:40:04 PM</a></div>
+
+		<div class="comment-content">
+			<p>I would buy a Cruze wagon. Currently driving a 2001 Saturn LW300. There is nothing on the market that I would care to replace it with. When it finally quites, I will have to make a choice. Probably a Subaru Outback.<br />
+I have not interest in a crossover because a the visibillty issues and don&#39;t want an SUV </p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201910309c753970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201910309c753970c">
+             <div id="comment-by">
+              Gary
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201910309c753970c">Jun 6, 2013 5:25:27 PM</a></div>
+
+		<div class="comment-content">
+			<p>I would buy this in a second!</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201901d3b243b970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201901d3b243b970b">
+             <div id="comment-by">
+              Jamie
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201901d3b243b970b">Jun 10, 2013 2:33:40 PM</a></div>
+
+		<div class="comment-content">
+			<p>I just got back from Sweden.<br />
+I rented a Cruz Diesel Wagon with a 6 speed manual.<br />
+I would love to be able to buy this car in the US. I like the idea of a diesel but inb the Cruz I would much prefer to have a wagon than a sedan. Unless they bring the wagon to the US i will probably be buying a Jetta deisel.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201901e01d027970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201901e01d027970b">
+             <div id="comment-by">
+              <a rel="nofollow" target="_blank" title="http://www.google.com" href="http://www.google.com">Erness Wild</a>
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201901e01d027970b">Jun 29, 2013 8:15:46 AM</a></div>
+
+		<div class="comment-content">
+			<p>I wouldn&#39;t buy it because it&#39;s not a stationwagon. I own a stationwagon. A stationwagon needs to be able to carry large items. My stationwagon can take a 4&#39; x 8&#39; sheet of plywood, flat. The tailgate must be able to open down and line up with the floor. Stationwagon means &quot;room/space&quot; to put lots of stuff and people.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e2019103f9e3ff970c"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e2019103f9e3ff970c">
+             <div id="comment-by">
+              Jonpaul thomasseau
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e2019103f9e3ff970c">Jun 29, 2013 1:22:15 PM</a></div>
+
+		<div class="comment-content">
+			<p>Would buy a diesel wagon. It&#39;s nonsense to say Americans don&#39;t want wagons, manufacturers don&#39;t want to make them...</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20192abe9f2b7970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20192abe9f2b7970d">
+             <div id="comment-by">
+              Kim Rapczak
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20192abe9f2b7970d">Jul 7, 2013 7:27:42 PM</a></div>
+
+		<div class="comment-content">
+			<p>One of the best cars I ever owned was the little Ford Escort wagon.  (Go ahead---laugh----but the car was perfect for me.)  I buy GM because I have a &quot;classic&quot; GM credit card which earns me 5 cents back on every dollar spent towards a new GM car.   The only GM brand I can afford is the Chevrolet.  I have a Cobalt now, with its maddening small, narrow trunk.  Big deal--fold down seats.  Still can&#39;t carry much.  Wagons, GM!  We want wagons!   Don&#39;t be so damned greedy.  I will NEVER buy an SUV.   (In the past I&#39;ve even considered teeny tiny pickups like the old S-10.  But of course they don&#39;t make that anymore either.)</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e201901e8ee3cd970b"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e201901e8ee3cd970b">
+             <div id="comment-by">
+              MP
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e201901e8ee3cd970b">Aug 1, 2013 8:48:01 AM</a></div>
+
+		<div class="comment-content">
+			<p>I would probably buy two over the next two years</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+	<a id="c6a00d83451b3c669e20192aca4f596970d"></a>
+	<div class="comment" id="comment-6a00d83451b3c669e20192aca4f596970d">
+             <div id="comment-by">
+              Herb
+             </div>
+
+		 <div id="comment-postdate">
+			<a href="http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html#comment-6a00d83451b3c669e20192aca4f596970d">Aug 20, 2013 4:26:00 PM</a></div>
+
+		<div class="comment-content">
+			<p>Diesel Wagon would make great fleet car for a ton of small/medium/large businesses with highway driving requirements (total package beats out Prius V). Make also a stripped down version for this clientele and kick Toyota&#39;s butt. A well equipped &quot;cool&quot; version would do well with younger buyers - don&#39;t you want those? C&#39;mon Chevy you are smarter than being afraid of your own models, be afraid of your competitors models.</p>
+		</div>
+
+        <div class="bottom-mid"><img src="/images/lowerrule.gif" border="0" height="9" width="490"></div>
+
+
+ </div>
+
+   
+ 	
+</div>		
+</div>
+ <div class="bottom-sides"></div>
+	</div>
+<!-- comment form -->
+
+	<script type="text/javascript" src="http://static.typepad.com/.shared:vdcb131d:typepad:en_us/js/comments.js"></script>
+        <script type="text/javascript" src="http://blogs.cars.com/js/comment-slider.js"></script>
+	<script type="text/javascript">hostName = '.cars.com';</script>
+
+	<form id="comment-form"
+		method="post" action="http://www.typepad.com/t/comments">
+		<input type="hidden" name="entry_id" value="6a00d83451b3c669e2016762dbe89d970b" />
+
+		<div class="comments-open">
+			<h2 class="comments-open-header">Post a Comment&nbsp;<img src="/images/commentBubble2.gif" /></h2>
+
+			<div class="comments-open-content">
+<div class="rules-container">
+  <div class="mover">
+  <h3 id="post-rules-heading">Please remember a few rules before posting comments:</h3>
+<ul>
+<li>If you don't want people to see your email address, simply type in the URL of your favorite website or leave the field empty.</li>
+<li>Do not mention specific car dealers by name. Feel free to mention your city, state and brand.</li>
+<li>Try to be civil to your fellow blog readers. This blog is not a fan or enthusiast forum, it is meant to help people during the car-buying process and during the time between purchases, so shoppers can keep a pulse on the market.</li>
+<li>Stay on topic. We want to hear your opinions and thoughts, but please only comment about the specified topic in the blog post.</li>
+</ul>
+</div>
+<div class="comment-pusher" id="slideToggle">view posting rules</div>
+</div>
+				
+
+				
+					<script type="text/javascript" src="http://www.typepad.com/t/comments?__mode=check_login"></script>
+
+					<p id="comments-open-login" style="display: block;">
+						
+							If you have a TypeKey or TypePad account, please
+							<a href="https://www.typekey.com/t/typekey/login?v=1.0&t=a57bc183a23bc682338e0ef589cccd67a0f25f2e&lang=en_US&_return=http%3A%2F%2Fblogs.cars.com%2Fkickingtires%2F2012%2F02%2Fwould-you-buy-it-chevrolet-cruze-station-wagon.html&_portal=typepad">Sign In</a>
+						
+					</p>
+
+					<p id="comments-open-logout" style="display: none;">
+						You are currently signed in as
+						<span id="commenter-name">(nobody)</span>.
+						<a href="http://blogs.cars.com/.services/sitelogout?to=https%3A%2F%2Fwww.typekey.com%2Ft%2Ftypekey%2F%3F__mode%3Dlogout%26_return%3Dhttp%253A%252F%252Fblogs.cars.com%252Fkickingtires%252F2012%252F02%252Fwould-you-buy-it-chevrolet-cruze-station-wagon.html">Sign Out</a>
+					</p>
+				
+
+				
+                                     <div class="comment-upper"></div>
+                               
+                                       <div class="inside-comment-form">
+					<div id="comments-open-data">
+						<p>
+							<label for="comment-author">Name:</label>
+							<input id="comment-author" name="author" size="30" />
+						</p>
+						<p>
+							<label for="comment-email">Email Address:</label>
+							<input id="comment-email" name="email" size="30" />
+						</p>
+						<p>
+							<label for="comment-url">URL:</label>
+							<input id="comment-url" name="url" size="30" />
+						</p>
+						<p>
+							<label for="comment-bake-cookie"><input type="checkbox"
+								id="comment-bake-cookie" name="bakecookie" value="1" />
+								Remember personal info?</label>
+						</p>
+					</div>
+				
+
+				<p id="comments-open-text"
+					
+					>
+					<label for="comment-text">Comments:</label>
+					<textarea id="comment-text" name="text" rows="10" cols="30"></textarea>
+				</p>
+			</div>
+                        </div>
+			<div id="comments-open-footer" class="comments-open-footer">
+                         
+				<input type="submit" name="preview" id="comment-preview" value="&nbsp;Preview&nbsp;"/>
+				<input type="submit" name="post" id="comment-post" value="&nbsp;Post&nbsp;" />
+			</div>
+		</div>
+	</form>
+
+	
+		<script type="text/javascript">
+			commentSignIn();
+		</script>
+	
+
+
+<div class="bottom-sides"></div>
+
+
+
+<!-- DoubleClick Floodlight Tag -->
+<script type="text/javascript">
+  var axel = Math.random() + "";
+  var a = axel * 10000000000000;
+  document.write('<iframe src="http://fls.doubleclick.net/activityi;src=2388676;type=exter655;cat=45_in229;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+  <iframe src="http://fls.doubleclick.net/activityi;src=2388676;type=exter655;cat=45_in229;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+						</div>
+					</div>
+					<div id="beta">
+						<div id="beta-inner" class="pkg">
+							<!-- sidebar -->
+<table width="390px" border="0">
+  <tr>
+<td valign="top">
+
+
+
+
+<!-- sidebar -->
+
+<div id="carsRightRail">
+
+<script>
+
+addNamespace('CARS.gSearch');
+
+CARS.gSearch = {
+// defaults
+page: 1, qTerm: '', form: 'form.gSearch-form', resultsContainer:'div#gSearch-results-container',
+// functions
+	init: function() {
+		$(CARS.gSearch.form).each(function(index) {
+			var that = this;
+			this.id = this.id || 'form-' + String((new Date()).getTime()).replace(/\D/gi,'');
+			$(this).submit(function() {
+				CARS.gSearch.page = 1;
+				CARS.gSearch.query(CARS.gSearch.page,that); 
+				return false; 
+			});
+			$("a#blog-search",this).click(function() { CARS.gSearch.query(CARS.gSearch.page,that); return false; });
+		});
+		// There should only be one results pane on the page, but use .each() here for safety's sake
+		$(CARS.gSearch.resultsContainer).each(function(index) {
+			var that = this;
+			$('a.next',this).click(function() {
+				CARS.gSearch.page += 1;
+				CARS.gSearch.query(CARS.gSearch.page);
+				return false;
+			});
+			$('a.previous',this).click(function() {
+				CARS.gSearch.page -= 1;
+				CARS.gSearch.query(CARS.gSearch.page);
+				return false;
+			});
+			$('a.close',this).click(function() {
+				$(that).hide('slow');
+				return false;
+			});		
+		});
+	},
+	query: function(page,w) {
+		CARS.utility.logit(w);
+		if (typeof(w) !== 'undefined') { CARS.gSearch.qTerm = w.q.value; }
+		CARS.gSearch.page = page || 1;
+		var that = $('#gSearch-results-container');
+		$.getJSON("http://www.cars.com/go/blogs/google-search-data/kickingtires.jsp?callback=?", { q: CARS.gSearch.qTerm, pg: CARS.gSearch.page }, function(data) {
+			var container = $("#gSearch-results", that);
+                        $("#gSearchTitle strong").text(CARS.gSearch.qTerm);
+			container.empty();
+			$.each(data.results, function(i,result) {
+				container.append("<div class=\"result\"><a href=\"" + result.url + "\">" + result.title + " </a><p>" + result.snippet + "</p></div>");
+				
+			});
+			that.show('slow');
+		});
+
+	}
+}
+</script>
+
+<div id="gSearch-container">
+
+<div id="gSearch-results-container">
+<div class="right"><a id="close" class="close" href="">Close</a></div>
+<h2>Search Results</h2>
+<h3 id="gSearchTitle">KickingTires Search Results for <strong></strong></h3>
+<div id="gSearch-results"></div>
+
+<div id="gSearch-footer">
+<a id="prev" class="previous" href="">Previous</a> | 
+<a id="next" class="next" href="">Next</a>
+</div>
+</div>
+<div id="gSearch-form-container">
+<h4>Search Kicking Tires</h4>
+<form class="gSearch-form" id="miniForm" action="" method="get">
+<input type="hidden" name="start" value="0" />
+<input id="q" name="q" type="text" /> <input type="image" src="/images/search-button.gif" />
+</form>
+</div>
+
+<script type="text/javascript">
+CARS.gSearch.init();
+</script>
+
+</div>
+
+<!-- category Links go here -->
+
+<div id="header">
+<div class="headerTR">
+<h3>Categories</h3></div>
+</div>
+
+<div id="moduleLinks">
+<div class="mod-inside">
+  <ul>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/about-us.html">About Us</a></li>
+
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/best-sellers/">Best Sellers</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/car_buying/">Car Buying</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/car_gadgets/">Car Gadgets</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/car_reviews/">Car Reviews</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/car-seat-check/">Car Seat Checks</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/family/">Family News</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/hybridsalternative_fuels/">Hybrids/Alternative Fuels</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/incentives/">Incentives</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/in_the_news/">In The News</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/long-term-test-cars/">Long-Term Test Cars</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/movers_and_losers/">Movers and Losers</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/multicar-challenges.html">Multicar Challenges</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/photo-gallery/">Photo Galleries</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/recalls/">Recalls</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/safety/">Safety</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/video/">Video</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013-new-york-auto-show/">2013 New York Auto Show</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013-chicago-auto-show/">2013 Chicago Auto Show</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013-detroit-auto-show/">2013 Detroit Auto Show</a></li>
+<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2012-los-angeles-auto-show/">2012 L.A. Auto Show</a></li>
+
+
+
+
+
+
+</ul>
+</div>
+<div class="module-bottom"></div>
+</div>
+
+<!-- cars.com site Links go here-->
+
+<div id="header">
+<div class="headerTR">
+<h3>Cars.com Links</h3></div>
+</div>
+
+<div id="moduleLinks">
+<div class="mod-inside">
+<ul>
+<li><a href="http://www.cars.com/go/crp/index.jsp">Research a Vehicle</a></li>
+<li><a href="http://www.cars.com/go/buyIndex.jsp">Search for New & Used</a></li>
+<li><a href="http://siy.cars.com/siy/zipEntry.jsp">List Your Vehicle for Sale</a></li>
+<li><a href="http://www.cars.com/go/advice/index.jsp">Read Automotive Advice</a></li>
+<li><a href="http://research.cars.com/go/crp/reviewsIndex.jsp">Read Expert Reviews</a></li>
+<li><a href="http://www.cars.com/go/crp/consrevwidget.jsp">Review Your Own Car</a></li>
+<li><a href="http://www.cars.com/dealerreviews/">Review Your Dealership</a></li>
+<li class="borderBottom"><a href="http://www.cars.com/go/criteriaSearch/lifestyles.jsp">Find Cars That Fit Your Life</a></li>
+<li><a href="http://www.cars.com/marketplace/">Find Insurance, Parts and More</a></li>
+</ul>
+</div>
+<div class="module-bottom"></div>
+</div>
+
+
+<!-- div class="promoTile">
+<a href="http://www.cars.com/go/advice/Story.jsp?section=top&story=topScary&subject=more"><img src="/images/scarycars.gif" alt="Top 10 Scary Cars" width="163" height="93" border="0" /></a>
+</div -->
+<!-- div class="promoTile">
+<a href="http://www.surveyconsole.com/console/TakeSurvey?id=247397"><img src="/images/surveyButton.gif" alt="Kicking Tires Reader Survey" width="160" height="75" border="0" /></a>
+</div -->
+<!-- div class="promoTile">
+<a href="http://www.cars.com/go/features/autoshows/coverageIndexI.jsp?autoshow=New+York&autoshowyear=2007"><img src="/images/NewYorkAutoShow-Button.gif" alt="2007 New York Auto Show coverage" width="164" height="75" border="0" /></a>
+</div -->
+<!-- div class="promoTile">
+<a href="http://www.cars.com/go/features/autoshows/coverageIndexI.jsp?autoshow=Chicago&autoshowyear=2007"><img src="/images/ChicagoAutoShow-Button.gif" alt="2007 Chicago Auto Show coverage" width="160" height="75" border="0" /></a>
+</div -->
+<!-- div class="promoTile">
+<a href="http://www.cars.com/go/features/autoshows/coverageIndexI.jsp?autoshow=Detroit&autoshowyear=2007"><img src="/images/detroit_Button.gif" alt="2007 Detroit Auto Show coverage" width="160" height="75" border="0" /></a>
+</div -->
+<!-- div class="promoTile">
+<a href="http://www.cars.com/go/features/autoshows/coverageIndexI.jsp?autoshow=Los+Angeles&autoshowyear=2007"><img src="/images/2007LA_blogTile.gif" alt="2007 Los Angeles Auto Show coverage" width="160" height="75" border="0" /></a>
+</div -->
+<!-- div class="promoTile">
+<a href="http://www.cars.com/go/advice/Story.jsp?section=top&story=bondCars&subject=more"><img src="/images/007_teaser.gif" alt="Top 007 Cars" width="160" height="75" border="0" /></a>
+</div -->
+<!--<div class="promoTile">
+<a href="http://blogs.cars.com/kickingtires/gm_employee_pricing/"><img src="http://blogs.cars.com/kickingtires/images/incentivebadge.jpg" alt="GM Incentives Promotion" width="164" height="75" border="0" /></a>
+</div>-->
+<!--<div class="promoTile">
+<a href="http://blogs.cars.com/kickingtires/2009/02/get-kickingtires-on-your-iphone.html"><img src="/images/iphonemsg1.jpg" alt="Kicking Tires on iPhone" width="219" height="73" border="0" /></a>
+</div>-->
+
+<div class="promoTile">
+<a href="http://blogs.cars.com/kickingtires/2010/02/carscom-launches-free-iphone-app-.html"><img src="/images/KT_iphoneteaser_text.jpg" alt="KickingTires iPhone App" width="220" height="197" border="0" /></a>
+</div>
+
+<div class="promoTile">
+<a href="http://ask.cars.com/"><img src="/images/askKTPromoButton1.jpg" alt="Ask.cars.com" width="219" height="60" border="0" /></a>
+</div>
+
+<!-- Kicking Tires Recent Comments Module-->
+<div id="header">
+<div class="headerTR">
+	<h3>Recent Comments</h3></div>
+  </div>
+<div class="moduleLinks">
+   <div class="mod-inside">
+	<div id="recent-commentLinks">
+		<ul class="module-list">
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/08/2013-subaru-brz-road-trip-report.html">2013 Subaru BRZ: Road-Trip Report</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/08/2013-subaru-brz-road-trip-report.html#comment-6a00d83451b3c669e2019aff0ae919970d">Dake</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/07/recall-alert-2013-ford-c-max-hybrid.html">Recall Alert: 2013 Ford C-Max Hybrid</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/07/recall-alert-2013-ford-c-max-hybrid.html#comment-6a00d83451b3c669e2019aff0ab63e970d">Jean Southwell</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/08/kias-hamsters-hit-the-gym-with-lady-gaga.html">Kia's Hamsters Hit the Gym With Lady Gaga</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/08/kias-hamsters-hit-the-gym-with-lady-gaga.html#comment-6a00d83451b3c669e20192acca3609970d">DebbieRed</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/03/2014-kia-soul-at-the-2013-new-york-auto-show.html">2014 Kia Soul at the 2013 New York Auto Show</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/03/2014-kia-soul-at-the-2013-new-york-auto-show.html#comment-6a00d83451b3c669e201901f0b33ab970b">Xsolara</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/08/kias-hamsters-hit-the-gym-with-lady-gaga.html">Kia's Hamsters Hit the Gym With Lady Gaga</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/08/kias-hamsters-hit-the-gym-with-lady-gaga.html#comment-6a00d83451b3c669e20192acc9ecd9970d">Dee G</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/08/2014-toyota-corolla-starts-at-17610.html">2014 Toyota Corolla Starts at $17,610</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/08/2014-toyota-corolla-starts-at-17610.html#comment-6a00d83451b3c669e201901f0ade07970b">Tony</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2012/09/2013-honda-accord-trim-breakdown.html">2013 Honda Accord: Explaining The Trim Levels</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2012/09/2013-honda-accord-trim-breakdown.html#comment-6a00d83451b3c669e201901f0ab71c970b">Ravi Jay // @nycmixing</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/08/what-to-drive-to-your-high-school-reunion.html">What to Drive to Your High School Reunion</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/08/what-to-drive-to-your-high-school-reunion.html#comment-6a00d83451b3c669e2019105006421970c">responder</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2012/04/scion-xb-and-xd-to-be-discontinued.html">Scion xB and xD to Be Discontinued</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2012/04/scion-xb-and-xd-to-be-discontinued.html#comment-6a00d83451b3c669e201901f0a8e53970b">HikingMike</a></li>
+			
+				<li class="module-list-item"><a href="http://blogs.cars.com/kickingtires/2013/08/carscom-reviews-the-2013-chrysler-200.html">Cars.com Reviews the 2013 Chrysler 200</a>&nbsp;by
+  <a href="http://blogs.cars.com/kickingtires/2013/08/carscom-reviews-the-2013-chrysler-200.html#comment-6a00d83451b3c669e20192acc9877f970d">skippydog</a></li>
+			
+		</ul>
+    </div>
+	</div>
+<div class="module-bottom"></div>
+</div>
+
+
+<div class="module-syndicate module">
+	<div class="module-content">
+		
+<a href="http://blogs.cars.com/kickingtires/index.rdf"><img src="/images/rss1.gif" border="0"> Subscribe to our feed</a>
+<br />
+<a href="mailto:tips@cars.com"><img src="/images/email.gif" border="0"> Email us your tips!</a>
+
+	</div>
+</div>
+
+
+
+
+</div>
+
+<td valign="top"><div id="AdRail">
+<div class="railAd">
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript"> 
+   CARS.adtag.drop({'sz':'160x600'});
+</SCRIPT> 
+</div>
+</div></td>
+  </tr>
+</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+
+<div id="Footer" style="height: 270px; padding-top: 20px;">
+ <div class="center">
+   <div class="footerColumn" style="left: 0px;">
+     <h6><a href="http://www.cars.com/go/buyIndex.jsp">Buy</a></h6>
+     <ul>
+        <li><a href="http://www.cars.com/go/buyIndex.jsp">Search for New & Used Cars</a></li>
+        <li><a href="http://www.cars.com/go/buyIndex.jsp">Build a New Car</a></li>
+        <li><a href="http://www.cars.com/go/dealersearch/index.jsp">Find Car Dealers Near You</a></li>
+        <li><a href="http://www.cars.com/go/espanol/">Buscar en Espanol</a></li>
+     </ul>
+   </div>
+
+   <div class="footerColumn" style="left: 240px;">
+     <h6><a href="http://siy.cars.com/siy/index.jsp">Sell</a></h6>     
+      <ul>
+        <li><a href="http://siy.cars.com/siy/index.jsp">List Your Car for Sale</a></li>
+        <li><a href="http://www.cars.com/go/advice/Story.jsp?section=sell&subject=how_sell&story=sellPrep&referer=advice">How to Sell Your Car</a></li>
+        <li><a href="http://www.cars.com/go/kbb/kbbInput.jsp">How Much Is Your Car Worth?</a></li>
+        <li><a href="http://siy.cars.com/siy/qsg/faqGeneralInfo.jsp">Frequently Asked Questions</a></li>
+     </ul>
+   </div>
+   <div class="footerColumn" style="left: 480px;">
+     <h6><a href="http://www.cars.com/go/crp/index.jsp">Research</a></h6>     
+      <ul>
+        <li><a href="http://research.cars.com/go/crp/index.jsp">Research a Specific Car</a></li>
+        <li><a href="http://www.cars.com/go/compare/index.jsp">Compare Cars Side-by-Side</a></li>
+        <li><a href="http://research.cars.com/go/crp/reviewsIndex.jsp">Read Expert Reviews</a></li>
+        <li><a href="http://www.cars.com/go/criteriaSearch/lifestyles.jsp">Find Cars That Match Your Lifestyle</a></li>
+     </ul>
+   </div>
+
+   <div class="footerColumn" style="left: 720px;">
+     <h6><a href="http://www.cars.com/go/newsIndex.jsp">Shopping Advice</a></h6>     
+      <ul>
+        <li><a href="http://www.cars.com/go/advice/Section.jsp?section=buy">For Buying a Car</a></li>
+        <li><a href="http://www.cars.com/go/advice/Section.jsp?section=fin">For Financing a Car</a></li>
+        <li><a href="http://www.cars.com/go/advice/Section.jsp?section=top">Top 10 Car Lists</a></li>
+        <li><a href="http://www.cars.com/go/advice/Story.jsp?section=fuel&subject=fuelList&story=mpgClass">Gas Mileage Lists</a></li>
+     </ul>
+   </div>
+
+ </div>
+
+
+<div class="footerBottom" style="position: relative; width: 960px; margin-left: auto; margin-right: auto; text-align: center; top: 150px;">
+ <p>
+<a href="http://www.cars.com/" target="_top">Cars.com Home</a> | 
+<a href="http://www.cars.com/go/about/index.jsp" target="_top">About Cars.com</a> | <a href="http://www.cars.com/careers/" target="_top">Employment Opportunities</a> | <a href="http://www.cars.com/go/about/us.jsp?section=C&content=deal" target="_top">Become a Cars.com Dealer</a>
+ </p>
+ <p>
+By using this site, you agree to our <a href="http://www.cars.com/go/about/tos.jsp" target="_top">terms of service</a> | <a href="http://www.cars.com/go/about/tos.jsp" target="_top">&copy;2013 Cars.com</a> | <a href="http://www.cars.com/go/about/privacy.jsp" target="_top">Privacy Statement</a>
+ </p>
+
+</div>
+</div>
+
+
+<img src="http://ad.yieldmanager.com/pixel?id=118974&t=2" />
+
+<script type="text/javascript" src="http://www.cars.com/includes/bidiq/bidiqCookieDropper.js"></script>
+
+<!-- SiteCatalyst code version: H.11.
+Copyright 1997-2007 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script language="JavaScript" src="http://www.cars.com/js/omniture/s_code.js"></script>
+<script language="JavaScript"><!--
+s_clven.pageName="";
+s_clven.server="";
+s_clven.channel="";
+s_clven.pageType="";
+s_clven.prop1="";
+s_clven.prop2="";
+/* E-commerce Variables */
+s_clven.campaign="";
+s_clven.state="";
+s_clven.zip="";
+s_clven.events="";
+s_clven.events="";
+s_clven.products="";
+s_clven.purchaseID="";
+s_clven.eVar1="";
+s_clven.eVar2="";
+/* Get Page Name */
+s_clven.defaultPage="KT-home-or-cat" // filename to add when none exists
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s_clven.t();if(s_code)document.write(s_code);document.close();//--></script>
+<!-- End SiteCatalyst code version: H.11. -->
+<script type="text/javascript">
+<!--
+var extra_happy = Math.floor(1000000000 * Math.random());
+document.write('<img src="http://www.typepad.com/t/stats?blog_id=345700&amp;user_id=823772&amp;page=' + escape(location.href) + '&amp;referrer=' + escape(document.referrer) + '&amp;i=' + extra_happy + '" width="1" height="1" alt="" style="position: absolute; top: 0; left: 0;" />');
+// -->
+</script>
+
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qoptions = { tags:"typepad.extended" }; _qacct="p-fcYWUmj5YbYKM"; quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-fcYWUmj5YbYKM" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-fcYWUmj5YbYKM.gif?tags=typepad.extended" style="display: none" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript>
+<!-- End Quantcast tag -->
+
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<script type="text/javascript">
+var captchaImgAttempts = 0;
+var allowAnonComments = '0';
+var registrationRequired = 0;
+var registrationOptional = 1;
+var emailRequired = 0;
+var useAvatars = 0;
+
+var showSignInMessaging = 0;
+var jsonURL = "/.services/json-rpc";
+
+var captchaSrc = "/.services/captcha?code_encrypted=";
+var alertCommentCannotBeBlank = "You can not leave an empty comment. Please enter some text in the Comment field.";
+var alertEditingExpired = "Sorry, you're no longer allowed to edit this comment. You may have taken too much time before submitting your edit or someone may have already replied to it.";
+
+var alertAuthorCannotBeBlank = "Name must not be blank.";
+var alertEmailCannotBeBlank = "Email Address must not be blank.";
+var alertAuthorAndEmailCannotBeBlank = "Name and email address are both required!";
+var alertEmailIsInvalid = "The Email Address you entered is invalid. Please enter a valid email address.";
+var alertUnauthorizedAction = "The comments on this post are closed.";
+var msgPostReplyTo = "Reply to ";  
+var msgInReplyTo = "In reply to ";
+var msgPostAComment = "Post a comment ";
+var atpCommentsPath = "/.shared/js/atpcomments_yui.js?v=5";
+var hasChanged = 0;
+var hostName = ".cars.com";
+var tp_comment_token = "1377655239-b2176102b93ce814a79363be8968719fdd8f1569:7sk2mUzQIVZ6NkmZ";
+
+var use_recaptcha = 1;
+var recaptcha_publickey = "6Ldg1s4SAAAAAEvvZX2ILFkWp7KB-jjdL4v0JV2e";
+var isPage = 0;
+var blog_xid = "6a00d83451b3c669e200d8341c52e153ef";
+var xid = "";
+var injectCode = '<div id=\"comment-preview\" class=\"hiddenBox\">\n\t<h3 id=\"header-verify-comment\" class=\"comments-header hiddenBox\">Verify your Comment<\/h3>\n    <h3 id=\"header-preview-comment\" class=\"comments-header hiddenBox\">Previewing your Comment<\/h3>\n\t<div class=\"comments-content\">\n\t\t<div class=\"comment\">\n\t\t\t<div id=\"comment-preview-content\" class=\"comment-content\">\n\t\t\t<\/div>\n\t\t\t<p class=\"comment-footer\">\n\t\t\t\tPosted by: \n\t\t\t\t<span id=\"comment-preview-author\"><\/span>&nbsp;|&nbsp;<span id=\"comment-preview-datetime\"><\/span>\n\t\t\t<\/p>\n\t\t<\/div>\n\t<\/div>\n<\/div>\n<div id=\"comment-preview-confirmation\" class=\"hiddenBox yellowBox\">\n    <p>This is only a preview. Your comment has not yet been posted.<\/p>\n   \t<form id=\"comment-preview-form\"\n   \t\tmethod=\"post\"\n   \t\tonsubmit=\"atpComments.interceptPost(1); return false;\">\n\t\t<input type=\"submit\" name=\"post\" id=\"comment-confirm-post\" value=\"&nbsp;Post&nbsp;\" onclick=\"atpComments.interceptPost(1); return false;\"/>\t\t    \n\t\t<input type=\"submit\" name=\"edit\" id=\"comment-edit\" value=\"&nbsp;&nbsp;Edit&nbsp;&nbsp;\" onclick=\"atpComments.previewOnly(2); return false;\"/>\n        <span id=\"previewFormSpinner\" class=\"hiddenBox\"><img src=\"/.shared/images/spinner.gif\" alt=\"Working...\" /><\/span>\n\t<\/form>\n<\/div>\n<div id=\"comment-error\" class=\"hiddenBox redBox\">\t    \n   Your comment could not be posted. Error type: <span id=\"comment-error-msg\"><\/span> \n<\/div>\t\n<div id=\"comment-complete\" class=\"hiddenBox yellowGreenBox\">\n    Your comment has been posted. <a href=\"javascript:void 0;\" onclick=\"window.location.hash=\'#comment-form\';window.location.reload(false)\">Post another comment<\/a>\n<\/div>\t\n<div id=\"comment-captcha\" class=\"hiddenBox yellowBox\">\t\n    <div id=\"captchaText\">\n\t    <p id=\"captchaFailMsg\" class=\"captchaErrorText hiddenBox\">The letters and numbers you entered did not match the image. Please try again.<\/p>\t    \t        \n\t    <p>As a final step before posting your comment, enter the letters and numbers you see in the image below. This prevents automated programs from posting comments.<\/p>\n\t    <p><span id=\"comment-captcha-viewalt\">Having trouble reading this image? <a href=\"#comment-captcha\" onClick=\"atpComments.generateReCaptcha();\">View an alternate.<\/a><\/span><\/p>\n    <\/div>\n    <form id=\"comment-captcha-form\" \n\t\t  method=\"post\"\n\t\t  onsubmit=\"atpComments.submitWithReCaptcha(); return false;\">\n    <div id=\"recaptcha_content\">\n      <noscript>\n        <iframe src=\"6Ldg1s4SAAAAAEvvZX2ILFkWp7KB-jjdL4v0JV2e\" height=\"300\" width=\"500\" frameborder=\"0\"><\/iframe><br />\n        <textarea name=\"recaptcha_challenge_field\" rows=\"3\" cols=\"40\"><\/textarea>\n        <input type=\'hidden\' name=\'recaptcha_response_field\' value=\'manual_challenge\' />\n      <\/noscript>\n    <\/div>\n  <script type=\"text/javascript\">\n    $(document).ready(function() {\n        Recaptcha.create(\"6Ldg1s4SAAAAAEvvZX2ILFkWp7KB-jjdL4v0JV2e\",\n                         \"recaptcha_content\", {\n                             theme: \"red\",\n                             callback: Recaptcha.focus_response_field\n        });\n    });\n  <\/script>\n        <p>\n            <input type=\"submit\" name=\"continue\" id=\"captcha-continue\" value=\"&nbsp;Continue&nbsp;\" />\n            <span id=\"captchaFormSpinner\" class=\"commentSpinner hiddenBox\"><img src=\"/.shared/images/spinner.gif\" alt=\"Working...\" /><\/span>\n        <\/p>\n    <\/form>\n<\/div>\n'; 
+var entryPermalink = "http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html";
+var inlineReply = document.createElement("div");
+var commentFooterLinks;
+var commentHeader;
+var commentReplyXID;
+var commentReplyAuthor;
+var commentReplyComplete;
+var inlineReplyLoaded = 0;
+var commentFormNum = undefined; /* Deprecated but still exists in advanced template sets, so must be defined */
+
+function xidToCommentPermalink (entryUrl, xid) {
+    return entryUrl + "?cid=" + xid + "#comment-" + xid;
+}
+
+
+/* Deprecated advanced template functions */
+function handleSubmit() { return true; };
+function handleChange() { return true; };
+</script>
+<script type="text/javascript" src="/.shared/js/yui/yuiloader-beta-min.js"></script>
+<script type="text/javascript" src="/.shared/js/atpcomments.js?v=5"></script>
+
+<!-- Begin comScore Tag -->
+<script>
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js'%3E%3C/script%3E"));
+</script>
+<script>
+COMSCORE.beacon({
+  c1: 2,
+  c2: "6035669",
+  c3: "",
+  c4: "http://blogs.cars.com/kickingtires/2012/02/would-you-buy-it-chevrolet-cruze-station-wagon.html",
+  c5: "",
+  c6: "",
+  c15: ""
+});
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/b?c1=2&c2=6035669&c3=&c4=http%3A%2F%2Fblogs.cars.com%2Fkickingtires%2F2012%2F02%2Fwould-you-buy-it-chevrolet-cruze-station-wagon.html&c5=&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+</noscript>
+<!-- End comScore Tag -->
+</body>
+</html>
+<!-- ph=1 -->

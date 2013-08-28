@@ -1,0 +1,652 @@
+<!--2005/02/03 - jmartin - changed email support addresses   - lines 19-24-->
+<!--2008/06/16 - jmacias - changed value for constant SHAR_ICC_ERR_ZIP_CODE - line 86 -->
+<!--2005/03/23 - jmartin - applied styles to form - lines 148-167 -->
+<!--2005/03/23 - jmartin - Added Sub ICAR_Modules_UI_Appointment since Shop Owner Log In was moved from the top - lines 148-167 -->
+<!--2005/04/05 - pmarshal - commented extra consumer log out button - lines 355-358 -->
+
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+  function get_value(text)
+  {
+      var p = text.indexOf("\n");  
+      if (p >= 0)
+      {
+          var re = /\n/g;
+          var para = text.replace(re, "<br><br>");
+          document.write(para);     
+      }
+      else
+      {
+          document.write(text); 
+      }
+  }
+// End -->
+
+
+var hwnd;
+
+function openWindow(hyperlink,hwidth,vheight,tbar,stbar,lnks,mbar,sbar,resiz,xx,yy){
+  if (hyperlink.indexOf("?Vid=0") < 0 )
+  {
+    hwidth = hwidth;
+    vheight = vheight;
+    xx = (screen.width/2) - hwidth/2;
+    yy = (screen.height/2) - vheight/2;
+    var tt=(document.layers)? ',screenX='+xx+',screenY='+yy: ',left='+xx+',top='+yy; 
+    tbar=(tbar)?'yes':'no'; stbar=(stbar)?'yes':'no'; lnks=(lnks)?'yes':'no'; mbar=(mbar)?'yes':'no'; sbar=(sbar)?'yes':'no'; resiz=(resiz)?'yes':'no';
+
+	if (null == hwnd)
+	{
+		hwnd=window.open(hyperlink, 'newWin'+new Date().getTime(), 'scrollbars='+sbar+',width='+hwidth+',height='+vheight+',toolbar='+tbar+',status='+stbar+',menubar='+mbar+',links='+lnks+',resizable='+resiz+tt);
+	} else {
+		if (hwnd.closed)
+		{
+			hwnd=window.open(hyperlink, 'newWin'+new Date().getTime(), 'scrollbars='+sbar+',width='+hwidth+',height='+vheight+',toolbar='+tbar+',status='+stbar+',menubar='+mbar+',links='+lnks+',resizable='+resiz+tt);
+		} else {
+			hwnd.location=hyperlink;
+		}
+	}
+	hwnd.focus();
+  }
+}
+// End -->
+</SCRIPT>
+
+
+
+
+
+<HTML>
+
+
+
+<META NAME="author" CONTENT="Sargent Auto & Diesel Repair">
+
+<META NAME="subject" CONTENT="Automotive Repair Business">
+
+<META NAME="Description" CONTENT="sargent auto & diesel repair automotive service and repair">
+
+<META NAME="Classification" CONTENT="Automotive Service and Repair">
+
+<META NAME="Geography" CONTENT="200 N West Jefferson,Grain Valley,MO,64029">
+
+<META NAME="City" CONTENT="Grain Valley">
+
+<META NAME="Copyright" CONTENT="Sargent Auto & Diesel Repair">
+
+<META NAME="Keywords" CONTENT="Automotive Repair,Auto Repair,Vehicle Repair,Service,Repair,Auto,Automotive,Vehicle,CarABARTH,AC,ACURA,ALFA ROMEO,ALLARD,ALLSTATE,ALPINE,ALVIS,AM GENERAL,AMERICAN MOTORS,AMPHICAR,ARMSTRONG-SIDDELEY,ARNOLT-BRISTOL,ASTON MARTIN,ASUNA,AUDI,AUSTIN,AVANTI,BENTLEY,BERKELEY,BERTONE,BIZZARRINI,BMW,BOND,BORGWARD,BRICKLIN,BRISTOL,BUGATTI,BUICK,CADILLAC,CHECKER,CHEVROLET,CHRYSLER,CISITALIA,CITROEN,CROSLEY,CUNNINGHAM,DAEWOO,DAF,DAIHATSU,DAIMLER,DARRIN,DELAGE,DELAHAYE,DELLOW,DELOREAN,DENZEL,DESOTO,DETOMASO,DEUTSCH-BONNET,DKW,DODGE,DUAL-GHIA,EAGLE,EDSEL,ELVA,EXCALIBUR,FACEL VEGA,FAIRTHORPE,FERRARI,FIAT,FORD,FRAZER,FRAZER NASH,FREIGHTLINER,GENERAL MOTORS,GEO,GLAS,GMC,GOGGOMOBIL,GOLIATH,GRIFFITH,HANSA,HEALEY,HENRY J,HILLMAN,HONDA,HOTCHKISS,HRG,HUDSON,HUMBER,HUMMER,HYUNDAI,INFINITI,INTERNATIONAL,ISO,ISUZU,JAGUAR,JEEP,JENSEN,JOWETT,KAISER,KIA,KURTIS,LADA,LAFORZA,LAGONDA,LAMBORGHINI,LANCHESTER,LANCIA,LAND ROVER,LEA-FRANCIS,LEXUS,LINCOLN,LLOYD,LOTUS,MAICO,MARATHON,MARCOS,MASERATI,MATRA,MAYBACH,MAZDA,MERCEDES-BENZ,MERCURY,MERKUR,MESSERSCHMITT,METROPOLITAN,MG,MINI,MITSUBISHI,MONTEVERDI,MORETTI,MORGAN,MORRIS,MOSKVICH,NARDI,NASH,NISSAN,NSU,OLDSMOBILE,OPEL,OSCA,PACKARD,PANHARD,PANOZ,PASSPORT,PEERLESS,PEGASO,PEUGEOT,PLYMOUTH,PONTIAC,PORSCHE,QVALE,RAM,RELIANT,RENAULT,RILEY,ROLLS ROYCE,ROVER,SAAB,SABRA,SALEEN,SALMSON,SATURN,SCION,SHELBY,SIATA,SIMCA,SINGER,SKODA,SMART,STANDARD,STERLING,STUDEBAKER,STUTZ,SUBARU,SUNBEAM,SUZUKI,SWALLOW,TATRA,TESLA,TOYOPET,TOYOTA,TRIUMPH,TURNER,TVR,VAUXHALL,VESPA,VOLKSWAGEN,VOLVO,WARTBURG,WOLSELEY,WORKHORSE,YUGO,ZUNDAPP">
+
+<META NAME="Language" CONTENT="English">
+
+<META HTTP-EQUIV="Expires" CONTENT="never">
+
+<META NAME="Designer" CONTENT="ALLDATA">
+
+<META NAME="Publisher" CONTENT="ALLDATA">
+
+<META NAME="distribution" CONTENT="Global">
+
+<META NAME="Robots" CONTENT="INDEX,FOLLOW">
+
+<META NAME="country" CONTENT="United States">
+
+<!--  This is the top portion of UI made into module.  It goes right before the content.  -->
+<TITLE>Sargent Auto & Diesel Repair</TITLE>
+<LINK REL=stylesheet TYPE="text/css" HREF="/topshop/web/web_template/temp5/StyleSheet1_upscale_green.css">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" 
+LINK="#800517" VLINK="#cc6600" ALINK="#cc6600" ALT="wave" LEFTMARGIN="0" 
+TOPMARGIN="0">
+
+
+<table width="80%" valign="top" border="0" cellpadding="0" cellspacing="0" height="100%">
+<tr valign="top">
+
+<td colspan="10" valign="top" width="760">
+
+<table width=100% height=100 valign=top cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+	
+
+     
+	<td align=left valign=middle>
+	&nbsp;&nbsp;&nbsp;
+    <img src="http://www.procarcarezone.com/image/shop/149392_logo.gif" border="0" >
+
+	</td>
+
+
+<td align="right">
+<img src="/topshop/web/web_template/temp5/image/top_banner5.gif">
+</td>
+		
+</tr>
+</table>
+
+
+</td>
+</tr>
+
+
+<tr>
+
+
+<td align="left" valign="top" height="100%" width="15%">
+<!--2005/03/23 - jmartin - moved login to the top of the page 217 to 230 -->
+<!--2005/03/23 - jmartin - added ICAR_Modules_UI_Appointment call - lines 224-230-->
+<!--2005/03/28 - jmartin - changed Get a Map Link - Line 129-->
+<!--2005/04/05 - pmarshal - adjusted table -->
+<table width="140" cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+
+<td valign="top" align="center">
+
+		<table width="140" valign="top">
+		<tr>
+		
+		<td width="2">
+		</td>
+		
+		<td valign="top" align="left">
+
+
+<span style="font-size:8.0pt;font-family:Verdana">
+
+<table width="120" border="0" cellpadding="0" cellspacing="3">
+<form name="frmLogin" method="post" action="/topshop/web/web_template/temp5/login/default.asp" onSubmit="" >
+
+<tr>
+
+<td valign="top"><span style="font-size:7.0pt;font-family:Verdana"><font color=000000><b>Customer Access:</b></font></span><br><span style="font-size:7.0pt;font-family:Verdana"><font color=000000>Login:</font></span><br> 
+<input type="text" id="strLogin" name="strLogin" value="" class="formfield" maxlength="64" size="10" >
+
+</td>
+
+
+</tr>
+
+
+<tr>
+
+<td valign="top"><span style="font-size:7.0pt;font-family:Verdana"><font color=000000>Password:<br></font></span><input type="password" name="strPassword" maxlength="12" size="10" class=formfield>
+</td>
+
+
+</tr>
+
+
+<tr>
+
+<td valign="top"><img src="/images/icar/t.gif" width="10" height="3" alt="" border="0"><br><input type="submit" name="btnSubmit" value="Sign In" class="formbutton" ><br>
+</td>
+
+
+</tr>
+
+
+<input type="hidden" name="strRedirURL" value="" >
+
+</form>
+
+
+</table>
+
+<br>
+<br>
+		
+
+<!--home page link: required-->
+
+    <a href="/topshop/web/web_template/temp5/default.asp?id=149392">Home</a><br>
+
+<img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+
+<!--tour page link: optional-->
+
+      <a href="/topshop/web/web_template/temp5/tour.asp?id=149392">Shop Tour</a><br>
+      <img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+     
+
+<!--service page link: required--> 
+
+    <a href="/topshop/web/web_template/temp5/service.asp?id=149392">Services</a><br>
+
+<img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+
+
+<!--appointment page link: required-->
+
+    <a href="/topshop/web/web_template/temp5/makeappointment/default.asp?id=149392">Appointment</a><br>    
+
+<img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+
+
+<!--coupon page link: optional-->
+
+
+
+<!--car care tip page link: optional-->
+
+      <a href="/topshop/web/web_template/temp5/caretip.asp?id=149392">Car&nbsp;Care&nbsp;Tips</a><br>
+      <img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+    
+
+
+<!--about us page link: optional-->
+
+         <a href="/topshop/web/web_template/temp5/aboutus.asp?id=149392">About Us</a><br>
+         <img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+    
+
+
+<!--testimonials page link: optional-->
+
+
+
+<!--contact us page link: required-->
+    
+    <a href="/topshop/web/web_template/temp5/contact.asp?id=149392">Contact Us</a><br>   
+
+ <img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+ 
+ 
+<!--email: optional-->
+
+      <a href="mailto:sargentautodiesel@att.net">Email Us</a><br>
+      <img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+
+
+
+<!--get a map page link: required--> 
+<a href="http://maps.google.com/maps?q=200+N+West+Jefferson,+Grain Valley,+MO,+64029,+(Sargent+Auto+%26+Diesel+Repair)" onclick="window.open('','_self','height=600,width=800,scrollbars=yes,toolbar=yes')" target="_new">Get a Map</a><br>
+ <img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+
+
+<!--personal auto page link: required-->
+    
+      <a href="/topshop/web/web_template/temp5/carcare/default.asp?id=149392">Go To Your<br>Car Care Page!</a><br>
+
+<img src="/topshop/web/web_template/image/space.gif" height="5"><br>
+
+<a href="/topshop/web/web_template/temp5/video/default.asp?id=149392">Car Care Videos</a><br>
+
+<br><br><a href="/topshop/web/web_template/temp5/video/default.asp?id=149392"><img src="/az/images/video/pcc_video.gif" width="123" border="0"></a>
+
+</span>
+
+		</td>
+		</tr>
+		</table>
+
+<br>		
+</td>
+</tr>		
+
+<tr>
+<td valign="top" align="center">
+
+		<table width="140">
+		<tr>
+		
+		<td width="2">
+		</td>
+		
+		<td valign="top" align="left">
+		
+        <span style="font-size:8.0pt;font-family:Verdana">
+        
+        <b>Sargent Auto & Diesel Repair</b>
+<br>
+200 N West Jefferson
+<br> 
+Grain Valley, MO 64029 
+<br>
+ph:
+(816)847-1075
+
+
+<br>
+fax:
+
+
+(816)847-1077
+
+<br>
+					
+		
+        </span>
+		<table>
+		<!--write out login form -->				
+
+<tr>
+
+<td valign="top"><span style="font-size:7.0pt;font-family:Verdana"><font color=000000><a href=/procarumba/login/default.asp><font color=000000>Shop Owner Log In</a></font></font></span>
+</td>
+
+
+</tr>
+
+
+		</table>
+		
+		</td>
+		</tr>
+		</table>		
+
+<br><br>
+
+
+</td>
+</tr>
+
+</table>
+
+
+&nbsp;
+</td>
+
+<td align="left" valign="top" height="100%" width="1%">
+&nbsp;&nbsp;&nbsp;
+</td>
+
+<td align="left" valign="top" height="100%" width="1%">
+&nbsp;&nbsp;&nbsp;
+</td>
+
+<td align="left" valign="top" height="100%" width="1%">
+&nbsp;&nbsp;&nbsp;
+</td>
+
+<!-- start content area -->
+<td valign="top" height="100%" width="400">
+
+<table cellpadding="0" cellspacing="0" border="0" width="400" >
+<tr>
+<td>
+<!-- content -->
+<table width=440 height=100% cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+<td width="10">
+	&nbsp;&nbsp;&nbsp;
+</td>
+
+<td valign="top" align="center" width="440">
+
+
+			<font size="4" face=verdana>
+			Sargent Auto & Diesel Repair
+			</font>
+			
+			<br>
+			
+			
+			<!-- Top Shop Slogan goes here -->
+			<font size="2" face=verdana> 
+           Count on us for fair, friendly service!
+			</font>
+			<br><br>
+			              
+
+
+			<table width=400 border="0" height=100% bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+
+			<tr>
+			
+			<td valign="top" align="center" width="400">
+			
+		
+               <img src="http://www.procarcarezone.com/image/shop/149392_home.jpg" border="0" >
+
+	
+							  		
+			</td>
+			</tr>
+			
+			<tr>
+			<td align="left">
+			<br>		
+			
+			<font size="2" face=verdana>
+					Welcome!  We are locally owned and family operated.<br><br>
+			</font>
+			
+	
+			</td>
+			</tr>
+			
+			
+			<tr>
+			<td valign="top" align="left" width="400" height=100%>
+			
+			<font face="verdana" size="2">
+			
+			<ul>
+             <li>
+            
+                  <a href="/topshop/web/web_template/temp5/makeappointment/default.asp?id=149392">
+            
+                Make an appointment</a> right online. It's quick and easy  just click 
+                on our calendar to pick the best day and time to drop off your 
+                car. 
+              <li>Check the list of 
+            
+                  <a href="/topshop/web/web_template/temp5/service.asp?id=149392">
+            
+                  services we perform</a>.  
+            
+                  <a href="/topshop/web/web_template/temp5/carcare/default.asp?id=149392">
+               
+            
+            <br>
+            <li>
+                Get your own personal car care page</a>! It will provide lots of information about your 
+                car, including recalls, service bulletins and recommended maintenance. 
+                Whenever you make an online appointment with us, the service history 
+                is added to your page for you to review any time (good service 
+                records are also very helpful when it comes time to sell your 
+                car). 
+              <li> 
+                <a href="http://maps.google.com/maps?q=200+N+West+Jefferson,+Grain Valley,+MO,+64029,+(Sargent+Auto+%26+Diesel+Repair)" onclick="window.open('','_self','height=600,width=800,scrollbars=yes,toolbar=yes')" target="_new">  
+                Get a map</a> to our shop. 
+             
+                 <li>
+                  <a href="mailto:sargentautodiesel@att.net" target="_top">Email us</a> with any questions or comments. 
+                       </ul>
+            Use the menu on the left to navigate our website. Thanks for stopping 
+            by!</font>
+						
+			
+			</td>
+			</tr>
+			
+			
+			
+			</table>
+
+</td>
+</tr>
+
+</table>
+
+	</td>
+	</tr>
+	</table>
+
+
+</td>
+<!-- end content area -->
+
+
+<td align="left" valign="top" height="100%" width="10">
+&nbsp;
+</td>
+
+<td align="left" valign="top" height="100%" width="2">
+
+
+<table width="1" height="100%" align="left" border="0">
+
+<tr border="0">
+
+<td align="left" valign="top" width="1" height="100%" border="0">
+
+<!--<img src="/topshop/web/web_template/image/669966_rightgrad.gif" width="1">-->
+<img src="/topshop/web/web_template/temp5/image/green_rightgrad.gif" border="0">
+</td>
+
+
+</tr>
+</table>
+
+
+</td>
+
+<td align="left" valign="top" height="100%" width="10">
+&nbsp;&nbsp;
+</td>
+
+<td align="left" valign="top" height="100%" width="120">
+
+<table width="120" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td align="center" valign="middle" width=120>
+<br>
+<br>
+
+
+
+<table width=120 height="100%" cellpadding=0 cellspacing=0 border=0 valign="top">
+<tr>
+<td valign=top align=center width="120" height="25%">
+
+
+	
+<img src="/topshop/web/web_template/image/icar_logo.gif">
+<br><br>
+	
+       
+
+	   <table bgcolor="#ffffff" width="110" cellpadding=3 cellspacing=0 border=2 bordercolor="#669966">
+	
+	   <tr>
+	   <td valign="top">
+	   <span style="font-size:10.0pt;font-family:Verdana">
+	   <b>
+	   Car Care Tip of the day</b></span><p>
+	   <span style="font-size:8.0pt;font-family:Verdana">
+	   Buy a bottle of touch-up paint for your car to touch up small scratches and stone chips before they start to rust. These bottles are available from auto parts stores and car dealers and come with a built-in touch-up brush.
+
+	   </span>										
+	   </td>
+	   </tr>	
+	   </table>
+	   
+
+		
+</td>
+</tr>
+
+<tr>
+<td valign=top align=center width="120" height="75%">
+<br>
+<br>
+			
+
+    <table valign="top" width="110" cellpadding=0 cellspacing=0 border=0>
+	<tr valign="top">
+	<td valign="top" align="center" colspan="2">
+	
+	    <span style="font-size:10.0pt;font-family:Verdana"><b>Certifications &amp;<br>Affiliations</span></font></b></font>
+	
+	
+	<br>
+	<br>
+	</td>
+	</tr>
+							
+	<tr>							
+	<td valign="middle" align="center">
+	        
+<table border="0" width="110" cellpadding="2" cellspacing="2">
+<tr>
+
+
+<tr>
+
+
+<tr>
+
+
+<tr>
+
+
+<tr>
+
+
+<td  width="55" valign= "middle" align= "left">
+<font face="verdana, arial, geneva" size="-2" color="#000000" ><img src="/images/shar/g_cert_logo/ase_44_44.gif" alt="ASE Automatic Transmission and Transaxle" border="0" hspace="0" vspace="0">&nbsp;</font>
+</td>
+
+
+<td  width="55" valign= "top" align= "left">
+<span style="font-size:8.0pt;font-family:Verdana">State License Inspection<br></span>
+</td>
+
+
+</tr>
+
+
+<tr>
+
+
+<td  width="55" valign= "top" align= "left">
+<span style="font-size:8.0pt;font-family:Verdana">State Safety Inspection<br></span>
+</td>
+
+
+<td  valign="top">
+&nbsp;
+</td>
+
+
+</tr>
+
+</table>
+	</td>							
+	</tr>
+	</table>
+	<!-- End certifications -->		
+						
+</td>
+</tr>
+</table>
+	
+
+
+</td>
+</tr>
+
+</table>
+
+
+</td>
+
+<td align="left" valign="top" height="100%" width="100">
+&nbsp;&nbsp;&nbsp;
+</td>
+
+
+</tr>
+</table>
+
+
+
+

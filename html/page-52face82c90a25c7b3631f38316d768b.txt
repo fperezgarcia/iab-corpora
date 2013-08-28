@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--<title>APMonitor: Electric Vehicle</title>-->
+	<title>Electric Vehicle</title>
+	<link rel='stylesheet' href='http://apmonitor.com/wiki/pub/skins/glossyhue/style.css' type='text/css' />
+	<link rel='stylesheet' href='http://apmonitor.com/wiki/pub/skins/glossyhue/color-blue/color.css' type='text/css' />
+	<!--HTMLHeader--><style type='text/css'><!--#treemenu{overflow:auto;white-space:nowrap;width:100%;}
+#treemenu,#treemenu *{font:11px Verdana;}
+#treemenu p{display:inline;}.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script language='javascript' src='http://apmonitor.com/wiki/pub/treemenu/treemenu.js'></script>
+  <meta name='robots' content='index,follow' />
+
+</head>
+
+<body>
+	<div id="page">
+		<div id="header">
+			<!--PageHeaderFmt-->
+			<div id="headerimg">
+				<div class='vspace'></div><div class="sitetitle" ><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/HomePage'><span  style='color: blue;'>A</span><span  style='color: red;'>P</span><span  style='color: black;'>Monitor Documentation</a></span>
+</div>
+<div class='vspace'></div><div class="description" >Advanced process control and optimization
+</div>
+
+			</div>
+
+			<div id="nav">
+				<ul><li><a class='urllink' href='http://apmonitor.com' rel='nofollow'>Home</a>
+</li><li><a href="/online">Premium</a>
+</li><li><a href="/online/view_pass.php">Basic</a>
+</li><li><a class='urllink' href='http://groups.google.com/group/apmonitor' rel='nofollow'>Discussion</a>
+</li></ul>
+
+			</div>
+			<!--/PageHeaderFmt-->
+		</div>
+
+		<div id="content">
+			<div id="pagelead">
+				<div class="pageheader">
+					<!--PageTitleFmt-->
+					<a href='http://apmonitor.com/wiki/index.php/Apps/HomePage' class='pagegroup'>Apps</a>
+					<h1>Electric Vehicle</h1>
+					<!--/PageTitleFmt-->
+				</div>
+
+				<div class="pageactions">
+					<!--PageActionFmt-->
+					<ul><li class='browse'><a accesskey=''  class='selflink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricVehicle'>View</a>
+</li><li class='edit'><a accesskey='e'  rel='nofollow'  class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricVehicle?action=edit'>Edit</a>
+</li><li class='diff'><a accesskey='h'  rel='nofollow'  class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricVehicle?action=diff'>History</a>
+</li><li class='print'><a accesskey=''  rel='nofollow'  class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricVehicle?action=print'>Print</a>
+</li></ul>
+
+					<!--/PageActionFmt-->
+				</div>
+			</div>		
+
+			<!--PageText-->
+<div id='wikitext'>
+<h2>Simplified Electric Vehicle</h2>
+<ul class='list-page'><li> <a class='urllink' href='http://apmonitor.com/wiki/uploads/Apps/electric.apm' rel='nofollow'>Electric Vehicle</a>
+</li></ul><p class='vspace'>The principal input to the model is the voltage to the motor.  Motor parameters include resistance (ohm), motor inductance (henrys), back emf constant (volt-sec/rad), torque constant (N-m/a), rotor inertia (kg m^2), and mechanical damping.  The automotive parameters include vehicle inertia, vehicle damping (friction), transmission dynamics, gearing ratios, and a simplified model of tire friction on the paved surface.  The electric vehicle models tracks system including motor electrical current (amps), rotor angular velocity (radians/sec), rotor angle (radians), wheel angular velocity (rad/sec), wheel angle (radians), vehicle velocity (m/sec), and distance travelled (m).
+</p>
+<div class='vspace'></div><hr />
+<div class='vspace'></div><font size=2><pre>
+
+! APMonitor Modeling Language
+! http://www.apmonitor.com
+
+! Electric Vehicle Model
+Model car
+
+  Parameters
+    ! motor parameters (dc motor)
+    v   = 36        ! input voltage to the motor (volts)
+    rm  = 0.1       ! motor resistance (ohm)
+    lm  = 0.01      ! motor inductance (henrys)
+    kb  = 6.5e-4    ! back emf constant (volt-sec/rad)
+    kt  = 0.1       ! torque constant (N-m/a)
+    jm  = 1.0e-4    ! rotor inertia (kg m^2)
+    bm  = 1.0e-5    ! mechanical damping (linear model of friction: bm * dth)
+
+    ! automobile parameters
+    jl = 1000*jm    ! vehicle inertia (1000 times the rotor)
+    bl = 1.0e-3     ! vehicle damping (friction)
+    k = 1.0e2       ! spring constant for connection rotor/drive shaft
+    b = 0.1         ! spring damping for connection rotor/drive shaft
+    rl = 0.005      ! gearing ratio between motor and tire (meters travelled
+                    !  per radian of motor rotation)
+    tau = 2         ! time constant of a lag between motor torque and car
+                    !   velocity.  this lag is a simplified model of the power
+                    !   train. (sec)
+  End Parameters
+
+  Variables
+    i     = 0       ! motor electrical current (amps)
+    dth_m = 0       ! rotor angular velocity sometimes called omega (radians/sec)
+    th_m  = 0       ! rotor angle, theta (radians)
+    dth_l = 0       ! wheel angular velocity (rad/sec)
+    th_l  = 0       ! wheel angle (radians)
+    dth_v = 0       ! vehicle velocity (m/sec)
+    th_v  = 0       ! distance travelled (m)
+  End Variables
+
+  Equations
+    lm*$i - v = -rm*i -    kb *$th_m
+    jm*$dth_m =  kt*i - (bm+b)*$th_m - k*th_m +     b *$th_l + k*th_l
+    jl*$dth_l =             b *$th_m + k*th_m - (b+bl)*$th_l - k*th_l
+
+    tau * $dth_v = rl * dth_l - dth_v
+
+    dth_m = $th_m
+    dth_l = $th_l 
+    dth_v = $th_v
+  End Equations
+
+End Model
+
+</pre></font>
+
+</div>
+
+		</div>
+
+		<div id="sidebar">
+			<!--PageSearchFmt-->
+			<form id="searchform" action='http://apmonitor.com/wiki/index.php' method="post">
+				<input class="hidden" type='hidden' name='n' value='Apps.ElectricVehicle' />
+				<input class="hidden" type='hidden' name='action' value='search' />
+				<input id="searchfield" type='text' name='q' value='' />
+				<input id="searchbutton" type='submit' name="searchbutton" value='Search' />
+			</form>
+			<!--/PageSearchFmt-->
+
+			<!--PageRightFmt-->
+			<div id='treemenu'>
+<ul><li>Documentation
+</li><li>Users
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/HomePage'>Overview</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Background'>Background</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/FrequentlyAsked'>FAQ</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/ProductRoadmap'>Release Notes</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/UsersGroup'>User's Group</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/ApplicationWebinars'>Webinars</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/UserReviews'>User Reviews</a>
+</li></ul></li><li>Download
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/DownloadAPMonitor'><span  style='color: blue;'>A</span><span  style='color: red;'>P</span><span  style='color: black;'>Monitor</a></span>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/DownloadIpopt'>IPOPT</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/MATLAB'>MATLAB</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/PythonApp'>Python</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/SBML'>SBML</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/CommandLine'>Command Line</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/SyntaxHighlighting'>APM Editor</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Online'>Web Interface</a>
+</li></ul></li><li>Applications
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/Applications'>Overview</a>
+</li><li>Aerospace
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/UnmannedAerial'>UAVs</a>
+</li></ul></li><li>Biological
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/CellCultivation'>Cells</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/DiabeticGlucose'>Diabetes</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/FoodDiet'>Diet</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/MeaslesVirus'>Measles</a>
+</li></ul></li><li>Chemical
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/DistillationColumn'>Distillation</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/GasBlending'>Blending</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/GibbsFreeEnergy'>Gibbs</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/StirredReactor'>Reactor</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/VandeVusse'>Van de Vusse</a>
+</li></ul></li><li>Energy
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/EnergyStorage'>Storage</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/FuelCell'>Fuel Cell</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/FuelEthanol'>Ethanol</a>
+</li></ul></li><li>Financial
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/StockMarket'>Stocks</a>
+</li></ul></li><li>Mechanical
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricMotor'>DC Motor</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/DrillComm'>Drill Shaft</a>
+</li><li><a class='selflink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricVehicle'>Electric Car</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/ElectricalOscillator'>Oscillator</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/PendulumMotion'>Pendulum</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/SpaceShuttle'>Shuttle</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/TruckSuspension'>Suspension</a>
+</li></ul></li><li>Optimization
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/HockSchittkowski'>Benchmarks</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/LinearStateSpace'>Linear MPC</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/MpecExamples'>MPECs</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/PiecewiseLinear'>Piecewise</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Apps/SimpleExamples'>Tutorial</a>
+</li></ul></li></ul></li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/ModelStructure'>Using APM</a>
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/MatlabFunctions'>APM MATLAB</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/PythonFunctions'>APM Python</a>
+</li><li>Fixed Values
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Constants'>Constants</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Parameters'>Parameters</a>
+</li></ul></li><li>Calculated Values
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Variables'>Variables</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/AlgebraicVariables'>Algebraic</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/DifferentialVariables'>Differential</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/VariableConstraints'>Constraints</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/SlackVariables'>Slack</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/ObjectiveVariables'>Objective</a>
+</li></ul></li><li>Equations
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Arrays'>Arrays</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Connections'>Connections</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Intermediates'>Intermediates</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Equations'>Equations</a>
+</li></ul></li><li>Object Elements
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Compounds'>Compounds</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Objects'>Objects</a>
+</li></ul></li></ul></li><li>Modes
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Modes'>Overview</a>
+</li><li>Steady-State
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/SteadyState'>Simulate</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/ParameterFit'>Estimate</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Optimization'>Optimize</a>
+</li></ul></li><li>Dynamic
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Simulation'>Simulate</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Estimation'>Estimate</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Control'>Optimize</a>
+</li></ul></li><li>Sequential
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Sequential'>Simulate</a>
+</li></ul></li></ul></li><li>System files
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/Files'>Overview</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/APM'>Model (apm)</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/INFO'>Info (info)</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/DBS'>Database (dbs)</a>
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/DbsGlobal'>Global</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/DbsVariable'>Variables</a>
+</li></ul></li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/CSV'>Data (csv)</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/T0'>Solution (t0)</a>
+</li></ul></li><li>Admin
+<ul><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/PmWiki/PmWiki'>Wiki Help</a>
+</li><li><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Site/SideBar?action=edit'>edit SideBar</a>
+</li></ul></li></ul></div>
+<script type='text/JavaScript'>
+<!--
+init_treemenu('http://apmonitor.com/wiki/pub');
+//-->
+</script>
+
+
+			<!--/PageRightFmt-->
+		</div>
+
+		<div id="footer">
+			<!--PageFooterFmt-->
+			<div class="footer-section" >
+<p>Copyright &copy; 2012, APMonitor
+</p>
+<div class='vspace'></div>
+<table>
+<tr><td>
+
+<table>
+<tr><td>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone annotation="inline"></g:plusone>
+</td></tr>
+</table>
+
+<table>
+<tr>
+<td><a class="pageLinks" href="http://del.icio.us/post?url=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;title=APMonitor+Wiki" title="Bookmark this post on del.icio.us." rel="nofollow" class="service_links_delicious"><img src="/bookmarks/delicious.png" alt="Delicious" /></a></td>
+
+<td><a class="pageLinks" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;title=APMonitor+Wiki" title="Digg this post on digg.com." rel="nofollow" class="service_links_digg"><img src="/bookmarks/digg.png" alt="Digg" /></a></td>
+
+<td><a class="pageLinks" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;title=APMonitor+Wiki" title="Thumb this up at StumbleUpon." rel="nofollow" class="service_links_stumbleupon"><img src="/bookmarks/stumbleit.png" alt="StumbleUpon" /></a></td> 
+
+<td><a class="pageLinks" href="http://www.propeller.com/submit/?U=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;T=APMonitor+Wiki" title="Submit to Propeller." rel="nofollow" class="service_links_propeller"><img src="/bookmarks/propeller.png" alt="Propeller" /></a></td> 
+
+<td><a class="pageLinks" href="http://reddit.com/submit?url=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;title=APMonitor+Wiki" title="Submit this post on reddit.com." rel="nofollow" class="service_links_reddit"><img src="/bookmarks/reddit.png" alt="Reddit" /></a></td> 
+
+<td><a class="pageLinks" href="http://ma.gnolia.com/bookmarklet/add?url=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;title=APMonitor+Wiki" title="Submit this post on ma.gnolia.com." rel="nofollow" class="service_links_magnoliacom"><img src="/bookmarks/magnoliacom.png" alt="Magnoliacom" /></a></td> 
+
+<td><a class="pageLinks" href="http://www.newsvine.com/_tools/seed&amp;save?u=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;h=APMonitor+Wiki" title="Submit this post on newsvine.com." rel="nofollow" class="service_links_newsvine"><img src="/bookmarks/newsvine.png" alt="Newsvine" /></a></td> 
+
+<td><a class="pageLinks" href="http://www.furl.net/storeIt.jsp?u=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;t=APMonitor+Wiki" title="Submit this post on furl.net." rel="nofollow" class="service_links_furl"><img src="/bookmarks/furl.png" alt="Furl" /></a></td> 
+
+<td><a class="pageLinks" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki&amp;t=APMonitor+Wiki" title="Share on Facebook." rel="nofollow" class="service_links_facebook"><img src="/bookmarks/facebook.png" alt="Facebook" /></a></td> 
+
+<td><a class="pageLinks" href="http://technorati.com/cosmos/search.html?url=http%3A%2F%2Fapmonitor.ath.cx%2Fwiki" title="Search Technorati for links to this post." rel="nofollow" class="service_links_technorati"><img src="/bookmarks/technorati.png" alt="Technorati"/></a></td> 
+
+</tr>
+</table>
+
+  <table>
+   <tr>
+   <td>
+<a class="a2a_dd" href="http://www.addtoany.com/share_save?linkname=APMonitor%20Documentation&amp;linkurl=http%3A%2F%2Fapmonitor.ath.cx"><img src="http://static.addtoany.com/buttons/share_save_171_16.gif" width="171" height="16" border="0" alt="Share/Save/Bookmark"/></a><script type="text/javascript">a2a_linkname="APMonitor Documentation";a2a_linkurl="http://apmonitor.ath.cx";</script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+   </td>
+   </tr>
+  </table>
+
+<table>
+  <tr><td>
+  <b>Subscribe to APMonitor Discussion Group</b>
+  </td></tr>
+ <form action="http://groups.google.com/group/apmonitor/boxsubscribe">
+  <input type=hidden name="hl" value="en">
+  <tr><td nowrap style="padding-left: 5px;">
+  Email: <input type=text name=email>
+  <input type=submit name="sub" value="Subscribe">
+  </td></tr>
+ </form>
+</table>
+
+</td><td>
+
+<img src="http://apmonitor.com/qr.png" height="90" width="90">QR Code
+
+</td></tr>
+</table>
+
+
+<div class='vspace'></div></div>
+<div class='vspace'></div><div class="footer-about" >
+<p><a class='wikilink' href='http://apmonitor.com/wiki/index.php/Main/TermsConditions'>Terms of Use</a>
+</p></div>
+
+			<!--/PageFooterFmt-->
+			<hr class="clear" />
+		</div>
+		
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-494092-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

@@ -1,0 +1,3449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.86">
+    
+	
+	<style type="text/css">
+		@font-face {
+			font-family: KlavikaExtraLight;
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayExtraLight.eot');
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayExtraLight.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayExtraLight.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaLight;
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicLight.eot');
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicLight.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicLight.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaRegular;
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicRegular.eot');
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicRegular.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicRegular.woff') format('woff');
+		}		
+		@font-face {
+			font-family: KlavikaMedium;
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicMedium.eot');
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicMedium.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicMedium.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaBold;
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicBold.eot');
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicBold.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebBasicBold.woff') format('woff');
+		}
+		@font-face {
+			font-family: KlavikaBlack;
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayBlack.eot');
+			src: url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayBlack.eot?#iefix') format('embedded-opentype'), url('http://www.inc.com/lib/fonts/klavika/KlavikaWebDisplayBlack.woff') format('woff');
+		}
+	</style>
+	
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.inc.com/views/css/ie7.css" />
+	<![endif]-->
+
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+	</style>
+
+	
+	<script type="text/javascript" src="http://www.inc.com/lib/jquery-1.9.1.min.js"></script> 
+	<script language="JavaScript" type="text/javascript" src="http://www.inc.com/js/mobile.js"></script>
+	<script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/lib/underscore-min.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/lib/html5historyapi/history.min.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/js/global.js?newsorting1"></script>
+
+	
+	<script type="text/javascript">
+		var application_url = "http://www.inc.com/";
+
+		var baseURL;
+		var urlParts = location.href.split('/');
+		if (urlParts[urlParts.length-1] == '') {
+			urlParts = urlParts.slice(0,urlParts.length-1);
+		}
+		if (isNaN(urlParts[urlParts.length-1].split('-').join('')) || isNaN(parseInt(urlParts[urlParts.length-1].split('-').join(''),10))) {
+			baseURL = urlParts.join('/');
+		}
+		else {
+			baseURL = urlParts.slice(0,urlParts.length-1).join('/');
+		}
+
+		window.onpageshow = function(event) {
+			//reload page on back or forward
+			if (event.persisted) {
+				window.location.reload();
+			}
+		};
+
+		// ie fix: Ensures there will be no 'console is undefined' errors
+		window.console = window.console || (function(){
+			var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile = c.clear = c.exception = c.trace = c.assert = function(){};
+			return c;
+		})();
+
+		$(function(){
+			if (localStorage) {
+				if (!localStorage.getItem('incPinboardData')) {
+					localStorage.setItem('incPinboardData',JSON.stringify(new Array()));
+				}
+				if (!localStorage.getItem('incPinboardSorting')) {
+					localStorage.setItem('incPinboardSorting',JSON.stringify({home:'notset',channel:'notset'}));
+				}
+				if (!localStorage.getItem('incSponsoredTileInfo')) {
+					var incSponsoredTileInfo = new Object();
+					incSponsoredTileInfo.queue = new Array();
+					incSponsoredTileInfo.seen = new Array();
+					localStorage.setItem('incSponsoredTileInfo',JSON.stringify(incSponsoredTileInfo));
+				}
+				var localStorageArray = $.parseJSON(localStorage.getItem('incPinboardData'));
+
+				var urlParts = location.href.split('/');
+				if (urlParts[urlParts.length-1] == '') {
+					urlParts = urlParts.slice(0,urlParts.length-1);
+				}
+				if (isNaN(urlParts[urlParts.length-1]) || isNaN(parseInt(urlParts[urlParts.length-1],10))) {
+					var nonpushURL = urlParts.join('/');
+				}
+				else {
+					var nonpushURL = urlParts.slice(0,urlParts.length-1).join('/');
+				}
+
+				var alreadyRecordedIndex = -1;
+				for (var i = localStorageArray.length-1; i >= 0; i--) {
+					if (localStorageArray[i].href == nonpushURL) {
+						alreadyRecordedIndex = i;
+						break;
+					}
+				}
+
+				if (alreadyRecordedIndex == -1) {
+					localStorageArray.push({timestamp: new Date().getTime(),href: nonpushURL});
+					if (localStorageArray.length > 20) {
+						localStorageArray.shift();
+					}
+				}
+				else {
+					var splicedItem = localStorageArray.splice(alreadyRecordedIndex,1)[0];
+					localStorageArray.push(splicedItem);
+					localStorageArray[localStorageArray.length-1].timestamp = new Date().getTime();
+				}
+				localStorage.setItem('incPinboardData',JSON.stringify(localStorageArray));
+			}
+		});
+
+		var shownArticles = new Array();
+
+		var sponsoredQueue = (new function() {
+			var cls = this;
+			cls.queueLoading = false;
+			cls.outbrainLoading = false;
+			cls.outbrainQueue = new Array();
+
+			cls.init = function() {
+				cls.sponsoredTileInfo = $.parseJSON(localStorage.getItem('incSponsoredTileInfo'));
+				cls.loadQueue();
+				cls.loadOutbrain();
+			}
+
+			cls.loadQueue = function() {
+				if (!cls.queueLoading) {
+					cls.queueLoading = true;
+
+					var restURL = application_url+'rest/sponsoredtiles';
+					if (typeof adinfo.channelArray.topid !== 'undefined') {
+						restURL += '/'+adinfo.channelArray.topid;
+					}
+
+					$.ajax({
+						dataType: 'json',
+						url: restURL
+					})
+					.done(function(data) {
+						//cls.sponsoredTileInfo.queue = cls.sponsoredTileInfo.queue.concat(data);
+						cls.sponsoredTileInfo.queue = data;
+
+						cls.queueLoading = false;
+					})
+					.fail(function(data) {
+						cls.queueLoading = false;
+					});
+				}
+			}
+
+			cls.processOutbrain = function(json) {
+				for (var i = 0; i < json.doc.length; i++) {
+					var newOutbrainItem = json.doc[i];
+					newOutbrainItem.cellclass = 'outbrainNew';
+					newOutbrainItem.cellwidth = 1;
+
+					cls.outbrainQueue.push(newOutbrainItem);
+				}
+				cls.outbrainLoading = false;
+			}
+
+			cls.loadOutbrain = function() {
+				if (!cls.outbrainLoading) {
+					cls.outbrainLoading = true;
+					OBR.extern.callRecs({permalink:baseURL,widgetId:'AD_2'},cls.processOutbrain);
+				}
+			}
+
+			cls.getNext = function() {
+				var next = cls.sponsoredTileInfo.queue.shift();
+				if (typeof next !== 'undefined' && _.indexOf(shownArticles,next.id) != -1) {
+					return cls.getNext();
+				}
+
+				if (typeof next !== 'undefined') {
+					next.cellclass = 'normal';
+					next.cellwidth = 1;
+				}
+				else {
+					if (cls.outbrainQueue.length > 0) {
+						next = cls.outbrainQueue.shift();
+						next.cellclass = 'outbrainNew';
+						next.cellwidth = 1;
+					}
+
+					if (!cls.outbrainLoading && cls.outbrainQueue.length < 10) {
+						cls.loadOutbrain();
+					}
+				}
+
+				return next;
+			}
+
+			cls.recordSeen = function() {
+
+			}
+		});
+		$(function(){ sponsoredQueue.init(); });
+
+		var readmoreLogTriggered = false;
+		var Pinboard = function() {
+			var cls = this;
+			cls.location;
+			cls.secondPath;
+			cls.ID;
+			cls.appURL;
+			cls.loading = false;
+			cls.tileCount = 0;
+			cls.type;
+			cls.limit;
+			cls.unitCount;
+			cls.pdata;
+			cls.offset;
+			cls.imageLoadingArray = new Array();
+			cls.imageLoadingIndex = 0;
+			cls.unitidArray = new Array();
+			cls.lastScrollTop;
+			cls.lastScrollPosition = 0;
+			cls.manuallyScrolled = false;
+			cls.artid = false;
+			cls.isArticlePage = false;
+			cls.pushOffset = 0;
+			cls.firstChannelLoad = true;
+			cls.finishedPinboard = false;
+			cls.pushURL = baseURL;
+			cls.excludeids;
+
+			cls.sponsoredLocations = new Array(5,1,3,1,4,0,4,3,1);//no 2's right now
+			cls.sponsoredLocationsIndex = 0;
+
+			cls.processStructure = function(structure) {
+				var normalIndices = new Array();
+				for (var i = 0; i < structure.length; i++) {
+					if (typeof structure[i].cellclass !== 'undefined' && structure[i].cellclass == 'normal') {
+						normalIndices.push(i);
+					}
+				}
+				for (var i = 0; i < normalIndices.length; i++) {
+					if (cls.sponsoredLocations[cls.sponsoredLocationsIndex] == i) {
+						structure[normalIndices[i]].cellclass = 'sponsored';
+					}
+					if (cls.unitCount == 0 && cls.sponsoredLocations[cls.sponsoredLocationsIndex]*2 == i) {
+						structure[normalIndices[i]].cellclass = 'sponsored';
+					}
+				}
+				cls.sponsoredLocationsIndex++;
+				if (cls.sponsoredLocationsIndex == cls.sponsoredLocations.length) {
+					cls.sponsoredLocationsIndex = 0;
+				}
+
+				return structure;
+			}
+
+			cls.channelheaderstructure = new Array(
+									{
+										cellclass:'mainfeature',
+										cellwidth:3
+									},
+									{
+										cellclass:'subfeature',
+										cellwidth:1
+									},
+									{
+										cellclass:'subfeature',
+										cellwidth:1
+									},
+									{
+										cellclass:'subfeature',
+										cellwidth:1
+									}
+
+								);
+			cls.firstadunitstructure = new Array(
+									{
+										cellclass:'firstwideadunit',
+										cellwidth:3
+									}
+								);
+			cls.initialstructure = new Array(
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'imubig',
+										cellwidth:1
+									},
+									{
+										cellclass:'text',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'row1x3',
+										cellwidth:3
+									},
+									{
+										cellclass:'portrait',
+										cellwidth:1
+									},
+									{
+										cellclass:'imusmall',
+										cellwidth:1
+									},
+									{
+										cellclass:'text',
+										cellwidth:1
+									},
+									{
+										cellclass:'blank',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'row1x3',
+										cellwidth:3
+									}
+								);
+			cls.afterstructure = new Array(
+									{
+										cellclass:'wideadunit',
+										cellwidth:3
+									},
+									{
+										cellclass:'row1x3',
+										cellwidth:3
+									},
+									{
+										cellclass:'portrait',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'imubig',
+										cellwidth:1
+									},
+									{
+										cellclass:'blank',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'row1x3',
+										cellwidth:3
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'imusmall',
+										cellwidth:1
+									},
+									{
+										cellclass:'text',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'normal',
+										cellwidth:1
+									},
+									{
+										cellclass:'row1x3',
+										cellwidth:3
+									}
+								);
+
+			cls.init = function(pinboardLocation,pinboardID,applicationURL,secondPath,type) {
+				cls.location = pinboardLocation;
+				cls.secondPath = secondPath;
+				cls.ID = '#'+pinboardID;
+				cls.appURL = applicationURL;
+				cls.loading = true;
+				cls.type = type;
+				cls.unitCount = 0;
+				cls.offset = 0;
+				cls.pdata = new Array();
+				cls.lastScrollTop = $(window).scrollTop();
+
+				if (typeof incid !== 'undefined' && incid != 0) {
+					cls.isArticlePage = true;
+				}
+
+				if (cls.type != 'popularsidebar' && !cls.isArticlePage) {
+					var incPinboardSorting = $.parseJSON(localStorage.getItem('incPinboardSorting'));
+					if (op == 'home' && incPinboardSorting.home != 'notset') {
+						cls.type = incPinboardSorting.home;
+					}
+					else if (op == 'channel' && incPinboardSorting.channel != 'notset') {
+						cls.type = incPinboardSorting.channel;
+					}
+					if (cls.type == 'latest') {
+						$('#pinboardSortLatest').css('z-index',5);
+					}
+					else if (cls.type == 'popular') {
+						$('#pinboardSortPopular').css('z-index',5);
+					}
+					$('#pinboardSortHeader').css('visibility','visible');
+				}
+
+				if (cls.type == 'popularsidebar') {
+					$(cls.ID).attr('id','particlepinboardsidebar').removeClass('homepinboard').addClass('articlepinboard');
+					cls.ID = '#particlepinboardsidebar';
+					particlepinboardsidebar = phomepinboard;
+				}
+
+				$(cls.ID).append('<div class="ajaxloader"><img src="http://images.inc.com/ajaxloader/ajax-loader.gif"></img></div>');
+
+				if (cls.secondPath != '') {
+					cls.location += '/'+cls.secondPath.split('_')[0];
+				}
+
+				if (cls.location == 'home' || cls.location.search('channel') == 0 || cls.type == 'popularsidebar') {
+					$('#backtotopbutton').click(_.throttle(function(e) {
+						$('html, body').animate({
+							scrollTop: 0
+						}, 500);
+					}, 501));
+
+					if (pushStateValue != '') {
+						cls.loading = false;
+						$(cls.ID+' .ajaxloader').remove();
+						var localStorageArray = $.parseJSON(localStorage.getItem('incPinboardData'));
+						for (var i = localStorageArray.length-1; i >= 0; i--) {
+							if (localStorageArray[i].href == cls.pushURL) {
+								if (typeof localStorageArray[i].data !== 'undefined') {
+									for (var j = 0; j < localStorageArray[i].data.length; j++) {
+										cls.pdata.push(localStorageArray[i].data[j]);
+									}
+
+									if (typeof localStorageArray[i].artid !== 'undefined' && localStorageArray[i].artid) {
+										cls.artid = localStorageArray[i].artid;
+									}
+									break;
+								}
+								else {
+									pushStateValue = '';
+									history.replaceState(null,null,cls.pushURL);
+									ignorePushState = true;
+									$(window).scroll(cls.processScrollPosition);
+									cls.loadData();
+									return;
+								}
+							}
+						}
+
+						for (var i = 0; i < cls.pdata.length; i++) {
+							for (var j = 0; j < cls.pdata[i].length; j++) {
+								if (typeof cls.pdata[i][j].cellclass !== 'undefined') {
+									if (typeof cls.pdata[i][j].type === 'undefined' && cls.pdata[i][j].cellclass != 'blank' && cls.pdata[i][j].cellclass != 'wideadunit' && cls.pdata[i][j].cellclass != 'firstwideadunit' && cls.pdata[i][j].cellclass != 'sponsored' && cls.pdata[i][j].cellclass != 'imusmall' && cls.pdata[i][j].cellclass != 'imubig' && cls.pdata[i][j].cellclass != 'imubigsidebar') {
+										cls.offset++;
+									}
+								}
+							}
+						}
+
+						for (var i = 0; i < cls.pdata.length-cls.pushOffset; i++) {
+							if (i > 1) {
+								cls.imageLoadingArray.push(false);
+							}
+							cls.assemblePinboard();
+						}
+
+						var idToUse;
+						if (!cls.isArticlePage || (cls.isArticlePage && pushStateValue >= cls.pushOffset)) {
+							idToUse = cls.ID;
+						}
+						else {
+							idToUse = '#particlepinboardsidebar';
+						}
+
+						scrollToArt = function() {
+							if (parseInt(pushStateValue) == parseInt($(idToUse+' .pin'+cls.artid).parent().parent().attr('id').replace(idToUse.replace('#','')+'Unit',''))) {
+								if (!cls.manuallyScrolled) {
+									$(window).scrollTop($(idToUse+' .pin'+cls.artid).offset().top-300);
+									for (var i = cls.lastScrollPosition+1; i < cls.unitidArray.length; i++) {
+										if ($(window).scrollTop() > $(cls.unitidArray[i]).offset().top - 200) {
+											cls.lastScrollPosition = i;
+											if (i == 0) {
+												history.replaceState(null,null,cls.pushURL);
+											}
+											else {
+												history.replaceState(null,null,cls.pushURL+'/'+i);
+											}
+											cls.updateLocalStorage(cls.lastScrollPosition,cls.pushURL,cls.artid);
+											break;
+										}
+									}
+									setTimeout(function(){scrollToArt()},300);
+								}
+							}
+							else {
+								scrollToPinUnit();
+							}
+						}
+
+						scrollToPinUnit = function() {
+							if (!cls.manuallyScrolled) {
+								$(window).scrollTop($(idToUse+'Unit'+pushStateValue).offset().top);
+								for (var i = cls.lastScrollPosition+1; i < cls.unitidArray.length; i++) {
+									if ($(window).scrollTop() > $(cls.unitidArray[i]).offset().top - 200) {
+										cls.lastScrollPosition = i;
+										if (i == 0) {
+											history.replaceState(null,null,cls.pushURL);
+										}
+										else {
+											history.replaceState(null,null,cls.pushURL+'/'+i);
+										}
+										cls.updateLocalStorage(cls.lastScrollPosition,cls.pushURL);
+										break;
+									}
+								}
+								setTimeout(function(){scrollToPinUnit()},300);
+							}
+						}
+
+						if ($(idToUse+'Unit'+pushStateValue).length > 0) {
+							if (cls.artid) {
+								scrollToArt();
+							}
+							else {
+								scrollToPinUnit();
+							}
+						}
+						else {
+							pushStateValue = '';
+							history.replaceState(null,null,cls.pushURL);
+							ignorePushState = true;
+						}
+					}
+
+					$(window).scroll(cls.processScrollPosition);
+
+					// thanks Mottie!! http://stackoverflow.com/users/145346/mottie
+					$('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function(e){
+						if ( e.which > 0 || e.type == "mousedown" || e.type == "mousewheel"){
+							cls.manuallyScrolled = true;
+							ignorePushState = true;
+						}
+					});
+				}
+
+				if (pushStateValue == '' || cls.location == 'article/readmore') {
+					cls.loadData();
+				}
+
+				console.log(blah=cls);
+			}
+
+			cls.processScrollPosition = _.throttle(function() {
+				if (!cls.finishedPinboard && !cls.loading && $(window).scrollTop() >= $(document).height() - $(window).height() - 2000 && cls.type != 'popularsidebar') {
+					cls.loading = true;
+					$(cls.ID).append('<div class="ajaxloader"><img src="http://images.inc.com/ajaxloader/ajax-loader.gif"/></div>');
+					cls.loadData();
+				}
+
+				var idToUse = cls.ID;
+				if (cls.isArticlePage && $('#particlepinboardsidebar').length > 0) {
+					idToUse = '#particlepinboardsidebar';
+				}
+
+				if ($(idToUse).length > 0 && (cls.location.search('channel') == 0 && cls.isArticlePage) || cls.type == 'popularsidebar') {
+					if ($('#backtotopbutton').css('display') == 'none' && $(window).scrollTop() > $(idToUse).offset().top + 500) {
+						$('#backtotopbutton').fadeIn(700);
+					}
+					else if ($('#backtotopbutton').css('display') == 'block' && $(window).scrollTop() <= $(idToUse).offset().top + 500) {
+						$('#backtotopbutton').fadeOut(700);
+					}
+				}
+				else {
+					if ($('#backtotopbutton').css('display') == 'none' && $(window).scrollTop() > $(idToUse+' .firstwideadunitrow').offset().top) {
+						$('#backtotopbutton').fadeIn(700);
+					}
+					else if ($('#backtotopbutton').css('display') == 'block' && $(window).scrollTop() <= $(idToUse+' .firstwideadunitrow').offset().top) {
+						$('#backtotopbutton').fadeOut(700);
+					}
+				}
+
+				if (cls.isArticlePage && cls.location != 'article/readmore' && !readmoreLogTriggered && $('#particlepinboardreadmore').length > 0 && $(window).scrollTop() > $('#particlepinboardreadmore').offset().top-$(window).height()
+					&& $(window).scrollTop() < $('#particlepinboardreadmore').offset().top) {
+					readmoreLogTriggered = true;
+					var incids = new Array();
+					for (var i = 0; i < particlepinboardreadmore.pdata[0].length; i++) {
+						incids.push(particlepinboardreadmore.pdata[0][i].id);
+					}
+					$.post(cls.appURL+'pinboardlog', { 'cnlid':'','incid':incid,'position':'readmore','scroll':cls.lastScrollPosition,'incids[]': incids});
+				}
+
+				if (cls.lastScrollTop < $(window).scrollTop()) {
+					for (var i = cls.lastScrollPosition+1; i < cls.unitidArray.length; i++) {
+						if ($(cls.unitidArray[i]).length > 0) {
+							if ($(window).scrollTop() > $(cls.unitidArray[i]).offset().top-$(window).height()) {
+								if (cls.unitidArray[i].search('particle') === -1) {
+									triggerAds(i-cls.pushOffset,i,adUnitArray,cls);
+								}
+								else {
+									triggerAds(i,i,sidebarAdUnitArray,cls);
+								}
+							}
+							if ($(window).scrollTop() > $(cls.unitidArray[i]).offset().top - 200) {
+								cls.lastScrollPosition = i;
+								if (i == 0) {
+									history.replaceState(null,null,cls.pushURL);
+								}
+								else {
+									history.replaceState(null,null,cls.pushURL+'/'+i);
+								}
+								cls.updateLocalStorage(cls.lastScrollPosition,cls.pushURL);
+								break;
+							}
+						}
+					}
+				}
+				else {
+					for (var i = cls.lastScrollPosition; i > 0; i--) {
+						if ($(cls.unitidArray[i-1]).length > 0) {
+							if ($(window).scrollTop() < $(cls.unitidArray[i-1]).offset().top + $(cls.unitidArray[i-1]).height()) {
+								if (cls.unitidArray[i-1].search('particle') === -1) {
+									triggerAds(i-1-cls.pushOffset,i-1,adUnitArray,cls);
+								}
+								else {
+									triggerAds(i-1,i-1,sidebarAdUnitArray,cls);
+								}
+							}
+							if ($(window).scrollTop() < $(cls.unitidArray[i-1]).offset().top + $(cls.unitidArray[i-1]).height() - 400) {
+								cls.lastScrollPosition = i-1;
+								if (i-1 == 0) {
+									history.replaceState(null,null,cls.pushURL);
+								}
+								else {
+									history.replaceState(null,null,cls.pushURL+'/'+(i-1));
+								}
+								cls.updateLocalStorage(cls.lastScrollPosition,cls.pushURL);
+								break;
+							}
+						}
+					}
+
+					if (cls.lastScrollPosition == 1 && $(window).scrollTop() < $(cls.unitidArray[0]).offset().top - 520) {
+						cls.lastScrollPosition = 0;
+						if (!cls.isArticlePage && cls.type != 'popularsidebar') {
+							triggerAds(cls.lastScrollPosition,cls.lastScrollPosition,adUnitArray,cls);
+						}
+						else {
+							triggerAds(cls.lastScrollPosition,cls.lastScrollPosition,sidebarAdUnitArray,cls);
+						}
+						history.replaceState(null,null,cls.pushURL);
+					}
+				}
+
+				cls.lastScrollTop = $(window).scrollTop();
+			},100);
+
+			cls.updateLocalStorage = function(scrollPosition,pageURL,artid) {
+				var localStorageArray = $.parseJSON(localStorage.getItem('incPinboardData'));
+				var alreadyRecordedIndex;
+				for (var i = localStorageArray.length-1; i >= 0; i--) {
+					if (localStorageArray[i].href == pageURL) {
+						alreadyRecordedIndex = i;
+						break;
+					}
+				}
+
+				if (typeof alreadyRecordedIndex === 'undefined') {
+					localStorageArray.push({timestamp: new Date().getTime(),href: pageURL});
+					if (localStorageArray.length > 20) {
+						localStorageArray.shift();
+					}
+				}
+				else {
+					var splicedItem = localStorageArray.splice(alreadyRecordedIndex,1)[0];
+					localStorageArray.push(splicedItem);
+					localStorageArray[localStorageArray.length-1].timestamp = new Date().getTime();
+				}
+
+				localStorageArray[localStorageArray.length-1].data = cls.pdata;
+				if (typeof artid !== 'undefined' && artid) {
+					localStorageArray[localStorageArray.length-1].artid = artid;
+				}
+				localStorageArray[localStorageArray.length-1].scrollPosition = scrollPosition;
+				localStorage.setItem('incPinboardData',JSON.stringify(localStorageArray));
+			}
+
+			// Thanks Dimitar Christoff !! http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html
+		    cls.imageLoader = function(imagesArray) {
+		        var images = imagesArray.slice(), // dereference original
+		            expected = images.length,
+		            loaded = [],
+		            errors = [];
+
+		        var loadOne = function(src) {
+		            var image = new Image();
+
+		            image.onerror = image.onabort = function(){
+		                errors.push(src);
+		                checkProgress();
+		            };
+
+		            image.onload = function(){
+		                loaded.push(this.src);
+		                checkProgress();
+		                // clean up
+		                image = image.onload = image.onabort = image.onerror = null;
+		            };
+
+		            image.src = src;
+		        };
+
+		        var checkProgress = function() {
+		        	//console.log(loaded.length+'/'+errors.length+'/'+expected);
+		            if (loaded.length + errors.length == expected) {
+		            	cls.imageLoadingArray[cls.imageLoadingIndex] = false;
+		            	cls.imageLoadingIndex++;
+		            }
+		        };
+
+		        while (images.length) {
+		            loadOne(images.shift());
+		        }
+		    };
+
+			cls.loadData = function() {
+				if (!cls.finishedPinboard) {
+					cls.limit = 2;
+					var cheight;
+					if ($('#maincolumn').length > 0) {
+						cheight = $('#maincolumn').height()-328;
+					}
+					else {
+						cheight = $('#articlecontent').height()-328;
+					}
+					if ($('#select_services').length == 0) {
+						cheight += 656;
+					}
+					while (cheight > 1414) {
+						cls.limit++;
+						cheight -= 328;
+					}
+
+					var restURL;
+					if (cls.location == 'home') {
+						restURL = cls.appURL+'rest/pinboard/'+cls.location+'/'+cls.type+'?pinunit='+cls.unitCount+'&offset='+cls.offset;
+						if (cls.pdata.length == 0) {
+							var structure = $.parseJSON(JSON.stringify(cls.firstadunitstructure.concat(cls.initialstructure,new Array(new Array()),cls.afterstructure)));
+						}
+						else {
+							var structure = $.parseJSON(JSON.stringify(cls.afterstructure));
+						}
+						restURL += '&structure='+encodeURIComponent(JSON.stringify(cls.processStructure(structure)));
+					}
+					else if (cls.location == 'article/readmore') {
+						restURL = cls.appURL+'rest/pinboard/'+cls.location+'/'+incid;
+					}
+					else {
+						if (cls.isArticlePage) {
+							if (cls.pdata.length == 0) {
+								restURL = cls.appURL+'rest/pinboard/'+cls.location+'/'+cls.type+'?pinunit='+cls.unitCount+'&incid='+incid+'&offset='+cls.offset+'&limit='+cls.limit;
+								if (getCookie('incid')) {
+									restURL += '&usrid='+getCookie('incid').split(':')[0];
+								}
+								var structure = $.parseJSON(JSON.stringify(cls.firstadunitstructure.concat(cls.initialstructure,new Array(new Array()),cls.afterstructure)));
+							}
+							else {
+								restURL = cls.appURL+'rest/pinboard/'+cls.location+'/'+cls.type+'?pinunit='+cls.unitCount+'&incid='+incid+'&offset='+cls.offset;
+								var structure = $.parseJSON(JSON.stringify(cls.afterstructure));
+							}
+
+							if (hasSidebar == 'false') {
+								restURL += '&hasSidebar=false';
+							}
+
+							restURL += '&structure='+encodeURIComponent(JSON.stringify(cls.processStructure(structure)));
+						}
+						else {
+							restURL = cls.appURL+'rest/pinboard/'+cls.location+'/'+cls.type+'?pinunit='+cls.unitCount+'&offset='+cls.offset;
+							if (cls.unitCount == 0) {
+								var structure = $.parseJSON(JSON.stringify(cls.channelheaderstructure.concat(cls.firstadunitstructure,cls.initialstructure,new Array(new Array()),cls.afterstructure)));
+								restURL += '&structure='+encodeURIComponent(JSON.stringify(cls.processStructure(structure)));
+							}
+							else {
+								var structure = $.parseJSON(JSON.stringify(cls.afterstructure));
+								restURL += '&structure='+encodeURIComponent(JSON.stringify(cls.processStructure(structure)));
+							}
+						}
+					}
+
+					if (cls.type == 'popularsidebar') {
+						cls.finishedPinboard = true;
+						$(cls.ID+' .ajaxloader').remove();
+						restURL += '&limit='+cls.limit;
+					}
+
+					if (typeof cls.excludeids !== 'undefined') {
+						restURL += '&excludeids='+cls.excludeids.join(',');
+					}
+					
+					console.log(restURL);
+
+					$.ajax({
+						dataType: 'json',
+						url: restURL
+					})
+					.done(function(response) {
+						var data = response.tiledata;
+						console.log(response);
+
+						if (typeof response.info !== 'undefined' && typeof response.info.offset !== 'undefined' && typeof response.info.changeto !== 'undefined' && typeof response.info.excludeids !== 'undefined') {
+							cls.offset = response.info.offset;
+							cls.type = response.info.changeto;
+							cls.excludeids = response.info.excludeids;
+						}
+
+						if (cls.pdata.length != 0 && cls.location.search('article') != 0) {
+							cls.imageLoadingArray.push(true);
+						}
+
+						for (var i = 0; i < data.length; i++) {
+							if (typeof data[i].cellclass !== 'undefined') {
+								if (typeof data[i].type === 'undefined' && data[i].cellclass != 'blank' && data[i].cellclass != 'wideadunit' && data[i].cellclass != 'firstwideadunit' && data[i].cellclass != 'sponsored' && data[i].cellclass != 'imusmall' && data[i].cellclass != 'imubig' && data[i].cellclass != 'imubigsidebar') {
+									cls.offset++;
+								}
+							}
+						}
+
+						var imagesToLoad = cls.processData(data);
+						if (!cls.imageLoadingArray[cls.imageLoadingIndex-1]) {
+							cls.assemblePinboard();
+						}
+						cls.imageLoader(imagesToLoad);
+
+						if (data.length == 0 || (cls.pdata.length > 0 && data.length < 15)) {
+							cls.finishedPinboard = true;
+							cls.assemblePinboard();
+							$(cls.ID+' .ajaxloader').remove();
+							$('body').append('<div id="bottom-bar" class="outer"></div>');
+						}
+					});
+				}
+			}
+
+			cls.processData = function(data) {
+				var dataArray = new Array();
+				if (cls.pdata.length == 0 && cls.location.search('article') != 0) {
+					var tarray = new Array();
+					for (var i = 0; i < data.length; i++) {
+						if (typeof data[i].cellclass !== 'undefined') {
+							tarray.push(data[i]);
+							if (i == data.length-1) {
+								cls.pdata.push(tarray);
+								cls.imageLoadingArray.push(false);
+								cls.imageLoadingIndex++;
+							}
+						}
+						else {
+							cls.pdata.push(tarray);
+							tarray = new Array();
+						}
+					}
+
+					if (!cls.isArticlePage) {
+						dataArray = cls.pdata[cls.pdata.length-1].slice();
+					}
+					else {
+						for (var j = 0; j < cls.pdata.length-2; j++) {
+							for (var k = 0; k < cls.pdata[j].length; k++) {
+								dataArray.push(cls.pdata[j][k]);
+							}
+						}
+						dataArray = dataArray.slice();
+						cls.unitCount = cls.pdata.length-2;
+						cls.pushOffset = cls.unitCount;
+					}
+				}
+				else {
+					cls.pdata.push(data);
+					dataArray = data.slice();
+				}
+
+				var imagesToLoad = new Array();
+				for (var i = 0; i < dataArray.length; i++) {
+					if (typeof dataArray[i].cellclass !== 'undefined') {
+						if (dataArray[i].cellclass != 'blank' && dataArray[i].cellclass != 'wideadunit' && dataArray[i].cellclass != 'imusmall' && dataArray[i].cellclass != 'imubig' && dataArray[i].cellclass != 'imubigsidebar' && dataArray[i].cellclass != 'subfeature') {
+							if (dataArray[i].cellclass == 'row1x3' || dataArray[i].cellclass == 'mainfeature') {
+								if (dataArray[i].featureimage) {
+									imagesToLoad.push(dataArray[i].featureimage);
+								}
+							}
+							else {
+								if (dataArray[i].tilefeatureimage) {
+									imagesToLoad.push(dataArray[i].tilefeatureimage);
+								}
+							}
+						}
+					}
+				}
+				return imagesToLoad;
+			}
+
+			cls.intentionIntercept = function(changeLocation,scrollPosition,position,tiletype,thattype,toopt,tooptid) {
+				var postParams = {};
+				postParams.scroll = scrollPosition;
+				postParams.position = position;
+				postParams.tiletype = tiletype;
+				postParams.thattype = thattype;
+
+				if (cls.isArticlePage) {
+					postParams.thisincid = incid;
+					postParams.thistype = 'article';
+				}
+				else if (cls.location.search('channel') == 0) {
+					postParams.thiscnlid = cls.location.split('/')[1];
+					postParams.thistype = 'channel';
+				}
+
+				if (adinfo.cms.search('aut') != -1) {
+					postParams.thisautid = adinfo.cms.replace('aut','');
+					postParams.thistype = 'author';
+				}
+
+				if (cls.location == 'home' && cls.type != 'popularsidebar') {
+					postParams.thistype = 'homepage';
+				}
+
+				if (adinfo.cms.search('col') == 0 && adinfo.video) {
+					postParams.thistype = 'series';
+					postParams.thisserid = adinfo.cms.replace('col','');
+				}
+
+				if (typeof toopt !== 'undefined' && typeof tooptid !== 'undefined') {
+					switch (toopt) {
+						case 'article':
+							postParams.thatincid = tooptid;
+							break;
+						case 'channel':
+							if (tooptid.search('series') == 0) {
+								postParams.thattype = 'series';
+								postParams.thatserid = tooptid.replace('series','');
+							}
+							else {
+								postParams.thatcnlid = tooptid;
+							}
+							break;
+						case 'author':
+							postParams.thatautid = tooptid;
+							break;
+					}
+				}
+
+				$.post(cls.appURL+'rest/intentionintercept',postParams)
+					.done(function() {
+						changeLocation();
+					})
+					.fail(function() {
+						changeLocation();
+					});
+			}
+
+			cls.assemblePinboard = function() {
+				var currentRowWidth = 0;
+				if (((cls.isArticlePage && cls.location.search('channel') == 0) || cls.type == 'popularsidebar') && cls.firstChannelLoad) {
+					cls.firstChannelLoad = false;
+					var j = 0;
+					var x = cls.pdata[0].length;
+					while (x < 10) {
+						$('#particlepinboardsidebar .pinboardContent').append('<div id="particlepinboardsidebarUnit'+j+'"><div>');
+						cls.unitidArray.push('#particlepinboardsidebarUnit'+j);
+						var row = $('<div class="fluidrow"></div>').appendTo($('#particlepinboardsidebarUnit'+j));
+						sidebarAdUnitSubCounter = 0;
+						for (var i = 0; i < cls.pdata[j].length; i++) {
+							currentRowWidth = 0;
+
+							cls.pdata[j][i].pinVar = cls.ID.replace('#','');
+							if (cls.type == 'popularsidebar') {
+								cls.pdata[j][i].pos = 'popularsidebar';
+							}
+							else {
+								cls.pdata[j][i].pos = 'sidebar';
+							}
+
+							if (cls.pdata[j][i].seriesid != 'NULL') {
+								cls.pdata[j][i].channelid = 'series'+cls.pdata[j][i].seriesid;
+							}
+
+							if (!cls.pdata[j][i].inc_headline) {
+								cls.pdata[j][i].inc_headline = '';
+							}
+							if (!cls.pdata[j][i].inc_deck) {
+								cls.pdata[j][i].inc_deck = '';
+							}
+
+							cls.pdata[j][i].colnumber = currentRowWidth+1;
+							cls.pdata[j][i].unitCount = j;
+							cls.pdata[j][i].counter = cls.tileCount;
+							cls.pdata[j][i].historyScript = "";
+							if (typeof cls.pdata[j][i].id !== 'undefined') {
+								shownArticles.push(cls.pdata[j][i].id);
+								if (j == 0) {
+									cls.pdata[j][i].historyScript += "history.replaceState(null,null,'"+cls.pushURL+"');"+cls.ID.replace('#','')+".updateLocalStorage("+j+',\''+cls.pushURL+"',"+cls.pdata[j][i].id+");";
+								}
+								else {
+									cls.pdata[j][i].historyScript += "history.replaceState(null,null,'"+cls.pushURL+"/"+j+"');"+cls.ID.replace('#','')+".updateLocalStorage("+j+',\''+cls.pushURL+"',"+cls.pdata[j][i].id+");";
+								}
+							}
+
+							row.append(_.template($('#'+cls.pdata[j][i].cellclass+'PTemplate').html(),cls.pdata[j][i]));
+							currentRowWidth += cls.pdata[j][i].cellwidth;
+
+							cls.tileCount++;
+						}
+
+						sidebarAdUnitCounter++;
+
+						$('particlepinboardsidebarUnit'+j+' .pshares').sharrre({
+							share: {
+								facebook: true,
+								twitter: true,
+								linkedin: true,
+								googlePlus: true
+							},
+							template: '<span class="psharecount">{total}</span> SHARES',
+							enableHover: false,
+							urlCurl: cls.appURL+'sharrre.php'
+						});
+
+						if (pushStateValue != '') {
+							cls.unitCount++;
+							cls.pushOffset = cls.unitCount;
+						}
+
+						j++;
+						if (typeof cls.pdata[j] !== 'undefined') {
+							x = cls.pdata[j].length;
+						}
+						else {
+							break;
+						}
+					}
+
+					cls.loading = false;
+					$(cls.ID+' .ajaxloader').remove();
+					if (pushStateValue == '') {
+						triggerAds(0,0,sidebarAdUnitArray,cls);
+						if (cls.type != 'popularsidebar') {
+							cls.assemblePinboard();
+						}
+					}
+					return;
+				}
+
+				if (typeof cls.pdata[cls.unitCount] === 'undefined') {
+					return;
+				}
+
+				$(cls.ID+' .pinboardContent').append('<div id="'+cls.ID.replace('#','')+'Unit'+cls.unitCount+'"><div>');
+				cls.unitidArray.push(cls.ID+'Unit'+cls.unitCount);
+				rowcount = 0;
+
+				for (var i = 0; i < cls.pdata[cls.unitCount].length; i++) {
+					if (currentRowWidth == 0 || currentRowWidth > 2) {
+						if (cls.pdata[cls.unitCount][i].cellclass != 'wideadunit' && cls.pdata[cls.unitCount][i].cellclass != 'firstwideadunit' && cls.pdata[cls.unitCount][i].cellclass != 'mainfeature') {
+							var row = $('<div class="fluidrow row'+rowcount+'"></div>').appendTo($(cls.ID+'Unit'+cls.unitCount));
+							rowcount++;
+						}
+						else {
+							var row = $('<div class="fluidrow '+cls.pdata[cls.unitCount][i].cellclass+'row row'+rowcount+'"></div>').appendTo($(cls.ID+'Unit'+cls.unitCount));
+							rowcount++;
+						}
+						currentRowWidth = 0;
+					}
+
+					cls.pdata[cls.unitCount][i].pinVar = cls.ID.replace('#','');
+					if (cls.location == 'article/readmore') {
+						cls.pdata[cls.unitCount][i].pos = 'readmore';
+					}
+					else if (cls.location.search('channel') == 0 && !cls.isArticlePage && cls.unitCount == 0) {
+						cls.pdata[cls.unitCount][i].pos = 'featured';
+					}
+					else {
+						cls.pdata[cls.unitCount][i].pos = cls.type+'pinboard';
+					}
+
+					if (cls.pdata[cls.unitCount][i].seriesid != 'NULL') {
+						cls.pdata[cls.unitCount][i].channelid = 'series'+cls.pdata[cls.unitCount][i].seriesid;
+					}
+
+					if (!cls.pdata[cls.unitCount][i].inc_headline) {
+						cls.pdata[cls.unitCount][i].inc_headline = '';
+					}
+					if (!cls.pdata[cls.unitCount][i].inc_deck) {
+						cls.pdata[cls.unitCount][i].inc_deck = '';
+					}
+					
+					cls.pdata[cls.unitCount][i].colnumber = currentRowWidth+1;
+					cls.pdata[cls.unitCount][i].unitCount = cls.unitCount;
+					cls.pdata[cls.unitCount][i].counter = cls.tileCount;
+					cls.pdata[cls.unitCount][i].historyScript = "";
+					if (typeof cls.pdata[cls.unitCount][i].id !== 'undefined' && (cls.location == 'home' || cls.location.search('channel') == 0)) {
+						if (cls.unitCount == 0) {
+							cls.pdata[cls.unitCount][i].historyScript += "history.replaceState(null,null,'"+cls.pushURL+"');"+cls.ID.replace('#','')+".updateLocalStorage("+cls.unitCount+',\''+cls.pushURL+"',"+cls.pdata[cls.unitCount][i].id+");";
+						}
+						else {
+							cls.pdata[cls.unitCount][i].historyScript += "history.replaceState(null,null,'"+cls.pushURL+"/"+cls.unitCount+"');"+cls.ID.replace('#','')+".updateLocalStorage("+cls.unitCount+',\''+cls.pushURL+"',"+cls.pdata[cls.unitCount][i].id+");";
+						}
+					}
+
+					if (typeof cls.pdata[cls.unitCount][i].id !== 'undefined') {
+						shownArticles.push(cls.pdata[cls.unitCount][i].id);
+					}
+
+					if (typeof cls.pdata[cls.unitCount][i].cellclass !== 'undefined') {
+						row.append(_.template($('#'+cls.pdata[cls.unitCount][i].cellclass+'PTemplate').html(),cls.pdata[cls.unitCount][i]));
+						currentRowWidth += cls.pdata[cls.unitCount][i].cellwidth;
+
+						cls.tileCount++;
+					}
+				}
+
+
+				$(cls.ID+'Unit'+cls.unitCount+' .pshares').sharrre({
+					share: {
+						facebook: true,
+						twitter: true,
+						linkedin: true,
+						googlePlus: true
+					},
+					template: '<span class="psharecount">{total}</span> SHARES',
+					enableHover: false,
+					urlCurl: cls.appURL+'sharrre.php'
+				});
+
+				if (cls.location == 'home' || cls.location.search('channel') == 0) {
+					adUnitCounter++;
+					adUnitSubCounter = 0;
+
+					if (pushStateValue == '' && (cls.unitCount == 0 || ignorePushState)) {
+						if (!cls.isArticlePage || (hasSidebar == 'false' && cls.isArticlePage)) {
+							triggerAds(0,0,adUnitArray,cls);
+						}
+						else {
+							triggerAds(0,0,sidebarAdUnitArray,cls);
+						}
+					}
+					else if (cls.unitCount == parseInt(pushStateValue)) {
+						if (!cls.isArticlePage || (cls.isArticlePage && pushStateValue >= cls.pushOffset)) {
+							triggerAds(parseInt(pushStateValue)-cls.pushOffset,parseInt(pushStateValue),adUnitArray,cls);
+						}
+						else {
+							triggerAds(parseInt(pushStateValue),parseInt(pushStateValue),sidebarAdUnitArray,cls);
+						}
+					}
+				}
+
+				cls.unitCount++;
+				cls.loading = false;
+				$(cls.ID+' .ajaxloader').remove();
+			}
+		}
+	</script>
+	
+	
+	<script type="text/javascript">
+		
+		var pushStateValue;
+		pushStateValue='';
+		var ignorePushState = true;
+		if (pushStateValue != '') {
+			ignorePushState = false;
+		}
+		
+	</script>
+       
+	<script type="text/javascript" src="http://www.inc.com/js/masthead-nav.js?123"></script>
+		
+	<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+			<link href="https://plus.google.com/101053931292824178985" rel="publisher" />
+		<meta name="msvalidate.01" content="9A19C648A1BE1D62135B3BDD6CE3D600" />
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+	<script language="Javascript">var cms=null;</script>
+	
+	<link rel="stylesheet" type="text/css" href="http://www.inc.com/views/css/pinboard.css?channel" />
+	<script type="text/javascript" src="http://www.inc.com/lib/pinboard/pinboard.js"></script>
+
+	
+	<script type='text/javascript'>
+		innerLinkHandler = function(e) {
+			if (!e) var e = window.event;
+			e.cancelBubble = true;
+			if (e.stopPropagation) e.stopPropagation();
+		}
+	</script>
+	
+		<script type="text/javascript" src="http://www.inc.com/lib/masthead/masthead.js"></script>
+
+<script id="mastheadcontentTemplate" type="text/x-ustemplate">
+	<% if (logo) { %>
+		<div class="mclogo"><img src="<%= logo %>"></div>
+	<% } %>
+	<% _.each(articles,function(art) { %>
+		<div class="mcbox" onclick="mastheadAjaxContent.intentionIntercept('<%= art.appURL+art.inc_filelocation %>','article',<%= art.id %>); return false;">
+			<div class="mcinnercontainer">
+				<div class="mcimagecontainer">
+					<img class="mcimage" src="<%= art.f2image %>"/>
+				</div>
+				<div class="mcheadline">
+					<%= art.inc_headline %>
+				</div>
+			</div>
+		</div>
+	<% }); %>
+</script>
+
+<script type="text/javascript">
+	var mastheadAjaxContent;
+	$(function(){
+		mastheadAjaxContent = new MastheadAjaxContent('http://www.inc.com/');
+		mastheadAjaxContent.init();
+	});
+</script>
+		
+<script id="mainfeaturePTemplate" type="text/x-ustemplate">
+	<a href="<%= baseurl+inc_filelocation %>" class="pmainfeature" onclick="<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= baseurl+inc_filelocation %>';},<%= unitCount %>,'<%= pos %>','mainfeature','article','article','<%= id %>'); return false;">
+		<div class="pin<%= id %> caption bg-current">
+			<% if (precaption && precaption != '') { %>
+				<%= precaption.toUpperCase() %>&nbsp;|
+			<% } %>
+				<span<% if(parentcaptionURL != '') {%> class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+currentchannelURL %>';},<%= unitCount %>,'<%= pos %>','mainfeature','channel','channel','<%= channelid %>'); return false;"><% } %><% if (currentchannelname && currentchannelname != '') { %><%= currentchannelname.toUpperCase() %><% } %></span>
+		</div>
+		<img src="<%= featureimage %>" class="mainfeatureimage" width="970" height="450" onerror="this.src='http://images.inc.com/refreshgraphics/970x450-<%= _.random(1,8) %>.jpg'"/>
+		<% if (overlayimage) { %>
+			<div id="channelimage"><img src="<%= overlayimage %>"></div>
+		<% } else { %>
+			<div id="channeltitle"<% if(lightfeatureimage=='TRUE') { %> class="lightimage"<% } %>><% if (currentchannelname && currentchannelname != '') { %><%= currentchannelname.toUpperCase() %><% } %></div>
+		<% } %>
+	    <div class="headlines">
+	    	<div class="h1"><a href="<%= baseurl+inc_filelocation %>">
+	    		<% if(abgrp<7) { %><%= inc_headline %><% } else { %><%= inc_headline2 %><% } %></a>
+				<% if (byline) { %>
+					<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+bylineURL %>';},<%= unitCount %>,'<%= pos %>','mainfeature','author','author','<%= authorid %>'); return false;"><%= byline %></span></span>
+				<% } %>
+	    	</div>
+	        <div class="h2"><a href="<%= baseurl+inc_filelocation %>"><%= inc_deck %></a><% if (precaption == 'Video') { %><img src="http://www.inc.com/images/videoicon_sm.png"><% } %></div>
+	        <% if (partner) { %>
+				<div class="ppartner">PRESENTED BY <span<% if(partnerURL != '') {%>  class="pinnerlink ppartnername" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>; location.href='<%= partnerURL %>'; return false;"<% } else { %> class="ppartnername"<% } %>><% if (partner && partner != '') { %><%= partner.toUpperCase() %><% } %></span></div>
+			<% } %>
+	        <div class="pshares" data-title="sharrre" data-url="<%= baseurl+inc_filelocation %>" >&nbsp;</div>
+	        <% if (currentchannelid == '1' || currentchannelid == '6' || currentchannelid == '4' || currentchannelid == '7' || currentchannelid == '415' || currentchannelid == '2' || currentchannelid == '352') { %>
+		        <div id="div-gpt-ad-logo_belownav">
+				    <<%= 'script' %> type="text/javascript">
+				       googletag.cmd.push(function() { googletag.display('div-gpt-ad-logo_belownav'); });
+				    </<%= 'script' %>
+				</div>
+			<% } %>
+	    </div>
+	</a>
+</script>
+
+<script id="subfeaturePTemplate" type="text/x-ustemplate">
+	<a href="<%= baseurl+inc_filelocation %>" class="psubfeature" onclick="<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= baseurl+inc_filelocation %>';},<%= unitCount %>,'<%= pos %>','subfeature','article','article','<%= id %>'); return false;">
+		<div class="innerpcell-subfeature">
+			<div class="pin<%= id %> bg-current h1">
+				<% if (precaption && precaption != '') { %>
+					<%= precaption.toUpperCase() %>&nbsp;|
+				<% } %>
+					<span class="pinnerlink"<% if(parentcaptionURL != '' && currentchannelname != '') {%> onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+currentchannelURL %>';},<%= unitCount %>,'<%= pos %>','subfeature','channel','channel','<%= channelid %>'); return false;"<% } %>><% if (currentchannelname && currentchannelname != '') { %><%= currentchannelname.toUpperCase() %><% } %></span>
+			</div>
+		    <div class="h2">
+				<% if(abgrp<7) { %><%= inc_headline %><% } else { %><%= inc_headline2 %><% } %>
+				<% if (precaption == 'Video') { %><img src="http://www.inc.com/images/videoicon_sm.png"><% } %>
+				<% if (byline) { %>
+					<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+bylineURL %>';},<%= unitCount %>,'<%= pos %>','subfeature','author','author','<%= authorid %>'); return false;"><%= byline %></span></span>
+				<% } %>
+			</div>
+			<% if (partner) { %>
+				<div class="ppartner">PRESENTED BY <span<% if(partnerURL != '') {%>  class="pinnerlink ppartnername" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>; location.href='<%= partnerURL %>'; return false;"<% } else { %> class="ppartnername"<% } %>><% if (partner && partner != '') { %><%= partner.toUpperCase() %><% } %></span></div>
+			<% } %>
+		    <div class="pshares" data-title="sharrre" data-url="<%= baseurl+inc_filelocation %>" >&nbsp;</div>
+	    </div>
+	</a>
+</script>
+
+<script id="normalPTemplate" type="text/x-ustemplate">
+	<a href="<%= baseurl+inc_filelocation %>" class="pin<%= id %> col<%= colnumber %> pnormal" onclick="<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= baseurl+inc_filelocation %>';},<%= unitCount %>,'<%= pos %>','normal','article','article','<%= id %>'); return false;">
+		<div class="innerpcell">
+			<div class="picontainer">
+				<img class="pinboardimage" src="<%= tilefeatureimage %>" onerror="this.src='http://images.inc.com/refreshgraphics/300x200-<%= _.random(1,8) %>.jpg'"/>
+				<div class="linecolorbox bg-<%= captionclass %>"></div>
+				<div class="catcolorbox bg-<%= captionclass %>">
+					<% if (precaption && precaption != '') { %>
+						<%= precaption.toUpperCase() %>&nbsp;|
+					<% } %>
+					<span<% if(captionURL != '') {%> class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+captionURL %>';},<%= unitCount %>,'<%= pos %>','normal','channel','channel','<%= channelid %>'); return false;"<% } %>><% if (caption && caption != '') { %><%= caption.toUpperCase() %><% } %></span>
+				</div>
+			</div>
+			<div class="pheadline">
+				<% if(abgrp<7) { %><%= inc_headline %><% } else { %><%= inc_headline2 %><% } %>
+				<% if (precaption == 'Video') { %><img src="http://www.inc.com/images/videoicon_sm.png"><% } %>
+				<% if (byline) { %>
+					<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+bylineURL %>';},<%= unitCount %>,'<%= pos %>','normal','author','author','<%= authorid %>'); return false;"><%= byline %></span></span>
+				<% } %>
+			</div>
+			<% if (partner) { %>
+				<div class="ppartner">PRESENTED BY <span<% if(partnerURL != '') {%>  class="pinnerlink ppartnername" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>; location.href='<%= partnerURL %>'; return false;"<% } else { %> class="ppartnername"<% } %>><% if (partner && partner != '') { %><%= partner.toUpperCase() %><% } %></span></div>
+			<% } %>
+			<div class="pshares" data-title="sharrre" data-url="<%= baseurl+inc_filelocation %>">&nbsp;</div>
+		</div>
+	</a>
+</script>
+
+<script id="textPTemplate" type="text/x-ustemplate">
+	<a href="<%= baseurl+inc_filelocation %>" class="pin<%= id %> col<%= colnumber %> ptext" onclick="<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= baseurl+inc_filelocation %>';},<%= unitCount %>,'<%= pos %>','text','article','article','<%= id %>'); return false;">
+		<div class="innerpcell">
+			<div class="ptextcontainer picontainer line-<%= captionclass %>">
+				<div class="ptextbox">
+
+					<% if(abgrp<7) { %><% if (inc_headline && inc_headline != '') { %><%= inc_headline.toUpperCase() %><% } %><% } else { %><% if (inc_headline2 && inc_headline2 !='') { %><%= inc_headline2.toUpperCase() %><% } %><% } %>
+					<% if (precaption == 'Video') { %><img src="http://www.inc.com/images/videoicon_sm.png"><% } %>
+					<% if (byline) { %>
+						<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+bylineURL %>';},<%= unitCount %>,'<%= pos %>','normal','author','author','<%= authorid %>'); return false;"><%= byline %></span></span>
+					<% } %>
+					<div class="pshares" data-title="sharrre" data-url="<%= baseurl+inc_filelocation %>">&nbsp;</div>
+				</div>
+				<% if (partner) { %>
+					<div class="ppartner">PRESENTED BY <span<% if(partnerURL != '') {%>  class="pinnerlink ppartnername" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>; location.href='<%= partnerURL %>'; return false;"<% } else { %> class="ppartnername"<% } %>><% if (partner && partner != '') { %><%= partner.toUpperCase() %><% } %></span></div>
+				<% } %>
+				<div class="ptextcat">
+					<% if (precaption && precaption != '') { %>
+						<%= precaption.toUpperCase() %>&nbsp;|
+					<% } %>
+					<span<% if(captionURL != '') {%> class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+captionURL %>';},<%= unitCount %>,'<%= pos %>','text','channel','channel','<%= channelid %>'); return false;"<% } %>><% if (caption && caption != '') { %><%= caption.toUpperCase() %><% } %></span>
+				</div>
+			</div>
+		</div>
+	</a>
+</script>
+
+<script id="imusmallPTemplate" type="text/x-ustemplate">
+	<div class="col<%= colnumber %> pimusmall">
+		<div id="<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>"class="innerpcell">
+			<<%= 'script' %> type="text/javascript">
+				adUnitArray[adUnitCounter].ads[adUnitSubCounter].adcall = function() {
+					$('#<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>').append('<div class="padvertlabel">Advertisement</div>');
+				};
+				googletag.cmd.push(function() {
+					googletag.display('<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>');
+				});
+				adUnitSubCounter++;
+			</<%= 'script' %>>
+		</div>
+	</div>
+</script>
+
+<script id="imubigPTemplate" type="text/x-ustemplate">
+	<div class="col<%= colnumber %> pimubig">
+		<div id="<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>" class="innerpcell">
+			<<%= 'script' %> type="text/javascript">
+				googletag.cmd.push(function() {
+					googletag.display('<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>');
+				});
+				adUnitArray[adUnitCounter].ads[adUnitSubCounter].adcall = function() {
+					setTimeout(function() {
+						$('#<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>').append('<div class="padvertlabel">Advertisement</div>');
+						if ($('#<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %> iframe').height() > 304) {
+							$('#<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>').parent().css('border-bottom','none')
+								.parent().next().find('.col<%= colnumber %>').attr('onclick','').css('cursor','default')
+								.find('.innerpcell').css('visibility','hidden');
+						}
+					}, 1000);
+				};
+				adUnitSubCounter++;
+			</<%= 'script' %>>
+		</div>
+	</div>
+</script>
+
+<script id="imubigsidebarPTemplate" type="text/x-ustemplate">
+	<div class="col<%= colnumber %> pimubig">
+		<div id="<%= sidebarAdUnitArray[sidebarAdUnitCounter].ads[sidebarAdUnitSubCounter].id %>" class="innerpcell">
+			<<%= 'script' %> type="text/javascript">
+				googletag.cmd.push(function() {
+					googletag.display('<%= sidebarAdUnitArray[sidebarAdUnitCounter].ads[sidebarAdUnitSubCounter].id %>');
+				});
+				sidebarAdUnitArray[sidebarAdUnitCounter].ads[sidebarAdUnitSubCounter].adcall = function() {
+					$('#<%= sidebarAdUnitArray[sidebarAdUnitCounter].ads[sidebarAdUnitSubCounter].id %>').append('<div class="padvertlabel">Advertisement</div>');
+				};
+				sidebarAdUnitSubCounter++;
+			</<%= 'script' %>>
+		</div>
+	</div>
+</script>
+
+<script id="row1x3PTemplate" type="text/x-ustemplate">
+	<a href="<%= baseurl+inc_filelocation %>" class="pin<%= id %> widerowcell prow1x3">
+		<div class="innerpcell">
+			<div class="icellcontainer line-<%= captionclass %>" onclick="<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= baseurl+inc_filelocation %>';},<%= unitCount %>,'<%= pos %>','row1x3','article','article','<%= id %>'); return false;">
+				<div class="picontainer">
+					<img class="pinboardimage" src="<%= smallfeatureimage %>" onerror="this.src='http://images.inc.com/refreshgraphics/643x290-<%= _.random(1,8) %>.jpg'"/>
+				</div>
+				<div class="pwiderightbox">
+					<div class="pheadline">
+						<% if(abgrp<7) { %><%= inc_headline %><% } else { %><%= inc_headline2 %><% } %>
+						<% if (precaption == 'Video') { %><img src="http://www.inc.com/images/videoicon_sm.png"><% } %>
+					</div>
+					<% if (byline) { %>
+					<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+bylineURL %>';},<%= unitCount %>,'<%= pos %>','row1x3','author','author','<%= authorid %>'); return false;"><%= byline %></span></span>
+					<% } %>
+					<div class="pdeck">
+						<%= inc_deck %>
+					</div>
+					<div class="pshares" data-title="sharrre" data-url="<%= baseurl+inc_filelocation %>">&nbsp;</div>
+				</div>
+				<div class="widechannelheadline">
+					<% if (precaption && precaption != '') { %>
+						<%= precaption.toUpperCase() %>&nbsp;|
+					<% } %>
+					<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+captionURL %>';},<%= unitCount %>,'<%= pos %>','row1x3','channel','channel','<%= channelid %>'); return false;"><% if (caption && caption != '') { %><%= caption.toUpperCase() %><% } %></span>
+				</div>
+			</div>
+		</div>
+	</a>
+</script>
+
+<script id="portraitPTemplate" type="text/x-ustemplate">
+	<a href="<%= baseurl+inc_filelocation %>" class="pin<%= id %> col<%= colnumber %> pportrait" onclick="<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= baseurl+inc_filelocation %>';},<%= unitCount %>,'<%= pos %>','portrait','article','article','<%= id %>'); return false;">
+		<div class="innerpcell">
+			<div class="picontainer">
+				<img class="pinboardimage" src="<%= skyscraperimage %>" onerror="this.src='http://images.inc.com/refreshgraphics/300x520-<%= _.random(1,8) %>.jpg'"/>
+				<div class="linecolorbox bg-<%= captionclass %>"></div>
+				<div class="catcolorbox bg-<%= captionclass %>">
+					<% if (precaption && precaption != '') { %>
+						<%= precaption.toUpperCase() %>&nbsp;|
+					<% } %>
+					<span <% if(captionURL != '') {%> class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+captionURL %>';},<%= unitCount %>,'<%= pos %>','portrait','channel','channel','<%= channelid %>'); return false;"<% } %>><% if (caption && caption != '') { %><%= caption.toUpperCase() %><% } %></span>
+				</div>
+			</div>
+			<div class="pheadline">
+				<% if(abgrp<7) { %><%= inc_headline %><% } else { %><%= inc_headline2 %><% } %>
+				<% if (precaption == 'Video') { %><img src="http://www.inc.com/images/videoicon_sm.png"><% } %>
+				<% if (byline) { %>
+					<span class="pbyline">by&nbsp;<span class="pinnerlink" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>.intentionIntercept(function(){location.href='<%= appURL+bylineURL %>';},<%= unitCount %>,'<%= pos %>','portrait','author','author','<%= authorid %>'); return false;"><%= byline %></span></span>
+				<% } %>
+			</div>
+			<% if (partner) { %>
+				<div class="ppartner">PRESENTED BY <span <% if(partnerURL != '') {%> class="pinnerlink ppartnername" onclick="innerLinkHandler(event);<%= historyScript %><%= pinVar %>; location.href='<%= partnerURL %>'; return false;"<% } else { %> class="ppartnername"<% } %>><% if (partner && partner != '') { %><%= partner.toUpperCase() %><% } %></span></div>
+			<% } %>
+			<div class="pshares" data-title="sharrre" data-url="<%= baseurl+inc_filelocation %>">&nbsp;</div>
+		</div>
+	</a>
+</script>
+
+<script id="blankPTemplate" type="text/x-ustemplate">
+	<div class="col<%= colnumber %> pblank">
+		<div class="innerpcell">
+
+		</div>
+	</div>
+</script>
+
+<script id="firstwideadunitPTemplate" type="text/x-ustemplate">
+	<div class="pfirstwideadcontainer">
+		<div id="<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>" class="pwideadunit">
+			<<%= 'script' %> type="text/javascript">
+				googletag.cmd.push(function() {
+					googletag.display('<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>');
+				});
+				adUnitSubCounter++;
+			</<%= 'script' %>>
+		</div>
+	</div>
+</script>
+
+<script id="wideadunitPTemplate" type="text/x-ustemplate">
+	<div class="pwideadcontainer">
+		<div id="<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>" class="pwideadunit">
+			<<%= 'script' %> type="text/javascript">
+				googletag.cmd.push(function() {
+					googletag.display('<%= adUnitArray[adUnitCounter].ads[adUnitSubCounter].id %>');
+				});
+				adUnitSubCounter++;
+			</<%= 'script' %>>
+		</div>
+	</div>
+</script>
+
+<script id="outbrainPTemplate" type="text/x-ustemplate">
+	<div class="col<%= colnumber %> poutbrain">
+		<div class="innerpcell">
+			<div class="OUTBRAIN" data-src="<% if(currentarticleURL){ %><%= baseurl+currentarticleURL %><%} else {%><%= baseurl+currentchannelURL %><% } %>" data-widget-id="AR_2" data-ob-template="inc" ></div>
+			<<%= 'script' %> type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></<%= 'script' %>>
+		</div>
+	</div>
+</script>
+
+<script id="sponsoredPTemplate" type="text/x-ustemplate">
+	<div class="col<%= colnumber %> sponsored">
+		<div class="innerpcell">
+
+		</div>
+	</div>
+</script>
+
+<script id="outbrainNewPTemplate" type="text/x-ustemplate">
+	<a href="<%= url %>" target="_blank" class="col<%= colnumber %> poutbrain">
+		<div class="innerpcell">
+			<div class="picontainer">
+				<img class="pinboardimage" src="<% if (typeof thumbnail !== 'undefined') { print(thumbnail.url); } %>" onerror=""/>
+				<div class="linecolorbox bg-outbrain"></div>
+				<div class="catcolorbox bg-outbrain">
+					FROM THE WEB
+				</div>
+			</div>
+			<div class="pheadline">
+				<%= content %>
+				<span class="pbyline"><% if (source_name && source_name !='') { %><%= source_name.toUpperCase() %><% } %></span>
+			</div>
+		</div>
+	</a>
+</script>
+
+
+	<title>Small Business Ideas and Resources for Entrepreneurs</title>
+	<meta name="description" content="Visit Inc.com for the latest issue of Inc. Magazine and get advice, tools, and services that help your small business grow." />
+
+			<meta name="title" content="Small Business Ideas and Resources for Entrepreneurs" />
+	
+	<meta name="robots" content="index,follow" />
+	<meta name="googlebot" content="index,follow" />
+
+		<meta http-equiv="refresh" content="3600" />
+		<link rel="stylesheet" type="text/css" href="http://www.inc.com/views/css/inc.css?fiximu" />
+	
+	<link href="http://www.inc.com/views/css/masthead-nav.css?breakcache" rel="stylesheet" type="text/css" />
+
+        
+	        
+    
+
+	
+				
+		
+	
+		
+	
+	
+	<!-- jQuery Library + UI Tools -->
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/lib/jquery.color-2.1.2.min.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/lib/jquery-autofill/jquery.autofill.min.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/lib/jquery-cycle2/jquery.cycle2.min.js"></script>
+	<script type="text/javascript" src="http://www.inc.com/lib/jquery.sharrre-1.3.4.min.js"></script>
+	
+<script language="Javascript">$(function(){$('.shares').sharrre({ share: {facebook: true, twitter: true, linkedin: true, googlePlus: true},template: '<span id="article-share"><span class="share-count">{total}</span> <span class="share-text">SHARES</span></span>',enableHover: false,urlCurl: 'http://www.inc.com/sharrre.php'});});</script>
+	
+	
+
+
+		
+
+	
+	
+	
+	<style type="text/css">#article_left_col{ width: 580px !important;} #center_col { width: 950px !important;} h1.indexhead { margin: 0px; padding: 0px;}</style>
+
+	<script>incSitepage = "";</script>
+
+	<script>function selectItem(li) {if (li.extra) {document.location.href=li.extra[0];}}</script>
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.inc.com/home/updates">
+
+	
+	<!-- Start: GPT Async -->
+	<script type='text/javascript'>
+		var sidebarExists = false;
+		
+
+		var adUnitArray = new Array();
+		adUnitArray.push(new Object());
+		adUnitArray[0].slots = new Array();
+		adUnitArray[0].ads = new Array();
+		var adUnitCounter = 0;
+		var adUnitSubCounter = 0;
+
+		var sidebarAdUnitArray = new Array();
+		sidebarAdUnitArray.push(new Object());
+		sidebarAdUnitArray[0].slots = new Array();
+		sidebarAdUnitArray[0].ads = new Array();
+		var sidebarAdUnitCounter = 0;
+		var sidebarAdUnitSubCounter = 0;
+
+		triggerAds = function(index,scrollPosition,adArray,pinboard) {
+			if (ignorePushState || scrollPosition == parseInt(pushStateValue)) {
+				if (adArray[index].ads.length > 0 && !adArray[index].ads[0].triggered) {
+					var nextSponsoredTile = sponsoredQueue.getNext();
+					if (pinboard.unitidArray.length > 0 && typeof nextSponsoredTile === 'undefined' && sponsoredQueue.sponsoredTileInfo.queue.length == 0 && index > 0) {
+						setTimeout(function(){ triggerAds(index,scrollPosition,adArray,pinboard); },100);
+					}
+					else {
+						console.log('blah'+index);
+
+						var cnlid = '';
+						var incids = new Array();
+						var position = pinboard.type;
+						var artid = '';
+						var sidebar = false;
+						for (var i = 0; i < pinboard.pdata[scrollPosition].length; i++) {
+							if (typeof pinboard.pdata[scrollPosition][i].id !== 'undefined') {
+								incids.push(pinboard.pdata[scrollPosition][i].id);
+							}
+
+							if (typeof nextSponsoredTile !== 'undefined' && pinboard.pdata[scrollPosition][i].cellclass == 'sponsored') {
+								nextSponsoredTile.pinVar = pinboard.ID.replace('#','');
+								if (pinboard.location == 'article/readmore') {
+									nextSponsoredTile.pos = 'readmore';
+								}
+								else if (pinboard.location.search('channel') == 0 && !pinboard.isArticlePage && scrollPosition == 0) {
+									nextSponsoredTile.pos = 'featured';
+								}
+								else {
+									nextSponsoredTile.pos = pinboard.type+'pinboard';
+								}
+
+								if (nextSponsoredTile.seriesid != 'NULL') {
+									nextSponsoredTile.channelid = 'series'+nextSponsoredTile.seriesid;
+								}
+
+								if (!nextSponsoredTile.inc_headline) {
+									nextSponsoredTile.inc_headline = '';
+								}
+								if (!nextSponsoredTile.inc_deck) {
+									nextSponsoredTile.inc_deck = '';
+								}
+								
+								nextSponsoredTile.colnumber = pinboard.pdata[scrollPosition][i].colnumber;
+								nextSponsoredTile.unitCount = scrollPosition;
+								nextSponsoredTile.counter = pinboard.pdata[scrollPosition][i].counter;
+								nextSponsoredTile.historyScript = "";
+								if (typeof nextSponsoredTile.id !== 'undefined' && (pinboard.location == 'home' || pinboard.location.search('channel') == 0)) {
+									if (scrollPosition == 0) {
+										nextSponsoredTile.historyScript += "history.replaceState(null,null,'"+pinboard.pushURL+"');"+pinboard.ID.replace('#','')+".updateLocalStorage("+scrollPosition+',\''+pinboard.pushURL+"',"+nextSponsoredTile.id+");";
+									}
+									else {
+										nextSponsoredTile.historyScript += "history.replaceState(null,null,'"+pinboard.pushURL+"/"+scrollPosition+"');"+pinboard.ID.replace('#','')+".updateLocalStorage("+scrollPosition+',\''+pinboard.pushURL+"',"+nextSponsoredTile.id+");";
+									}
+								}
+
+								$($(pinboard.ID+'Unit'+scrollPosition).find('.sponsored')[0]).replaceWith(_.template($('#'+nextSponsoredTile.cellclass+'PTemplate').html(),nextSponsoredTile));
+
+								if (typeof nextSponsoredTile.id !== 'undefined') {
+									incids.push(nextSponsoredTile.id);
+
+									$('.pin'+nextSponsoredTile.id+' .pshares').sharrre({
+										share: {
+											facebook: true,
+											twitter: true,
+											linkedin: true,
+											googlePlus: true
+										},
+										template: '<span class="psharecount">{total}</span> SHARES',
+										enableHover: false,
+										urlCurl: application_url+'sharrre.php'
+									});
+								}
+							}
+
+							if (typeof pinboard.pdata[scrollPosition][i].type !== 'undefined') {
+								sidebar = true;
+							}
+						}
+
+						googletag.cmd.push(function() {
+							for (var j = 0; j < adArray[index].slots.length; j++) {
+								adArray[index].slots[j].setTargeting('scroll',[scrollPosition]);
+							}
+							googletag.pubads().refresh(adArray[index].slots);
+						});
+						//if (!ignorePushState) { setTimeout(function(){ ignorePushState = true; },700); }
+						for (var j = 0; j < adArray[index].ads.length; j++) {
+							if (typeof adArray[index].ads[j].adcall !== 'undefined') {
+								adArray[index].ads[j].adcall();
+								adArray[index].ads[j].triggered = true;
+							}
+						}
+
+						if (pinboard.location == 'home') {
+							
+						}
+						else if (pinboard.location.search('channel') == 0 && (typeof incid === 'undefined' || incid == 0)) {
+							//regular channel pinboard
+							cnlid = pinboard.location.split('/')[1];
+						}
+						else if (pinboard.location.search('channel') == 0) {
+							//channel pinboard on article page
+							artid = incid;
+						}
+						else if (pinboard.location == 'article/readmore') {
+							position = 'readmore';
+						}
+
+						if (typeof incid !== 'undefined' && incid != 0 && sidebar) {
+							position = 'sidebar';
+						}
+						else if (sidebar) {
+							position = 'popularsidebar';
+						}
+
+						if (pinboard.location.search('channel') == 0 && (typeof incid === 'undefined' || incid == 0) && scrollPosition == 0) {
+							position = 'featured';
+						}
+
+						$.post(pinboard.appURL+'pinboardlog', { 'cnlid':cnlid,'incid':artid,'position':position,'scroll':scrollPosition,'incids[]': incids });
+					}
+				}
+			}
+		}
+
+		function getCookie(c_name) {
+			var i,x,y,ARRcookies=document.cookie.split(";");
+			for (i=0;i<ARRcookies.length;i++) {
+				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+				x=x.replace(/^\s+|\s+$/g,"");
+				if (x==c_name) {
+					return unescape(y);
+				}
+			}
+		}
+
+		var CA = window.CA || {};
+		CA.cmd = CA.cmd || [];
+		CA.logLevel = "WARN";
+		CA.cmd.push(function() {
+			CA.doTargeting({id:8791, defaultKVP: "rasegs=999"});
+		});
+		CA.getDefaultKeyValue = CA.getTargetKeyValues = function () {return "rasegs=999"};
+
+		(function(){
+			var p = document.createElement("script");
+			p.type = "text/javascript"; p.async = true;
+			p.src = (document.location.protocol != "https:" ? "http" : "https") + "://p0.raasnet.com/partners/dfp_async1.js";
+			var s = document.getElementsByTagName("script"); s[s.length-1].parentNode.appendChild(p);
+		})();
+
+		var op = 'home';
+		var adinfo = {"showlogo":false,"c_type":"splash","cms":"homepage","video":"no","aut":[],"channelArray":{"primaryids":[],"primary":[],"sub":[],"subsub":[]},"adzone":"\/4160\/mv.inc\/homepage"};
+		var hasSidebar = 'false';
+
+		if (typeof magazinetoc !== 'undefined' && magazinetoc) {
+			adinfo.adzone = '/4160/mv.inc/magazine';
+		}
+
+		var gptadslots=[];
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		//googletag.debugglog = console; //prints debug info into JS console
+		(function(){
+			var gads = document.createElement('script');
+			gads.async = true; gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+
+		var interstitialAdSlot;
+		googletag.cmd.push(function() {
+			if (document.referrer.search('www.inc.com/welcome.html') == -1) {
+				interstitialAdSlot = googletag.defineSlot(adinfo.adzone, [[2,2]],'div-gpt-ad-interstitial_trigger').setCollapseEmptyDiv(true,true).addService(googletag.pubads());
+			}
+			gptadslots.push(googletag.defineSlot(adinfo.adzone+'/flexiblepushdown', [[970,250],[728,90],[970,90],[970,60],[970,66]],'div-gpt-ad-leaderboard_abovenav').setCollapseEmptyDiv(true,true).setTargeting('pos',['top']).addService(googletag.pubads()));
+
+			if (adinfo.showlogo && typeof magazinetoc === 'undefined') {
+				gptadslots.push(googletag.defineSlot(adinfo.adzone+'/flexiblelogo', [[88,31],[120,60],[120,90]],'div-gpt-ad-logo_belownav').setCollapseEmptyDiv(true,true).setTargeting('pos',['top']).addService(googletag.pubads()));
+			}
+
+			
+
+			
+
+			
+
+			
+
+			
+			for (var i = 0; i < 200; i++) {
+				if (typeof magazinetoc !== 'undefined' && magazinetoc) {
+					gptadslots.push(googletag.defineSlot(adinfo.adzone+'/flexiblehalfpage', [[300,600],[300,250]],'div-gpt-ad-magazinetocimu1').setCollapseEmptyDiv(true,true).setTargeting('pos',['bot']).addService(googletag.pubads()));
+					break;
+				}
+
+				if (i > 0) {
+					var uid = _.uniqueId('gpt-wide-ad-');
+					adUnitArray[adUnitArray.length-1].slots.push(googletag.defineSlot(adinfo.adzone+'/flexiblebillboard', [[970,250],[728,90]], uid).setCollapseEmptyDiv(true,true).setTargeting('pos',['top']).addService(googletag.pubads()));
+					adUnitArray[adUnitArray.length-1].ads.push({id: uid, triggered: false, type: 'wide', adcall: function() {
+						
+					}});
+				}
+
+				if (i == 0) {
+					var uid = _.uniqueId('gpt-wide-ad-');
+					
+						adUnitArray[adUnitArray.length-1].slots.push(googletag.defineSlot(adinfo.adzone+'/fixedleaderboard', [[728,90]], uid).setCollapseEmptyDiv(true,true).setTargeting('pos',['bot']).addService(googletag.pubads()));
+					
+					adUnitArray[adUnitArray.length-1].ads.push({id: uid, triggered: false, type: 'wide', adcall: function() {
+						
+					}});
+				}
+
+				var uid = _.uniqueId('gpt-imubig-ad-');
+				adUnitArray[adUnitArray.length-1].slots.push(googletag.defineSlot(adinfo.adzone+'/flexiblehalfpage', [[300,600],[300,250]], uid).setCollapseEmptyDiv(true,true).setTargeting('pos',['bot']).addService(googletag.pubads()));
+				adUnitArray[adUnitArray.length-1].ads.push({id: uid, triggered: false, type: 'imubig'});
+
+				var uid = _.uniqueId('gpt-imusmall-ad-');
+				adUnitArray[adUnitArray.length-1].slots.push(googletag.defineSlot(adinfo.adzone+'/fixedrectangle', [300,250], uid).setCollapseEmptyDiv(true,true).setTargeting('pos',['bot']).addService(googletag.pubads()));
+				adUnitArray[adUnitArray.length-1].ads.push({id: uid, triggered: false, type: 'imusmall'});
+
+				adUnitArray.push(new Object());
+				adUnitArray[adUnitArray.length-1].slots = new Array();
+				adUnitArray[adUnitArray.length-1].ads = new Array();
+			}
+			
+
+			
+
+			
+
+			googletag.pubads().setTargeting('c_type',[adinfo.c_type]).setTargeting('cms',[adinfo.cms]).setTargeting('video',[adinfo.video]);
+			if (adinfo.aut.length > 0) {
+				googletag.pubads().setTargeting('aut',adinfo.aut);
+			}
+			if (getCookie('incid')) {
+				googletag.pubads().setTargeting('login',['yes']);
+			}
+			else {
+				googletag.pubads().setTargeting('login',['no']);
+			}
+			if (adinfo.channelArray.primary.length > 0) {
+				googletag.pubads().setTargeting('chn',adinfo.channelArray.primary);
+			}
+			if (adinfo.channelArray.sub.length > 0) {
+				googletag.pubads().setTargeting('schn',adinfo.channelArray.sub);
+			}
+			if (adinfo.channelArray.subsub.length > 0) {
+				googletag.pubads().setTargeting('sschn',adinfo.channelArray.subsub);
+			}
+
+			var ca_kv = CA.getTargetKeyValues().split(',')[0].split("=");
+			googletag.pubads().setTargeting(ca_kv[0], ca_kv[1]);
+			CA.cmd.push(function() {
+				CA.setGPTTargeting(googletag.pubads());
+			});
+
+			gptadslots.push(googletag.defineOutOfPageSlot(adinfo.adzone, 'div-gpt-ad-interstitial_oop').setCollapseEmptyDiv(true,true).addService(googletag.pubads()));
+			
+				for (var i = 0; i < gptadslots.length; i++) {
+					adUnitArray[0].slots.push(gptadslots[i]);
+				}
+			
+
+			if (typeof magazinetoc !== 'undefined' && magazinetoc && adUnitArray[0].slots.length == 0) {
+				for (var i = 0; i < gptadslots.length; i++) {
+					adUnitArray[0].slots.push(gptadslots[i]);
+				}
+			}
+
+			googletag.pubads().disableInitialLoad();
+			googletag.pubads().enableSingleRequest();
+			googletag.pubads().enableAsyncRendering();
+			googletag.enableServices();
+		});
+	</script>
+	<!-- End: GPT Async -->
+	
+
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4300461-3']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+	</script>
+	
+	
+	<!-- HEADPLACEHOLDER //-->
+	
+	
+			<script language="javascript">pagetype='homepage';pageid=3728;</script>
+
+<script type="text/javascript">
+window.onpopstate = function(event) {
+  if(abgrp==13) {
+  //alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  $('#maincolumn_inner').load('/quick/'+event.state);
+  }
+};
+</script>
+
+
+</head>
+
+<body class="home homesmallformat" >
+
+<div id="div-gpt-ad-interstitial_trigger">
+    <script type='text/javascript'>
+       
+       if (typeof interstitialAdSlot !== 'undefined') {
+	       googletag.cmd.push(function() {
+	       		googletag.display('div-gpt-ad-interstitial_trigger');
+	       		googletag.pubads().refresh([interstitialAdSlot]);
+	       });
+	   }
+       
+    </script>
+</div>
+
+
+<!-- Begin comScore Tag -->
+<script>
+    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+  COMSCORE.beacon({
+    c1:2,
+    c2:6916907
+  });
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=6916907&c3=&c4=&c5=&c6=&c15=&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+<!--
+	window.fbAsyncInit = function() {
+	 FB.init({appId: '139291179414843', channelUrl: 'http://www.inc.com/lib/facebook/channel.php', status: true, cookie: true, xfbml: true});
+	 
+	};
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+//--></script>
+
+
+<noscript>Using a mobile device? Go to <a href="http://m.inc.com">m.inc.com</a> for our mobile version.</noscript>
+
+<script>
+
+function closeAlertBox(){
+    $('#user_alert_box').hide();
+    $('#user_alert_box-sticky-wrapper').hide();
+}
+
+var geocoder;
+/*
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+}else{
+    console.log("navigator object not found");
+}
+*/
+
+//Get the latitude and the longitude;
+function successFunction(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    console.log("lat:"+lat+" lon:"+lng);
+}
+
+function errorFunction(){
+    console.log("Geocoder failed");
+}
+
+
+</script>
+
+   
+    <script language="javascript">
+        
+            /*function pop_overlay(onum){
+                var curpop = $('a.login').attr('href');
+                curpop += "?overlay=" + onum;
+                $('a.login').attr('href',curpop);
+                $('a.login').click();
+            }
+
+            $("a.login[rel]").live('click', function () {
+    
+                var clickLink = $(this).overlay({
+               
+                    mask: '#000',
+                    //effect: 'apple',
+                     
+                    onBeforeLoad: function() {
+                     
+                        // grab wrapper element inside content
+                        var wrap = this.getOverlay().find("#overlay_loginform_container");
+                         
+                        // load the page specified in the trigger
+                        wrap.load(this.getTrigger().attr("href"));
+                    }
+               
+                });
+              
+                $(this).overlay().load();  //initiates overlay
+                clickLink.load();  //loads above overlay settings
+                return false;
+            });*/
+            
+        
+    </script>
+		
+		<script language="Javascript">
+			function refreshpage() {
+				document.location.href="http://www.inc.com/";
+			}
+		</script>	
+		
+<div id="user_alert_box" style="display:none;height:77px; width:100%;border-bottom:1px solid #a9b8b6;margin-bottom:1px;background:#000;z-index:10;">
+    <div id="alert_inner" style="margin: 0 auto;color: #fff;width: 1010px;">
+	<table cellpadding="0" cellspacing="0" style="margin:0px;padding:0px 22px 0px 22px;height: 77px;">
+	    <tr>
+		<td style="">
+		    <div style="margin-right: 20px;font-size:52px;font-weight:bold;font-family:arial;color:#28292b;"><img src="http://www.inc.com/images/alert_reminder_label.png" /></div>
+		</td>
+		<td style="">
+		    <div><img src="http://www.inc.com/images/avatar/default3.gif" style="width:45px;height:45px;margin-right: 20px;"></div>
+		</td>
+		<td>
+		    <div id="user_alert_box_blurb" style="width: 372px;font-size:22px;font-family:arial;color:#fff;line-height: 26px;"></div>
+		</td>
+		<td style="vertical-align:top;width: 250px;text-align: right;">
+		    <div><a style="font-size:12px;font-family:arial;color:#cecece;" href="#" onclick="closeAlertBox();return false;"><span style="padding-right:5px;">CLOSE</span><img src="http://www.inc.com/images/tiny_close_button.png" /></a></div>
+		</td>
+	    </tr>
+	</table>
+    </div>
+</div>
+
+<div id="interstitial_ad">
+<div id="interstitial_wrapper"><!-- begin 1x1 (interstitial trigger) --><!-- End ad tag --></div></div>
+
+<!-- SiteCatalyst code version: H.24.1.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="http://www.inc.com/js/s_code.js?12"></script>
+
+<script language="JavaScript" type="text/javascript"><!--
+	s.pageName = "http://www.inc.com//";
+			s.server = "www";
+				s.prop3 = "Small Business Ideas and Resources for Entrepreneurs";
+	s.prop4 = "home";
+	s.prop28 = "lander";
+	s.eVar49 = abgrp;
+	
+            if(subexp == 'na' || subexp == ''){
+                if(usrid!=0&&usrid!=''){
+                    s.prop21="member"
+                }else{
+                    s.prop21="guest";
+                }
+            }else{
+                if(subexp=='true'){
+                    s.prop21="formersub"
+                }else{
+                    s.prop21="subscriber";
+                }
+            }
+        
+	s.prop22 = s.prop21+"+"+s.pageName;
+	if(usrid!=0&&usrid!=''){s.prop27 = usrid;}
+	if(indid!=0){s.eVar45 = industry[indid];}
+	if(jobid!=0){s.eVar46 = jobtitle[jobid];}
+	if(sizid!=0){s.eVar47 = companysize[sizid];}
+	if(revid!=0){s.eVar48 = companyrevenue[revid];}
+	
+	s.events = "event9";
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://grunerandjahr.112.2o7.net/b/ss/gjinccomprod/1/H.24.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.1. -->
+<!--[if lt IE 8]><style>#container{ margin-top: -21px;}</style><![endif]-->
+	
+		<script language="JavaScript" src="http://j.maxmind.com/app/geoip.js"></script>
+<div id="masthead">
+
+<div id="div-gpt-ad-interstitial_oop">
+    <script type='text/javascript'>
+       
+       googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-interstitial_oop');
+       });
+       
+    </script>
+</div>
+
+<div id="div-gpt-ad-leaderboard_abovenav" class="inner">
+    <script type='text/javascript'>
+       googletag.cmd.push(function() { googletag.display('div-gpt-ad-leaderboard_abovenav'); });
+    </script>
+</div>
+
+    <div id="top-black-bar-marker"></div>
+    <div id="top-black-bar" class="outer">
+    
+    	<!-- LOGIN THIN PANEL -->
+        <div class="inner">
+            <div id="login">
+                <form><input id="email" type="text" placeholder="Email" /><input id="password" type="password" placeholder="Password" /><input type="image" src="http://images.inc.com/header/registration/login-submit-button.png" id="login_submit" /></form><div class="forgot">forgot login?</div>
+                <div class="using">
+                    <div style="float:left;margin-right:2px;">Or login using:</div>
+                    <div id="externalauthorizors">
+                        <div id="external_google_sm" class="external_authorizer">
+                            <form name="google_openid_form" id="google_openid_form" action="http://www.inc.com/lib/dopeid/openidlogin.php" method="post" autocomplete="off">
+                                <input type="hidden" name="openid_identifier" id="openid_identifier" value="https://www.google.com/accounts/o8/id" />
+                                <input type="hidden" name="process" value="1" />
+                                <input type="hidden" name="returl" value="http%3A%2F%2Fwww.inc.com%2F">
+                                <input id="googlefollowusrid" type="hidden" name="followusrid" value="">
+                                <button class="googlebutton" style="border:0px;background-color:transparent;" type="submit" id="login_google_sm"></button>
+                            </form>
+                        </div>
+                        
+                        <div id="external_yahoo_sm" class="external_authorizer">
+                            <form name="yahoo_openid_form" id="yahoo_openid_form" action="http://www.inc.com/lib/dopeid/openidlogin.php" method="post" autocomplete="off">
+                                <input type="hidden" name="openid_identifier" id="openid_identifier" value="https://me.yahoo.com/" />
+                                <input type="hidden" name="process" value="1" />
+                                <input type="hidden" name="returl" value="http%3A%2F%2Fwww.inc.com%2F">
+                                <input id="yahoofollowusrid" type="hidden" name="followusrid" value="">
+                                <button class="yahoobutton" style="border:0px;background-color:transparent;" type="submit" id="login_yahoo_sm"></button>
+                            </form>
+                        </div>
+                        
+                        <div id="external_facebook_sm" class="external_authorizer">
+                            <a href="http://www.inc.com/lib/facebook/fb_login.php"><img src="http://inc.com/images/spacer.gif" class="facebookbutton"></a>
+                        </div>
+                        
+                        <div id="external_linkedin_sm" class="external_authorizer">
+                            <a href="http://www.inc.com/lib/linkedin/startlogin.php?returl=http://www.inc.com/"><div class="linkedinbutton"></div></a>
+                        </div>
+                        
+                        <div id="external_twitter_sm" class="external_authorizer">
+                            <iframe id="createaccountframe" src="http://www.inc.com/lib/twitter/start.php?returl=" frameborder="0" scrolling="no" style="width: 21px; height: 21px;"></iframe>
+                        </div>
+                    </div>
+                </div>    
+                <div class="close">close [x]</div>
+            </div>
+        </div>
+        <!-- LOGIN THIN PANEL -->
+        
+    	<div id="white-stripe-bar" class="outer">
+            <div class="inner">
+            	<div id="slimlogonav"><a href="http://www.inc.com/"><img src="http://images.inc.com/header/inclogo_sm.png" id="smalllogo" onmouseover="showslimnav();"></a><img src="http://images.inc.com/header/incmenuicon.png" id="smallnav" onmouseover="showslimnav();"></div>
+                <div id="welcome_loggedout"><a class="login" href="" onclick="javascript:openLogin();hideslimnav();return false;" rel="#overlay_loginform" rel="nofollow">Login</a> or <a id="signup" href="" onclick="javascript:openRegistration();return false;">signup</a></div>
+                <div id="welcome">Welcome <strong><a href="http://www.inc.com/member" rel="nofollow" id="memberlink"></a></strong> | <a href="http://www.inc.com/logout?ret=http://www.inc.com/" rel="nofollow">Log Out</a></div>
+    
+                <div id="s-icons" class="social">
+                    <ul>
+                        <li class="linkedin"><a href="http://www.linkedin.com/today/inc.com" target="_blank"></a></li>
+                        <li class="twitter"><a href="http://www.twitter.com/inc" target="_blank"></a></li>
+                        <li class="google"><a href="https://plus.google.com/+incmagazine" target="_blank"></a></li>
+                        <li class="facebook"><a href="http://www.facebook.com/inc" target="_blank"></a></li>
+                    </ul>
+                </div>
+    
+                <div id="s-links" class="social"><a href="http://www.inc.com/about">about</a> | <a href="http://www.inc.com/newsletter">newsletters</a> | <a href="http://www.inc.com/events">events</a> | <a href="http://mediakit.inc.com/" target="_blank">advertise</a> | <a href="http://www.inc.com/magsub">subscribe</a></div>
+            </div>
+        </div>
+
+                        <!-- REGISTRATION PANEL -->
+
+<div id="register" class="outer launch panel">
+<div class="inner">
+
+<div class="close">close [x]</div>
+
+<!-- STEP 1 -->
+    <div class="pane1">
+        <div class="header">Join the Inc. Community <span class="subhead">Get the most of your Inc. online experience. Register and join Inc. today.</span></div>
+
+        <div class="text-box-left">
+            You'll get privileges others don't, such as:
+            <ul>
+                <li><span>Full access to all Inc.com content, including the opportunity to comment, share, and search Inc. Magazine's full archives </span></li>
+                <li><span>Access to your personal profile</span></li>
+                <li><span>Exclusive discounts and deals</span></li>
+            </ul>
+        </div>
+
+        <div class="text-box-right">
+        
+        <table border="0" cellpadding="0" cellspacing="0" width="530">
+        <tr>
+            <td colspan="6">
+                <div style="font-family: KlavikaMedium;font-size: 16pt;text-transform: uppercase;clear: both;margin-bottom: 20px;padding-top: 5px;letter-spacing: -0.01em;" style="color:#fff;">ALREADY A MEMBER? <a href="#" style="color:#009cd8;text-decoration:underline;" onclick="javascript:openLogin();hideslimnav();return false;">CLICK HERE</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="label" width="85" valign="middle">Name</td>
+            <td valign="middle" width="102"><input id="reg_fname" style="width:102px;" type="text" name="firstname" placeholder="FIRST" /></td>
+            <td width="8"></td>
+            <td valign="middle" width="130"><input id="reg_lname" style="width:130px;" type="text" name="lastname" placeholder="LAST" /></td>
+            <td width="30"></td>
+            <td class="sign-up-with" valign="top">Or sign up using:</td>
+        </tr>
+        <tr><td colspan="6" height="5"></td></tr>
+        <tr>
+            <td class="label" width="85" valign="middle">Email</td>
+            <td colspan="3" valign="middle"><input id="reg_email" style="width:246px;" type="text" name="email" /></td>
+            <td width="30"></td>
+            <td>
+                <div id="externalauthorizors">
+                    <div id="external_google" class="external_authorizer">
+                        <form name="google_openid_form" id="google_openid_form" action="http://www.inc.com/lib/dopeid/openidlogin.php" method="post" autocomplete="off">
+                            <input type="hidden" name="openid_identifier" id="openid_identifier" value="https://www.google.com/accounts/o8/id" />
+                            <input type="hidden" name="process" value="1" />
+                            <input type="hidden" name="returl" value="http%3A%2F%2Fwww.inc.com%2F">
+                            <input id="googlefollowusrid" type="hidden" name="followusrid" value="">
+                            <button class="googlebutton" style="border:0px;background-color:transparent;" type="submit" id="login_google_sm"></button>
+                        </form>
+                    </div>
+                    
+                    <div id="external_yahoo" class="external_authorizer">
+                        <form name="yahoo_openid_form" id="yahoo_openid_form" action="http://www.inc.com/lib/dopeid/openidlogin.php" method="post" autocomplete="off">
+                            <input type="hidden" name="openid_identifier" id="openid_identifier" value="https://me.yahoo.com/" />
+                            <input type="hidden" name="process" value="1" />
+                            <input type="hidden" name="returl" value="http%3A%2F%2Fwww.inc.com%2F">
+                            <input id="yahoofollowusrid" type="hidden" name="followusrid" value="">
+                            <button class="yahoobutton" style="border:0px;background-color:transparent;" type="submit" id="login_yahoo_sm"></button>
+                        </form>
+                    </div>
+                    
+                    <div id="external_facebook" class="external_authorizer">
+                        <a href="http://www.inc.com/lib/facebook/fb_login.php"><img src="http://inc.com/images/spacer.gif" class="facebookbutton"></a>
+                    </div>
+                    
+                    <div id="external_linkedin" class="external_authorizer">
+                        <a href="http://www.inc.com/lib/linkedin/startlogin.php?returl=http://www.inc.com/"><div class="linkedinbutton"></div></a>
+                    </div>
+                    
+                    <div id="external_twitter" class="external_authorizer">
+                        <iframe id="createaccountframe" src="http://www.inc.com/lib/twitter/start.php?returl=" frameborder="0" scrolling="no" style="width: 21px; height: 21px;"></iframe>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr><td colspan="6" height="5"></td></tr>        
+        <tr>
+            <td class="label" width="85" valign="middle">Password</td>
+            <td colspan="3" valign="middle"><input id="reg_password" style="width:246px;" type="password" name="password" /></td>
+            <td width="30"></td>
+            <td></td>
+        </tr>
+        <tr><td colspan="6" height="5"></td></tr>
+        <tr>
+            <td colspan="6"><input type="image" src="http://images.inc.com/images/drop_cont.png" id="b1" style="float:right;margin-top:2px;" /></td>
+        </tr>
+        </table>
+        </div>
+
+    </div>
+<!-- STEP 1 -->
+
+<!-- STEP 2 -->
+    <div class="pane2">
+        <div class="header">More Inc.com Benefits</div>
+
+        <div class="text-box-left">
+            Let us know a bit more about you and your business, and you'll receive additional benefits, such as priority invitations to free Inc. events in your area.
+        </div>
+
+        <div class="text-box-right">
+        
+        <table border="0" cellpadding="0" cellspacing="0" width="528">
+        <tr>
+        <td class="label" width="85" valign="middle">Country</td>
+        <td valign="middle">
+        <select id="demo_usercountry" name="demo_usercountry" style="width:173px;">
+            <option SELECTED value="nope">Select One...</option>
+            <option value="United States">United States</option>
+            <option value="Afganistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bonaire">Bonaire</option>
+            <option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+            <option value="Brunei">Brunei</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Canary Islands">Canary Islands</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="Chad">Chad</option>
+            <option value="Channel Islands">Channel Islands</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos Island">Cocos Island</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cote DIvoire">Cote D'Ivoire</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Curaco">Curacao</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="East Timor">East Timor</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands">Falkland Islands</option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Ter">French Southern Ter</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Great Britain">Great Britain</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran">Iran</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Isle of Man">Isle of Man</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Korea North">Korea North</option>
+            <option value="Korea Sout">Korea South</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Laos">Laos</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libya">Libya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macau">Macau</option>
+            <option value="Macedonia">Macedonia</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Martinique">Martinique</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mayotte">Mayotte</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Midway Islands">Midway Islands</option>
+            <option value="Moldova">Moldova</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Nambia">Nambia</option>
+            <option value="Nauru">Nauru</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Netherland Antilles">Netherland Antilles</option>
+            <option value="Netherlands">Netherlands (Holland, Europe)</option>
+            <option value="Nevis">Nevis</option>
+            <option value="New Caledonia">New Caledonia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niue">Niue</option>
+            <option value="Norfolk Island">Norfolk Island</option>
+            <option value="Norway">Norway</option>
+            <option value="Oman">Oman</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau Island">Palau Island</option>
+            <option value="Palestine">Palestine</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Phillipines">Philippines</option>
+            <option value="Pitcairn Island">Pitcairn Island</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Republic of Montenegro">Republic of Montenegro</option>
+            <option value="Republic of Serbia">Republic of Serbia</option>
+            <option value="Reunion">Reunion</option>
+            <option value="Romania">Romania</option>
+            <option value="Russia">Russia</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="St Barthelemy">St Barthelemy</option>
+            <option value="St Eustatius">St Eustatius</option>
+            <option value="St Helena">St Helena</option>
+            <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+            <option value="St Lucia">St Lucia</option>
+            <option value="St Maarten">St Maarten</option>
+            <option value="St Pierre &amp; Miquelon">St Pierre &amp; Miquelon</option>
+            <option value="St Vincent &amp; Grenadines">St Vincent &amp; Grenadines</option>
+            <option value="Saipan">Saipan</option>
+            <option value="Samoa">Samoa</option>
+            <option value="Samoa American">Samoa American</option>
+            <option value="San Marino">San Marino</option>
+            <option value="Sao Tome & Principe">Sao Tome &amp; Principe</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Swaziland">Swaziland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syria">Syria</option>
+            <option value="Tahiti">Tahiti</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Togo">Togo</option>
+            <option value="Tokelau">Tokelau</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks &amp; Caicos Is">Turks &amp; Caicos Is</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Erimates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Uraguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Vatican City State">Vatican City State</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+            <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+            <option value="Wake Island">Wake Island</option>
+            <option value="Wallis &amp; Futana Is">Wallis &amp; Futana Is</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zaire">Zaire</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select></td>
+        <td width="32"></td>
+        <td class="label" width="85" valign="middle">Zip Code</td>
+        <td valign="middle"><input id="demo_zip" type="text" style="width:173px;" name="zipcode" /></td>
+        </tr>
+        <tr><td colspan="5" height="5"></td></tr>              
+        <tr>
+        <td class="label" width="85" valign="middle">Company Name</td>
+        <td colspan="4"><input id="demo_companyname" style="width:463px;" type="text" /></td>
+        </tr>
+        <tr><td colspan="5" height="5"></td></tr> 
+        <tr>
+        <td class="label" width="85" valign="middle">Job Title</td>
+        <td valign="middle">
+            <select id="demo_jobtitle" name="demo_jobtitle" style="width:173px;">
+                <option selected="" value="nope">Select One...</option>
+                <option value="1">Chairperson</option>
+                <option value="2">Board member</option>
+                <option value="3">Owner/Partner</option>
+                <option value="4">CEO</option>
+                <option value="5">CFO</option>
+                <option value="6">CIO/CTO</option>
+                <option value="7">COO</option>
+                <option value="8">CMO</option>
+                <option value="9">President</option>
+                <option value="10">Managing Director</option>
+                <option value="11">Senior Vice President/Executive Vice President</option>
+                <option value="12">Vice President</option>
+                <option value="13">General Manager</option>
+                <option value="14">Owner/Partner</option>
+                <option value="15">Controller/Treasurer</option>
+                <option value="16">Technical staff/Information Systems</option>
+                <option value="17">Director</option>
+                <option value="18">Sales Representative/Account Executive</option>
+                <option value="19">Manager</option>
+                <option value="20">Consultant</option>
+                <option value="21">Professional</option>
+                <option value="22">Clerical/Support staff/Administrator</option>
+                <option value="23">Coordinator/Assistant</option>
+                <option value="24">Government/Public Official</option>
+                <option value="25">Teacher/Lecturer</option>
+                <option value="26">Student</option>
+                <option value="27">Not employed</option>
+                <option value="28">Retired</option>
+            </select></td>
+        <td width="32"></td>
+        <td class="label" width="85" valign="middle">Number of Employees</td>
+        <td valign="middle">
+            <select id="demo_employeenum" name="demo_employeenum" style="width:180px;">
+                <option selected="" value="nope">Select One...</option>
+                <option value="1">1</option>
+                <option value="2">2 to 5</option>
+                <option value="3">6 to 10</option>
+                <option value="4">11 to 25</option>
+                <option value="5">26 to 50</option>
+                <option value="6">51 to 200</option>
+                <option value="7">201 to 1,000</option>
+                <option value="8">1,001 to 10,000</option>
+                <option value="9">10,001 or more</option>
+            </select></td>
+        </tr>
+        <tr><td colspan="5" height="5"></td></tr> 
+        <tr>
+        <td colspan="5" align="right" style="padding-top: 40px;"><input type="image" src="http://images.inc.com/images/drop_goback.png" id="gb2" style="margin-right:2px;" /><input type="image" src="http://images.inc.com/images/drop_cont.png" id="b2" /></td>
+        </tr>             
+        </table>
+
+        </div>
+    </div>
+<!-- STEP 2 -->
+
+<!-- STEP 3 -->
+<div class="pane3">
+<div class="header">Stay on top of the news entrepreneurs need</div>
+    
+        <div id="newsletter-desc" style="font-family:KlavikaExtraLight;font-size:pt;margin-bottom:15px;margin-top:-20px;height:38px;">You're automatically signed up for the Inc. Wire, so you never miss a single day's most important news, tips, or ideas. Roll over the name of the other Inc. newsletters to see how you can get great Inc. articles on the topics that matter most to you.</div>
+        <div id="description_index">
+            <div style="display:none;" name="nl_wire">The news-from all over the web-entrepreneurs need to know now.</div>
+            <div style="display:none;" name="nl_salesmarketing">Brand, market, and sell your product or service, and how to use the latest apps, social media, and mobile devices to do it.</div>
+            <div style="display:none;" name="nl_startup">News, trends, and tactics to help you launch your business idea today.</div>
+            <div style="display:none;" name="nl_technology">Keep up with (and make sense of) business technology trends and tools available today and tomorrow.</div>
+            <div style="display:none;" name="nl_smallbiz">Grow fast, beat the competition, and take off with actionable advice and personal stories from serial entrepreneurs, experts, and others who have done it before.</div>
+            <div style="display:none;" name="nl_thegoods">We vet new gadgets and offerings to make it easier for you to run your business better.</div>
+            <div style="display:none;" name="nl_finance">How to raise capital, set budgets, price products, account properly, and map out an exit strategy.</div>
+            <div style="display:none;" name="nl_5000">An inside look at how Inc. 500|5000 companies scale their businesses.</div>
+            <div style="display:none;" name="nl_leadership">Everything you need to know about hiring, team building, and company culture to take your business to the next level.</div>
+            <div style="display:none;" name="nl_innovation">Stay sharp with cutting-edge ideas, insights, and strategies for entrepreneurs.</div>
+        </div>
+    <div id="newsletter_chex">
+        <table border="0" cellpadding="0" cellspacing="0" width="934">
+        <tr>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Today's Small Business News" id="inc-todays-small-business-news" checked="checked" /></td>
+        <td width="194" align="left" valign="top" class="newsletter_title" id="nl_wire">Inc. Wire</td>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Sales and Marketing" id="inc-sales-and-marketing" /></td>
+        <td width="150" align="left" valign="top" class="newsletter_title" id="nl_salesmarketing">Sales & Marketing</td>
+        <td width="411" rowspan="8" valign="top">
+            <table border="0" cellpadding="0" cellspacing="0" width="372" style="border:#515151 1px solid;padding:5px;">
+            <tr>
+            <td width="26"><input type="checkbox" name="letteroption[]" value="Inc Events Offers" id="inc-inc-events-offers" checked="checked" /></td>
+            <td width="155" style="font-size:9pt;font-family:KlavikaMedium;">Inc. Events & Offers</td>
+            <td width="26"><input type="checkbox" name="letteroption[]" value="Inc Partner Offers" id="inc-inc-partner-offers" /></td>
+            <td width="155" style="font-size:9pt;font-family:KlavikaMedium;">Inc. Partner Events & Offers</td>
+            </tr>
+            <tr>
+            <td width="26"></td>
+            <td width="155" style="font-size:9pt;font-family:KlavikaExtraLight;" valign="top">Occasional alerts on free Inc. local events, national conferences and other Inc. offers.</td>
+            <td width="26"></td>
+            <td width="155" style="font-size:9pt;font-family:KlavikaExtraLight;" valign="top">From time to time, receive offers from Inc's carefully selected partners.</td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        <tr><td colspan="4" height="3"></td></tr>       
+        <tr>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Start-up" id="inc-start-up" /></td>
+        <td width="194" align="left" valign="top" class="newsletter_title" id="nl_startup">Start-up</td>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Technology" id="inc-technology" /></td>
+        <td width="150" align="left" valign="top" class="newsletter_title" id="nl_technology">Technology</td>
+        </tr>
+        <tr><td colspan="4" height="3"></td></tr> 
+        <tr>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Small Business Success" id="inc-small-business-success" /></td>
+        <td width="194" align="left" valign="top" class="newsletter_title" id="nl_smallbiz">Small Business Success</td>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="The Goods: Your Business Toolbox" id="inc-the-goods-your-business-toolbox" /></td>
+        <td width="150" align="left" valign="top" class="newsletter_title" id="nl_thegoods">The Goods</td>
+        </tr>
+        <tr><td colspan="4" height="3"></td></tr> 
+        <tr>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Finance" id="inc-finance" /></td>
+        <td width="194" align="left" valign="top" class="newsletter_title" id="nl_finance">Finance</td>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Inc 5000" id="inc-5000" /></td>
+        <td width="150" align="left" valign="top" class="newsletter_title" id="nl_5000">Growth Strategies</td>
+        </tr>
+        <tr><td colspan="4" height="3"></td></tr> 
+        <tr>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Leadership and Managing" id="inc-leadership-and-managing" /></td>
+        <td width="194" align="left" valign="top" class="newsletter_title" id="nl_leadership">Leadership & Managing</td>
+        <td width="33" align="left" valign="middle"><input type="checkbox" name="letteroption[]" value="Innovation" id="inc-innovation" /></td>
+        <td width="150" align="left" valign="top" class="newsletter_title" id="nl_innovation">Innovation</td>
+        <td width="411" valign="top" align="right" rowspan="2" style="padding-right: 97px;padding-top: 30px;"><input type="image" src="http://images.inc.com/images/drop_goback.png" id="gb3" style="margin-right:2px;" /><input type="image" src="http://images.inc.com/images/drop_cont.png" id="b3" /></td>
+        </tr>
+        <tr>
+          <td align="left" valign="middle"></td>
+          <td align="left" valign="top"></td>
+          <td align="left" valign="middle"></td>
+          <td align="left" valign="top"></td>
+        </tr>
+        </table>
+    </div>
+        <input id="emailz" name="emailz" type="hidden" value="logged_in@inc.com" class="required email" />
+        <input id="firstnamez" name="firstnamez" type="hidden" value="Inc Subscriber" class="required firstname" />
+        <input id="lastnamez" name="lastnamez" type="hidden" value="Inc Subscriber" class="required firstname" />
+        <input id="fullnamez" name="fullnamez" type="hidden" value="Inc Subscriber" class="required fullname" />
+        
+</div>
+
+<div class="pane4">
+    <div class="header">Congratulations! <span class="subhead">You're now a part of the Inc. community, the leading online resource for private business leaders and innovators.</span></div>
+
+    <table width="814" cellpadding="0" cellspacing="0" align="center">
+        <tr>
+        <td align="left" valign="middle" width="50%">
+            <strong>As a member, you'll have access to</strong> like-minded business<br />
+            leaders, priority invites to free Inc. networking events,<br />
+            exclusive web events and video chats, and more!
+        </td>
+        <td align="right" valign="middle" width="50%">
+            <img src="http://images.inc.com/header/registration/mag-offer.png" />
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right" height="75" valign="middle"><input type="image" id="b4" src="http://images.inc.com/header/registration/signup-close-button.png" /></td>
+        </tr>
+    </table>
+
+</div>
+
+
+</div> 
+
+</div>
+
+
+<!-- REGISTRATION PANEL -->        
+        
+        <div id="slimnavcontainer" class="inner"><ul id="slimNav"></ul></div>
+        <div id="slimbottomnav" class="outer" style="height:4px; background-color: none;" onmouseover="hideslimnav();">&nbsp;</div>
+    </div>
+    
+     
+	<div id="search-bar" class="inner" style="position: relative;">
+    	<form action="http://www.inc.com/search" method="get" onsubmit="if (document.getElementById('search-field').value == 'SEARCH') {return false;}">
+        <div id="search-container">
+              <input type="text" name="q" id="search-field" value=""/>
+              <div id="search-icon"><input type="image" src="http://images.inc.com/header/search_icon.png?" class="top" /></div>
+        </div>
+        </form>
+    </div>
+
+    <!-- "MENU LINE INTERRUPT" -->
+              <div class="inner">
+                <div id="interrupt">
+                  <ul id="interrupt-imgs" class="cycle-slideshow" data-cycle-slides="> li">
+                                           <li><a href="http://www.inc.com/inc5000"><img src="http://images.inc.com/header/logo-inc5000.png" /></a></li>
+                                        </ul>
+              </div>
+          </div>
+              <!-- "MENU LINE INTERRUPT" -->
+
+    <div class="outer" id="above-nav">
+        <div id="inc-logo"><a href="http://www.inc.com/"><img src="http://images.inc.com/header/inc-logo.png" width="225" height="78" /></a></div>
+    </div>
+    
+    <!--MAIN NAVIGATION-->
+    <div id="main-nav" class="outer">
+        <div id="main-nav-items" class="inner"><ul id="mainNav"></ul></div>
+    </div>
+    <!--MAIN NAVIGATION-->
+
+    <div id="dropdown" class="outer launch panel">
+        <div class="inner" style="margin-top:20px;">
+
+            <!--LEFT HAND SUB NAVIGATION-->
+            <div style="width:177px;height:205px;float:left;"><ul id="leftSubNav"></ul></div>
+            <!--LEFT HAND SUB NAVIGATION-->
+            
+          <div id="mastheadContentContainer"></div>
+            
+        </div> 
+        <div id="bottombar" class="bottomnavbar" style="">
+            <div id="bottombarinner" class="inner" style=""></div>
+        </div>
+    </div>
+    </div>	
+	<div id="outercontainer">
+	<div id="container" class="inner">
+				
+	<!--op value: home //-->
+		 
+		
+                
+                
+        	<div id="pinboardSortHeader">
+    		<div id="pinboardSortLatest"><img src="http://images.inc.com/pinboard/sort-latest.png"/></div>
+    		<div id="pinboardSortLatestClicker"></div>
+    		<div id="pinboardSortPopular"><img src="http://images.inc.com/pinboard/sort-popular.png"/></div>
+    		<div id="pinboardSortPopularClicker"></div>
+    	</div>
+   	
+
+		
+		
+			
+		
+		
+			
+	
+		
+		
+		
+	
+		
+			
+		<div id="maincolumn" class="maincolumnnofloat">
+			
+<script>
+	$(document).ready(function() {
+		$('#prev').hover(function() {$('#prev img').attr('src','http://images.inc.com/header/prev-arrow-hov.png')}, function() {$('#prev img').attr('src','http://images.inc.com/header/prev-arrow.png')})
+		$('#next').hover(function() {$('#next img').attr('src','http://images.inc.com/header/next-arrow-hov.png')}, function() {$('#next img').attr('src','http://images.inc.com/header/next-arrow.png')})
+	});
+</script>
+
+<span id="prev" style="float:left;left:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="http://images.inc.com/header/prev-arrow.png" /></span>
+<span id="next" style="float:right;right:-70px;top:215px;margin-top:0px;position:absolute;display:inline;"><img src="http://images.inc.com/header/next-arrow.png" /></span>
+
+<div class="cycle-slideshow" data-cycle-fx=scrollHorz data-cycle-timeout=0 data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-slides="> div" style="width:970px;position:relative;height:890px;">
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-grow caption"><a href="http://www.inc.com/grow">GROW</a></div>
+	 <a href="http://www.inc.com/curt-hanke/3-secrets-to-creating-a-better-marketing-plan.html"><img src="http://www.inc.com/uploaded_files/image/970x450/team-writing-on-post-it-notes-1940x900_29601.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/curt-hanke/3-secrets-to-creating-a-better-marketing-plan.html">3 Secrets to Revamping Your Marketing Plan</a></div>
+            <div class="h2">Having trouble turning your marketing plans into marketing action? It's time to take a fresh look at your entire process.<span class="byline">&nbsp;by&nbsp;<a href="author/curt-hanke">Curt Hanke</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/curt-hanke/3-secrets-to-creating-a-better-marketing-plan.html" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/les-mckeown/leadership-lesson-from-steve-ballmers-exit.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-lead h1"><a href="http://www.inc.com/lead">LEAD</a></div>
+	    <div class="h2"><a href="http://www.inc.com/les-mckeown/leadership-lesson-from-steve-ballmers-exit.html">The One Leadership Lesson You Should Learn This Week</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/les-mckeown">Les McKeown</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/les-mckeown/leadership-lesson-from-steve-ballmers-exit.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/kathryn-minshew/playbook-how-to-run-an-interview.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-default h1">VIDEO&nbsp;|&nbsp;<a href="http://www.inc.com/playbook">THE PLAYBOOK</a></div>
+	    <div class="h2"><a href="http://www.inc.com/kathryn-minshew/playbook-how-to-run-an-interview.html">How to Get the Most Out of Every Interview</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/kathryn-minshew">Kathryn Minshew</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/kathryn-minshew/playbook-how-to-run-an-interview.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/karl-and-bill/how-to-prioritize-your-big-ideas.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/karl-and-bill/how-to-prioritize-your-big-ideas.html">An Easy Way to Prioritize Your 'Big Ideas'</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/karl-stark-and-bill-stewart">Karl Stark and Bill Stewart</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/karl-and-bill/how-to-prioritize-your-big-ideas.html" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-grow caption"><a href="http://www.inc.com/grow">GROW</a></div>
+	 <a href="http://www.inc.com/magazine/201309/burt-helm/how-reconcraft-landed-a-big-government-contract.html"><img src="http://www.inc.com/uploaded_files/image/970x450/reconcraft-1940x900_29158.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/magazine/201309/burt-helm/how-reconcraft-landed-a-big-government-contract.html">How We Landed a Contract with Homeland Security</a></div>
+            <div class="h2">In order to get a government contract, Jonathan and Jay Hoflich of ReconCraft had to fix a major design flaw.<span class="byline">&nbsp;by&nbsp;<a href="author/burt-helm">Burt Helm</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/magazine/201309/burt-helm/how-reconcraft-landed-a-big-government-contract.html" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/karl-and-bill/how-to-prioritize-your-big-ideas.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/karl-and-bill/how-to-prioritize-your-big-ideas.html">An Easy Way to Prioritize Your 'Big Ideas'</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/karl-stark-and-bill-stewart">Karl Stark and Bill Stewart</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/karl-and-bill/how-to-prioritize-your-big-ideas.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/lee-colan/keeping-score-boost-performance.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-people h1"><a href="http://www.inc.com/people">PEOPLE</a></div>
+	    <div class="h2"><a href="http://www.inc.com/lee-colan/keeping-score-boost-performance.html">Can Keeping Score Boost Employee Performance?</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/lee-colan">Lee Colan</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/lee-colan/keeping-score-boost-performance.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/11-body-language-essentials-for-your-next-negotiation.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-startup h1"><a href="http://www.inc.com/startup">STARTUP</a></div>
+	    <div class="h2"><a href="http://www.inc.com/11-body-language-essentials-for-your-next-negotiation.html">Body Language: 11 Tips for Negotiation</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/young-entrepreneur-council">Young Entrepreneur Council</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/11-body-language-essentials-for-your-next-negotiation.html" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-startup caption"><a href="http://www.inc.com/startup">STARTUP</a></div>
+	 <a href="http://www.inc.com/11-body-language-essentials-for-your-next-negotiation.html"><img src="http://www.inc.com/uploaded_files/image/970x450/body-language-hands-1940x900_29605.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/11-body-language-essentials-for-your-next-negotiation.html">Body Language: 11 Tips for Negotiation</a></div>
+            <div class="h2">If you aren't in control of your body language, it doesn't matter how much you've prepared for a negotiation. Here are some top tips.<span class="byline">&nbsp;by&nbsp;<a href="author/young-entrepreneur-council">Young Entrepreneur Council</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/11-body-language-essentials-for-your-next-negotiation.html" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/jeff-haden/bulhorn-business-that-didnt-go-according-to-any-plan.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/jeff-haden/bulhorn-business-that-didnt-go-according-to-any-plan.html">The Business That Didn't Go According to <em>Any</em> Plan</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/jeff-haden">Jeff Haden</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/jeff-haden/bulhorn-business-that-didnt-go-according-to-any-plan.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/lee-colan/keeping-score-boost-performance.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-people h1"><a href="http://www.inc.com/people">PEOPLE</a></div>
+	    <div class="h2"><a href="http://www.inc.com/lee-colan/keeping-score-boost-performance.html">Can Keeping Score Boost Employee Performance?</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/lee-colan">Lee Colan</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/lee-colan/keeping-score-boost-performance.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/mark-suster/get-busy-people-to-answer-email.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/mark-suster/get-busy-people-to-answer-email.html">7 Tips for Emailing Extraordinarily Busy People</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/mark-suster">Mark Suster</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/mark-suster/get-busy-people-to-answer-email.html" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-grow caption"><a href="http://www.inc.com/grow">GROW</a></div>
+	 <a href="http://www.inc.com/mark-suster/get-busy-people-to-answer-email.html"><img src="http://www.inc.com/uploaded_files/image/970x450/typing-1940x900_29510.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/mark-suster/get-busy-people-to-answer-email.html">7 Tips for Emailing Extraordinarily Busy People</a></div>
+            <div class="h2">Here's how to break through the noise and get busy people to take action when you email them.<span class="byline">&nbsp;by&nbsp;<a href="author/mark-suster">Mark Suster</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/mark-suster/get-busy-people-to-answer-email.html" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-lead h1"><a href="http://www.inc.com/lead">LEAD</a></div>
+	    <div class="h2"><a href="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html">Paul Graham: Brutally Honest Advice for Fast Growth</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/issie-lapowsky">Issie Lapowsky</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html">8 Ways to Improve Your Attitude</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/geoffrey-james">Geoffrey James</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/kevin-daum/help-new-employees-succeed-from-day-one.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-people h1"><a href="http://www.inc.com/people">PEOPLE</a></div>
+	    <div class="h2"><a href="http://www.inc.com/kevin-daum/help-new-employees-succeed-from-day-one.html">Help New Employees Succeed From Day One</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/kevin-daum">Kevin Daum</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/kevin-daum/help-new-employees-succeed-from-day-one.html" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-lead caption"><a href="http://www.inc.com/lead">LEAD</a></div>
+	 <a href="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html"><img src="http://www.inc.com/uploaded_files/image/970x450/eternal-1940x900_29048.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html">Paul Graham: Brutally Honest Advice for Fast Growth</a></div>
+            <div class="h2">Graham's tech accelerator, Y Combinator, has minted many big hits, including Dropbox, Reddit, and Airbnb. Here's a conversation with the start-up guru.<span class="byline">&nbsp;by&nbsp;<a href="author/issie-lapowsky">Issie Lapowsky</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html">8 Ways to Improve Your Attitude</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/geoffrey-james">Geoffrey James</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/kevin-daum/help-new-employees-succeed-from-day-one.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-people h1"><a href="http://www.inc.com/people">PEOPLE</a></div>
+	    <div class="h2"><a href="http://www.inc.com/kevin-daum/help-new-employees-succeed-from-day-one.html">Help New Employees Succeed From Day One</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/kevin-daum">Kevin Daum</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/kevin-daum/help-new-employees-succeed-from-day-one.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/ss/how-fastest-growing-american-companies-stay-motivated'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1">SLIDESHOW&nbsp;|&nbsp;<a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/ss/how-fastest-growing-american-companies-stay-motivated">How America's Fastest Growing Companies Stay Motivated</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/abigail-tracy">Abigail Tracy</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/ss/how-fastest-growing-american-companies-stay-motivated" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-grow caption">SLIDESHOW&nbsp;|&nbsp;<a href="http://www.inc.com/grow">GROW</a></div>
+	 <a href="http://www.inc.com/ss/how-fastest-growing-american-companies-stay-motivated"><img src="http://www.inc.com/uploaded_files/image/970x450/employees-standing-in-circle-1940x900_29356.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/ss/how-fastest-growing-american-companies-stay-motivated">How America's Fastest Growing Companies Stay Motivated</a></div>
+            <div class="h2">Keeping staff members motivated is part art, part science. Here's how Inc. 5000 CEOs maintain enthusiasm levels over the long haul.<span class="byline">&nbsp;by&nbsp;<a href="author/abigail-tracy">Abigail Tracy</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/ss/how-fastest-growing-american-companies-stay-motivated" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/john-brandon/week-in-tech-elon-musk-is-up-to-something-again.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-innovate h1"><a href="http://www.inc.com/innovate">INNOVATE</a></div>
+	    <div class="h2"><a href="http://www.inc.com/john-brandon/week-in-tech-elon-musk-is-up-to-something-again.html">Week in Tech: Elon Musk Is Up to Something (Again)</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/john-brandon">John Brandon</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/john-brandon/week-in-tech-elon-musk-is-up-to-something-again.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html">8 Ways to Improve Your Attitude</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/geoffrey-james">Geoffrey James</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-lead h1"><a href="http://www.inc.com/lead">LEAD</a></div>
+	    <div class="h2"><a href="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html">Paul Graham: Brutally Honest Advice for Fast Growth</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/issie-lapowsky">Issie Lapowsky</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<div class="slide">
+<div class="fluidrow mainfeaturerow">
+
+	 
+
+	<div class="bg-grow caption"><a href="http://www.inc.com/grow">GROW</a></div>
+	 <a href="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html"><img src="http://www.inc.com/uploaded_files/image/970x450/smiley-corkboard-2-1725x810_27973.jpg" class="mainfeatureimage" width="970" height="450"/></a>
+	    <div class="headlines">
+        	<div class="h1"><a href="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html">8 Ways to Improve Your Attitude</a></div>
+            <div class="h2">A positive attitude make success easy; a negative one makes success pointless.<span class="byline">&nbsp;by&nbsp;<a href="author/geoffrey-james">Geoffrey James</a></span></div>
+            <div class="shares" data-title="sharrre" data-url="http://www.inc.com/geoffrey-james/8-ways-to-improve-your-attitude.html" ></div>
+        </div>
+    
+    
+	
+	
+
+	
+        	</div> <!-- fluidrow //-->
+    	<div class="fluidrow">
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/magazine/201309/how-the-inc.500-companies-innovate.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-grow h1"><a href="http://www.inc.com/grow">GROW</a></div>
+	    <div class="h2"><a href="http://www.inc.com/magazine/201309/how-the-inc.500-companies-innovate.html">How Inc. 500 Companies Innovate</a></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/magazine/201309/how-the-inc.500-companies-innovate.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/elle-kaplan/is-this-a-great-business-or-a-hobby.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-money h1"><a href="http://www.inc.com/money">MONEY</a></div>
+	    <div class="h2"><a href="http://www.inc.com/elle-kaplan/is-this-a-great-business-or-a-hobby.html">Is This a Great Business, or a Hobby?</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/elle-kaplan">Elle Kaplan</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/elle-kaplan/is-this-a-great-business-or-a-hobby.html" ></div>
+	</div>
+</div>
+	
+	
+
+	
+    
+	<div class="psubfeature" onclick="location.href='http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html'; return false;">
+	<div class="innerpcell-subfeature">
+		<div class="bg-lead h1"><a href="http://www.inc.com/lead">LEAD</a></div>
+	    <div class="h2"><a href="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html">Paul Graham: Brutally Honest Advice for Fast Growth</a><span class="byline">&nbsp;by&nbsp;<a href="http://www.inc.com/author/issie-lapowsky">Issie Lapowsky</a></span></div>
+	    <div class="shares" data-title="sharrre" data-url="http://www.inc.com/magazine/201309/issie-lapowsky/how-paul-graham-became-successful.html" ></div>
+	</div>
+</div>
+	
+			</div> <!-- fluidrow //-->
+	
+
+</div>
+
+<br clear="all">
+</div> <!-- cycle-slideshow //-->		</div> <!--end maincolumn //-->
+
+		<div id="sidebar"><div id="sidebar_inner">
+		
+		</div></div>
+	</div>
+
+	<br clear="all">
+
+	
+		<div class="container-bottom">
+										
+					<div id="backtotopcontainer">
+		<div id="backtotopinnercontainer">
+			<div id="backtotopbutton">
+				<img src="http://images.inc.com/ajaxloader/back-to-top.png"/>
+			</div>
+		</div>
+	</div>
+
+
+<div id="phomepinboard" class="pinboard homepinboard">
+	<div class="pinboardContent"></div>
+</div>
+
+<script type="text/javascript">
+	var phomepinboard;
+	$(function(){
+		phomepinboard = new Pinboard();
+		phomepinboard.init('home','phomepinboard','http://www.inc.com/','','latest');
+	});
+</script>
+	</div>
+		
+				
+	
+	</div> <!--end container//-->
+</div> <!--end outercontainer//-->
+
+		
+	<div id="container-footer" class="inner">
+	<div id="content-footer"><div id="content_inner-footer">
+		
+	</div></div> <!--end content_inner-footer/content-footer //-->
+</div><!--end container-footer //-->
+
+
+
+
+<div id="reintegrate"></div>
+<script>
+
+var runCount = 0;    
+function reintegrate() {
+    runCount++;
+    if(runCount > 60) clearInterval(timerId);
+    $('#reintegrate').load("http://www.inc.com/index.php?op=userreintegration&homid=");
+}
+
+if(getCookie('incun')) {
+    $('#reintegrate').load("http://www.inc.com/index.php?op=userintegration&homid=");
+	var timerId = setInterval(reintegrate, 60000);
+}
+</script>
+
+
+
+
+
+
+
+<!-- Start Chartbeat integration -->
+<script type="text/javascript">
+
+var _sf_async_config={uid:2768,domain:"inc.com"};_sf_async_config.sections = "";_sf_async_config.authors = "";
+
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+<!-- End Chartbeat integration -->
+
+
+<div id="posttrack"></div>
+
+
+<script language="javascript">
+function postload() {
+	var op = 'home';
+	var incSitePage = '';
+	var txt = '';
+	if(op!='home' && incSitePage!='col.livechat') {
+		if (Math.random() < 0.5) {
+			txt += '<script src="http://content.dl-rms.com/rms/mother/555/nodetag.js"></scr' + 'ipt>';
+		} else {
+			txt += '<script language="javascript" src="http://icompass.insightexpressai.com/401.js"></scr' + 'ipt>';
+		}
+	}
+	
+	txt += '<script type="text/javascript" src="http://amch.questionmarket.com/adsc/d632383/16/644041/randm.js"></scr' + 'ipt>';
+	
+	<!-- Default Insight Tag -->
+	var _bizo_data_partner_id = "632";
+  	var _bizo_p = (("https:" == document.location.protocol) ? "https://sjs." : "http://js.");
+  	txt += unescape("%3Cscript src='" + _bizo_p + "bizographics.com/convert_data.js?partner_id=" + _bizo_data_partner_id + "' type='text/javascript'%3E%3C/script%3E");
+	return txt;
+}
+$(document).ready(function() {	
+	document.getElementById("posttrack").innerHTML=postload();
+});
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+var _ca_id=85384;
+// Additional request query data. Uncomment next line and change parameters if needed.
+// var _ca_params={ oid:ORDERID, tp:1000, curr:"USD", accid:ACCOUNTID, gid:GOOGLEID, ... };
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function (){
+var p,s;
+p = document.createElement("script");
+p.type = "text/javascript";
+p.async = true;
+p.src = (document.location.protocol != "https:" ? "http" : "https") + "://p0.raasnet.com/partners/_ca.js";
+s = document.getElementsByTagName("script"); s[s.length-1].parentNode.appendChild(p);
+})();
+//]]>
+</script>
+
+
+</body>
+</html>

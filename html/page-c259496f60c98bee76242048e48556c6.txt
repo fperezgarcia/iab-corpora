@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ICS Performance | Home</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="fadeslideshow.js">
+
+/***********************************************
+* Ultimate Fade In Slideshow v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mygallery=new fadeSlideShow({
+	wrapperid: "homeslideshow", //ID of blank DIV on page to house Slideshow
+	dimensions: [450, 200], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["images/homeslideshow/image1.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to ICS Performance"],
+		["images/homeslideshow/image2.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMW M-Power "],
+		["images/homeslideshow/image3.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Audi RS4"],
+		["images/homeslideshow/image4.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMW 7 series"],
+		["images/homeslideshow/image5.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMW 135i TT Angle Eyes"],
+		["images/homeslideshow/image6.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mercedes Benz AMG C63"],
+		["images/homeslideshow/image7.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VW Gulf VR6 Turbo"],
+		["images/homeslideshow/image8.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMW e46 M3 HorsePowerFreaks Turbokit"],
+		["images/homeslideshow/image9.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ICS Performance e36 M3 Stage 1 turbo"],
+		["images/homeslideshow/image10.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ICS Performance turbos"],
+		["images/homeslideshow/image11.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMW Performance Garage"],
+		["images/homeslideshow/image12.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mitsubishi Evo X"],
+		["images/homeslideshow/image13.jpg", "", "", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMW M5 Performance Rim"] //<--no trailing comma after very last image element!
+	],
+	displaymode: {type:'auto', pause:3000, cycles:0, wraparound:false},
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	descreveal: "ICS Performance",
+	togglerid: ""
+})
+</script>
+
+<link href="ics.css" rel="stylesheet" type="text/css" />
+<link media="only screen and (max-device-width: 480px)"
+    href="icsiphone.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+<!--
+
+a.logo {
+	width: 350px;
+	height :100px;
+	display: block;
+	position:absolute;
+	background: url(images/logo.png);
+	background-position: 0 0;
+	left: 0px;
+	top: 13px;
+}
+a.products {
+	width: 160px;
+	height :50px;
+	display: block;
+	position:absolute;
+	background: url(images/navbuttons.png);
+	left: 1px;
+	top: 23px;
+}
+a.services{
+	width: 160px;
+	height: 50px;
+	position:absolute;
+	display: block;
+	background: url(images/navbuttons.png);
+	left: 160px;
+	top: 23px;
+}
+a.performance{
+	width: 160px;
+	height: 50px;
+	position:absolute;
+	display: block;
+	background: url(images/navbuttons.png);
+	left: 319px;
+	top: 23px;
+}
+a.forums{
+	width: 160px;
+	height: 50px;
+	position:absolute;
+	display: block;
+	background: url(images/navbuttons.png);
+	left: 478px;
+	top: 23px;
+}
+a.media{
+	width: 160px;
+	height: 50px;
+	position:absolute;
+	display: block;
+	background: url(images/navbuttons.png);
+	left: 636px;
+	top: 23px;
+}
+
+a.contact{
+	width: 160px;
+	height: 50px;
+	position:absolute;
+	display: block;
+	background: url(images/navbuttons.png);
+	left: 796px;
+	top: 23px;
+}
+
+a.products {background-position: 0 0;}
+a.services {background-position: -160px 0;}
+a.performance {background-position: -320px 0;}
+a.forums {background-position: -479px 0;}
+a.media {background-position: -638px 0;}
+a.contact {background-position: -800px 0;}
+
+a.logo:hover {background-position: 0 -96px;}
+a.products:hover {background-position: 0 -49px;}
+a.services:hover {background-position: -160px -49px;}
+a.performance:hover {background-position: -320px -49px;}
+a.forums:hover {background-position: -479px -49px;}
+a.media:hover {background-position: -638px -49px;}
+a.contact:hover {background-position: -800px -49px;}
+
+a.products:active {background-position: 0 -98px;}
+a.services:active {background-position: -160px -98px;}
+a.performance:active {background-position: -320px -98px;}
+a.forums:active {background-position: -479px -98px;}
+a.media:active {background-position: -638px -98px;}
+a.contact:active {background-position: -800px -98px;}
+
+a.icsyellowm3dyno650{
+	width: 321px;
+	height: 67px;
+	position:absolute;
+	display: block;
+	background: url(images/icsyellowm3dyno650.png);
+	background-repeat:no-repeat;
+	left: 645px;
+	top: 511px;
+	background-position:bottom;
+	background-image: url(images/icsmcoupe700.png);
+	z-index: 10;
+}
+
+a.icsyellowm3dyno650 {background-position: 0 0;}
+a.icsyellowm3dyno650:hover {background-position: 0 -69px;}
+
+#oldsite {
+	position:absolute;
+	left:630px;
+	top:126px;
+	width:169px;
+	height:16px;
+	z-index:1;
+}
+a.oldsitebutton {
+	position: absolute;
+	width: 97px;
+	height: 26px;
+	background-image: url(images/icsbutton.png);
+	background-repeat:no-repeat;
+	top: 401px;
+	left: 813px;
+	z-index:99;
+	background-position: 0 0;
+}
+a.oldsitebutton:hover {background-position: 0 -25px;}
+a.oldsitebutton:active {background-position: 0 -50px;}
+#mediagallerylinks {
+	position:absolute;
+	left:38px;
+	top:639px;
+	width:313px;
+	height:201px;
+	z-index:999;
+}
+a.mediaaperture {
+	position:absolute;
+	left:10px;
+	top:80px;
+	width:50px;
+	height:50px;
+	z-index:9999;
+	background-image: url(images/aperture.png);
+}
+
+-->
+</style>
+</head>
+<body onLoad="runSlideShow()">
+<div id="container">
+<a href="index.html" class="logo"></a>
+<div id="navbar">
+    <a href="services.html" class="products"></a>
+        <a href="products.html" class="services"></a>
+        <a href="performance.html" class="performance"></a>
+        <a href="forum.html" class="forums"></a>
+        <a href="media.html" class="media"></a>
+        <a href="contact.html" class="contact"></a>
+</div>
+<div id="watermark"></div>
+<div id="pagetitle"></div>
+<div id="car">
+  <div id="oldsite">Need to visit the old site?</div>
+</div>
+<a href="mcoupe700dyno.html" class="icsyellowm3dyno650"></a>
+<div id="welcomephrase"><span class="redtitles">ICS Performance</span> is your one stop shop for automotive performance. We pride ourselves on excellent service, and our reputation speaks for itself. Based in Stamford CT, ICS Performance will bring your car to another level...</div>
+	<div id="homeslideshowbox">
+	  <div id="homeslideshow"></div>
+    </div>
+    <a href="http://icsperformance.com/old" target="_blank" class="oldsitebutton"></a>
+    <div id="mediagallerylinks">
+    <p class="redtitles">Latest Media:
+      <a href="galleries.html" class="mediaaperture"></a>    </p>
+    <p>Â Â &gt; <a href="texasmile.html">Texas Mile</a></p>
+    <p>Â Â &gt; <a href="yellowm3gallery.html">BMW M3 turbo</a></p>
+    <p>Â Â &gt; <a href="x5gallery.html">BMW Supercharged X5</a></p>
+    <p>Â Â &gt; <a href="whitem3gallery.html">BMW Supercharged M3</a></p>
+    <p>&nbsp;</p>
+    <p>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <span class="whitetitles"><a href="galleries.html">Click Here</a> to visit our galleries</span></p>
+  </div>
+</div>
+</body>
+</html>

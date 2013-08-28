@@ -1,0 +1,419 @@
+<!-- served by MAPLE -->
+<!-- Time Stamp 8/28/2013 1:09:40 AM -->
+<!-- Brand Code: ATVG -->
+<!-- RefCode: AV03ATVDCSD0005 -->
+<!-- Product Def Id: 159 -->
+<!-- Service Id: 5 -->
+<!-- Service Code: ATV -->
+<!-- begin bca: /BCA/GENERIC/Default/home.bca -->
+
+<html>
+	<head>
+		<title>AutoVantage</title>
+
+	<!-- begin bca: /BCA/GENERIC/Default/MetaTags.bca -->
+
+<!-- end bca: /BCA/GENERIC/Default/MetaTags.bca -->
+
+
+		<link rel="stylesheet" href="/Style.aspx?file=%2fBCA%2fGENERIC%2ftemplates%2fMainStyle.bca&compact=true&utc=634462537200000000" type="text/css" >
+		<link rel="stylesheet" href="/Style.aspx?file=%2fBCA%2fGENERIC%2ftemplates%2fMenuStyle.bca&compact=true&utc=634316503800000000" type="text/css" >
+		<link rel="stylesheet" href="/Style.aspx?file=%2fBCA%2fGENERIC%2ftemplates%2fFooterStyle.bca&compact=true&utc=634296723600000000" type="text/css" >
+		<link rel="stylesheet" href="/Style.aspx?file=%2fBCA%2fGENERIC%2ftemplates%2fSubpageStyle.bca&compact=true&utc=634296723600000000" type="text/css" >
+
+<!--beginP: mobilescript-->
+	<script src="/BCA/Generic/images/mobiledirect.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		doMobileRedirect("http://m.autovantage.com","0");
+	</script>
+<!--endP: mobilescript-->
+
+		
+
+	
+		<!-- begin bca: /BCA/GENERIC/Default/Scripts.bca -->
+<script type="text/javascript">
+ 
+var cur_lyr; // holds id of currently visible layer
+function swapLayers(id) {
+  if (cur_lyr) hideLayer(cur_lyr);
+  showLayer(id);
+  cur_lyr = id;
+}
+ 
+function showLayer(id) {
+  var lyr = getElemRefs(id);
+  if (lyr && lyr.css) lyr.css.visibility = "visible";
+  if (lyr && lyr.css) lyr.css.display = "block";
+}
+ 
+function hideLayer(id) {
+  var lyr = getElemRefs(id);
+  if (lyr && lyr.css) lyr.css.visibility = "hidden";
+  if (lyr && lyr.css) lyr.css.display = "none";
+}
+ 
+function getElemRefs(id) {
+ var el = (document.getElementById)? document.getElementById(id): (document.all)? document.all[id]: (document.layers)? getLyrRef(id,document): null;
+ if (el) el.css = (el.style)? el.style: el;
+ return el;
+}
+ 
+function getLyrRef(lyr,doc) {
+ if (document.layers) {
+  var theLyr;
+  for (var i=0; i<doc.layers.length; i++) {
+    theLyr = doc.layers[i];
+   if (theLyr.name == lyr) return theLyr;
+   else if (theLyr.document.layers.length > 0) 
+      if ((theLyr = getLyrRef(lyr,theLyr.document)) != null)
+     return theLyr;
+   }
+  return null;
+  }
+}
+</script>
+
+<script type="text/javascript" language="JavaScript">
+
+//the next 3 lines are browser detection for user-agent DOMS
+ns4 = (document.layers) ? true:false //required for Functions to work
+ie4 = (document.all) ? true:false //required for Functions to work
+ng5 = (document.getElementById) ? true:false //required for Functions to work
+
+var currLayerId = "sec0"; 
+
+function togLayer(id) 
+{ 
+if(currLayerId) setDisplay(currLayerId, "none"); 
+if(id)setDisplay(id, "block"); 
+currLayerId = id; 
+} 
+
+function setDisplay(id,value) 
+{ 
+var elm = document.getElementById(id); 
+elm.style.display = value; 
+} 
+
+
+</script>
+<!-- end bca: /BCA/GENERIC/Default/Scripts.bca -->
+
+	
+
+<script type="text/javascript" src="/BCA/Generic/images/flashobject.js"></script>
+
+<!--beginP: tabscript-->
+			<!--beginP: tabscript--><!--endP: tabscript-->
+		<!--endP: tabscript-->
+
+	</head>
+<!--beginP: MainWindowContent-->
+ 
+<!--beginP: bodytag-->
+	<body id="memberhome">
+<!--endP: bodytag-->
+	<div id="container">	
+				
+		<!--beginP: Body-->
+	<!-- begin bca: /BCA/GENERIC/Default/menuhome.bca -->
+<div id="headertop">
+	<div id="signin">
+		<div id="signintl"></div><div id="signintm"></div><div id="signintr">
+		</div><div id="signinml"></div>
+		
+		<!--beginP: signinBox-->
+		<!-- begin bca: /BCA/GENERIC/Default/signinBox.bca -->
+		<!-- begin sign in content -->
+		
+			<div id="signincontent">			
+				<div id="signinhdr">Member Sign In <span class="signinhdrpad">New Member?</span></div>
+				
+<!-- begin SignInFormControl -->
+<script type="text/javascript" src="http://www.autovantage.com/ClientScript.aspx?script=FormControl%2fdisableOnSubmit.js&amp;utc=633470607600000000"></script>
+<form method="post" onsubmit="disableSubmission(this)" name="SignInFormControl" AUTOCOMPLETE="OFF" action="https://www.autovantage.com/secure/Signin.aspx">
+<input id="__FLOWEVENT" type="hidden"/>
+					<div id="signinfields">
+						<div id="signinsubmit"><input name="signin_submit" TabIndex="3" type="image" src="/BCA/GENERIC/images/buttons/GoBtn.gif" border="0" /></div><div id="signinjoin"><a href="https://www.autovantage.com/secure/EnableWebAccess.aspx"><img alt="" src="/BCA/GENERIC/images/buttons/RegisterBtn.gif" style="border: 0px solid;" /></a></div>
+						<label for="Username">Username</label><input size="15" maxlength="25" tabindex="1" name="signin_username" type="text" /><br/>
+						<label for="Password">Password</label><input size="15" maxlength="10" tabindex="2" name="signin_password" type="password" />
+					</div>
+					<div id="signinforgot"><a href="https://www.autovantage.com/secure/ForgotUserName.aspx">Forgot your username?</a>&nbsp;&nbsp;<a href="https://www.autovantage.com/secure/ForgotPassword.aspx">Forgot your password?</a>&nbsp;&nbsp;<input tabindex="4" name="signin_save" type="checkbox" checked="true" />Remember me</div>
+				<input name="xAuthToken" type="hidden" value="YFDPKHIPQTOHB376D8YN9FS357AFLSYJ4" />
+
+</form>
+<!-- end SignInFormControl -->
+					
+			</div>
+		
+		
+		
+		<!-- end sign in content -->
+<!-- end bca: /BCA/GENERIC/Default/signinBox.bca -->
+
+		<!--endP: signinBox-->		
+		
+		<div id="signinmr"></div>
+		<div id="signinbl"></div><div id="signinbm"></div><div id="signinbr"></div>
+		
+	</div> 
+	<!-- begin bca: /BCA/GENERIC/Default/banner.bca -->
+
+		<a href="/Content.aspx?content=index" target="_parent"><img alt="" src="/BCA/GENERIC/images/global/AVLogoBlack.gif" class="hdrfloatleft" style="border: 0px solid;" /></a>
+
+	
+
+<!-- end bca: /BCA/GENERIC/Default/banner.bca -->
+
+</div>  
+<div id="headermenu">
+	<div id="navleft"></div><div id="navbottom"></div><div id="navright"></div>		
+    <div id="navcontainer">        
+		
+			<ul>
+				<li class="menucontent"><a href="/Content.aspx?content=index" target="_parent">Home</a></li> <span class="leftline">|</span>
+			
+				<li><a href="https://one-time-offer.com/sg/gateway.aspx?v=53D3B34343&p=A292F2326242BE77B7D7F706E72FC3D3D3A3D3539F16D6060727&cl=F6E606" target="_parent" id="nav-join">Join Now</a></li> <span class="leftline">|</span>
+										
+				<li><a href="/Content.aspx?content=benefitsGlance" target="_parent" id="nav-benefits">Benefits at a Glance</a></li> <span class="leftline">|</span>
+				<li><a href="/Content.aspx?content=customerCenter%2fcustomerCenter&lyr=lyr2" target="_parent" id="nav-customerctr">Customer Center</a></li>
+			</ul>
+									
+    </div>				
+</div>
+<!-- end bca: /BCA/GENERIC/Default/menuhome.bca -->
+
+	<!-- begin bca: /BCA/GENERIC/Default/home_content.bca -->
+			
+<div id="bodymain">
+    		
+    		
+    
+	<div id="voiceOver"> 
+		<!--beginP: menuBody-->
+			<!-- begin bca: /BCA/GENERIC/Default/menuBody.bca -->
+<div id="bodynav"> 
+	
+		<a href="/Content.aspx?content=nonflash%2froadAssist"><img alt="" src="/BCA/GENERIC/images/home/snav_roadside.gif" style="border: 0px solid;" /></a><br/>
+	
+	
+	<a href="/Content.aspx?content=nonflash%2fserviceCtr"><img alt="" src="/BCA/GENERIC/images/home/snav_servicectr.gif" style="border: 0px solid;" /></a><br/> 
+	<a href="/Content.aspx?content=nonflash%2fcarResearch"><img alt="" src="/BCA/GENERIC/images/home/snav_carresearch.gif" style="border: 0px solid;" /></a><br/> 
+	<a href="/Content.aspx?content=nonflash%2fautoMaint"><img alt="" src="/BCA/GENERIC/images/home/snav_automaint.gif" style="border: 0px solid;" /></a><br/> 
+	<a href="/Content.aspx?content=nonflash%2ftravelDiscnt"><img alt="" src="/BCA/GENERIC/images/home/snav_travel.gif" style="border: 0px solid;" /></a><br/> 
+	
+		<a href="/Content.aspx?content=nonflash%2ftripRoute"><img alt="" src="/BCA/GENERIC/images/home/snav_triproute.gif" style="border: 0px solid;" /></a><br/>
+	
+	<a href="/Content.aspx?content=nonflash%2fhotline"><img alt="" src="/BCA/GENERIC/images/home/snav_hotline.gif" style="border: 0px solid;" /></a><br/> 
+	<a href="/Content.aspx?content=nonflash%2fpartnerOffers"><img alt="" src="/BCA/GENERIC/images/home/snav_partneroffers.gif" style="border: 0px solid;" /></a>
+</div>
+<!-- end bca: /BCA/GENERIC/Default/menuBody.bca -->
+
+		<!--endP: menuBody-->
+		<div id="iconoffset"><img alt="" src="/BCA/GENERIC/images/icons/iconLg_Premium.gif" style="border: 0px solid;" /></div> 
+		<div id="imageoffset"><img alt="" src="/BCA/GENERIC/images/headers/hdr_Premium.gif" style="border: 0px solid;" /><div id="copyoffset"><strong>Get $40 cash back</strong> on your favorite gas. Just try AutoVantage and get your first month for $1.00.  Terms and Conditions apply.</div></div>     
+		<div id="buttonoffset"><a href="https://www.autovantage.com/secure/Promo.aspx" target="_parent"><img alt="" src="/BCA/GENERIC/images/buttons/JoinBtn.gif" style="border: 0px solid;" /></a></div>	
+	</div> 
+	<script type="text/javascript">						
+
+	var fo = new FlashObject("/BCA/AV_ENHANCED_WELLS/images/flash/AV_NM_Gold.swf", "voiceover", "773", "394", "6", "");
+	fo.addVariable("SID", "C6AABDE874FCA75E5CC7C734DD35C139");
+	fo.write("voiceOver");							
+
+	</script>
+		
+    	
+    	
+	
+    	
+
+	
+	
+	
+		
+		
+		
+
+
+
+
+	
+
+</div>
+
+
+
+
+  <div id="banner"> 
+	  <img alt="" src="/BCA/GENERIC/images/banners/av_LocateBanner01.gif" style="border: 0px solid;" /></div>	
+  </div> 
+  <script type="text/javascript">						
+  var activeBanner = 1;
+
+  var fo = new FlashObject("/BCA/Generic/images/flash/av_LocateBanner.swf", "voiceover", "773", "106", "6", "");
+  fo.addVariable("SID", "C6AABDE874FCA75E5CC7C734DD35C139");
+  
+  var fo2 = new FlashObject("/BCA/Generic/images/flash/av_LocateBanner1.swf", "voiceover", "773", "106", "6", "");
+  fo.addVariable("SID", "C6AABDE874FCA75E5CC7C734DD35C139");
+  
+  fo.write("banner");							
+
+  setInterval (changeBanner, 10000);
+  
+  function changeBanner()
+  {    
+    if (activeBanner == 2)
+    {
+      fo.write("banner");
+      activeBanner = 1;
+    }
+    else
+    {
+      fo2.write("banner");
+      activeBanner = 2;
+    }    
+  }
+
+  </script>
+
+
+
+
+    <!--beginP: subboxes-->
+		<!-- begin bca: /BCA/GENERIC/Default/subboxes.bca -->
+<div id="bodymainsub"> 
+    <div id="subbox"> 
+        <div id="subboxtl"></div> 
+        <div id="subboxtm"></div> 
+        <div id="subboxtr"></div> 
+        <div id="subboxml"></div> 
+        
+		<!-- Begin box content area --> 
+        <div id="subboxcontent"> 
+            <div id="subiconoffset"><img alt="" src="/BCA/GENERIC/images/icons/iconM_Premium.gif" style="border: 0px solid;" /></div> 
+			<div id="subimageoffset"><a href="/Content.aspx?content=benefitsGlance-Auto-Maintenance" target="_parent">Auto Repairs For Less</a></div>
+			<div id="subcopyoffset">
+				Enjoy AutoVantage member discounts at over 15,000 repair and service centers nationwide.
+			</div>
+        </div> 
+        <!-- End box content area --> 
+		
+        <div id="subboxbl"></div> 
+        <div id="subboxbm"></div> 
+        <div id="subboxbr"></div> 
+        <div id="subboxmr"></div> 
+    </div> 
+    <div id="subbox"> 
+        <div id="subboxtl"></div> 
+        <div id="subboxtm"></div> 
+        <div id="subboxtr"></div> 
+        <div id="subboxml"></div> 
+		
+        <!-- Begin box content area --> 
+        <div id="subboxcontent">
+    	
+     
+            <div id="subiconoffset"><img alt="" src="/BCA/GENERIC/images/icons/iconM_Benefits.gif" style="border: 0px solid;" /></div>
+			<div id="subimageoffset"><a href="/Content.aspx?content=benefitsGlance-Roadside-Assistance">Full Family Protection</a></div>	
+			<div id="subcopyoffset">No matter whose car you're in, who's driving, or where in the country you may be visiting, everyone in your household is protected with 24/7/365 roadside assistance.</div>	
+    	
+        </div> 
+        <!-- End box content area --> 
+		
+        <div id="subboxbl"></div> 
+        <div id="subboxbm"></div> 
+        <div id="subboxbr"></div> 
+        <div id="subboxmr"></div> 
+    </div>
+	<div style="float:left; width:210px;text-align:right;margin-top:10px;">
+	<a href="/bca/generic/images/pdf/Newsletter4.26.pdf" target="_blank"><img alt="" src="/BCA/GENERIC/images/global/ban_carTips.gif" width="205" height="200" style="border: 0px solid;" /></a>
+	</div>
+</div>
+<!-- end bca: /BCA/GENERIC/Default/subboxes.bca -->
+
+	<!--endP: subboxes-->
+
+
+<!-- end bca: /BCA/GENERIC/Default/home_content.bca -->
+
+<!--endP: Body--> 
+		 		
+		<!--beginP: Footer-->
+			<!-- begin bca: /BCA/GENERIC/Default/footer.bca -->
+<div id="footer">
+    <div id="footerlinks">
+		<a href="/Content.aspx?content=customerCenter%2fcustomerCenter&lyr=lyr2">Customer Center</a>&nbsp;|&nbsp;
+		<a href="/Content.aspx?content=customerCenter%2fcustomerCenter&lyr=lyr3">Privacy Policy</a>&nbsp;|&nbsp;
+		<a href="/Content.aspx?content=customerCenter%2fcustomerCenter&lyr=lyr4">Terms &amp; Conditions</a>&nbsp;|&nbsp;
+		<a href="/Content.aspx?content=customerCenter%2fcustomerCenter&lyr=lyr2">Contact Us</a>&nbsp;|&nbsp;
+		<a href="/Content.aspx?content=customerCenter%2fcustomerCenter&lyr=lyr1">About Us</a>
+	</div>
+	<div id="footerimg"><a href="https://smp-01.verizonbusiness.com/certinfo/certified.do?CERTID=070506J800" target="_new"><img alt="Cybertrust Certified Logo;" src="/BCA/GENERIC/images/global/cybertrust.gif" style="border: 0px solid;margin-top:5px;" /></a><a href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&dn=WWW.AUTOVANTAGE.COM&lang=en" target="_new"><img alt="" src="/BCA/GENERIC/images/global/verisign.gif" style="border: 0px solid;margin-left:15px;" /></a></div>
+	<div id="footercopywrite">&copy;2013 Trilegiant Corporation</div>
+</div>
+<!-- end bca: /BCA/GENERIC/Default/footer.bca -->
+
+		<!--endP: Footer-->
+	</div>	
+<!--endP: MainWindowContent-->
+<!--beginP: Core.Omniture--><!--endP: Core.Omniture-->
+
+	</div>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-12903190-1");
+	pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+
+</body>
+</html>
+
+
+<!-- end bca: /BCA/GENERIC/Default/home.bca -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"> </script> 
+
+ <script type="text/javascript" > 
+
+ function CrossFrameSpoofingPrevention(topLocation, selfLocation) { 
+ try 
+ { 
+ try{var x = topLocation.length;} catch(err){topLocation='No Access To Top Frame';} 
+ $.ajax({ 
+ type: "POST", 
+ url: "/AllowFrameSite.svcx?CrossFrameSecurity@ProcessFrameData", 
+ data: "{\"frameInfo\": {\"ParentWindow\":\"" + topLocation + "\", \"ChildWindow\":\"" + selfLocation + "\"}}", 
+ contentType: "application/json", 
+ datatype: "json", 
+ processData: true, 
+ success: function(ret) { 
+ if ($.trim(ret).indexOf("\"Allow\":false", 0) > 0)  
+ { 
+ if((navigator.appName.indexOf('Microsoft') != -1) && ((navigator.appVersion.indexOf('MSIE 6') != -1) || (navigator.appVersion.indexOf('MSIE 5') != -1))) 
+ { window.setTimeout(PopOut, 10);
+  } 
+ } 
+ } 
+ }) 
+ } 
+ catch(err) 
+ { } 
+ } 
+
+ if(top != self)
+{
+ CrossFrameSpoofingPrevention(top.location, self.location);
+
+}
+ function PopOut() {
+   top.location = self.location; }
+</script>
+<script type="text/javascript">
+function _doTokenCheck(){var d=document;var fa=d.getElementsByTagName('form');for(var c=0;c<fa.length;c++){var f=fa[c];if(!f['authToken']){var hf=d.createElement('input');hf.sa=hf.setAttribute;hf.sa('type','hidden');hf.sa('name','authToken');hf.sa('value','X7jZYQBaCVMnYUW01RsaOaA+t4XvEmCeHH7Pz5t1+GY=');f.appendChild(hf);}}}_doTokenCheck();
+</script>
+<!-- pe: 390 -->

@@ -1,0 +1,136 @@
+<HTML>
+<HEAD><TITLE>The Showroom of Automotive History: 1896 Duryea</title>
+<SCRIPT Language="javascript">
+
+/* Script Author - Wildman Tim ( http://www.wildmantim.com )
+   copyright Tim Hobbs (tim@wildmantim.com) */
+
+
+var sid="mitnamdliw_wildmantim";
+
+function dynamic_image_on(imgName) {
+             if (version == "3") {
+             ActiveImage = eval(imgName + "_active.src");
+             document [imgName].src = ActiveImage;
+             }
+     }
+
+     function dynamic_image_off(imgName) {
+             if (version == "3") {
+             DefaultImage = eval(imgName + "_default.src");
+             document [imgName].src =DefaultImage;
+             }
+     }
+
+	while(sid!="mitnamdliw_wildmantim"){};
+
+whichbrowser = navigator.appName;          //identify browser 
+            Ver = parseInt(navigator.appVersion);  
+             if (whichbrowser == "Netscape" && Ver >= 3 ||  whichbrowser == "Microsoft Internet Explorer" && Ver > 3) version = "3";
+             else version = "2";
+             
+             if (version == "3") {                 // if 3.0, load images 
+             img_1_active = new Image(15,15); 			 //small image
+             img_1_active.src = "../deco/bphoto.gif";   //when mouse moves over menu 
+             img_2_active = new Image(15,15); 			 //small image
+             img_2_active.src = "../deco/bad.gif";   //when mouse moves over menu 
+             img_3_active = new Image(15,15); 			 //small image
+             img_3_active.src = "../deco/bguest.gif";   //when mouse moves over menu 
+             img_4_active = new Image(15,15); 			 //small image
+             img_4_active.src = "../deco/bsales.gif";   //when mouse moves over menu 
+             img_5_active = new Image(15,15); 			 //small image
+             img_5_active.src = "../deco/bspecs.gif";   //when mouse moves over menu 
+             
+          
+//image to show when not highlighted
+
+             img_1_default = new Image(15,15); 			 //small image
+             img_1_default.src = "../deco/rphoto.gif";  //when mouse moves off menu 
+             img_2_default = new Image(15,15); 			 //small image
+             img_2_default.src = "../deco/rad.gif";  //when mouse moves off menu 
+             img_3_default = new Image(15,15); 			 //small image
+             img_3_default.src = "../deco/rguest.gif";  //when mouse moves off menu 
+             img_4_default = new Image(15,15); 			 //small image
+             img_4_default.src = "../deco/rsales.gif";  //when mouse moves off menu 
+             img_5_default = new Image(15,15); 			 //small image
+             img_5_default.src = "../deco/rspecs.gif";  //when mouse moves off menu 
+
+           
+}
+
+</script>
+</head>
+<body background="../deco/tribord.jpg" bgcolor="white" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+ <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr> 
+    <td bgcolor="#000000"><div align="center"><font color="#FFFFFF" size="-1" face="Arial, Helvetica, sans-serif"><strong> 
+        <map name="Map">
+          <area shape="rect" coords="4,4,323,35" href="http://www.TheHenryFord.org">
+        </map>
+        &nbsp; 
+        <map name="MapMap">
+          <area shape="rect" coords="4,4,323,35" href="/default.asp">
+        </map>
+        <img src="/exhibits/images/onlineheader.gif" width="632" height="41" border="0" usemap="#MapMap2"> 
+        <map name="MapMap2">
+         <area shape="rect" coords="278,6,389,32" href="/exhibits/collections/default.asp" alt="Online Exhibits">
+          <area shape="rect" coords="438,11,549,34" href="/index.aspx" alt="Online Exhibits">
+          <area shape="rect" coords="123,11,234,35" href="/museum/exhibits.aspx" alt="Online Exhibits">
+          <area shape="rect" coords="3,1,55,41" href="/index.aspx">
+
+        </map>
+    </strong></font></div></td>
+  </tr>
+</table>
+<br>
+<center><IMG SRC="titdury.jpg" WIDTH=469 HEIGHT=53 ALT="The 1896 Duryea"><p>
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 width=75%>
+<TR valign=center align=center>
+<td width=25%>
+<A HREF="photos.html" onMouseover="dynamic_image_on('img_1')" onMouseout="dynamic_image_off('img_1')"><IMG SRC="../deco/rphoto.gif" WIDTH=106 HEIGHT=24 BORDER=0 NAME="img_1" alt="photographs"></a></TD>
+<TD width=50% rowspan=3><A HREF="durybig.jpg"><IMG SRC="durysm2.jpg" WIDTH=284 HEIGHT=206 BORDER=0 ALT="Image of Duryea"></A></td>
+<td width=25%><A HREF="specs.html" onMouseover="dynamic_image_on('img_5')" onMouseout="dynamic_image_off('img_5')"><IMG SRC="../deco/rspecs.gif" WIDTH=116 HEIGHT=23 BORDER=0 NAME="img_5" alt="specifications"></a></TD></tr>
+<tr valign=center align=center>
+<td width=25%><A HREF="ads.html" onMouseover="dynamic_image_on('img_2')" onMouseout="dynamic_image_off('img_2')"><IMG SRC="../deco/rad.gif" WIDTH=95 HEIGHT=22 BORDER=0 NAME="img_2" alt="advertising"></a></td>
+<td width=25%></td></tr>
+<tr valign=center align=center>
+<td width=25%><A HREF="lit.html" onMouseover="dynamic_image_on('img_4')" onMouseout="dynamic_image_off('img_4')"><IMG SRC="../deco/rsales.gif" WIDTH=142 HEIGHT=23 BORDER=0 NAME="img_4" alt="sales literature"></a></TD>
+<td width=25%><A HREF="rem.html" onMouseover="dynamic_image_on('img_3')" onMouseout="dynamic_image_off('img_3')"><IMG SRC="../deco/rguest.gif" WIDTH=88 HEIGHT=23 BORDER=0 NAME="img_3" alt="guestbook"></a></TD></TR>
+<tr><td colspan=3 align=center><STRONG><FONT face=verdana,arial,helvetica size="+1">The First Production Automobile in America</font></STRONG></td></tr>
+</TABLE>
+<p>
+<table border=0 cellspacing=3 cellpadding=3 width=80%>
+<tr><td>
+<font face="verdana,arial,helvetica" size="-1">
+The American automobile industry began modestly in 1896 when the Duryea Motor Wagon Company of Springfield, Massachusetts sold 13 identical gasoline-powered vehicles.  The company would last only three years, however brothers Charles and Frank Duryea became the first Americans to attempt to build and sell automobiles at a profit.  Thus opened the commercial period of the American automobile industry.<p>
+
+
+The first Duryea automobile, one of America's first gasoline-powered cars, was built in Chicopee, Massachusetts by brothers Charles E. and J. Frank Duryea in 1893.  Charles, the designer, called on his younger brother Frank, a trained machinist, to complete the prototype as he attended to his bicycle business in Peoria, Illinois.  (The first Duryea is now in the Smithsonian Institution.)  The second Duryea was built entirely by J. Frank in 1895.  It was this vehicle, with Frank as the driver, that won <A HREF="race.html">the first motor car race in America,</a> the Chicago Times-Herald race, on Thanksgiving Day in 1895.  
+<P>
+That same year, Charles organized America's first company for the manufacture of gasoline automobiles.  In 1896, the Duryea Motor Wagon Company hand-assembled 13 identical motor vehicles.  Two of these raced in the London to Brighton Emancipation run.  The automobile driven by J. Frank Duryea was the first to cross the finish line.  
+<P>
+The company was moved to Peoria and began experimenting with three-wheeled vehicles.  The brothers began to argue and the company was dissolved in 1898.  J. Frank remained in Massachusetts and joined the Stevens Arms and Tool Company, and ultimately produced the Stevens-Duryea automobile which lasted until 1927.  
+<P>
+Charles moved to Pennsylvania and for the next several years tried many unsuccessful ventures in automobile manufacture producing primarily three- and four-wheeled three-cylinder cars with the single steering tiller control.  However, automobiles remained a very important part of his life.  With many writings on the subject, he also served as mechanical editor and consulting engineer for <I>Automobile Trade Journal</I>.  He died in Philadelphia on September 28, 1939 at the age of seventy-six. 
+<P>
+<STRONG>About our Car:</strong>  The Duryea Motor Wagon Company's assembly of 13 identical machines is considered to be the first instance of serial production of American cars.  Mechanically, the Duryea was on a par with the best cars of the time.  Of the 13 automobiles, this is the only known survivor.  </FONT>
+</td></tr></table></center>
+<br><br><p><br><br><p>
+<center>
+<table border=0 cellspacing=3 cellpadding=3 width=80%>
+<tr align=center valign=center>
+<td width=33%><A HREF="duryea.html"><IMG SRC="../deco/duryeabut.gif" WIDTH=108 HEIGHT=26 border=0 ALT="The Duryea"></A></td>
+<td width=34%><A HREF="../featured.html"><IMG SRC="../deco/featbut.gif" WIDTH=193 HEIGHT=24 BORDER=0 ALT="Featured Automobiles"></A></td>
+<td width=33%><A HREF="../intro.html"><IMG SRC="../deco/showbut.gif" WIDTH=122 HEIGHT=24 BORDER=0 ALT="The Showroom"></A></td></tr>
+
+<tr><td colspan=3 align=center>
+<font face="verdana,arial,helvetica" size="-1">Copyright &copy; 1995-1999 
+The Henry Ford ~ <a href="http://www.TheHenryFord.org">http://www.TheHenryFord.org</a></font>
+</td></tr></table></center>
+<!-- eROI TRACKING CODE //-->
+<script language="JavaScript">
+<!--
+document.write('<img src="http://coolertracks.emailroi.com/tracks2.ice?un=henryford&' + window.document.referrer + '" height=1 width=1>')
+//-->
+</script></body></HTML>
+

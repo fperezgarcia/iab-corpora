@@ -1,0 +1,1026 @@
+
+
+
+
+
+<html>
+<head>
+<meta name="google-site-verification" content="02n3A-KwOTg8Rg_Ve_RR4OgfnwjrilPWidh6jWmbXA0" />
+<meta name="verify-v1" content="tFV0SLVwvmnD8cK9LP81wL9/kMVjqtntEj9OnZdXFjA=">
+<meta name="verify-v1" content="7Q8ocqbw/xAuFcaYF+K0bAFl3Oi9tJFrWM7n9+YejWU=">
+<meta name="msvalidate.01" content="5957B059946C14B2BADB50FA85AD078C" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<META NAME="Description" CONTENT=" 	Official U.S. site for Kia Motors, featuring information on new models, local dealers, search inventory, and special offers. Find out more about the fine selection of cars, SUVs, crossovers, and minivans at Kia.com.	">
+<META NAME="KEYWORDS"    CONTENT=" 	Kia, cars, kia cars, kia motors  	">
+
+<!-- This line will allow SWFAddress to work with IE8 -->
+<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+
+<title>Kia Cars, SUVs, Crossovers, Minivans, &amp; Future Vehicles | Kia Motors</title>
+<link rel="shortcut icon" href="/us/favicon.ico">
+
+<style type="text/css" media="screen">
+    body{
+        margin:0;
+        text-align:center;
+    }
+    
+    #flashContent{
+        text-align:left;
+    }
+    
+    #getFlash{
+        height:221px;
+        background-image:url('/us/images/get_flash_bg.jpg');
+        background-repeat:no-repeat;
+    }
+    
+    div#getFlashContent{
+        position:relative;
+        left: 180px;
+        top: 43px;
+        width:664px;
+        height:90px;
+    }
+    
+    div#instructions{
+        position:absolute;
+        top:25px;
+        left:180px;
+        text-align:center;
+        width:270px;
+    }
+    
+    div#getFlashButton{
+        position:absolute;
+        top:25px;
+        left:485px;
+    }
+        
+    div#seo{
+        margin: 0px auto auto 125px;
+        width:775px;
+    }
+    
+    object#flashContent{
+        display:inline;
+    }
+    .copyr{
+        font-size: 10px;
+        color: #373737;
+        font-family: arial;
+    }
+    #_bapw-link{
+        font-size: 10px;
+        font-family: arial;
+    }
+</style>
+
+<script type="text/javaScript"> 
+<!--
+// BEGIN ATLAS TAGGING LOGIC
+// The TrackTag variable refers to the location of the
+// base action tag. In the actual implementation this 
+// action tag will point to a 1x1 pixel GIF.
+
+var TrackTag = 'http://view.atdmt.com/iaction/';
+
+function GetActionTag(URL){ 
+  document.action_tag.src = TrackTag + URL;
+
+// The URL passed from the SWF will be appended to TrackTag.
+// The image will be loaded into the img src tags below the 
+// Flash ad's OBJECT tag.
+// END ATLAS TAGGING LOGIC
+}
+// open cao chat window
+function openCAOChat(arg)
+{
+    var url = "http://kia.contactatonce.com/caoclientcontainer.aspx?"
+        +"MerchantId="+arg["merchantId"]
+        +"&ProviderId="+arg["providerId"]
+        +"&PlacementId="+arg["placementId"]
+        +"&Language="+arg["Language"]
+    
+    if(arg.modelSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+            +"&VIN="+arg["stockNumber"]
+        ;
+    }else if(arg.vehicleSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+        ;
+    }
+    
+    window.open(url,'','resizable=yes,toolbar=no,menubar=no,location=no,scrollbars=no,status=no,height=380,width=600');
+}
+var popInLoaded = 0;
+
+function openCAOPopin(arg){
+    CleanupPopin();
+    
+    var url = "http://kia.contactatonce.com/PopInGenerator.aspx?"
+        +"MerchantId="+arg["merchantId"]
+        +"&ProviderId="+arg["providerId"]
+        +"&PlacementId="+arg["placementId"]
+        +"&Language="+arg["Language"]
+    
+    if(arg.modelSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+            +"&VIN="+arg["stockNumber"]
+        ;
+    }else if(arg.vehicleSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+        ;
+    }
+    
+    var head= document.getElementsByTagName('head')[0];
+    var script= document.createElement('script');
+    script.type= 'text/javascript';
+
+    script.src= url;
+    head.appendChild(script);
+    
+    script.onreadystatechange= function ()
+    {
+        if ((this.readyState == 'complete') || (this.readyState == 'loaded'))
+        {
+            if (popInLoaded == 0)
+            {
+                popInLoaded = 1;
+                popIn();
+            }
+        }
+    };
+    
+    script.onload= function()
+    {
+        if (popInLoaded == 0)
+        {
+            popInLoaded = 1;
+            popIn();
+        }
+    };
+    
+    popInLoaded = 0;
+}
+
+// BEGIN COMMON JAVASCRIPT FUNCTIONS
+function launchWin(winurl,winname,winfeatures)
+{
+var newwin;
+        //This launches a new window and then
+        //focuses it if window.focus() is supported.
+        newwin = window.open(winurl,winname,winfeatures);
+        
+}
+
+function disconnectAll()
+{
+    document.getElementById("flashContent").disconnectAll();
+}
+
+// ADDED 2010-03-24: This function exposes a common way for Flash
+// to add third-party pixel trackers.  It requires a URL to the
+// third-party tracker.  It loads the tracker in an iframe.
+// MODIFIED 2010-08-02: Added a cachebust flag which appends a 
+// random number to the end of the URL to thwart aggressive browser
+// caches.  Defaults to false.
+function addPixel(url, cachebust) 
+{
+
+    if (cachebust) {
+        url = url + '&cachebuster=' + Math.floor(Math.random()*10000000000000);
+    }
+
+
+    if (document.location.protocol != 'https:') {
+
+        var el = document.createElement("iframe");
+        //el.setAttribute('id', 'ifrm');
+        document.getElementById("pixelContent").appendChild(el);
+//        document.body.appendChild(el);
+        el.setAttribute('src', url);
+        el.setAttribute('width', 1);
+        el.setAttribute('height', 1);
+
+    }
+
+}
+
+// ADDED 2013-04-19: marin tagging
+var _mTrack;
+function marineTracking(convTypeId) 
+{
+    action = new Image();
+    rnd = Math.random()*10000000000000000;
+    proto = (' https:' == document.location.protocol ? 'https://' : 'http://');
+	var mClientId = '7081ht12023';
+	action.src = proto + 'tracker.marinsm.com/tp?act=2&cid=' + mClientId + '&trans=UTM:I||' + convTypeId + '||||&rnd=' + rnd;
+}
+
+// END COMMON JAVASCRIPT FUNCTIONS
+
+-->
+</script>
+
+<script type="text/javascript" src="/us/js/swfobject.js"></script>
+<script type="text/javascript" src="/us/js/swfaddress.js"></script>
+<script type="text/javascript" src="/us/js/swfmacmousewheel2.js"></script>
+<script type="text/javascript" src="http://kia.contactatonce.com/scripts/popin.js"></script>   
+<script type="text/javascript" src="http://kia.contactatonce.com/scripts/popinajax.js"></script>
+<script type="text/javascript" src="/us/js/adutils.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var flashVars = {};
+    // get any query strings and put them into the flashvars
+    var jsPageName = "";
+    var jsModel    = "";
+    if(jsPageName && jsPageName.length > 0 && jsPageName != "null")                flashVars.page = jsPageName;
+    if(jsModel && jsModel.length > 0 && jsModel != "null" && jsModel != "none")    flashVars.model = jsModel;
+
+    // add flashvars
+    flashVars.config = "/us/xml/config.xml";
+    flashVars.contentroot = "/us/";
+    flashVars.referer = '';  
+    flashVars.timestamp = '1377648096571';
+
+    // add params
+    var params = {};
+    params.allowScriptAccess = "always";
+    params.allowFullScreen = "true";
+    params.wmode = "opaque";
+    params.SeamlessTabbing = "false"; //added for the IE8 tab issue.
+    
+    // add attributes
+    var attributes = {};
+    attributes.id = "flashContent";
+    attributes.name = "flashContent";
+    
+    function embedSWFcallback(paramaters){
+        if(!paramaters["success"]){
+            document.getElementById("flashContent").style.display = "none"; 
+            window.location = "/us/pages/en/noflash/";
+        }
+    }
+    
+    
+    // embed the flash swf
+    swfobject.embedSWF("/us/swfs/main.swf?anticache=5", "flashContent", "1000", "600", "10.0.12", "/us/swfs/expressInstall.swf" , flashVars , params , attributes, embedSWFcallback);
+    if(swfmacmousewheel){
+        swfmacmousewheel.registerObject(attributes.id);
+    }
+    
+</script>
+
+
+</head>
+<body onunload="disconnectAll()">
+
+<div id="flashContent">
+    
+    <div id="seo"><div id="header">
+   <img src="/us/content/media/all/icons/kialogo.png"	 align="left"/>	
+   <ul id="topLinks">
+      <li><a href="/us/inventory/">Search Dealer Inventory</a></li>
+      <li><a href="#">En Espanol</a></li>
+      <li><a href="/us/dealers/">Dealer Locator</a></li>
+   </ul>
+   <br clear="all"/>	
+   <nav id="topNav">
+      <ul >
+         <li ><a href="#">Vehicles</a></li>
+         <li><strong>Crossovers / Minivan</strong></li>
+         <li>
+            <a href="/us/sorento/">Sorento</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/sorento/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/sorento.png" alt="/us/Sorento Limited shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">SORENTO</strong><br/><em class="byline">It has an answer for everything.™</em><br/><strong class="price"> Starting at: $24,100*</strong><br/><br/><span class="mpg">20 City MPG | 26 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>20 city / 26 highway for LX FWD. 19 city / 24 highway for LX AWD. 18 city / 25 highway for LX / EX / SX / LIMITED FWD. 18 city / 24 highway for LX / EX / SX / LIMITED AWD. 2013 EPA estimates. Actual mileage will very with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>SORENTO LX FWD</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/sorento/">Gallery</a><br/>	<a href="/us/sorento/features/">Features & Options</a><br/>	<a href="/us/sorento/offers/">Special Offers</a><br/>	<a href="/us/sorento/build/">Build Sorento & Payment Estimator</a><br/>	<a href="/us/sorento/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/sportage/">Sportage</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/sportage/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/sportage.png" alt="/us/Sportage SX shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">SPORTAGE</strong><br/><em class="byline">Designed for the next level.</em><br/><strong class="price"> Starting at: $19,000*</strong><br/><br/><span class="mpg">21 City MPG | 30 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>20 city / 27 highway for Base FWD. 21 city / 30 highway for LX / EX FWD. 20 city / 27 highway for LX / EX AWD. 21 city / 28 highway for SX FWD. 20 city / 25 highway for SX AWD. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>SPORTAGE LX FWD</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/sportage/">Gallery</a><br/>	<a href="/us/sportage/features/">Features & Options</a><br/>	<a href="/us/sportage/offers/">Special Offers</a><br/>	<a href="/us/sportage/build/">Build Sportage & Payment Estimator</a><br/>	<a href="/us/sportage/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/sedona/">Sedona</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/sedona/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/sedona.png" alt="/us/Sedona EX shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">SEDONA</strong><br/><em class="byline">A smarter way to take on the world.</em><br/><strong class="price"> Starting at: $24,900*</strong><br/><br/><span class="mpg">18 City MPG | 25 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>2012 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td></td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/sedona/">Gallery</a><br/>	<a href="/us/sedona/features/">Features & Options</a><br/>	<a href="/us/sedona/offers/">Special Offers</a><br/>	<a href="/us/sedona/build/">Build Sedona & Payment Estimator</a><br/>	<a href="/us/sedona/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/optima/">Optima</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/optima/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/optima.png" alt="/us/Optima SX with Chrome Limited package shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">OPTIMA</strong><br/><em class="byline">Not your average midsize sedan.</em><br/><strong class="price"> Starting at: $21,350*</strong><br/><br/><span class="mpg">24 City MPG | 35 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>24 city / 35 highway for LX and EX A/T. 22 city / 34 highway for SX and SXL. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>OPTIMA LX A/T</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/optima/">Gallery</a><br/>	<a href="/us/optima/features/">Features & Options</a><br/>	<a href="/us/optima/offers/">Special Offers</a><br/>	<a href="/us/optima/build/">Build Optima & Payment Estimator</a><br/>	<a href="/us/optima/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/optima-hybrid/">Optima Hybrid</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/optima-hybrid/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/optima_hybrid.png" alt="/us/Optima Hybrid shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">OPTIMA HYBRID</strong><br/><em class="byline">Not your ordinary hybrid midsize sedan.</em><br/><strong class="price"> Starting at: $25,700*</strong><br/><br/><span class="mpg">34 City MPG | 39 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>2012 EPA fuel economy estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td></td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/optima-hybrid/">Gallery</a><br/>	<a href="/us/optima-hybrid/features/">Features & Options</a><br/>	<a href="/us/optima-hybrid/offers/">Special Offers</a><br/>	<a href="/us/optima-hybrid/build/">Build Optima Hybrid & Payment Estimator</a><br/>	<a href="/us/optima-hybrid/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/forte/">Forte</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/forte/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/forte.png" alt="/us/Forte SX shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">FORTE</strong><br/><em class="byline">The first of its kind.</em><br/><strong class="price"> Starting at: $15,400*</strong><br/><br/><span class="mpg">27 City MPG | 37 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>25 city / 34 highway for LX 2.0L M/T. 26 city / 36 highway for LX / EX 2.0L A/T. 22 city / 32 highway for SX 2.4L. 27 city / 37 highway for EX 2.0L w/ Fuel Economy Package. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>FORTE EX 2.0L A/T</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/forte/">Gallery</a><br/>	<a href="/us/forte/features/">Features & Options</a><br/>	<a href="/us/forte/offers/">Special Offers</a><br/>	<a href="/us/forte/build/">Build Forte & Payment Estimator</a><br/>	<a href="/us/forte/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/forte-5-door/">Forte 5-door</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/forte-5-door/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/forte_5_door.png" alt="/us/Forte 5-door SX shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">FORTE 5-DOOR</strong><br/><em class="byline">Where excitement meets versatility.</em><br/><strong class="price"> Starting at: $18,300*</strong><br/><br/><span class="mpg">26 City MPG | 36 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>26 city / 36 highway for EX 2.0L. 23 city / 32 highway for SX 2.4L. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>FORTE 5-DOOR EX 2.0L</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/forte-5-door/">Gallery</a><br/>	<a href="/us/forte-5-door/features/">Features & Options</a><br/>	<a href="/us/forte-5-door/offers/">Special Offers</a><br/>	<a href="/us/forte-5-door/build/">Build Forte 5-door & Payment Estimator</a><br/>	<a href="/us/forte-5-door/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/forte-koup/">Forte Koup</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/forte-koup/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/forte_koup.png" alt="/us/Forte Koup SX shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">FORTE KOUP</strong><br/><em class="byline">One hot ride.</em><br/><strong class="price"> Starting at: $17,400*</strong><br/><br/><span class="mpg">25 City MPG | 34 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>24 city / 33 highway for EX 2.0L M/T. 25 city / 34 highway for EX 2.0L A/T. 22 city / 32 highway for SX 2.4L M/T. 23 city / 31 highway for SX 2.4L A/T. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>FORTE KOUP EX 2.0L A/T</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/forte-koup/">Gallery</a><br/>	<a href="/us/forte-koup/features/">Features & Options</a><br/>	<a href="/us/forte-koup/offers/">Special Offers</a><br/>	<a href="/us/forte-koup/build/">Build Forte Koup & Payment Estimator</a><br/>	<a href="/us/forte-koup/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/rio/">Rio</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/rio/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/rio.png" alt="/us/Rio SX with Premium Package shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">RIO</strong><br/><em class="byline">FUNctional™</em><br/><strong class="price"> Starting at: $13,600*</strong><br/><br/><span class="mpg">28 City MPG | 36 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>29 city / 37 highway for LX M/T. 28 city / 36 highway for LX A/T / EX A/T / SX A/T. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>RIO LX A/T.</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/rio/">Gallery</a><br/>	<a href="/us/rio/features/">Features & Options</a><br/>	<a href="/us/rio/offers/">Special Offers</a><br/>	<a href="/us/rio/build/">Build Rio & Payment Estimator</a><br/>	<a href="/us/rio/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/rio-5-door/">Rio 5-door</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/rio-5-door/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/rio_5_door.png" alt="/us/Rio 5-door SX shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">RIO 5-DOOR</strong><br/><em class="byline">FUNctional™</em><br/><strong class="price"> Starting at: $13,800*</strong><br/><br/><span class="mpg">28 City MPG | 36 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>29 city / 37 highway for LX M/T. 28 city / 36 highway for LX A/T / EX A/T / SX A/T. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td></td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/rio-5-door/">Gallery</a><br/>	<a href="/us/rio-5-door/features/">Features & Options</a><br/>	<a href="/us/rio-5-door/offers/">Special Offers</a><br/>	<a href="/us/rio-5-door/build/">Build Rio 5-door & Payment Estimator</a><br/>	<a href="/us/rio-5-door/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/soul/">Soul</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/soul/" style="float: right;"><img src="/us/content/media/all/vehicles/images/explore/soul.png" alt="/us/Soul <i>!</i> shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">SOUL</strong><br/><em class="byline">A new way to roll.®</em><br/><strong class="price"> Starting at: $14,400*</strong><br/><br/><span class="mpg">25 City MPG | 30 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>25 city / 30 highway for Base 1.6L. 23 city / 28 highway for + / ! A/T 2.0L. 24 city / 29 highway for + M/T 2.0L. 2013 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>SOUL Base 1.6L</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/soul/">Gallery</a><br/>	<a href="/us/soul/features/">Features & Options</a><br/>	<a href="/us/soul/offers/">Special Offers</a><br/>	<a href="/us/soul/build/">Build Soul & Payment Estimator</a><br/>	<a href="/us/soul/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="/us/cadenza/">Cadenza</a>
+            <div class="navInfo" style="display: none; top: -26px; ">
+               <a href="/us/cadenza/" style="float: right;"><img src="/us/content/media/all/vehicles/cadenza/colors/360s/zoom/181819_base_855x391_01.png" alt="/us/Cadenza Premium shown."/></a>
+               <div style="width: 180px; float: left; padding: 10px; overflow: hidden;">
+                  <strong class="vehtitle">CADENZA</strong><br/><em class="byline">Impossible to Ignore</em><br/><strong class="price"> Starting at: $35,100*</strong><br/><br/><span class="mpg">19 City MPG | 28 HWY MPG</span><br clear="all"/><br/>
+                  <table>
+                     <tr>
+                        <td>19 city / 28 highway for CADENZA 3.3L A/T. 2014 EPA estimates. Actual mileage will vary with options, driving conditions, driving habits, and your vehicle's condition.</td>
+                        <td>Cadenza Premium shown.</td>
+                        <td>Actual Mileage Will Vary.</td>
+                     </tr>
+                  </table>
+               </div>
+               <br clear="all"/><br/><span class="links">	<a href="/us/cadenza/">Gallery</a><br/>	<a href="/us/cadenza/features/">Features & Options</a><br/>	<a href="/us/cadenza/offers/">Special Offers</a><br/>	<a href="/us/cadenza/build/">Build Cadenza & Payment Estimator</a><br/>	<a href="/us/cadenza/accessories/">Accessories</a><br/></span>
+            </div>
+         </li>
+         <li>
+            <a href="#">Shopping Tools</a>	
+            <ul>
+               <li><a href="/us/build/">Build and Price</a></li>
+               <li><a href="/us/quote/">Quick Quote</a></li>
+               <li><a href="https://www.kiamotorsfinance.com/">Kia Motors Finance</a></li>
+               <li><a href="/us/pages/en/kbb/">Trade-in Appraisal</a></li>
+               <li><a href="/us/compare/">Compare Vehicles</a></li>
+               <li><a href="/us/accessories-landing/">Accessories</a></li>
+               <li><a href="/us/videos-landing/">Videos</a></li>
+               <li><a href="/us/inventory/">Inventory</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">Future Vehicles</a>	
+            <ul>
+               <li><a href="/us/upcoming/">Upcoming Vehicles</a></li>
+               <li><a href="/us/future/">Concept Vehicles</a></li>
+            </ul>
+         </li>
+         <li><a href="/us/alloffers/">Special Offers</a></li>
+         <li ><a href="/us/owners/">Owners</a></li>
+         <li class="last"><a href="/us/explore-kia-usa/">Explore Kia USA</a></li>
+      </ul>
+   </nav>
+</div>
+<br clear="all"/>	
+<div id="sidebar">
+   <h2>Shopping Tools</h2>
+   <ul>
+      <li>
+         <h3><a href="/us/build/">Build Your KIA & Payment Estimator</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/compare/">Compare Vehicles</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/quote/">Quick Quote</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/inventory/">Search Dealer Inventory</a></h3>
+      </li>
+      <li>
+         <h3><a href="https://www.kiamotorsfinance.com/">Kia Motors Finance</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/brochure">Brochure Request</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/dealers/">Dealer Locator</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/videos-landing/">Videos</a></h3>
+      </li>
+      <li>
+         <h3><a href="/us/accessories-landing/">Accessories</a></h3>
+      </li>
+   </ul>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2014 Sorento </h1>
+      <h2>It has an answer for everything.™</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>290-HP V6</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/voicecommand.png"	 align="right"/></td>
+            <td><a href="#/uvo/">Available UVO eServices Infotainment system <br>w/ Voice-command Navigation</br></a></td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/panosunroof.png"	 align="right"/></td>
+            <td>Available Panoramic sunroof</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/sorento.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Sorento Limited shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Sorento Limited shown.</td>
+            <td><br>Included in the LX & EX V6 Touring Package. Standard on SX and Limited.<br>Included in the EX V6 Touring Package. Standard on SX and Limited.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Sportage </h1>
+      <h2>Designed for the next level.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 260-HP 2.0L GDI Turbo</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/topsafety.png"	 align="right"/></td>
+            <td><a href="#/sportage/awards/recognition">2012 IIHS Top Safety Pick for 2013 Sportage</a></td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/value.png"	 align="right"/></td>
+            <td><a href="#">Great lease offer available</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/sportage.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Sportage SX shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Sportage SX shown.</td>
+            <td><br>Class-leading claim based on comparison of 2012 and available 2013 compact crossovers with available engines as of June 2012.<br>Winners of the 2012 Top Safety Pick must receive the highest rating of "Good" in all 4 of our crashworthiness tests (frontal offset, side, rear, and roof strength). Winners must also have electronic stability control.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2012 Sedona </h1>
+      <h2>A smarter way to take on the world.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Standard 271-HP V6</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/3row.png"	 align="right"/></td>
+            <td>7-passenger seating</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/sedona.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Sedona EX shown.</td>
+         </tr>
+      </table>
+      Quantities are limited. 
+      Check with your local Kia dealer.
+      Actual tail lights will vary.
+      <table>
+         <tr>
+            <td>Sedona EX shown.</td>
+            <td></td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Optima </h1>
+      <h2>Not your average midsize sedan.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/panosunroof.png"	 align="right"/></td>
+            <td>Available Panoramic sunroof</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/advtechnology.png"	 align="right"/></td>
+            <td>Standard advanced technology</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/topsafety.png"	 align="right"/></td>
+            <td><a href="#/optima/awards/recognition">2012 IIHS Top Safety Pick for 2013 Optima</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/optima.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Optima SX with Chrome Limited package shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Optima SX with Chrome Limited package shown.</td>
+            <td><br>Insurance Institute for Highway Safety. Winners of the 2012 Top Safety Pick must receive the highest rating of "Good" in all 4 of our crashworthiness tests (frontal offset, side, rear, and roof strength). Winners must also have electronic stability control.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2012 Optima Hybrid </h1>
+      <h2>Not your ordinary hybrid midsize sedan.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 206 total HP</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/topsafety.png"	 align="right"/></td>
+            <td><a href="#/optima-hybrid/awards/recognition">2012 IIHS Top Safety Pick</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/optima_hybrid.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Optima Hybrid shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Optima Hybrid shown.</td>
+            <td><br>Class-leading claim based on comparison of 2012 hybrid midsize sedans as of March 2012.<br>Winners of the 2012 Top Safety Pick must receive the highest rating of "Good" in all 4 of our crashworthiness tests (frontal offset, side, rear, and roof strength). Winners must also have electronic stability control.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Forte </h1>
+      <h2>The first of its kind.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 173 HP</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/topsafety.png"	 align="right"/></td>
+            <td><a href="#/forte/awards/recognition">2012 IIHS Top Safety Pick for the 2013 Forte Sedan</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/forte.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Forte SX shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Forte SX shown.</td>
+            <td><br>Class-leading claim based on comparison of available 2012 compact sedans as of June 2012. Forte 2.4L SX with 173 HP.<br>Winners of the 2012 Top Safety Pick must receive the highest rating of "Good" in all 4 of our crashworthiness tests (frontal offset, side, rear, and roof strength). Winners must also have electronic stability control.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Forte 5-door </h1>
+      <h2>Where excitement meets versatility.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 173 HP</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/intvolume.png"	 align="right"/></td>
+            <td>Class-leading cabin space</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/forte_5_door.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Forte 5-door SX shown.</td>
+         </tr>
+      </table>
+      Quantities are limited. 
+      Check with your local Kia dealer.
+      <table>
+         <tr>
+            <td>Forte 5-door SX shown.</td>
+            <td><br>Class-leading claim based on comparison of 2012 and available 2013 compact 5-doors as of June 2012.<br>Class-leading claim based on comparison of 2012 and available 2013 compact (5-doors) as of June 2012.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Forte Koup </h1>
+      <h2>One hot ride.</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/advtechnology.png"	 align="right"/></td>
+            <td>Standard advanced technology</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 173 HP</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/forte_koup.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Forte Koup SX shown.</td>
+         </tr>
+      </table>
+      Quantities are limited. 
+      Check with your local Kia dealer.
+      <table>
+         <tr>
+            <td>Forte Koup SX shown.</td>
+            <td><br>Class-leading claim based on comparison of 2012 and available 2013 compact coupes as of June 2012.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Rio </h1>
+      <h2>FUNctional™</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 138-HP GDI engine</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/value.png"	 align="right"/></td>
+            <td><a href="#">Great lease offer available</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/rio.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Rio SX with Premium Package shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Rio SX with Premium Package shown.</td>
+            <td><br>Class-leading claim based on comparison of available 2012 sedans as of February 2012.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Rio 5-door </h1>
+      <h2>FUNctional™</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 138-HP GDI engine</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/value.png"	 align="right"/></td>
+            <td><a href="#">Special APR for qualified customer</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/rio_5_door.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Rio 5-door SX shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Rio 5-door SX shown.</td>
+            <td><br>Class-leading claim based on comparison of available 2012 sedans as of February 2012.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+   <div class="sliderkit-news">
+      <h1>The 2013 Soul </h1>
+      <h2>A new way to roll.®</h2>
+      <table>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/horsepower.png"	 align="right"/></td>
+            <td>Class-leading 164-HP engine</td>
+         </tr>
+         <tr>
+            <td>	<img src="/us/content/media/all/icons/highlights/whitemedium/topsafety.png"	 align="right"/></td>
+            <td><a href="#/soul/awards/recognition">2012 IIHS Top Safety Pick for 2013 Soul</a></td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/images/home/soul.png" width="1000" height="500" /></td>
+         </tr>
+         <tr>
+            <td>Soul <i>!</i> shown.</td>
+         </tr>
+      </table>
+      <table>
+         <tr>
+            <td>Soul <i>!</i> shown.</td>
+            <td><br>Class-leading claim based on comparison of 2012 and available 2013 compact wagons as of June 2012. 2.0L MPI engine with 164 HP.<br>Insurance Institute for Highway Safety. Winners of the 2012 Top Safety Pick must receive the highest rating of "Good" in all 4 of our crashworthiness tests (frontal offset, side, rear, and roof strength). Winners must also have electronic stability control.</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<div class="sliderkit-panel">
+  <div class="sliderkit-news">
+      <h1>The 2014 Cadenza</h1>
+    <h2>Impossible to Ignore.</h2>
+    <table>
+         <tr>
+            <td><img src="/us/content/media/all/vehicles/cadenza/colors/360s/zoom/181819_base_855x391_01.png" width="855" height="391" /></td>
+        </tr>
+         <tr>
+            <td>Cadenza Premium shown.</td>
+         </tr>
+     </table>
+   </div>
+</div>
+<div class="sliderkit-nav">
+   <div class="sliderkit-nav-clip">
+      <ul>
+         <li><a href="/us/sorento"></a></li>
+         <li><a href="/us/sportage"></a></li>
+         <li><a href="/us/sedona"></a></li>
+         <li><a href="/us/forte"></a></li>
+         <li><a href="/us/forte-5-door"></a></li>
+         <li><a href="/us/forte-koup"></a></li>
+         <li><a href="/us/optima">></a></li>
+         <li><a href="/us/optima-hybrid"></a></li>
+         <li><a href="/us/rio"></a></li>
+         <li><a href="/us/rio-5-door"></a></li>
+         <li><a href="/us/soul"></a></li>
+         <li><a href="/us/cadenza"></a></li>
+      </ul>
+   </div>
+</div>
+<div><br clear="all"/></div>
+<div id="footer">
+   <ul>
+      <li><a href="/us/">Home</a></li>
+      <li><a href="/us/sitemap">Sitemap</a></li>
+      <li><a href="/us/about">About Kia</a></li>
+      <li><a href="http://ksupport.kiausa.com/ConsumerAffairs/index.html" target="_blank">Contact Kia</a></li>
+      <li><a href="/us/warranty">Warranty</a></li>
+      <li><a href="http://kia-cpo.com/">Certified Pre-Owned</a></li>
+      <li><a href="/us/motorsports" target="_blank">Kia Motorsports</a></li>
+      <li><a href="/us/privacy">Privacy / Legal</a></li>
+      <li><a href="/disclaimer">* MSRP</a></li>
+   </ul>
+   <br clear="all"/>&copy; 2012 Kia Motors America, Inc.
+</div></div>
+    <div id="getFlash">
+        <div id="getFlashContent">
+            <div id="instructions"><b>Flash is required to view KIA.com</b><br /><a href="http://www.adobe.com/go/getflashplayer" target="_blank" >Install the flash player here</a></div>
+            <div id="getFlashButton"><a href="http://www.adobe.com/go/getflashplayer" target="_blank" border="0"><img border="0" src="http://www.adobe.com/macromedia/style_guide/images/160x41_Get_Flash_Player.jpg" /></a></div>
+        </div>
+    </div>
+</div>
+<br>
+<!--
+  Evidon tag
+  cid: 2426
+  pid: 826
+-->
+<a id="_bapw-link" href="#" target="_blank" style="text-decoration:none !important"><img id="_bapw-icon" style="border:0 !important;display:inline !important;vertical-align:middle !important;padding-right:5px !important;"/><span style="vertical-align:middle !important">AdChoices</span></a><script>/*<![CDATA[*/(function(){var k=826,m=2426,n=1,b=false,l=document,p=l.getElementById("_bapw-link"),h=(l.location.protocol=="https:"),i=(h?"https":"http")+"://",g=i+"c.betrad.com/pub/",r=window._bap_p_overrides,e=0,a=0,f=560,q=720,o=h||(r&&r.hasOwnProperty(k)&&r[k].new_window);function c(s){var d=new Image();d.src=i+"l.betrad.com/pub/p.gif?pid="+k+"&ocid="+m+"&i"+s+"=1&r="+Math.random()}function j(){if(typeof(window.innerWidth)=="number"&&typeof(window.innerHeight)=="number"){e=window.innerWidth;a=window.innerHeight}else{if(document.documentElement&&document.documentElement.clientWidth&&document.documentElement.clientHeight){e=document.documentElement.clientWidth;a=document.documentElement.clientHeight}else{if(document.body&&document.body.clientWidth&&document.body.clientHeight){e=document.body.clientWidth;a=document.body.clientHeight}}}return(a<=f)||(e<=q)}l.getElementById("_bapw-icon").src=g+"icon1.png";p.onmouseover=function(){p.href="http://info.evidon.com/pub_info/"+k+"?v=1&nt="+n+"&nw="+((o||j())?"true":"false")};p.onclick=function(){if(o||j()){c("c");return true}function d(u,x){var v=l.getElementsByTagName("head")[0]||l.documentElement,t=b,s=l.createElement("script");function w(){s.onload=s.onreadystatechange=null;v.removeChild(s);x()}s.src=u;s.onreadystatechange=function(){if(!t&&(this.readyState=="loaded"||this.readyState=="complete")){t=true;w()}};s.onload=w;v.insertBefore(s,v.firstChild)}this.onclick="return "+b;d(i+"ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js",function(){d(g+"pub2.js",function(){BAPW.i(p,{pid:k,ocid:m})})});return b};c("i")}());/*]]>*/</script>
+<br>
+<span class="copyr">&copy;2013 Kia Motors America, Inc.</span>
+
+<!-- ATLAS TAGGING LOGIC -->
+<br>
+<img src="/us/images/placeholders/transparent.gif" name="action_tag" id="action_tag" height="1" width="1">
+<!-- END ATLAS TAGGING LOGIC -->
+
+<!-- NetMining Library -->
+<script type="text/javascript"> 
+    var nm_proto = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+    document.write(unescape("%3Cscript src='" + nm_proto + "com-kia.netmng.com/' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- End NetMining Library -->
+
+<!-- ADDED 2010-03-24: Layer for content generated by addPixel -->
+<!-- NOTE: Height corresponds to size of master flash movie -->
+<div id="pixelContent" style="position: absolute; top: 0px; left: 0px; width: 35px; height: 600px; overflow: hidden; z-index: -1000; display: none; background-color: #000000"></div>
+
+
+<!-- ADDED 2009-09-04: Cobalt Tagging -->
+<!-- Tag Moved to just before the end of Body tag per Cobalt. CA-808-->
+<script type="text/javascript"> 
+    var scr=document.createElement('SCRIPT'); 
+    scr.type='text/javascript'; 
+    scr.src="http://dt.admission.net/retargeting/displaytracker.js?webid=oem-kia&make=Kia&sitetype=lslp"; 
+    document.getElementsByTagName('HEAD')[0].appendChild(scr); 
+</script>
+<!-- End Cobalt Tagging -->
+
+</body>
+</html>

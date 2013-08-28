@@ -1,0 +1,624 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="ctl00_head1">
+    <script language="javascript">
+    function initAjaxProgress()
+    {
+        var pageHeight = (document.documentElement && document.documentElement.scrollHeight) ? document.documentElement.scrollHeight : (document.body.scrollHeight > document.body.offsetHeight) ? document.body.scrollHeight : document.body.offsetHeight;
+        //SET HEIGHT OF BACKGROUND
+        var bg = document.getElementById('ajaxProgressBg');
+        bg.style.height = (pageHeight + 1000) + 'px';
+        //POSITION THE PROGRESS INDICATOR ON INITIAL LOAD
+        reposAjaxProgress();
+        //REPOSITION THE PROGRESS INDICATOR ON SCROLL
+        window.onscroll = reposAjaxProgress;
+    }
+
+    function reposAjaxProgress()
+    {
+        var div = document.getElementById('ajaxProgress');
+        var st = document.body.scrollTop;
+        if (st == 0) {
+            if (window.pageYOffset) st = window.pageYOffset;
+            else st = (document.body.parentElement) ? document.body.parentElement.scrollTop : 0;
+        }
+        div.style.top = 150 + st + "px";
+    }
+    </script>
+<link href="App_Themes/Glass_SilverAge/ComponentArt.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Glass_SilverAge/Modifications/ComponentArt.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Glass_SilverAge/Modifications/style.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Glass_SilverAge/print.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Glass_SilverAge/rss-style.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Glass_SilverAge/style.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Glass_SilverAge/webparts.css" type="text/css" rel="stylesheet" /><meta name="robots" content="NOODP">
+
+<link rel="stylesheet" type="text/css" href="/Assets/css/jquery.fancybox.css?v=2.1.0" media="screen" />
+<link rel="stylesheet" type="text/css" href="/Assets/css/jquery.fancybox-buttons.css?v=1.0.3" />
+<script type="text/javascript" src="/Assets/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/Assets/js/jquery.fancybox.js?v=2.1.0"></script>
+<script type="text/javascript" src="/Assets/js/jquery.fancybox-buttons.js?v=1.0.3"></script>
+<script type="text/javascript" src="/Assets/js/jquery.fancybox-media.js?v=1.0.0"></script><title>
+	car lift, motorcycle lift, auto lifts, automotive lift, garage lift, automotive lifts, 2 post lift, 4 post lift
+</title></head>
+<body onLoad="initAjaxProgress();">
+    <form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__WPPS" id="__WPPS" value="s" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE4NTIxNDk0Mw9kFgJmD2QWAgIDD2QWAgIFD2QWAgUISG9tZVBhZ2UPZBYIAgMPZBYCZg8PFgQeCEltYWdlVXJsBTN+L0FwcF9UaGVtZXMvR2xhc3NfU2lsdmVyQWdlL2ltYWdlcy9oZWFkZXJfbGl2ZS5qcGceB1Rvb2xUaXAFHU9ubGluZSBoZWxwIGZyb20gYSBzcGVjaWFsaXN0FgQeC29ubW91c2VvdmVyBVx0aGlzLnNyYz0naHR0cDovL3d3dy5kaXJlY3RsaWZ0LmNvbS9BcHBfVGhlbWVzL0dsYXNzX1NpbHZlckFnZS9pbWFnZXMvaGVhZGVyX2xpdmVfaG92ZXIuZ2lmJx4Kb25tb3VzZW91dAVWdGhpcy5zcmM9J2h0dHA6Ly93d3cuZGlyZWN0bGlmdC5jb20vQXBwX1RoZW1lcy9HbGFzc19TaWx2ZXJBZ2UvaW1hZ2VzL2hlYWRlcl9saXZlLmpwZydkAg8PZBYCZg8PFgIeB1Zpc2libGVoZBYCAgEPZBYCAgEPFgIeBFRleHQFBVBhcnRzZAITD2QWDAIBD2QWAmYPDxYCHwUFEUNhciBTaG93IFNjaGVkdWxlZGQCAw8PFgQfBQUNU2hvdyBTY2hlZHVsZR8EaGRkAgUPDxYCHwRoZGQCCQ8PFgQfBQUVRGlyZWN0IExpZnQgU2hvdyBGZWVkHwRoZGQCCw8WAh4LXyFJdGVtQ291bnQCCBYQZg9kFgQCAQ8PFgIeC05hdmlnYXRlVXJsBR5odHRwOi8vd3d3LnJvdXRlNjZjYXJjbHViLmNvbS9kFgJmDxUBDVJvdXRlIDY2IERheXNkAgMPFgIeBWNsYXNzBRlSc3NJdGVtRGVzY3JpcHRpb25Ob0ltYWdlFgRmDxUBVzxwPkxvY2F0aW9uOiBGbGFnc3RhZmYsIEFaPC9wPjxwPlN0YXJ0IERhdGU6IDkvNi8yMDEzPGJyIC8+RW5kIERhdGU6ICZuYnNwOzkvOC8yMDEzPC9wPmQCAQ8WAh8EaBYIAgEPDxYCHwRoZGQCAw8PFgQfBQUIOS82LzIwMTMfBGhkZAIFDw8WAh8EaGRkAgcPDxYEHwVlHwRoZGQCAQ9kFgQCAQ8PFgIfBwUraHR0cDovL3d3dy5uc3JhLXVzYS5jb20vRXZlbnRzL2RlZmF1bHQuYXNwI2QWAmYPFQEfTlNSQSBTdHJlZXQgUm9kIE5hdGlvbmFscyBOb3J0aGQCAw8WAh8IBRlSc3NJdGVtRGVzY3JpcHRpb25Ob0ltYWdlFgRmDxUBXDxwPkxvY2F0aW9uOiBLYWxhbWF6b28sIE1pY2guPC9wPjxwPlN0YXJ0IERhdGU6IDkvMTMvMjAxMzxiciAvPkVuZCBEYXRlOiAmbmJzcDs5LzE1LzIwMTM8L3A+ZAIBDxYCHwRoFggCAQ8PFgIfBGhkZAIDDw8WBB8FBQk5LzEzLzIwMTMfBGhkZAIFDw8WAh8EaGRkAgcPDxYEHwVlHwRoZGQCAg9kFgQCAQ8PFgIfBwUiaHR0cDovL3d3dy5jaGFybG90dGUtYXV0b2ZhaXIuY29tL2QWAmYPFQEcQ2hhcmxvdHRlIEF1dG9GYWlyIEZhbGwgTWVldGQCAw8WAh8IBRlSc3NJdGVtRGVzY3JpcHRpb25Ob0ltYWdlFgRmDxUBWzxwPkxvY2F0aW9uOiBDaGFybG90dGUsIE4uQy48L3A+PHA+U3RhcnQgRGF0ZTogOS8xOS8yMDEzPGJyIC8+RW5kIERhdGU6ICZuYnNwOzkvMjIvMjAxMzwvcD5kAgEPFgIfBGgWCAIBDw8WAh8EaGRkAgMPDxYEHwUFCTkvMTkvMjAxMx8EaGRkAgUPDxYCHwRoZGQCBw8PFgQfBWUfBGhkZAIDD2QWBAIBDw8WAh8HBR9odHRwOi8vd3d3LmJhcnJldHQtamFja3Nvbi5jb20vZBYCZg8VARlCYXJyZXR0LUphY2tzb24gTGFzIFZlZ2FzZAIDDxYCHwgFGVJzc0l0ZW1EZXNjcmlwdGlvbk5vSW1hZ2UWBGYPFQFVPHA+TG9jYXRpb246IExhcyBWZWdhczwvcD48cD5TdGFydCBEYXRlOiA5LzI2LzIwMTM8YnIgLz5FbmQgRGF0ZTogJm5ic3A7OS8yOC8yMDEzPC9wPmQCAQ8WAh8EaBYIAgEPDxYCHwRoZGQCAw8PFgQfBQUJOS8yNi8yMDEzHwRoZGQCBQ8PFgIfBGhkZAIHDw8WBB8FZR8EaGRkAgQPZBYEAgEPDxYCHwcFImh0dHA6Ly93d3cucHJlc2NvdHR2ZXR0ZXNldHRlLm9yZy9kFgJmDxUBKEhpc3RvcmljIFByZXNjb3R0IENvcnZldHRlIG9uIHRoZSBTcXVhcmVkAgMPFgIfCAUZUnNzSXRlbURlc2NyaXB0aW9uTm9JbWFnZRYEZg8VAVg8cD5Mb2NhdGlvbjogUHJlc2NvdHQsIEFaPC9wPjxwPlN0YXJ0IERhdGU6IDkvMjYvMjAxMzxiciAvPkVuZCBEYXRlOiAmbmJzcDs5LzI4LzIwMTM8L3A+ZAIBDxYCHwRoFggCAQ8PFgIfBGhkZAIDDw8WBB8FBQk5LzI2LzIwMTMfBGhkZAIFDw8WAh8EaGRkAgcPDxYEHwVlHwRoZGQCBQ9kFgQCAQ8PFgIfBwUfaHR0cDovL3d3dy5tYWRpc29uY2xhc3NpY3MuY29tL2QWAmYPFQEQTWFkaXNvbiBjbGFzc2ljc2QCAw8WAh8IBRlSc3NJdGVtRGVzY3JpcHRpb25Ob0ltYWdlFgRmDxUBWTxwPkxvY2F0aW9uOiBKZWZmZXJzb24sIFdJPC9wPjxwPlN0YXJ0IERhdGU6IDkvMjcvMjAxMzxiciAvPkVuZCBEYXRlOiAmbmJzcDs5LzI5LzIwMTM8L3A+ZAIBDxYCHwRoFggCAQ8PFgIfBGhkZAIDDw8WBB8FBQk5LzI3LzIwMTMfBGhkZAIFDw8WAh8EaGRkAgcPDxYEHwVlHwRoZGQCBg9kFgQCAQ8PFgIfBwUlaHR0cDovL3d3dy5zZW1hc2hvdy5jb20vdGhlLXNlbWEtc2hvd2QWAmYPFQEJU0VNQSBTaG93ZAIDDxYCHwgFGVJzc0l0ZW1EZXNjcmlwdGlvbk5vSW1hZ2UWBGYPFQFVPHA+TG9jYXRpb246IExhcyBWZWdhczwvcD48cD5TdGFydCBEYXRlOiAxMS81LzIwMTM8YnIgLz5FbmQgRGF0ZTogJm5ic3A7MTEvOC8yMDEzPC9wPmQCAQ8WAh8EaBYIAgEPDxYCHwRoZGQCAw8PFgQfBQUJMTEvNS8yMDEzHwRoZGQCBQ8PFgIfBGhkZAIHDw8WBB8FZR8EaGRkAgcPZBYEAgEPDxYCHwcFGGdvcGhlcjovL3Jzcy1uZXQuc2YubmV0L2QWAmYPFQEAZAIDDxYCHwgFGVJzc0l0ZW1EZXNjcmlwdGlvbk5vSW1hZ2UWBGYPFQEAZAIBDxYCHwRoFggCAQ8PFgIfBGhkZAIDDw8WBB8FBQgxLzEvMDAwMR8EaGRkAgUPDxYCHwRoZGQCBw8PFgQfBWUfBGhkZAITDw8WBB8FZR8EaGRkAhcPZBYCZg9kFgJmD2QWAgIBDw8WBB4IQ3NzQ2xhc3MFDFZpc2libGVQYW5lbB4EXyFTQgICZBYCAgMPDxYCHwUFHVlvdSBoYXZlIDAgaXRlbXMgaW4geW91ciBjYXJ0ZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFKGN0bDAwJHdwbSRIb21lUGFnZSRjdGwxMCRpbWdTaGlwcGluZ0luZm8FJWN0bDAwJHdwbSRIb21lUGFnZSRjdGwxMCRpbWdXaGljaExpZnQFI2N0bDAwJHdwbSRIb21lUGFnZSRjdGwxMCRpbWdTZWNQcml2BSZjdGwwMCR3cG0kSG9tZVBhZ2UkY3RsMTAkaW1nR2FyYWdlQ2FsY1Ma2vPRSxrW02KwFkWmIzKPC2h+" />
+</div>
+
+
+<script src="/WebResource.axd?d=dnuxorQCbZ163HVHWAw4TKHNFvEkGNbyBTFG7SLUjjQcCpayJHLIj4jbgnsge5VjiH0TQX7JkDr0GhQjylZVfx1fyhG6NItZGOe6Qrka5fiEkUyD0&amp;t=633698233900000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=p9aUFwU7RE9bJBAhIQln-ADexrXWJvLdFqRoJ6UpiifT6mtXeSqlsrunBLLYAUaa4LJopTuVFCskfl4TqlGLRIuVYIESDw5j_Rtz-vWnQTZUsyzfy0q_GAmbL3eixOE5XwJGurRm-5enhIaU_KiWHPeNSzE1&amp;t=633735667787955780" type="text/javascript"></script>
+<script src="js/WebKitFix.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_vQWDcTlGwlQkWjPNnQ5OjTJ8ePSCHgMMOXpGwyRVUShGPRcWlQiBflZsN1lAS3K_1znkoqX-bmiyDLTsHg4CK3wzlAZ6VIbbDGb9vfXOERfyQ_5S9Sykic2gAK_B2sceA0W5w2&amp;t=633698233900000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=q84w5ue59cxvQfw2GYRMTofKNejzwlHr9ZGAqv-c3rQqHSACW4Yeh6NC8-dIBr3Mjv-vIFVF1C6rz0xGBK2BrE_-K0yaSlgDtfWhdK59joq35UtNVFH5NiUsA2xVchoFQ5Wjmw2&amp;t=633698233900000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ynimr_n7T2Qx1AyxTgkRR6CkHuFz_uv8ranZIAraEuyKUIKdrueuwKuc4kgApM4Hbmc82XB4nbLRVEV5yweb4m-Io55jcI8epoeW6YagUOofXRTOkUqjdKyjAeBDyc7gJ7mkJw2&amp;t=633698233900000000" type="text/javascript"></script>
+    
+    <div id="ctl00_UpdateProgress1" style="display:none;">
+	
+            <div id="ajaxProgressBg"></div>
+            <div id="ajaxProgress"></div>
+        
+</div>
+    <div id="ctl00_wpm">
+
+</div>
+    <div id="ctl00_wpm_HomePage">
+	<table id="storeHeader" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="logo" width="25%">
+		        <a href="/Default.aspx"><img id="ctl00_wpm_HomePage_ctl00_Logo" src="App_Themes/Glass_SilverAge/images/logo.gif" style="border-width:0px;" /></a>
+		</td>
+		<td class="headerContent" valign="top" align="left" width="25%">
+                                                  <a href="LiveHelp/RegistrationForm.aspx?depId=0" target="_new"><img id="ctl00_wpm_HomePage_ctl01_Live" title="Online help from a specialist" onmouseover="this.src='http://www.directlift.com/App_Themes/Glass_SilverAge/images/header_live_hover.gif'" onmouseout="this.src='http://www.directlift.com/App_Themes/Glass_SilverAge/images/header_live.jpg'" src="App_Themes/Glass_SilverAge/images/header_live.jpg" style="border-width:0px;" /></a>
+                                           </td>
+                                           <td align="left" width="25%" valign="bottom">
+                                                <img onmouseover="style.cursor='hand';" onmouseout="style.cursor='default';" onclick="window.location.href='ContactUs.aspx'" src="/Assets/header_contact.jpg">
+                                           </td>
+                                           <td align="right" width="25%">
+<div class="shortcuts">
+				<!--					<a href="/Login.aspx" class="login">Login</a>
+								<a href="/Members/MyAccount.aspx" class="acct">Account</a>
+				<a href="/Members/MyWishlist.aspx" class="wishlist">Wishlist</a>-->
+				<a href="/Basket.aspx" class="basket">Cart</a>
+							</div>
+<div class="search"><div id="ctl00_wpm_HomePage_ctl02_SearchPanel">
+		
+<input name="ctl00$wpm$HomePage$ctl02$SearchPhrase" type="text" maxlength="255" id="ctl00_wpm_HomePage_ctl02_SearchPhrase" class="searchPhrase" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('ctl00$wpm$HomePage$ctl02$SearchButton').click();return false;}} else {return true}; " /><input type="submit" name="ctl00$wpm$HomePage$ctl02$SearchButton" value="Search" id="ctl00_wpm_HomePage_ctl02_SearchButton" class="searchButton" />
+
+	</div></div></td>
+                                           	</tr>
+	<tr>
+		<td class="navigation" colspan="4">
+			<div class="content" style="float:left;">
+				<a href="/Default.aspx" class="tab">Home</a>
+				<!--<a href="/Search.aspx" class="tab">Product Finder</a>	
+				<a href="/AdvancedSearch.aspx" class="tab">Advanced Search</a>-->	
+				                                                                                     <a href="/About.aspx" class="tab">About</a>
+				<a href="/ContactUs.aspx" class="tab">Contact Us</a>
+                                                                                     <a href="/Certification.aspx" class="tab">Certification</a>
+                                                                                     <a href="/Warranty.aspx" class="tab">Warranty</a>
+                                                                                     <a href="/Manuals.aspx" class="tab">Tech Manuals</a>
+                                                                                     <a href="/FAQ.aspx" class="tab">FAQ</a>
+                                                                                     <a href="/Testimonials.aspx" class="tab">Testimonials</a>
+                                                                                     <a href="/DistributorMap.aspx" class="tab">Warehouses</a>
+			</div>
+		</td>
+	</tr>
+</table>
+<div id="outerContentWrapper">
+	<div id="innerContentWrapper">
+		<table cellspacing="0" cellpadding="0" id="contentLayout">
+			<tr>
+				<td align="left" valign="top" id="leftSidebarPanel">
+					<div id="ctl00_wpm_HomePage_ctl03_MainPanel" class="section">
+		
+    <div id="ctl00_wpm_HomePage_ctl03_HeaderPanel" class="header">
+			
+	    <h2 class="header">Automotive Lifts</h2>
+    
+		</div>
+	<div id="ctl00_wpm_HomePage_ctl03_ContentPanel" class="content">
+			
+        
+                <ul class="category">
+            
+                <li><a id="ctl00_wpm_HomePage_ctl03_CategoryList_ctl01_CategoryLink" href="Two-Post-Lifts-C8.aspx">Two Post Lifts</a></li>
+            
+                <li><a id="ctl00_wpm_HomePage_ctl03_CategoryList_ctl02_CategoryLink" href="Four-Post-Lifts-C9.aspx">Four Post Lifts</a></li>
+            
+                <li><a id="ctl00_wpm_HomePage_ctl03_CategoryList_ctl03_CategoryLink" href="Midrise-Lifts-C11.aspx">Midrise Lifts</a></li>
+            
+                </ul>
+            
+    
+		</div>
+
+	</div><br/>
+<div id="ctl00_wpm_HomePage_ctl04_MainPanel" class="section">
+		
+    <div id="ctl00_wpm_HomePage_ctl04_HeaderPanel" class="header">
+			
+	    <h2 class="header">Motorcycle Lifts</h2>
+    
+		</div>
+	<div id="ctl00_wpm_HomePage_ctl04_ContentPanel" class="content">
+			
+        
+                <ul class="category">
+            
+                <li><a id="ctl00_wpm_HomePage_ctl04_CategoryList_ctl01_CategoryLink" href="MotorcycleATV-Lifts-C15.aspx">Motorcycle/ATV Lifts</a></li>
+            
+                </ul>
+            
+    
+		</div>
+
+	</div><br/>
+<div id="ctl00_wpm_HomePage_ctl05_MainPanel" class="section">
+		
+    <div id="ctl00_wpm_HomePage_ctl05_HeaderPanel" class="header">
+			
+	    <h2 class="header">Rotisserie</h2>
+    
+		</div>
+	<div id="ctl00_wpm_HomePage_ctl05_ContentPanel" class="content">
+			
+        
+                <ul class="category">
+            
+                <li><a id="ctl00_wpm_HomePage_ctl05_CategoryList_ctl01_CategoryLink" href="Vehicle-Rotisserie-C16.aspx">Vehicle Rotisserie</a></li>
+            
+                </ul>
+            
+    
+		</div>
+
+	</div><br/>
+<div id="ctl00_wpm_HomePage_ctl06_MainPanel" class="section">
+		
+    <div id="ctl00_wpm_HomePage_ctl06_HeaderPanel" class="header">
+			
+	    <h2 class="header">Accessories</h2>
+    
+		</div>
+	<div id="ctl00_wpm_HomePage_ctl06_ContentPanel" class="content">
+			
+        
+                <ul class="category">
+            
+                <li><a id="ctl00_wpm_HomePage_ctl06_CategoryList_ctl01_CategoryLink" href="Four-Post-Lift-Accessories-C18.aspx">Four Post Lift Accessories</a></li>
+            
+                <li><a id="ctl00_wpm_HomePage_ctl06_CategoryList_ctl02_CategoryLink" href="Motorcycle-Lift-Accessories-C19.aspx">Motorcycle Lift Accessories</a></li>
+            
+                </ul>
+            
+    
+		</div>
+
+	</div><br/>
+<br/>
+<img src="/images/Register.gif" onclick="window.location.href='reg.aspx'" onmouseover="style.cursor='hand';" onmouseout="style.cursor='default'">
+
+<div id="ctl00_wpm_HomePage_ctl08_MainPanel" class="section">
+		
+    <div id="ctl00_wpm_HomePage_ctl08_HeaderPanel" class="header">
+			
+	    <h2 class="header">News & Events</h2>
+    
+		</div>
+	<div id="ctl00_wpm_HomePage_ctl08_ContentPanel" class="content">
+			
+        
+                <ul class="category">
+            
+                </ul>
+            
+    
+		</div>
+
+	</div><br/>
+<h2>Press Release</h2>
+<a href="/Assets/Press/Direct_Lift_News_Release_on_Barrett-Jackson_Winners.pdf" target="_blank"><b>Direct Lift&reg; Gives <br />Away Trip for Two to<br />Barrett-Jackson Las Vegas Auction
+</b></a>
+<br /><br /><br />
+<a href="/Assets/Press/DirectLiftNewsReleaseonCeilingHeightCalculator.pdf" target="_blank"><b>Ceiling Height Calculator <br />and Video Help Owners<br />Choose the Right Lift
+</b></a>
+<br /><br /><br />
+<a href="/Assets/Press/20120105-Release_on_Barrett-Jackson_Partnership.pdf" target="_blank"><b>Direct Lift Becomes<br /> "The Official Lift of the <br />Barrett-Jackson Auctions"
+</b></a>
+<br /><br /><br />
+<hr />
+
+<table cellpadding="0" cellspacing="0" class="RssReaderPanelSidebar">
+    <tr>
+        <td class="RssReaderPanelHeader">
+            <a id="ctl00_wpm_HomePage_ctl09_FeedChannelTitle" href="tradeshows.aspx"><span id="ctl00_wpm_HomePage_ctl09_FeedName" class="RssCaptionSidebar">Car Show Schedule</span></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="RssReaderPanelChannel">
+            <table class="RssChannelPannel" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <div class="ChannelTitleContainer">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div class="ChannelImageContainer">
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <span id="ctl00_wpm_HomePage_ctl09_ChannelSeperator">
+                    </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="ChannelDescriptionContainer">
+                    
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="RssReaderPanelItems">
+            
+                    <table cellpadding="0" cellspacing="0" class="RssItem">
+                        <tr valign="top">
+                            <td>
+                                <table cellpadding="0" cellspacing="0" class="RssItemData">
+                                    <tr>
+                                        <td>
+                                            <span class="RssItemTitle">
+                                            <a id="ctl00_wpm_HomePage_ctl09_RssItemRepeater_ctl00_FeedItemLink" href="http://www.route66carclub.com/" target="_blank">Route 66 Days</a>    
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="RssItemDescriptionNoImage">
+                                                <p>Location: Flagstaff, AZ</p><p>Start Date: 9/6/2013<br />End Date: &nbsp;9/8/2013</p>
+                                                
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr />
+                
+                    <table cellpadding="0" cellspacing="0" class="RssItem">
+                        <tr valign="top">
+                            <td>
+                                <table cellpadding="0" cellspacing="0" class="RssItemData">
+                                    <tr>
+                                        <td>
+                                            <span class="RssItemTitle">
+                                            <a id="ctl00_wpm_HomePage_ctl09_RssItemRepeater_ctl01_FeedItemLink" href="http://www.nsra-usa.com/Events/default.asp#" target="_blank">NSRA Street Rod Nationals North</a>    
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="RssItemDescriptionNoImage">
+                                                <p>Location: Kalamazoo, Mich.</p><p>Start Date: 9/13/2013<br />End Date: &nbsp;9/15/2013</p>
+                                                
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr />
+                
+                    <table cellpadding="0" cellspacing="0" class="RssItem">
+                        <tr valign="top">
+                            <td>
+                                <table cellpadding="0" cellspacing="0" class="RssItemData">
+                                    <tr>
+                                        <td>
+                                            <span class="RssItemTitle">
+                                            <a id="ctl00_wpm_HomePage_ctl09_RssItemRepeater_ctl02_FeedItemLink" href="http://www.charlotte-autofair.com/" target="_blank">Charlotte AutoFair Fall Meet</a>    
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="RssItemDescriptionNoImage">
+                                                <p>Location: Charlotte, N.C.</p><p>Start Date: 9/19/2013<br />End Date: &nbsp;9/22/2013</p>
+                                                
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr />
+                
+        </td>
+    </tr>
+    <tr>
+        <td class="RssReaderPanelInformation">
+            <span id="ctl00_wpm_HomePage_ctl09_InformationLabel" class="RssInformation"></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="RssReaderPanelFooter">
+            <table cellpadding="0" cellspacing="0" class="FooterPanel">
+                <tr>
+                    <td class="RssUpdateDateContainer">
+                        
+                        <span id="ctl00_wpm_HomePage_ctl09_UpdateDate" class="UpdateDate"></span>
+                    </td>
+                    <td>
+                        <div class="CopyrightInformation">
+                            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+				</td>
+				<td align="left" valign="top" id="mainPanel">
+					<link rel="stylesheet" href="/Assets/homepage_images/barrett-jackson/slider.css" type="text/css" media="screen" />
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="welcomeImage"><center><embed pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" bgcolor="#FFFFFF" wmode="transparent" menu="false" scale="showall" quality="high" src="/App_Themes/Glass_SilverAge/images/flash/direct_flash_6_point.swf" width="100%" height="200"></embed></center></td>
+        </tr>
+        <tr class="welcomeText">
+            <td>
+            <table class="contentText" border="0">
+                <tbody>
+                   <tr><td colspan="3" align="center">
+    <div id="wrapper">
+    	<div style="background-color: #231f20;width: 550px;">
+        	<div style="height:169px;"><center><img src="/Assets/homepage_images/barrett-jackson/Header.png" alt=""></center></div>
+<div id="slider" class="nivoSlider" style="height: 233px;">
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage2.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage3.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage4.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage5.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage6.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage7.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage8.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage9.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage10.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage11.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage12.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage13.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+                <img src="/Assets/homepage_images/barrett-jackson/car_stage14.jpg" alt="" title="Barrett-Jackson - The World's Greatest Collector Car Auctions" />
+            </div>
+
+
+
+            <div style="background-color: #000; text-align: left;"><div style="height: 60px; background-color: #000; color: #fff; text-align: left;padding:15px 10px 0px 15px;"><span style=""><b style="font-size: 12pt;"></b></span></div></div>       
+        </div>
+
+    <script type="text/javascript" src="/Assets/homepage_images/barrett-jackson/jquery.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+			effect: 'sliceUpDownLeft'
+		});
+    });
+    </script>
+</td></tr>
+                    <tr>
+                        <td valign="top">
+                        <p class="directText">Direct Lift offers a variety of competitively priced car, truck and motorcycle lifts for the home enthusiast, hobbyist, restoration facility, or professional mechanic.  Direct Lift has over 100,000 lifts in safe and reliable service throughout the world and enjoys worldwide recognition as &quot;America's #1 Hobbyist Lift&quot;.<br><br> Direct Lift's manufacturing facilities are ISO 9001 compliant and have received many European certifications in addition to the coveted ISO 9001 <a href="certification.aspx"><font color="blue">certification</font></a>. In addition to the ISO certification, all four post Direct Lifts are <a href="http://www.directlift.com/Certification.aspx">ALI certified</a>.</p>
+                        <br />
+                        <p class="directText">In addition to online sales, Direct Lift also has an extensive network of warehouses that are conveniently located throughout the USA and Canada.  Our warehouses have a full inventory of repair parts and accessories, and Direct Lift backs them up with parts and accessories inventory at our Madison, Indiana headquarters.  You can be assured your new Direct Lift  will remain in service for years to come.  </p>
+                        <br />
+                        <p class="directText">We offer convenient and cost effective shipping, or you can pick up your new lift at the nearest warehouse.  And with nationwide installation services available, how can you go wrong buying your lift from Direct Lift?  Lifting a vehicle is serious business, and Direct Lift takes your needs seriously.</p><br />
+<p class="directText">Great prices, great products, and convenient locations in the USA and Canada, make Direct Lift the first choice of professional garages, home garages, and everything in between.</p>
+                        </td>
+                        <td width="10">&nbsp;</td>
+                        <td><img height="450" alt="Direct Lift Pro Park Four Post Lifts are ALI Certified!" width="200" border="1" src="/Assets/ALI_fourpost.jpg" onclick="window.location.href='Certification.aspx'" onmouseover="style.cursor='hand';" /></td>
+                    </tr>
+<tr><td colspan="3"><center><script type="text/javascript" src="js\direct_conveyor.js"></script></center></td></tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+var vars = [], hash;
+    var q = document.URL.split('?')[1];
+    if(q != undefined){
+        q = q.split('&');
+        for(var i = 0; i < q.length; i++){
+            hash = q[i].split('=');
+            vars.push(hash[1]);
+            vars[hash[0]] = hash[1];
+        }
+}
+
+if ( vars['p'] == "sourceinterlink" ) {
+
+$("#sourceinterlink").fancybox().trigger('click');
+
+}
+
+else if ( vars['newsletter'] == "true" ) {
+
+$("#sourceinterlink").fancybox().trigger('click');
+
+}
+
+else { }
+
+        $('.fancybox').fancybox({
+            preload: true,
+            fitToView : true
+        });
+
+        $('.fancybox-contact').fancybox({
+            preload: true,
+            fitToView: true,
+            autoSize: true
+        });
+
+$("#sourceinterlink").css("display", "none");
+
+});
+</script>
+
+<a class="fancybox fancybox.iframe fancybox-contact" ID="sourceinterlink" href="/newsletter_signup.aspx">newsletter</a>
+				</td>
+				<td align="left" valign="top" id="rightSidebarPanel">
+					<p>
+
+<div style="background-color:#F0F5F7;">
+<input type="image" name="ctl00$wpm$HomePage$ctl10$imgShippingInfo" id="ctl00_wpm_HomePage_ctl10_imgShippingInfo" src="images/shipping_info.gif" style="border-width:0px;" /><br />
+        
+<input type="image" name="ctl00$wpm$HomePage$ctl10$imgWhichLift" id="ctl00_wpm_HomePage_ctl10_imgWhichLift" onmouseover="this.src='/images/which_lift_hover.gif';" onmouseout="this.src='/images/which_lift.gif';" src="images/which_lift.gif" style="border-width:0px;" /><br />
+
+<input type="image" name="ctl00$wpm$HomePage$ctl10$imgSecPriv" id="ctl00_wpm_HomePage_ctl10_imgSecPriv" onmouseover="this.src='/images/security_privacy_hover.gif';" onmouseout="this.src='/images/security_privacy.gif';" src="images/security_privacy.gif" style="border-width:0px;" /><br />
+        
+<input type="image" name="ctl00$wpm$HomePage$ctl10$imgGarageCalc" id="ctl00_wpm_HomePage_ctl10_imgGarageCalc" onmouseover="this.src='/images/garage_calculator_hover.gif';" onmouseout="this.src='/images/garage_calculator.gif';" src="images/garage_calculator.gif" style="border-width:0px;" />
+</div>
+ <div id="ctl00_wpm_HomePage_ctl11_BasketTotalPanel">
+		
+        <div class="section">
+            <div id="ctl00_wpm_HomePage_ctl11_BasketTotalCountHolder" class="VisiblePanel">
+			
+                <div class="header">
+                    <h2>Cart Total</h2>
+                </div>
+                <div class="onePageCheckoutCell">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td colspan="2"><span id="ctl00_wpm_HomePage_ctl11_ItemCount">You have 0 items in your cart</span></td>
+                        </tr>
+                        <tr class="totalDivider"><td colspan="2"><hr /></td></tr>
+                        <tr><td colspan="2" style="text-align:center; width:100%;"><a id="ctl00_wpm_HomePage_ctl11_EditOrderButton" class="button" href="Basket.aspx">View My Cart</a></td></tr>
+                    </table>
+                </div>
+            
+		</div>
+        </div>
+    
+	</div> <div id="ctl00_wpm_HomePage_ctl12_MainPanel" class="section">
+		
+    <div id="ctl00_wpm_HomePage_ctl12_HeaderPanel" class="header">
+			
+	    <h2 class="header">Share Your Story</h2>
+    
+		</div>
+	<div id="ctl00_wpm_HomePage_ctl12_ContentPanel" class="content">
+			
+        
+                <ul class="category">
+            
+                </ul>
+            
+    
+		</div>
+
+	</div></p>
+<h2>&nbsp;&nbsp; <a href="UserSubmissions.aspx">Tell Us Now - Click Here</a></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table>
+    <tbody>
+        <tr align="center">
+            <td colspan="2">
+            <h2>Keep Up with Direct Lift Online</h2>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+            <div id="fb-root">&nbsp;</div>
+            <script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: '380535978645382', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script><fb:like href="http://www.facebook.com/#!/pages/Madison-IN/Direct-Lift/117072445009990" layout="button_count" show_faces="false" font="arial"></fb:like></td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<DIV id=footer><P><A href="/Default.aspx">Home</A> <A href="/search.aspx">Search</A> <BR>©2013 Vehicle Service Group<sup>&#8480</sup> All rights reserved.</P></DIV>
+
+
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-23122859-2");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	</script>
+
+
+</div>
+</div>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
+</script>
+
+<script type="text/javascript">
+
+__wpm = new WebPartManager();
+__wpm.overlayContainerElement = null;
+__wpm.personalizationScopeShared = true;
+
+var zoneElement;
+var zoneObject;
+
+zoneElement = document.getElementById('ctl00_ContentZone');
+if (zoneElement != null) {
+    zoneObject = __wpm.AddZone(zoneElement, 'ctl00$ContentZone', true, false, 'black');
+    zoneObject.AddWebPart(document.getElementById('WebPart_HomePage'), null, false);
+}
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Sys.Preview.UI.Controls.WebParts.WebPartManager, {"allowPageDesign":false}, null, null, $get("ctl00_wpm"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

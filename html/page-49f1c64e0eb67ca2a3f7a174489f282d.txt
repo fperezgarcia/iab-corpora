@@ -1,0 +1,470 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head >
+<link href="include/master.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+<meta name="Keywords" content="1991 GMC Safari Cargo Van,1991 GMC Safari,1991 GMC Cargo Van" />
+<meta name="Description" content="This is a 1991 GMC Safari Cargo Van, which might be described as a    HANDYMAN'S SPECIAL!!There is not much to say about the interior of this van, except, it has all the room you'll need.There are not any issues with the exterior of this van." />
+<title >1991 GMC Safari For Sale Review</title >
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<style type="text/css">
+h3,h4,h5 { font-size:20px; }
+</style>
+<script>
+$(document).ready(function()
+{
+$("#SignUpButton").click(function(e) 
+  {
+  //e.PreventDefault();
+  $('#SignUpForm').css("display","block");
+  $('#SignUpForm').animate( 
+    {
+	left: '270px'
+    }, 700, function() 
+	{// Animation complete.//$('#SignUpForm').css({"left":"370px !important","left":"270px"});
+	});
+  });
+
+$("#SUHide").click(function() 
+  {
+  $('#SignUpForm').animate( 
+    {
+	left: '2770px'
+	}, 700, function() 
+	{// Animation complete.//$('#SignUpForm').css({"left":"370px !important","left":"270px"});
+	$('#SignUpForm').css("display","none");
+	});
+ 
+  }); 
+$("#SubmitBut").click(function() 
+  {  
+  var mydata=$("#SForm").serialize();
+  $.post("include/ajax-signup.php",mydata,function(data) {  if (data.length>1) {$("#SignUpError").css("display","block"); $("#eOutput").html(data);} else {$("#SignUpForm").css("display","none"); alert("Congratulations!\nYou Are Now Signed Up!");} });
+  });
+$("#theX").click(function() 
+  {   
+  $("#SignUpError").css("display","none");
+  });
+
+$("#sellyourcar").click(function() 
+  {   
+  url="http://autoclassifiedshopper.com/sell.php";
+  $(location).attr('href',url)
+  });
+$("#NLEmail").click(function() 
+  {   
+  $("#NLEmail").val("");
+  }); 
+$("#NLGO").click(function(e) 
+  { 
+  e.preventDefault();
+  var semail=$("#newsletter").serialize();  
+  $.post("include/ajax/newsletter.php",semail,function(data) { alert(data); });
+  $("#NLEmail").val("");
+  });
+$("#newsletter").submit(function(e)
+  {
+  e.preventDefault();
+  var semail=$("#newsletter").serialize();  
+  $.post("include/ajax/newsletter.php",semail,function(data) { alert(data); });
+  $("#NLEmail").val("");
+  });   
+});
+</script>
+</head >
+<body>
+  <div id="wrapper" >
+    
+   
+      
+
+	  <div id="header">
+	  <div style="margin-left:1px;position:relative;background:url('http://autoclassifiedshopper.com/images/autoclassifiedshopper-headerbg.jpg');width:1000px;height:160px;" />
+	  
+	  <div style="position:absolute;left:170px;top:96px;" />
+      <form method="post" action="http://autoclassifiedshopper.com/search.php">
+       <label style="font-size:14px;">Type of Search: </label>
+              <select name="choice">
+                <option value="all"  >All</option>
+                <option value="sale" >Sales</option>
+                <option value="articles"  >Articles</option>
+                <option value="review"  >Reviews</option>
+              </select>
+              <br />
+              <label style="font-size:14px;">Search: </label><input style="border:0px;background:url(../images/white.jpg) no-repeat;width:135px;height:18px;" type="text" name="variables" value="" />
+              <input type="text" style="display:none;" /><input type="submit" name="submit" value="Search" />
+      </form>
+       </div>   
+
+
+<div style="position:absolute;top:3px;left:7px;font-size:14px;font-family:tahoma;">
+<a rel="nofollow" href="http://autoclassifiedshopper.com/login.php" title="Login">Login</a> | <a rel="nofollow" href="http://autoclassifiedshopper.com/newaccount.php" title="Signup For a New Account">Signup</a></div>
+
+     </div>
+	 </div>
+	 <div id="Hmenu">
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/boat-sales.php" title="Boat Sales">Boat Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/bus-sales.php" title="Bus Sales">Bus Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/car-sales.php" title="Car Sales">Car Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/jetski-sales.php" title="Jetski Sales">Jetski Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/limo-sales.php" title="Limo Sales">Limo Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/minivan-van-sales.php" title="Minivan & Van Sales">Minivan & Van Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/motorcycle-sales.php" title="Motorcycle Sales">Motorcycle Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/rv-motorhome-sales.php" title="RV & Motorhome Sales">RV & Motorhome Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/suv-sales.php" title="SUV Sales">SUV Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/station-wagon-sales.php" title="Station Wagon Sales">Station Wagon Sales</a>
+   </div>
+	   <div class="Hmenu_Btn">
+   <a href="http://autoclassifiedshopper.com/truck-sales.php" title="Truck Sales">Truck Sales</a>
+   </div>
+		
+	</div>
+	
+	
+	<!--
+	<div id="BigBut" style="float:left; width:220px;text-align:center;padding-top:16px;height:250px;margin-right:5px;">
+	<b>Get Started Today! It's Free!</b><br />
+	<img src="/images/ACS-SignUp.jpg" style="margin-bottom:7px;border:none;" id="SignUpButton" /><br />
+	<b>Zero Fees! It's Free!</b><br />
+	<img src="/images/ACS-SellAuto.jpg" /><br style="line-height:.5em" /><br style="line-height:.5em" />
+	<b>Can't Find What You Want?</b><br />
+	<img src="/images/ACS-PostWantedAd.jpg" />
+	</div>
+	-->
+	<div style="float:left;width:760px;padding:6px;border:1px solid silver;margin:2px;">
+<h1 style="margin-bottom:6px;border-bottom:1px solid silver;">1991 GMC Safari For Sale Review</h1>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9835249232193377";
+google_ad_slot = "5758677397";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<table style="width:750px;border:1px solid blue;font-size:11px;margin-top:3px;">
+ <tr><td>Type:</td><td><b>Minivan & Van Sales</b></td><td>Year:</td><td><b>1991</b></td><td>Date Posted:</td><td>07/06/2009</td>
+ <td>Make:</td><td><b>GMC</b></td><td>Model:</td><td><b>Safari</b></td><td></td><td></td></tr>
+ 
+</table>
+
+
+
+
+
+      <div id="leftcon" style="float:left;">
+        
+        <img name="mainimg" src="http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-1.jpg" alt="1991 GMC Safari cargo van left front" style="border:none;">
+      </div><!-- Close Left Con -->
+	  
+	  <div id="rightcon" style="float:left;width:100px;margin-left:8px;margin-right:8px;">
+<table style="" cellpadding="0" cellspacing="0">
+          <tr><td style="background:#496bdf;color:#fffd69;text-align:center;" colspan="3">Extra Images</td></tr>
+	      		  <tr><td><img style="width:99px;height:74px;" src="http://autoclassifiedshopper.com/images/review/thumb-1991-GMC-Safari-r185-2.jpg" onmouseover="document.mainimg.src='http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-2.jpg'" onmouseout="document.mainimg.src='http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-1.jpg'" alt="1991 GMC Safari right rear"></td></tr>
+		  		  		  <tr><td><img style="width:99px;height:74px;" src="http://autoclassifiedshopper.com/images/review/thumb-1991-GMC-Safari-r185-3.jpg" onmouseover="document.mainimg.src='http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-3.jpg'" onmouseout="document.mainimg.src='http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-1.jpg'" alt="1991 GMC Cargo Van interior rear"></td></tr>
+		  		  		  <tr><td><img style="width:99px;height:74px;" src="http://autoclassifiedshopper.com/images/review/thumb-1991-GMC-Safari-r185-4.jpg" onmouseover="document.mainimg.src='http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-4.jpg'" onmouseout="document.mainimg.src='http://autoclassifiedshopper.com/images/review/1991-GMC-Safari-r185-1.jpg'" alt="1991 GMC Safari Van interior front"></td></tr>
+		  </table>
+</div>
+	  
+	  
+	  
+	  
+	  
+	  	  <div style="width:300px;height:250px;float:left;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9835249232193377";
+/* 300x250, AutoClass */
+google_ad_slot = "1584342924";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	  </div>	  
+	  	  
+
+	  <br style="clear:both;" /> 
+       <script type="text/javascript"><!--
+google_ad_client = "pub-9835249232193377";
+/* 728x90, created 5/20/10 ACS */
+google_ad_slot = "8764373637";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+ 
+      <h2 style="background-color:#eeeeee;margin:1px;">1991 GMC Safari General Review</h2>
+      <p>
+	          <img src="http://autoclassifiedshopper.com/images/review/thumb-1991-GMC-Safari-r185-1.jpg" title="1991 GMC Safari cargo van left front" alt="1991 GMC Safari cargo van left front" style="border:none;width:70px;float:left;margin:5px;">
+	  This is a 1991 GMC Safari Cargo Van, which might be described as a    HANDYMAN'S SPECIAL!! It is a one owner, Carfax certified!  It may have some miles, 184,985 of them, but it has plenty of life left!! Engine runs great and transmission shifts perfect. It is equipped with 6 cylinder engine and a automatic transmission. This is a clean van that runs great! It has a new fuel pump put in and the A/C charged 1 month ago. It has been very well maintained. The perfect vehicle for work.</p>
+      <h3 style="background-color:#eeeeee;margin-bottom:10px;">GMC Safari Minivan & Van For Sale Interior Review</h3>
+       <script type="text/javascript"><!--
+google_ad_client = "pub-9835249232193377";
+google_ad_slot = "5758677397";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	  <p>
+	 
+	          <img src="http://autoclassifiedshopper.com/images/review/thumb-1991-GMC-Safari-r185-2.jpg" alt="1991 GMC Safari right rear" style="border:none;width:70px;float:left;margin:1px 3px;">
+	  There is not much to say about the interior of this 1991 GMC Safari van, except, it has all the room you'll need. It does have air conditioning and AM FM stereo.</p>
+      <h4 style="background-color:#eeeeee;">1991 GMC Safari Minivan & Van Sale Exterior Review</h4>
+      <p>
+	          <img src="http://autoclassifiedshopper.com/images/review/thumb-1991-GMC-Safari-r185-3.jpg" alt="1991 GMC Cargo Van interior rear" style="border:none;width:70px;float:left;margin:5px;">
+	  This 1991 GMC Cargo Van has good tires and brakes. There are not any issues with the exterior of this van.</p>
+	  <script type="text/javascript"><!--
+google_ad_client = "pub-9835249232193377";
+google_ad_slot = "5758677397";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+ <div style="float:right;">Times Viewed: 1257</div>
+</div>
+        
+		
+		<div style="float:left;border-top:1px solid silver;border-right:1px solid silver;border-bottom:1px solid silver;margin-top:2px;width:220px;">
+	<div id="BigBut" style="float:left; width:218px;text-align:center;padding-top:16px;height:224px;">
+	<b>Get Started Today! It's Free!</b><br />
+	<img src="/images/ACS-SignUp.jpg" style="margin-bottom:7px;border:none;cursor:pointer;" id="SignUpButton" /><br />
+	<b>Zero Fees! It's Free!</b><br />
+	<img src="/images/ACS-SellAuto.jpg" id="sellyourcar" style="cursor:pointer;" /><br style="line-height:.5em" /><br style="line-height:.5em" />
+	<!--<b>Can't Find What You Want?</b><br />
+	<img src="/images/ACS-PostWantedAd.jpg" />-->
+	<b>Sign Up To Our Newsletter!</b><br />
+	<form id="newsletter" style="margin:1px;padding:0px;line-height:1em;padding:2px;border-bottom:1px solid silver;border-top:1px solid silver;">
+	<input type="text" name="NLEmail" id="NLEmail" value="email@address.com" /><button id="NLGO">GO</button>
+	</form>
+	
+	<div style="color:green;font-size:12px;">Receive Updates & Alerts about new Vehicles for sale and updates to the site!</div>
+	<br style="clear:both;line-height:1em;"> 
+	</div>
+	<br style="clear:both;line-height:1em;"> 
+	<h5 style="background-color:#eeeeee;margin-top:20px;margin-bottom:4px;">Related to 1991 GMC Safari Sales</h5>
+	  <ul style="float:left;margin:0px;padding:0px;margin-top:2px;list-style-type:none;font-size:14px;"><b style="">Most Recent Minivan & Van For Sale Ads</b>
+	  <li><a href='1999-Ford-e250-796.php' title='1999 Ford e250 Minivan & Van For Sale'>1999 Ford e250 Minivan & Van For Sale</a></li><li><a href='2005-Pontiac-Montana-SV6-AWD-647.php' title='2005 Pontiac Montana SV6 AWD Minivan & Van For Sale'>2005 Pontiac Montana SV6 AWD Minivan & Van For Sale</a></li><li><a href='2003-Honda-oddyssy-629.php' title='2003 Honda oddyssy Minivan & Van For Sale'>2003 Honda oddyssy Minivan & Van For Sale</a></li><li><a href='2006-Chrysler-Van-617.php' title='2006 Chrysler Van Minivan & Van For Sale'>2006 Chrysler Van Minivan & Van For Sale</a></li><li><a href='2003-GMC-Safari-613.php' title='2003 GMC Safari Minivan & Van For Sale'>2003 GMC Safari Minivan & Van For Sale</a></li>	  </ul>
+	  <br style="clear:both;"> 
+    <ul style="float:left;margin:0px;padding:0px;margin-top:2px;list-style-type:none;font-size:14px;">Other Popular Minivan & Van For Sale Ads
+	  <li><a href='1993-Chevrolet-G20-Conversion-Van-180.php' title='1993 Chevrolet G20 Conversion Van Minivan & Van For Sale'>1993 Chevrolet G20 Conversion Van Minivan & Van For Sale</a></li><li><a href='1990-Chevrolet-G20-132.php' title='1990 Chevrolet G20 Minivan & Van For Sale'>1990 Chevrolet G20 Minivan & Van For Sale</a></li><li><a href='1993-Ford-Econoline-1-Ton-Van-193.php' title='1993 Ford Econoline 1 Ton Van Minivan & Van For Sale'>1993 Ford Econoline 1 Ton Van Minivan & Van For Sale</a></li><li><a href='1970-Volkswagen-bus-232.php' title='1970 Volkswagen bus Minivan & Van For Sale'>1970 Volkswagen bus Minivan & Van For Sale</a></li><li><a href='2008-Dodge-Grand-Caravan-SXT-75.php' title='2008 Dodge Grand Caravan SXT Minivan & Van For Sale'>2008 Dodge Grand Caravan SXT Minivan & Van For Sale</a></li>	  </ul><br style="clear:both;">
+	  <ul style="float:left;margin:0px;padding:0px;margin-top:2px;list-style-type:none;font-size:14px;">Other Popular Minivan & Van For Sale Reviews
+	  <li><a href='1967-Volkswagen-Vanagon-r329.php' title='1967 Volkswagen Vanagon Minivan & Van For Sale'>1967 Volkswagen Vanagon Minivan & Van For Sale</a></li><li><a href='1977-Ford-Custom-good-time-r665.php' title='1977 Ford Custom good time Minivan & Van For Sale'>1977 Ford Custom good time Minivan & Van For Sale</a></li><li><a href='1999-Chevy-Express-150-r40.php' title='1999 Chevy Express 150 Minivan & Van For Sale'>1999 Chevy Express 150 Minivan & Van For Sale</a></li><li><a href='1988-Ford-E150--Custom-Conversion-r666.php' title='1988 Ford E150  Custom Conversion Minivan & Van For Sale'>1988 Ford E150  Custom Conversion Minivan & Van For Sale</a></li><li><a href='1992-Chevrolet-G20-Beauville-r664.php' title='1992 Chevrolet G20 Beauville Minivan & Van For Sale'>1992 Chevrolet G20 Beauville Minivan & Van For Sale</a></li>	  </ul>
+	  <br style="clear:both;"> 
+	  
+	  
+	</div>	
+		
+		
+      
+	  
+	  
+	 
+
+     
+    
+    
+	
+    <br style="clear:both" />
+	
+	
+	
+<br style="clear:both;">
+	<div id="RecentReviews" style="text-align:center;width:990px;">
+	
+	<div style="color:navy;font-variant:small-caps;"><img src="/images/ACS-RevChair.jpg" style="width:22px;margin-right:3px;margin-bottom:-5px;" />Recent Car Reviews, Truck Reviews, Bus Reviews, & Other Automotive Reviews Recently Listed. ... <a style="color:blue;font-size:18px;text-decoration:none;" href="http://autoclassifiedshopper.com/minivan-van-for-sale-review.php" title="Recent Minivan & Van Sales Reviews">Minivan & Van For Sale Reviews</a></div> <hr />
+	<div style="padding-left:40px;width:960px;">
+        <div class="RevImage" style="width:170px;float:left;;margin:6px;">
+		<div style='font-size:10px;color:blue;'>Minivan & Van For Sale Reviews</div>		<a href="http://autoclassifiedshopper.com/1988-Ford-E150--Custom-Conversion-r666.php" title="Review of a 1988 Ford E150  Custom Conversion"><img style="border:1px solid red;width:148px;" src="http://autoclassifiedshopper.com/images/review/thumb-1988-Ford-E150--Custom-Conversion-r666-1.jpg" alt="1988 Ford E150 Custom conversion front"></a><br />
+		<a href="http://autoclassifiedshopper.com/1988-Ford-E150--Custom-Conversion-r666.php" title="Review of a 1988 Ford E150  Custom Conversion" style="font-size:10px;">1988 Ford E150  Custom Conversion  For Sale</a></div>
+        
+        <div class="RevImage" style="width:170px;float:left;;margin:6px;">
+		<div style='font-size:10px;color:blue;'>Minivan & Van For Sale Reviews</div>		<a href="http://autoclassifiedshopper.com/1977-Ford-Custom-good-time-r665.php" title="Review of a 1977 Ford Custom good time"><img style="border:1px solid red;width:148px;" src="http://autoclassifiedshopper.com/images/review/thumb-1977-Ford-Custom-good-time-r665-1.jpg" alt="1977 Ford Custom good time van side profile"></a><br />
+		<a href="http://autoclassifiedshopper.com/1977-Ford-Custom-good-time-r665.php" title="Review of a 1977 Ford Custom good time" style="font-size:10px;">1977 Ford Custom good time  For Sale</a></div>
+        
+        <div class="RevImage" style="width:170px;float:left;;margin:6px;">
+		<div style='font-size:10px;color:blue;'>Minivan & Van For Sale Reviews</div>		<a href="http://autoclassifiedshopper.com/1992-Chevrolet-G20-Beauville-r664.php" title="Review of a 1992 Chevrolet G20 Beauville"><img style="border:1px solid red;width:148px;" src="http://autoclassifiedshopper.com/images/review/thumb-1992-Chevrolet-G20-Beauville-r664-1.jpg" alt="92 Chevrolet G20 Beauville front"></a><br />
+		<a href="http://autoclassifiedshopper.com/1992-Chevrolet-G20-Beauville-r664.php" title="Review of a 1992 Chevrolet G20 Beauville" style="font-size:10px;">1992 Chevrolet G20 Beauville  For Sale</a></div>
+        
+        <div class="RevImage" style="width:170px;float:left;;margin:6px;">
+		<div style='font-size:10px;color:blue;'>Minivan & Van For Sale Reviews</div>		<a href="http://autoclassifiedshopper.com/2005-Ford-Florida-Seminoles-r661.php" title="Review of a 2005 Ford Florida Seminoles"><img style="border:1px solid red;width:148px;" src="http://autoclassifiedshopper.com/images/review/thumb-2005-Ford-Florida-Seminoles-r661-1.jpg" alt="2005 Ford Florida Seminoles front"></a><br />
+		<a href="http://autoclassifiedshopper.com/2005-Ford-Florida-Seminoles-r661.php" title="Review of a 2005 Ford Florida Seminoles" style="font-size:10px;">2005 Ford Florida Seminoles  For Sale</a></div>
+        
+        <div class="RevImage" style="width:170px;float:left;;margin:6px;">
+		<div style='font-size:10px;color:blue;'>Minivan & Van For Sale Reviews</div>		<a href="http://autoclassifiedshopper.com/1995-Volkswagen-Euro-Van-r660.php" title="Review of a 1995 Volkswagen Euro Van"><img style="border:1px solid red;width:148px;" src="http://autoclassifiedshopper.com/images/review/thumb-1995-Volkswagen-Euro-Van-r660-1.jpg" alt="1995 Volkswagen Euro Van front"></a><br />
+		<a href="http://autoclassifiedshopper.com/1995-Volkswagen-Euro-Van-r660.php" title="Review of a 1995 Volkswagen Euro Van" style="font-size:10px;">1995 Volkswagen Euro Van  For Sale</a></div>
+        <br style="clear:both;" />
+        
+</div>      
+	</div>
+
+<div id="footer">
+<div style="font-size:21px;color:white;border-bottom:1px solid silver;width:100%;">Additional Automotive Resources Brought To You By <b>Auto Classified Shopper . com</b></div>
+<div style="width:100%;height:90px;margin-top:4px;text-align:center;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9835249232193377";
+/* AutoClass 728x90, created 3/26/11 b bg */
+google_ad_slot = "4730669765";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div id="ArticleBox" style="width:446px;color:silver;float:left;margin-left;2px;font-size:12px;text-align:center;padding:3px;border-bottom:1px dotted white;">
+<div style="border-bottom:1px dotted white;width:100%;"><a style="color:white;font-size:20px;" href="http://autoclassifiedshopper.com/articles.php" title="Vehicle Articles">Automotive Articles</a></div><br />
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/joegibbs.php" title="Joe Gibbs">Joe Gibbs</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/beststationwagonsof2011.php" title="Best Station Wagons of 2011">Best Sport Wagons of 2011</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/stationwagonmodels.php" title="Station Wagon Models">Station Wagon Model</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/cheapermotorcycleinsurance.php" title="Cheap Motorcycle Insurance">Cheap Motorcycle Insurance</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/smalltruckcampers.php" title="Small Truck Campers">Small Truck Campers</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/oldstationwagons.php" title="Older Station Wagons">Older Station Wagons</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/motorcycleinstructions.php" title="Instructions For Riding A Motorcycle Part 2">Riding A Motorcycle Part 2</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/instructionsridingmotorcycle.php" title="Instructions For Riding A Motorcycle Part 1">Riding A Motorcycle Part 1</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/dodge-sprinter-van.php" title="Dodge Sprinter Vans">Dodge Sprinter Vans</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/index.php" title="FREE Auto Classified Ads! Post Your Auto Classified 100% FREE!">Free Auto Classifieds</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/doubledeckerbuses.php" title="Double Decker Bus For Sale, Buy & Sell Double Decker Buses FREE!">Double Decker Bus Sales</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/bluebirdbusesforsale.php" title="BlueBird Buses For Sale, Sell A BlueBird Bus FREE!">BlueBird Buses For Sale</a></div>
+   <br style="clear:both;" />More <a href="http://autoclassifiedshopper.com/articles.php" title="Vehicle Articles" style="color:white;">Automotive Articles</a>
+
+</div>
+<div id="ReviewsBox" style="width:446px;color:silver;float:left;margin-left;2px;font-size:12px;text-align:center;padding:3px;border-bottom:1px dotted white;">
+   <div style="border-bottom:1px dotted white;width:100%;"><a style="color:white;font-size:20px;width:490px;" href="http://autoclassifiedshopper.com/minivan-van-for-sale-review.php" title="Minivan & Van Sales Reviews">Auto Minivan & Van  Reviews</a></div><br />
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/2011-Ford-Edge-r640.php" title="Review of a 2011 Ford Edge For Sale">2011 Ford Edge</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/2011-Ford-E-150-r639.php" title="Review of a 2011 Ford E 150 For Sale">2011 Ford E 150</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/1996-Isuzu-oasis-r467.php" title="Review of a 1996 Isuzu oasis For Sale">1996 Isuzu oasis</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/1995-GMC-Safari-r466.php" title="Review of a 1995 GMC Safari For Sale">1995 GMC Safari</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/1996-GMC-G2500-r465.php" title="Review of a 1996 GMC G2500 For Sale">1996 GMC G2500</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/1997-GMC-g1500-r464.php" title="Review of a 1997 GMC g1500 For Sale">1997 GMC g1500</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/2010-Chrysler-Town-and-Country-LX-r426.php" title="Review of a 2010 Chrysler Town and Country LX For Sale">2010 Chrysler Town and Country LX</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/2008-Chrysler-Town-And-Country-Touring-r418.php" title="Review of a 2008 Chrysler Town And Country Touring For Sale">2008 Chrysler Town And Country Touring</a></div>
+        <div style="width:220px;float:left;overflow:none;"><a href="http://autoclassifiedshopper.com/2007-Chevrolet-Express-r401.php" title="Review of a 2007 Chevrolet Express For Sale">2007 Chevrolet Express</a></div>
+        <br style="clear:both;" />More <a href="http://autoclassifiedshopper.com/reviews.php" title="More Sales Reviews" style="color:white;"> Auto Reviews</a>
+   </div>
+<table width="100%" height="60"><tr><td align="center"><a rel="nofollow" href="http://autoclassifiedshopper.com/emailus.php" style="color:white;"title="Email Us!">Click here to Email us</a><br /><sub>Copyright©2008-2011 <a href="http://autoclassifiedshopper.com/" style="color:white;" title="autoclassifiedshopper.com Home Page">autoclassifiedshopper.com</a></sub></td></tr></table>
+</div>    
+  </div ><!-- close wrapper -->
+<div id="SignUpForm" style="position:absolute;display:none;top:172px;left:3700px;width:720px;height:250px;background:url('/images/SignUpForm.gif');">
+  <div id="SignUpError" style="display:none;position:absolute;top:50px;left:185px;width:360px;border:1px solid black;background-color:red;color:white;z-index:99;text-align:center;"><b>Please Correct The Following Errors:</b><img src="/images/x.jpg" id="theX" style="cursor:pointer;width:30px;height:30px;position:absolute;right:0px;top:0px;margin:2px;" /><hr /><div id="eOutput" style="overflow:hidden;"></div></div>
+  <form id="SForm" style="position:absolute;top:50px;left:55px;width:600px;height:180px;color:white;">
+  <fieldset style="float:left;width:270px;"><legend>Contact Info</legend>
+  <table>
+  <tr><td><label>First Name</label></td><td><input type="text" name="fname" /></td></tr>
+  <tr><td><label>Last Name</label></td><td><input type="text" name="lname" /><br /></td></tr>
+  <tr><td><label>Phone Number</label></td><td><input type="text" name="phone" /><br /></td></tr>
+  <tr><td><label>City</label></td><td><input type="text" name="city" /><br /></td></tr>
+  <tr><td><label>State</label></td><td><select name="state"><option selected></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+              </select><br /></td></tr>
+  </table>
+  </fieldset>
+  
+  <fieldset style="float:left;width:270px;"><legend>Account Info</legend>
+  <table>
+  <tr><td><label>User Name</label></td><td><input type="text" name="username" /></td></tr>
+  <tr><td><label>Password</label></td><td><input type="text" name="password" /><br /></td></tr>
+  <tr><td><label>Repeat Password</label></td><td><input type="text" name="password2" /><br /></td></tr>
+  <tr><td><label>Email Address</label></td><td><input type="text" name="email" /><br /></td></tr>
+  </table>
+  </fieldset>
+  </form>
+  <div id="SubmitBut" style="position:absolute;top:200px;left:400px;border:1px solid green;width:220px;height:30px;background-color:lime;font-variant:small-caps;font-size:18px;letter-spacing:1px;text-align:center;line-height:30px;cursor:pointer; ">Create My Account!</div>
+  <div id="SUHide" style="height:101px;width:20px;position:absolute;top:68px;left:4px;background-color:lime;text-align:center;-moz-border-radius-topright:2em;-moz-border-radius-bottomright:2em;font-size:14px;font-family:comic sans;color:white;"><br style="line-height:.9em;" />H<br />I<br />D<br />E<br />
+  <div style="width:100%;height:20px;background-color:white;-moz-border-radius-bottomright:2em;"></div>
+  </div>
+  </div>  
+ <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1107828-11");
+pageTracker._trackPageview();
+} catch(err) {}
+</script> 
+</body >
+</html >

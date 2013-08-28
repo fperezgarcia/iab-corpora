@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="utf-8" />
+<title>Truck Parts &amp; Truck Accessories for Chevy, GMC, Ford &amp; Dodge Trucks | LMCTruck.com</title>
+<meta name="description" content="Come to LMCTruck.com for all your truck parts and accessories needs. We carry truck parts for Chevy, GMC, Ford, Dodge trucks and more!" />
+<meta name="keywords" content="Truck Parts, Truck Accessories, Chevy, GMC, Ford, Dodge, LMCTruck.com" />
+<link href="/support/css/style.css" rel="stylesheet" media="screen, print" />
+<script src="//www.lmctruck.com/support/js/main.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js'></script>
+<script src="/support/js/addtoCart.js"></script>
+<script src="/support/js/csearch.js"></script>
+<script src="/support/js/jquery.flexslider-min.js"></script>
+<script src="/support/js/jquery.cookie.js"></script>
+<script src="/support/js/init.js"></script>
+<script src="/support/js/testimonial.js"></script>
+<script src="/support/js/jquery.url.js"></script>
+<script>
+$(document).ready(function(){
+	var vehicleCode;
+	
+	var url = 'http://www.lmctruck.com';
+	var curl = $(location).attr('href');
+	if(curl.indexOf('secureshop.')>0) 
+			$(location).attr('href',url);
+
+	vehicleCode = jQuery.cookie('vehicleCode');
+	if((jQuery.cookie('vehicleCode')) != null){
+		
+		vehicleCode.split(',');
+		//$('#iFormID #vzMakeID, #iFormID #vzModelID, #iFormID #vzYearID').removeAttr('disabled');
+		$('#iFormID #vzMakeID').attr('selectedIndex', vehicleCode[0]);
+		ZZ_getModel(vehicleCode[0]);
+		$('#iFormID #vzModelID').attr('selectedIndex', vehicleCode[2]);
+		ZZ_getYear(vehicleCode[2]);
+		$('#iFormID #vzYearID').attr('selectedIndex', vehicleCode[4]);
+	}
+});
+$(window).load(function(){
+  $('.flexslider').flexslider({
+	animation: "fade",
+	controlNav: false,
+	directionNav: true,
+	prevText: "previous",
+	nextText: "next",
+	slideshowSpeed: 6000,
+	animationSpeed: 500,
+	pauseOnAction: true,
+	pauseOnHover: true,
+	start: function(slider){
+	  $('body').removeClass('loading');
+	}
+  });
+});
+</script>
+<!--[if lt IE 9]>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+	<div id="headWrap">
+    	<header>
+        	<a href="/">
+            	<img src="/support/images/support/logo.jpg" id="logo" alt="LMC Truck - Truck Parts and Accessories" />
+            </a>
+            <div id="slogan">
+				RESTORE ... MAINTAIN ... CUSTOMIZE<br />
+				<span>Truck Parts &amp; Accessories For<br /> Chevy, GMC, Ford, Dodge Trucks &amp; SUVs</span>
+			</div>
+            <div id="phone">
+            	Call Toll Free - USA &amp; Canada<br /><span>(800) 562-8782</span>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                    	<a href="/scripts/mgrqispi.dll?APPNAME=WebLmc&PRGNAME=Welcome&ARGUMENTS=-ATK,-A,-A,-A,-A,-N0,-A,-A,-AP&cart=qo">Quick Order</a>
+                    </li>
+                    <li>
+                        <a href="https://secureshop.lmctruck.com/scripts/mgrqispi.dll?APPNAME=WebLmc&PRGNAME=Welcome&ARGUMENTS=-ATK,-A,-A,-A,-A,-N0,-A,-A,-AX&profile=orderstatus">Order Status</a>                	</li>                       
+                    <li>
+                        <a href="/scripts/mgrqispi.dll?APPNAME=WebLmc&PRGNAME=Welcome&ARGUMENTS=-ATK,-A,-A,-A,-A,-N0,-A,-A,-AP" class="viewCart">View Cart <span></span></a>
+                    </li>
+                    <li class="lastCartItem">
+                        <a href="https://secureshop.lmctruck.com/scripts/mgrqispi.dll?APPNAME=WebLmc&PRGNAME=Welcome&ARGUMENTS=-ATK,-A,-A,-A,-A,-N0,-A,-A,-AX&profile=account">My Account</a>                    </li>                        
+                </ul>           	
+            </nav>            
+        </header>
+    </div><!--end headWrap-->
+    <div id="contentWrap">
+    	<nav>
+    		<a href="/freetruckpartscatalog/" id="cat">Free Catalogs</a>
+        	<a href="/newparts/" id="new">New Parts</a>
+            <a href="/chevrolet/" id="chevy">Chevrolet</a>
+            <a href="/gmc/" id="gmc">GMC</a>
+            <a href="/ford/" id="ford">Ford</a>
+            <a href="/dodge/" id="dodge">Dodge</a>
+            <a href="/van/" id="van">Van</a>
+            <div id="featured"><span></span> Featured Parts</div>            
+            <div id="garage"><span></span> LMC Garage</div>
+            <a href="/licensed-products/" id="web">Spotlight</a>
+        </nav>
+             
+        <div id="hiddenMenus">
+        	<div id="featureMenu">
+                Please Select Your Vehicle
+                <form id="fFormID" name="fForm" method="post" action="javascript:featureGo();">
+                	<div>
+                    <select id="vfMakeID" name="vfMake" onChange="FF_getModel(this.options.selectedIndex);makeCheck(this.options.selectedIndex);">
+						<option value="" selected="selected">Select Make</option>
+						<option>Chevrolet</option>
+						<option>GMC</option>
+						<option>Ford</option>
+						<option>Dodge</option>
+						<!--<option>Van</option>/-->
+		    		</select>
+		    		</div>
+		    		<div>
+                    <select id="vfModelID" name="vfModel" onChange="FF_getYear(this.options.selectedIndex);modelCheck(this.options.selectedIndex);" disabled="disabled">
+						<option value=" ">Select Model</option>
+					</select>
+					</div>
+					<div>
+                    <select id="vfYearID" name="vfYear" disabled="disabled" onChange="yearCheck(this.options.selectedIndex);">
+						<option value=" " >Select Year</option>
+					</select>
+					</div>
+                    <input type="submit" name="searchButton" id="searchButton_imageID" value="GO" />
+                </form>
+            </div><!--end featureMenu-->
+            <div id="garageMenu">
+            	<a href="/67chevy/">Low-La - '67 Chevy Build</a>
+                <a href="/events.htm">Shows &amp; Events</a>
+                <a href="/customerphotos/">Photo Gallery</a>
+                <a href="/customer-testimonials.htm">Testimonials</a>
+                <strong><em>Resources</em></strong>
+                <ul>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </div><!--end garageMenu-->
+        </div><!--end hiddenMenus-->
+	<section id="heroItems" class="clearfix">
+        <div id="icatalogSelectHome">
+        	<h3>Shop For Your Truck/SUV</h3>
+            <span>Select Your Vehicle:</span>
+            <form id="CSFormID" name="CSForm" method="post" action="javascript:callCSearch();">
+                <div>
+                    <select id="vCSMakeID" name="vCSMake" size="1" onChange="MM_getModel(this.options.selectedIndex);MM_makeCheck(this.options.selectedIndex);">
+                        <option value="" selected="selected">Select Make</option>
+                        <option>Chevrolet</option>
+                        <option>GMC</option>
+                        <option>Ford</option>
+                        <option>Dodge</option>
+                        <option>Van</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="vCSModelID" name="vCSModel" size="1" onChange="MM_getYear(this.options.selectedIndex);MM_modelCheck(this.options.selectedIndex);" disabled="disabled">
+                        <option value=" ">Select Model</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="vCSYearID" name="vCSYear" size="1" onChange="MM_SelectedGo(this.options.selectedIndex);MM_yearCheck(this.options.selectedIndex);" disabled="disabled">
+                        <option value=" " >Select Year</option>
+                    </select>
+                </div>
+                <div>
+                    <input id="txtvCSKeywordID"  name="txtvCSKeyword" type="text" value="Keyword / Part" maxlength="60" onFocus=" if(this.value == 'Keyword / Part') this.value='';" disabled="disabled"/>
+                </div>
+                <input type="submit" name="searchButton" id="searchButton_imageID" class="searchButton" value="Shop Now &raquo;" />
+            </form>	
+        </div><!-- END VEHICLE SELECT /-->            
+        <div id="slider" class="slider">
+        	<a href="https://www.facebook.com/lmctruck/" target="_blank" id="facebook">
+            	<img src="/support/images/pages/f_logo_icon_large.png" alt="Like Us On Facebook!"/>
+            </a>
+      		<iframe class="fb-like" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLmcTruck&amp;send=false&amp;layout=button_count&amp;width=44&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:44px; height:21px;" allowTransparency="true"></iframe>
+            <div class="flexslider">
+                <ul class="slides">
+                    <li data-thumb="/support/images/pages/map-home.jpg">
+                    	<div class="overlay hours">
+                        	<p><strong>Call Center Hours:</strong> <span style="width:200px;">Monday â Friday 7 a.m. to 11 p.m.</span> <span>Saturday 8 a.m. to 6 p.m.</span> <span>Sunday 9 a.m. to 6 p.m.</span></p>
+                            <p><strong>Parts Counter Hours:</strong> <span style="width:200px;">Monday â Friday 9 a.m. to 7 p.m.</span> <span>Saturday 9 a.m. to 6 p.m.</span> <span>Sunday 9 a.m. to 4 p.m.</span></p>
+                        </div>
+                    	<a href="http://goo.gl/maps/6gPp8" target="_blank">
+                        	<img src="/support/images/pages/map-home.jpg" alt="Map of LMC Truck" />
+                        </a>
+                    </li>
+                    <li data-thumb="/support/images/home/marketing-box-american-truck.jpg">
+                        <a href="/american-truck-search/">
+                        	<img src="/support/images/home/marketing-box-american-truck.jpg" alt="American Truck Search" />
+                        </a>
+                    </li>
+                    <li data-thumb="/support/images/home/marketing-box-customer-photos.jpg">
+                        <a href="/customerphotos/">
+                        	<img src="/support/images/home/marketing-box-customer-photos.jpg" alt="Customer Photos" />
+                        </a>
+                    </li>
+                    <li data-thumb="/support/images/home/marketing-box-gas-tank.jpg">
+                    	<a href="/rear-mount-gas-tank-kit/">
+                        	<img src="/support/images/home/marketing-box-gas-tank.jpg" align="Rear Mount Gas Tank Kit" />
+                        </a>
+                    </li>
+                    <li data-thumb="/support/images/home/marketing-box-truck-show.jpg">
+                        <a href="/events.htm">
+                        	<img src="/support/images/home/marketing-box-truck-show.jpg" alt="Enter Your Truck" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+   	  </div>
+    </section><!--/ END HERO ITEMS /-->      
+    <ul id="promos">        
+        <li>
+        	<a href="/freetruckpartscatalog/" class="featuredPromo">
+                <img src="/support/images/home/static-block-free-catalog.jpg" alt="Free Catalogs" />
+            </a>
+        </li>
+        <li>
+        	<a href="/licensed-products/#tShirts" class="featuredPromo">
+                <img src="/support/images/home/static-block-t-shirts.jpg" alt="New T-Shirts" />
+            </a>
+        </li>
+        <li>
+        	<a href="/67chevy/" class="featuredPromo">
+                <img src="/support/images/home/static-blocks-lowla.jpg" title="Low-La's Progress" alt="Low-La's Progress" />
+            </a>
+        </li>
+    </ul>
+    <div class="popularCategories">
+        <section class="clearfix">
+            <h3>Popular Categories</h3>
+            <ul class="clearfix">
+                <li>
+                    <a href="/door-parts/">
+                        <img src="/support/images/home/door-parts.jpg" alt="Door Parts" />
+                        <span class="moreInfo">Door Parts</span>
+                    </a>                
+                </li>                                       
+                <li>
+                    <a href="/bumpers/">
+                        <img src="/support/images/home/bumpers.jpg" alt="Bumpers" />
+                        <span class="moreInfo">Bumpers</span>
+                    </a>                
+                </li>
+                <li>
+                    <a href="/truck-mirrors/">
+                        <img src="/support/images/home/truck-mirrors.jpg" alt="Truck Mirrors" />
+                        <span class="moreInfo">Truck Mirrors</span>
+                    </a>                
+                </li>
+                <li>
+                    <a href="/custom-lighting/">
+                        <img src="/support/images/home/custom-lighting.jpg" alt="Custom Lighting" />
+                        <span class="moreInfo">Custom Lighting</span>
+                    </a>                
+                </li>
+            </ul>
+            <ul style="margin:15px 0 0 0;">
+                <li>
+                    <a href="/body-panels/">
+                        <img src="/support/images/home/body-panels.jpg" alt="Body Panels" />
+                        <span class="moreInfo">Body Panels</span>
+                    </a>                
+                </li>  
+                <li>
+                    <a href="/exterior-rubber/">
+                        <img src="/support/images/home/rubber-kits.jpg" alt="Exterior Rubber" />
+                        <span class="moreInfo">Rubber Kits</span>
+                    </a>                
+                </li>
+                <li>
+                    <a href="/interior/">
+                        <img src="/support/images/home/interior.jpg" alt="Interior" />
+                        <span class="moreInfo">Interior</span>
+                    </a>                
+                </li>
+                <li>
+                    <a href="/custom-grilles/">
+                        <img src="/support/images/home/custom-grilles.jpg" alt="Custom Grilles" />
+                        <span class="moreInfo">Custom Grilles</span>
+                    </a>                
+                </li>
+            </ul>
+        </section>
+    </div><!-- end popularProducts -->
+    <section id="homeText">
+    	<article>
+    		<h1>LMC Truck<small>&reg;</small></h1>
+            <h2>Truck Parts &amp; Accessories for Chevy, GMC, Ford and Dodge Trucks and SUVs</h2>
+            <p>Long Motor Corporation has over 30 years in business, and with over 30,000 truck parts in stock, we ship most orders complete within 24-48 business hours.</p>
+            <p>Our truck/SUV part catalogs are the most detailed, fully illustrated and accurate information source available anywhere. Some customers say our catalogs become their restoration guidebook. Our catalogs are Free.</p>
+            <p>When you do business with LMC Truck on the internet, telephone, fax or mail, you will receive the same quality of great service that has become our reputation. <a href="/about.htm">Here are TEN reasons</a> why you should give us a try!</p>
+            <p>Order Online 24/7 ... Fast, Simple and <a href="/privacy-policy.htm">Safe</a>.</p>
+       	</article>
+    </section>				
+    <section id="testimonials" class="clearfix">   
+    	<h3>What Our Customers Are Saying</h3>
+        <div class="one">
+            <img src="/support/images/testimonials/49-ford-mark-s-pennsylvania.jpg" alt="Customer Truck" />
+            <blockquote>
+                My neighbor and I just recently finished this 1949 Ford F1 truck with many parts from LMC Truck. It would be cool to have "Rusty" on the cover of your catalog. To us it would be better than being on the cover of Rolling Stones... Thank you!
+                <cite>- Mark S. Pennsylvania</cite>
+            </blockquote>
+        </div>
+    </section><!-- end testimonials -->
+    <iframe src="/support/iframe/security.html" scrolling="no" frameborder="0" class="security" width="780"></iframe>
+    <div class="clear"></div>
+	</div><!--end contentWrap-->
+	<div id="footWrap">
+    	<div class="clear"></div>
+    	<footer>
+        	<div id="footUpper">
+                <a href="/">Home</a>
+                <a href="/chevrolet/">Chevy</a>
+                <a href="/gmc/">GMC</a>
+                <a href="/ford/">Ford</a>
+                <a href="/dodge/">Dodge</a>
+                <a href="/features/">Featured Truck Parts</a>
+                <a href="/events.htm">Truck Shows</a>
+                <a href="/customerphotos/">Customer Photos</a>
+                <a href="/freetruckpartscatalog/">PDF Catalogs</a>
+                <a href="/sitemap.htm">Site Map</a>
+            </div><!-- end footUpper /-->                  	
+            <ul id="footLists">
+	            <li>
+                    <span>Your Order</span>
+                    <a href="/scripts/mgrqispi.dll?APPNAME=WebLmc&PRGNAME=Welcome&ARGUMENTS=-ATK,-A,-A,-A,-A,-N0,-A,-A,-AP&cart=qo">Online Ordering</a>
+                    <a href="/scripts/mgrqispi.dll?APPNAME=WebLmc&PRGNAME=Welcome&ARGUMENTS=-ATK,-A,-A,-A,-A,-N0,-A,-A,-AX&profile=orderstatus">Order Tracking</a>
+				</li>
+                <li>
+                	<span>Customer Service</span>
+                    <a href="/order-policy.htm">Order Policy</a>
+                    <a href="/delivery-info.htm">Delivery Information</a>
+                    <a href="/contact.htm">Contact LMC</a>
+                    <a href="/about.htm">About LMC</a>
+                </li>
+                <li>
+                	<span>Secure Shopping</span>
+                	<a href="/privacy-policy.htm">Privacy Policy</a>
+                </li>
+                <li>
+                	<span>More LMC Sites</span>
+                	<a href="http://www.victoriabritish.com">www.victoriabritish.com</a>
+                    <a href="http://www.blackdragonauto.com">www.blackdragonauto.com</a>
+                    <a href="http://www.lmcautocarpet.com/">www.lmcautocarpet.com</a>
+                </li>
+                <li>
+                	<span>Connect With Us</span>
+                	<a href="https://www.facebook.com/lmctruck/" target="_blank"><img src="/support/images/pages/facebook-icon.png" alt="Like Us On Facebook" /> Like Us On Facebook</a>
+                    <a href="http://instagram.com/lmctruck" target="_blank"><img src="/support/images/pages/instagram-icon.png" alt="Follow Us On Instagram" /> Visit Us On Instagram</a>
+                </li>            	
+            </ul>
+            <div class="clear"></div>
+            <div id="partsMenu">
+                <a href="/truck-parts.htm">Truck Parts</a>
+                <a href="/door-mirrors.htm">Door Mirrors</a>
+                <a href="/euro-headlights.htm">Euro Headlights</a>
+                <a href="/euro-tail-lights.htm">Euro Tail Lights</a>
+                <a href="/truck-grilles.htm">Truck Grilles</a>
+                <a href="/truck-bumpers.htm">Truck Bumpers</a>
+                <a href="/fuel-tanks.htm">Fuel Tanks</a>
+                <a href="/gas-tanks.htm">Gas Tanks</a>
+                <a href="/truck-accessories.htm">Truck Accessories</a>
+                <a href="/truck-covers.htm">Truck Covers</a>
+                <a href="/truck-floor-mats.htm">Floor Mats</a>
+        	</div>          
+            <div id="copyright">&copy; Copyright 2013 LMC Truck, a division of Long Motor Corporation</div>
+    	</footer>        
+    </div><!--end footWrap-->
+
+<!-- SiteCatalyst code version: H.24.1.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="/support/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName=""
+s.server=""
+s.channel=""
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><div class="noscript">
+	Your web browser settings are currently disabling the use of Javascript.  This page may not function correctly without Javascript.  <a href="http://lmctruck.com/internet-help.htm">Click here</a> for information regarding enabling Javascript.
+	</div><img src="http://longmotorcorp.112.2o7.net/b/ss/lmctruckbeta/1/H.24.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.1. -->
+<!--/********** DO NOT ALTER THIS LMC PROPRIETARY CODE! *************/ -->
+<script language="JavaScript" type="text/javascript">
+<!--//start hiding
+if (loaded_script) setSessionID();
+if (loaded_script) loadXMLDoc();
+//end hiding-->
+</script>
+<!--/********** END OF LMC PROPRIETARY CODE! *************/ -->
+</body>
+</html>

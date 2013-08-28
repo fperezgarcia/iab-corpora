@@ -1,0 +1,1589 @@
+
+	
+		
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" >
+<head>
+<script language=javascript type="text/javascript">
+
+/*
+Author: TrueCar
+Date: May 10, 2012
+Goal: Read referrer and drop cookie "blogrfr" if it's FB or Twitter, other values if not
+
+contstants: 
+blogrfr==twitter.com, blogrfr=facebook.com etc
+blogrfr==null (no cookies user, a referrer not on the link)
+blogrfr==truecar_blog (no referrer to blog)
+*/
+
+// cookie handler functions
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+// the logic upon pageload
+var wherefrom = "";
+wherefrom = document.referrer;
+
+if(wherefrom.indexOf('facebook.com') > 0) {
+	wherefrom = "facebook";
+} else if(wherefrom.indexOf('twitter.com') > 0) {
+	wherefrom = "twitter";
+} else if(wherefrom.indexOf('blog.truecar.com') > 0) {
+	wherefrom = "blog_truecar";
+} else {
+	wherefrom = "null";
+}
+
+// don't overwrite original referrer
+if(readCookie('blogrfr')) {
+	// it's already set; don't do a thing!
+} else {
+	createCookie('blogrfr',wherefrom,.05);
+}
+</script>
+	<title>Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show</title><link rel="alternate" type="application/rss+xml" title="TrueCar Blog &raquo; Feed" href="http://blog.truecar.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TrueCar Blog &raquo; Comments Feed" href="http://blog.truecar.com/comments/feed/" />
+
+			<script type="text/javascript">//<![CDATA[
+			// Google Analytics for WordPress by Yoast v4.2.8 | http://yoast.com/wordpress/google-analytics/
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-27850134-1']);
+							_gaq.push(['_trackPageview']);
+			(function () {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+			//]]></script>
+			<link rel="alternate" type="application/rss+xml" title="TrueCar Blog &raquo; Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show Comments Feed" href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/feed/" />
+<link rel='stylesheet' id='pibfi_pinterest-css'  href='http://blog.truecar.com/wp-content/plugins/pinterest-pin-it-button-for-images/ppibfi_pinterest.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='shadowbox-css-css'  href='http://blog.truecar.com/wp-content/uploads/shadowbox-js/src/shadowbox.css?ver=3.0.3' type='text/css' media='screen' />
+<link rel='stylesheet' id='shadowbox-extras-css'  href='http://blog.truecar.com/wp-content/plugins/shadowbox-js/css/extras.css?ver=3.0.3.10' type='text/css' media='screen' />
+<link rel='stylesheet' id='gantry832-css'  href='http://blog.truecar.com/wp-content/plugins/gantry/css/gantry.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='grid-12106-css'  href='http://blog.truecar.com/wp-content/plugins/gantry/css/grid-12.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress931-css'  href='http://blog.truecar.com/wp-content/plugins/gantry/css/wordpress.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress666-css'  href='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/css/wordpress.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='template410-css'  href='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/css/template.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='wp118-css'  href='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/css/wp.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='overlays57-css'  href='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/css/overlays.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='typography288-css'  href='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/css/typography.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='fusionmenu161-css'  href='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/css/fusionmenu.css?ver=1.25' type='text/css' media='all' />
+<link rel='stylesheet' id='roktabs.css-css'  href='http://blog.truecar.com/wp-content/plugins/wp_roktabs/tmpl/light/roktabs.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rokstories_css-css'  href='http://blog.truecar.com/wp-content/plugins/wp_rokstories/tmpl/css/rokstories.css?ver=3.4.1' type='text/css' media='all' />
+<link rel="stylesheet" href="http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/style.css" type="text/css"/><script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=2.4.4'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/pinterest-pin-it-button-for-images/ppibfi_pinterest.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/gantry/js/mootools.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-includes/js/comment-reply.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/gantry/js/gantry-inputs.js?ver=1.25'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/gantry/js/gantry-smartload.js?ver=1.25'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/themes/rt_zephyr_wp/js/rt-rokstories-thumb-scroller.js?ver=1.25'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/gantry/js/fusion.js?ver=1.25'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/wp_roktabs/js/roktabs.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/plugins/wp_rokstories/tmpl/js/rokstories.js?ver=3.4.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.truecar.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.truecar.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='January TrueTrends: Greatest Discounts' href='http://blog.truecar.com/2012/01/19/january-truetrends-greatest-discounts/' />
+<link rel='next' title='Industry News Daily — Thursday, January 19, 2012' href='http://blog.truecar.com/2012/01/19/industry-news-daily-thursday-january-19-2012/' />
+<meta name="generator" content="WordPress 3.4.1" />
+<link rel='shortlink' href='http://blog.truecar.com/?p=19144' />
+
+<!-- All in One SEO Pack 1.6.15.2 by Michael Torbert of Semper Fi Web Designob_start_detected [,] -->
+<meta name="description" content="Reporters who endured Volkswagen's goofy interpretive modern dance/hiphop dance routines at the North American International Auto Show were rewarded with a sneak peek at Volkswagen's 2013 Jetta hybrid sedan." />
+<meta name="keywords" content="volkswagen, jetta, hybrid, 2013 volkswagen jetta hybrid, north american international auto show, detroit auto show, naias,hybrid,jetta" />
+<link rel="canonical" href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/" />
+<!-- /all in one seo pack -->
+<script type='text/javascript'> var ContentWidth = '610'; </script>
+
+<!-- Start WP Socializer | Social Buttons CSS File -->
+<link rel="stylesheet" type="text/css" media="all" href="http://blog.truecar.com/wp-content/plugins/wp-socializer/public/css/wp-socializer-buttons-css.css?v=2.4.4" />
+<!-- End WP Socializer | Social Buttons CSS File -->
+
+<!-- WP Socializer - Twitter Script -->
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<!-- WP Socializer - End Twitter Script -->
+
+<!-- WP Socializer - ShareThis Script -->
+<script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.9ee42097-c0ff-460b-923f-bcba5bd5c5ea'});var st_type='wordpress';</script>
+<!-- WP Socializer - End ShareThis Script -->
+
+<!-- WP Socializer - +1 Script -->
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<!-- WP Socializer - End +1 Script -->
+<script type="text/javascript">var RokStoriesImage = {}, RokStoriesLinks = {};</script>
+	<style type="text/css">
+		<!--
+body {background:#0058AB;}
+.details-layout3 .rt-articleinfo {background-color:#0058AB;}
+body, a:hover, #rt-popuplogin .inputbox {color:#AAAAAA;}
+a, #rt-popuplogin .readon, #rt-popuplogin .readon .button, ul.roknewspager-numbers li.active {color:#4199D4;}
+#rt-header, #rt-header a:hover, #rt-header .title, #rt-header .inputbox, #rt-top, #rt-top a:hover, #rt-top .title, #rt-top .inputbox {color:#AAAAAA;}
+#rt-header a, #rt-header .title span, #rt-header .readon span, #rt-header .readon .button, #rt-top a, #rt-top .title span, #rt-top .readon span, #rt-top .readon .button, #rt-header ul.roknewspager-numbers li.active, #rt-top ul.roknewspager-numbers li.active {color:#0058AB;}
+#rt-navigation {background-color:#004480;}
+#rt-navigation, #rt-navigation .inputbox, .fusion-submenu-wrapper .readon .button, .fusion-submenu-wrapper .readon, #rt-navigation .fusion-submenu-wrapper .readon .button, #rt-navigation .fusion-submenu-wrapper .readon {color:#FFFFFF;}
+.title1 .title, .title2 .title, .title1 .module-title .title span, .title2 .module-title .title span {color:#FFFFFF !important;}
+#rt-navigation .module-content a, #rt-navigation .readon .button {color:#373737;}
+.menutop li.active.root > .item, .menutop li.active.root.f-mainparent-itemfocus > .item, .menutop li.root:hover > .item, .menutop li.root.f-mainparent-itemfocus > .item, .menu-type-splitmenu .menutop li.active > .item, .menu-type-splitmenu .menutop li:hover > .item, .menutop .fusion-submenu-wrapper, .title2 .module-title {background-color:#373737;}
+.menutop li.root > .item, .menutop li > .item {color:#FFFFFF;}
+#rt-showcase, .title1 .module-title, .box7 .rt-block, .box10 .rt-block {background-color:#d9d9d9;}
+#rt-showcase, #rt-showcase a:hover, #rt-showcase .inputbox, #rt-showcase .created-date {color:#373737;}
+.box7, .box7 .title, .box7 a:hover, .box10, .box10 .title, .box10 a:hover {color:#373737 !important;}
+#rt-showcase a, #rt-showcase .readon .button, #rt-showcase .title span, #rt-showcase ul.roknewspager-numbers li.active {color:#0058AB;}
+.box7 a, .box7 .title span, .box7 .roktabs-links li.active span, .box7 ul.roknewspager-numbers li.active, .box10 a, .box10 .title span, .box7 .button, .box10 .button, .box10 .roktabs-links li.active span, .box10 ul.roknewspager-numbers li.active {color:#0058AB !important;}
+#rt-feature, .box8 .rt-block, .box11 .rt-block, .title3 .module-title {background-color:#ffffff;}
+#rt-feature, #rt-feature a:hover, #rt-feature .inputbox {color:#373737;}
+.box8, .box8 .title, .box8 a:hover, .box11, .box11 .title, .box11 a:hover, .title3 .module-title .title {color:#373737 !important;}
+#rt-feature a, #rt-feature .readon .button, #rt-feature .title span, #rt-feature ul.roknewspager-numbers li.active {color:#0058AB;}
+.box8 a, .box8 .title span, .box8 .button, .box8 .roktabs-links li.active span, .box8 ul.roknewspager-numbers li.active, .box11 a, .box11 .title span, .box11 .button, .box11 .roktabs-links li.active span, .box11 ul.roknewspager-numbers li.active, .title3 .module-title .title span {color:#0058AB !important;}
+body #roksearch_results {background:#FFFFFF;}
+.rt-main-inner {background-color:#FFFFFF;}
+#rt-main, legend, #rokajaxsearch .inputbox, #rt-mainbody .inputbox, #rt-mainbody input#email, #rt-mainbody input#author, #rt-mainbody input#url, #rt-mainbody textarea#comment, #rt-mainbody input#name, #rt-mainbody input#username, #rt-mainbody input#password, #rt-mainbody input#password2, #rt-mainbody input#passwd, #rt-main a:hover {color:#373737;}
+.roktabs-links li.active span, .heading1, #rt-main .readon .button, #rt-main ul.roknewspager-numbers li.active {color:#0058AB;}
+#rt-bottom-surround, .box9 .rt-block, .box12 .rt-block {background-color:transparent;}
+#rt-bottom, #rt-bottom a:hover, #rt-bottom .title, #rt-bottom .inputbox, #rt-copyright, #rt-copyright a:hover, #rt-copyright .title, #rt-copyright .inputbox {color:#AAAAAA;}
+.box9, .box9 .title, .box9 a:hover, .box12, .box12 .title, .box12 a:hover {color:#AAAAAA !important;}
+#rt-bottom a, #rt-bottom .readon .button, #rt-bottom .title span, #rt-copyright a, #rt-copyright .title span, #rt-copyright .readon .button, #rt-bottom ul.roknewspager-numbers li.active {color:#CF3F1B;}
+.box9 a, .box9 .title span, .box9 .button, .box9 .roktabs-links li.active span, .box9 ul.roknewspager-numbers li.active, .box12 a, .box12 .title span, .box12 .button, .box12 .roktabs-links li.active span, .box12 ul.roknewspager-numbers li.active {color:#CF3F1B !important;}
+#rt-footerbar {background-color:transparent;}
+#rt-footer, #rt-footer .title, #rt-footer a:hover, #rt-footer .inputbox {color:#d1cdcd;}
+#rt-footer a, #rt-footer .readon .button, #rt-footer .title span, #rt-footer ul.roknewspager-numbers li.active {color:#FFFFFF;}
+
+		-->
+	</style>
+	<script type="text/javascript">
+InputsExclusion.push('.content_vote,#rt-popup')
+	</script>
+	<script type="text/javascript">//<![CDATA[
+window.addEvent('domready', function() {new GantrySmartLoad({'offset': {'x': 50, 'y': 50}, 'placeholder': '/wp-content/themes/rt_zephyr_wp/images/blank.gif', 'exclusion': ['']});
+
+				var switcher = document.id('gantry-viewswitcher');
+				if (switcher) {
+					switcher.addEvent('click', function(e) {
+						e.stop();
+						if ('0' == '0') document.id('gantry-viewswitcher').addClass('off');
+						else $('gantry-viewswitcher').removeClass('off');
+						Cookie.write('zephyr-linux-switcher', '0');
+						window.location.reload();
+					});
+				}
+		            new Fusion('ul.menutop', {
+                pill: 0,
+                effect: 'slide and fade',
+                opacity:  1,
+                hideDelay:  500,
+                centered:  0,
+                tweakInitial: {'x': -10, 'y': -10},
+                tweakSubsequent: {'x':  0, 'y':  0},
+                tweakSizes: {'width': 20, 'height': 20},
+                menuFx: {duration:  400, transition: Fx.Transitions.Circ.easeOut},
+                pillFx: {duration:  400, transition: Fx.Transitions.Back.easeOut}
+            });
+            
+});	//]]></script>
+</head>
+	<body  class="single single-post postid-19144 single-format-standard bodylevel-high background-none page-overlay-dark readonstyle-button fixedfooter-0 font-family-helvetica font-size-is-default col12">
+	
+		<div id="rt-page-background" class="page-overlay-dark">
+			<div class="rt-container">
+								
+				<div id="rt-body-surround">
+					<div class="rt-box-top"><div class="rt-box-top2"></div><div class="rt-box-top3"></div></div>
+					<div class="rt-box-bg"><div class="rt-box-bg2"><div class="rt-box-bg3">
+					
+					
+								<div id="rt-header" class="header-overlay-dark">
+					            <div class="rt-grid-12 rt-alpha rt-omega">
+            <div id="text-6" class="widget widget_text rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content">			<div class="textwidget">	<!-- Header -->
+	<script type="text/javascript">
+	(function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/plusone.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();
+	</script>
+	<div id="header">
+	<div class="date"><script language="JavaScript"> var current_date = new Date ( );   var month_names = new Array ( ); month_names[month_names.length] = "January"; month_names[month_names.length] = "February"; month_names[month_names.length] = "March"; month_names[month_names.length] = "April"; month_names[month_names.length] = "May"; month_names[month_names.length] = "June"; month_names[month_names.length] = "July"; month_names[month_names.length] = "August"; month_names[month_names.length] = "September"; month_names[month_names.length] = "October"; month_names[month_names.length] = "November"; month_names[month_names.length] = "December";   var day_names = new Array ( ); day_names[day_names.length] = "Sunday"; day_names[day_names.length] = "Monday"; day_names[day_names.length] = "Tuesday"; day_names[day_names.length] = "Wednesday"; day_names[day_names.length] = "Thursday"; day_names[day_names.length] = "Friday"; day_names[day_names.length] = "Saturday";   document.write ( day_names[current_date.getDay()] ); document.write ( ", " ); document.write ( month_names[current_date.getMonth()] ); document.write ( " " + current_date.getDate() ); document.write ( " " ); document.write ( ", " + current_date.getFullYear() );</script></div>
+	<div class="social">
+	<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A//www.truecar.com%2F&amp;layout=button_count&amp;width=90&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:25px;" allowTransparency="true"></iframe>
+	</div>
+	<div id="plus1"><g:plusone size="small"></g:plusone></div>
+	<a id="header_link" href="http://blog.truecar.com/" ></a>
+	<span class="about"><a href="http://truecar.com/about_us.html" ></a></span>
+	<form method="get" id="searchform" action="/">
+	<label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" size="18" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="" class="btn" />
+	</form>
+	</div><!-- /Header --></div>
+		<div class="clear"></div></div></div></div></div></div>					<div class="clear"></div>
+				</div>
+					
+												<div id="rt-navigation" class="navigation-overlay-dark">
+							<div id="gantry_menu-3" class="widget widget_gantry_menu">		<div class="nopill">
+		        <ul class="menutop level1 theme-fusion ">
+	        		                
+        <li class=" item25825 first-item root" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/deals_discounts/" >
+            <span>
+                                       Deals & Discounts                                      </span>
+            </a>
+	                </li>
+        	        		                
+        <li class=" item25827 parent root" >
+            <a class="daddy item bullet" href="http://blog.truecar.com/category/features/" >
+            <span>
+                                       Features                                      </span>
+            </a>
+	        		        	        	<div class="fusion-submenu-wrapper navigation-overlay-dark level2" style="width:180px;">
+	        				            <ul class="level2" style="width:180px;">
+			            				                    
+        <li class=" item25828" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/features/car-culture/" >
+            <span>
+                                       Car Culture                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25829" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/features/fuel_economy/" >
+            <span>
+                                       Fuel Economy                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26292" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/features/racing/" >
+            <span>
+                                       Racing                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25821" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/features/safety_technology/" >
+            <span>
+                                       Safety & Technology                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <div class="drop-bot"></div>
+		        </div>
+		        	                </li>
+        	        		                
+        <li class=" item25833 parent root" >
+            <a class="daddy item bullet" href="http://blog.truecar.com/category/new_car_review_info/" >
+            <span>
+                                       New Car Reviews & Info                                      </span>
+            </a>
+	        		        	        	<div class="fusion-submenu-wrapper navigation-overlay-dark level2" style="width:180px;">
+	        				            <ul class="level2" style="width:180px;">
+			            				                    
+        <li class=" item25822 parent" >
+            <a class="daddy item bullet" href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/" >
+            <span>
+                                       Auto Shows & Future Cars                                      </span>
+            </a>
+	        		        	        	<div class="fusion-submenu-wrapper navigation-overlay-dark level3" style="width:180px;">
+	        				            <ul class="level3" style="width:180px;">
+			            				                    
+        <li class=" item25823" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/chicago-auto-show-auto_shows_future_cars/" >
+            <span>
+                                       Chicago Auto Show                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25826" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/detroit-auto-show/" >
+            <span>
+                                       Detroit Auto Show                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25832" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/los-angeles-auto-show/" >
+            <span>
+                                       Los Angeles Auto Show                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25834" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/new-york-auto-show/" >
+            <span>
+                                       New York Auto Show                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <div class="drop-bot"></div>
+		        </div>
+		        	                </li>
+        			            				                    
+        <li class=" item25818" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/new_car_review_info/pricing_product_info/" >
+            <span>
+                                       Pricing and Product Info                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25869" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/new_car_review_info/truedrive/" >
+            <span>
+                                       TrueDrive                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <div class="drop-bot"></div>
+		        </div>
+		        	                </li>
+        	        		                
+        <li class=" item25835 parent root" >
+            <a class="daddy item bullet" href="http://blog.truecar.com/category/news_analysis_trends/" >
+            <span>
+                                       News Analysis & Trends                                      </span>
+            </a>
+	        		        	        	<div class="fusion-submenu-wrapper navigation-overlay-dark level2" style="width:180px;">
+	        				            <ul class="level2" style="width:180px;">
+			            				                    
+        <li class=" item25824" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/news_analysis_trends/consumer_news/" >
+            <span>
+                                       Consumer News                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25830" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/news_analysis_trends/industry_news/" >
+            <span>
+                                       Industry News                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25798" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/news_analysis_trends/recalls/" >
+            <span>
+                                       Recalls                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25801" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/news_analysis_trends/truetrends/" >
+            <span>
+                                       TrueTrends                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <div class="drop-bot"></div>
+		        </div>
+		        	                </li>
+        	        		                
+        <li class=" item25800 parent root" >
+            <a class="daddy item bullet" href="http://blog.truecar.com/category/shopping_buying_tips/" >
+            <span>
+                                       Shopping, Buying & Leasing Tips                                      </span>
+            </a>
+	        		        	        	<div class="fusion-submenu-wrapper navigation-overlay-dark level2" style="width:180px;">
+	        				            <ul class="level2" style="width:180px;">
+			            				                    
+        <li class=" item25799" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/shopping_buying_tips/shopping_tips/" >
+            <span>
+                                       Shopping Tips                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25831" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/shopping_buying_tips/leasing/" >
+            <span>
+                                       Leasing                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <div class="drop-bot"></div>
+		        </div>
+		        	                </li>
+        	        		                
+        <li class=" item26324 parent root grouped-parent" >
+            <a class="daddy item bullet" href="http://blog.truecar.com/category/vehicle_make/" >
+            <span>
+                                       Vehicle Makes                                      </span>
+            </a>
+	        		        	        	<div class="fusion-submenu-wrapper navigation-overlay-dark level2 columns2" style="width:200px;">
+	        				            <ul class="level2" style="width:90px;">
+			            				                    
+        <li class=" item25836" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/acura-vehicle_make/" >
+            <span>
+                                       Acura                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25838" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/audi/" >
+            <span>
+                                       Audi                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25837" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/aston_martin/" >
+            <span>
+                                       Aston Martin                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25839" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/bentley/" >
+            <span>
+                                       Bentley                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25840" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/bmw-vehicle_make/" >
+            <span>
+                                       BMW                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25841" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/buick-vehicle_make/" >
+            <span>
+                                       Buick                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25842" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/cadillac-vehicle_make/" >
+            <span>
+                                       Cadillac                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25843" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/chevrolet-vehicle_make/" >
+            <span>
+                                       Chevrolet                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25844" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/chrysler-vehicle_make/" >
+            <span>
+                                       Chrysler                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25845" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/dodge-vehicle_make/" >
+            <span>
+                                       Dodge                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25846" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/ferrari/" >
+            <span>
+                                       Ferrari                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25847" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/fiat-vehicle-make/" >
+            <span>
+                                       Fiat                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25848" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/ford-vehicle_make/" >
+            <span>
+                                       Ford                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25849" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/gmc-vehicle_make/" >
+            <span>
+                                       GMC                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25850" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/honda-vehicle_make/" >
+            <span>
+                                       Honda                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25851" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/hummer/" >
+            <span>
+                                       HUMMER                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25852" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/hyundai-vehicle_make/" >
+            <span>
+                                       Hyundai                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25853" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/infiniti-vehicle_make/" >
+            <span>
+                                       Infiniti                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25870" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/jaguar/" >
+            <span>
+                                       Jaguar                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25871" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/jeep/" >
+            <span>
+                                       Jeep                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25872" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/kia-vehicle_make/" >
+            <span>
+                                       Kia                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25873" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/lamborghini/" >
+            <span>
+                                       Lamborghini                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25874" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/land_rover/" >
+            <span>
+                                       Land Rover                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25875" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/lexus-vehicle_make/" >
+            <span>
+                                       Lexus                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <ul class="level2" style="width:110px;">
+			            				                    
+        <li class=" item25876" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/lincoln-vehicle_make/" >
+            <span>
+                                       Lincoln                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25877" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/lotus/" >
+            <span>
+                                       Lotus                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25878" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/maserati/" >
+            <span>
+                                       Maserati                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25879" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/maybach/" >
+            <span>
+                                       Maybach                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25881" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/mercedes-benz-vehicle_make/" >
+            <span>
+                                       Mercedes-Benz                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25880" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/mazda/" >
+            <span>
+                                       Mazda                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item25882" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/mercury-vehicle_make/" >
+            <span>
+                                       Mercury                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26332" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/mini/" >
+            <span>
+                                       MINI                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26338" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/mitsubishi-vehicle_make/" >
+            <span>
+                                       Mitsubishi                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26339" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/nissan-vehicle_make/" >
+            <span>
+                                       Nissan                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26340" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/porsche-vehicle_make/" >
+            <span>
+                                       Porsche                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26341" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/ram-vehicle_make/" >
+            <span>
+                                       Ram                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26342" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/renault/" >
+            <span>
+                                       Renault                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26343" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/rolls-royce/" >
+            <span>
+                                       Rolls-Royce                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26344" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/saab/" >
+            <span>
+                                       Saab                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26345" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/scion-vehicle_make/" >
+            <span>
+                                       Scion                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26346" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/smart/" >
+            <span>
+                                       Smart                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26347" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/subaru/" >
+            <span>
+                                       Subaru                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26348" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/suzuki/" >
+            <span>
+                                       Suzuki                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26349" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/tesla/" >
+            <span>
+                                       Tesla                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26350" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/toyota-vehicle_make/" >
+            <span>
+                                       Toyota                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26351" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/volkswagen/" >
+            <span>
+                                       Volkswagen                                      </span>
+            </a>
+	                </li>
+        			            				                    
+        <li class=" item26352" >
+            <a class="orphan item bullet" href="http://blog.truecar.com/category/vehicle_make/volvo-vehicle_make/" >
+            <span>
+                                       Volvo                                      </span>
+            </a>
+	                </li>
+        			            		            </ul>
+		            		            <div class="drop-bot"></div>
+		        </div>
+		        	                </li>
+        	                </ul>
+        		</div>
+		</div>					    	<div class="clear"></div>
+						</div>
+						<div class="rt-shadowbar"></div>
+																		<div id="rt-showcase" class="showcase-overlay-dark">
+							            <div class="rt-grid-12 rt-alpha rt-omega">
+            <div class="rt-rokstories"><div id="widget-rokstories-3" class="widget widget_rokstories rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content"><script type="text/javascript">
+		/* <![CDATA[ */
+		RokStoriesImage['rokstories-3'] = [];
+		RokStoriesLinks['rokstories-3'] = [];
+		window.addEvent('domready', function() {
+			new RokStories('rokstories-3', {
+				'id': 3,
+				'startElement': 0,
+				'thumbsOpacity': 0.3,
+				'mousetype': 'click',
+				'autorun': 1,
+				'delay': 5000,
+				'scrollerDuration': 1000,
+				'scrollerTransition': Fx.Transitions.Expo.easeInOut,
+				'startWidth': 'auto',
+				'layout': 'layout1',
+				'linkedImgs': 0,
+				'showThumbs': 0,
+				'fixedThumb': 1,
+				'mask': 1,
+				'descsAnim': 'topdown',
+				'imgsAnim': 'bottomup',
+				'thumbLeftOffsets': {x: -40, y: -100},
+				'thumbRightOffsets': {x: -30, y: -100}
+			});
+		});
+					RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/uploads/2013/07/New-TrueTrends-Logo-small.jpg');
+									RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/Steals-on-wheels_minivan_back-to-school_family-with-van_thinkstock-146821450-400x200.jpg');
+									RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/August-2013-new-car-lease-finance-incentives_family-with-car-thinkstock-200382910-001-400x200.jpg');
+									RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/Steals-on-wheels_couple-with-keys_thinkstock-1646430291-400x200.jpg');
+									RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/August-2013-True-Trends-Model-Year-Share-s-400x200.jpg');
+									RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/uploads/2011/10/TrueCar-bluetag-Know-the-real-pricex25011.jpeg');
+									RokStoriesImage['rokstories-3'].push('http://blog.truecar.com/wp-content/uploads/2011/04/truecar-tag-color-web-large.jpg');
+				/* ]]> */
+</script>
+
+<div id="rokstories-3" class="rokstories-layout1"  >
+	<div class="feature-block">
+		<div class="image-container feature-pad" style="float: right">
+			<div class="image-full"></div>
+			<div class="image-small">
+			    							<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/New-TrueTrends-Logo-small-90x60.jpg" class="feature-sub" alt="image" width="90" height="60" />
+																	<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/Steals-on-wheels_minivan_back-to-school_family-with-van_thinkstock-146821450-90x60.jpg" class="feature-sub" alt="image" width="90" height="60" />
+																	<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/August-2013-new-car-lease-finance-incentives_family-with-car-thinkstock-200382910-001-90x60.jpg" class="feature-sub" alt="image" width="90" height="60" />
+																	<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/Steals-on-wheels_couple-with-keys_thinkstock-1646430291-90x60.jpg" class="feature-sub" alt="image" width="90" height="60" />
+																	<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/August-2013-True-Trends-Model-Year-Share-s-90x60.jpg" class="feature-sub" alt="image" width="90" height="60" />
+																	<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/TrueCar-bluetag-Know-the-real-pricex25011-90x60.jpeg" class="feature-sub" alt="image" width="90" height="60" />
+																	<img src="http://blog.truecar.com/wp-content/plugins/wp_rokstories/cache/truecar-tag-color-web-large-90x60.jpg" class="feature-sub" alt="image" width="90" height="60" />
+													</div>
+					</div>
+		<div class="desc-container">
+			        
+			<div class="description">
+															<span class="feature-title">TrueCar Releases August 2013 TrueTrends</span>					
+																				
+															<span class="feature-desc"><a href="http://blog.truecar.com/wp-content/uploads/2011/09/New-TrueTrends-Logo1.jpg"></a>
+
+Our August 2013 TrueTrends analysis provides the consumer a fresh approach to data presentation with crisp, clear insight into the health and future of the automotive industry. </span>
+											    
+															<a href="http://blog.truecar.com/2013/08/21/truecar-releases-august-2013-truetrends/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	                
+			<div class="description">
+															<span class="feature-title">Steals on Wheels: August 7 to 21, 2013 — Back to School SUV and Minivan Edition</span>					
+																				
+															<span class="feature-desc"><a title="Steals-on-wheels_minivan_back-to-school_family-with-van" href="http://blog.truecar.com/wp-content/uploads/2013/08/Steals-on-wheels_minivan_back-to-school_family-with-van_thinkstock-146821450.jpg"></a>
+Summer is almost over, and schools across the country are preparing to open their doors for a new school year. Are you ready for a new year of carpools and carlines, and grumpy kids complaining "He touched me!"?</span>
+											    
+															<a href="http://blog.truecar.com/2013/08/08/steals-on-wheels-august-7-to-21-2013-back-to-school-suv-and-minivan-edition/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	                
+			<div class="description">
+															<span class="feature-title">Top New Car Lease, Cash, and Finance Deals for August 2013</span>					
+																				
+															<span class="feature-desc"><a title="August 2013 new car lease and finance incentives" href="http://blog.truecar.com/wp-content/uploads/2013/08/August-2013-new-car-lease-finance-incentives_family-with-car-thinkstock-200382910-001.jpg"></a>
+Labor Day weekend is approaching, and as summer ends, manufacturers are extending some great lease and finance deals to help move cars off the lots and into buyer’s garages.</span>
+											    
+															<a href="http://blog.truecar.com/2013/08/14/top-new-car-lease-cash-and-finance-deals-for-august-2013/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	                
+			<div class="description">
+															<span class="feature-title">Steals on Wheels August 21 to September 3, 2013, Labor Day Deals</span>					
+																				
+															<span class="feature-desc"><a href="http://blog.truecar.com/wp-content/uploads/2013/08/Steals-on-wheels_couple-with-keys_thinkstock-1646430291.jpg"></a>
+It’s the end of the summer, and whether you’re planning for a family road trip before you head back to school, are upsizing your vehicle to make it easier to carry kids in carpools, or just need something to help you transport lots of stuff, we’ve selected ten vehicles that are likely to be the best deals available over the Labor Day weekend.</span>
+											    
+															<a href="http://blog.truecar.com/2013/08/21/steals-on-wheels-august-21-to-september-3-2013-labor-day-deals/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	                
+			<div class="description">
+															<span class="feature-title">August 2013 TrueTrends: Model Year Share</span>					
+																				
+															<span class="feature-desc"><a title="August-2013-True-Trends-Model-Year-Share" href="http://blog.truecar.com/wp-content/uploads/2013/08/August-2013-True-Trends-Model-Year-Share-s.jpg"></a>
+
+Model Year Share shows the percentage share of 2012, 2013, and 2014 model year vehicles sold within the last month versus vehicles of any other model year sold. </span>
+											    
+															<a href="http://blog.truecar.com/2013/08/20/august-2013-truetrends-model-year-share/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	                
+			<div class="description">
+															<span class="feature-title">August 2013 TrueTrends: Greatest Discounts</span>					
+																				
+															<span class="feature-desc"><a href="http://blog.truecar.com/wp-content/uploads/2011/10/TrueCar-bluetag-Know-the-real-pricex25011.jpeg"></a>The greatest percent below MSRP helps identify the biggest consumer discounts of the month. Here, TrueCar.com ranks 2013 vehicles with average transaction prices that comprise the greatest percent off the make or model’s average MSRP for August 2013.</span>
+											    
+															<a href="http://blog.truecar.com/2013/08/16/august-2013-truetrends-greatest-discounts/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	                
+			<div class="description">
+															<span class="feature-title">August 2013 TrueTrends: Largest Total Incentives</span>					
+																				
+															<span class="feature-desc"><a href="http://blog.truecar.com/wp-content/uploads/2011/04/truecar-tag-color-web-large.jpg"></a>This table shows the highest incentive for each brand ranked for the month of August 2013. (Generally, incentives are active throughout the month in which TrueTrends by TrueCar.com is released.)</span>
+											    
+															<a href="http://blog.truecar.com/2013/08/16/august-2013-truetrends-largest-total-incentives/" class="readon"><span>Read the Full Story</span></a>
+												</div>
+	        		</div>
+			</div>
+</div><div class="clear"></div></div></div></div></div></div></div>							<div class="clear"></div>
+						</div>
+						<div class="rt-shadowbar"></div>
+																																									                    <div id="rt-main-overlay" class="body-overlay-light">
+	        <div id="rt-main" class="mb9-sa3">
+	        	<div class="rt-main-inner">
+	                <div class="rt-grid-9 ">
+	    
+	                	
+	                <div class="rt-block">
+		                		                <div class="title3 details-layout1 box-">
+		                    <div id="rt-mainbody">
+		                        
+
+	<div class="rt-wordpress">
+		<div class="rt-post">
+			
+					
+			<!-- Begin Post -->
+			
+			<div class="rt-article">					
+			
+				<div class="post-19144 post type-post status-publish format-standard hentry category-auto_shows_future_cars category-brandy_schaffels category-detroit-auto-show category-new_car_review_info category-volkswagen tag-hybrid tag-jetta" id="post-19144">
+					
+						
+					<!-- Begin Title -->
+				
+					<div class="module-title-surround">
+						<div class="module-title">
+										
+							<h1 class="title">
+								Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show							</h1>
+							
+						</div>
+					</div>
+					<div class="clear"></div>
+						
+					<!-- End Title -->
+						
+										
+												
+					<!-- Begin Meta -->
+					
+					<div class="rt-articleinfo">
+						<div class="rt-articleinfo-text">
+					
+														
+							<!-- Begin Date & Time -->
+		
+							<span class="rt-date-posted"><!--Posted on --> Thursday, 19 January 2012 09:00</span>
+							
+							<!-- End Date & Time -->
+							
+														
+															
+													
+							<!-- Begin Author -->
+						
+							<span class="rt-author">Written by Brandy Schaffels</span>
+							
+							<!-- End Author -->
+							
+														
+							
+						</div>
+					</div>
+					
+					<!-- End Meta -->
+					
+										
+					<div class="module-content">
+					
+						<!-- Begin Post Content -->		
+					
+						<div style="padding-bottom: 5px;">
+<!-- Start WP Socializer Plugin - Sharethis Button -->
+<span class='st_facebook_buttons' st_title='Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show' st_url='http%3A%2F%2Fblog.truecar.com%2F2012%2F01%2F19%2Fvolkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show%2F' displayText='share'></span><span class='st_twitter_buttons' st_title='Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show' st_url='http%3A%2F%2Fblog.truecar.com%2F2012%2F01%2F19%2Fvolkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show%2F' displayText='share'></span><span class='st_email_buttons' st_title='Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show' st_url='http%3A%2F%2Fblog.truecar.com%2F2012%2F01%2F19%2Fvolkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show%2F' displayText='share'></span><span class='st_sharethis_buttons' st_title='Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show' st_url='http%3A%2F%2Fblog.truecar.com%2F2012%2F01%2F19%2Fvolkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show%2F' displayText='share'></span>
+<!-- End WP Socializer Plugin - Sharethis Button -->
+</div><span class="wpsr_floatbts_anchor"></span><p style="text-align: center;"><a title="2013-Volkswagen-Jetta-Hybrid-action-lead" href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/2013-volkswagen-jetta-hybrid-action-lead/"  rel="attachment wp-att-19145" target="_blank">
+		<span class="pibfi_pinterest">
+		<img class="aligncenter size-full wp-image-19145" style="border-style: initial; border-color: initial; border-image: initial; border-width: 0px; margin: 5px;" title="2013-Volkswagen-Jetta-Hybrid-action-lead" src="http://tcblog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-action-lead1.jpg" alt="2013-Volkswagen-Jetta-Hybrid-action-lead" width="600" height="176" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://tcblog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-action-lead1.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a></p>
+<p>Reporters who endured <a title="get specs and pricing on a variety of Volkswagen models" href="http://www.truecar.com/prices-new/volkswagen/" >Volkswagen</a>'s goofy interpretive/modern/hiphop dance routines at the North American International Auto Show were rewarded with a sneak peek at Volkswagen's first hybrid sedan.<span id="more-19144"></span></p>
+<h2><strong>2013 Volkswagen Jetta Hybrid Powertrain</strong></h2>
+<p>Powered by a 150-horsepower/1.4-liter turbocharged four-cylinder engine mated to a 20-kW electric motor, the new hybrid Jetta sedan promises an average combined fuel economy of about 45 miles per gallon, and acceleration from 0 to 60 mph in less than 9 seconds. Meanwhile, the maximum horsepower of this powertrain surpasses what's produced by the 170-horsepower/2.5-liter five-cylinder engine found in the conventionally powered <a title="get specs and pricing on the Volkswagen Jetta" href="http://www.truecar.com/prices-new/volkswagen/jetta-sedan-pricing/" >Jetta sedan</a>.</p>
+<p><a title="2013-Volkswagen-Jetta-Hybrid" href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/2013-volkswagen-jetta-hybrid1/"  rel="attachment wp-att-19154" target="_blank">
+		<span class="pibfi_pinterest">
+		<img class="alignright size-full wp-image-19154" style="border-style: initial; border-color: initial; border-image: initial; border-width: 0px; margin: 5px;" title="2013-Volkswagen-Jetta-Hybrid1" src="http://tcblog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid11.jpg" alt="2013-Volkswagen-Jetta-Hybrid" width="400" height="266" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://tcblog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid11.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>Thanks to its 220-volt, 1.1kWh lithium-ion battery pack, the 2013 Jetta hybrid can be driven in electric-only mode at speeds up to about 45 mph for a distance of about 1.3 miles, depending on terrain and operating conditions.</p>
+<p>Much like its big brother, the <a title="get specs and pricing on the Volkswagen Touareg SUV" href="http://www.truecar.com/prices-new/volkswagen/touareg-pricing/" >Volkswagen Touareg</a> hybrid SUV, the Jetta hybrid compact sedan boasts a decoupling clutch that fully disengages the gasoline engine from the drivetrain at higher engine speeds (up to 84 mph) to reduce engine drag and allow the vehicle to "sail" or coast for longer distances without consuming any fuel. The engine also decouples whenever the driver releases the gas pedal to brake, at which time regenerative braking transfers kinetic energy to the batteries, which contributes to nearly one third of the Jetta hybrid's fuel saving potential. Meanwhile, heating, air conditioning, and electric convenience features such as the audio system continue to operate.</p>
+<p>Power is transferred to the front axle via a seven-speed dual clutch (DSG) gearbox similar to Porsche’s popular seven-speed Doppelkupplungsgetriebe (PDK) dual-clutch automated gearbox found in the new <a title="find out more about Porsches 911 Carrera Cabriolet" href="http://blog.truecar.com/2012/01/16/porsche-premieres-911-carrera-cabriolet-at-2012-north-american-international-auto-show/"  target="_blank">911 Carrera</a>, combining driving fun with sustainability.</p>
+<p>All-new instrumentation displays battery charge state and energy flow, while a multifunctional display integrated into the left side of the instrument panel replaces the tachometer and informs the driver of the vehicle's operating mode.</p>
+<h2><strong><a title="2013-Volkswagen-Jetta-Hybrid-badge" href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/2013-volkswagen-jetta-hybrid-badge/"  rel="attachment wp-att-19146" target="_blank">
+		<span class="pibfi_pinterest">
+		<img class="alignright size-full wp-image-19146" style="border-style: initial; border-color: initial; border-image: initial; border-width: 0px; margin: 5px;" title="2013-Volkswagen-Jetta-Hybrid-badge" src="http://tcblog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-badge1.jpg" alt="2013-Volkswagen-Jetta-Hybrid-badge" width="400" height="266" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://tcblog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-badge1.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>2013 Volkswagen Jetta hybrid Trim and Options</strong></h2>
+<p>Three <a title="learn more about trim levels here at TrueCar.com" href="http://blog.truecar.com/2012/01/03/trim-levels-packages-and-options-on-new-cars-%E2%80%93-what-do-they-all-mean-2/" >trims</a> will be offered for the Jetta Hybrid: entry-level S, midrange SE, and top-of-the-line SEL. Standard features include Bluetooth technology, LED taillights, SiriusXM satellite radio, special 15-inch aluminum-alloy wheels, and unique Hybrid body kit and badging. Available premium features will include bi-xenon headlights and LED daytime running lights, a power driver’s seat, heatable front seats, navigation system, rear-view camera, and Volkswagen’s exclusive Fender Premium Audio System. (More details on trim levels will be released closer to the on-sale date.)</p>
+<p>Visually the Jetta Hybrid is distinguished by aerodynamic modifications that include a new front airdam, a rear diffuser, and an integrated rear spoiler, a special radiator grille where the VW logo is integrated on a blue background for the first time, and Hybrid signatures on the grille, front fenders, and rear deck.</p>
+<p>Standard safety equipment for all Jetta models includes electronic stability control, anti-lock brakes, and six airbags (driver and front passenger airbags, front side thorax airbags, and side curtain airbags front and rear). Volkswagen claims the Jetta Hybrid is the quietest car the manufacturer has ever produced in the compact sedan class, thanks to a newly designed exhaust system, an acoustically optimized windshield, and thicker front side windows.</p>
+<h2><strong>Shopping for a new Volkswagen Jetta Sedan?</strong></h2>
+<p>When the 2013 <a title="Get specs and pricing on the Volkswagen Jetta compact sedan" href="http://www.truecar.com/prices-new/volkswagen/jetta-sedan-pricing/" >Jetta</a> hybrid goes on sale at the end of 2012, be sure to go to TrueCar.com to see what others paid for the car in your local area. Then use TrueCar’s Best Local Price feature to find the best target price before you even set foot in the dealership.</p>
+
+		<style type='text/css'>
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 20%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+		</style>
+		<!-- see gallery_shortcode() in wp-includes/media.php -->
+		<div id='gallery-1' class='gallery galleryid-19144 gallery-columns-5 gallery-size-thumbnail'><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-action-lead1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-action-lead' title="2013-Volkswagen-Jetta-Hybrid-action-lead">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-action-lead1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-action-lead" title="2013-Volkswagen-Jetta-Hybrid-action-lead" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-action-lead1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-badge1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-badge' title="2013-Volkswagen-Jetta-Hybrid-badge">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-badge1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-badge" title="2013-Volkswagen-Jetta-Hybrid-badge" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-badge1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-front-action1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-front-action' title="2013-Volkswagen-Jetta-Hybrid-front-action">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-front-action1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-front-action" title="2013-Volkswagen-Jetta-Hybrid-front-action" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-front-action1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-front-action21.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-front-action2' title="2013-Volkswagen-Jetta-Hybrid-front-action2">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-front-action21-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-front-action2" title="2013-Volkswagen-Jetta-Hybrid-front-action2" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-front-action21-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-gauges1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-gauges' title="2013-Volkswagen-Jetta-Hybrid-gauges">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-gauges1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-gauges" title="2013-Volkswagen-Jetta-Hybrid-gauges" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-gauges1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><br style="clear: both" /><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway' title="2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway" title="2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-powertrain-cooling-cutaway1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway' title="2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway" title="2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-powertrain-cutaway1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-rear-action1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-rear-action' title="2013-Volkswagen-Jetta-Hybrid-rear-action">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-rear-action1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-rear-action" title="2013-Volkswagen-Jetta-Hybrid-rear-action" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-rear-action1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-side-action1.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid-side-action' title="2013-Volkswagen-Jetta-Hybrid-side-action">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-side-action1-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid-side-action" title="2013-Volkswagen-Jetta-Hybrid-side-action" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid-side-action1-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon'>
+				<a href="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid11.jpg"  rel='shadowbox[sbalbum-19144];player=img;' title='2013-Volkswagen-Jetta-Hybrid1' title="2013-Volkswagen-Jetta-Hybrid1">
+		<span class="pibfi_pinterest">
+		<img width="150" height="150" src="http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid11-150x150.jpg" class="attachment-thumbnail" alt="2013-Volkswagen-Jetta-Hybrid1" title="2013-Volkswagen-Jetta-Hybrid1" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com/wp-content/uploads/2012/01/2013-Volkswagen-Jetta-Hybrid11-150x150.jpg&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+			</dt></dl><br style="clear: both" />
+			<br style='clear: both;' />
+		</div>
+
+<br />
+<div style="float: left;">
+<!-- Start WP Socializer Plugin - Facebook Button -->
+<iframe src="http://www.facebook.com/plugins/like.php?&amp;href=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&amp;layout=button_count&amp;show_faces=0&amp;width=80&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&amp;appId=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+<!-- End WP Socializer Plugin - Facebook Button -->
+
+<!-- Start WP Socializer Plugin - +1 Button -->
+<g:plusone size="medium" href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/" ></g:plusone>
+<!-- End WP Socializer Plugin - +1 Button -->
+
+<!-- Start WP Socializer Plugin - Pinterest Button -->
+<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fblog.truecar.com%2F2012%2F01%2F19%2Fvolkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show%2F&media=http%3A%2F%2Ftcblog.truecar.com%2Fwp-content%2Fuploads%2F2012%2F01%2F2013-Volkswagen-Jetta-Hybrid-action-lead1.jpg" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://pinterest.com']);" rel="shadowbox[sbpost-19144];player=img;" class="pin-it-button" count-layout="horizontal" title="Pin It">
+		<span class="pibfi_pinterest">
+		<img border="0" src="http://blog.truecar.com//assets.pinterest.com/images/PinExt.png" title="Pin It" />
+			<span class="xc_pin" onclick="pin_this(event, 'http://pinterest.com/pin/create/button/?url=http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&media=http://blog.truecar.com//assets.pinterest.com/images/PinExt.png&description=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show')">
+			</span>
+		</span></a>
+<!-- End WP Socializer Plugin - Pinterest Button -->
+</div>						
+	
+						<div class="clear"></div>
+						
+												
+																																								
+						<div class="rt-tags">
+							Posted in: <a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/" title="View all posts in Auto Shows &amp; Future Cars" rel="category tag">Auto Shows &amp; Future Cars</a>, <a href="http://blog.truecar.com/category/truecar_team/brandy_schaffels/" title="View all posts in Brandy Schaffels" rel="category tag">Brandy Schaffels</a>, <a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/detroit-auto-show/" title="View all posts in Detroit Auto Show" rel="category tag">Detroit Auto Show</a>, <a href="http://blog.truecar.com/category/new_car_review_info/" title="View all posts in New Car Reviews &amp; Info" rel="category tag">New Car Reviews &amp; Info</a>, <a href="http://blog.truecar.com/category/vehicle_make/volkswagen/" title="View all posts in Volkswagen" rel="category tag">Volkswagen</a>		
+							<div class="clear"></div>									
+							<span>Tags: &nbsp;</span><a href="http://blog.truecar.com/tag/hybrid/" rel="tag">hybrid</a>, <a href="http://blog.truecar.com/tag/jetta/" rel="tag">Jetta</a>										
+						</div>
+	
+												
+												
+									
+						<div class="rt-post-footer">
+							<small>
+							
+								This entry was posted																on Thursday, January 19th, 2012 at 9:00 am								and is filed under <a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/" title="View all posts in Auto Shows &amp; Future Cars" rel="category tag">Auto Shows &amp; Future Cars</a>, <a href="http://blog.truecar.com/category/truecar_team/brandy_schaffels/" title="View all posts in Brandy Schaffels" rel="category tag">Brandy Schaffels</a>, <a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/detroit-auto-show/" title="View all posts in Detroit Auto Show" rel="category tag">Detroit Auto Show</a>, <a href="http://blog.truecar.com/category/new_car_review_info/" title="View all posts in New Car Reviews &amp; Info" rel="category tag">New Car Reviews &amp; Info</a>, <a href="http://blog.truecar.com/category/vehicle_make/volkswagen/" title="View all posts in Volkswagen" rel="category tag">Volkswagen</a>.
+								
+								You can follow any responses to this entry through the <a href='http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/feed/'>RSS 2.0</a> feed.
+	
+																You can <a href="#respond">leave a response</a>, or <a href="http://blog.truecar.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/trackback/" rel="trackback">trackback</a> from your own site.	
+									
+							</small>
+						</div>
+															
+													
+																							
+							        
+        <!-- You can start editing here. -->
+        
+        <div id="jc">
+        
+                
+        <div id="comments" class="comments-standard">
+        
+        	<h1 class="rt-pagetitle">Comments</h1>
+            
+            <div class="comments-list">
+            
+				        
+        <div class="comment even thread-even depth-1" id="comment-item-1437">
+
+			<div class="rbox">
+				<div class="rbox_tr">
+					<div class="rbox_tl">
+						<div class="rbox_t"></div>
+					</div>
+				</div>
+				<div class="rbox_m">
+
+		            <div id="comment-1437" class="rok-comment-entry">
+		            
+						<div class="comment-avatar"><img alt='' src='http://0.gravatar.com/avatar/04a0d52b5ef62db3a09f4412ac793c82?s=32&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' /></div>
+		            
+		            	<div class="comment-box avatar-indent">
+		            		
+		            		<span class="comment-author">danwat1234</span>
+							<span class="comment-date">17-06-2012, 19:08</span>
+		            	
+							<div class="comment-body" id="comment-body-1437">
+									
+									            
+	          					<p>Why is VW so dumb?? Don't use a 1.4 liter OTTO cycle gas engine! I don't think they are even using an Atkinson cycle OTTO. VW is not very good with gas engines, take the whopping 31MPG hwy new Beetle for example.</p>
+<p>Come on now! It's real easy. Put a 1.2 liter turbodiesel like you have in the European Polo and mate it to a strong hybrid drivetrain.</p>
+<p>Bam. Now you have more MPG than any Prius and decent acceleration due to the power of the electric motor.<br />
+55-60MPG HWY is within reach.</p>
+<p>I know VW can make that 1.2L Diesel pass emissions in the USA so make it happen and beat the competition! Don't use the oversized 2L diesel engine that you use in the USA Passat, Jetta, Beetle, use the small 1.2L from Europe!</p>
+<p>I do like that this hybrid will decouple the drivetrain from the wheels when the gas pedal isn't being pressed. This is in contrast to the Prius, where it has a 'engine drag simulator' by lightly regenerative braking whenever you aren't on the gas pedal. Wastes energy.</p>
+	
+								<span class="comments-buttons">
+									<a class='comment-reply-link' href='/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/?replytocom=1437#respond' onclick='return addComment.moveForm("comment-1437", "1437", "respond", "19144")'>Reply</a>								</span>
+								
+							</div>
+						</div>
+						<div class="clear"></div>
+		
+					</div>
+					
+				</div>
+				<div class="rbox_br">
+					<div class="rbox_bl">
+						<div class="rbox_b"></div>
+					</div>
+				</div>
+			</div>
+	            
+		 
+        </div>
+           
+            </div>
+            
+                        
+		</div>
+            
+                
+        <!-- RESPOND -->
+        
+                
+        <div id="respond">
+
+            <h1 class="rt-pagetitle">Leave a Reply</h1>
+
+            <div class="cancel-comment-reply">
+                <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/#respond" style="display:none;">Click here to cancel reply.</a></small>
+            </div>
+            
+                        
+                <!-- Begin Form -->
+                
+                <form action="http://blog.truecar.com/wp-comments-post.php" method="post" id="comments-form" onsubmit="if(url.value=='Website') url.value='';">
+                
+                                           
+                        <p>
+                            <input type="text" name="author" id="author" onblur="if(this.value=='') this.value='Name (Required)';"
+                                   onfocus="if(this.value=='Name (Required)') this.value='';"
+                                   value="Name (Required)" size="22"
+                                   tabindex="1"  />
+                        </p>
+                        
+                        <p>
+                            <input type="text" name="email" id="email"
+                                   onblur="if(this.value=='') this.value='E-mail (Required)';"
+                                   onfocus="if(this.value=='E-mail (Required)') this.value='';"
+                                   value="E-mail (Required)" size="22"
+                                   tabindex="2"  />
+                        </p>
+                        
+                        <p>
+                            <input type="text" name="url" id="url" onblur="if(this.value=='') this.value='Website';" onfocus="if(this.value=='Website') this.value='';" value="Website" size="22" tabindex="3"/>
+                        </p>
+                        
+                                        
+                    <!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+                    
+                    <p style="margin: 0;">
+                        <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+                    </p><br/>
+                    
+                    <div id="comments-form-buttons">
+						<div id="comments-form-send" class="readon">
+							<button class="button" type="submit" name="submit" tabindex="5" id="submit">Send</button>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+    
+                   
+
+                    <div class="clear"></div>
+              
+                    <input type='hidden' name='comment_post_ID' value='19144' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                    <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3f9fc6dedb" /></p>              
+                </form>
+                
+            <!-- End Form -->
+            
+                        
+            </div>
+            
+                
+        </div>
+        
+        						
+												
+						<div class="clear"></div>
+						
+						<!-- End Post Content -->
+
+					</div>
+
+				</div>				
+			</div>
+			
+			<!-- End Post -->
+			
+						
+						
+			
+		</div>
+	</div>		                    </div>
+							<div class="clear"></div>
+						</div>
+		                	                </div>
+	
+	                	                </div>               
+	           		            <div class="rt-grid-3 ">
+                <div id="rt-sidebar-a">
+            <div id="text-7" class="widget widget_text rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content">			<div class="textwidget"><a href="http://www.truecar.com/?cvosrc=b.home">
+  <img id="#adImg" src="http://tcblog.truecar.com/wp-content/themes/img/tc_comments_ad.png" border="0"/>
+</a><hr></div>
+		<div class="clear"></div></div></div></div></div><div id="nav_menu-3" class="widget widget_nav_menu rt-block"><div class="module-title-surround"><div class="module-title"><h2 class="title">Categories</h2></div></div><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content"><div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu"><li id="menu-item-25825" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25825"><a href="http://blog.truecar.com/category/deals_discounts/" >Deals &#038; Discounts</a></li>
+<li id="menu-item-25827" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25827"><a href="http://blog.truecar.com/category/features/" >Features</a>
+<ul class="sub-menu">
+	<li id="menu-item-25828" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25828"><a href="http://blog.truecar.com/category/features/car-culture/" >Car Culture</a></li>
+	<li id="menu-item-25829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25829"><a href="http://blog.truecar.com/category/features/fuel_economy/" >Fuel Economy</a></li>
+	<li id="menu-item-26292" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26292"><a href="http://blog.truecar.com/category/features/racing/" >Racing</a></li>
+	<li id="menu-item-25821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25821"><a href="http://blog.truecar.com/category/features/safety_technology/" >Safety &#038; Technology</a></li>
+</ul>
+</li>
+<li id="menu-item-25833" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-25833"><a href="http://blog.truecar.com/category/new_car_review_info/" >New Car Reviews &#038; Info</a>
+<ul class="sub-menu">
+	<li id="menu-item-25822" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-25822"><a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/" >Auto Shows &#038; Future Cars</a>
+	<ul class="sub-menu">
+		<li id="menu-item-25823" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25823"><a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/chicago-auto-show-auto_shows_future_cars/" >Chicago Auto Show</a></li>
+		<li id="menu-item-25826" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-25826"><a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/detroit-auto-show/" >Detroit Auto Show</a></li>
+		<li id="menu-item-25832" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25832"><a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/los-angeles-auto-show/" >Los Angeles Auto Show</a></li>
+		<li id="menu-item-25834" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25834"><a href="http://blog.truecar.com/category/new_car_review_info/auto_shows_future_cars/new-york-auto-show/" >New York Auto Show</a></li>
+	</ul>
+</li>
+	<li id="menu-item-25818" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25818"><a href="http://blog.truecar.com/category/new_car_review_info/pricing_product_info/" >Pricing and Product Info</a></li>
+	<li id="menu-item-25869" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25869"><a href="http://blog.truecar.com/category/new_car_review_info/truedrive/" >TrueDrive</a></li>
+</ul>
+</li>
+<li id="menu-item-25835" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25835"><a href="http://blog.truecar.com/category/news_analysis_trends/" >News Analysis &#038; Trends</a>
+<ul class="sub-menu">
+	<li id="menu-item-25824" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25824"><a href="http://blog.truecar.com/category/news_analysis_trends/consumer_news/" >Consumer News</a></li>
+	<li id="menu-item-25830" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25830"><a href="http://blog.truecar.com/category/news_analysis_trends/industry_news/" >Industry News</a></li>
+	<li id="menu-item-25798" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25798"><a href="http://blog.truecar.com/category/news_analysis_trends/recalls/" >Recalls</a></li>
+	<li id="menu-item-25801" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25801"><a href="http://blog.truecar.com/category/news_analysis_trends/truetrends/" >TrueTrends</a></li>
+</ul>
+</li>
+<li id="menu-item-25800" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25800"><a href="http://blog.truecar.com/category/shopping_buying_tips/" >Shopping, Buying &#038; Leasing Tips</a>
+<ul class="sub-menu">
+	<li id="menu-item-25799" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25799"><a href="http://blog.truecar.com/category/shopping_buying_tips/shopping_tips/" >Shopping Tips</a></li>
+	<li id="menu-item-25831" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25831"><a href="http://blog.truecar.com/category/shopping_buying_tips/leasing/" >Leasing</a></li>
+</ul>
+</li>
+<li id="menu-item-26324" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-26324"><a href="http://blog.truecar.com/category/vehicle_make/" >Vehicle Makes</a>
+<ul class="sub-menu">
+	<li id="menu-item-25836" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25836"><a href="http://blog.truecar.com/category/vehicle_make/acura-vehicle_make/" >Acura</a></li>
+	<li id="menu-item-25838" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25838"><a href="http://blog.truecar.com/category/vehicle_make/audi/" >Audi</a></li>
+	<li id="menu-item-25837" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25837"><a href="http://blog.truecar.com/category/vehicle_make/aston_martin/" >Aston Martin</a></li>
+	<li id="menu-item-25839" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25839"><a href="http://blog.truecar.com/category/vehicle_make/bentley/" >Bentley</a></li>
+	<li id="menu-item-25840" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25840"><a href="http://blog.truecar.com/category/vehicle_make/bmw-vehicle_make/" >BMW</a></li>
+	<li id="menu-item-25841" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25841"><a href="http://blog.truecar.com/category/vehicle_make/buick-vehicle_make/" >Buick</a></li>
+	<li id="menu-item-25842" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25842"><a href="http://blog.truecar.com/category/vehicle_make/cadillac-vehicle_make/" >Cadillac</a></li>
+	<li id="menu-item-25843" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25843"><a href="http://blog.truecar.com/category/vehicle_make/chevrolet-vehicle_make/" >Chevrolet</a></li>
+	<li id="menu-item-25844" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25844"><a href="http://blog.truecar.com/category/vehicle_make/chrysler-vehicle_make/" >Chrysler</a></li>
+	<li id="menu-item-25845" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25845"><a href="http://blog.truecar.com/category/vehicle_make/dodge-vehicle_make/" >Dodge</a></li>
+	<li id="menu-item-25846" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25846"><a href="http://blog.truecar.com/category/vehicle_make/ferrari/" >Ferrari</a></li>
+	<li id="menu-item-25847" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25847"><a href="http://blog.truecar.com/category/vehicle_make/fiat-vehicle-make/" >Fiat</a></li>
+	<li id="menu-item-25848" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25848"><a href="http://blog.truecar.com/category/vehicle_make/ford-vehicle_make/" >Ford</a></li>
+	<li id="menu-item-25849" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25849"><a href="http://blog.truecar.com/category/vehicle_make/gmc-vehicle_make/" >GMC</a></li>
+	<li id="menu-item-25850" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25850"><a href="http://blog.truecar.com/category/vehicle_make/honda-vehicle_make/" >Honda</a></li>
+	<li id="menu-item-25851" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25851"><a href="http://blog.truecar.com/category/vehicle_make/hummer/" >HUMMER</a></li>
+	<li id="menu-item-25852" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25852"><a href="http://blog.truecar.com/category/vehicle_make/hyundai-vehicle_make/" >Hyundai</a></li>
+	<li id="menu-item-25853" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25853"><a href="http://blog.truecar.com/category/vehicle_make/infiniti-vehicle_make/" >Infiniti</a></li>
+	<li id="menu-item-25870" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25870"><a href="http://blog.truecar.com/category/vehicle_make/jaguar/" >Jaguar</a></li>
+	<li id="menu-item-25871" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25871"><a href="http://blog.truecar.com/category/vehicle_make/jeep/" >Jeep</a></li>
+	<li id="menu-item-25872" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25872"><a href="http://blog.truecar.com/category/vehicle_make/kia-vehicle_make/" >Kia</a></li>
+	<li id="menu-item-25873" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25873"><a href="http://blog.truecar.com/category/vehicle_make/lamborghini/" >Lamborghini</a></li>
+	<li id="menu-item-25874" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25874"><a href="http://blog.truecar.com/category/vehicle_make/land_rover/" >Land Rover</a></li>
+	<li id="menu-item-25875" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25875"><a href="http://blog.truecar.com/category/vehicle_make/lexus-vehicle_make/" >Lexus</a></li>
+	<li id="menu-item-25876" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25876"><a href="http://blog.truecar.com/category/vehicle_make/lincoln-vehicle_make/" >Lincoln</a></li>
+	<li id="menu-item-25877" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25877"><a href="http://blog.truecar.com/category/vehicle_make/lotus/" >Lotus</a></li>
+	<li id="menu-item-25878" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25878"><a href="http://blog.truecar.com/category/vehicle_make/maserati/" >Maserati</a></li>
+	<li id="menu-item-25879" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25879"><a href="http://blog.truecar.com/category/vehicle_make/maybach/" >Maybach</a></li>
+	<li id="menu-item-25881" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25881"><a href="http://blog.truecar.com/category/vehicle_make/mercedes-benz-vehicle_make/" >Mercedes-Benz</a></li>
+	<li id="menu-item-25880" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25880"><a href="http://blog.truecar.com/category/vehicle_make/mazda/" >Mazda</a></li>
+	<li id="menu-item-25882" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25882"><a href="http://blog.truecar.com/category/vehicle_make/mercury-vehicle_make/" >Mercury</a></li>
+	<li id="menu-item-26332" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26332"><a href="http://blog.truecar.com/category/vehicle_make/mini/" >MINI</a></li>
+	<li id="menu-item-26338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26338"><a href="http://blog.truecar.com/category/vehicle_make/mitsubishi-vehicle_make/" >Mitsubishi</a></li>
+	<li id="menu-item-26339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26339"><a href="http://blog.truecar.com/category/vehicle_make/nissan-vehicle_make/" >Nissan</a></li>
+	<li id="menu-item-26340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26340"><a href="http://blog.truecar.com/category/vehicle_make/porsche-vehicle_make/" >Porsche</a></li>
+	<li id="menu-item-26341" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26341"><a href="http://blog.truecar.com/category/vehicle_make/ram-vehicle_make/" >Ram</a></li>
+	<li id="menu-item-26342" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26342"><a href="http://blog.truecar.com/category/vehicle_make/renault/" >Renault</a></li>
+	<li id="menu-item-26343" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26343"><a href="http://blog.truecar.com/category/vehicle_make/rolls-royce/" >Rolls-Royce</a></li>
+	<li id="menu-item-26344" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26344"><a href="http://blog.truecar.com/category/vehicle_make/saab/" >Saab</a></li>
+	<li id="menu-item-26345" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26345"><a href="http://blog.truecar.com/category/vehicle_make/scion-vehicle_make/" >Scion</a></li>
+	<li id="menu-item-26346" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26346"><a href="http://blog.truecar.com/category/vehicle_make/smart/" >Smart</a></li>
+	<li id="menu-item-26347" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26347"><a href="http://blog.truecar.com/category/vehicle_make/subaru/" >Subaru</a></li>
+	<li id="menu-item-26348" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26348"><a href="http://blog.truecar.com/category/vehicle_make/suzuki/" >Suzuki</a></li>
+	<li id="menu-item-26349" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26349"><a href="http://blog.truecar.com/category/vehicle_make/tesla/" >Tesla</a></li>
+	<li id="menu-item-26350" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26350"><a href="http://blog.truecar.com/category/vehicle_make/toyota-vehicle_make/" >Toyota</a></li>
+	<li id="menu-item-26351" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-26351"><a href="http://blog.truecar.com/category/vehicle_make/volkswagen/" >Volkswagen</a></li>
+	<li id="menu-item-26352" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26352"><a href="http://blog.truecar.com/category/vehicle_make/volvo-vehicle_make/" >Volvo</a></li>
+</ul>
+</li>
+</ul></div><div class="clear"></div></div></div></div></div><div class=" box4"><div id="calendar-3" class="widget widget_calendar rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content"><div class="module-title-surround"><div class="module-title"><h2 class="title">&nbsp;</h2></div></div><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>January 2012</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://blog.truecar.com/2011/12/" title="View posts for December 2011">&laquo; Dec</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://blog.truecar.com/2012/02/" title="View posts for February 2012">Feb &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td>1</td><td><a href="http://blog.truecar.com/2012/01/02/" title="Before You Shop For Your Next New Car, Be Sure You Know Your Credit Score">2</a></td><td><a href="http://blog.truecar.com/2012/01/03/" title="Trim Levels, Packages, and Options on New Cars – What Do They All Mean?, Industry News Daily — Tuesday, January 3, 2012">3</a></td><td><a href="http://blog.truecar.com/2012/01/04/" title="Transaction Prices Continue to Reach New Record Highs in December; Incentives Decline According to TrueCar.com, Industry News Daily — Wednesday, January 4, 2012">4</a></td><td><a href="http://blog.truecar.com/2012/01/05/" title="Spotlight on Safety: Cold Weather Preparedness For Electric Car Owners, Industry News Daily — Thursday, January 5, 2012">5</a></td><td><a href="http://blog.truecar.com/2012/01/06/" title="Buying Car Insurance? 10 Insurance Coverage Terms You Must Know, Industry News Daily — Friday, January 6, 2012">6</a></td><td>7</td>
+	</tr>
+	<tr>
+		<td>8</td><td><a href="http://blog.truecar.com/2012/01/09/" title="What to Do After an Automobile Accident?, Second-Generation 2013 Ford Fusion Debuts At 2012 North American International Auto Show">9</a></td><td><a href="http://blog.truecar.com/2012/01/10/" title="Cadillac Debuts 2013 ATS Compact Luxury Sports Sedan at 2012 North American International Auto Show">10</a></td><td><a href="http://blog.truecar.com/2012/01/11/" title="TrueCar.com Grades the Best Manufacturers and Brands for 2011, Industry News Daily &#8212; Wednesday, January 11, 2012">11</a></td><td><a href="http://blog.truecar.com/2012/01/12/" title="Industry News Daily — Thursday, January 12, 2012, Chevrolet Reveals Two Youth-Oriented Concepts at 2012 North American International Auto Show">12</a></td><td><a href="http://blog.truecar.com/2012/01/13/" title="Average Fuel Economy for New Cars Sold Increased by 0.5 MPG in 2011 According to TrueCar.com’s TrueMPG, Industry News Daily — Friday, January 13, 2012">13</a></td><td>14</td>
+	</tr>
+	<tr>
+		<td>15</td><td><a href="http://blog.truecar.com/2012/01/16/" title="Porsche Premieres 911 Carrera Cabriolet at 2012 North American International Auto Show">16</a></td><td><a href="http://blog.truecar.com/2012/01/17/" title="DTM and Former ChampCar/Atlantics Star Katherine Legge Joins TrueCar Racing Team, Industry News Daily — Tuesday, January 17, 2012, TrueCar Launches National Compliance Campaign and Pro-Industry Product Changes">17</a></td><td><a href="http://blog.truecar.com/2012/01/18/" title="American Brands Fare Well in US News’ 2012 Awards for Best Cars for the Money, TrueMPG Increases to 22.2 MPG in December 2011 Compared to 21.7 MPG in December 2010, Industry News Daily — Wednesday, January 18, 2012">18</a></td><td><a href="http://blog.truecar.com/2012/01/19/" title="January TrueTrends: Largest Total Incentives, January TrueTrends: Greatest Discounts, Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show, Industry News Daily — Thursday, January 19, 2012">19</a></td><td><a href="http://blog.truecar.com/2012/01/20/" title="January TrueTrends: Most Flexible and Least Flexible Models, January TrueTrends: Greatest Price Drop Month Over Month, Industry News Daily — Friday, January 20, 2012">20</a></td><td>21</td>
+	</tr>
+	<tr>
+		<td>22</td><td><a href="http://blog.truecar.com/2012/01/23/" title="January TrueTrends: Best and Worst Day of the Month to Buy a Car, January TrueTrends: Shortest and Longest Days in Vehicle Inventory, Industry News Daily — Monday, January 23, 2012">23</a></td><td><a href="http://blog.truecar.com/2012/01/24/" title="TrueCar.com Lists Best Car Deals for January, 2012, January TrueTrends: Model Year Share, TrueCar Releases January TrueTrends, Industry News Daily — Tuesday, January 24, 2012">24</a></td><td><a href="http://blog.truecar.com/2012/01/25/" title="Strong New Car Sales in January Shows Good Start for 2012 According to TrueCar.com, Industry News Daily — Wednesday, January 25, 2012">25</a></td><td><a href="http://blog.truecar.com/2012/01/26/" title="Industry News Daily — Thursday, January 26, 2012, CES 2012 Technology Spotlight: Auto-Mobility – Somewhere Between the Flintstones and the Jetsons">26</a></td><td><a href="http://blog.truecar.com/2012/01/27/" title="Car Buying Do’s and Don’ts: Be Prepared Before You Walk into the Dealership, Industry News Daily — Friday, January 27, 2012">27</a></td><td>28</td>
+	</tr>
+	<tr>
+		<td>29</td><td><a href="http://blog.truecar.com/2012/01/30/" title="Relocating? How to Navigate Car Buying in a New City, Industry News Daily — Monday, January 30, 2012">30</a></td><td><a href="http://blog.truecar.com/2012/01/31/" title="Spotlight on Technology: Hill-Hold or Hill-Start Assist Technology Makes Steep-Road Starts Safer for Drivers, Industry News Daily — Tuesday, January 31, 2012">31</a></td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div><div class="clear"></div></div></div></div></div></div><div id="text-8" class="widget widget_text rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content">			<div class="textwidget"><div class="textwidget"><a href="http://blog.truecar.com/feed/"  target="_blank"><img src="http://blog.truecar.com/wp-content/themes/img/feed-icon.png"> RSS FEED</a></div></div>
+		<div class="clear"></div></div></div></div></div><div id="text-9" class="widget widget_text rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content">			<div class="textwidget"><!-- Lockerz Share BEGIN -->
+<a class="a2a_dd" href="http://www.addtoany.com/share_save" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.addtoany.com']);"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"/></a>
+<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+<!-- Lockerz Share END --></div>
+		<div class="clear"></div></div></div></div></div></div></div>	                <div class="clear"></div>
+	            </div>
+	        </div>
+		</div>
+        <div class="rt-shadowbar"></div>
+		        																	</div></div></div>
+					<div class="rt-box-bottom"><div class="rt-box-bottom2"></div><div class="rt-box-bottom3"></div></div>
+				</div>
+				<div class="rt-shadowbar"></div>
+								<div id="rt-bottom-surround" class="bottom-overlay-dark">
+					<div class="rt-box-top"><div class="rt-box-top2"></div><div class="rt-box-top3"></div></div>
+					<div class="rt-box-bg"><div class="rt-box-bg2"><div class="rt-box-bg3">
+																		<div id="rt-copyright">
+							            <div class="rt-grid-12 rt-alpha rt-omega">
+            		<div class="clear"></div>
+    	    <div id="gantry_copyright-3" class="widget widget_gantry_copyright">
+	    					<span class="copytext">Copyright © 2013 TrueCar, Inc. All rights reserved.</span>
+	    		    </div>
+	    </div>							<div class="clear"></div>
+						</div>
+											</div></div></div>
+					<div class="rt-box-bottom"><div class="rt-box-bottom2"></div><div class="rt-box-bottom3"></div></div>
+				</div>
+											</div>
+						<div id="rt-footerbar" class="footer-overlay-dark">
+				<div class="rt-container">
+					<div id="rt-footer">
+						            <div class="rt-grid-12 rt-alpha rt-omega">
+            <div id="text-10" class="widget widget_text rt-block"><div class="rt-module-surround"><div class="rt-module-inner"><div class="module-content">			<div class="textwidget"><div style="text-align:center;"><a href="http://truecar.com/" >Home</a>&nbsp;&nbsp;&nbsp;
+				<a href="http://truecar.com/about_us.html" >About Us</a>&nbsp;&nbsp;&nbsp;   <a href="http://truecar.com/FAQ.html" >FAQ</a>&nbsp;&nbsp;&nbsp;
+				  <a href="http://truecar.com/press.html" >Press</a>&nbsp;&nbsp;&nbsp;
+				<a href="http://truecar.com/hiring.html" > We Are Hiring</a>&nbsp;&nbsp;&nbsp;
+				 <a href="http://truecar.com/popups/terms-uses.html"  target="_blank">Terms of Service</a>&nbsp;&nbsp;&nbsp;
+				 <a href="http://truecar.com/popups/privacy.html"  target="_blank">Privacy Policy</a></div>
+</div>
+		<div class="clear"></div></div></div></div></div></div>						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+						<div class="rt-shadowbar"></div>
+								</div>
+		<!-- SiteCatalyst code version: H.24.1.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="http://blog.truecar.com/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName=""
+s.server=""
+s.channel=""
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://truecar.122.2o7.net/b/ss/truecarblog-prod/1/H.24.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.1. -->		
+				<div class="wpsr-floatbar-float_left wpsr-floatbar-white wpsr-floatbar-movable  clearfix" ><div class="wpsr_floatbt">
+<!-- Start WP Socializer Plugin - Facebook Button -->
+<iframe src="http://www.facebook.com/plugins/like.php?&amp;href=http://truecarblog.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/&amp;layout=box_count&amp;show_faces=1&amp;width=48&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=62&amp;appId=" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:48px; height:62px;" allowTransparency="true"></iframe>
+<!-- End WP Socializer Plugin - Facebook Button -->
+</div><div class="wpsr_floatbt">
+<!-- Start WP Socializer Plugin - Retweet Button -->
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical"  data-lang="en"  data-url="http://truecarblog.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/" data-text="Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show - "></a>
+<!-- End WP Socializer Plugin - Retweet Button -->
+
+<!-- WP Socializer - Twitter Script -->
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<!-- WP Socializer - End Twitter Script -->
+</div><div class="wpsr_floatbt">
+<!-- Start WP Socializer Plugin - +1 Button -->
+<g:plusone size="tall" href="http://truecarblog.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/" ></g:plusone>
+<!-- End WP Socializer Plugin - +1 Button -->
+
+<!-- WP Socializer - +1 Script -->
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<!-- WP Socializer - End +1 Script -->
+</div><div class="wpsr_floatbt"><a href="mailto:?subject=Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show&amp;body=  Volkswagen Reveals 2013 Jetta Hybrid at 2012 North American International Auto Show - http://truecarblog.com/2012/01/19/volkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show/" title="Email this" target="_blank" rel="nofollow"class="wp-socializer-single"><img src="http://blog.truecar.com/wp-content/plugins/wp-socializer/public/social-icons/32/email.png" alt="Email" border="0"/></a></div><div class="wpsr_floatbt"><a href="http://www.printfriendly.com/print?url=http%3A%2F%2Ftruecarblog.com%2F2012%2F01%2F19%2Fvolkswagen-reveals-2013-jetta-hybrid-at-2012-north-american-international-auto-show%2F" title="Print this article" target="_blank" rel="nofollow"class="wp-socializer-single"><img src="http://blog.truecar.com/wp-content/plugins/wp-socializer/public/social-icons/32/printfriendly.png" alt="Print" border="0"/></a></div><div class="wpsr-linkback"><a href="http://www.aakashweb.com/wordpress-plugins/wp-socializer/" target="_blank">WP Socializer</a> <a href="http://www.aakashweb.com" target="_blank" class="wpsr_linkaw">Aakash Web</a></div></div>
+<!-- Start WP Socializer | Floating bar - JS file-->
+<script type="text/javascript" src="http://blog.truecar.com/wp-content/plugins/wp-socializer/public/js/wp-socializer-floating-bar-js.js?v=2.4.4"></script>
+<!-- End WP Socializer | Floating bar - JS file -->
+
+<!-- WP Socializer - Pinterest Script -->
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+<!-- WP Socializer - Pinterest Script -->
+<script type='text/javascript' src='http://blog.truecar.com/wp-content/uploads/shadowbox-js/3a7c52941f850f8b72a84d4c66a78565.js?ver=3.0.3'></script>
+
+<!-- Begin Shadowbox JS v3.0.3.10 -->
+<!-- Selected Players: html, iframe, img, qt, swf, wmp -->
+<script type="text/javascript">
+/* <![CDATA[ */
+	var shadowbox_conf = {
+		animate: true,
+		animateFade: true,
+		animSequence: "sync",
+		modal: false,
+		showOverlay: true,
+		overlayColor: "#000",
+		overlayOpacity: "0.8",
+		flashBgColor: "#000000",
+		autoplayMovies: true,
+		showMovieControls: true,
+		slideshowDelay: 0,
+		resizeDuration: "0.35",
+		fadeDuration: "0.35",
+		displayNav: true,
+		continuous: false,
+		displayCounter: true,
+		counterType: "default",
+		counterLimit: "10",
+		viewportPadding: "20",
+		handleOversize: "resize",
+		handleUnsupported: "link",
+		autoDimensions: false,
+		initialHeight: "160",
+		initialWidth: "320",
+		enableKeys: true,
+		skipSetup: false,
+		useSizzle: false,
+		flashParams: {bgcolor:"#000000", allowFullScreen:true},
+		flashVars: {},
+		flashVersion: "9.0.0"
+	};
+	Shadowbox.init(shadowbox_conf);
+/* ]]> */
+</script>
+<!-- End Shadowbox JS -->
+
+	</body>
+</html>

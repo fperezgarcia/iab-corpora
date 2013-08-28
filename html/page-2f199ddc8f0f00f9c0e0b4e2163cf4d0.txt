@@ -1,0 +1,804 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+	<!-- Core CSS and JS files for site -->
+    	<!-- CSS for generic YUI -->
+    <link rel="stylesheet" type="text/css" href="/feg/yui270/build/base/base.css"> 
+    <link rel="stylesheet" href="/feg/yui270/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+     
+ 	<!-- CSS for FEG Home Page -->
+    <link rel="stylesheet" type="text/css" href="/feg/includes/home.css">
+    
+    <!-- CSS for Top Nav Mega Menu -->
+    <link rel="stylesheet" href="/feg/includes/mainmenu.css" type="text/css" media="screen" >
+
+	<!-- CSS for left navigation and main content -->
+	<link rel="stylesheet" type="text/css" href="/feg/includes/main-content.css">
+	<link rel="stylesheet" type="text/css" href="/feg/includes/left-nav.css">
+
+    <!-- Dependency source files -->
+	<script type="text/javascript" src="/feg/yui270/build/utilities/utilities-min.js"></script>
+    <script type="text/javascript" src="/feg/yui270/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="/feg/yui270/build/animation/animation-min.js"></script>
+    <script type="text/javascript" src="/feg/yui270/build/container/container_core-min.js"></script>
+    
+    <!-- JS created by FEG team -->
+    <script type="text/javascript" src="/feg/js/feg-basic-scripts.js"></script>
+    
+    <!-- Menu source file -->
+	<script type="text/javascript" src="/feg/yui270/build/menu/menu-min.js"></script>
+    
+	<!-- Script for Mega-Menu -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/feg/includes/jquery.megamenu.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#megamenu").megamenu();
+			$('#megamenu').show();
+        });
+    </script>   
+      
+    <!-- CSS AND JS INCLUDES FOR ACCORDIONS, TABS, CAROUSELS, ETC. HERE --> 
+    <!-- include file="/feg/includes/accordion-yui3.html" -->
+    <!-- include file="/feg/includes/rounded-tabs.html" -->
+    	<!-- CSS and JS files for carousel -->
+	<link type="text/css" rel="stylesheet" href="yui270/build/carousel/assets/skins/sam/carousel.css">
+	<script type="text/javascript" src="yui270/build/carousel/carousel-min.js"></script>
+
+    <script type="text/javascript" src="http://yui.yahooapis.com/2.8.2/build/button/button-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2/build/button/assets/skins/sam/button.css" >
+    <!-- ADD LOCAL STYLES HERE --> 
+	<style type="text/css">
+        .highlights {margin: .5em .5em 1em 2.5em; width: 300px; float: right;}
+        #main-content .highlights img {width: 100%; margin: 0 0 30px 0; border: 1px solid #444433}
+        .green-box {width: auto; background: url('images/green-power-3.jpg') left; border: 1px solid #444433; padding: 10px;  /* For IE8 and earlier */} 
+		#main-content .green-box p, #main-content .green-box label  {font-weight: bold; color: white; font-size: 100%; line-height: 1.2}
+ 	</style>
+    
+    <!-- ADD LOCAL SCRIPT HERE --> 
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function getGreenPowerPage(list) {
+    	var newPage = list.options[list.selectedIndex].value
+		
+    	if (newPage != "None") {
+			newPage="http://apps3.eere.energy.gov/greenpower/buying/buying_power.shtml?state="+newPage;
+        	location.href=newPage;
+		}
+		
+	}
+	//-->
+	</SCRIPT>
+    
+    <title>Electric Vehicles</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="electric vehicles,  electric cars, electric trucks, zero emission vehicles, ZEV, advanced technology">
+    <meta name="description" content="Electric vehicles (EVs) are propelled by an electric motor (or motors) powered by rechargeable battery packs. EVs have several advantages over vehicles with internal combustion engines (ICEs).">
+  
+</head>
+<body class="yui-skin-sam">
+<div id="doc4" class="yui-t2">
+  <!-- Skip navigation for accessbility -->
+<div class="skipnav"><a href="#content">Skip to main content</a></div>
+
+<!--(50% each column) for sponsors below-->
+<div class="sponsor">
+	<div class="yui-g">
+		<div class="yui-u first">
+			<a href="http://www.eere.energy.gov" target="_parent"><img src="http://www.fueleconomy.gov/feg/images/home/energy.gif" alt="U.S. Department of Energy - Energy Efficiency and Renewable Energy" width="224" height="34"></a>
+		</div>
+  		<div class="yui-u" style="text-align:right; padding-bottom:0">
+			<a href="http://www.epa.gov/otaq/" target="_parent"><img src="http://www.fueleconomy.gov/feg/images/home/EPAheadersm2.gif" alt="U.S. Environmental Protection Agency - Office of Transportation and Air Quality" width="300" height="34"></a>
+        </div>
+    
+	</div>
+</div>
+<!-- end sponsor -->
+
+ 
+<!-- Start banner & banner menu -->    
+<div id="hd" role="banner">
+    <div class="yui-g">
+        <div class="yui-u first">
+            <h1><a href="http://www.fueleconomy.gov" target="_parent"><img src="http://www.fueleconomy.gov/feg/images/home/fueleconomy.jpg" alt="www.fueleconomy.gov - the official government source for fuel economy information" width="462" height="64"></a></h1>	  
+        </div>
+        <div class="yui-u" style="text-align:right; padding-bottom:0">
+            <div class="headerNav"><a href="http://fueleconomy.gov/m">Mobile</a> | <a href="http://www.fueleconomy.gov/feg/esIndex.shtml">Espa&ntilde;ol</a> |<a href="http://www.fueleconomy.gov/feg/sitemap.shtml">Site Map</a> | <a href="http://www.fueleconomy.gov/feg/links.shtml">Links</a> | <a href="http://www.fueleconomy.gov/feg/info.shtml">FAQ</a> | <a href="http://www.fueleconomy.gov/feg/motorweek.jsp">Videos</a> | <a href="http://www.fueleconomy.gov/feg/contacts.shtml">Contacts</a></div>
+        </div>
+    </div>
+    <!-- Start megamenu -->
+
+    <ul id="megamenu" class="megamenu" style="display:none">
+        <li>
+            <a href="javascript:void(0)">Find a Car</a>
+            <div class="submenu" style="width: 56.154em; *width: 54em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Searches</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Find a Car &ndash; Home</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/Find.do?action=sbsSelect">Compare Side by Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/powerSearch.jsp">Power Search</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/make.shtml">Search by Make</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/alternatives.shtml">Cars That Don't Need Gasoline</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/smartWay.jsp">Find a SmartWay Vehicle</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/best-worst.shtml">Best and Worst Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/mostViewed.shtml">Today's Most Viewed Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/printGuides.shtml">Print the Guide</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Find a Car &ndash; Home</a></h3>
+                    <div class="img-caption" style="width: 15.385em; height: 14.23em; *width: 15em; height: 13.875em;">
+                        <a href="http://www.fueleconomy.gov/feg/findacar.shtml">
+                            <img class="img-caption" src="/feg/images/topnav/findacar2_mm.jpg" alt="">
+                        </a>
+                        <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/findacar.shtml">Find a fuel efficient vehicle that meets your needs</a></li>
+                        </ul>
+                  	</div>
+                </div>
+    
+                <div class="pnlSubmenu"  style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/printGuides.shtml">Print the Guide</a></h3>
+                    <div class="img-caption" style="width: 15.385em; height: 14.23em; *width: 15em; height: 13.875em;">
+                        <a href="http://www.fueleconomy.gov/feg/printGuides.shtml">
+                            <img src="/feg/images/topnav/guide-cover-partial-2013.jpg" alt="2013 Fuel Economy Guide">
+                        </a>
+                        <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/printGuides.shtml">Guides available back to the 2000 model year</a></li>
+                      </ul>
+                  	</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </li>
+    
+        <li>
+            <a href="javascript:void(0)">Save Money &amp; Fuel</a>
+            <div class="submenu" style="width: 70em; *width: 67em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/drive.shtml">Gas Mileage Tips</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/driveHabits.shtml">Driving More Efficiently</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/maintain.shtml">Keeping Your Car in Shape</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/planning.shtml">Planning and Combining Trips</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/choosing.shtml">Choosing a More Efficient Vehicle</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/moinfo.shtml">More Information</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/taxcenter.shtml">Tax Incentives</a></h3>
+                    <ul> 
+                        <li><a href="http://www.fueleconomy.gov/feg/taxevb.shtml">Electric Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxphevb.shtml">Plug-in Hybrids</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_hybrid.shtml">Hybrids</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxLeanburn.shtml">Diesels</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_afv.shtml">Alternative Fuel Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxfaqs.shtml">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/gasprices/index.shtml">Gasoline Prices</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/gasprices/states/index.shtml">Local Prices</a></li>
+                        <li><a href="http://fuelgaugereport.aaa.com/?redirectto=http://fuelgaugereport.opisnet.com/index.asp">State and Metro Area Prices</a></li>
+                        <li><a href="http://www.eia.gov/oog/info/gdu/gasdiesel.asp">National &amp; Regional Prices</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/gasprices/faq.shtml">Questions About Gas Prices</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3>Cost Calculators</h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/savemoney.shtml">Fuel Savings Calculator</a></li>
+                        <li><a href="http://www.fueleconomy.gov/trip">Trip Calculator</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybridCompare.jsp">Can a Hybrid Save Me Money?</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/Find.do?action=phev1Prompt">My Plug-in Hybrid Calculator</a></li>
+                    </ul>   
+                </div>
+                <div style="clear: both"></div>
+            </div><!-- submenu -->
+        </li>
+    
+        <li>
+            <a href="javascript:void(0)">Benefits</a>
+            <div class="submenu" style="width: 43.846em; *width: 43.7em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/why.shtml">Why is fuel economy important?</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/climate.shtml">Climate Change</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/oildep.shtml">Oil Dependence Costs</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/consres.shtml">Sustainability</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/savemoney.shtml">Save Money</a></li>
+                    </ul>
+                </div>
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <div class="img-caption" style="width: 19.23em; *width: 18.75em">
+                        <a href="http://www.fueleconomy.gov/feg/climate.shtml">
+                            <img src="/feg/images/topnav/HouseholdCO2Pie_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      	<ul>
+                    		<li><a href="http://www.fueleconomy.gov/feg/climate.shtml">Vehicles produce about half of the greenhouse gases from a typical U.S. household.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </li>
+        <li>
+		<a href="javascript:void(0)">My&nbsp;MPG</a>
+            <div class="submenu" style="width: 42.3em; *width: 41.25em;">
+			<div class="pnlSubmenu">
+            	<h3><a href="https://www.fueleconomy.gov/mpg/MPG.do">My MPG - Home</a></h3>
+                    <div class="img-caption" style="width: 15.385em;  height: 16.08em; *width: 15em; *height: 15.68em;">
+                    <a href="https://www.fueleconomy.gov/mpg/MPG.do">
+                            <img src="/feg/images/topnav/fuel_pump_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      	<ul>
+                            <li><a href="https://www.fueleconomy.gov/mpg/MPG.do">We can help you calculate and track your fuel economy.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/mpg/MPG.do?action=browseList">MPG Estimates from Drivers Like You!</a></h3>
+                    <div class="img-caption" style="width: 20.69em;  height: 16.08em; *width: 20.12em; *height: 15.68em;">
+                        <a href="http://www.fueleconomy.gov/mpg/MPG.do?action=browseList">
+                            <img src="/feg/images/topnav/my-mpg-graph.gif" alt="" class="img-caption">
+                    </a>
+                </div>
+            </div>
+            
+            <div style="clear: both"></div>
+        </div>
+	</li>
+        <!-- Advanced Vehicles and Fuels -->
+        <li>
+            <a href="javascript:void(0)">Advanced Vehicles &amp; Fuels</a>
+            <div class="submenu" style="width: 70.2em; *width: 70em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/hybrids.jsp">Hybrids</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybrids.jsp">Compare Side by Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybridtech.shtml">How Hybrids Work</a></li>
+                    	<li><a href="http://www.fueleconomy.gov/feg/hybridCompare.jsp">Can a Hybrid Save Me Money?</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybrid_news.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_hybrid.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hybrid_links.shtml">Links</a></li>
+                    </ul>
+    
+                    <h3 class="stacked"><a href="http://www.fueleconomy.gov/feg/phevsbs.shtml">Plug-In Hybrids</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/phevsbs.shtml">Compare Side by Side</a></li>        
+                        <li><a href="http://www.fueleconomy.gov/feg/Find.do?action=phev1Prompt">My Plug-in Hybrid Calculator</a></li>        
+                        <li><a href="http://www.fueleconomy.gov/feg/phevtech.shtml">About Plug-in Hybrids</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/phevnews.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxphevb.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/phevlinks.shtml">Links</a></li>
+                    </ul> 
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/evsbs.shtml">Electric Vehicles</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/evsbs.shtml">Compare Side by Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/evtech.shtml">About Electrics</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/evnews.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/taxevb.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/evlinks.shtml">Links</a></li>
+                    </ul>
+                    
+                    <h3 class="stacked"><a href="http://www.fueleconomy.gov/feg/flextech.shtml">Flex-Fuel Vehicles</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/flextech.shtml">Flex-Fuel Vehicles</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/flexlinks.shtml">Links</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/diesels.jsp">Diesels</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/diesels.jsp">Compare Side-by-Side</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/di_diesels.shtml">About Diesels</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/dieselnews.shtml">New &amp; Upcoming</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/lowsulfurdiesel.shtml">Ultra-Low Sulfur Diesel</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/biodiesel.shtml">Biodiesel</a></li> 
+                        <li><a href="http://www.fueleconomy.gov/feg/taxLeanburn.shtml">Tax Incentives</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/diesellinks.shtml">Diesel Links</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/fcv_sbs.shtml">Fuel Cell Vehicles</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_PEM.shtml">How They Work</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_benefits.shtml">Benefits and Challenges</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_sbs.shtml">Fuel Economy</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_whatsnew.jsp">Videos </a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fcv_links.shtml">Fuel Cell Links</a></li>
+                    </ul>
+                </div>
+    
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/current.shtml">Alternative Fuels</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/current.shtml">Alternative Fuels</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/ethanol.shtml">Ethanol</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/bifueltech.shtml">Natural Gas</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/lpg.shtml">Propane</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/hydrogen.shtml">Hydrogen</a></li> 
+                        <li><a href="http://www.fueleconomy.gov/feg/tax_afv.shtml">Tax Incentives</a></li>  
+                    </ul>
+                </div>
+    
+                <div style="clear: both"></div>
+    
+            </div><!-- submenu -->
+        </li><!-- End of Advanced Vehicles and Fuels -->
+    
+        <li>
+            <a href="javascript:void(0)">About EPA Ratings</a>
+            <div class="submenu" style="width: 72.3em; *width: 71.5em;">
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/label/">New Window Sticker</a></h3>
+    
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/label/">About the New Label</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/label/calculator.jsp">Beyond Tailpipe Emissions</a></li>
+                        <li><p>Sample Labels:</p>
+                            <ul style="margin-left: 1em; *margin-left: .975em;">
+                                <li><a href="http://www.fueleconomy.gov/feg/label/learn-more-gasoline-label.shtml">Gasoline Vehicles</a></li>
+                                <li><a href="http://www.fueleconomy.gov/feg/label/learn-more-PHEV-label.shtml">Plug-in Hybrid Vehicles</a></li>
+                                <li><a href="http://www.fueleconomy.gov/feg/label/learn-more-electric-label.shtml">Electric Vehicles</a></li>                                               
+                            </ul>
+                        </li>
+                        <li><a href="http://www.fueleconomy.gov/feg/label/video.shtml">QR Codes</a></li>      
+                    </ul>
+                </div>
+                
+                <div class="pnlSubmenu">
+                    <div class="img-caption" style="width: 17.692em; *width: 17.25em; background-color: #fff;">
+                        <a href="http://www.fueleconomy.gov/feg/label/"><img src="/feg/images/topnav/new_epa_label_mm.gif" alt="New EPA Fuel Economy and Environment Label"></a>
+                        <ul>
+                            <li><a style="color: #003366;" href="http://www.fueleconomy.gov/feg/label/">Check out the new sticker!</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/ratings2008.shtml">New vs. Old Ratings</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/ratings2008.shtml">2008 Ratings Changes</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/calculatorSelectYear.jsp">Compare Old and New MPG</a></li>
+                    </ul>
+                
+                    <h3 class="stacked"><a href="http://www.fueleconomy.gov/feg/how_tested.shtml">Fuel Economy Tests</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/how_tested.shtml">How Vehicles Are Tested</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/which_tested.shtml">Which Vehicles Are Tested</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/fe_test_schedules.shtml">Detailed Test Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/why_differ.shtml">Your Mileage Will Still Vary</a></h3>
+                    <ul>
+                        <li><a href="http://www.fueleconomy.gov/feg/why_differ.shtml">Your Mileage Will Still Vary</a></li>
+                        <li><a href="http://www.fueleconomy.gov/feg/factors.shtml">Factors That Affect MPG</a></li>
+                    </ul>
+                </div>
+                
+                <div style="clear: both"></div>
+            </div><!-- submenu -->
+        </li><!-- About EPA Ratings -->
+    
+        <li>
+            <a href="javascript:void(0)">More...</a>
+            <div class="submenu" style="width: 57.692em; *width: 56.25em;">
+              <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp">Extreme MPG</a></h3>
+                    
+                    <div class="img-caption" style="width: 15.385em; *width: 15em; height: 15.077em; *height: 14.7em;">
+                        <a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp">
+                            <img src="/feg/images/topnav/2011_VW_XL1_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/extremeMPG.jsp">Learn about vehicles and technologies that are pushing the fuel efficiency envelope.</a></li>
+                        </ul>
+                    </div>
+              </div>   
+                  
+                <div class="pnlSubmenu">
+                    <h3><a href="http://www.fueleconomy.gov/feg/tech_adv.shtml">Fuel-Saving Technologies</a></h3>
+                    <div class="img-caption" style="width: 15.385em; *width: 15em; height: 15.077em; *height: 14.7em;">
+                        <a href="http://www.fueleconomy.gov/feg/tech_adv.shtml">
+                            <img src="/feg/images/tech_trans_multilink.gif" alt="" class="img-caption">
+                        </a>
+                      <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/tech_engine_more.shtml">Engine Technologies</a></li>
+                            <li><a href="http://www.fueleconomy.gov/feg/tech_transmission.shtml">Transmission Technologies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pnlSubmenu" style="margin-right: 0;">
+                    <h3><a href="http://www.fueleconomy.gov/feg/atv.shtml">Where the Energy Goes</a></h3>
+                    <div class="img-caption" style="width: 15.385em; *width: 15em; height: 15.077em; *height: 14.7em;">
+                        <a href="http://www.fueleconomy.gov/feg/atv.shtml">
+                            <img src="/feg/images/topnav/energyloss_mm.jpg" alt="" class="img-caption">
+                        </a>
+                      <ul>
+                            <li><a href="http://www.fueleconomy.gov/feg/atv.shtml">Only about 14%&ndash;26% of the energy from the fuel you put in your tank gets used to move your car down the road.</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                
+                <div style="clear: both;"></div>
+            </div>
+        </li>
+    </ul>
+
+</div> 
+<!-- End banner and banner menu --> 
+   <div id="bd" role="main">
+		<div id="yui-main">
+			<div class="yui-b">
+        		<div class="yui-g">
+    				<div id="main-content">
+                    
+                        <a name="content"></a><a name="top"></a>
+                        
+                        <!-- Begin AddThis social sharing toolbox -->
+                        <!-- AddThis Buttons BEGIN -->
+<div class="addthis_toolbox addthis_default_style" style="float: right; margin: .25em 1em .5em 1em;">
+	<a class="addthis_button_facebook"></a>
+	<a class="addthis_button_twitter"></a>
+	<a class="addthis_button_email"></a>
+	<a class="addthis_button_print"></a>
+	<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=300&amp;username=fueleconomy" class="addthis_button_compact">Share</a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=fueleconomy#async=1#domready=1"></script>
+<!-- AddThis Buttons END -->
+
+<!-- initialize addthis -->
+<script type="text/javascript">
+function initAddThis() {
+	addthis.init();
+}
+
+ // After the DOM has loaded...
+$(document).ready(function() {
+    initAddThis();
+})
+</script>
+
+                        <!-- End AddThis -->
+                    
+                        <h1>Electric Vehicles (EVs)</h1> 
+                        <div class="highlights">
+                            <img src="/feg/images/ev/tesla_s_hwy.jpg" alt="Tesla Model S">
+                            <div class="green-box">
+                              <h1 style="margin-top: 0; margin-bottom: 50px; color: yellow">Did you know?</h1>
+                                    <p>The environmental benefits of plug-in hybrids and electric vehicles increase if they are powered by electricity from 'green' sources such as solar, wind or small-scale hydroelectricity.</p>
+                                	<p>Find out how you can <span style="color: yellow">purchase green power</span> in your state.</p>
+									<form>
+										<label id="state">I live in</label>
+                                            <select name="state" id="state" onChange="getGreenPowerPage(this)">
+                                                <option  value="None" selected>Select State</option>
+                                                <option  value="AL">Alabama</option>
+                                                <option  value="AK">Alaska</option>
+                                                <option  value="AZ">Arizona</option>
+                                                <option  value="AR">Arkansas</option>
+                                                <option  value="CA">California</option>
+                                                <option  value="CO">Colorado</option>
+                                                <option  value="CT">Connecticut</option>
+                                                <option  value="DE">Delaware</option>
+                                                <option  value="DC">District of Columbia</option>
+                                                <option  value="FL">Florida</option>
+                                                <option  value="GA">Georgia</option>
+                                                <option  value="HI">Hawaii</option>
+                                                <option  value="ID">Idaho</option>
+                                                <option  value="IL">Illinois</option>
+                                                <option  value="IN">Indiana</option>
+                                                <option  value="IA">Iowa</option>
+                                                <option  value="KS">Kansas</option>
+                                                <option  value="KY">Kentucky</option>
+                                                <option  value="LA">Louisiana</option>
+                                                <option  value="ME">Maine</option>
+                                                <option  value="MD">Maryland</option>
+                                                <option  value="MA">Massachusetts</option>
+                                                <option  value="MI">Michigan</option>
+                                                <option  value="MN">Minnesota</option>
+                                                <option  value="MS">Mississippi</option>
+                                                <option  value="MO">Missouri</option>
+                                                <option  value="MT">Montana</option>
+                                                <option  value="NE">Nebraska</option>
+                                                <option  value="NV">Nevada</option>
+                                                <option  value="NH">New Hampshire</option>
+                                                <option  value="NJ">New Jersey</option>
+                                                <option  value="NM">New Mexico</option>
+                                                <option  value="NY">New York</option>
+                                                <option  value="NC">North Carolina</option>
+                                                <option  value="ND">North Dakota</option>
+                                                <option  value="OH">Ohio</option>
+                                                <option  value="OK">Oklahoma</option>
+                                                <option  value="OR">Oregon</option>
+                                                <option  value="PA">Pennsylvania</option>
+                                                <option  value="RI">Rhode Island</option>
+                                                <option  value="SC">South Carolina</option>
+                                                <option  value="SD">South Dakota</option>
+                                                <option  value="TN">Tennessee</option>
+                                                <option  value="TX">Texas</option>
+                                                <option  value="UT">Utah</option>
+                                                <option  value="VT">Vermont</option>
+                                                <option  value="VA">Virginia</option>
+                                                <option  value="WA">Washington</option>
+                                                <option  value="WV">West Virginia</option>
+                                                <option  value="WI">Wisconsin</option>
+                                                <option  value="WY">Wyoming</option>
+                                                
+                                            </select>
+                                           
+							</form>
+                            </div>
+                        </div>
+                        
+                        <p>Electric vehicles (EVs) are propelled by an electric motor (or motors) powered by rechargeable battery packs. EVs have several advantages over vehicles with internal combustion engines (ICEs):</p>
+                        <ul>
+                          <li><strong>Energy efficient.</strong> Electric vehicles convert about 59&#8211;62% of the electrical energy from the grid to  power at the wheels&#8212;conventional gasoline vehicles only convert about 17&#8211;21% of the energy stored in gasoline to power at the wheels.<sup><a href="#end-notes">*</a></sup></li>
+                          <li><strong>Environmentally friendly.</strong> EVs emit no tailpipe pollutants, although the power plant producing the electricity may emit them. Electricity from nuclear-, hydro-, solar-, or wind-powered plants causes no air pollutants.</li>
+                          
+                          <li><strong>Performance benefits.</strong> Electric motors provide quiet, smooth operation and stronger acceleration and require less maintenance than ICEs.</li>
+                          <li><strong>Reduce energy dependence</strong>. Electricity is a domestic energy source.</li>
+                        </ul>
+            
+                        <p>EVs do, however, face significant battery-related challenges:</p>
+                        <!-- <img src="/feg/images/ev/leaf-charging.jpg" alt="EV recharging" width="300" class="floatRight"> -->
+						
+
+                        
+                        <ul>
+                          <li><strong>Driving range. </strong>Most EVs can only go about 100&#8211;200 miles before recharging&#8212;gasoline vehicles can go over 300 miles before refueling. </li>
+                          <li><strong>Recharge time.</strong> Fully recharging the battery pack can take 4 to 8 hours. Even a &quot;quick charge&quot; to 80% capacity can take 30 min.</li>
+                          <li><strong>Battery cost:</strong> The large battery packs are expensive and may need to be replaced one or more times.</li>
+                          <li><strong>Bulk &amp; weight:</strong> Battery packs are heavy and take up considerable vehicle space.</li>
+                        </ul>
+                        <p>However, researchers are working on improved battery technologies to increase driving range and decrease recharging time, weight, and cost. These factors will ultimately determine the future of EVs.</p>                               
+
+						<!-- Start video carousel -->       
+                        <div id="container" > 
+                            <span class="conceptsTitle">Electric Vehicle Videos</span>
+                            <ol id="carousel">
+                
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Tesla Model S</p>
+                                    	<iframe width="216" height="175" src="http://www.youtube.com/embed/AOdsTuaJEfc" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/AOdsTuaJEfc" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.teslamotors.com/models/index.php" target="_blank">Tesla Motors Website</a></p>
+                                        </div>
+									</div>
+								</div>
+                              </li>
+                        
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Ford Focus Electric</p>
+                                    	<iframe width="216" height="175" src="http://www.youtube.com/embed/DuvmN64xQW8" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                        <p><a href="http://www.youtube.com/embed/DuvmN64xQW8" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.youtube.com/embed/DuvmN64xQW8" target="_blank">Ford Website</a></p>
+                                        </div>
+									</div>
+								</div>
+                              </li> 
+                              
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Nissan Leaf</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/-2zHDmX8ook" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/-2zHDmX8ook" target="_blank">YouTube Video</a></p>
+                                       		<p><a href="http://www.nissanusa.com/leaf-electric-car/" target="_blank">Nissan Leaf Website</a></p>
+                                        </div>
+									</div>
+								</div>
+                              </li>  
+                                                          
+                              <li class="intro">
+                            	<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Mitsubishi i MiEV</p>
+										<iframe width="216" height="175" src="http://www.youtube.com/embed/huuBx077AYE" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/watch?v=huuBx077AYE" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.mitsubishicars.com/MMNA/jsp/imiev/12/showroom/overview.do" target="_blank">Mitsubishi Website</a></p>
+                                        </div>
+									</div>
+								</div>
+                              </li> 
+
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">CODA</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/wwzZlPC4ssU" frameborder="0" allowfullscreen></iframe>            
+                                  		<div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/wwzZlPC4ssU" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.codaautomotive.com/" target="_blank">CODA Automotive Website</a></p>
+                                      	</div>
+								  	</div>
+								</div>
+							  </li> 
+                              
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Honda Fit EV</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/UNyFnTAXLGw" frameborder="0" allowfullscreen></iframe>            
+                                  		<div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/UNyFnTAXLGw" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://automobiles.honda.com/fit-ev/" target="_blank">Honda Fit EV Website</a></p>
+                                      </div>
+								  </div>
+								</div>
+							  </li> 
+                
+                              <li class="intro">
+                              	<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">MINI E</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/uxSYTr0Ss60" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/uxSYTr0Ss60" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.miniusa.com/minie-usa" target="_blank">MINI E Website</a></p>
+                                        </div>
+									</div>
+								</div>
+                              </li>  
+                
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Audi A3 e-Tron</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/w8x6fxzdI-s" frameborder="0" allowfullscreen></iframe>            
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/w8x6fxzdI-s" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://audiusanews.com/newsrelease.do;jsessionid=1C0B262D9238F53280E8DFAF82B8B3B1?&id=2664&allImage=1&teaser=audi-a3-e-tron-technology-platform-all-rounder&mid=110" target="_blank">Audi of America Website</a></p>
+                                        </div>
+									</div>
+								</div>
+							  </li>     
+                              
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Azure Dynamics Transit Connect</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/3eUnQD5eI_4" frameborder="0" allowfullscreen></iframe>            
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/3eUnQD5eI_4" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.azuredynamics.com/products/transit-connect-electric.htm" target="_blank">Azure Dynamics Website</a></p>
+                                        </div>
+									</div>
+								</div>
+							  </li> 
+                              
+                              <li class="intro">
+								<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Tesla Roadster</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/0j7941VzH4I" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/0j7941VzH4I" target="_blank">YouTube Video</a></p>                 
+                                            <p><a href="http://www.teslamotors.com" target="_blank">Tesla Motors Website</a></p>    
+                                        </div>
+									</div>
+								</div>              
+                              </li>
+
+                           	  <li class="intro">
+                            	<div class="videoBox">
+									<div class="videoImage">
+                                    	<p class="videoTitle">Dodge Circuit</p>
+                                        <iframe width="216" height="175" src="http://www.youtube.com/embed/aoTvHu188SI" frameborder="0" allowfullscreen></iframe>
+                                        <div class="caption">
+                                            <p><a href="http://www.youtube.com/embed/aoTvHu188SI" target="_blank">YouTube Video</a></p>
+                                        	<p><a href="http://www.caranddriver.com/reviews/2011-dodge-circuit-ev-review" target="_blank">Car and Driver Review</a></a></p>
+                                        </div>
+									</div>
+								</div>
+                              </li>                       
+                    
+                          </ol>
+					  </div>       
+							<!-- End of video carousel -->
+
+						<a name="end-notes"></a>
+                        <div class="end-notes" style="font-size: 85%">                         
+                          <p><span class="alert">Note:</span> EV energy use estimated by ORNL as follows:</p>
+                          <ul>
+                          	<li>Electric motor efficiency&#8212;including inverter and gear reduction losses&#8212;assumed to be 76.4&#8211;80.2%, using estimates from Miller et. al. (<a href="http://papers.sae.org/2011-01-0887/">SAE 2011-01-0887</a>) and adjusting downward by 4% for parasitic losses.</li>
+                            <li>Battery and battery charger efficiency are assumed to total 81% (roughly 90% each) based in part on estimates from published studies (<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5944762">Chae et. al., 2011</a>; <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6043192">Gautam et. al., 2011</a>).</li>
+                          </ul>        
+                                
+                        </div>
+
+                          
+               	  </div>
+                    <!-- End of "main-content" container -->
+                </div>
+                <!-- End of class "yui-b" container -->
+            </div>
+            <!-- End of class "yui-g" container -->
+        </div>
+        <!-- End of "yui-main" container -->
+		<div id="nav" class="yui-b">
+            <div id="leftNav">
+            	<!-- leftNav include for evtech.shtml -->
+<ul>
+    <li>
+      <div id="selected-page"><div class="lnmenubaritem"><a href="/feg/evtech.shtml" class="lnmenubaritemlabel">Electric Vehicles</a></div></div></li>
+    <li>
+      <div class="lnmenubaritem"><a href="/feg/evsbs.shtml" class="lnmenubaritemlabel">Compare Side by Side</a></div></li>
+    <li>
+      <div class="lnmenubaritem"><a href="/feg/evnews.shtml" class="lnmenubaritemlabel">New & Upcoming Vehicles</a></div></li>
+    <li>
+     <div class="lnmenubaritem"><a href="/feg/taxevb.shtml" class="lnmenubaritemlabel">Tax Incentives</a></div></li>
+    <li>
+     <div class="lnmenubaritem"><a href="/feg/evlinks.shtml" class="lnmenubaritemlabel">Links</a></div></li>
+</ul>  
+
+				
+			</div>
+            <!-- End of leftNav Container -->
+    	</div>
+        <!-- End of "nav" container -->	
+
+	</div>
+    <!-- End of "bd" container -->
+     <div id="ft" role="contentinfo">
+					<a href="/m/" >Mobile</a>
+                  | <a href="/feg/download.shtml" >Download EPA's MPG Ratings</a> 
+                  | <a href="/feg/bymake/bymanuNF.shtml" >Find and Compare Cars</a>
+                  | <a href="http://www.usa.gov" >USA.gov</a>
+                  | <a href="/feg/dealers.shtml" >Info for Auto Dealers</a>
+                  | <a href="/feg/ORNL-disclaimer.htm" >Privacy/Security</a>
+  | <a href="mailto:fueleconomy@ornl.gov" >Feedback</a><p>This site last modified Tuesday August 27 2013</p></div>
+
+</div>
+<!-- End of "doc4" container -->
+
+<!-- Carousel script -->
+<script type="text/javascript">
+    (function () {
+        var carousel;
+                
+        YAHOO.util.Event.onDOMReady(function (ev) {
+            var carousel    = new YAHOO.widget.Carousel("container", {
+                        numVisible:        3,
+                        isCircular: true,
+                        animation: { speed: 0.5 }
+                });
+                        
+            carousel.render(); // get ready for rendering the widget
+            carousel.show();   // display the widget
+        });
+    })();
+	
+
+</script>
+
+	
+</body>
+</html>
+

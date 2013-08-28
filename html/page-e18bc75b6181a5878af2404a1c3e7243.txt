@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		
+  <!--[if lte IE 6]>
+<script type="text/javascript" src="js/supersleight-min.js"></script>
+<![endif]-->
+<title>Leake Auction Company</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon"/>
+<link rel="icon" href="/favicon.ico" type="image/x-ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+
+<link media="all" rel="stylesheet" type="text/css" href="/css/all_new.css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+	<script src="/js/carousel.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function mycarousel_initCallback(carousel)
+		{
+			jQuery('#carScrollNext').bind('click', function() {
+				carousel.next();
+				carousel.startAuto(0);
+				return false;
+			});
+
+			jQuery('#carScrollBack').bind('click', function() {
+				carousel.prev();
+				carousel.startAuto(0);
+				return false;
+			});			
+
+			// Pause autoscrolling if the user moves with the cursor over the clip.
+			carousel.clip.hover(function() {
+				carousel.stopAuto();
+			}, function() {
+				carousel.startAuto();
+			});
+		};
+
+		jQuery(document).ready(function() {
+			jQuery('.gallery').jcarousel({
+				auto: 3,
+				wrap: 'last',
+				initCallback: mycarousel_initCallback
+			});
+			
+			$(".sections").click(function() {
+			  $("ul.sections-drop").toggle(); 
+			});
+		});
+	
+	</script>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "7f59137a-366d-4b16-8cde-62572d12659a"});</script>
+	<script type="text/javascript" src="js/cycle.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			windowResize();
+		});
+
+		$(function() { 
+		
+		//strictly for the brand window  
+		 $(window).resize(function() {
+				//desktop-screen
+				$('.switcher').empty();
+				$('.numbers').empty();
+				
+				windowResize();
+				//end tablet-screen				
+			}) .resize(); // trigger resize event
+		
+		})	
+		
+		function windowResize(){
+				if ($(window).width() >= 959) {
+					$('.bwfull').show();
+					$('.bwmedium').hide();
+					$('.bwsmall').hide();
+					$('.videoFull').show();
+					$('.videoSmall').hide();										
+										
+					$('.bwfull') 
+						.cycle({ 
+							fx:     'fade', 
+							speed:  1000, 
+							timeout: 5000, 
+							pager:  '.switcher' 
+					});
+					$('.videoFull') 
+						.cycle({ 
+							fx:     'scrollLeft', 
+							speed:  1000, 
+							timeout: 0, 
+							pager:  '.numbers' 
+					});					
+				}
+				//end desktop-screen		 
+				//tablet-screen
+				if ($(window).width() < 959) {
+					$('.bwfull').hide();
+					$('.bwmedium').show();
+					$('.bwsmall').hide();
+					$('.videoFull').hide();
+					$('.videoSmall').show();
+															
+					$('.bwmedium') 
+						.cycle({ 
+							fx:     'fade', 
+							speed:  1000, 
+							timeout: 0, 
+							pager:  '.switcher' 
+					});
+					
+					$('.videoSmall') 
+						.cycle({ 
+							fx:     'scrollLeft', 
+							speed:  1000, 
+							timeout: 0, 
+							pager:  '.numbers' 
+					});						
+				}
+				//end tablet-screen
+			//tablet-screen
+				if ($(window).width() < 767) {
+					$('.switcher').empty();
+					$('.numbers').empty();
+					$('.bwfull').hide();
+					$('.bwmedium').hide();
+					$('.bwsmall').show();
+					$('.videoFull').hide();
+					$('.videoSmall').show();
+										
+					$('.bwsmall') 
+						.cycle({ 
+							fx:     'fade', 
+							speed:  'fast', 
+							timeout: 5000, 
+							pager:  '.switcher' 
+					});
+					
+					$('.videoSmall') 
+						.cycle({ 
+							fx:     'scrollLeft', 
+							speed:  1000, 
+							timeout: 0, 
+							pager:  '.numbers' 
+					});						
+					
+					
+					
+				}	
+		}
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="w1">
+			<div id="header">
+				<div class="nav-holder">
+    <ul class="nav">
+        <li><a href="/contact_us/52/contact-us"><span><img src="/images/Contact.png" alt="Contact" width="64" height="25" /></span></a></li>
+        <li id="nav_a"><a href="/general/58/buy-a-car"><span><img src="/images/BuyACar.png" alt="Buy A Car" width="76" height="25" /></span></a></li>
+        <li id="nav_b"><a href="/general/60/sell-a-car"><span><img src="/images/SellACar.png" alt="Sell A Car" width="83" height="25" /></span></a></li>
+        <li id="nav_c"><a href="/consignments/51/current-consignments"><span><img src="/images/CurrentConsignments.png" alt="Current Consignments" width="180" height="25" /></span></a></li>
+    </ul>
+    <ul class="nav right">
+        <li><a href="/consignments/51/current-consignments"><span><img src="/images/Consignments.png" alt="Consignments" width="107" height="25" /></span></a></li>
+        <li id="nav_d"><a href="/auctionresults/69/previous-results"><span><img src="/images/PreviousResults.png" alt="Previous Results" width="141" height="25" /></span></a></li>
+        <li id="nav_e"><a href="/auctions/104/upcoming-auctions"><span><img src="/images/AuctionInfo.png" alt="Auction Info" width="101" height="25" /></span></a></li>
+        <li id="nav_f"><a href="/contact_us/52/contact-us"><span><img src="/images/ContactUs.png" alt="Contact Us" width="96" height="25" /></span></a></li>
+    </ul>
+    <h1 class="logo"><a href="/">LEAKE. auction company</a></h1>
+</div>
+<div class="holder">
+    <ul class="menu">
+        <li class="sections"><a href="#">sections</a></li>
+        <li><a class="search" href="/consignments/51/current-consignments">advanced search</a></li>
+        <li><a class="mail" href="/general/105/email-signup">Email sign-up</a></li>
+    </ul>
+    <ul class="sections-drop">
+        <li><a href="/general/58/buy-a-car">Buy A Car</a></li>
+        <li><a href="/general/60/sell-a-car">Sell A Car</a></li>
+        <li><a href="/consignments/51/current-consignments">Current Consignments</a></li>
+        <li><a href="/auctionresults/69/previous-results">Previous Results</a></li>
+        <li><a href="/general/104/general-information">General Info</a></li>
+        <li><a href="/contact_us/52/contact-us">Contact Us</a></li>
+    </ul>
+    <ul class="social-networks">
+    	<li><a href="http://www.twitter.com/LeakeCar" class="twitter" target="_blank">twitter</a></li>
+        <li><a href="http://www.youtube.com/user/LeakeCar" class="youtube" target="_blank">youtube</a></li>
+        <li><a href="https://www.facebook.com/LeakeAuction" class="facebook" target="_blank">facebook</a></li>
+        <li><a href="#" class="share st_sharethis_custom">share</a></li>
+    </ul>
+</div>
+			</div>
+			<div id="main">
+				<div class="banner-frame">
+					<div class="banner bwfull" style="height: 325px;">
+                    	<a href="http://leakecar.com/auctions/104/upcoming-auctions/86/dallas-2013" onClick="recordclick('58','57','0','0');" ><img src="upload/file/DALLAS13desktop.jpg" alt="Leake Auction Dallas 2013 " class="big" /></a><a href="http://americanfallensoldiers.com/" onClick="recordclick('60','57','0','0');" target="_blank"><img src="upload/file/FS_Leake_938x325.jpg" alt="American Fallen Soldiers" class="big" /></a>
+					</div>
+					<div class="banner bwmedium" style="height: 325px;">
+                        <a href="http://leakecar.com/auctions/104/upcoming-auctions/86/dallas-2013" onClick="recordclick('58','57','0','0');" ><img src="upload/file/DALLAS13tablet.jpg" alt="Leake Auction Dallas 2013 " class="medium" /></a><a href="http://americanfallensoldiers.com/" onClick="recordclick('60','57','0','0');" target="_blank"><img src="upload/file/FS_Leake_746x325.jpg" alt="American Fallen Soldiers" class="medium" /></a>
+					</div>
+					<div class="banner bwsmall" style="height: 240px;">
+                        <a href="http://leakecar.com/auctions/104/upcoming-auctions/86/dallas-2013" onClick="recordclick('58','57','0','0');" ><img src="upload/file/DALLAS13SMALL.jpg" alt="Leake Auction Dallas 2013 " class="small" /></a><a href="http://americanfallensoldiers.com/" onClick="recordclick('60','57','0','0');" target="_blank"><img src="upload/file/FS_Leake_320x240.jpg" alt="American Fallen Soldiers" class="small" /></a>
+					</div>                                        
+					<div class="switcher">
+						
+					</div>
+				</div>
+				<div class="panel">
+					<a href="#" class="prev" id="carScrollBack">previous</a>
+					<a href="#" class="next" id="carScrollNext">next</a>
+					<div class="text"><span><img src="images/featured.png" alt="featured cars" width="286" height="19" /></span></div>
+				</div>
+				<div class="gallery-block">
+					<ul class="gallery">
+						<li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13452.jpg" alt="1967 Chevrolet Corvette" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/452/1967chevroletcorvette?action=itemdetail">1967 Chevrolet Corvette</a></h2><p>Lot # 452</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li><li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13458.jpg" alt="1957 Ford Thunderbird" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/458/1957fordthunderbird?action=itemdetail">1957 Ford Thunderbird</a></h2><p>Lot # 458</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li><li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13460.jpg" alt="1941 Cadillac Series 62" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/460/1941cadillacseries-62?action=itemdetail">1941 Cadillac Series 62</a></h2><p>Lot # 460</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li><li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13471.jpg" alt="1939 Bentley Royale" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/471/1939bentleyroyale?action=itemdetail">1939 Bentley Royale</a></h2><p>Lot # 471</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li><li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13472.jpg" alt="1962 Mercedes-Benz 190SL" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/472/1962mercedesbenz190sl?action=itemdetail">1962 Mercedes-Benz 190SL</a></h2><p>Lot # 472</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li><li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13490.jpg" alt="1931 Ford Model A Deluxe" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/490/1931fordmodel-a-deluxe?action=itemdetail">1931 Ford Model A Deluxe</a></h2><p>Lot # 490</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li><li><img src="https://s3.amazonaws.com/leakecar/imgUL/dalfal13/DALFAL13901.jpg" alt="2013 Chevrolet COPO Camaro" width="219" height="143" /><div class="text"><h2><a href="/consignments/51/current-consignments/86/dallas-2013/901/2013chevroletcopo-camaro?action=itemdetail">2013 Chevrolet COPO Camaro</a></h2><p>Lot # 901</p><p>Dallas 2013</p><img src="/images/bg-decor.png" alt="description background image" class="decor" /></li>
+						
+						
+					</ul>
+				</div>
+				<div class="bar-holder">
+					<div class="bar">
+						<div class="text-holder">
+							<span class="text"><a href="/consignments/51/current-consignments"><img src="images/text-view-all-consignments.png" alt="view all current consignments" width="271" height="21" /></a></span>
+						</div>
+					</div>
+				</div>
+				<div class="columns-holder">
+					<div class="column left">
+						<div class="upload-section">
+							<a href="/general/97/upload-photos"><img src="images/img06.jpg" alt="upload your photos" width="141" height="81" /></a>
+							<a href="http://www.leakecar.com/DigitalBrochures/tulsa2013/index.html" target="_blank"><img src="images/img07.jpg" alt="view our brochure" width="141" height="81" /></a>
+						</div>
+						<div class="text-info">
+							<div class="info">
+								<img src="images/img08.jpg" alt="image description" width="143" height="143" class="alignright" />
+								<div class="text">
+									<h3><img src="images/ThreeGenerationsOfExcellence.png" alt="ThreeGenerationsOfExcellence" width="125" height="54" style="padding-top: 5px;" /></h3>
+									<p>Before car collecting was a business, before collector cars became a hobby, back when 'old' cars were considered junk - that is when the passion for the 'old junkers' took hold of Jim Leake, Sr. <br /></p>
+								</div>
+							</div>
+							<div class="btn-holder">
+								<a href="/general/101/about-us">Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="column right">
+						<div class="video-holder">
+                        	                   
+							<div class="big videoFull"><a href="#"><iframe width="299" height="224" src="http://www.youtube.com/embed/qZ7O7bdLzrU" frameborder="0" allowfullscreen></iframe>
+</a></div>
+							<div class="small videoSmall" style="margin-left: 25px;"><a href="#"><iframe width="270" height="203" src="http://www.youtube.com/embed/qZ7O7bdLzrU" frameborder="0" allowfullscreen></iframe>
+</a></div>
+						</div>
+						<div class="text">
+							<h3><img src="images/ViewVideos.png" alt="ViewVideos" width="85" height="33" /></h3>
+							<p>Check out Leake Auction Company in action!</p>
+							<ul class="numbers">
+								<li><a href="#"><img src="images/number1.jpg" alt="image description" width="21" height="21" /></a></li>
+								<li><a href="#"><img src="images/number2.jpg" alt="image description" width="21" height="21" /></a></li>
+								<li><a href="#"><img src="images/number3.jpg" alt="image description" width="21" height="21" /></a></li>
+								<li><a href="#"><img src="images/number4.jpg" alt="image description" width="21" height="21" /></a></li>
+								<li><a href="#"><img src="images/number5.jpg" alt="image description" width="21" height="21" /></a></li>
+							</ul>
+							<!--<div class="btn-holder">
+								<a href="#">Video Gallery</a>
+							</div>-->
+						</div>
+					</div>
+				</div>
+				<div class="ad special">
+	<div class="holder">
+		<a href="http://www.jjbest.com/7032" onClick="recordclick('53','57','0','0');" target="_blank"><img src="/upload/image/JJ Best.jpg" alt="JJ Best Banc" class="big" /></a><a href="http://www.jjbest.com/7032" onClick="recordclick('53','57','0','0');" target="_blank"><img src="/upload/image/JJ Best.jpg" alt="JJ Best Banc" class="medium" /></a><a href="http://www.jjbest.com/7032" onClick="recordclick('53','57','0','0');" target="_blank"><img src="/upload/image/JJBESTmobilebannercopy.jpg" alt="JJ Best Banc" class="small" /></a>
+	</div>
+</div>
+
+			</div>
+			<div id="footer">
+				<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/general/101/about-us">About Us</a></li>
+    <li><a href="/news/102/press-releases">Press Releases</a></li>
+    <li><a href="/general/60/sell-a-car">Consign</a></li>
+    <li><a href="/general/58/buy-a-car">register</a></li>
+    <li><a href="/consignments/51/current-consignments">current</a></li>
+    <li><a href="/contact_us/52/contact-us">Contact Us</a></li>
+</ul>
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript">_atrk_opts = { atrk_acct: "oQLtg1aAQ700Eb", domain:"leakecar.com"}; atrk ();</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=oQLtg1aAQ700Eb" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+<!-- Start Google Javascript -->
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7887358-2']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+<!-- End Google Javascript -->
+
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

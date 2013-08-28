@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="../../scripts/valid.js"></script>
+<!--<script type="text/javascript" src="../../scripts/jquery.min.js"></script> -->
+<script type="text/javascript" src="HTTP://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../scripts/jkmegamenu.js"></script>
+<script src="./scripts/automotive.js" type="text/javascript"></script>
+<script type="text/javascript">
+//jkmegamenu.definemenu("anchorid", "menuid", "mouseover|click");
+jkmegamenu.definemenu("membershipanchor", "membershipmenu", "mouseover");
+jkmegamenu.definemenu("discountanchor", "discountmenu", "mouseover");
+jkmegamenu.definemenu("travelanchor", "travelmenu", "mouseover");
+jkmegamenu.definemenu("insuranceanchor", "insurancemenu", "mouseover");
+jkmegamenu.definemenu("loansanchor", "loansmenu", "mouseover");
+jkmegamenu.definemenu("wirelessanchor", "wirelessmenu", "mouseover");
+jkmegamenu.definemenu("autoanchor", "automenu", "mouseover");
+jkmegamenu.definemenu("publicanchor", "publicmenu", "mouseover");
+</script>
+<script language="javascript1.1">
+<!--
+// only going to process if an actual end user
+if(!spiderClient()) {
+        // check the zipcode cookie to see if the user has already been validated in our club
+        if(validateUserInClub("45")) {
+                // the user has been validated, allow them to continue
+                // the page will now display
+        } else {
+                // if being referred to from the AES Gateway the
+                // validated zipcode will be sent as zip=nnnnn
+                if(window.location.search.indexOf("zip=") >= 0) {
+                        // this page is being referred to by the AES Gateway
+                } else {
+                        // user will be sent over to the Zip Code Gateway for validation
+                        verifyUserIsInOurTerritory("45");
+                }
+        }
+}
+// -->
+</script>	<link rel="stylesheet" href="../../styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../../styles/page.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../styles/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="../../styles/jkmegamenu.css" />
+<link rel="stylesheet" href="../../styles/survey.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="./styles/automotive.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	
+	<link rel="shortcut icon" type="image/ico" href="../../images/icons/favicon.ico" />
+	<title>AAA Pioneer Valley | Automotive| Roadside Assistance</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="AAA Roadside Assistance there when you need them." />
+	<meta name="keywords" content="aaa,roadside assistance,road service,towing,battery,jumpstart,flat tire,lockout,keys,new battery,stuck,broke down,membership,frozen doors,tow,spare tire,car service,emergency,basic, plus" />
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+	<div id="top">
+		<div class="left"><a href="/pv/home/"><img src="../../images/layout/aaa-logo.gif" width="166" height="80" alt="AAA" /></a></div> <!-- Close left -->
+		<div class="middle"><p>Serving AAA Pioneer Valley members in <br /> Franklin, Hampden and Hampshire Counties.</p></div><!-- Close middle -->
+		<div class="right">
+			<div class="login">
+                     <div id="login">					<div class="noscript" style="color:#FFF;line-height:12px"><a  href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=myaaahome">Sign In</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=registration">Register</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+<a  href="../membership/contactus.php">Contact Us</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+<a href="../membership/branches.php">Branch Locations</a></div>
+						</div> <!-- Close login -->
+	                    <div id="logout" style="display:none;">						 <div class="noscript" style="color:#FFF"><span>Welcome</span>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=myaaahome">Online  Profile</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=signout">Log Out</a></div>
+					<div class="clear"></div> <!-- Close clear -->
+					</div> <!-- Close logout -->
+			</div> <!-- Close login -->
+            
+			<div class="clear"></div> <!-- Close clear -->
+			<div class="search">				
+				<div class="l_right_search"></div> <!-- Close l_right_search -->				
+				<div class="l_left_search">
+                <form action="../../pv/home/search.php" method="get"> 
+                <fieldset>
+				<input  type="text" name="q" id="query" size="40" class="bar" value="Search AAA ..." onfocus="if (this.value == 'Search AAA ...') this.value = '';" /> 
+				<input type="submit" value="" class="search-icon"/>
+				<input type="hidden" name="search" value="1"/> 
+				</fieldset>
+				<div class="clear"></div> <!-- Close clear -->
+				</form>
+								</div><!-- Close l_left_search -->
+			</div> <!-- Close search -->
+			</div> <!-- Close right -->
+		<div class="clear"></div> <!-- Close clear -->
+	</div> <!-- Close top -->
+	<div id="nav"> 
+
+	<div class="nav-right">	
+
+
+<!-- *************************   HOMEPAGE  ******************************* -->
+    
+      <div  style="float:left;padding-left:8px">      <!--Mega Menu Anchor-->
+      <div><a href="/pv/home/index.php">Home</a><span class="pipe"> | </span></div>
+</div>
+
+<!-- *************************   MEMBERSHIP  ******************************* -->
+<div class="menu"  style="float:left">
+      <!--Mega Menu Anchor-->
+<div><a href="../membership/index.php" class="dept" id="membershipanchor"> Membership <span class="darrow">&#9660;</span></a><span class="pipe"> | </span></div>
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="membershipmenu" class="megamenu" style="width:280px">
+      <div  class="column" style="height:190px">
+        <ul>
+          <li class="main" style="margin-left:10px"><a href="../membership/joinaaa.php">JOIN AAA</a>
+            <ul>
+              <li class="normal"><a href="https://www.aaapioneervalley.com:8090/login.jsp">Renew/Upgrade Online</a></li>
+              <li class="normal"><a href="https://www.aaapioneervalley.com:8090/login.jsp">Add a Member</a></li>
+              <li class="normal"><a href="https://www.aaapioneervalley.com:8090/login.jsp">Update Info</a></li>
+              <li class="normal"><a href="../membership/giftmembership.php">Gift Membership</a></li>
+            </ul>
+          </li>
+          <li class="main" style="margin-left:10px"><a href="../membership/benefits.php">Benefits</a>
+            <ul>
+              <li class="normal"><a href="../membership/benefits.php">Membership</a></li>
+              <li class="normal"><a href="../membership/benefits-finance.php">Finance</a></li>
+              <li class="normal"><a href="../membership/benefits-travel.php">Travel</a></li>
+              <li class="normal"><a href="../membership/benefits-insurance.php">Insurance</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="column"  style="height:190px">
+              <ul>
+              <!--<li class="main"><a href="../insider/insider.php" target="_blank">INsider</a>
+                    <ul>
+                        <li class="normal"><a href="../insider/insider.php" target="_blank">Become an INsider</a></li>
+                        <li class="normal"><a href="../insider/savings.php" target="_blank">INsider Savings</a></li>
+                    </ul>
+                  </li> -->
+                 
+
+                 <li class="main"><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">Discounts</a>
+                    <ul>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">Search for Savings</a></li>
+                        <li class="normal"><a href="../membership/tickets.php#theater">Movie Tickets</a></li>
+                        <li class="normal"><a href="../membership/tickets.php#parks">Attraction Tickets</a></li>
+                        <li class="normal"><a href="../discounts/wireless.php">Cell Phones &amp; Service</a></li>
+                    </ul>
+                </li>
+                 <li class="main"><a href="../automotive/registry.php">Registry Services</a></li>
+                   <li class="main"><a href="../publications/index.php">AAA Times</a>
+                  </li>
+                  <li class="main"><a href="../membership/f_esignup.php">Sign Up: Email Updates</a>
+<li class="main"><a href="../membership/index.php">View All --&gt;</a>
+                </li>
+
+              </ul>
+        </div>
+          <div class="clear">&nbsp;</div>
+           <div class="advert"><img src="../membership/images/dropdown/aaa.gif"  alt="AAA Logo" border="0" width="76" height="46" /> 
+          <p class="nospace"><a href="https://www.aaapioneervalley.com:8090/login.jsp" class="underline">Make sure all the drivers in your house are covered. Add an associate today.</a></p>
+          </div>
+    </div>
+</div>
+
+
+
+
+<!-- *************************   DISCOUNTS  ******************************* -->
+<div  style="float:left">
+      <!--Mega Menu Anchor-->
+<div><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" id="discountanchor" target="_blank">Discounts <span class="darrow">&#9660;</span></a><span class="pipe"> | </span></div>
+      
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="discountmenu" class="megamenu" style="width:280px">
+    
+         <div class="column" style="height:175px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">All Categories</a>
+                    <ul>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS3" target="_blank">Attractions</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS1" target="_blank">Automotive</a></li>
+                         <li class="normal"><a href="../discounts/wireless.php">Cell Phones</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS12" target="_blank">Dining</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS7" target="_blank">Lodging</a></li>
+						
+                    </ul>
+                    </li>
+                  <li class="main" style="margin-left:10px"><a href="http://www.aaa.com/travel2/sycs/memberDiscountsCriteria.xhtml?club=045&association=AAA">Search Nationwide</a>
+                  <li class="main" style="margin-left:10px"><a href="../membership/tickets.php#theater">Movie Tickets</a>
+                  <li class="main" style="margin-left:10px"><a href="../membership/tickets.php#parks">Attraction Tickets</a>
+                </li>
+              </ul>
+          </div>
+    
+          <div class="column"  style="height:175px">
+              <ul>
+                 <li class="main"><a href="../membership/index.php">&nbsp;</a>
+                    <ul>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS11" target="_blank">Retail</a></li>
+                        <li class="normal" target="_blank"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS10" target="_blank">Personal Services</a></li>						
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS11" target="_blank">Shopping</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/quickSearchClubDeal.html?zipCode=&distance=0&keywords=&category=SYCAS7" target="_blank">Travel</a></li>
+						 <li class="normal"><a href="../membership/tickets.php">Tickets</a></li>
+                    </ul>
+                  </li>
+
+
+                   </li>
+                  <li class="main"><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">View All --&gt;</a>
+                  </li>
+                  <li class="main"><a href="../discounts/media/docs/brochure.pdf" target="_blank">Print All --&gt;</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="clear">&nbsp;</div>
+          
+          <div class="advert-left" style="height:90px;">
+          	<a href="http://www.aaa.com/dell" target="_blank"><img src="../discounts/images/dropdown/dell.gif" alt="Dell" width="46" height="46" border="0" /></a>
+<p class="nospace"><a href="http://www.aaa.com/dell" target="_blank" class="underline">Receive a $200 eGift Card with select PCs.</a><br /></p>
+        </div>
+
+          <div class="advert-right" style="height:90px;"><a href="http://www.aaa.com/visionsavings" target="_blank"><img src="../discounts/images/dropdown/lenscrafters.jpg" alt="LensCrafters" width="105" height="20" border="0"/></a>
+<p class="nospace"><a href="http://www.aaa.com/visionsavings" class="underline">Save 40% on Sunglasses made with your prescription at LensCrafters.</a><br /></p>
+          </div>
+
+    </div>
+</div>
+
+
+ 
+ <!-- *************************   TRAVEL  ******************************* -->
+<div  style="float:left">
+<!--Mega Menu Anchor-->
+<div><a href="../travel/index.php" class="dept" id="travelanchor">Travel <span class="darrow">&#9660;</span></a><span class="pipe"> | </span></div>
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="travelmenu" class="megamenu" style="width:280px">
+    
+          <div class="column" style="height:270px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="../travel/usa.php">U.S. &amp; Canada</a>
+                    <ul>
+                        <li class="normal"><a href="http://res.pioneervalley.aaa.com/nexres/air/frontdoor.cgi?src=10027829">Flights</a></li>
+                        <li class="normal"><a href="http://res.pioneervalley.aaa.com/nexres/search/power_search.cgi?src=10027829&lang=ENG">Hotels</a></li>
+                        <li class="normal"><a href="http://res.pioneervalley.aaa.com/nexres/cars/search.cgi?src=10027829&lang=ENG">Car Rentals</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/services/travel/cruise/cruiseHome.html">Cruises</a></li>
+                        <li class="normal"><a href="../travel/motorcoach.php">Motorcoach Tours</a></li>
+                        <li class="normal"><a href="../travel/vacations.php">Vacation on Your Own</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&amp;club=045&amp;page=PartnerRedirect&amp;PID=416" target="_blank">Escorted Tours</a></li>
+						<li class="normal"><a href="../travel/disney.php">Disney</a></li>
+						<li class="normal"><a href="../travel/universal.php" target="_blank">Universal Orlando</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline.woa/?association=aaa&amp;club=045&amp;page=ActivitySearch">Activities</a></li>
+                    </ul>
+                    </li>
+		<li class="main" style="margin-left:10px"><a href="../travel/caribbean.php">Caribbean</a>
+                    <ul>
+                        <li class="normal"><a href="http://crusader.travimp.com/TIDirect/TIDirectFrontServlet?request_type=search&amp;TIConnectId=22549516" target="_blank">All-Inclusive</a></li>
+                        <li class="normal"><a href="http://crusader.travimp.com/TIDirect/TIDirectFrontServlet?request_type=search&amp;TIConnectId=22549516" target="_blank">Vacation Packages</a></li>
+                    </ul>
+                    </li>
+              </ul>
+          </div>
+    
+          <div class="column"  style="height:270px">
+              <ul>
+                 <li class="main"><a href="../travel/vacations.php">International</a>
+                    <ul>
+                        <li class="normal"><a href="http://res.pioneervalley.aaa.com/nexres/air/frontdoor.cgi?src=10027829">Flights</a></li>
+                        <li class="normal"><a href="http://res.pioneervalley.aaa.com/nexres/search/power_search.cgi?src=10027829&lang=ENG">Hotels</a></li>
+                        <li class="normal"><a href="http://res.pioneervalley.aaa.com/nexres/cars/search.cgi?src=10027829&lang=ENG">Car Rentals</a></li>
+                        <li class="normal"><a href="http://aaa.memberchoicevacations.com/?CFID=1834164&CFTOKEN=9f268de83df36cda-5B1866DD-A739-FED5-A71845349883C57B" target="_blank">Escorted Tours</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="main"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline.woa/?association=aaa&club=045&page=ittservices&version=2013" target="_blank">Maps &amp; Directions</a>
+                     <ul>
+                       
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline.woa/?association=aaa&club=045&page=ittservices&version=2013" target="_blank">Get Directions/TripTik</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/travel2/destination/travelGuideSearch.xhtml?club=045&association=aaa">Online Travel Guides</a></li>
+                        <li class="normal"><a href="../travel/f_triptik.php">Order a TripTik</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=pubrequest" target="_blank">Order Maps/TourBooks</a></li>
+                     </ul>
+                   </li>
+				  
+ 
+                   </li>
+<li class="main"><a href="../travel/index.php">View All --&gt;</a>
+ 
+                   </li>
+              </ul>
+          </div>
+          <div class="clear">&nbsp;</div>
+          <div class="advert-left" style="height: 90px;">
+		  <img src="../travel/images/dropdown/authdisney.jpg" width="92" height="46" alt="Authorized Disney Vacaton Planner" />
+          <p class="nospace"><a href="http://www.disneywebcontent.com/dcc/3046/b324473c8c128210VgnVCM100000d864a8c0RCRD/" target="_blank" class="underline">View Current Disney Offers</a></p>
+		  </div>
+		  
+		  <div class="advert-right" style="height: 90px;">
+		  <img src="../travel/images/dropdown/hertz.jpg" width="92" height="46" alt="Her" />
+          <p class="nospace"><a href="http://www.aaa.com/HertzGold" target="_blank" class="underline">View Hertz Gold Plus Rewards</a></p>
+
+          </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- *************************   INSURANCE  ******************************* -->
+<div  style="float:left">
+<!--Mega Menu Anchor-->
+<div><a href="../insurance/index.php" class="dept" id="insuranceanchor">Insurance <span class="darrow">&#9660;</span></a><span class="pipe"> | </span></div>
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="insurancemenu" class="megamenu" style="width:280px">
+          <div class="column" style="height:242px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="../insurance/auto.php">Automobile</a>
+                    <ul>
+                        <li class="normal"><a href="../insurance/auto.php">Get a Quote</a></li>
+                    </ul>
+                 </li>
+                 <li class="main" style="margin-left:10px"><a href="../insurance/home.php">Home/Condo/Renters</a>
+                    <ul>
+			          <li class="normal"><a href="../insurance/f_home.php">Get a Quote</a></li>
+                    </ul>
+                 </li>
+                 <li class="main" style="margin-left:10px"><a href="../insurance/life.php">Life</a>
+                     <ul>
+			           <li class="normal"><a href="../insurance/life.php">Get a Quote</a></li>
+                     </ul>
+                </li>
+                <li class="main" style="margin-left:10px"><a href="../insurance/service.php">Customer Service</a>
+                     <ul>
+			            <li class="normal"><a href="../membership/branches.php">Agency Locations</a></li>
+			            <li class="normal"><a href="../insurance/payment.php">Make a Payment</a></li>
+			            <li class="normal"><a href="../insurance/service.php">Update Info</a></li>
+                     </ul>
+                </li>
+            </ul>
+          </div>
+    
+          <div class="column"  style="height:242px">
+              <ul>
+ <li class="main" style="margin-left:8px"><a href="../insurance/index.php">Other Products</a>
+                    <ul>
+                        <li class="normal"><a href="../insurance/longtermcare.php">Long Term Care</a></li>
+                        <li class="normal"><a href="http://www.altusdental.com/AAA/aaaenroll.html" target="_blank">Dental</a></li>
+                        <li class="normal"><a href="../insurance/travelinsurance.php">Travel Medical</a></li>
+                        <li class="normal"><a href="http://www.myhartfordonline.com/pv" target="_blank">Accident</a></li>
+                        <li class="normal"><a href="../insurance/personalliability.php">Personal Liability</a></li>
+                        <li class="normal"><a href="../insurance/f_business.php">Small Business</a></li>
+                        
+                        <li class="normal"><a href="../insurance/flood.php">Flood</a></li>
+<li class="normal"><a href="../automotive/aaaglass.php">Glass Service</a></li>
+<li class="normal"><a href="http://www.healthypawspetinsurance.com/AAAPV.aspx?pc=AAAPV&affid=AAAPV" target="_blank">Pet Insurance</a></li>
+<li class="normal"><a href="../driver_training/index.php">Driving School</a></li>
+<li class="normal"><a href="../automotive/registry.php">Registry Services</a></li>
+<li class="normal"><a href="http://medsuppinfo.com/needcoverage/need_coverage.aspx?src=AEGON&ac=WAAAPV" target="_blank">Medicare Supplement</a></li>
+                    </ul>
+                  </li>
+<li class="main" style="margin-left:8px"><a href="../insurance/index.php">View All --&gt;</a>
+                  </li>
+              </ul>
+
+          </div>
+          <div class="clear">&nbsp;</div>
+          <div class="advert"><img src="../insurance/images/dropdown/logo_small.gif" width="86" height="46" alt="AAA Insurance" />
+          <p><a class="underline" href="../insurance/life.php">Your Policy Done Better.</a> <br />Save on Life Insurance through AAA</p>
+          </div>
+    </div>
+</div>
+
+
+<!-- *************************   FINANCE  ******************************* -->
+<div  style="float:left">
+<!--Mega Menu Anchor-->
+   <div>
+        <a   href="../finance/index.php" class="dept" id="loansanchor">Finance <span class="darrow">&#9660; </span></a><span class="pipe"> | </span>
+   </div>
+
+   <!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="loansmenu" class="megamenu" style="width:280px">
+    
+          <div class="column" style="height:200px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="../finance/index.php">Loans</a>
+                    <ul>
+                    <li class="normal"><a href="../finance/autoloans.php" >Automotive</a></li>
+                        
+                        <li class="normal"><a href="../student/index.php">College Financial Aid</a></li>
+                       
+                    </ul>
+                    </li>
+                  <li class="main" style="margin-left:10px"><a href="../student/webinars.php">Seminars</a>
+                     <ul>
+                        <li class="normal"><a href="../student/webinars.php">College planning</a></li>
+                </ul>
+                </li>
+                <li class="main" style="margin-left:10px"><a href="https://www.applyonlinenow.com/USCCapp/Ctl/entry?cid=2097944" target="_blank">AAA Credit Card</a></li>
+              </ul>
+          </div>
+    
+          <div class="column"  style="height:200px">
+              <ul>
+                 <li class="main"><a href="http://www.aaa.com/dbsem?cmpgnid=ay_bk_AAABAN912&src=AAABAN912" target="_blank">Deposits</a>
+                    <ul>
+                    <li class="normal"><a href="http://www.aaa.com/dbsem?cmpgnid=ay_bk_AAABAN912&src=AAABAN912" target="_blank">Online Savings</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/dbsem?cmpgnid=ay_bk_AAABAN912&src=AAABAN912" target="_blank">Money Markets</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/dbsem?cmpgnid=ay_bk_AAABAN912&src=AAABAN912" target="_blank">Cds &amp; IRAs</a></li>
+                    </ul>
+                  </li>
+                  <li class="main"><a href="../finance/index.php">Research</a>
+                     <ul>
+                        <li class="normal"><a href="../finance/carbuy.php">Car Buying Program</a></li>
+                        <li class="normal"><a href="../student/index.php">College Planning</a></li>
+						<li class="normal"><a href="../automotive/vehicle-extended-service-plan.php">Extended Service Plan</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&amp;club=045&amp;page=PartnerRedirect&amp;PID=113" target="_blank">Vehicle Comparison</a></li>
+                        <li class="normal"><a href="../insurance/index.php">Insurance Rates</a></li>
+                     </ul>
+                   </li>
+<li class="main"><a href="../finance/index.php">View All --&gt;</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="clear">&nbsp;</div>
+
+			 <div class="advert-left" style="height:100px;"><img src="../finance/images/dropdown/99257651silvercar.jpg" width="103" height="46" alt="Silver car" />
+          <p class="nospace"><a class="underline" href="../finance/carbuy.php">Kick car buying hassles to the curb with the AAA CarBuying Service</a></p>
+          </div>
+
+		   <div class="advert-right" style="height:100px;"><img src="../finance/images/dropdown/memberrewardscard.jpg" width="76" height="46" alt="AAA Visa card" />
+          <p><a href="https://www.applyonlinenow.com/USCCapp/Ctl/entry?cid=2097944" target="_blank" class="underline">$50 statement credit <br />after first qualifying transaction</a></p>
+          </div>
+
+    </div>
+</div>
+
+<!-- *************************   DRIVING SCHOOL  ******************************* -->
+<div  style="float:left">
+      <!--Mega Menu Anchor-->
+      <div><a href="../driver_training/index.php" id="wirelessanchor">Driving School <span class="darrow">&#9660; </span></a> <span class="pipe"> | </span></div>
+      
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="wirelessmenu" class="megamenu" style="width:280px">
+    
+          <div class="column" style="height:115px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="../driver_training/index.php">AAA Driving School</a>
+                    <ul>
+                        <li class="normal"><a href="../driver_training/fees.php">Fees</a></li>
+                        <li class="normal"><a href="../driver_training/schedules.php">Schedules</a></li>
+                        <li class="normal"><a href="../driver_training/policies.php">Policies</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&amp;club=045&amp;page=PartnerRedirect&amp;PID=1083" target="_blank">Register</a></li>
+                        <li class="normal"><a href="../public_affairs/notext.php">AntiTexting Pledge</a></li>
+                    </ul>
+                    </li>
+              </ul>
+          </div>
+    
+          <div class="column"  style="height:115px">
+              <ul>
+                 <li class="main"><a href=".../driver_training/about.php">About</a>
+                    <ul>
+                        <li class="normal"><a href="../driver_training/curriculum.php">Curriculum</a></li>
+                        <li class="normal"><a href="../driver_training/faq.php">FAQ</a></li>
+                        <li class="normal"><a href="../driver_training/forparents.php">For Parents</a></li>
+                        <li class="normal"><a href="../driver_training/contact.php">Contact Us</a></li>
+                        
+                        <li class="main"><a href="../driver_training/daretoprepare.php ">Dare to Prepare</a></li>
+                        
+                    </ul>
+                  </li>
+
+              </ul>
+          </div>
+          <div class="clear">&nbsp;</div>
+   <div class="advert"><img src="../driver_training/images/dropdown/drivingschool.jpg" width="211" height="46" alt="AAA Driving School" />
+          <p class="nospace"><a href="../driver_training/index.php" class="underline">AAA Driving School - New locations and dates. <br />Sign up today!</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- *************************   AUTOMOTIVE SERVICES  ******************************* -->
+<div  style="float:left">
+<!--Mega Menu Anchor-->
+<div><a  href="../automotive/index.php" class="dept" id="autoanchor">Auto Services <span class="darrow">&#9660;</span></a><span class="pipe"> | </span></div>
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="automenu" class="megamenu" style="width:280px">
+    <div class="column"  style="height:200px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="../automotive/automanager.php">Maintenance</a>
+                    <ul>                        
+                        <li class="normal"><a href="../automotive/aaaglass.php">Auto Glass Replacement</a></li>
+						<li class="normal"><a href="../automotive/aaaglass.php">Auto Glass Repair</a></li>
+						<li class="normal"><a href="../automotive/battery.php">Battery Replacement</a></li>
+                        <li class="normal"><a href="../automotive/aar.php">Approved Repair Shops</a></li>
+                        <li class="normal"><a href="../automotive/automanager.php">Maintenance Records</a></li>
+                        <li class="normal"><a href="../automotive/vehicle-extended-service-plan.php">Extended Service Plan</a></li>
+                        <li class="normal"><a href="../automotive/vesp-coverage-comparisons-chart.php">Coverage Comparison</a></li>
+                        <li class="normal"><a href="../automotive/roadsideassistance.php">Roadside Assistance</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&amp;club=045&amp;page=DiagnosticsCtrSearch">Diagnostics Center</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline.woa/515?association=aaa&amp;club=045&amp;page=Automotive13">NAPA Auto Parts</a></li>
+                        <li class="normal"><a href="../automotive/gasprices.php">Gas Saving Tips</a></li>
+                    </ul>
+                  </li>
+
+
+              </ul>
+          </div>
+          <div class="column" style="height:200px">
+              <ul>
+                 <li class="main"><a href="../finance/carbuy.php">Buying a Car</a>
+                    <ul>
+                       
+                        <li class="normal"><a href="../finance/autoloans.php">Low Rate Loans</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&amp;club=045&amp;page=IIHSReportRequest" target="_blank">IIHS Crash Safety</a></li>
+                        <li class="normal"><a href="../automotive/registry.php">Registry Services</a></li>
+                    </ul>
+                    </li>
+                  <li class="main"><a href="../automotive/index.php">More</a>
+                     <ul>
+                        <li class="normal"><a href="../insurance/index.php">Insurance</a></li>
+                        <li class="normal"><a href="../finance/index.php">Loans</a></li>
+                        <li class="normal"><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">Discount Partners</a></li>
+                        <li class="normal"><a href="../automotive/registry.php">Registry Services</a></li>
+                </ul>
+                </li>
+<li class="main"><a href="../automotive/index.php">View All --&gt;</a>
+                  </li>
+              </ul>
+          </div>
+    
+          
+          <div class="clear">&nbsp;</div>
+		  <div class="advert"><img src="../automotive/images/dropdown/battery.jpg" alt="battery service" border="0" /><br />
+            <p> <a class="underline" href="../automotive/battery.php">Don't let a dead battery ruin your plans</a></p>
+            
+          </div>
+    </div>
+</div>
+
+
+
+<!-- *************************   PUBLIC AFFAIRS ******************************* -->
+
+<div  style="float:left">
+<!--Mega Menu Anchor-->
+<div style="width:120px"><!--fixes nav bug on Mac Safari--><a   href="../public_affairs/index.php" class="dept" id="publicanchor">Public&nbsp;Affairs&nbsp;<span class="darrow">&#9660;</span></a></div>
+
+<!--Mega Drop Down Menu HTML. Retain given CSS classes-->
+    <div id="publicmenu" class="megamenu" style="width:280px">
+    
+          <div class="column" style="height:160px">
+              <ul>
+                 <li class="main" style="margin-left:10px"><a href="../public_affairs/index.php">Public/Gov&#039;t Affairs</a>
+                    <ul>
+			          <li class="normal"><a href="https://www.aaafoundation.org/drivesharp" target="_blank">Crash Risk Evaluation</a></li>
+                      <li class="normal"><a href="../public_affairs/teendriving.php">Teen Driving</a></li>
+                      <li class="normal"><a href="../public_affairs/trafficsafety.php">Traffic Safety</a></li>
+                      <li class="normal"><a href="../public_affairs/senior.php">Senior Driving</a></li>
+                      <li class="normal"><a href="../public_affairs/occupant.php">Occupant Protection</a></li>
+                      <li class="normal"><a href="http://www.ottoclub.org/aaapioneer/index.html" target="_blank">Otto The Auto</a></li>
+					  <li class="normal"><a href="https://www.aaafoundation.org/drivesharp" target="_blank">Drive Sharp</a></li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+    
+          <div class="column"  style="height:160px">
+              <ul>
+                 <li class="main"><a href="../public_affairs/aboutcardoctor.php">The Car Doctor</a>
+                    <ul>
+                        <li class="normal"><a href="../public_affairs/carreview_12.php">2012 Car Reviews</a></li>
+                        <li class="normal"><a href="../public_affairs/carreviews.php">Previous Reviews</a></li>
+                    </ul>
+                 </li>
+                <li class="main"><a href="../public_affairs/gasprices.php">Gas Prices</a>
+                    <ul>
+                        <li class="normal"><a href="../public_affairs/gasprices.php">View Local Stations</a></li>
+                        <li class="normal"><a href="../public_affairs/gasprices.php">Local/National Surveys</a></li>
+                    </ul>
+                </li>
+				<li class="main"><a href="../driver_training/index.php">Driver Training</a></li>
+                <li class="main"><a href="../public_affairs/index.php">View All --&gt;</a>
+                </li>
+              </ul>
+          </div>
+          <div class="clear">&nbsp;</div>
+          <div class="advert"><img src="../public_affairs/images/dropdown/textpledge.jpg" alt="AntiTexting Pledge"  border="0" /><br />
+            <a class="underline" href="../public_affairs/notext.php" target="_blank">Take the Pledge to Never Text and Drive</a></div>
+    </div>
+</div>
+</div> <!-- Close nav-right -->
+	<div class="clear"></div> <!-- Close clear -->
+</div> <!-- Close nav -->
+</div> <!-- Close header -->
+	<div id="content-wrap">
+    <div class="clear"></div>
+	<div id="nav-side"> 
+  <ul class="menu3">
+    <li  class="head">Place a Request
+      <ul>
+        <li><a href="roadsideassistance.php">Roadside 
+          Assistance </a></li>
+        <li><a href="battery.php">Battery 
+          Service </a></li>
+        <li><a href="aaaglass.php">AAA Auto
+          Glass </a></li>
+          <li><a href="roadservicebenefits.php">Request Reimbursment</a></li>
+      </ul>
+    </li>
+    <li class="head">Buying a Car 
+      <ul>
+        <li><a href="../finance/autoloans.php">Low Auto Rates</a></li>
+        <li><a href="../finance/carbuy.php">Auto Buying Program</a></li>
+		 <li><a href="http://www.aaa.com/scripts//WebObjects.dll/AAAOnline?association=aaa&club=045&page=carfaxHome">CarFax</a></li>
+        <li><a href="../insurance/index.php">Insurance Discounts</a></li>
+		<li><a href="http://www.aaa.com/scripts//WebObjects.dll/AAAOnline?association=aaa&club=045&page=COVOReportRequest" target="_blank">Ownership Costs</a></li>
+		<li><a href="http://www.aaa.com/scripts//WebObjects.dll/AAAOnline?association=AAA&club=045&page=Automotive68">Car Buying Tips</a></li>
+      </ul>
+    </li>
+    <li class="main"><a href="automanager.php">Maintaining Your Car</a> 
+      <ul>
+		<li><a href="aar.php">Approved Repair Shops</a></li>
+		<li><a href="batterytender.php">Battery Tender</a></li>
+        <li><a href="automanager.php">Maintenance Records</a></li>
+        <li><a href="automanager.php">Maintenance Reminders</a></li>
+        <li><a href="http://www.aaa.com/scripts//WebObjects.dll/AAAOnline?association=aaa&club=045&page=DiagnosticsCtrSearch" target="_blank">Online Diagnostics</a></li>
+        <li><a href="registry.php">Registry Services</a></li>
+        <li><a href="vehicle-extended-service-plan.php">Extended Service Plan</a></li>
+        <li><a href="vesp-coverage-comparisons-chart.php">Coverage Comparison</a></li>		
+        <li><a href="f_vesp-quote.php">Service Plan Quote</a></li>	
+        <li><a href="http://www.aaa.com/scripts//WebObjects.dll/AAAOnline.woa/?association=aaa&club=045&page=Automotive13">Discount Auto Parts</a></li>
+		
+	  </ul>
+    </li>
+    <li class="main"><a href="gasprices.php">Gas Prices</a> 
+      <ul>
+        <li><a href="gasprices.php">Gas Saving Tips</a></li>
+        <li><a href="gasprices.php">Find the Cheapest 
+          Gas</a></li>
+        <li><a href="gasprices.php">Average Gas Price</a></li>
+      </ul>
+    </li>
+    <li class="main"><a href="roadservicebenefits.php">Road Service Benefits</a></li>
+	 <li class="main"><a href="../driver_training/index.php">AAA Driving School</a></li>
+	  <li class="main"><a href="../public_affairs/index.php">Driving Safety</a></li>
+       <li class="main"><a href="testimonials.php">Testimonials</a></li>
+  </ul>
+</div>
+
+
+<!-- Close nav-side -->		<div id="content">
+		       <div id="middleCol">
+               <div id="icons"><!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_favorites"></a>
+<a class="addthis_button_print"></a>&nbsp;
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=aaapv"><img src="HTTP://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a>
+</div><script type="text/javascript" src="HTTP://s7.addthis.com/js/250/addthis_widget.js#pub=aaapv"></script>
+<script type="text/javascript" src="HTTP://s7.addthis.com/js/250/addthis_widget.js#pub=aaapv"></script>
+<!-- AddThis Button END -->
+</div>		       <h1 class="main">Roadside Assistance</h1>
+       
+
+         <p>AAA Pioneer Valley accepts online requests for road service 24-hours a day. To request service online please be ready with the following information:  </p>
+                <img class="imgright" src="images/van1.jpg" width="225" height="145" alt="Roadside Assistance" />
+
+         <ul>
+             <li>The location of the disabled vehicle &mdash; the name of the street and the nearest city are required to process the request. </li>
+             <li>The type of service needed (flat tire, dead battery, locked keys, etc.)</li>
+             <li>The description of the disabled vehicle</li>
+             <li>Phone number where you can be contacted </li>
+           </ul>
+      
+ <div class="babg">
+<div class="babg-left">&nbsp;</div> 
+<div class="babg-middle-300">	    
+<a  href="http://www.aaa.com/services/automotive/rso/rsoHome.html?club=045&association=AAA"><span>&#187;</span>Place a roadside assistance request online</a>
+ </div>
+<div class="babg-right">&nbsp;</div> 
+</div>
+<div class="clear">&nbsp;</div>
+
+ <div class="babg">
+<div class="babg-left">&nbsp;</div> 
+<div class="babg-middle-300">	    
+<a  href="roadservicebenefits.php"><span>&#187;</span>View Benefits/Request Reimbursement</a>
+ </div>
+<div class="babg-right">&nbsp;</div> 
+</div>
+<div class="clear">&nbsp;</div>
+        
+        
+        <div class="calltoday" style="margin-top:20px">
+          <div class="left">
+            <p>1-800-AAA-HELP<br /><br  />(222-4357)</p>
+          </div>
+           <div class="right">
+            <p>AAA Roadside Assistance</p>
+          </div>
+        </div> <!-- END CALL TODAY -->	
+      
+         
+         
+		       </div>  <!-- Close middleCol -->
+		       <div id="rightCol">
+			   <h2>Contact Us</h2>
+<a href="roadsideassistance.php"><img  src="../automotive/images/requestright.jpg" height="68px" width="146px" style="margin-top:6px; border:1px solid #ddd" alt="Request" /></a>
+
+<p class="nospace" style="margin-top:6px;font-size:11px">
+<a class="bold" href="../membership/branches.php">Local Offices</a></p>
+<p class="nospace" style="font-size:11px"><a class="bold" href="../membership/contactus.php">Phone Numbers</a></p>
+<p class="nospace" style="font-size:11px"><a class="bold" href="../membership/contactus.php">Email Us</a></p>
+<h2 class="toprule"> </h2>
+
+
+
+                      <div id="socialicons">
+<h2>Follow Us On...</h2>
+    <a href="http://www.facebook.com/AAAFanPage" target="_blank" ><img src="../../images/facebook.gif" alt="" width="30" height="30"/></a>
+    <a href="http://twitter.com/AAADiscounts" target="_blank" ><img src="../../images/twitter.gif" alt="" /></a>
+    <a href="http://www.youtube.com/aaa" target="_blank" ><img src="../../images/youtube.gif"  alt=""/></a>
+</div>
+<h2>Featured Offers</h2>
+
+
+<a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=ClubServices80" target="_blank"><img src="../finance/images/car-buy_tile.jpg" width="148" height="102" style="margin-top:10px;border:1px solid #ddd" alt="Car Buying Service" /></a>     
+
+<a href="http://www.aaa.com/mobile"><img  src="../automotive/images/MobileApp.jpg" width="145" height="145"  style="margin-top:6px; border:1px solid #ddd" alt="AAA Mobile Apps" /></a>
+
+<a href="aaaglass.php"><img  src="../automotive/images/autoglass_right.jpg" width="145" height="83"  style="margin-top:6px; border:1px solid #ddd" alt="Auto Glass" /></a> 
+ 
+
+                    		       </div> <!-- Close rightCol -->
+		</div> <!-- Close content -->
+		<div class="clear"></div>
+	</div> <!-- Close content wrap -->
+	<div id="content-bottom"></div>
+<div class="clearfooter"></div>
+</div>  <!-- Close wrapper -->
+<div class="clear"></div>
+	<div id="footer">
+		<div class="foot-top">
+			<div class="foot-cata">
+			<h3>Popular Links</h3>
+			<ul>
+				<li><a href="../travel/internettriptik.php">Maps &amp; Directions</a></li>
+				<li><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">Member Savings</a></li>
+				<li><a href="../automotive/roadsideassistance.php">Road Service Requests</a></li>
+				<li><a href="https://www.aaapioneervalley.com:8090/login.jsp">Renew Membership</a></li>
+				<li><a href="../membership/tickets.php">Ticket Discounts</a></li>
+			</ul>
+			</div>
+			
+			<div class="foot-cata">
+			<h3>Contact Us</h3>
+			<ul>
+				<li><a href="../membership/contactus.php">Travel</a></li>
+				<li><a href="../membership/contactus.php">Membership</a></li>
+				<li><a href="../membership/contactus.php">Technical</a></li>
+				<li><a href="../membership/contactus.php">All Options</a></li>
+                <li><a href="../membership/branches.php">Branch Locations</a></li>
+			</ul>
+			</div>
+			
+			<div class="foot-cata">
+			<h3>Community</h3>
+			<ul>
+				<li><a href="../membership/f_esignup.php">Sign up for emails</a></li>
+				<li><a href="http://www.aaatravelviews.com/" target="_blank">TravelViews</a></li>
+				<li><a href="http://www.aaa.com/services/discounts/clubdeal/clubDealSearch.html" target="_blank">Discounts</a></li>
+				<li><a href="../public_affairs/aboutcardoctor.php">AAA Car Doctor</a></li>
+				<li><a href="../publications/index.php">AAA Times</a></li>
+			</ul>
+			</div>
+			
+			<div class="foot-cata">
+			<h3>Careers</h3>
+			<ul>
+				<li><a href="../careers/index.php">Careers at AAA</a></li>
+				<li><a href="../careers/openings.php">Job Openings</a></li>
+				<li><a href="../careers/f_apply.php">Apply</a></li>
+				<li><a href="../careers/benefits.php">Employee Benefits</a></li>
+				
+			</ul>
+			</div>
+			
+			<div class="foot-cata-last">
+			<h3>My Account</h3>
+			<ul>
+				<li><a href="../membership/f_registration.php">Register Online</a></li>
+				<li><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=myaaahome">Login to my account</a></li>
+				<li><a href="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association=aaa&club=045&page=myaaahome">Forgot password</a></li>
+				<li><a href="https://www.aaapioneervalley.com:8090/login.jsp">Update Membership Info</a></li>
+				
+			</ul>
+			</div>
+		<div class="clear"></div>
+		</div>
+		<div class="foot-bottom">
+			<a href="../membership/branches.php">Branch Offices</a> &nbsp; | &nbsp; <a href="../membership/privacy.php">Privacy Policy</a>&nbsp; |&nbsp;  <a href="http://www.aaa.com/stop">Visit Another Club</a> &nbsp; |&nbsp;  <a href="../membership/territory.php">Territory Info</a><br />
+			<p>*<strong>Our Territory:</strong> AAA Pioneer Valley proudly serves members in 
+			  Franklin, Hampden, and Hampshire Counties, Massachusetts <br />
+		    AAA Pioneer Valley &copy; 2011  <!----><br /></p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript" src="HTTP://s3.amazonaws.com/new.cetrk.com/pages/scripts/0010/8537.js"> </script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15889165-1");
+pageTracker._trackPageview();
+} catch(err) {}</script><script language="JavaScript1.1" src="http://www.aaa.com/configuration/dcs_ClubTag.js">
+</script>
+<script language="JavaScript1.1">
+   setCategory("Automotive");
+   setSubcategory("RoadService");
+   setPageType("Information"); 
+   logPage("045","9O7K");
+ </script>
+</body>
+</html>

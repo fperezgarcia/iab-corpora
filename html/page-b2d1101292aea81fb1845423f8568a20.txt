@@ -1,0 +1,704 @@
+
+
+
+    
+	
+	
+  	
+
+
+
+<!--additions -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<!--end additions to template-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- EPA Template version 3.2.1, 28 June 2006 -->
+<head>
+	
+      
+      <title>Green Vehicle Guide  | US EPA</title>
+          
+      
+     	
+
+	<meta name="Description" content="The U.S. Environmental Protection Agency's Green Vehicle Guide provides vehicle ratings based on emissions and fuel economy" />
+	<meta name="Keywords" content="Autos,Cars,Vehicles,EPA,Global Warming,SmartWay,Air pollution,Trucks,Environment,Greenhouse gas,Climate change,Ozone layer,Emissions,New auto,Green vehicles,SUV,Wagons,Pickup trucks,Vans,Minivans,Small cars,Midsize cars,Large cars,Special purpose vehicles,Fuel economy guide,Fuel efficiency,Gas Prices,Mileage,Car ratings,Vehicle pollution,Auto buying,Consumer guide,Exhaust" />
+	<meta name="DC.Title" content="" />
+	<meta name="DC.Subject" content="" />
+	<meta name="DC.Type" content="" />
+	<!-- For date metadata, use the format YYYY-MM-DD -->
+	<meta name="DC.Date.modified" content="" />
+	<meta name="DC.Date" content="" />
+
+	<meta name="DC.Language" content="en|sp" />
+	<meta name="DC.Creator" content="" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<link rel="meta" href="http://www.epa.gov/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+  
+
+  <style type="text/css" media="screen">@import 'greenvehicles.css';</style>
+
+	<style type="text/css" media="screen">@import 'http://www.epa.gov/epafiles/s/epa.css';</style>
+  <style type="text/css" media="screen">@import 'http://www.epa.gov/epafiles/s/epa-content.css';</style>
+	<!--[if lt IE 7]>
+		<link rel="stylesheet" type="text/css" href="http://www.epa.gov/epafiles/s/ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" media="print" href="http://www.epa.gov/epafiles/s/print.css" />
+		<script type="text/javascript" src="http://www.epa.gov/epafiles/js/epa-core.js"></script>
+	<script type="text/javascript" src="http://www.epa.gov/epafiles/js/extra.js"></script>
+    
+
+
+
+
+<script type="text/javascript" src="gvg_javascript.js"></script>
+<script type="text/javascript">
+////////////////////////////////////
+function Modsort(colname, direction) {
+// --- Set report sort order ---
+document.SortForm.colname.value = colname;  // Set new sort columnorder
+document.SortForm.direction.value = direction; 
+var statement ="null";
+
+var critname = "null";
+var critvalue = "null";
+var firstSix ="";
+
+document.SortForm.sqlstmt.value = statement;     //Set new sort direction
+document.SortForm.critname.value = critname; 
+document.SortForm.critvalue.value = critvalue; 
+if (statement.length>5) {
+  for (i=0; i<6; i++){
+    firstSix = firstSix + statement.charAt(i);
+  }
+}
+
+if (firstSix == " where") document.SortForm.submit();  // Generate new report
+
+
+}
+
+ 
+
+</script>
+
+<script  type="text/javascript" src="gvg_dynamicMenu_javascript.js"></script>
+
+</head> 
+
+<body onload="process()">
+
+<p class="skip"><a id="skiptop" href="#content" title="Jump to main content.">Jump to main content.</a></p>
+
+<div id="header"> <!-- START EPA HEADER -->
+
+	<div id="logo"><a href="http://www.epa.gov/" title="US EPA home page"><img src="http://www.epa.gov/epafiles/images/logo_epaseal.gif" alt="[logo] US EPA" width="100" height="110" /></a></div>
+
+	<div id="areaname"> <!-- START AREA NAME -->
+		<p>Green Vehicle Guide</p>
+	</div> <!-- END AREA NAME -->
+
+	<!-- START SEARCH CONTROLS -->
+	<form id="EPAsearch" method="get" action="http://nlquery.epa.gov/epasearch/epasearch">
+		<!-- START AREA SPECIFIC LINKS AND SEARCH BOX  -->
+		<!-- CHANGE links to point to your own recent additions and contact pages -->
+		<!-- REMOVE recent additions link if your area doesn't have one -->
+		<p><a href="/greenvehicles/Whatsnew.do">Recent Additions</a> | <a href="/greenvehicles/Contactus.do">Contact Us</a>
+			<span class="search"><strong>Search:</strong> 
+			<input type="hidden" name="fld" value="gvgprdog" />
+			<input type="hidden" name="areaname" value="Green Vehicle Guide" />
+			<input type="hidden" name="areacontacts" value="http://www.epa.gov/greenvehicles/Contactus.do" />
+			<!-- AREA ADVANCED SEARCH URL HERE (OPTIONAL) -->
+			<input type="hidden" name="areasearchurl" value="" />
+			<!-- THE REMAINING HIDDEN INPUTS ARE USED BY THE SEARCH ENGINE - DO NOT EDIT -->
+			<input type="hidden" name="result_template" value="epafiles_default.xsl" />
+ 			<input type="hidden" name="filter" value="samplefilt.hts" />
+			<input name="typeofsearch" id="EPAall" type="radio" value="epa"/><label for="EPAall">All EPA</label> 
+			<input name="typeofsearch" id="Areaall" type="radio" value="area" checked="checked" /><label for="Areaall">This Area</label> 
+			<input name="querytext" id="searchbox" value="" /> 
+			<input name="submit" id="searchbutton" type="submit" value="Go" /></span>
+		</p>
+	</form> <!-- END SEARCH CONTROLS -->
+		
+	<ul> <!-- BEGIN BREADCRUMBS -->
+		<li class="first">You are here: <a href="http://www.epa.gov/">EPA Home</a></li>
+		<!-- START AREA BREADCRUMBS -->
+		
+      
+       
+
+<li> <a href="http://www.epa.gov/otaq">Transportation & Air Quality</a> </li>
+<li>Green Vehicle Guide</li>
+
+		
+          
+      
+     
+		
+		<!-- END AREA BREADCRUMBS -->
+	</ul> <!-- END BREADCRUMBS -->
+
+</div> <!-- END EPA HEADER -->
+
+<hr class="skip" />
+
+<p class="skip"><a id="pagecontents"></a><a id="pagetop"></a></p>
+<div id="content"> <!-- BEGIN PAGE CONTENTS -->	<!-- EPA SITE-WIDE ANNOUNCEMENTS -->
+	<!-- DO NOT REMOVE - this code is used for emergency messages -->
+<!-- If this page is a Program Office or a Topics home page, CHANGE "sitewidec" TO "sitewideb" -->
+	<p id="sitewidec"></p>
+    
+	<!-- BEGIN PAGE NAME -->
+	<!---<h1>{Page title}</h1>-->
+	<!-- END PAGE NAME -->
+		
+	<!-- BEGIN CONTENT AREA -->
+	
+
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="550" style="margin:5px 0px 5px 10px;">
+ 
+  
+   
+  
+  <tr>
+    <td><img src="images/home-at.gif" width="125" height="20" alt="" ></td>
+    <td><img src="images/index-nav_r1_c2.gif" width="2" height="20" alt=""></td>
+    <td><a href="/greenvehicles/Advsearch.do" onmouseover="MM_swapImage('indexnav_r1_c3','','images/index-nav_r1_c3_f2.gif',1);" onmouseout="MM_swapImgRestore()"><img  src="images/index-nav_r1_c3.gif" width="125" height="20" alt=""></a></td>
+    <td><img src="images/index-nav_r1_c4.gif" width="2" height="20" alt=""></td>
+    <td><a href="/greenvehicles/Trio.do" onmouseover="MM_swapImage('indexnav_r1_c50','','images/index-nav_r1_c50_f2.gif',1);" onmouseout="MM_swapImgRestore()"><img  src="images/index-nav_r1_c50.gif" width="125" height="20"  alt=""></a></td>
+  
+	 <td><img  src="images/index-nav_r1_c4.gif" width="2" height="20"  alt=""></td>
+	<td><a href="/greenvehicles/Download.do" onmouseover="MM_swapImage('indexnav_r1_c5','','images/index-nav_r1_c5_f2.gif',1);" onmouseout="MM_swapImgRestore()"><img  src="images/index-nav_r1_c5.gif" width="125" height="20" alt=""></a></td>
+   
+	<td width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="8" width="100%"><img src="images/banner.jpg" style="border-top:1px solid #006600;" alt=""></td>
+  </tr>
+  
+    
+  
+  
+  
+  
+   
+ 
+       
+		 
+  
+  
+</table>
+
+   
+	
+    
+<script type="text/javascript">
+     // <!--
+       // javascript moved to gvg_javascript
+      //-->
+      </script>
+<br/>
+
+<div style="width:700px;margin-left:10px;">
+<span class="font20darkblue"> <strong>2013:</strong></span>
+<span class="font18darkgreen"> <strong>For Model Year 2013 and on, please visit <a href="http://www.fueleconomy.gov"><u></strong>fueleconomy.gov</u></a></span>
+</div>  <br/>
+
+<div style="width:700px;margin-left:10px;">
+ <div class="box color2" style="width:672px;float:left;border: 3px double;background:#99FFCC url(dialog_warning.png) no-repeat 4px 4px;padding:4px 4px 4px 30px;"><span class="font14"><strong>PLEASE NOTE:</strong> 
+ The Green Vehicle Guide is being redesigned to provide even more information on green vehicles -- 
+ including emissions, advanced technology vehicles, and alternative fuels -- plus new tools, videos, and expanded information
+ on the SmartWay light-duty vehicle program.  
+
+ As part of the update, vehicle search capabilities are moving to <a href="http://www.fueleconomy.gov"><u>fueleconomy.gov</u></a>.
+ For model year (MY) 2013 and on, please visit
+<a href="http://www.fueleconomy.gov"><u>fueleconomy.gov</u></a> and click on "Find a Car" when searching for information on specific vehicles.
+</span>
+
+</div>
+</div>
+
+
+<div style="width:700px;margin-left:10px;">
+<div><span>&nbsp;</span></div>
+
+
+
+ <div class="box color1" style="width:210px;float:left;height:205px; margin:5px 5px 5px 0px;">
+    <h5>Look Up a Vehicle</h5>
+    <form name="IndexForm" method="post" action="/greenvehicles/Index.do" class="formMargin" onsubmit="return validate_form(this,1)"> <input type="hidden" name="initial" value="false">
+    <table width="100%" border="0" cellpadding="2" cellspacing="0" style="height:120px;">
+      <tr class="font12">
+        <td><a href="javascript:popUp('Glossary.do#modelyear')">Year:*</a></td>
+        <td><select name="year" size="1" onchange="process();" class="bigtableColumn"><option value="2012" selected="selected">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option></select> </td>
+      </tr>
+      <tr class="font12">
+        <td><a href="javascript:popUp('Glossary.do#cert')">State:*<sup>&dagger;</sup></a></td>
+        <td><select name="state" size="1" class="bigtableColumn"><option value="Choose a State">Choose a State</option>
+<option value="Alabama">Alabama</option>
+<option value="Alaska">Alaska</option>
+<option value="Arizona">Arizona</option>
+<option value="Arkansas">Arkansas</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="Delaware">Delaware</option>
+<option value="District of Columbia">District of Columbia</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Iowa">Iowa</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Maine">Maine</option>
+<option value="Maryland">Maryland</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Missouri">Missouri</option>
+<option value="Montana">Montana</option>
+<option value="Nebraska">Nebraska</option>
+<option value="Nevada">Nevada</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="New York">New York</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Vermont">Vermont</option>
+<option value="Virginia">Virginia</option>
+<option value="Washington">Washington</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="Wyoming">Wyoming</option>
+<option value="ALL STATES">ALL STATES</option></select> </td>
+      </tr>
+      <tr class="font12">
+        <td><a href="javascript:popUp('Glossary.do#make')">Make:*</a></td>
+        <td><select name="maker" size="1" onchange="processmodel()" class="bigtableColumn"><option value="Choose a Make">Choose a Make</option>
+<option value="ACURA">ACURA</option>
+<option value="ASTON MARTIN">ASTON MARTIN</option>
+<option value="AUDI">AUDI</option>
+<option value="BENTLEY">BENTLEY</option>
+<option value="BMW">BMW</option>
+<option value="BUICK">BUICK</option>
+<option value="CADILLAC">CADILLAC</option>
+<option value="CHEVROLET">CHEVROLET</option>
+<option value="CHRYSLER">CHRYSLER</option>
+<option value="DODGE">DODGE</option>
+<option value="FERRARI">FERRARI</option>
+<option value="FORD">FORD</option>
+<option value="FREIGHTLINER">FREIGHTLINER</option>
+<option value="GMC">GMC</option>
+<option value="HONDA">HONDA</option>
+<option value="HUMMER">HUMMER</option>
+<option value="HYUNDAI">HYUNDAI</option>
+<option value="INFINITI">INFINITI</option>
+<option value="ISUZU">ISUZU</option>
+<option value="JAGUAR">JAGUAR</option>
+<option value="JEEP">JEEP</option>
+<option value="KIA">KIA</option>
+<option value="LAMBORGHINI">LAMBORGHINI</option>
+<option value="LAND ROVER">LAND ROVER</option>
+<option value="LEXUS">LEXUS</option>
+<option value="LINCOLN">LINCOLN</option>
+<option value="LOTUS">LOTUS</option>
+<option value="MASERATI">MASERATI</option>
+<option value="MAZDA">MAZDA</option>
+<option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+<option value="MERCURY">MERCURY</option>
+<option value="MINI">MINI</option>
+<option value="MITSUBISHI">MITSUBISHI</option>
+<option value="NISSAN">NISSAN</option>
+<option value="PONTIAC">PONTIAC</option>
+<option value="PORSCHE">PORSCHE</option>
+<option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
+<option value="ROUSH">ROUSH</option>
+<option value="SAAB">SAAB</option>
+<option value="SATURN">SATURN</option>
+<option value="SHELBY">SHELBY</option>
+<option value="SPYKER">SPYKER</option>
+<option value="SUBARU">SUBARU</option>
+<option value="SUZUKI">SUZUKI</option>
+<option value="TOYOTA">TOYOTA</option>
+<option value="VOLKSWAGEN">VOLKSWAGEN</option>
+<option value="VOLVO">VOLVO</option></select> </td>
+      </tr>
+      <tr class="font12">
+        <td ><a href="javascript:popUp('Glossary.do#model')">Model:</a></td>
+        <td><select name="model" size="1" class="bigtableColumn"><option value="Choose a Model">Choose a Model</option></select> </td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div style="text-align:center"> <input type="submit" value="Submit" title="Submit"> </div></td>
+    </table>
+    </form> </div>
+ 
+  <div class="box color1" style="width:210px; float:left; height:205px;margin:5px 5px 5px 10px;display:inline;">
+    <h5>Look Up a Vehicle by Type</h5>
+    <form name="IndexForm" method="post" action="/greenvehicles/Index.do" class="formMargin" onsubmit="return validate_form(this,2)"> <input type="hidden" name="initialType" value="false">
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" style="height:120px;">
+      <tr>
+        <td class="font12"><a href="javascript:popUp('Glossary.do#modelyear')">Year:*</a></td>
+        <td><select name="yearType" size="1" class="bigtableColumn"><option value="2012" selected="selected">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option></select> </td>
+      </tr>
+      <tr>
+        <td class="font12"><a href="javascript:popUp('Glossary.do#cert')">State:*<sup>&dagger;</sup></a></td>
+        <td><select name="stateType" size="1" class="bigtableColumn"><option value="Choose a State">Choose a State</option>
+<option value="Alabama">Alabama</option>
+<option value="Alaska">Alaska</option>
+<option value="Arizona">Arizona</option>
+<option value="Arkansas">Arkansas</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="Delaware">Delaware</option>
+<option value="District of Columbia">District of Columbia</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Iowa">Iowa</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Maine">Maine</option>
+<option value="Maryland">Maryland</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Missouri">Missouri</option>
+<option value="Montana">Montana</option>
+<option value="Nebraska">Nebraska</option>
+<option value="Nevada">Nevada</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="New York">New York</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Vermont">Vermont</option>
+<option value="Virginia">Virginia</option>
+<option value="Washington">Washington</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="Wyoming">Wyoming</option>
+<option value="ALL STATES">ALL STATES</option></select> </td>
+      </tr>
+      <tr >
+        <td class="font12"><a href="javascript:popUp('Glossary.do#vehtype')">Type:*</a></td>
+        <td><select name="typeType" size="1" class="bigtableColumn"><option value="Choose a Type">Choose a Type</option>
+<option value="Large Cars">Large Cars</option>
+<option value="Midsize Cars">Midsize Cars</option>
+<option value="Minivans">Minivans</option>
+<option value="Pickup Trucks">Pickup Trucks</option>
+<option value="Small Cars">Small Cars</option>
+<option value="Special Purpose">Special Purpose</option>
+<option value="Sports Utility Vehicles">Sports Utility Vehicles</option>
+<option value="Station Wagons">Station Wagons</option>
+<option value="Vans">Vans</option></select> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div style="text-align:center"> <input type="submit" value="Submit" title="Submit"> </div></td>
+    </table>
+    </form> </div>
+	
+  <div class="box color1" style="width:225px;float:left;height:205px;margin:5px 0px 5px 10px;">
+    <h5>Look Up Greenest Vehicles</h5>
+    <form name="IndexForm" method="post" action="/greenvehicles/Index.do" class="formMargin" onsubmit="return validate_form(this,3)"> <input type="hidden" name="smart" value="false">
+    <table border="0" cellpadding="2" cellspacing="0" style="height:120px;width:220px">
+      <tr>
+        <td colspan="4" align="left" class="font12"> SmartWay vehicles are good environmental performers.</td>
+      </tr>
+      <tr>
+        <td  valign="middle"><input type="checkbox" name="smartbasic" value="on"> </td>
+        <td  valign="top"><a href="javascript:popUp('Glossary.do#smartway')"><img alt="" src="images/smartway.jpg" width="40" height="21" border="0"></a><br />
+        </td>
+        <td valign="middle" ><input type="checkbox" name="smartelite" value="on"> </td>
+        <td valign="top" ><a href="javascript:popUp('Glossary.do#smartway')"><img alt="" src="images/smartway-elite.jpg" width="40" height="21" border="0"></a><br />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><span class="font9bold">SmartWay</span></td>
+        <td colspan="2" align="center"><span class="font9bold">SmartWay Elite</span></td>
+      </tr>
+      <tr>
+        <td class="font12" colspan="1"><a href="javascript:popUp('Glossary.do#modelyear')">Year:*</a></td>
+        <td colspan="2"><select name="year" size="1" class="tableColumn"><option value="2012" selected="selected">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option></select> </td>
+      </tr>
+      <tr>
+        <td class="font12" colspan="1"><a href="javascript:popUp('Glossary.do#cert')">State:*<sup>&dagger;</sup></a></td>
+        <td colspan="2"><select name="state" size="1" class="tableColumn"><option value="Choose a State">Choose a State</option>
+<option value="Alabama">Alabama</option>
+<option value="Alaska">Alaska</option>
+<option value="Arizona">Arizona</option>
+<option value="Arkansas">Arkansas</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="Delaware">Delaware</option>
+<option value="District of Columbia">District of Columbia</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Iowa">Iowa</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Maine">Maine</option>
+<option value="Maryland">Maryland</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Missouri">Missouri</option>
+<option value="Montana">Montana</option>
+<option value="Nebraska">Nebraska</option>
+<option value="Nevada">Nevada</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="New York">New York</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Vermont">Vermont</option>
+<option value="Virginia">Virginia</option>
+<option value="Washington">Washington</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="Wyoming">Wyoming</option>
+<option value="ALL STATES">ALL STATES</option></select> </td>
+      </tr>
+      <tr>
+        <td colspan="4" align="left" class="font12">&nbsp;</td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td><div style="text-align:center"> <input type="submit" value="Submit" title="Submit"></div></td>
+    </table>
+    </form> 
+</div>
+
+<br/>
+
+  
+         
+<div style="width:672px;float:left;">
+<span class="font12">* Required.</span> 
+<br/>
+<span class="font12"><sup>&dagger;</sup> Choose the state where you plan to buy your vehicle, or choose ALL STATES. Choosing ALL STATES might result in multiple listings due to differences between federal and California emission requirements.</span><br/><br/>
+  
+<div>
+<span class="font14">
+<img src="new.png">&nbsp;<a href="http://www.epa.gov/fueleconomy/labelchange.htm"><u>2011-2013 Hyundai and Kia data revised (November 2, 2012)</u></a>
+</span>
+</div>
+<br/>
+  
+  <span class="font14">
+  Information on this site is based on data that vehicle manufacturers submit to EPA. The Agency randomly checks the submissions to ensure these data are complete and accurate, but can't guarantee the validity of every measurement presented in this guide.<br/><br/></span></div>
+ <div class="box color2" style="width:672px;float:left;border: 3px double;"><span class="font14"><strong>IMPORTANT REMINDER</strong>: 
+EPA's fuel economy estimates are designed to allow consumers to comparison shop.Your fuel economy will almost certainly vary from EPA's rating. 
+This is based on a number of factors such as weather, road conditions, your driving and maintenance habits, and your use of air conditioning. 
+For more information on how your fuel economy can vary, or tips to improve your fuel economy, 
+please visit&nbsp;<a href="http://www.fueleconomy.gov/feg/why_differ.shtml"><u>Your MPG Will Vary</u></a>&nbsp;and&nbsp;
+<a href="http://www.fueleconomy.gov/feg/drive.shtml"><u>Gas Mileage Tips</u></a>&nbsp;on www.fueleconomy.gov. See 
+the&nbsp;<a href="http://www.epa.gov/otaq/carlabel/basicinformation.htm"><u>redesigned fuel economy and environment label</u></a>&nbsp;that 
+provides new information on vehicles' fuel economy, fuel costs, and environmental impacts.
+              </span>
+</div>
+</div>
+
+	<!-- BEGIN AREA FOOTER -->
+	<!-- ADD TEXT/LINKS FOR AREA FOOTER WITHIN THIS PARAGRAPH TAG -->
+	<p id="areafooter" class="ignore">
+	
+
+The <a href="/greenvehicles/Index.do">Green Vehicle Guide</a> is maintained by EPA's <a href="http://www.epa.gov/otaq/index.htm">Office of Transportation and Air Quality (OTAQ)</a>.<br />
+For more information, view the <a href="/greenvehicles/Sitemap.do">Site Map</a> or <a href="/greenvehicles/Email.do">Get E-mail Updates</a>
+</p>
+	<!-- END AREA FOOTER -->
+
+</div> <!-- END CONTENT -->
+
+<hr class="skip" />
+
+
+
+<div id="area-nav"> <!-- BEGIN LEFT SIDEBAR NAVIGATION -->
+	<h3 class="skip">Local Navigation</h3>
+	
+
+
+
+<ul>
+  <li><a href="/greenvehicles/Index.do">Green Vehicle Guide Home</a></li>
+    <li><a href="/greenvehicles/Basic.do">Basic Information</a></li>
+	 <li><a href="/greenvehicles/Howto.do">How to Use This Guide</a></li>
+  <li><a href="/greenvehicles/Aboutratings.do">About the Ratings</a></li>
+  <li><a href="/greenvehicles/Faq.do">Frequent Questions</a></li>
+  <!-- changed from Q & A's to comply with topic lite -->
+  <li><a href="/greenvehicles/Wcyd.do">What You Can Do</a></li>
+  <li><a href="/greenvehicles/Glosspage.do">Glossary</a></li>
+  <!-- changed from Smart Driving Tips to comply with topic lite -->
+  <li><a href="/greenvehicles/Links.do">Related Links</a></li>
+  <li><a href="/greenvehicles/Publications.do">Publications</a></li>
+  <!-- changed from Related Sites to comply with topic lite -->
+  <li><a href="/greenvehicles/Email.do">Get Email Updates</a></li>
+  <li><a href="/greenvehicles/Federalfleet.do">Federal Vehicle Acquisition</a></li>
+  <li><a href="/greenvehicles/Sitemap.do">Site Map</a></li>
+ </ul>
+
+		
+	
+	<!--
+	<ul>
+		<li><a href="#">Area Home</a></li>
+		<li><a href="#">Basic Information</a></li>
+		<li><a href="#">Where You Live</a></li>
+		<li><a href="#">Part 4</a></li>
+		<li><a href="#">Part 5</a>
+			<ul>
+				<li><a href="#">Sublist link</a></li>
+				<li><a href="#">Sublist link</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Part 6</a></li>
+		<li><a href="#">Part 7</a></li>
+	</ul>
+	-->
+</div> <!-- END LEFT SIDEBAR NAVIGATION -->
+
+<hr class="skip" />
+
+<div id="footer"> <!-- BEGIN FOOTER -->
+	<ul id="globalfooter">
+		<li><a href="http://www.epa.gov/">EPA Home</a></li>
+		<li><a href="http://www.epa.gov/epafiles/usenotice.htm">Privacy and Security Notice</a></li> 
+		<!-- BEGIN AREA COMMENTS LINK -->
+		<!-- CHANGE link to point to your own contact page -->
+		<li class="last"><a href="/greenvehicles/Contactus.do">Contact Us</a></li>
+		<!-- END AREA COMMENTS LINK -->
+	</ul>
+
+</div> <!-- END FOOTER -->
+
+<p class="skip"><a id="skipbot" href="#content" title="Jump to main content.">Jump to main content.</a></p>
+
+</body>
+</html>

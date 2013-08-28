@@ -1,0 +1,855 @@
+<html>
+<head>
+<title>PM Enterprises Inc - motorcycle, automotive, parts, battries</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="PM Enterprises Inc, motorcycle,automotive,parts,battries, Barbados manufacturer">
+<meta name="description" content="PM Enterprises Inc - Barbados supplier of motorcycle,automotive,parts,battries">
+
+<link rel="stylesheet" type="text/css" href="http://image.ec21.com/inc/css/jquery/lightbox/lightbox.css" media="screen" />
+<link href="http://image.ec21.com/inc/css/ec21_KAKE.css?v=201111309" rel="stylesheet" type="text/css">
+<link href="http://image.ec21.com/inc/css/header_tem.css?v=201108109" rel="stylesheet" type="text/css">
+<style type="text/css">
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid black;
+	background-color: lightyellow;
+	padding: 5px;
+	width:250px;
+}
+
+#tooltip h3, #tooltip div {
+	margin: 0;
+	font-size: 12px;
+	text-align: left;
+	font-weight: normal;
+}
+</style>
+<script type="text/javascript">document.domain = "ec21.com";</script>
+<script type="text/javascript" src="http://image.ec21.com/inc/js/jquery/jquery_min.js"></script>
+<script type="text/javascript" src="http://image.ec21.com/inc/js/jquery/lightbox/lightbox_min.js"></script>
+<script type="text/javascript" src="http://image.ec21.com/inc/js/homepage/HomepageCommon.js?v=20110810" charset="utf-8"></script>
+<script type="text/javascript" src="http://image.ec21.com/inc/js/tooltip/tooltip.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#wfpTooltop').tooltip({
+		track: true,
+		delay: 0,
+		showURL: false,
+		showBody: " - ",
+		fade: 250,
+		top : -40,
+		left: 5
+	});
+
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-177170-5']);
+  _gaq.push(['_setDomainName', 'ec21.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+<center>
+<div id="header">
+
+
+<script type="text/JavaScript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+window.open(theURL,winName,features);
+}
+
+function enlargeImage(imageUrl)
+{
+	var the_img = new Image();
+	the_img.src = imageUrl;
+	enableScroll = 'no'
+	windowWidth = the_img.width;
+	windowHeight = the_img.height;
+	if (windowWidth > screen.availWidth - 100)
+	{
+		windowWidth = screen.availWidth - 100;
+		enableScroll = 'yes';
+	}
+	if (windowHeight > screen.availHeight - 100)
+	{
+		windowHeight = screen.availHeight - 100;
+		enableScroll = 'yes';
+	}
+	enlargedImage = window.open(imageUrl, 'enlargedImage', 'width='+windowWidth+',height='+windowHeight+'toolbar=0, location=0, directories=0, status=0, menubar=0, top=50, left=50, scrollbars='+ enableScroll +', resizable=1');
+}
+
+function trim_keyword(value)
+{
+	return value.replace(/^\s+|\s+$/g,"");
+}
+
+function isKwdValid( kwd) {
+	var isValid = true;
+
+	if ( kwd.length > 256 ) {
+		alert("You can enter up to 256 letters for your keyword.");
+		isValid = false;
+	} else if ( kwd.indexOf(">") > -1 || kwd.indexOf("<") > -1 ) {
+		alert("Please do not enter these signs <  ,  >  in the keyword.");
+		isValid = false;
+	}
+	return isValid;
+}
+
+function getKeywordForUrl(sTark)
+{
+	sTark = sTark.replace(/[ "]/g, "_");
+	sTark = sTark.replace(/__*/g, "_");
+	sTark = escape(sTark);
+
+	return sTark;
+}
+
+function titleSearchX()
+{
+	var form = document.titleForm;
+	var word = form.word.value;
+	var is_first = form.is_first.value;
+
+	if(is_first == "Y" || word.length < 1) {
+		alert('Please input a keyword.');
+		if(is_first == "Y")
+		{
+			form.word.value = '';
+			form.is_first.value = 'N';
+		}
+		form.word.focus();
+		return false;
+	}
+
+	word = trim_keyword(word);
+
+if ( word.length <1 )
+	{
+		alert('Pleas input a keyword.');
+		form.word.focus();
+		return false;
+}
+
+	if ( !isKwdValid( word) )
+	return false;
+
+word = getKeywordForUrl(word);
+
+	is_first = 'Y';
+
+	location.href = 'http://www.ec21.com/ec-market/' + word+ '.html';
+	return false;
+}
+
+function ch()
+{
+	document.titleForm.word.value = '';
+	document.titleForm.is_first.value = 'N';
+}
+
+function keyCheck(e)
+{
+	if(window.event)
+		result = window.event.keyCode;
+	else if(e)
+		result = e.which;
+
+	if(result == 13)
+	{
+		titleSearchX();
+		return false;
+	}
+}
+
+function adjustHomeImage(img_path) {
+	var the_img = new Image();
+	the_img.src = img_path;
+	var real_img_width = the_img.width;
+	var real_img_height = the_img.height;
+
+	if(real_img_width > 560) {
+		var view_img_width  = 560;
+		var view_img_height = real_img_height * 560 / real_img_width;
+
+		document.homeimage.width  = view_img_width;
+		document.homeimage.height = view_img_height;
+	}
+}
+// ---------- ¾îµð¼­ ¾²´ÂÁö ¹ÌÈ®ÀÎ  END ---------- //
+</script>
+<script language="javascript" type="text/javascript" src="http://image.ec21.com/inc/js/inquiry/Inquiry.js"></script>
+<script language="javascript" type="text/javascript" src="http://image.ec21.com/inc/js/common.js"></script>
+
+<div id="header">
+	<div id="header_ec21">
+		<div id="ec21Logo">
+			<div style="float:left;"><a href="http://www.ec21.com"><img src="http://image.ec21.com/img/ec/main/ec21_logo_local.gif" alt="EC21 Global B2B Marketplace logo" width="126" height="39" border="0" /></a></div>
+		</div>
+	</div>
+	<div id="header_menu">
+		<!-- titleForm START -->
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="f4f4f4">
+
+			<form name="titleForm" method="get">
+
+			<tr>
+				<td width="1%" align="right"><img src="http://image.ec21.com/img/mem/user_deco.gif" alt="Search" width="8" height="24" /></td>
+				<td height="24" align="right">
+					<span class="topmenu noline">
+						<script language="javascript" type="text/javascript">
+						if(getCookie("user") != null && getCookie("user") != "")
+						{
+							document.writeln("<a href=\"http://www.ec21.com/global/login/Logout.jsp\">Sign Out</a> ");
+						}
+						else
+						{
+							document.writeln("<a href=\"https://login.ec21.com/global/login/Login.jsp?nextUrl=http%3A%2F%2Fpaulmillerpm.en.ec21.com%2F\" rel=\"nofollow\"><strong>Sign In</strong></a> | ");
+							document.writeln("<a href=\"http://www.ec21.com/global/member/MyRegist.jsp\">Join Free</a>");
+						}
+						</script>
+						| <img src="http://image.ec21.com/img/ec/community/ic_community.gif" align="absmiddle" /> <a id="selectCommunity" href="http://community.ec21.com" rel="nofollow">Community</a> |
+						<img src="http://image.ec21.com/img/search/basket.gif" border="0" align="absmiddle" /> <a href="#" onClick="MM_openBrWindow('http://www.ec21.com/global/basic/MyInquiryBasketList.jsp','InquiryBasketList','toolbar=yes,menubar=no,scrollbars=yes,width=800,height=500')" title="Inquiry Basket">Inquiry Basket</a>
+						(<script language="JavaScript" type="text/javascript">
+						var TotalCount = 0;
+						var inquiries = "";
+
+						inquiries = getCookie ( "ProductInquiry" );
+						collect = parseString ( inquiries, "~" );
+						TotalCount += collect.length;
+
+						inquiries = getCookie ( "TradeInquiry" );
+						collect = parseString ( inquiries, "~" );
+						TotalCount += collect.length;
+
+						inquiries = getCookie ( "CompanyInquiry" );
+						collect = parseString ( inquiries, "~" );
+						TotalCount += collect.length;
+
+						document.write(TotalCount);
+						</script>) | <a href="http://www.ec21.com/html/ec/help/help_01.html">Help</a>
+					</span>
+				</td>
+				<td width="145" >
+					<input name="word" type="text" id="textfield2" value="Search all suppliers" onkeydown="return keyCheck(event);" onmousedown='return ch();'>
+					<img src="http://image.ec21.com/img/mem/user_deco2.gif" alt="Search" align="absmiddle" onclick="return titleSearchX()">
+				</td>
+			</tr>
+
+			<input type="hidden" name="is_first" value="Y">
+
+			</form>
+
+		</table>
+		<!-- titleForm END -->
+		<div id="mainNav">
+			<ul>
+				<li><a href="http://manufacturer.ec21.com/">Buy Now</a></li>
+				<li><a href="http://importer.ec21.com/buy_leads/">Sell Now</a></li>
+				<li><a href="http://www.ec21.com/html/services/index.html">Services</a></li>
+				<li><a href="http://www.ec21.com/global/basic/MyEC21.jsp">My EC21</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+<!-- NAVIGATION START -->
+
+
+<table width="800" border="0" cellpadding="0" cellspacing="0" class="lm">
+	<tr>
+		<td height="20" style="padding-left:8px" class="lm"><a href="http://www.ec21.com">Home</a> &gt; <a href="http://www.ec21.com/ec-market/">Buy Now</a> &gt; <strong>PM Enterprises Inc</strong></td>
+	</tr>
+</table>
+
+<!-- NAVIGATION END -->
+<table width="810" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="5"></td>
+		<td height="100%" valign="top">
+			<table width="800" height="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="1" bgcolor="#CCCCCC"></td>
+					<td height="100%" valign="top">
+						<table width="790" height="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="1" bgcolor="#CCCCCC"></td>
+							</tr>
+							<tr>
+								<td width="100%" height="100%">
+									<table width="790" height="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											
+											<td width="206" valign="top" bgcolor="DEEEFF">
+											
+
+											
+											<script type="text/javascript">
+function confirmMessage()
+{
+	if(confirm('Sorry. Only EC21 member can contact buyers. \n Click \"OK\" to go to sign-in page. \n Or click \"cancel\" to stay on this page.'))
+	{
+		location.href = 'https://login.ec21.com/global/login/Login.jsp?nextUrl=http%3A%2F%2Fpaulmillerpm.en.ec21.com%2F';
+	}
+	else
+		return;
+}
+</script>
+
+
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+	
+
+	<tr>
+		<td valign="top" style="background: url('http://image.ec21.com/img/mem/homeoptimg/left_bkg25.gif') no-repeat center top"><br>
+			<table width="100%" border=0 cellspacing=0 cellpadding=0>
+				
+
+				<tr>
+					<td align="center"><BR>
+					
+					<a href="http://paulmillerpm.en.ec21.com"><img src="http://image.ec21.com/img/mem/homeoptimg/home_but13.gif" border=0 alt="PM Enterprises Inc"></a>
+					
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+
+				
+
+				<tr>
+					<td align="center"><br><img src="http://image.ec21.com/img/mem/homeoptimg/line2.gif" width=150 height=1 alt="line"><br><br></td>
+				</tr>
+
+				
+						<tr>
+							<td valign="top">
+								<table width="100%" border=0 cellspacing=0 cellpadding=2>
+									<tr>
+										<td width="30" align="right" valign="top"><img src="http://image.ec21.com/img/mem/homeoptimg/icon_24.gif" border=0 alt="icon" style="vertical-align: 0px"></td>
+										<td align="left"><a href="/company_info.jsp"><span style="font: bold 9pt Arial; color: 000000; text-decoration: none">Company Profile </span></a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						
+
+				<tr>
+					<td align="center"><br><img src="http://image.ec21.com/img/mem/homeoptimg/line2.gif" width=150 height=1 alt="line"><br><br></td>
+				</tr>
+
+				
+
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+
+				
+				<tr>
+					<td height=25 style="font: bold 12pt" colspan=2>
+						<div id="contactus">
+							
+
+							<div class="memhomeBox1">
+								<table width="178" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td height="7">
+											<table width="178" border="0" align="center" cellpadding="0" cellspacing="0">
+												<tr>
+													<td height="7"><img src="http://image.ec21.com/img/mem/table_rt.gif" width="178" height="7"></td>
+												</tr>
+												<tr>
+													<td class="data">
+														<table width="178" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td height="26" class="title">Contact us</td>
+															</tr>
+														</table>
+														<div class="databox">
+															<table width="100%" border="0" cellspacing="0" cellpadding="3">
+																<tr>
+																	<td style="width:178px; word-wrap:break-word; word-break:break-all;">
+																		<div style="width:150px; word-wrap:break-word; word-break:break-all;">
+																		PM Enterprises Inc<br>[Barbados]
+
+																		
+																		<img onerror="this.src='http://image.ec21.com/img/ec/flags/na2.gif';" src="http://image.ec21.com/img/ec/flags/bb.gif" align="absmiddle">
+																		
+
+																		<br>
+
+																		
+
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width:178px; word-wrap:break-word; word-break:break-all;"><div style="width:150px; word-wrap:break-word; word-break:break-all;"><strong>Address:</strong><br>#5 Basix Complex Oistins Chrst Church 17154 Barbados</div></td>
+																</tr>
+																<tr>
+																	<td><strong>Phone:</strong><br>246-238-7566</td>
+																</tr>
+																<tr>
+																	<td><strong>Contact name:</strong><br>Paul Miller , Director</td>
+																</tr>
+
+																
+																<tr>
+																	<td align="center" style="height:20px; padding-bottom:6px;">
+																		<script language="javascript">
+																			if((2 <= 5 && 5 <= 6 ) && 'B' == 'B' && isLoginUser()==false)
+																			{
+																			document.write(" <a href=\"javascript:confirmMessage();\"> ");
+																			document.write(" <img src=\"http://image.ec21.com/img/mem/bt_inquire_small.gif\"  border=\"0\" alt=\"Inquire now\"></a> ");
+																			}
+																			else
+																			{
+																			document.write(" <a href=\"javascript:sendHomeInquiry('HomeCompany|paulmillerpm')\"> ");
+																			document.write(" <img src=\"http://image.ec21.com/img/mem/bt_inquire_small.gif\" border=\"0\" alt=\"Inquire now\"></a> ");
+																			}
+																		</script>
+																	</td>
+																</tr>
+
+															</table>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td height="7"><img src="http://image.ec21.com/img/mem/table_rb.gif" width="178" height="7"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<p></p>
+							</div>
+
+							
+
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						
+						<div style="text-align:center;">
+							<script type="text/javascript"><!--
+							google_ad_client = "ca-pub-0035435620199588";
+							/* catalog_left3 */
+							google_ad_slot = "2304397486";
+							google_ad_width = 180;
+							google_ad_height = 145;
+							google_ui_version = 1;
+							google_override_format = true;
+							google_ad_type = "text_image_html";
+							google_tl = 2;
+							google_font_face = "sans-serif";
+							google_tfs = 11;
+							google_color_link = "#000000";
+							google_color_text = "#000000";
+							google_color_url= "#008000";
+							google_color_bg = "#FFFFFF";
+							google_color_border = "#FFFFFF";
+							//-->
+							</script>
+							<script type="text/javascript"
+							src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+							</script>
+						</div>
+						
+					</td>
+				</tr>
+			</table>
+			<!-- dfp start -->
+			<br><br>
+			
+			<!-- dfp end -->
+			<br><br><br><br><br><br>
+		</td>
+	</tr>
+</table>
+
+											</td>
+											<td valign="top" style= "background:  ">
+												<table height="100%" width="100%" border="0" cellspacing="0" cellpadding= "0">
+													<tr>
+														<td valign="top">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td valign="top">
+
+																	
+																	
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr>
+        <td>
+            
+            <div align="center" style="width:560"><br><h1 style="font:bold 20pt sans-serif; color:000066">PM Enterprises Inc</h1><br><br></div>
+            <br>
+
+        </td>
+    </tr>
+</table>
+
+
+																	</td>
+																</tr>
+															</table>
+															<div id="tem">
+																<table width="570" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td width="8%" rowspan="2"></td>
+																		<td valign="top" height="100%">
+																			<table width="100%" border="0" cellspacing="0" cellpadding="10">
+																				<tr>
+																					<td align="center">
+																						
+																					</td>
+																				</tr>
+																				<tr>
+																					<td align="center"><span style="font: bold 12pt sans-serif"> </span></td>
+																				</tr>
+																				<tr>
+																					
+																					<td></td>
+																				</tr>
+																				<tr>
+																					<td>
+																						<div class="memhomeBox1">
+																							<table width="178" border="0" align="center" cellpadding="0" cellspacing="0">
+																								<tr>
+																									<td height="7">
+																										<table width="178" border="0" align="center" cellpadding="0" cellspacing="0">
+																											<tr>
+																												<td height="7"><img src="http://image.ec21.com/img/mem/table_rt560.gif" width="560" height="7"></td>
+																											</tr>
+																											<tr>
+																												<td class="data">
+																													<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																														<tr>
+																															<td height="26">
+																																<div id="AboutUs">
+																																	<div class="title">About Us</div>
+																																	<div class="abouttitle2">
+																																		<table width="215">
+																																			<tr>
+																																				<td align="right" style="padding-right:-5px;">
+																																					<script type="text/javascript">
+																																					if ((2 <= 5 && 5 <= 6 ) && 'B' == 'B' && isLoginUser()==false )
+																																					{
+																																						document.write(" <a href=\"javascript:confirmMessage()\"> ");
+																																						document.write(" <img src=\"http://image.ec21.com/img/mem/bt_inquire_small.gif\" border=\"0\" alt=\"Inquire now\" align=absmiddle></a> ");
+																																					}
+																																					else
+																																					{
+																																						document.write(" <a href=\"javascript:sendHomeInquiry('HomeCompany|paulmillerpm')\"> ");
+																																						document.write(" <img src=\"http://image.ec21.com/img/mem/bt_inquire_small.gif\" border=\"0\" alt=\"Inquire now\" align=absmiddle></a> ");
+																																					}
+																																					</script>
+																																				</td>
+																																			</tr>
+																																		</table>
+																																	</div>
+
+																																	
+																																	<div class="dotline2" style="width:528px; clear:both"></div>
+																																	<div class="abouttext">I am inteested in Automotive, and TV Broadcast Equipment. looking forward to agood positive relationship with new Sellers. I use Global Sorces for china and i find they are good.</div><br>
+																																	
+																																	<div class="more"><a href="/company_info.jsp">Read More</a></div>
+																																</div>
+																															</td>
+																														</tr>
+																													</table>
+																												</td>
+																											</tr>
+																											<tr>
+																												<td><img src="http://image.ec21.com/img/mem/table_rb560.gif" width="560" height="7"></td>
+																											</tr>
+																										</table>
+																									</td>
+																								</tr>
+																							</table>
+																						</div>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+
+																	<!-- HOT PRODUCTS START -->
+																	
+																	<!-- NEW SELLING LEADS START -->
+																	
+																	<!-- NEW BUYING LEADS START -->
+																	
+
+																	<tr>
+																		<td colspan="2"><br/>
+																			<div class="memhomeBox1">
+																				<table width="178" border="0" align="center" cellpadding="0" cellspacing="0">
+																					<tr>
+																						<td height="7">
+																							<table width="178" border="0" align="center" cellpadding="0" cellspacing="0">
+																								<tr>
+																									<td height="7"><img src="http://image.ec21.com/img/mem/table_rt560.gif" width="560" height="7"></td>
+																								</tr>
+																								<tr>
+																									<td class="data">
+																										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																											<tr>
+																												<td height="26">
+																													<div class="title" style="width:300px; float:left">Company Profile</div>
+																													<div style=" float:right; text-align:right; width:80px;"><a href="/company_info.jsp">More</a> &nbsp;</div>
+																												</td>
+																											</tr>
+																											<tr>
+																												<td></td>
+																											</tr>
+																										</table>
+																										<div class="databox" style="margin-top:-4px; *padding-top:3px;"></div>
+																										<table width="100%" border="0" cellspacing="0" cellpadding="3">
+																											<tr>
+																												<td>
+																													<div class="dotline2"></div>
+																													<table width="100%" border="0" cellspacing="0" cellpadding="3">
+																														<tr>
+																															<td width="31%"><strong><img src="http://image.ec21.com/img/mem/ic_4dot.gif" width="8" height="7"> Company Name:</strong></td>
+																															<td width="69%">PM Enterprises Inc </td>
+																														</tr>
+																														<tr>
+																															<td><strong> <img src="http://image.ec21.com/img/mem/ic_4dot.gif" width="8" height="7"> Country/Territory:</strong></td>
+																															<td>Barbados</td>
+																														</tr>
+																														<tr>
+																															<td><strong> <img src="http://image.ec21.com/img/mem/ic_4dot.gif" width="8" height="7"> Business Type:</strong></td>
+																															<td>Distributor/Wholesaler<br></td>
+																														</tr>
+																														<tr>
+																															<td><strong> <img src="http://image.ec21.com/img/mem/ic_4dot.gif" width="8" height="7"> Registration Date:</strong></td>
+																															<td>2009/08/01 (Year/Month/Date)</td>
+																														</tr>
+																														<tr>
+																															<td><strong><img src="http://image.ec21.com/img/mem/ic_4dot.gif" width="8" height="7"> Buyer / Seller in EC21:</strong></td>
+																															
+																															<td>Buyer</td>
+																														</tr>
+																														<tr>
+																															<td height="20" bgcolor="#FFFFFF"><strong> <img src="http://image.ec21.com/img/mem/ic_4dot.gif" width="8" height="7"> Keyword</strong></td>
+																															<td bgcolor="#FFFFFF">motorcycle, automotive, parts, battries</td>
+																														</tr>
+																													</table>
+																												</td>
+																											</tr>
+																										</table>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td><img src="http://image.ec21.com/img/mem/table_rb560.gif" width="560" height="7"></td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																				</table>
+																			</div>
+																			<br>
+																		</td>
+																	</tr>
+																	
+																	
+																	<tr>
+																		<td colspan="2" valign="bottom" align="center" width="10px">&nbsp;</td>
+																	</tr>
+																</table>
+															</div>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="1" bgcolor="#CCCCCC"></td>
+							</tr>
+						</table>
+					</td>
+					<td width="9" height="100%" valign="top" background="http://image.ec21.com/img/mem/templet_frameleftbg.gif">
+						<table width="9" height="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="17"><img src="http://image.ec21.com/img/mem/templet_frameround01.gif" width="9" height="17"></td>
+							</tr>
+							<tr>
+								<td height="100%"></td>
+							</tr>
+							<tr>
+								<td height="17"><img src="http://image.ec21.com/img/mem/templet_frameround02.gif" width="9" height="17"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="5" height="100%" valign="top" background="http://image.ec21.com/img/mem/templet_framesd.gif">
+			<table width="5" height="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="17"><img src="http://image.ec21.com/img/mem/templet_framesdtop.gif" width="5" height="17"></td>
+				</tr>
+				<tr>
+					<td height="100%"></td>
+				</tr>
+				<tr>
+					<td height="17"><img src="http://image.ec21.com/img/mem/templet_framesdbottom.gif" width="5" height="17"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><img src="http://image.ec21.com/img/mem/templet_framebottom.gif" width="800" height="6"></td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+var t_chk=0;
+</script>
+
+
+<br />
+
+
+<!-- GOOGLE BANNER START -->
+<script language="javascript" type="text/javascript">
+<!--
+
+/* 728x90, created 4/20/08 */
+google_ad_client = "ca-pub-9304504067309066";
+google_ad_slot = "7713725033";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script language="javascript" type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<!-- GOOGLE BANNER END -->
+
+<!-- FOOTER MENU START -->
+<script language="javascript" type="text/javascript" src="http://image.ec21.com/inc/js/footer/Common_Footer_in.js"></script>
+
+<div id="footer" class="noline">
+	<div class="foot01" align="center">
+		<table width="810" height="33px" border="0" cellpadding="0" cellspacing="0" style="font-size:11px;">
+			<tr>
+				<td style="font:11px arial;">
+					<div style="width:805px;">
+						<img src="http://image.ec21.com/img/ec/main/share_tx.gif" width="37" height="10" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('7');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/share_1.gif" width="14" height="14" border="0" align="absmiddle" /> Facebook</a>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/footer_line.gif" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('8');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/share_2.gif" width="14" height="14" border="0" align="absmiddle" /> Twitter</a>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/footer_line.gif" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('1');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/share_3.gif" width="14" height="14" border="0" align="absmiddle" /> Delicious</a>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/footer_line.gif" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('6');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/share_4.gif" width="14" height="14" border="0" align="absmiddle" /> Google</a>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/footer_line.gif" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('2');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/share_5.gif" width="14" height="14" border="0" align="absmiddle" /> Digg</a>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/footer_line.gif" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('9');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/share_6.gif" width="14" height="14" border="0" align="absmiddle" /> Reddit</a>
+						<script type="text/javascript">
+						var nameOpt = navigator.appName, ua = navigator.userAgent;
+						if(nameOpt == "Microsoft Internet Explorer") //Explorer
+						{
+							document.writeln("&nbsp;&nbsp;<img src=\"http://image.ec21.com/img/ec/main/png/footer_line.png\" width=\"4\" height=\"14\" border=\"0\" align=\"absmiddle\" />");
+							document.writeln("&nbsp;&nbsp;<a href=\"#\" onclick=\"bookmarksite();\"><img src=\"http://image.ec21.com/img/ec/main/png/share_7.png\" width=\"16\" height=\"14\" border=\"0\" align=\"absmiddle\" /> Favorite</a>");
+						}
+						else if(nameOpt == "Netscape") //Safari, Firefox, Chrome
+						{
+							if(ua.indexOf("Firefox") > -1)
+							{
+								document.writeln("&nbsp;&nbsp;<img src=\"http://image.ec21.com/img/ec/main/png/footer_line.png\" width=\"4\" height=\"14\" border=\"0\" align=\"absmiddle\" />");
+								document.writeln("&nbsp;&nbsp;<a href=\"#\" onclick=\"bookmarksite();\"><img src=\"http://image.ec21.com/img/ec/main/png/share_7.png\" width=\"16\" height=\"14\" border=\"0\" align=\"absmiddle\" /> Favorite</a>");
+							}
+						}
+						</script>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/png/footer_line.png" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="#" onclick="return addto('5');" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/png/share_8.png" width="14" height="14" border="0" align="absmiddle" /> My EC21</a>
+						&nbsp;&nbsp;<img src="http://image.ec21.com/img/ec/main/png/footer_line.png" width="4" height="14" border="0" align="absmiddle" />
+						&nbsp;&nbsp;<a href="javascript:SendtoMail()" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/png/share_9.png" width="16" height="12" border="0" align="absmiddle" /> Email this page</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" rel="nofollow"><img src="http://image.ec21.com/img/ec/main/png/top_btn.png" width="28" height="6" border="0" align="baseline" /></a>
+					</div>
+
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="footer_key">
+	<p class="foot02"><a href="http://www.ec21.com/" class="b" rel="nofollow">Home</a>&nbsp;|&nbsp; <a href="http://manufacturer.ec21.com/" class="b" rel="nofollow">Buy Now</a>&nbsp;|&nbsp; <a href="http://importer.ec21.com/buy_leads/" class="b" rel="nofollow">Sell Now</a>&nbsp;|&nbsp; <a href="http://www.ec21.com/html/services/index.html" class="b" rel="nofollow">Services</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/global/basic/MyEC21.jsp" class="b" rel="nofollow">My EC21</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/html/ec/help/help_01.html" class="b"	rel="nofollow">Help</a> &nbsp;|&nbsp; <a href="http://community.ec21.com" class="b" >Community</a></p>
+	<p class="foot03"><a href="http://www.ec21.com/html/ec/AU/AU_Company_Overview.html"	rel="nofollow">About EC21</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/html/ec/AW/ad_overview.html" rel="nofollow">Ads on EC21</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/html/ec/AU/AU_Agent_Program.html"	rel="nofollow">Agent Program</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/html/ec/sitemap.html"	>Site Map</a> &nbsp;|&nbsp; <a href="http://countrysearch.ec21.com/">Country Search</a> &nbsp;| &nbsp;<a href="http://www.ec21.com/premium_suppliers/" >Premium Suppliers</a><br />
+	<br />
+	</p>
+	<p class="foot03"><a href="http://www.ec21.com/html/ec/TC/TC_01.html" rel="nofollow">Terms &amp; Conditions</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/global/reportitem/reportitemM.jsp" rel="nofollow">Report Item</a> &nbsp;|&nbsp; <a href="http://www.ec21.com/html/ec/WIF/WIF_01.html" rel="nofollow">Online Trading Risks</a> &nbsp;|&nbsp; <img src="http://image.ec21.com/img/mobile/png/ico_m.png" align="absmiddle" /><a href="http://www.ec21.com/mobile/mobileWeb.jsp"> EC21 Mobile Web</a></p>
+	<table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td><a rel="nofollow" href="http://chinese.ec21.com"><img src="http://image.ec21.com/img/main/png/Chinese.png" width="38" height="14" border="0" alt="Chinese"/></a></td>
+			<td><a rel="nofollow" href="http://fanti.ec21.com"><img src="http://image.ec21.com/img/main/png/Chinese-Traditiona.png" width="38" height="14" border="0" alt="Chinese Traditional"/></a></td>
+			<td><a rel="nofollow" href="http://korean.ec21.com"><img src="http://image.ec21.com/img/main/png/Korean.png" width="50" height="14" border="0" alt="Korean"/></a></td>
+			<td><a rel="nofollow" href="http://japanese.ec21.com"><img src="http://image.ec21.com/img/main/png/Japanese.png" width="50" height="14" border="0" alt="Japanese"/></a></td>
+			<td><a rel="nofollow" href="http://spanish.ec21.com"><img src="http://image.ec21.com/img/main/png/Spanish.png" width="52" height="14" border="0" alt="Spanish"/></a></td>
+			<td><a rel="nofollow" href="http://russian.ec21.com"><img src="http://image.ec21.com/img/main/png/Russian.png" width="55" height="14" border="0" alt="Russian"/></a></td>
+			<td><a rel="nofollow" href="http://french.ec21.com"><img src="http://image.ec21.com/img/main/png/French.png" width="56" height="14" border="0" alt="French"/></a></td>
+			<td><a rel="nofollow" href="http://german.ec21.com"><img src="http://image.ec21.com/img/main/png/German.png" width="48" height="14" border="0" alt="German"/></a></td>
+		</tr>
+	</table>
+	<p class="foot03"><span style="color: #003399">Hot Products:</span>
+		<a href="http://manufacturer.ec21.com/products-A.html" rel="nofollow">A</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-B.html" rel="nofollow"> B</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-C.html" rel="nofollow">C</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-D.html" rel="nofollow">D</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-E.html" rel="nofollow">E </a>&nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-F.html" rel="nofollow"> F</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-G.html" rel="nofollow"> G</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-H.html" rel="nofollow">H</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-I.html" rel="nofollow">I</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-J.html" rel="nofollow">J</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-K.html" rel="nofollow">K</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-L.html" rel="nofollow">L</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-M.html" rel="nofollow">M</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-N.html" rel="nofollow">N</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-O.html" rel="nofollow">O</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-P.html" rel="nofollow">P</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-Q.html" rel="nofollow">Q</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-R.html" rel="nofollow">R</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-S.html" rel="nofollow">S</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-T.html" rel="nofollow">T</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-U.html" rel="nofollow">U</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-V.html" rel="nofollow">V</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-W.html" rel="nofollow">W</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-X.html" rel="nofollow">X</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-Y.html" rel="nofollow">Y</a> &nbsp;|&nbsp;
+	<a href="http://manufacturer.ec21.com/products-Z.html" rel="nofollow">Z</a> <br /><br /><br /><br /></p>
+	<p class="foot04"><span class="gray">Copyright (c)1997-2013 EC21 Inc. All Rights Reserved.&nbsp; <a href="http://kr.ec21.com" rel="nofollow">EC21 in Korean</a> &nbsp;|&nbsp;<a href="http://cn.ec21.com" rel="nofollow">Chinese </a></span></p>
+	</div>
+</div>
+<!-- FOOTER MENU END -->
+
+
+
+
+<br>
+</center>
+<script type="text/javascript" src="http://image.ec21.com/inc/js/analytics/pageViewLog_min.js" charset="utf-8"></script>
+</body>
+</html>

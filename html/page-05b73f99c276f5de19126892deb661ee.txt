@@ -1,0 +1,356 @@
+
+
+
+
+
+<html>
+<head>
+<meta name="google-site-verification" content="02n3A-KwOTg8Rg_Ve_RR4OgfnwjrilPWidh6jWmbXA0" />
+<meta name="verify-v1" content="tFV0SLVwvmnD8cK9LP81wL9/kMVjqtntEj9OnZdXFjA=">
+<meta name="verify-v1" content="7Q8ocqbw/xAuFcaYF+K0bAFl3Oi9tJFrWM7n9+YejWU=">
+<meta name="msvalidate.01" content="5957B059946C14B2BADB50FA85AD078C" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<META NAME="Description" CONTENT=" 	Find a Kia dealer near you for any Kia cars, crossovers, or minivans.  Click here and enter your zip code to find the Kia dealer closest to you! 	">
+<META NAME="KEYWORDS"    CONTENT=" 	kia dealer, kia dealers, kia locator 	">
+
+<!-- This line will allow SWFAddress to work with IE8 -->
+<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+
+<title>Kia Dealer Locator Tool | Kia.com</title>
+<link rel="shortcut icon" href="/us/favicon.ico">
+
+<style type="text/css" media="screen">
+    body{
+        margin:0;
+        text-align:center;
+    }
+    
+    #flashContent{
+        text-align:left;
+    }
+    
+    #getFlash{
+        height:221px;
+        background-image:url('/us/images/get_flash_bg.jpg');
+        background-repeat:no-repeat;
+    }
+    
+    div#getFlashContent{
+        position:relative;
+        left: 180px;
+        top: 43px;
+        width:664px;
+        height:90px;
+    }
+    
+    div#instructions{
+        position:absolute;
+        top:25px;
+        left:180px;
+        text-align:center;
+        width:270px;
+    }
+    
+    div#getFlashButton{
+        position:absolute;
+        top:25px;
+        left:485px;
+    }
+        
+    div#seo{
+        margin: 0px auto auto 125px;
+        width:775px;
+    }
+    
+    object#flashContent{
+        display:inline;
+    }
+    .copyr{
+        font-size: 10px;
+        color: #373737;
+        font-family: arial;
+    }
+    #_bapw-link{
+        font-size: 10px;
+        font-family: arial;
+    }
+</style>
+
+<script type="text/javaScript"> 
+<!--
+// BEGIN ATLAS TAGGING LOGIC
+// The TrackTag variable refers to the location of the
+// base action tag. In the actual implementation this 
+// action tag will point to a 1x1 pixel GIF.
+
+var TrackTag = 'http://view.atdmt.com/iaction/';
+
+function GetActionTag(URL){ 
+  document.action_tag.src = TrackTag + URL;
+
+// The URL passed from the SWF will be appended to TrackTag.
+// The image will be loaded into the img src tags below the 
+// Flash ad's OBJECT tag.
+// END ATLAS TAGGING LOGIC
+}
+// open cao chat window
+function openCAOChat(arg)
+{
+    var url = "http://kia.contactatonce.com/caoclientcontainer.aspx?"
+        +"MerchantId="+arg["merchantId"]
+        +"&ProviderId="+arg["providerId"]
+        +"&PlacementId="+arg["placementId"]
+        +"&Language="+arg["Language"]
+    
+    if(arg.modelSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+            +"&VIN="+arg["stockNumber"]
+        ;
+    }else if(arg.vehicleSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+        ;
+    }
+    
+    window.open(url,'','resizable=yes,toolbar=no,menubar=no,location=no,scrollbars=no,status=no,height=380,width=600');
+}
+var popInLoaded = 0;
+
+function openCAOPopin(arg){
+    CleanupPopin();
+    
+    var url = "http://kia.contactatonce.com/PopInGenerator.aspx?"
+        +"MerchantId="+arg["merchantId"]
+        +"&ProviderId="+arg["providerId"]
+        +"&PlacementId="+arg["placementId"]
+        +"&Language="+arg["Language"]
+    
+    if(arg.modelSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+            +"&VIN="+arg["stockNumber"]
+        ;
+    }else if(arg.vehicleSelected=="true"){
+        url = url
+            +"&Make="+arg["make"]
+            +"&Model="+arg["model"]
+            +"&Year="+arg["year"]
+        ;
+    }
+    
+    var head= document.getElementsByTagName('head')[0];
+    var script= document.createElement('script');
+    script.type= 'text/javascript';
+
+    script.src= url;
+    head.appendChild(script);
+    
+    script.onreadystatechange= function ()
+    {
+        if ((this.readyState == 'complete') || (this.readyState == 'loaded'))
+        {
+            if (popInLoaded == 0)
+            {
+                popInLoaded = 1;
+                popIn();
+            }
+        }
+    };
+    
+    script.onload= function()
+    {
+        if (popInLoaded == 0)
+        {
+            popInLoaded = 1;
+            popIn();
+        }
+    };
+    
+    popInLoaded = 0;
+}
+
+// BEGIN COMMON JAVASCRIPT FUNCTIONS
+function launchWin(winurl,winname,winfeatures)
+{
+var newwin;
+        //This launches a new window and then
+        //focuses it if window.focus() is supported.
+        newwin = window.open(winurl,winname,winfeatures);
+        
+}
+
+function disconnectAll()
+{
+    document.getElementById("flashContent").disconnectAll();
+}
+
+// ADDED 2010-03-24: This function exposes a common way for Flash
+// to add third-party pixel trackers.  It requires a URL to the
+// third-party tracker.  It loads the tracker in an iframe.
+// MODIFIED 2010-08-02: Added a cachebust flag which appends a 
+// random number to the end of the URL to thwart aggressive browser
+// caches.  Defaults to false.
+function addPixel(url, cachebust) 
+{
+
+    if (cachebust) {
+        url = url + '&cachebuster=' + Math.floor(Math.random()*10000000000000);
+    }
+
+
+    if (document.location.protocol != 'https:') {
+
+        var el = document.createElement("iframe");
+        //el.setAttribute('id', 'ifrm');
+        document.getElementById("pixelContent").appendChild(el);
+//        document.body.appendChild(el);
+        el.setAttribute('src', url);
+        el.setAttribute('width', 1);
+        el.setAttribute('height', 1);
+
+    }
+
+}
+
+// ADDED 2013-04-19: marin tagging
+var _mTrack;
+function marineTracking(convTypeId) 
+{
+    action = new Image();
+    rnd = Math.random()*10000000000000000;
+    proto = (' https:' == document.location.protocol ? 'https://' : 'http://');
+	var mClientId = '7081ht12023';
+	action.src = proto + 'tracker.marinsm.com/tp?act=2&cid=' + mClientId + '&trans=UTM:I||' + convTypeId + '||||&rnd=' + rnd;
+}
+
+// END COMMON JAVASCRIPT FUNCTIONS
+
+-->
+</script>
+
+<script type="text/javascript" src="/us/js/swfobject.js"></script>
+<script type="text/javascript" src="/us/js/swfaddress.js"></script>
+<script type="text/javascript" src="/us/js/swfmacmousewheel2.js"></script>
+<script type="text/javascript" src="http://kia.contactatonce.com/scripts/popin.js"></script>   
+<script type="text/javascript" src="http://kia.contactatonce.com/scripts/popinajax.js"></script>
+<script type="text/javascript" src="/us/js/adutils.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var flashVars = {};
+    // get any query strings and put them into the flashvars
+    var jsPageName = "";
+    var jsModel    = "";
+    if(jsPageName && jsPageName.length > 0 && jsPageName != "null")                flashVars.page = jsPageName;
+    if(jsModel && jsModel.length > 0 && jsModel != "null" && jsModel != "none")    flashVars.model = jsModel;
+
+    // add flashvars
+    flashVars.config = "/us/xml/config.xml";
+    flashVars.contentroot = "/us/";
+    flashVars.referer = '';  
+    flashVars.timestamp = '1377648504826';
+
+    // add params
+    var params = {};
+    params.allowScriptAccess = "always";
+    params.allowFullScreen = "true";
+    params.wmode = "opaque";
+    params.SeamlessTabbing = "false"; //added for the IE8 tab issue.
+    
+    // add attributes
+    var attributes = {};
+    attributes.id = "flashContent";
+    attributes.name = "flashContent";
+    
+    function embedSWFcallback(paramaters){
+        if(!paramaters["success"]){
+            document.getElementById("flashContent").style.display = "none"; 
+            window.location = "/us/pages/en/noflash/";
+        }
+    }
+    
+    
+    // embed the flash swf
+    swfobject.embedSWF("/us/swfs/main.swf?anticache=5", "flashContent", "1000", "600", "10.0.12", "/us/swfs/expressInstall.swf" , flashVars , params , attributes, embedSWFcallback);
+    if(swfmacmousewheel){
+        swfmacmousewheel.registerObject(attributes.id);
+    }
+    
+</script>
+
+
+</head>
+<body onunload="disconnectAll()">
+
+<div id="flashContent">
+    
+    <div id="seo"> 	<h1>KIA DEALER LOCATOR</h1><p>Please enter your zip code or select your city and state to locate a dealer.</p><p>CLOSEST DEALERS WITHIN:  ZIP CODE: <br> OR <br> SELECT YOUR STATE AND NEAREST CITY:</p><h2>Vehicles</h2><h2>Crossovers / Minivan</h2><h3><a href="/us/sorento/">Sorento</a></h3><strong>SORENTO</strong><p>A departure from the expected </p><p>Starting at $23,150*</p><a href="/us/sorento/">Gallery</a><a href="/us/sorento/features/">Features &amp; Options</a><a href="/us/sorento/offers/">Special Offers</a><a href="/us/sorento/build/">Build your Sorento &amp; Payment Estimator</a><a href="/us/sorento/acc_exterior/">Accessories</a><h3><a href="/us/sportage/">Sportage</a></h3><strong>SPORTAGE</strong><p>Designed for the Next Level.</p><p>Starting at $18,500*</p><a href="/us/sportage/">Gallery</a><a href="/us/sportage/features/">Features &amp; Options</a><a href="/us/sportage/offers/">Special Offers</a><a href="/us/sportage/build/">Build your Sportage &amp; Payment Estimator</a><a href="/us/sportage/acc_exterior/">Accessories</a><h3><a href="/us/sedona/">Sedona</a></h3><strong>SEDONA</strong><p>A smarter way to take on the world.</p><p>Starting at $24,900*</p><a href="/us/sedona/">Gallery</a><a href="/us/sedona/features/">Features &amp; Options</a><a href="/us/sedona/offers/">Special Offers</a><a href="/us/sedona/build/">Build your Sedona &amp; Payment Estimator</a><a href="/us/sedona/acc_exterior/">Accessories</a><h2>Cars</h2><h3><a href="/us/forte/">Forte</a></h3><strong>FORTE</strong><p>Setting new standards.</p><p>Starting at $15,200*</p><a href="/us/forte/">Gallery</a><a href="/us/forte/features/">Features &amp; Options</a><a href="/us/forte/offers/">Special Offers</a><a href="/us/forte/build/">Build your Forte &amp; Payment Estimator</a><a href="/us/forte/acc_exterior/">Accessories</a><h3><a href="/us/forte-5-door/">Forte 5-Door</a></h3><strong>FORTE 5-DOOR</strong><p>Where excitement meets versatility.</p><p>Starting at $18,100*</p><a href="/us/forte-5-door/">Gallery</a><a href="/us/forte-5-door/features/">Features &amp; Options</a><a href="/us/forte-5-door/offers/">Special Offers</a><a href="/us/forte-5-door/build/">Build your Forte 5-door &amp; Payment Estimator</a><a href="/us/forte-5-door/acc_exterior/">Accessories</a><h3><a href="/us/forte-koup/">Forte Koup</a></h3><strong>FORTE KOUP</strong><p>One Hot Ride.</p><p>Starting at $17,200*</p><a href="/us/forte-koup/">Gallery</a><a href="/us/forte-koup/features/">Features &amp; Options</a><a href="/us/forte-koup/offers/">Special Offers</a><a href="/us/forte-koup/build/">Build your Forte Koup &amp; Payment Estimator</a><a href="/us/forte-koup/acc_exterior/">Accessories</a><h3><a href="/us/optima/">Optima</a></h3><strong>OPTIMA</strong><p>Not Your Average Mid-Size Sedan.</p><p>Starting at $21,000*</p><a href="/us/optima/">Gallery</a><a href="/us/optima/features/">Features &amp; Options</a><a href="/us/optima/offers/">Special Offers</a><a href="/us/optima/build/">Build your Optima &amp; Payment Estimator</a><a href="/us/optima/acc_exterior/">Accessories</a><h3><a href="/us/optima-hybrid/">Optima Hybrid</a></h3><strong>OPTIMA HYBRID</strong><p>Not your ordinary hybrid midsize sedan.</p><p>Starting at $26,500*</p><a href="/us/optima-hybrid/">Gallery</a><a href="/us/optima-hybrid/features/">Features &amp; Options</a><a href="/us/optima-hybrid/offers/">Special Offers</a><a href="/us/optima-hybrid/build/">Build your Optima &amp; Payment Estimator</a><a href="/us/optima-hybrid/acc_exterior/">Accessories</a><h3><a href="/us/rio/">Rio</a></h3><strong>RIO</strong><p>FUNctional™</p><p>Starting at $13,400*</p><a href="/us/rio/">Gallery</a><a href="/us/rio/features/">Features &amp; Options</a><a href="/us/rio/offers/">Special Offers</a><a href="/us/rio/build/">Build your Rio &amp; Payment Estimator</a><a href="/us/rio/acc_exterior/">Accessories</a><h3><a href="/us/rio-5-door/">Rio 5-door</a></h3><strong>RIO 5-DOOR</strong><p>Five doors – with great things behind every one.</p><p>Starting at $13,600*</p><a href="/us/rio-5-door/">Gallery</a><a href="/us/rio-5-door/features/">Features &amp; Options</a><a href="/us/rio/offers/">Special Offers</a><a href="/us/rio-5-door/build/">Build your Rio 5-door &amp; Payment Estimator</a><a href="/us/rio-5-door/acc_exterior/">Accessories</a><h3><a href="/us/soul/">Soul</a></h3><strong>SOUL</strong><p>A new way to roll.</p><p>Starting at $13,900*</p><a href="/us/soul/">Gallery</a><a href="/us/soul/features/">Features &amp; Options</a><a href="/us/soul/offers/">Special Offers</a><a href="/us/soul/build/">Build your Soul &amp; Payment Estimator</a><a href="/us/soul/acc_exterior/">Accessories</a><h3><a href="/us/allModels/">All Models</a></h3><h2>Shopping Tools</h2><h3><a href="/us/allBuild/">Build Your Kia &amp; Payment Estimator</a></h3><h3><a href="/us/compare/">Compare Vehicles</a></h3><h3><a href="/us/quote/">Quick Quote</a></h3><h3><a href="/us/inventory?step=vehicle_selector">Search Dealer Inventory</a></h3><h3><a href="/us/pages/en/kbb/">Trade-in Appraisal</a></h3><h3><a href="https://www.kmfcusa.com/">Kia Motors Finance</a></h3><h3><a href="/us/brochure/">Brochure Request</a></h3><h3><a href="/us/dealers">Dealer Locator</a></h3><h3><a href="/us/accessories-landing/">Accesories</a></h3><h3><a href="/us/videos-landing/">Videos</a></h3><h2>Future Vehicles</h2><h3><a href="/us/upcoming/">Upcoming Vehicles</a></h3><h3><a href="/us/concept/">Concept Vehicles</a></h3><h2><a href="/us/alloffers/">Special Offers</a></h2><h3><a href="/us/offersvehicle/">By Vehicle</a></h3><h3><a href="/us/offersbytype/">By Type</a></h3><h2><a href="/us/owners/">Owners</a></h2><a href="/us/">Home</a><a href="/us/motorsports/">Kia Motorsports</a><a href="/us/sitemap/">Sitemap</a><a href="/us/about/">About Kia</a><a href="http://ksupport.kiausa.com/ConsumerAffairs/index.html">Contact Kia</a><a href="/us/privacy/">Privacy / Legal</a><a href="/us/warranty/">Warranty</a><a href="/us/disclaimer/">*MSRP</a><a href="https://www.kiamotorsfinance.com/korean_CSP.asp"></a>	</div>
+    <div id="getFlash">
+        <div id="getFlashContent">
+            <div id="instructions"><b>Flash is required to view KIA.com</b><br /><a href="http://www.adobe.com/go/getflashplayer" target="_blank" >Install the flash player here</a></div>
+            <div id="getFlashButton"><a href="http://www.adobe.com/go/getflashplayer" target="_blank" border="0"><img border="0" src="http://www.adobe.com/macromedia/style_guide/images/160x41_Get_Flash_Player.jpg" /></a></div>
+        </div>
+    </div>
+</div>
+<br>
+<!--
+  Evidon tag
+  cid: 2426
+  pid: 826
+-->
+<a id="_bapw-link" href="#" target="_blank" style="text-decoration:none !important"><img id="_bapw-icon" style="border:0 !important;display:inline !important;vertical-align:middle !important;padding-right:5px !important;"/><span style="vertical-align:middle !important">AdChoices</span></a><script>/*<![CDATA[*/(function(){var k=826,m=2426,n=1,b=false,l=document,p=l.getElementById("_bapw-link"),h=(l.location.protocol=="https:"),i=(h?"https":"http")+"://",g=i+"c.betrad.com/pub/",r=window._bap_p_overrides,e=0,a=0,f=560,q=720,o=h||(r&&r.hasOwnProperty(k)&&r[k].new_window);function c(s){var d=new Image();d.src=i+"l.betrad.com/pub/p.gif?pid="+k+"&ocid="+m+"&i"+s+"=1&r="+Math.random()}function j(){if(typeof(window.innerWidth)=="number"&&typeof(window.innerHeight)=="number"){e=window.innerWidth;a=window.innerHeight}else{if(document.documentElement&&document.documentElement.clientWidth&&document.documentElement.clientHeight){e=document.documentElement.clientWidth;a=document.documentElement.clientHeight}else{if(document.body&&document.body.clientWidth&&document.body.clientHeight){e=document.body.clientWidth;a=document.body.clientHeight}}}return(a<=f)||(e<=q)}l.getElementById("_bapw-icon").src=g+"icon1.png";p.onmouseover=function(){p.href="http://info.evidon.com/pub_info/"+k+"?v=1&nt="+n+"&nw="+((o||j())?"true":"false")};p.onclick=function(){if(o||j()){c("c");return true}function d(u,x){var v=l.getElementsByTagName("head")[0]||l.documentElement,t=b,s=l.createElement("script");function w(){s.onload=s.onreadystatechange=null;v.removeChild(s);x()}s.src=u;s.onreadystatechange=function(){if(!t&&(this.readyState=="loaded"||this.readyState=="complete")){t=true;w()}};s.onload=w;v.insertBefore(s,v.firstChild)}this.onclick="return "+b;d(i+"ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js",function(){d(g+"pub2.js",function(){BAPW.i(p,{pid:k,ocid:m})})});return b};c("i")}());/*]]>*/</script>
+<br>
+<span class="copyr">&copy;2013 Kia Motors America, Inc.</span>
+
+<!-- ATLAS TAGGING LOGIC -->
+<br>
+<img src="/us/images/placeholders/transparent.gif" name="action_tag" id="action_tag" height="1" width="1">
+<!-- END ATLAS TAGGING LOGIC -->
+
+<!-- NetMining Library -->
+<script type="text/javascript"> 
+    var nm_proto = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+    document.write(unescape("%3Cscript src='" + nm_proto + "com-kia.netmng.com/' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- End NetMining Library -->
+
+<!-- ADDED 2010-03-24: Layer for content generated by addPixel -->
+<!-- NOTE: Height corresponds to size of master flash movie -->
+<div id="pixelContent" style="position: absolute; top: 0px; left: 0px; width: 35px; height: 600px; overflow: hidden; z-index: -1000; display: none; background-color: #000000"></div>
+
+
+<!-- ADDED 2009-09-04: Cobalt Tagging -->
+<!-- Tag Moved to just before the end of Body tag per Cobalt. CA-808-->
+<script type="text/javascript"> 
+    var scr=document.createElement('SCRIPT'); 
+    scr.type='text/javascript'; 
+    scr.src="http://dt.admission.net/retargeting/displaytracker.js?webid=oem-kia&make=Kia&sitetype=lslp"; 
+    document.getElementsByTagName('HEAD')[0].appendChild(scr); 
+</script>
+<!-- End Cobalt Tagging -->
+
+</body>
+</html>

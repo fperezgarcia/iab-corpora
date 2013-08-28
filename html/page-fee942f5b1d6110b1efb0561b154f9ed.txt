@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	U-Save Car And Truck Rental
+</title><link href="css/usave_default.css" rel="stylesheet" type="text/css" />
+
+<!--Meta Stuff-->
+		<meta name="msvalidate.01" content="78432319AF27463689DC2CCDC5965C7F" /><meta name="Description" content="Book your car rental at U-Save offering airport location discount and cheap car rental rates." /><meta name="Keywords" content="Discount Car rental, car rentals, trucks, rental car, cheap car rentals, discount car rental, truck rental, auto rental, airport car rentals, Orlando airport rental, Miami airport, Fort Lauderdale, Tampa airport, Santa Barbara auto rental, Boston, Daytona Beach, Anchorage, Jacksonville, Manchester, Spokane" /><meta name="robots" content="index, follow" /><meta name="GOOGLEBOT" content="INDEX, FOLLOW" /><link rel="shortcut icon" type="image/x-icon" href="http://www.usave.com/favicon.ico" /><link rel="icon" href="http://www.usave.com/favicon.ico" type="image/x-icon" />
+
+
+<!--catch enter key-->
+ <script type="text/javascript">
+     function kH(e) {
+         var pK = e ? e.which : window.event.keyCode;
+         return pK != 13;
+     }
+     document.onkeypress = kH;
+     if (document.layers) document.captureEvents(Event.KEYPRESS);
+ </script>
+ <!--Calendar code-->
+   <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+			<script type="text/javascript">
+			    // Start date - limit end date min date and set date if start date is beyond end date
+			    $(function () {
+			        $("[id$='txtPickupDate']").datepicker({ constrainInput: true, minDate: '0d', dateFormat: 'mm/dd/yy', buttonImageOnly: 'true', showOn: 'button', buttonImage: 'images/usave_icon_cal.gif',
+			            onSelect: function (dateStr) {
+			                var newDate = $(this).datepicker('getDate');
+			                if (newDate) { // Not null
+			                    newDate.setDate(newDate.getDate() + 1);
+			                }
+			                $("[id$='txtDODate']").datepicker('option', 'minDate', newDate)
+			                if (newDate > $("[id$='txtDODate']").datepicker("getDate")) {
+			                    $("[id$='txtDODate']").datepicker('setDate', newDate).datepicker('option', 'minDate', newDate);
+			                }
+			                $('img.ui-datepicker-trigger').css({ 'cursor': 'pointer', "vertical-align": 'middle', 'padding-left': '5px', 'padding-right': '15px' });
+
+			            }
+			        });
+			        $('img.ui-datepicker-trigger').css({ 'cursor': 'pointer', "vertical-align": 'middle', 'padding-left': '5px', 'padding-right': '15px' });
+
+			    });   </script>
+           	<script type="text/javascript">           	    $(function () { $("[id$='txtDODate']").datepicker({ constrainInput: true, minDate: '0d', dateFormat: 'mm/dd/yy', buttonImageOnly: 'true', showOn: 'button', buttonImage: 'images/usave_icon_cal.gif' }); $('img.ui-datepicker-trigger').css({ 'cursor': 'pointer', "vertical-align": 'middle', 'padding-left': '5px', 'padding-right': '15px' }); });   </script>
+
+            <script type="text/javascript">
+                function highlightText() {
+                    var txtCont = document.getElementById('ContentPlaceHolder1_txtLocationSearch');
+                    txtCont.focus()
+                    txtCont.select()
+                    
+                }
+ </script>
+    
+<script type="text/javascript">
+    var loadingImage = false;
+    function LoadImage(imageName, imageFile) {
+        if ((!document.images) || loadingImage) return;
+        loadingImage = true;
+        if (document.images[imageName].src.indexOf(imageFile) < 0) {
+            document.images[imageName].src = imageFile;
+        }
+        loadingImage = false;
+    }
+
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        LoadImage('MainPic', 'images/usave_04.jpg'); LoadImage('BottomRight', 'images/usave_10.png'); LoadImage('BottomMiddle', 'images/usave_08.png'); LoadImage('UsaveLogo', 'images/usave_id.png'); LoadImage('LeftRezBox', 'images/usave_01.jpg'); LoadImage('IntLoc', 'images/rezForm_03.png'); LoadImage('MainLeft', 'images/usave_03.jpg');
+    } 
+</script> 
+</head>
+<body>
+   <div class="header">
+    <table width="100%" border="0" cellpadding="5" cellspacing="0" style="white-space:nowrap">
+	<tr>
+        <td width="100%"><div class="id"><img name="UsaveLogo" alt="U-Save Logo" height="100px" src="images/usave_id.png"/></div>
+     
+     <div class="headerTxt"><a href="http://hola.usave.com/enes/" target="_blank">En Espa&#xF1;ol</a></div>
+     <div id="menu">
+       <ul>
+          <li><a href="ContactUs.aspx" title="Contacts">Contacts</a></li>
+          <li><a href="Franchise.aspx" title="Franchise">Franchise</a></li>
+          <li><a href="Careers.aspx" title="Careers">Careers</a></li>
+          <li><a href="AboutUs.aspx" title="About">About</a></li>
+          <li><a href="LocationMapSearch.aspx" title="Find A U-Save">Find A U-Save</a></li>
+          <li><a href="Default.aspx" title="Home">Home</a></li>
+       </ul>
+    </div>
+    
+    </td>
+        
+	</tr>
+</table>
+
+</div>
+
+    <!-- END .header -->
+
+    <form method="post" action="" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTYzNzIxNjg5OA9kFgJmD2QWAgIDD2QWAgIBD2QWAgIDD2QWAgIBDw9kFgIeB09uQ2xpY2sFD2hpZ2hsaWdodFRleHQoKWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkYnRuU2VhcmNonKymBpG6jZwXzP1uWDS2vZaFC9W/IH8N4phws4mH6Z8=" />
+
+
+<script src="/ScriptResource.axd?d=Qd_mQ5g0rkL0002NCbX6KvX15i8HCgTUuRDXtaAw--oDf0-fnyeqIu4hbKELMohQAkiA7T-M9NzSFnXy67rEfFbCizn-CVDnEMdjiF7IlbvotxYN112UmVXCLnEQ9lQw0&amp;t=ffffffffc13acc3f" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWZgKQ7cfQAgKU6Oq+DgKKg7LeBQKi687qDALB49WmAwKF6M7qDAKg49WmAwLk6M7qDAKD49WmAwLH6c7qDALi4NWmAwKm6M7qDALF4NWmAwKJ6c7qDAKk4NWmAwLo6c7qDAKH4NWmAwLb6s7qDAL25dWmAwK67c7qDALZ5dWmAwLYgabVAgLYgeKwBwLYgaLaAgLYge61BwKlqu+aCgKlqqv0DAKi64rpDALB45GlAwKF6IrpDAKg45GlAwLk6IrpDAKD45GlAwLH6YrpDALi4JGlAwKm6IrpDALF4JGlAwKJ6YrpDAKk4JGlAwLo6YrpDAKH4JGlAwLb6orpDAL25ZGlAwK67YrpDALZ5ZGlAwKlqueUCgKlqqP2DAKlquOZCgKlqq/7DALYga7bAgLYgeq2BwLn4oWkCQKC35iSBQLh14PeCgKl3JiSBQKA14PeCgLE3JiSBQKj14PeCgLn3ZiSBQLC1IPeCgKG3JiSBQLl1IPeCgKp3ZiSBQKE1IPeCgLI3ZiSBQKn1IPeCgL73piSBQLW0YPeCgKa2ZiSBQL50YPeCgL4tfCtCwL4tbTIDgL4tfSiCwL4tbjNDgKFnrniAwKFnv2MBQKC39yRBQLh18fdCgKl3NyRBQKA18fdCgLE3NyRBQKj18fdCgLn3dyRBQLC1MfdCgKG3NyRBQLl1MfdCgKp3dyRBQKE1MfdCgLI3dyRBQKn1MfdCgL73tyRBQLW0cfdCgKa2dyRBQL50cfdCgKFnrHsAwKFnvWOBQKFnrXhAwKFnvmDBQL4tfijCwL4tbzODgL3uvOGAgLEutrhDr8I4pAPQWTQw3+qwzZDGVa80PfWG7D1MaPrpbF7KnGR" />
+    <div>            
+        
+    <div class="container">
+        <table id="Primary" width="996" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td rowspan="3">
+                    <img name="LeftRezBox" width="11" height="627" alt="background" />
+                </td>
+                <td>
+                    <!-- START .Reservation Form -->
+                    <div class="resBox">
+                        <div class="resTab">
+                            <a href="ReservationLookup.aspx">View/Modify Reservation</a></div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="resForm">
+                            <table id="rezForm" width="292" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="3">
+                                        <br />
+                                        <h5>
+                                            ZIP CODE OR CITY, STATE OR AIRPORT</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <input name="ctl00$ContentPlaceHolder1$txtLocationSearch" type="text" value="ENTER A LOCATION" id="ContentPlaceHolder1_txtLocationSearch" OnClick="highlightText()" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <a href="LocationIntList.aspx">
+                                            <img name="IntLoc" alt="International Locations" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="resHR">
+                                            <hr />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <h5>
+                                            PICK UP DATE</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <input name="ctl00$ContentPlaceHolder1$txtPickupDate" type="text" value="08/28/2013" id="ContentPlaceHolder1_txtPickupDate" style="width: 90px; padding-right: 20px" />
+                                        <select name="ctl00$ContentPlaceHolder1$cboPickupTime" id="ContentPlaceHolder1_cboPickupTime" class="fields">
+	<option value="1:00 AM">1:00 AM</option>
+	<option value="1:30 AM">1:30 AM</option>
+	<option value="2:00 AM">2:00 AM</option>
+	<option value="2:30 AM">2:30 AM</option>
+	<option value="3:00 AM">3:00 AM</option>
+	<option value="3:30 AM">3:30 AM</option>
+	<option value="4:00 AM">4:00 AM</option>
+	<option value="4:30 AM">4:30 AM</option>
+	<option value="5:00 AM">5:00 AM</option>
+	<option value="5:30 AM">5:30 AM</option>
+	<option value="6:00 AM">6:00 AM</option>
+	<option value="6:30 AM">6:30 AM</option>
+	<option value="7:00 AM">7:00 AM</option>
+	<option value="7:30 AM">7:30 AM</option>
+	<option value="8:00 AM">8:00 AM</option>
+	<option value="8:30 AM">8:30 AM</option>
+	<option value="9:00 AM">9:00 AM</option>
+	<option value="9:30 AM">9:30 AM</option>
+	<option value="10:00 AM">10:00 AM</option>
+	<option value="10:30 AM">10:30 AM</option>
+	<option value="11:00 AM">11:00 AM</option>
+	<option value="11:30 AM">11:30 AM</option>
+	<option selected="selected" value="12:00 PM">Noon</option>
+	<option value="12:30 PM">12:30 PM</option>
+	<option value="1:00 PM">1:00 PM</option>
+	<option value="1:30 PM">1:30 PM</option>
+	<option value="2:00 PM">2:00 PM</option>
+	<option value="2:30 PM">2:30 PM</option>
+	<option value="3:00 PM">3:00 PM</option>
+	<option value="3:30 PM">3:30 PM</option>
+	<option value="4:00 PM">4:00 PM</option>
+	<option value="4:30 PM">4:30 PM</option>
+	<option value="5:00 PM">5:00 PM</option>
+	<option value="5:30 PM">5:30 PM</option>
+	<option value="6:00 PM">6:00 PM</option>
+	<option value="6:30 PM">6:30 PM</option>
+	<option value="7:00 PM">7:00 PM</option>
+	<option value="7:30 PM">7:30 PM</option>
+	<option value="8:00 PM">8:00 PM</option>
+	<option value="8:30 PM">8:30 PM</option>
+	<option value="9:00 PM">9:00 PM</option>
+	<option value="9:30 PM">9:30 PM</option>
+	<option value="10:00 PM">10:00 PM</option>
+	<option value="10:30 PM">10:30 PM</option>
+	<option value="11:00 PM">11:00 PM</option>
+	<option value="11:30 PM">11:30 PM</option>
+	<option value="12:00 AM">12:00 AM</option>
+	<option value="12:30 AM">12:30 AM</option>
+
+</select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <h5>
+                                            DROP OFF DATE</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <input name="ctl00$ContentPlaceHolder1$txtDODate" type="text" value="08/31/2013" id="ContentPlaceHolder1_txtDODate" style="width: 90px; padding-right: 20px" />
+                                        <select name="ctl00$ContentPlaceHolder1$cboReturnTime" id="ContentPlaceHolder1_cboReturnTime" class="fields">
+	<option value="1:00 AM">1:00 AM</option>
+	<option value="1:30 AM">1:30 AM</option>
+	<option value="2:00 AM">2:00 AM</option>
+	<option value="2:30 AM">2:30 AM</option>
+	<option value="3:00 AM">3:00 AM</option>
+	<option value="3:30 AM">3:30 AM</option>
+	<option value="4:00 AM">4:00 AM</option>
+	<option value="4:30 AM">4:30 AM</option>
+	<option value="5:00 AM">5:00 AM</option>
+	<option value="5:30 AM">5:30 AM</option>
+	<option value="6:00 AM">6:00 AM</option>
+	<option value="6:30 AM">6:30 AM</option>
+	<option value="7:00 AM">7:00 AM</option>
+	<option value="7:30 AM">7:30 AM</option>
+	<option value="8:00 AM">8:00 AM</option>
+	<option value="8:30 AM">8:30 AM</option>
+	<option value="9:00 AM">9:00 AM</option>
+	<option value="9:30 AM">9:30 AM</option>
+	<option value="10:00 AM">10:00 AM</option>
+	<option value="10:30 AM">10:30 AM</option>
+	<option value="11:00 AM">11:00 AM</option>
+	<option value="11:30 AM">11:30 AM</option>
+	<option selected="selected" value="12:00 PM">Noon</option>
+	<option value="12:30 PM">12:30 PM</option>
+	<option value="1:00 PM">1:00 PM</option>
+	<option value="1:30 PM">1:30 PM</option>
+	<option value="2:00 PM">2:00 PM</option>
+	<option value="2:30 PM">2:30 PM</option>
+	<option value="3:00 PM">3:00 PM</option>
+	<option value="3:30 PM">3:30 PM</option>
+	<option value="4:00 PM">4:00 PM</option>
+	<option value="4:30 PM">4:30 PM</option>
+	<option value="5:00 PM">5:00 PM</option>
+	<option value="5:30 PM">5:30 PM</option>
+	<option value="6:00 PM">6:00 PM</option>
+	<option value="6:30 PM">6:30 PM</option>
+	<option value="7:00 PM">7:00 PM</option>
+	<option value="7:30 PM">7:30 PM</option>
+	<option value="8:00 PM">8:00 PM</option>
+	<option value="8:30 PM">8:30 PM</option>
+	<option value="9:00 PM">9:00 PM</option>
+	<option value="9:30 PM">9:30 PM</option>
+	<option value="10:00 PM">10:00 PM</option>
+	<option value="10:30 PM">10:30 PM</option>
+	<option value="11:00 PM">11:00 PM</option>
+	<option value="11:30 PM">11:30 PM</option>
+	<option value="12:00 AM">12:00 AM</option>
+	<option value="12:30 AM">12:30 AM</option>
+
+</select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="resHR">
+                                            <hr />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>
+                                            PROMO CODE</h5>
+                                    </td>
+                                    <td rowspan="2">
+                                        &nbsp;
+                                    </td>
+                                    <td rowspan="2" valign="top" align="right">
+                                        <input type="image" name="ctl00$ContentPlaceHolder1$btnSearch" id="ContentPlaceHolder1_btnSearch" src="images/resbtn.png" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                        <input name="ctl00$ContentPlaceHolder1$txtPromoCode" type="text" id="ContentPlaceHolder1_txtPromoCode" style="width: 90px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="resHR">
+                                            <hr />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <span id="ContentPlaceHolder1_lblerror" class="orangeerror"></span><br />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- END .Reservation Form -->
+                    </div>
+                </td>
+                <td>
+                    <img name="MainLeft" width="11" height="365" alt="background" />
+                </td>
+                <td colspan="3">
+                    <img name="MainPic" width="652" height="365" alt="background" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <img src="images/usave_05.jpg" width="985" height="9" alt="background" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="contentBox">
+                        <div class="contentBoxTitle">
+                            THE VALUE WE BRING</div>
+                        <div class="contentInnerBox">
+                            <table cellpadding="10">
+                                <tr>
+                                    <td>
+                                        <br />
+                                        U-Save provides discount car rental prices with top of the line auto rental customer
+                                        service. At U-Save we believe that cheap car rental can be accompanied with excellent
+                                        service. With airport locations and convenient neighborhood locations U-Save strives
+                                        to meet all of your car and truck rental needs; whether you are looking for airport
+                                        car rental, an insurance replacement vehicle or a van or minivan to take on vacation.
+                                        <br />
+                                        <br />
+                                        <strong>Wherever the road leads...U-Save!</strong>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <img src="images/spacer.gif" width="11" height="253" alt="Find a U-Save" />
+                </td>
+                <td>
+                    <div class="contentBox">
+                        <div class="contentBoxTitle">
+                            MEET MOBI</div>
+                        <div class="contentInnerBox">
+                            <h2>
+                                Are you Mobile?</h2>
+                            <img name="BottomMiddle" width="159" height="155" style="float: right;" alt="Mobile Site" />
+                            <p>
+                                Make reservations using your favorite mobile device.<br />
+                            </p>
+                            <h4>
+                                <a href="http://www.usave.mobi">www.usave.mobi</a></h4>
+                        </div>
+                    </div>
+                </td>
+                <td width="11" height="253">
+                    <img src="images/spacer.gif" width="11" height="253" alt="Find a U-Save" />
+                </td>
+                <td>
+                    <div class="contentBox">
+                        <div class="contentBoxTitle">
+                            A U-SAVE IS NEAR YOU</div>
+                        <div class="contentInnerBox">
+                            <p>
+                                U-Save locations are world-wide, Find one&raquo;</p>
+                            <div class="contentBoxImage">
+                                <img name="BottomRight" style="border: 0;" usemap="#MapLocations" alt="Find a U-Save" /></div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!--Sojern-->
+        <img border="0" src="http://r.turn.com/r/beacon?b2=WQLhaHIJBszEHDRcUEef_FYKwamATcde800bPeykpdo1LhqnmhMptoNotGgSE6kGzeQfuRqRYUGPBBtx1e5OYA&cid=" />
+    </div>
+    
+<map name="MapLocations" id="MapLocations">
+  <area shape="circle" coords="47,44,35" href="LocationMapSearch.aspx" alt="Find a Location" />
+  <area shape="circle" coords="149,46,34" href="LocationStateSearchList.aspx?st=airport" alt="Airport Locations" />
+  <area shape="circle" coords="249,45,35" href="LocationIntList.aspx" alt="International Locations" />
+</map>
+
+
+    </div>
+    </form>
+    <script type="javascript">
+        var newWin = null;
+        function popUp(strURL, strType, strHeight, strWidth) {
+            if (newWin != null && !newWin.closed)
+                newWin.close();
+            var strOptions = "";
+            if (strType == "console")
+                strOptions = "resizable,height=" +
+      strHeight + ",width=" + strWidth;
+            if (strType == "fixed")
+                strOptions = "status,height=" +
+      strHeight + ",width=" + strWidth;
+            if (strType == "elastic")
+                strOptions = "toolbar,menubar,scrollbars," +
+      "resizable,location,height=" +
+      strHeight + ",width=" + strWidth;
+            newWin = window.open(strURL, 'newWin', strOptions);
+            newWin.focus();
+        }
+    </script> 
+    <script type="text/javascript">
+        var loadingImage = false;
+        function LoadImage(imageName, imageFile) {
+            if ((!document.images) || loadingImage) return;
+            loadingImage = true;
+            if (document.images[imageName].src.indexOf(imageFile) < 0) {
+                document.images[imageName].src = imageFile;
+            }
+            loadingImage = false;
+        }
+
+</script>
+         <div class="footer"> &reg; 2012 U-Save Car &amp; Truck Rental &nbsp;| &nbsp;  
+        <a href="us_privacy.aspx">PRIVACY POLICY</a>&nbsp;| &nbsp; 
+        <a href="us_terms.aspx">TERMS OF USE</a><br />
+        <a href="https://www.usave.com/ReservationLookup.aspx">EXISTING RESERVATIONS</a>&nbsp; | &nbsp;
+        <a href="AboutUs.aspx">ABOUT US</a> &nbsp;| &nbsp;
+        <a href="http://www.usave.com/Careers.aspx">CAREERS</a> &nbsp;|&nbsp; 
+        <a href="http://www.usave.com/ContactUs.aspx">CONTACTS</a> &nbsp;|&nbsp; 
+        <a href="http://www.usave.com/Franchise.aspx">FRANCHISE OPPORTUNITIES</a> &nbsp;|&nbsp; 
+        <a href="http://www.fsna-inc.com/news.aspx" target="_blank">NEWS</a> | 
+        <a href="StarLocations.aspx">STAR LOCATIONS </a> | 
+        <a href="https://www.usave.com/znet">Z-NET</a>  | 
+        <a href="http://hola.usave.com/enes/">EN ESPA&#209;OL</a>
+        <br /><a href="http://www.facebook.com/USaveRental"><img src="images/FB_03.gif" alt="" width="37" height="33" border="0"></a><a href="http://twitter.com/#!/@usaverental"><img src="images/FB_02.gif" alt="" width="35" height="33" border="0"></a>
+      </div>
+
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html lang='en' class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html lang='en' class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html lang='en' class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang='en' class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<title>Monroe Foreign Auto - Hybrid Auto Repair</title>
+<meta name="description" content="From the Toyota Prius, to the Nissan Leaf, to the Chevy Volt, hybrid/electric vehicles are here to stay. If you have one then you know of the benefits ">
+<meta name="author" content="Monroe Foreign Auto">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="/asp/core.css">
+<link rel="stylesheet" href="/asp/nav-horiz.css">	
+<link rel="stylesheet" href="/asp/css741.css">
+<link rel="icon" href="/Userfiles/template/favicon.ico"/>
+<link rel="shortcut icon" href="/Userfiles/template/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/mootools-core.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/mootools-more.js'></script>
+<script src='/SpecialFunctions/ServerIncludes/js/swfobject.js' type='text/javascript' ></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/mediabox/quickie.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/mediabox/mediabox.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/AC_RunActiveContent.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/ie-fix.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/googlefix.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/highlightTxt.js'></script>
+
+<script type='text/javascript'>
+var GB_ROOT_DIR = '/SpecialFunctions/ServerIncludes/greybox/';
+</script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/greybox/AJS.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/greybox/AJS_fx.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/greybox/gb_scripts.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/formcheck/lang/en.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/formcheck/formcheck.js'></script>
+<script type='text/javascript' src='/SpecialFunctions/ServerIncludes/js/navselector.js'></script>
+<link rel='stylesheet' href='/SpecialFunctions/ServerIncludes/js/formcheck/theme/classic/formcheck.css' type='text/css' media='screen' />
+<link href='/SpecialFunctions/ServerIncludes/greybox/gb_styles.css' rel='stylesheet' type='text/css' />
+<link rel='stylesheet' href='/SpecialFunctions/ServerIncludes/mediabox/mediabox.css' type='text/css' media='screen' />
+                    
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/asp/slideshow.js"></script>
+<script type="text/javascript">
+window.addEvent('domready', function(){
+	highlight('',0);
+
+function HideSiblingSubs () {	
+    //optional - hide other subs
+    var findNonSelected = $('sub-nav').getElements('.level3 a' || '.level4 a').each(function(el) {
+        if (el.hasClass('')) {
+            el.getParent('ul').addClass('hide');
+        }
+    })
+    // find selected Parents
+    $('sub-nav').getElements('.level3 a.selected' || '.level4 a.selected').each(function(el2) {
+    	el2.getParent('ul').set('class', 'subs');
+    	$('sub-nav').getElements('ul.hide').dispose();
+    })
+
+}
+
+function SlideSubs () {	    
+    // optional - show subs on hover
+    $('sub-nav').getElements('.level3 a' || '.level4 a').getParent('ul').getParent('li').set('class', 'parent');
+    $('sub-nav').getElements('li.parent').each(function(el) {
+        $('sub-nav').getElements('li.parent').getElement('ul').set('class', 'subs');
+        var list = el.getElement('ul.subs');
+        // comment out the line below to stop slide/hover effect
+        var myFx = new Fx.Slide(list).hide();
+        el.addEvents({
+            'mouseenter': function() {
+                myFx.cancel();
+                myFx.slideIn();
+            },
+            'mouseleave': function() {
+                myFx.cancel();
+                myFx.slideOut();
+            }
+        });
+    })
+}
+
+var SubNav = $('sub-nav');
+
+if (SubNav) {
+     HideSiblingSubs();
+     // SlideSubs ();
+}
+
+	var newsSlide = new noobSlide({
+		box: $('testimonial'),
+		items: $$('#testimonial li'),
+		size: 950,
+		fade: true,
+		autoPlay: true,
+		interval:8000,
+		onWalk: function(currentItem,currentHandle){}
+	});
+
+// Toggle Mobile Nav
+	var slideMobileMenu = document.id('main-nav').hide();
+	document.id('mobile-menu').addEvent('click', function (e) {
+	    e = new Event(e);   
+	    slideMobileMenu.toggle();
+	    e.stop();
+	});
+
+
+// Notification
+var NotificationFx = new Fx.Slide('notification', {
+    duration: 'long'
+});
+
+  	// Notification
+ 	var NotificationFx = new Fx.Slide('notification', {
+ 		duration: 'long'
+  	});
+  	NotificationFx.hide();
+  
+	(function(){
+	//	NotificationFx.slideIn();
+	}).delay(1000);
+   
+   	$$('.close-button').addEvent('click', function(event) {
+		NotificationFx.slideOut();
+	}); 
+
+});
+
+</script>
+
+
+
+
+<style>
+.specDivVSM {display: none;}
+</style></head>
+<body>
+<form method="post" action="hybrid-auto-repair.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwMDM3OTMyMThkZOLAGeOWP5NVoiO7zDPeIbOtGmdZBSzLWV6scmPJzVKy" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgLt2tOpBwK90cqrCbWbG6jU/ViI3vjHRcBZe3KiwG3aqotIXS73boiFenpT" />
+<input type="hidden" name="hdnBSid" id="hdnBSid" value="309" />
+<input type='hidden' class='31188' id='divNavPath' value='31188' />
+
+
+<div id="notification">
+	<p><a href="http://www.fixcarleaks.org/" target="_blank"><strong>April is "<em>Fix That Leak Month</em>"</strong> - Find out how you can get a free inspection!</a></p>
+	<div class="close-button">
+		X
+	</div>
+</div>
+
+<div id="page-wrap">
+</div>
+<!--! end page wrap -->
+
+<div id="page">
+
+<div id="car"></div>
+
+	<header>
+		<div id="mobile-menu">MENU</div>
+		<div id="testimonials">
+		<div class="mask">
+		<div id="testimonial">
+			<ul>
+<li>I know I can always count on Bob to be straight with me and do quality work. It is very comforting to have a auto shop that I know I can trust. - <strong>Amy Springer, Duvall, WA<br /><br /></strong></li>
+<li>Friendly, careful, timely, thorough, and competent. - <strong>J.F. Snohomish, WA<br /><br /></strong></li>
+<li>Service prompt, and reliable by friendly folks. Thanks for even giving me a ride home. - <strong>Kay Haenggi, Sultan, WA<br /><br /></strong></li>
+<li>Bob Warden, the owner, cares about how his customers are being treated and takes pride in the level of service his mechanics provide. - <strong>Vickie Shanks, Gold Bar, WA<br /><br /></strong></li>
+<li>As always these folks do a good job. They help keep costs down, complete the work quickly and they never leave dirt or a mess in my vehicle. - <strong>Michelle Ichihashi, Maltby, WA<br /><br /></strong></li>
+<li>Estimate was correct, vehicle was done on time and runs great. Thanks again.&nbsp; - <strong>JR and Addley Tole, Lake Stevens, WA<br /><br /></strong></li>
+<li>Excellent service, they knew what was wrong and fixed it! We've already recommend ...and will continue to do so! - <strong>Sandy Meyer, Woodinville, WA<br /><br /></strong></li>
+<li>I've used Monroe Foreign Auto for years and they are the best. I won't go any other place! - <strong>Darin Dewell, Monroe, WA</strong></li>
+</ul>
+		</div>
+		</div>
+		</div>
+		<!-- End Testimonials -->
+		
+		<div id="logo">
+			<a href="default.aspx"><img src="/Userfiles/template/logo.png" /></a>
+		</div>
+		<!-- End Logo -->
+		
+		<nav id="main-nav">
+			<ul id='navmenu' class='ul1'>
+		<li class='default'><span class='l1 cp30047-1' ><a id='cp30047-1' href='/'>
+		Home</a>
+		<span class='lc'></span>
+		<span class='rc'></span>
+		</span>		
+
+		</li>
+		<li class='services'><span class='l1 cp30239-1' ><a id='cp30239-1' href='services.aspx'>
+		Services</a>
+		<span class='lc'></span>
+		<span class='rc'></span>
+		</span>		
+
+		</li>
+		<li class='hybrid-auto-repair'><span class='l1 cp31188-1' ><a id='cp31188-1' href='hybrid-auto-repair.aspx'>
+		Hybrid</a>
+		<span class='lc'></span>
+		<span class='rc'></span>
+		</span>		
+
+		</li>
+		<li class='coverage-area'><span class='l1 cp30579-1' ><a id='cp30579-1' href='coverage-area.aspx'>
+		Coverage Area</a>
+		<span class='lc'></span>
+		<span class='rc'></span>
+		</span>		
+
+		</li>
+		<li class='testimonials'><span class='l1 cp30236-1' ><a id='cp30236-1' href='testimonials.aspx'>
+		Testimonials</a>
+		<span class='lc'></span>
+		<span class='rc'></span>
+		</span>		
+
+		</li>
+		<li class='contact'><span class='l1 cp30241-1' ><a id='cp30241-1' href='contact.aspx'>
+		Contact</a>
+		<span class='lc'></span>
+		<span class='rc'></span>
+		</span>		
+
+		</li>
+
+</ul>
+
+<script> highlightNav(1); </script>
+		</nav>
+		<!-- End Navigation -->
+	      
+	</header>
+	<!-- end header -->
+	
+	<section id="content" class="clearfix">
+		
+		<aside id="left-side">
+			<div class="sidebar"><p>&nbsp;</p>
+<p><iframe width="220" height="600" style="overflow: hidden; width: 220px; height: 600px;" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/pages/Monroe-Foreign-Auto/212505675441154%3Fv%3Dwall&amp;width=220&amp;height=600&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false" scrolling="no" frameborder="0" allowtransparency="true"></iframe></p></div>
+		</aside>
+	        <!-- End Left Side -->
+	
+		<article id="main" role="main">
+<div class="mobile-phone">888.794.5211</div>
+			<h1 class="pagename">Hybrid Auto Repair</h1><!-- start pagecontent --><p><img style="display: block; margin-left: auto; margin-right: auto; border: 1px solid black;" alt="HEV" src="http://www.monroeforeignautorepair.com/Userfiles/HEV.png" /></p>
+<p style="text-align: justify;"><br /><br /></p>
+<p style="text-align: justify;">From the Toyota Prius, to the Nissan Leaf, to the Chevy Volt, hybrid and electric vehicles are here to stay. If you have one then you know the benefits when it comes to gas mileage, or environmental impact. What you may not know is that service on a hybrid car is just as important if not more important than traditional vehicles.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Every car throughout it's life needs maintenance. Hybrid vehicles are no exception and they require special skills and training to ensure proper repair without negative affect on any of the complex electrical components. Even companies such as Porsche and Audi are creating hybrid vehicles to meet the needs of consumers looking to have the best of both worlds.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">At Monroe Foreign Auto Repair our technicians have the training and know-how to service hybrid automobiles. Being around since 1983 we have years of experience providing maintenance for hybrid vehicles, starting with our first hybrid's serviced in the early 90's. At Monroe Foreign Auto repair we will service or repair your hybrid vehicle professionally to manufacturer standards.</p><!-- end pagecontent -->
+		</article>
+		<!-- end main -->
+	
+		<aside id="right-side">
+			<div id="phone">888<span>.</span>794<span>.</span>5211</div>
+			<div class="sidebar"><h3>Makes &amp; Models</h3>
+<p>At Monroe Foreign Auto Repair we</p>
+<p>work on vehicles manufactured by :</p>
+<p>&nbsp;</p>
+<table style="width: 100%;" border="0" cellpadding="3">
+<tbody>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://progress.audiusa.com/"><strong><img style="display: block; margin-left: auto; margin-right: auto;" alt="Audi" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Audi.png" height="21" width="30" /></strong></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://progress.audiusa.com/"><span style="font-size: large;"><strong>Audi</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.acura.com/"><img alt="Acura" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Acura.png" style="display: block; margin-left: auto; margin-right: auto;" width="25" /></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://www.acura.com/"><span style="font-size: large;"><strong>Acura</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.bmw.com/"><img alt="BMW" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/bmw.png" style="display: block; margin-left: auto; margin-right: auto;" width="25" /></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://www.bmw.com/"><span style="font-size: large;"><strong>BMW</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.honda.com/"><img alt="Honda" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Honda.png" style="display: block; margin-left: auto; margin-right: auto;" width="25" /></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://www.honda.com/"><span style="font-size: large;"><strong>Honda</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.hyundaiusa.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Hyundai" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Hyundai.png" height="17" width="30" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.hyundaiusa.com/"><span style="font-size: large;"><strong>Hyundai</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px; text-align: center;"><a target="_blank" href="http://www.kia.com/"><img alt="Kia Motors" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Kia.png" width="30" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.kia.com/"><span style="font-size: large;"><strong>Kia</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;">
+<p><a target="_blank" href="http://www.infiniti.com/us/en/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Infiniti" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Infiniti.png" width="25" /></a></p>
+</td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.infiniti.com/us/en/"><span style="font-size: large;"><strong>Infiniti</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.landrover.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Land Rover" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Land-Rover.png" width="30" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.landrover.com/"><span style="font-size: large;"><strong>Land Rover</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.lexus.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Lexus" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Lexus.png" width="27" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.lexus.com/"><span style="font-size: large;"><strong>Lexus</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.mazdausa.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Mazda" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Mazda.png" width="26" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.mazdausa.com/"><span style="font-size: large;"><strong>Mazda</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.mbusa.com/mercedes/index"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Mercedes Benz" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Mercedes.png" width="27" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.mbusa.com/mercedes/index"><span style="font-size: large;"><strong>Mercedes</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.mitsubishi-motors.com/en/index.html"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Mitsubishi Motors" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Mistubishi.png" width="25" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.mitsubishi-motors.com/en/index.html"><span style="font-size: large;"><strong>Mitsubishi</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.nissanusa.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Nissan" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Nissan.png" width="25" /></a></td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.nissanusa.com/"><span style="font-size: large;"><strong>Nissan</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;">
+<p><a target="_blank" href="http://www.saabusa.com/us/en/start#/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Saab" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Saab.png" width="25" /></a></p>
+</td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.saabusa.com/us/en/start#/"><span style="font-size: large;"><strong>Saab</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;">
+<p><a target="_blank" href="http://www.scion.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Scion" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Scion.png" width="30" /></a></p>
+</td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.scion.com/"><span style="font-size: large;"><strong>Scion</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.subaru.com/"><img alt="Subaru" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Subaru.png" style="display: block; margin-left: auto; margin-right: auto;" width="30" /></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://www.subaru.com/"><span style="font-size: large;"><strong>Subaru</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;">
+<p><a target="_blank" href="http://www.suzukiauto.com/"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Suzuki" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Suzuki.png" width="25" /></a></p>
+</td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.suzukiauto.com/"><span style="font-size: large;"><strong>Suzuki</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.toyota.com/"><img alt="Toyota" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/toyota.png" style="vertical-align: middle; display: block; margin-left: auto; margin-right: auto;" width="30" /></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://www.toyota.com/"><span style="font-size: large;"><strong>Toyota</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;"><a target="_blank" href="http://www.vw.com/en.html"><img alt="VW" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/VW.png" style="vertical-align: middle; display: block; margin-left: auto; margin-right: auto;" width="25" /></a></td>
+<td style="width: 1px;"><span style="font-size: large;"><strong></strong></span></td>
+<td><a target="_blank" href="http://www.vw.com/en.html"><span style="font-size: large;"><strong>Volkswagen</strong></span></a></td>
+</tr>
+<tr>
+<td style="width: 35px;">
+<p><a target="_blank" href="http://www.volvocars.com/us/Pages/default.aspx"><img style="display: block; margin-left: auto; margin-right: auto;" alt="Volvo" src="http://www.monroeforeignautorepair.com/Userfiles/Logos/Volvo.png" width="25" /></a></p>
+</td>
+<td style="width: 1px;"></td>
+<td><a target="_blank" href="http://www.volvocars.com/us/Pages/default.aspx"><span style="font-size: large;"><strong>Volvo</strong></span></a></td>
+</tr>
+</tbody>
+</table></div>
+		</aside>
+		<!-- End Right Side -->
+		
+	</section>
+  	<!-- End content -->
+
+<div class="push"></div>
+
+</div>
+<!--! end of page -->
+
+<div id="footer-wrap">
+	<footer>
+		
+		<div id="credits">
+			&copy; 2013 Monroe Foreign Auto. All Rights Reserved. <a href="privacy-policy.aspx">Privacy Policy</a> | <a href="http://www.efinitytech.com" target="_blank">Powered by VSM.</a><br/>18970 State Route 2  Monroe, WA 98272 | <strong>1.888.794.5211</strong>
+			
+		</div>
+		<div id="logos">
+<a target="_blank" href="http://www.yelp.com/biz/monroe-foreign-auto-repair-monroe-2"><img src="/Userfiles/template/yelp.png" class="facebook"/></a>
+<a target="_blank" href="http://maps.google.com/maps/place?q=monroe+foreign+auto&hl=en&cid=1425373800364133345"><img src="/Userfiles/template/google.png" class="facebook"/></a>
+<a target="_blank" href="http://www.facebook.com/pages/Monroe-Foreign-Auto/212505675441154"><img src="/Userfiles/template/facebook.png" class="facebook"/></a>
+		<img src="/Userfiles/template/ase-logo.png" class="ase"/>
+		<img src="/Userfiles/template/aaa-logo.png" class="aaa"/>
+		</div>
+		
+	</footer>
+	<!-- end footer -->
+</div>
+<!-- end footer wrap -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-570358-47']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+</form>
+</body>
+
+</html>

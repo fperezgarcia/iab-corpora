@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	NAPA Belts & Hose
+</title><meta name="description" content="Look no further than NAPA Heating/Cooling as your one and only resource for heating and cooling parts for automotive and industrial applications." /><meta name="keywords" content="NAPA, NAPA Belts &amp; Hose, NAPA Heating &amp; Cooling, NAPA YouTube, NAPA Tech Tips, belt drive, coolant hose system, fuel delivery systems, thermostats, hydraulics, heat exchangers, water pumps, temperature control, automotive cooling and heating products" /><link href="/assets/NAPA/css/shared-styles.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/NAPA/css/home-styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/assets/NAPA/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="/assets/NAPA/js/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="/assets/NAPA/js/jquery.bxSlider-v3.js"></script>
+    <script type="text/javascript" src="/assets/NAPA/js/css_browser_selector.js"></script>
+    <script type="text/javascript" src="/assets/NAPA/js/clear-replace.js"></script>
+    <script type="text/javascript" src="/assets/NAPA/js/lib.js"></script>
+    <script type="text/javascript" src="/assets/NAPA/js/lib-home.js"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30816843-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <a href="http://www.napabeltshose.com" id="logo">
+            <img src="../../../assets/NAPA/images/napa-logo.jpg" alt="Napa Heating/Cooling Group" /></a>
+        <!--Utility Navigation-->
+        <!-- TopNavigation control rendered here -->
+        
+
+<script type="text/javascript">
+    function doClear(inputField) {
+        if (inputField.value == inputField.defaultValue) {
+            inputField.value = "";
+            inputField.style.color = "black";
+        }
+    }
+    function invalidcharscheck() {
+        var searchID = document.getElementById('txtSearch');
+        var searchValue = searchID.value;
+
+        var count = 0;
+        var iChars = "!@#$%^&*()+=[]\\\';,/{}|\":<>?";
+        for (var i = 0; i < searchValue.length; i++) {
+            if (iChars.indexOf(searchValue.charAt(i)) != -1) {
+                count = count + 1;
+            }
+
+        }
+
+        if (count >= 1) {
+            alert("Your search has some invalid characters\n Please search again");
+            document.getElementById("txtSearch").value = '';
+            document.getElementById("txtSearch").focus();
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+</script>
+<div id="utilityNavWrap" class="clearfix">
+    <div id="utilityNav">
+        <form action="http://cms.gates.com/NAPA/NAPA_Home.aspx" method="post" onsubmit="invalidcharscheck()">
+        <ul>
+            <li class="noBorderUtility"><a href="/part-finder">Part Finders</a></li>
+            <li><a href="/training">Training</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/get-napa-updates">Get NAPA Updates</a></li>
+            <li class="noBorderUtility">
+                <input type="text" id="txtSearch" class="search" name="query" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'search':this.value;" value="search" /></li>
+            <li class="noBorderUtility">
+                
+                <input type="submit" class="searchBtn" value="Go!" name="go">
+            </li>
+        </ul>
+        </form>
+    </div>
+</div>
+<br class="brclear" />
+
+        <!--END Utility Navigation-->
+        <!--Top Navigation-->
+        <!-- MainNavigation control rendered here -->
+        
+    <script language="JavaScript" type="text/javascript">
+        /*These three functions are used for Highlited Navigation*/
+
+        function extractPageName(hrefString) {
+            var arr = hrefString.split('/');
+            return (arr.length < 2) ? hrefString : arr[arr.length - 2].toLowerCase() + arr[arr.length - 1].toLowerCase();
+        }
+        function setActiveMenu(arr, crtPage) {
+            arrnew = arr;   
+            for (var i = 0; i < arr.length; i++) {
+                var ParentName;
+                var arr1 = arr[i].href.split('/');
+                
+                if (arr1.length == 8) {
+                    ParentName = arr1;
+                }
+                var myFile = extractPageName(arr[i].href).split('.');
+                var link1 = crtPage.split('.');
+                if (myFile[0] == link1[0])
+                {
+                    if (arr[i].parentNode.tagName == "LI") {
+                        if (arr1.length == 8) {
+                            arr[i].className = "topnavSelected";
+                            break;
+                        }
+                        else if (arr1.length == 9) {
+                            for (var j = 0; j < arrnew.length; j++) {
+                                var arrj = arrnew[j].href.split('/')
+                                if (ParentName[7] == arrj[7]) {
+                                    arrnew[j].className = "topnavSelected";
+                                    break;
+                                }
+                            }
+                            break;
+                        }   
+                    }                   
+
+                }
+            }
+        }
+
+        function setPage() {
+            hrefString = document.location.href ? document.location.href : document.location;
+
+            if (document.getElementById("topnav") != null)
+                setActiveMenu(document.getElementById("topnav").getElementsByTagName("a"), extractPageName(hrefString));
+        }
+        window.onload = function () {
+            setPage();
+        }
+        /* End of Highlited nevigation functionality */
+</script>
+
+
+<div id="topNavWrap">
+    <ul id="topnav">
+        <!--Header Navigation-->
+        
+                
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_0" class="topnavLink" href="http://napabeltshose.com/belt-drive-systems.aspx">Belt Drive Systems</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_0" href="http://napabeltshose.com/belt-drive-systems/automotive-belts.aspx">Automotive Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_1" href="http://napabeltshose.com/belt-drive-systems/recreational-belts.aspx">Recreational Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_2" href="http://napabeltshose.com/belt-drive-systems/serpentine-belts.aspx">Serpentine Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_3" href="http://napabeltshose.com/belt-drive-systems/timing-belts-and-kits.aspx">Timing Belts and Kits</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_4" href="http://napabeltshose.com/belt-drive-systems/industrial-belts.aspx">Industrial Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_5" href="http://napabeltshose.com/belt-drive-systems/tensioners.aspx">Tensioners</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_6" href="http://napabeltshose.com/belt-drive-systems/adps.aspx">ADPs</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_7" href="http://napabeltshose.com/belt-drive-systems/farm-and-ag-belts.aspx">Farm & Ag Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_0_LstNAPAChildLinks_8" href="http://napabeltshose.com/belt-drive-systems/premium-xl-vbelts.aspx">Premium XL V-Belts</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_1" class="topnavLink" href="http://napabeltshose.com/engine-cooling.aspx">Engine Cooling</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_1_LstNAPAChildLinks_0" href="http://napabeltshose.com/engine-cooling/automotive-hose.aspx">Automotive Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_1_LstNAPAChildLinks_1" href="http://napabeltshose.com/engine-cooling/vacuum-hose.aspx">Vacuum Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_1_LstNAPAChildLinks_2" href="http://napabeltshose.com/engine-cooling/washer-or-wiper-hose.aspx">Washer Or Wiper Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_1_LstNAPAChildLinks_3" href="http://napabeltshose.com/engine-cooling/thermostats.aspx">Thermostats</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_2" class="topnavLink" href="http://napabeltshose.com/hydraulics.aspx">Hydraulics</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_2_LstNAPAChildLinks_0" href="http://napabeltshose.com/hydraulics/couplings.aspx">Couplings</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_2_LstNAPAChildLinks_1" href="http://napabeltshose.com/hydraulics/brass.aspx">Brass</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_2_LstNAPAChildLinks_2" href="http://napabeltshose.com/hydraulics/hose.aspx">Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_2_LstNAPAChildLinks_3" href="http://napabeltshose.com/hydraulics/equipment.aspx">Equipment</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_3" class="topnavLink" href="http://napabeltshose.com/heat-exchangers.aspx">Heat Exchangers</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_3_LstNAPAChildLinks_0" href="http://napabeltshose.com/heat-exchangers/radiators.aspx">Radiators</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_3_LstNAPAChildLinks_1" href="http://napabeltshose.com/heat-exchangers/condensers.aspx">Condensers</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_3_LstNAPAChildLinks_2" href="http://napabeltshose.com/heat-exchangers/heater-cores.aspx">Heater Cores</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_4" class="topnavLink" href="http://napabeltshose.com/water-pumps.aspx">Water Pumps</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_4_LstNAPAChildLinks_0" href="http://napabeltshose.com/water-pumps/automotive-pumps.aspx">Automotive Pumps</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_4_LstNAPAChildLinks_1" href="http://napabeltshose.com/water-pumps/powerclean.aspx">POWERCLEAN™</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_5" class="topnavLink" href="http://napabeltshose.com/temperature-control.aspx">Temperature Control</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_5_LstNAPAChildLinks_0" href="http://napabeltshose.com/temperature-control/compressors.aspx">Compressors</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_5_LstNAPAChildLinks_1" href="http://napabeltshose.com/temperature-control/ac-system-parts.aspx">AC System Parts</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_6" class="topnavLink" href="http://napabeltshose.com/fuel-delivery-systems.aspx">Fuel Delivery Systems</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_6_LstNAPAChildLinks_0" href="http://napabeltshose.com/fuel-delivery-systems/barricade-hose.aspx">Barricade Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_6_LstNAPAChildLinks_1" href="http://napabeltshose.com/fuel-delivery-systems/filler-necks.aspx">Filler Necks</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_6_LstNAPAChildLinks_2" href="http://napabeltshose.com/fuel-delivery-systems/fuel-tanks.aspx">Fuel Tanks</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_6_LstNAPAChildLinks_3" href="http://napabeltshose.com/fuel-delivery-systems/oil-pans.aspx">Oil Pans</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_6_LstNAPAChildLinks_4" href="http://napabeltshose.com/fuel-delivery-systems/sending-units.aspx">Sending Units</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_6_LstNAPAChildLinks_5" href="http://napabeltshose.com/fuel-delivery-systems/submersible-hose.aspx">Submersible Hose</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+                
+                <li>
+                   
+                    <a id="plmainnavigation_0_LstNavigation_LstNAPALinks_7" class="topnavLink" href="http://napabeltshose.com/heavy-duty.aspx">Heavy Duty</a>
+                <div class="sub" id="SubNav">
+                    <ul>
+                    <!--Child Navigation-->
+                        
+                                
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_0" href="http://napabeltshose.com/heavy-duty/hd-belts.aspx">HD Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_1" href="http://napabeltshose.com/heavy-duty/fleetrunner-belts.aspx">FleetRunner Belts</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_2" href="http://napabeltshose.com/heavy-duty/hd-tensioners.aspx">HD Tensioners</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_3" href="http://napabeltshose.com/heavy-duty/hd-hose.aspx">HD Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_4" href="http://napabeltshose.com/heavy-duty/radiators.aspx">HD Radiators</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_5" href="http://napabeltshose.com/heavy-duty/silicone-hose.aspx">Silicone Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_6" href="http://napabeltshose.com/heavy-duty/weir-stat-thermostats.aspx">Weir Stat Thermostats</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_7" href="http://napabeltshose.com/heavy-duty/hd-heat-exchangers.aspx">HD Heat Exchangers</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_8" href="http://napabeltshose.com/heavy-duty/hd-water-pumps.aspx">HD Water Pumps</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_9" href="http://napabeltshose.com/heavy-duty/hd-temperature-control.aspx">HD Temperature Control</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_10" href="http://napabeltshose.com/heavy-duty/def-hose.aspx">DEF Hose</a>
+
+                                </li>
+                            
+                                <li>
+                                    
+                                    <a id="plmainnavigation_0_LstNavigation_LstChildNavigation_7_LstNAPAChildLinks_11" href="http://napabeltshose.com/heavy-duty/brake-line-abrasion-shields.aspx">Brake Line Abrasion Shields</a>
+
+                                </li>
+                            
+                            
+                    </ul>
+                </div>
+                </li>
+            
+            
+    </ul>
+</div>
+
+        <!--END Top Navigation-->
+        <!--Mast-->
+        <!-- Banner control rendered here -->
+        
+<div id="mast">
+    <img src="~/media/NAPA/Images/New-main.ashx" alt="New-main" width="932" height="274" />
+    <div id="featuredProduct">
+        <p class="heading2">
+            Featured Products
+        </p>
+        <!--Featured Slider-->
+        <ul id="featuredslides">
+            <!--Slider Image & Content-->
+            
+                    
+                    <li>
+                        <div class="content">
+                            <p class="heading3">
+                                Accessory Belt Drive System Display
+                            </p>
+                            <a target="_blank" href="/~/media/NAPA/Documents/39434-3 Gates_NAPA-ABDS Selling Tips Sheet-LR.ashx">
+                                <img src="~/media/NAPA/Images/featured-product-abds-home.ashx" alt="Accessory Belt Drive System Display" width="338" height="71" />
+                            </a>
+                            <p>
+                                Show your automotive parts customers how the ABDS works. This display identifies the various components and increases confidence in your service recommendations. <a href="http://napabeltshose.com/~/media/NAPA/Documents/39434-3%20Gates_NAPA-ABDS%20Selling%20Tips%20Sheet-LR.ashx" target="_blank">Learn More</a>
+                            </p>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </li>
+                
+                    <li>
+                        <div class="content">
+                            <p class="heading3">
+                                POWERCLEAN<sup>™</sup> Flush Tool Kit
+                            </p>
+                            <a target="_blank" href="http://napabeltshose.com/water-pumps/powerclean.aspx">
+                                <img src="~/media/NAPA/Images/featured-product-powerclean-home.ashx" alt="POWERCLEAN™ Flush Tool Kit" width="338" height="71" />
+                            </a>
+                            <p>
+                                Discover a superior way to flush engine cooling systems completely & thoroughly. <a href="http://napabeltshose.com/NAPA/Navigation/Water Pumps/POWERCLEAN" target="_blank">Learn More. </a> <a href="http://napabeltshose.com/~/media/NAPA/Flyers/PowercleanTestimonial.ashx"target="_blank">See what customers are saying.</a>
+                            </p>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </li>
+                
+                    <li>
+                        <div class="content">
+                            <p class="heading3">
+                                Timing Belt Display
+                            </p>
+                            <a target="_blank" href="/~/media/NAPA/Documents/NAPA Timing Disp Promo.ashx">
+                                <img src="~/media/NAPA/Images/featured-product-timing-home.ashx" alt="Timing Belt Display" width="338" height="71" />
+                            </a>
+                            <p>
+                                Educate your automotive customers on the importance of the timing system's parts and how component replacement can save big repair expenses down the road. <a href="http://napabeltshose.com/~/media/napa/documents/NAPA%20Timing%20Disp%20Promo.ashx" target="_blank">Learn More</a>
+                            </p>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </li>
+                
+                
+            <!--END Slider Image & Content-->
+        </ul>
+        <!--END Featured Slider-->
+    </div>
+</div>
+
+        <div id="mastBottom">
+        </div>
+        <!--END Mast-->
+        <!--columnContainer-->
+        <div id="columnContainer" class="clearfix">
+            <!-- Offers control rendered here -->
+            
+<!--Bucckets-->
+<div id="buckkets" class="clearfix">
+    <!--Callout Bucckets-->
+    
+            
+            <div class="bucketCallout">
+                <a id="ploffers_0_LstOffers_LstNAPAOfferLinks_0" href="http://napabeltshose.com/NAPA/NAPA_PartFinders" target="_blank">
+                    <img src="/assets/NAPA/images/callout-btn-arrow.jpg" class="imgR" alt="" />
+                </a>
+                <p class="heading4">
+                    Parts Locator/VIN Decoder
+                </p>
+                Use our extensive online auto part catalog or automotive VIN decoder to find the replacement car parts you need. <a href="http://napabeltshose.com/part-finder.aspx" target="_blank">Find Parts</a>
+            </div>
+        
+            <div class="bucketCallout">
+                <a id="ploffers_0_LstOffers_LstNAPAOfferLinks_1" href="http://napabeltshose.com/NAPA/NAPA_Resources" target="_blank">
+                    <img src="/assets/NAPA/images/callout-btn-arrow.jpg" class="imgR" alt="" />
+                </a>
+                <p class="heading4">
+                    Online Automotive Replacement Parts Catalog
+                </p>
+                Find the replacement auto parts you need. Search by application, interchange or part number. <a href="http://napabeltshose.com/resources.aspx" target="_blank">Use the Catalog</a>
+            </div>
+        
+            <div class="bucketCallout">
+                <a id="ploffers_0_LstOffers_LstNAPAOfferLinks_2" href="http://napabeltshose.com/NAPA/NAPA_Training.aspx" target="_blank">
+                    <img src="/assets/NAPA/images/callout-btn-arrow.jpg" class="imgR" alt="" />
+                </a>
+                <p class="heading4">
+                    Tech Tips
+                </p>
+                Looking for installation tips or automotive repair advice? Search our expansive list of technical resources.  <a href="http://napabeltshose.com/training.aspx">Find Tech Tips</a>
+            </div>
+        
+        
+    <!--END Callout Bucckets-->
+</div>
+
+            <!-- MainContent control rendered here -->
+            
+<div id="leftColumn">
+    <h1>
+       Look no further than NAPA Heating/Cooling as your one and only resource.
+    </h1>
+    <p>Look no further than NAPA Heating/Cooling as your one and only auto part resource. </p>
+<p></p>
+<div class="page" title="Page 1">
+<div class="layoutArea">
+<div class="column">
+<p>NAPA is the leading supplier of top quality heating and cooling parts for automotive and industrial applications. Our goal is to surpass the industry standard and consistently provide the most reliable car parts on the market, from belt drive, coolant hose and fuel delivery systems to thermostats, heat exchangers, air conditioning parts and water pumps. </p>
+</div>
+</div>
+</div>
+<div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<p>Replacement parts are necessary for every vehicle. Get the service life and performance you expect, and avoid warranties and costly comebacks when you choose NAPA Heating/Cooling products. </p>
+</div>
+</div>
+</div>
+<div id="rightColumn">
+<p></p>
+</div>
+</div>
+        </div>
+        <!--END columnContainer-->
+        <div id="columnBottom">
+        </div>
+        <!--footer-->
+        <!-- Footer control rendered here -->
+        
+<div id="footer">
+    <ul>
+        
+        <li>&copy; 1999-<span id="plfooter_0_CurrentYear">2013</span>. The Gates Corporation. All rights reserved.</li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms-of-use">Terms of Use</a></li>
+        <li><a href="/sitemap">Sitemap</a></li>
+    </ul>
+</div>
+        <!--END footer-->
+    </div>
+</body>
+</html>

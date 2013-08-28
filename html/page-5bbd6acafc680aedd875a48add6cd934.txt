@@ -1,0 +1,770 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Vehicle & Individual Plans for Roadside Assistance Services - Best Roadside</title> 
+<meta name="keywords" content="roadside assistance, roadside assistance services, vehicle plan, emergency roadside assistance, fuel delivery, flat tire service, concierge service" /> 
+<meta name="description" content="Details and Benefits of all emergency roadside assistance like fuel delivery, tow service, flat tire services, lock out service, concierge service provided in Vehicle and Individual plans." /> 
+
+<style type="text/css">
+table.background { background: url("http://www.bestroadsideservice.com/images/vehicle-service-larger.jpg") no-repeat; }
+</style>
+<style type="text/css">
+<!--
+.style10 {font-weight: bold}
+-->
+</style><script src="jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+var timeout         = 500;
+
+var closetimer		= 0;
+
+var ddmenuitem      = 0;
+
+
+
+function jsddm_open()
+
+{	jsddm_canceltimer();
+
+	jsddm_close();
+
+	ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+
+
+function jsddm_close()
+
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+
+
+function jsddm_timer()
+
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+
+
+function jsddm_canceltimer()
+
+{	if(closetimer)
+
+	{	window.clearTimeout(closetimer);
+
+		closetimer = null;}}
+
+
+
+$(document).ready(function()
+
+{	$('#jsddm > li').bind('mouseover', jsddm_open);
+
+	$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+
+
+document.onclick = jsddm_close;
+
+</script>
+
+
+
+<head>
+
+<style type="text/css">
+
+<!--
+
+.style8 {color: #999999}
+
+-->
+
+</style>
+
+<style type="text/css">
+
+<!--
+
+.style9 {color: #666666}
+
+-->
+
+</style>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.0.css" />
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.0.pack.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function () {  
+
+	
+
+	$('#submit').click(function(){
+
+	  	$.post("quote-submit.php", $('#getafreequote').serialize(), function(data){
+
+	    alert(data);
+
+	  });
+
+	});
+
+
+
+	$('#fancybox-box').fancybox();
+
+	$("#tab-container").html($('#tab-content1').html());
+
+
+
+
+
+    $('#dropdown1').hover( 
+
+         function () {  
+
+            
+
+             $('#dropdown1 li a.parent').addClass('hover');  
+
+             $('#dropdown1 ul#child1').show();  
+
+                  
+
+         },  
+
+           
+
+         function () {
+
+             $('#dropdown1 li a.parent').removeClass('hover');
+
+            $('#dropdown1 ul#child1').hide();  
+
+                   
+
+        }  
+
+           
+
+     );  
+
+     
+
+    $('#dropdown2').hover( 
+
+         function () {  
+
+            
+
+             $('#dropdown2 li a.parent').addClass('hover');  
+
+             $('#dropdown2 ul#child2').show();  
+
+                  
+
+         },  
+
+           
+
+         function () {
+
+            $('#dropdown2 li a.parent').removeClass('hover');
+
+            $('#dropdown2 ul#child2').hide();  
+
+                   
+
+        }  
+
+           
+
+     );
+
+	 
+
+    $('#dropdown3').hover( 
+
+         function () {  
+
+            
+
+             $('#dropdown3 li a.parent').addClass('hover');  
+
+             $('#dropdown3 ul#child3').show();  
+
+                  
+
+         },  
+
+           
+
+         function () {
+
+             $('#dropdown3 li a.parent').removeClass('hover');
+
+            $('#dropdown3 ul#child3').hide();  
+
+                   
+
+        }  
+
+           
+
+     );  
+
+	 
+
+    $('#dropdown4').hover( 
+
+         function () {  
+
+            
+
+             $('#dropdown4 li a.parent').addClass('hover');  
+
+             $('#dropdown4 ul#child4').show();  
+
+                  
+
+         },  
+
+           
+
+         function () {
+
+             $('#dropdown4 li a.parent').removeClass('hover');
+
+            $('#dropdown4 ul#child4').hide();  
+
+                   
+
+        }  
+
+           
+
+     );  
+
+     
+
+     function tabcolor(tab){
+
+     	$('.tab1').css("background", "#336699");
+
+     	$('.tab2').css("background", "#336699");
+
+     	$('.tab3').css("background", "#336699");
+
+     	$('.tab4').css("background", "#336699");
+
+     	$('.tab5').css("background", "#336699");
+
+     	$('.tab6').css("background", "#336699");
+
+     	$('.tab7').css("background", "#336699");
+
+     	$(tab).css("background", "#003366");
+
+     }
+
+     
+
+     tabcolor('.tab1');
+
+     
+
+     $('.tab1').click(function(){
+
+     	$("#tab-container").html($('#tab-content1').html());
+
+     	tabcolor('.tab1');
+
+     });
+
+     
+
+     $('.tab2').click(function(){
+
+     	$("#tab-container").html($('#tab-content2').html());
+
+     	tabcolor('.tab2');
+
+     });
+
+
+
+     $('.tab3').click(function(){
+
+     	$("#tab-container").html($('#tab-content3').html());
+
+     	tabcolor('.tab3');
+
+     });
+
+
+
+     $('.tab4').click(function(){
+
+     	$("#tab-container").html($('#tab-content4').html());
+
+     	tabcolor('.tab4');
+
+     });
+
+
+
+     $('.tab5').click(function(){
+
+     	$("#tab-container").html($('#tab-content5').html());
+
+     	tabcolor('.tab5');
+
+     });
+
+     
+
+     $('.tab6').click(function(){
+
+     	$("#tab-container").html($('#tab-content6').html());
+
+     	tabcolor('.tab6');
+
+     });
+
+     
+
+     $('.tab7').click(function(){
+
+     	$("#tab-container").html($('#tab-content7').html());
+
+     	tabcolor('.tab7');
+
+     });
+
+
+
+});  
+
+
+
+
+
+</script>
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+<div id="big-black-bar"> </div>
+
+
+
+<div id="wrapper">
+
+
+
+<div id="header">
+
+<a href="index.shtml" id="header-link"> </a>
+
+
+
+	<div id="header1">
+
+    	<div id="header1-links">
+
+      <br>
+
+      	<ul>
+
+        	<!--<li><a href="/">home</a></li>-->
+
+        	<li><a href="http://www.bestroadsideservice.com/blog/">Blog</a></li>
+
+        	<!--<li><a href="contactus.php">contact</a></li>-->
+
+        	<li id="last-header1-link"><a href="http://bestroadside.com/amember/member.php">Login</a></li>
+
+        	
+
+		</ul>
+
+	</div>
+
+  	</div>
+
+
+
+</div>
+
+<div id="main-index">
+
+
+
+  <div id="main-container">
+
+
+
+<ul id="jsddm">
+
+<li><div align="center"><a href="/">Home</a></div></li>
+
+   
+
+<li><div align="center"><a href="vehicle-roadside-assistance-service-details.shtml">Plan Details</a>
+
+<ul>
+
+<li>
+
+<div id="vehicle-plan-tab" align="center"><a href="http://www.bestroadsideservice.com/comparison.shtml">Vehicle Plan Comparison</a></div>
+
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+
+
+<li><div align="center"><a href="roadside-assistance-business-solutions.shtml">Business Solutions</a></div></li>  
+
+<li><div align="center"><a href="commercial-vehicle-roadside-assistance.shtml">Commercial</a></div></li>
+
+    <li>
+
+      <div align="center"><a href="ourfaqs">FAQ</a></div>
+
+    </li>
+
+    <li>
+
+      <div align="center"><a href="contactus.php">Contact</a></div>
+
+    </li>
+
+    
+
+    
+
+</ul>
+
+
+
+
+
+
+<p>&nbsp;</p>
+
+     
+
+	<div id="welcome">
+	
+	 <div><img alt="road" width="570" src="http://www.bestroadsideservice.com/images/vehicle-head-large.jpg">
+</div>
+
+ 
+      <div id="vehicle-plan-larger">
+      
+<table class="background" cellspacing="0" cellpadding="0" width="570" height="480" border="1">
+
+<tr>
+<td width="276" height="25"><p></p></td>
+<td width="140" align="center"><p><b>Vehicle Plan</b></p></td>
+<td width="151" align="center"><p><b>Individual Plan</b></p></td>
+</tr>
+
+  <td>Yearly Cost of Membership</td>
+<td align="center"><p>$65.00</p></td>
+<td align="center"><p>Starts at $84.95</p></td>
+</tr>
+<tr>
+<td><strong style="font-weight: 400">Towing up to 75 miles</strong></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+
+<tr>
+<td><strong style="font-weight: 400">Lockout/Lost Key Service up to $100.00</strong></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+
+<tr>
+<td><strong style="font-weight: 400">Jumpstart Service</strong></td>
+<td align="center" ><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+<td align="center" ><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+<tr>
+  <td><strong style="font-weight: 400">Flat Tire Service</strong></td>
+  <td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+  <td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+<tr>
+  <td><strong style="font-weight: 400">Fuel Delivery (3 gallons included free!)</strong></td>
+  <td class="section_start" align="center" ><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+  <td class="section_start" align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+<tr>
+<td><strong style="font-weight: 400">Personal Assistance</strong></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+<tr>
+<td><strong style="font-weight: 400">Trip and Routing Service</strong></td>
+<td align="center" ><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></td>
+<td align="center" ><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></td>
+</tr>
+
+<td><strong style="font-weight: 400">Unlimited 24 Hour Concierge Calls</strong></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+<td align="center"><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+<tr>
+<td><strong style="font-weight: 400">Hotel and Travel Discounts</strong></td>
+<td align="center" ><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+<td align="center" ><p><img src="images/greenarrow-small.gif" alt="yes" width="20" height="19" border="0" align="center" /></p></td>
+</tr>
+<tr>
+<td><strong style="font-weight: 400">Service Calls per Year</strong></td>
+<td align="center"><p>6</p></td>
+<td align="center"><p>Ind. Plan-4 service calls<br>
+All other plans-6 service calls
+</p></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td align="center">
+<p align="center"><b><a href="https://bestroadside.com/amember/signup.php?price_group=-3">Choose This Plan</a></b></p>
+
+</td>
+<td align="center">
+<p align="center"><b><a href="https://bestroadside.com/amember/signup.php?price_group=-3">Choose This Plan</a></b></p>
+
+	</td>
+</tr>
+	</table>        </div>
+<br>
+<p align="justify">&nbsp;</p>
+
+<h3>Service Center Details and Benefits</h3>
+		<p><font color="#008000"><b>=&gt;</b></font> <b>Vehicle Plans</b> - follow 
+		the vehicle regardless of who is driving.</p>
+		<p><br>
+		<font color="#008000"><b>=&gt;</b></font> <b>Individual Plans</b> - follow 
+		the person regardless of the vehicle they are in. <br>
+&nbsp;</p>
+		<p><strong>Customer Satisfaction</strong></p>
+<ul>
+  <li>All calls answered in the United states - you will never be transferred overseas nor will you ever get voicemail.</li>
+  <li>We maintain an average 30 minute response time nationwide from when you call the dispatch center to when help arrives.</li>
+  <li>All customer service professionals have a minimum of 3 years' experience.</li>
+	<li>We support English, Spanish and French speaking customers.</li>
+	<li>Our services are available 24 hours per day, 365 days a year.</li>
+	<li>We donât use your address ( email or personal) to send you junk mail like other companies do.</li>
+</ul>
+<p align="justify"><strong>24 Hour Emergency Towing Service: </strong> Best Roadside Service operates a 24 Hour emergency tow service when your vehicle breaks down or if you are stranded on the road due to a mechanical issue. If you have the individual plan, our tow service will cover you in any vehicle you are driving or riding in. If you have the vehicle plan, our tow service will cover the vehicle or motorcycle regardless of who is driving.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify">Towing is for roadside assistance emergencies only. The plan tows up to 75 miles, to the nearest repair facility. Service does not apply to previously disable vehicles and there is only one tow per disablement.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"> <strong>24 Hour Battery Jumpstart Assistance:</strong> If your battery goes dead or fails, we will send a technician to jumpstart the covered vehicle.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong>24 Hours Flat Tire Repair Service:</strong> Best Roadside Service provides urgent roadside flat tire service for covered vehicles so you are never stranded by the side of the road no matter day or night. Just one phone call and we will send a technician to install a drivable spare on the vehicle, get you back on the road again and then the member can drive safely to get the flat tire repaired. It is subscribers responsibility to have a properly inflated, working spare with their vehicle at all times. </p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong>24 Hour Lockout Service:</strong> Should you get locked out of your vehicle, we will send a technician with manufacturer approved tools to get you back into your vehicle and on the road again. Lock out service is 24 hours a day and the coverage is up to $100 per occurrence.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong> </strong><strong>24 Hour Lost Key Service:</strong> If you lose your keys to the covered vehicle, Best Roadside Service allows up to $100 reimbursement for the fabrication of a temporary key. This lost key service is only available for covered vehicles that have a key system that can be duplicated by a certified locksmith.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong>24 Hour Fuel Delivery:</strong> If your covered vehicle should run out of gasoline, we will dispatch a service technician to deliver fuel to get you back on the road again. Our 24 hour fuel delivery service includes 3 gallons of fuel delivered to you free of cost.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><b>24 Hour Winching/Extrication:</b> Entitles you up to $50.00 maximum benefit to be used if your vehicle needs to be extracted/winched out. 
+Vehicle must not be more than 15 feet from a regularly maintained roadway.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong>24 Hour Emergency Personal Assistance:</strong> Our customer service and support team, based in the United States, is always here to assist you no matter what your needs are.  If you need messages relayed to loved ones during any weather related or roadside emergency, our staff will send and receive messages for you. We can make calls for you on your behalf and take the stress away from any roadside emergency. If you need us, we will be there for you-24 hours, 365 days a year!</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"> <strong>24 Hour Trip and Routing Service:</strong> Your membership includes customized trip planning and routing services. We can help you get where you want to go to reach your destination safely and efficiently.  If you ever get lost, just call our emergency roadside assistance hotline and we can give you turn âby- turn directions, 24 hours a day, any holiday and 365 days a year!</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong>24 Hours Concierge Service:</strong> When you are traveling, it can be difficult to manage car rental service or book a hotel room. We offer 24 hour concierge service and make sure that all hotel and rent-a-car arrangements are made in time.Whatever you need, you can call us. Thatâs why we are hereâto help you.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><strong>Discounts for Travel and Hotel: </strong>Save on travel arrangements and trips! We offer discount programs and attractive travel discounts for our members.  We also offer daily discount packages for vacations.</p>
+		<p>&nbsp;</p>
+		<p><strong>Service Limitations</strong></p>
+<ul>
+	<li>Individual plans have 4 calls per plan; all others have 6 calls per plan.</li>
+	<li>On couple/family plans, members must reside at the same address.</li>
+	<li>Subscriber must be with the disabled vehicle in order to receive service. (However if you cannot remain with the vehicle for safety reasons, we will attempt to provide service).</li>
+	<li>Service plan may be transferred to a different vehicle in the case of the sale of the vehicle or the salvage of the vehicle.  In both cases proper documentation is required in order to transfer service to a newly purchased vehicle.  Member of record must send email to 
+	<a href="mailto:info@bestroadside.com">info@bestroadside.com</a> and advise us of new  and old vehicle information. All transfers require a 7 calendar day waiting period before service is once again active.</li>
+	<li>Service cannot be guaranteed on roads that are not regularly maintained including private property.</li>
+	<li>Service does not cover installation or removal of snow tires, chains nor dismounting, rotating or repairing tires. Flat service covers swapping out flat tire for drivable spare tire only. Subscriber must have a drivable spare with vehicle or trailer to receive the flat tire service.</li>
+	<li>Service does not cover vehicles greater than 12,500 LBS Gross Vehicle Weight (GVW).</li>
+	<li>Service does not cover vehicle storage charges, cost of parts, installation, products, materials, impounding and additional labor related to towing.</li>
+	<li>Service cannot be provided to vehicles with expired safety inspection, license plate and or emission sticker where required by law OR to vehicles not legally registered.</li>
+	<li>Couple/Family plans share the available service calls.</li>
+	<li>This plan is for consumer/personal use only. No commercial vehicles are covered under these plans. If member/members are/is riding and/or driving a commercial vehicle (any vehicle used for company/business/commercial use-service will be denied).</li>
+	<li>Service cannot be provided to impounded vehicles.</li>
+	<li>Service will be refused if the vehicle is not in a safe condition to be towed.</li>
+	<li>Service cannot be provided in areas not regularly traveled such as vacant lots, beaches, open fields or other areas that would be hazardous for service.</li>
+	<li>Delivery of repaired tires is not included in service.</li>
+	<li>Service does not include installation of ANY parts other than replacing a flat tire with a usable spare.</li>
+	<li>Towing vehicles to a junkyard or location of disposal is not included in service.</li>
+	<li>Towing service is for emergency roadside occurrences only.</li>
+	<li>Towing or service while at an auto repair shop or service station, to another location.</li>
+	<li>Service when a vehicle is snowbound. We do not hoist, winch or shovel vehicles from unplowed areas, snow banks, snowbound driveways or curbside parking.</li>
+	<li>Towing to home is not covered.</li>
+	<li>Accident towing is not a covered benefit.<strong></strong></li>
+	<li>Refunds given on a pro-rata basis on unused, full months only, less a $10 administrative fee.  No refunds will be given if any service call was used and expenses incurred.<strong></strong></li>
+</ul>
+<p class="style11">&nbsp;</p>
+<p><strong>Emergency Toll Free Phone Number</strong>: The emergency phone number is provided upon approved membership. It is sent via email and our customer service specialists are available 24 hours per day, 365 days per year.</p>
+<p align="justify">&nbsp;</p>
+<p>Our company is owned and operated in the U.S.  All of your calls to our emergency roadside center will be answered by a person in the U.S.A.! We never route calls overseas.</p>
+<p align="justify">&nbsp;</p>
+<p>Best Roadside Service makes sure that you are not left stranded in case of a road side emergency! We provide tow truck service, fuel delivery, flat tire service and tire road service to ensure security, peace of mind and safety for you and your family while driving. We are available 24 hours a day, and our customer service is exemplary. </p>
+      </div>
+  <p align="justify">&nbsp;</p>    
+<p align="justify">&nbsp;</p>
+	<div>
+<img src="images/stockphoto4.jpg" border="0" >
+	</div>
+	
+	      <p align="justify">&nbsp;</p>
+      
+      <p align="justify">&nbsp;</p>
+    <div>
+    <img src="images/customer-service-2.jpg" height="237" width="285" />
+    <br /><br /><br /><br /><br /><br />
+    
+        <center><a title="Best Roadside Service, LLC BBB Business Review" href="http://www.bbb.org/houston/business-reviews/auto-services/best-roadside-service-llc-in-houston-tx-90029978/#bbbonlineclick"><img alt="Best Roadside Service, LLC BBB Business Review" style="border: 0;" src="http://seal-houston.bbb.org/seals/blue-seal-280-80-best-roadside-service-llc-90029978.png" /></a></center>
+
+    </div>
+    </div>
+    <div class="clear"> </div>
+	<!--<div style="width: 295px; height: 250px; float: right; font-size: 9px; margin-top: 50px;">
+<p><strong>We're Here To Help You. Call 1-866-730-7673</strong> <br />
+  <br />
+  <span class="style8 style9">Copyright 2001 - 2010 Best Roadside LLC. 
+All Rights Reserved.</span></p>
+<p class="style8">Comparisons are based on facts and figures from public information and websites posted during the month of November 2009.<br />
+  <br />
+  Roadside assistance prices and products are different when purchased directly from Best Roadside or through agents/brokers or affiliates. Prices on this page are for policies purchased directly.<br />
+  <br />
+End users are able to purchase roadside assistance directly through Best Roadside.  Best Roadside reserves all rights to approve or disapprove vehicles based on year manufactured and current mileage. Some vehicles have varying rates of reliability and therefore not all years, makes and models will have the same restrictions.</p>
+</div> -->
+<div id="roadside-services">
+  
+<hr>
+
+
+
+<!-- <div id="roadside-social">      
+  <div align="center" style="float:left;">
+  
+  
+  <table align="left" width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose VeriSign Trust Seal to promote trust online with consumers.">
+<tr>
+<td width="135" align="center" valign="top"><script type="text/javascript" src="https://trustseal.verisign.com/getseal?host_name=bestroadsideservice.com&amp;size=S&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><br />
+<a href="http://www.verisign.com/verisign-trust-seal" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT TRUST ONLINE</a></td>
+</tr>
+</table>
+
+    <img src="images/fb.gif" />
+    <img src="images/tw.gif" /> 
+    <img src="images/bbbacc.jpg" usemap="#Map" />
+    <map name="Map">
+  <area shape="rect" coords="-10,-9,201,305" href="https://www.bbb.org/online/consumer/cks.aspx?id=11003309743820" target="new">
+</map>
+      </div>
+     </div> -->
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+		<div class="clear"> </div>
+
+</div>
+	<div class="clear"> </div>
+</div>
+
+
+<div id="footer">
+
+
+	<div id="footer-links">
+	
+		<ul>
+			<li><a href="/aboutus.shtml">About Us</a></li>
+		  <li><a href="/privacypolicy.shtml">Privacy Policy</a></li>
+			<li><a href="/contactus.php">Contact</a></li>
+			<li><a href="http://bestroadside.com/amember/member.php">Login</a></li>
+		  <li><a href="/ourfaqs">FAQ</a></li>
+          <li id="last-footer-link"><a href="/sitemap.html">Sitemap</a></li>
+	  </ul>
+	</div>
+	<div class="clear"> </div>
+	<div id="footer-buttons"> </div>
+	<div class="clear"> </div>
+
+</div>
+</div>
+
+<div id="footer-img">
+
+	<p>Copyright Best Roadside Service 2013</p>
+
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20498102-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Yahoo! Web Analytics - All rights reserved -->
+<script type="text/javascript" src="http://d.yimg.com/mi/eu/ywa.js"></script>
+<script type="text/javascript">
+/*globals YWA*/
+var YWATracker = YWA.getTracker("1000354430225");
+/*
+YWATracker.setDocumentName("");
+YWATracker.setDocumentGroup("");
+*/
+YWATracker.submit();
+</script>
+<noscript>
+<div><img src="http://s.analytics.yahoo.com/p.pl?a=1000354430225&amp;js=no" width="1" height="1" alt="" /></div>
+</noscript>
+
+</body>
+</html>

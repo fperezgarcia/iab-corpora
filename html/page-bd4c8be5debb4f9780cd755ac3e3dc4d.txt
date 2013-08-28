@@ -1,0 +1,1365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<link rel="stylesheet" href="/css/main-multimedia.css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="/css/ui/ui.all.css" rel="stylesheet" type="text/css" media="screen">
+<link href="/css/superfish.css" rel="stylesheet" type="text/css" />
+<link href="/css/superfish-navbar.css" rel="stylesheet" type="text/css" />
+<link href="/css/screen.css" rel="stylesheet" type="text/css" />
+<link href="/css/galleryView.css" rel="stylesheet" type="text/css" />
+<link href="/css/multimedia.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.4.3.min.js" type="text/javascript"></script>
+<script src="/js/jquery.slideshow.lite-0.5.3.js" type="text/javascript"></script>
+<script src="/js/cufon-yui.js" type="text/javascript"></script>
+<script src="/js/cufon-replace.js" type="text/javascript"></script>
+<script src="/js/tabs.js" type="text/javascript"></script>
+<script src="/js/hoverIntent.js" type="text/javascript"></script>
+<script src="/js/superfish.js" type="text/javascript"></script>
+<script src="/js/jquery.loadmask.min.js" type="text/javascript"></script>
+<script src="/js/PollMini.js" type="text/javascript"></script>
+<script src="/js/easySlider1.7.js" type="text/javascript"></script>
+<script src="/js/jquery-galleryview-1.1/jquery.galleryview-1.1.js" type="text/javascript"></script>
+<script src="/js/jquery-galleryview-1.1/jquery.timers-1.1.2.js" type="text/javascript"></script>
+<script src="/js/jquery.galleria.js" type="text/javascript" ></script> 
+<script type="text/javascript">  jQuery(function($) { $('ul.gallery').galleria(); }); </script>
+<script src="/js/gallery-settings.js" type="text/javascript"></script>
+<script src="/js/jquery.colorbox.js" type="text/javascript"></script>
+<script src="/js/jquery-ui-1.8.6-all.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery.autofill.js"></script>
+<script type="text/javascript" src="/js/jquery.flow.1.2.auto.js"></script>
+<script type="text/javascript" src="/js/jquery.popupWindow.js"></script>
+<script type="text/javascript" src="/js/pollMiniAjax.js"></script>
+<!--<script>window.ONSWIPE_USR = 'dailyreport'</script>-->
+<!--<script src="http://assets.onswipe.com/synapse/on.js?usr=dailyreport" id="onswipe_synapse"></script>-->
+<script type="text/javascript">
+$('.colorbox').die().live('click', function() {
+  $.fn.colorbox({href:$(this).attr('href'), open:true});
+  return false;
+});
+
+$(document).ready(function() {
+	$(".colorbox").colorbox();
+	
+
+	//Multimedia tab
+	$(".media_tab").hide();
+	$("ul.media li:first").addClass("active").show(); 
+	$(".media_tab:first").show(); 
+	$("ul.media li").click(function() {
+		$("ul.media li").removeClass("active");
+		$(this).addClass("active"); 
+		$(".media_tab").hide(); 
+		var activeTab = $(this).find("a").attr("href"); 
+		$(activeTab).fadeIn(); 
+		return false;
+	});
+	
+//inner tab preview
+	$(".preview_content").hide();
+	$("ul.preview li:first").addClass("active").show();
+	$(".preview_content:first").show();
+	$("ul.preview li").click(function() {
+		$("ul.preview li").removeClass("active");
+		$(this).addClass("active");
+		$(".preview_content").hide();
+		var activeTab = $(this).find("a").attr("href");
+		$(activeTab).fadeIn();
+		return false;
+	});
+	
+//inner tab preview
+	$(".preview_content1").hide();
+	$("ul.preview1 li:first").addClass("active").show();
+	$(".preview_content1:first").show();
+	$("ul.preview1 li").click(function() {
+		$("ul.preview1 li").removeClass("active");
+		$(this).addClass("active");
+		$(".preview_content1").hide();
+		var activeTab = $(this).find("a").attr("href");
+		$(activeTab).fadeIn();
+		return false;
+	});
+});
+</script>
+
+<!--[if lt IE 7]>
+	<link href="ie_style.css" rel="stylesheet" type="text/css" />
+    <script src="/js/ie_png.js" type="text/javascript"></script>   
+    <script type="text/javascript">
+           DD_belatedPNG.fix('.slideshowlite ul li a');
+   </script>
+<![endif]-->
+<script type="text/javascript">
+$(document).ready(function(){
+		$("ul.sf-menu").superfish();
+		$('#galleryView-Stories').galleryView({
+            panel_width: 600,
+			panel_height: 400,
+			frame_width: 140,
+			frame_height: 190,
+			pause_on_hover: true,
+			fade_panels: true,
+			transition_interval: 6000 // remove this parameter to auto transition
+		});
+		
+		$(".filmstrip-frame-teaser").click(function() {
+		    //get the link href 
+		    var link = jQuery("a", this).attr('href');
+		    window.location.href = link;
+		   }); 
+	});
+</script>
+<script src="http://businessreport.advertserve.com/js/libcode1_noajax.js" type="text/javascript"></script>
+<!-- ### insert analytics code here ### -->
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1867003-3']);
+_gaq.push(['_setDomainName', '.businessreport.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- BEGIN Tynt Script -->
+<script type="text/javascript">
+if(document.location.protocol=='http:'){
+ var Tynt=Tynt||[];Tynt.push('afscwQhuer4RKnacwqm_6l');Tynt.i={"ap":"Read more from Business Report here:","w":"brbizreport","f":"businessreport"};
+ (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
+}
+</script>
+<!-- END Tynt Script -->
+</head>
+<body id="page1">
+<div id="main">
+<div id="top_ads">
+  		<div>
+
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/TOPLEADERBOARD/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+
+</div>
+<div class="last">
+
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/CUSTOMHOUSE/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+
+</div>
+
+</div>
+  <!-- header -->
+  <div id="header">
+
+    <div class="logo"><a href="/"><img src="/images/logo.jpg" alt="Baton Rouge Business Report" width="235" height="104" /></a></div>
+
+    <form method="get" id="search-form" action="/apps/pbcs.dll/search?Category=FRONTPAGE">
+			<input type="hidden" name="Category" value="businessreport" />
+				<div class="search">
+				<input type="hidden" name="SearchCategory" value="businessreport%" />
+				<input type="text" class="inp" name="crit" id="search-box" value="stories, photos, & more" onblur="if(this.value=='') this.value='stories, photos, & more'" onfocus="if(this.value =='stories, photos, & more' ) this.value=''" />
+				<input type="hidden" name="noblankcheck" value="0" />
+  			<input type="hidden" name="daterange" value="20120827,20130827" />
+  			<input type="hidden" name="BuildNavigators" value="1" />
+  			<input type="submit" value="" class="button_search" />
+			</div>
+		</form>
+
+		
+
+
+
+
+
+
+
+<script type="text/javascript">
+		function signOut() {
+				document.cookie="UserRegID=;Path=/"
+				document.cookie="PBCSSESSIONID=;Path=/"
+				document.cookie="PBCSPERMUSERID=;Path=/"
+				document.location="/"
+		}
+</script>
+<div class="other_editions"><!-- Current domain: domainsbiz -->
+		<dl>
+				<dd>
+					 
+							<a href="/section/make_us_your_homepage">Make Us Your Homepage</a>
+						
+					
+				</dd>
+				
+				<dd>
+					 
+							<a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp">Subscribe</a>
+						
+					
+
+
+
+				</dd>
+				
+
+				<dd>
+					 
+							<a href="http://try.businessreport.com/advertising">Advertising</a>
+						
+					
+				</dd>
+
+				<dd>
+					 
+							<a href="/section/businessreport1001">About Us</a>
+						
+					
+				</dd>
+
+				<dd class="last">
+					 
+							<a href="/section/businessreport1002">Contact Us</a>
+						
+					
+				</dd>
+
+
+				
+		</dl>
+</div>
+
+  	<div class="mast_social_icons">
+            <dl>
+				<dt>&nbsp;</dt>
+				<dd><a href="http://www.twitter.com/brbizreport"><img src="/images/twitter-mast-icon.jpg" alt="twitter" width="" height="" /></a></dd>
+				<dd><a href="http://www.facebook.com/businessreport"><img src="/images/facebook-mast-icon.jpg" alt="facebook" width="" height="" /></a></dd>
+				<dd><a href="/section/rss"><img src="/images/rss-mast-icon.jpg" alt="rss" width="" height="" /></a></dd>
+			</dl>
+  	</div>
+  	<div class="current_date">
+  			Tuesday,&nbsp;August&nbsp;27,&nbsp;2013
+  	</div>
+  	<div class="weather">
+
+      	      <div>
+      </div>
+      <div>
+      </div>
+
+
+		</div>
+
+    <div class="menu">
+      <div>
+        <ul class="sf-menu sf-navbar">
+					<li class="current">
+						<a href="/"><img src="/images/home-nav.png" alt="home" width="20" height="17" align="top" /></a>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport0401">Print Edition</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="/section/businessreport0401">Current Issue</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0402">Past Issues</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0403">Special Issues</a>
+							</li>
+							<li>
+								<a href="/section/lists">Lists</a>
+							</li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport02">Columnists</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=rmccollister">Rolfe McCollister</a>
+							</li>
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=sriegel">Stephanie Riegel</a>
+							</li>
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=jmaginnis">John Maginnis</a>
+							</li>
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=tcook">Tom Cook</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0205">Other</a>
+							</li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport0302">Multimedia</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="/section/businessreport0301">Video</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0302">Slideshows</a>
+							</li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="/section/enewsletters">E-newsletters</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="/section/daily-report">Daily Report</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0113">Real Estate Weekly</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0114">Polls</a>
+							</li>
+							<li>
+								<a href="/section/enewsletters">Sign Up</a>
+							</li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport05">Nominations</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="/section/businessreport0501">Business Awards and Hall of Fame</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0502">Influential Women in Business</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0503">Forty Under 40</a>
+							</li>
+							<li>
+								<a href="/section/other-nominations">Other</a>
+							</li>
+							<li>
+								<a href="/section/past-winners">Past Winners</a>
+							</li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="http://businessreport.eventbrite.com">Events</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="http://businessreport.eventbrite.com">LBI Events</a>
+							</li>
+							<li>
+								<a href="/section/events&events=Weekly-Planner">Weekly Planner</a>
+							</li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp">Circulation</a>
+						<ul class="submenu" style="display:none;">
+						  <li>
+
+						  <a href="/section/enewsletters">Enewsletter sign ups</a>
+
+						  </li>
+						  <li>
+						  	<a href="/section/newsub">New subscriptions</a>
+						  </li>
+						  <li>
+						  	<a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp">Renewals</a>
+						  </li>
+						  <li>
+						  	<a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp">Address change</a>
+						  </li>
+						  <li>
+						  	<a href="/section/lists">Purchase digital lists</a>
+						  </li>
+						  <li>
+						  	<a href="/section/reprint-request-form">Reprints</a>
+						  </li>
+						  <li>
+						  	<a href="/section/past-issues-order-form">Past / Special issues</a>
+						  </li>
+						  <li>
+						  	<a href="/section/businessreport0708">Newsstand locations</a>
+						  </li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport0801">Interact</a>
+						<ul class="submenu" style="display:none;">
+						  <li>
+						  	<a href="/section/businessreport0801">Submit news tip/idea</a>
+						  </li>
+						  <li>
+						  	<a href="/section/businessreport0802">Submit an event</a>
+						  </li>
+						  <li>
+						  	<a href="/section/businessreport0803">Submit a photo</a>
+						  </li>
+						  <li>
+						  	<a href="/section/businessreport0804">Submit a press release</a>
+						  </li>
+						  <li>
+						  	<a href="/section/businessreport0805">Write a letter to the editor</a>
+						  </li>
+						  <li>
+						  	<a href="http://votervoice.net/groups/brbr">Write public officials</a>
+						  </li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport09">Our Publications</a>
+						<ul class="submenu" style="display:none;">
+      						<li>
+								<a href="http://www.225batonrouge.com">225</a>
+							</li>
+							<li>
+								<a href="http://www.inregister.com">inRegister</a>
+							</li>
+	     	 			</ul>
+					</li>
+					<li class="current">
+						<a href="/section/businessreport1001">LBI</a>
+						<ul class="submenu" style="display:none;">
+							<li>
+								<a href="/section/businessreport1001">About us</a>
+							</li>
+							<li>
+								<a href="/section/businessreport1002">Contact us</a>
+							</li>
+							<li>
+								<a href="/section/businessreport1003">Staff directory</a>
+							</li>
+							<li>
+								<a href="/section/businessreport1004">Work for us</a>
+							</li>
+							<li>
+								<a href="/section/terms_of_use">Terms of Use</a>
+							</li>
+							<li>
+								<a href="/section/privacy_policy">Privacy Policy</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+      </div>
+    </div>
+  </div>
+  <!-- content -->
+  <!-- Breaking News -->
+  <!--<h3></h3>-->
+
+  <!-- Ad: Full width -->
+  
+  
+  <div class="full">
+  <!-- # i n c l u d e virtual="/includes/banner_ad.inc"-->
+  <script type="text/javascript">
+		if (document.avp_ready && (!document.cookie || document.cookie.indexOf('AVPDCAP=') == -1)) { 
+			avp_zone({ base: 'businessreport.advertserve.com', type: 'dynamic', zid: 484, pid: 0 });
+		}
+ </script>
+ </div>
+  <div id="content">
+    <div class="wrapper">
+        <div class="col-1">
+        <!-- Carousel -->
+        <!-- Main Image -->
+         <div class="galleryView-Stories-Wrapper">
+		<div class="galleryView-Stories" id="galleryView-Stories">
+        <div class="panel">
+		<div class="panel-image"><a href="/article/20130827/BUSINESSREPORT01/130829825/1001"><img alt="Click here to read about Taking on all comers" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829825/AR/0/AR-130829825.jpg" /></a></div> 
+    <div class="panel-overlay">
+		<div class="panel-overlay-title"><a href="/article/20130827/BUSINESSREPORT01/130829825/1001">Taking on all comers</a></div>
+		<div class="panel-overlay-text"><a href="/article/20130827/BUSINESSREPORT01/130829825/1001">To protect its empire, ESPN stays on offense</a></div>
+	</div>
+</div>	
+<div class="panel">
+		<div class="panel-image"><a href="/article/20130827/BUSINESSREPORT01/130829826/1001"><img alt="Click here to read about Beyond the horizon" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829826/AR/0/AR-130829826.jpg" /></a></div> 
+    <div class="panel-overlay">
+		<div class="panel-overlay-title"><a href="/article/20130827/BUSINESSREPORT01/130829826/1001">Beyond the horizon</a></div>
+		<div class="panel-overlay-text"><a href="/article/20130827/BUSINESSREPORT01/130829826/1001">Economists anticipate Fed will pull back in fourth quarter, poll says</a></div>
+	</div>
+</div>	
+<div class="panel">
+		<div class="panel-image"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829844" target="_blank"><img alt="Click here to read about The road ahead" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829827/AR/0/AR-130829827.jpg" /></a></div> 
+    <div class="panel-overlay">
+		<div class="panel-overlay-title"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829844" target="_blank">The road ahead</a></div>
+		<div class="panel-overlay-text"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829844" target="_blank">CATS CEO questions efficiency of councilman's proposed privately-run transit system</a></div>
+	</div>
+</div>	
+<div class="panel">
+		<div class="panel-image"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829848" target="_blank"><img alt="Click here to read about By the numbers" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829828/AR/0/AR-130829828.jpg" /></a></div> 
+    <div class="panel-overlay">
+		<div class="panel-overlay-title"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829848" target="_blank">By the numbers</a></div>
+		<div class="panel-overlay-text"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829848" target="_blank">New appraisal of Perkins Rowe shows Bally's in trouble, moving out</a></div>
+	</div>
+</div>	
+
+        <!-- Thumbnail Nav -->
+          <ul class="filmstrip">
+<li>
+	<div class="filmstrip-frame">
+		<div class="filmstrip-frame-teaser">
+			<div class="filmstrip-frame-teaser-photoframe">
+				<div class="filmstrip-frame-teaser-photoframe-thumbnail">
+					<a href="/article/20130827/BUSINESSREPORT01/130829825/1001" ></a><img alt="Click here to read about Taking on all comers" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829825/AR/0/AR-130829825.jpg&amp;MaxW=109" />
+				</div>
+			</div>
+			<div class="filmstrip-frame-teaser-title"><a href="/article/20130827/BUSINESSREPORT01/130829825/1001" ></a> Taking on all comers <span class="filmstrip-frame-teaser-text">To protect its empire, ESPN stays on offense</span></div>
+		</div>
+	</div>
+</li><li>
+	<div class="filmstrip-frame">
+		<div class="filmstrip-frame-teaser">
+			<div class="filmstrip-frame-teaser-photoframe">
+				<div class="filmstrip-frame-teaser-photoframe-thumbnail">
+					<a href="/article/20130827/BUSINESSREPORT01/130829826/1001" ></a><img alt="Click here to read about Beyond the horizon" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829826/AR/0/AR-130829826.jpg&amp;MaxW=109" />
+				</div>
+			</div>
+			<div class="filmstrip-frame-teaser-title"><a href="/article/20130827/BUSINESSREPORT01/130829826/1001" ></a> Beyond the horizon <span class="filmstrip-frame-teaser-text">Economists anticipate Fed will pull back in fourth quarter, poll says</span></div>
+		</div>
+	</div>
+</li><li>
+	<div class="filmstrip-frame">
+		<div class="filmstrip-frame-teaser">
+			<div class="filmstrip-frame-teaser-photoframe">
+				<div class="filmstrip-frame-teaser-photoframe-thumbnail">
+					<a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829844" target="_blank"></a><img alt="Click here to read about The road ahead" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829827/AR/0/AR-130829827.jpg&amp;MaxW=109" />
+				</div>
+			</div>
+			<div class="filmstrip-frame-teaser-title"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829844" target="_blank"></a> The road ahead <span class="filmstrip-frame-teaser-text">CATS CEO questions efficiency of councilman's proposed privately-run transit system</span></div>
+		</div>
+	</div>
+</li><li>
+	<div class="filmstrip-frame">
+		<div class="filmstrip-frame-teaser">
+			<div class="filmstrip-frame-teaser-photoframe">
+				<div class="filmstrip-frame-teaser-photoframe-thumbnail">
+					<a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829848" target="_blank"></a><img alt="Click here to read about By the numbers" src="/storyimage/LB/20130827/BUSINESSREPORT01/130829828/AR/0/AR-130829828.jpg&amp;MaxW=109" />
+				</div>
+			</div>
+			<div class="filmstrip-frame-teaser-title"><a href="http://www.businessreport.com/article/20130826/BUSINESSREPORT0112/130829848" target="_blank"></a> By the numbers <span class="filmstrip-frame-teaser-text">New appraisal of Perkins Rowe shows Bally's in trouble, moving out</span></div>
+		</div>
+	</div>
+</li>
+  		</ul>
+	</div>
+</div>
+
+        <!--/Carousel -->
+        <div class="colum">
+          <div class="wrapper">
+            <div class="sub_col-1">
+            <h3>News</h3> 
+            <div class="txt_indent3">	
+             <!--<h3></h3>-->
+                    <ul class="list margin20">
+          <h4><a href="/8202013/print-issue/StartUp/One_thing_leads_to_another">One thing leads to another</a></h4>
+            	   <p>As construction continues at the new Walmart Supercenter on Burbank Drive and Bluebonnet Boulevard, work crews are also busy...</p>
+          <li><a href="/8202013/print-issue/StartUp/Rising_above">Rising above</a></li>
+          <li><a href="/8202013/print-issue/StartUp/Coastal_barriers">Coastal barriers</a></li>
+          <li><a href="/8202013/print-issue/StartUp/The_gold_standard_of_service">The gold standard of service</a></li>
+          <li><a href="/8202013/print-issue/StartUp/Cars_and_cocktails">Cars and cocktails</a></li>
+          <li><a href="/8202013/print-issue/StartUp/A_60-day_reprieve">A 60-day reprieve</a></li>
+          <li><a href="/8202013/print-issue/StartUp/A_river_runs_through_it">A river runs through it</a></li>
+          <li><a href="/8202013/print-issue/StartUp/Juban_Crossing_at_the_crossroads">Juban Crossing at the crossroads</a></li>
+          </ul>
+
+            </div>
+            	<div class="margin20">
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/MEDIUMRECTANGLE03/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+</div>
+            	<div class="current_issue margin20">
+            	 <h3>Current Issue/Archives</h3>
+            	 <div class="txt_indent3">
+            	   <img src="/images/8911coverROP.jpg" alt="current-issue-home" width="" height="" />
+            	   <ul>
+            	       <li><a href="/section/businessreport0401" class="black">Current Issue</a></li>
+            	       <li><a href="/section/businessreport0708" class="black">Newsstand Locations</a></li>
+            	       <li><a href="/section/businessreport0402" class="black">Archives/Past Issues</a></li>
+            	       <li><a href="/section/businessreport0403" class="black">Special Issues</a></li>
+            	       <li>&nbsp;</li>
+            	       <li><a href="https://aspc1.newzware.com:10443/ss70v2/labiz/common/template.jsp" class="red">Subscribe/Gift Subs</a></li>
+            	       <li><a href="/section/reprint-request-form" class="red">Order Reprints</a></li>
+            	   </ul>
+            	 </div>
+                </div> <!-- end current_issue -->   
+                <div class="columns_blogs">
+            	 <h3>Columns/Blogs</h3>
+            	 <div class="txt_indent3">
+                   <!-- <img src="/images/columnists/RolfeT.jpg" alt="Rolfe McCollister" width="60" height="70" />  -->
+<div class="byline">
+    <img src="/storyimage/LB/20130819/BUSINESSREPORT0201/308199986/AR/0/AR-308199986.jpg&q=100&maxw=60&maxh=70" alt="" border="0" />
+    <h5><a href="/apps/pbcs.dll/personalia?ID=rmccollister">Rolfe McCollister</a>
+<br/>
+</h5>
+    <a href="/8202013/print-issue/Rolfe_McCollister/Trevor_s_wish">Trevor's wish</a>
+</div>
+<!-- <img src="/images/columnists/StephanieRiegel.jpg" alt="Stephanie Riegel" width="60" height="70" />  -->
+<div class="byline">
+    <img src="/storyimage/LB/20130819/BUSINESSREPORT0207/308199984/AR/0/AR-308199984.jpg&q=100&maxw=60&maxh=70" alt="" border="0" />
+    <h5><a href="/apps/pbcs.dll/personalia?ID=sriegel">Stephanie Riegel</a>
+<br/>
+</h5>
+    <a href="/8202013/print-issue/Stephanie_Riegel/Spreading_HOPE">Spreading HOPE</a>
+</div>
+<!-- <img src="/images/columnists/JohnT.jpg" alt="John Maginnis" width="60" height="70" />  -->
+<div class="byline">
+    <img src="/storyimage/LB/20130819/BUSINESSREPORT0203/308199990/AR/0/AR-308199990.jpg&q=100&maxw=60&maxh=70" alt="" border="0" />
+    <h5><a href="/apps/pbcs.dll/personalia?ID=jmaginnis">John Maginnis</a>
+<br/>
+</h5>
+    <a href="/8202013/print-issue/John_Maginnis/Candidates_want_to_be_one_of_us">Candidates want to be &#8216;one of us'</a>
+</div>
+<!-- <img src="/images/columnists/TomT.jpg" alt="Tom Cook" width="60" height="70" />  -->
+<div class="byline">
+    <img src="/storyimage/LB/20130819/BUSINESSREPORT0204/308199993/AR/0/AR-308199993.jpg&q=100&maxw=60&maxh=70" alt="" border="0" />
+    <h5><a href="/apps/pbcs.dll/personalia?ID=tcook">Tom Cook</a>
+<br/>
+</h5>
+    <a href="/8202013/print-issue/Tom_Cook/LeBlanc_heirs_buy_Burbank_property">LeBlanc heirs buy Burbank property</a>
+</div>
+<!-- Columnist > Other 
+-->
+
+              	 </div>
+                </div> <!-- end columns_blogs -->   
+            </div> <!-- end sub_col-1 -->
+            <div class="sub_col-2">
+            <!-- Daily Headlines -->
+           <!--20130827211441-->
+<div class="galleryView-Narrow-Content">
+	<!-- Saxotech Support MCD
+  <!--  <div class="header"><a href="/section/daily-report"><img src="/images/DailyReportAMlogo.jpg" alt="daily-report-home" width="289" height="64" /></a>
+    <p><a href="/section/daily-report&date=20130826" >Monday</a> | <a href="/section/daily-report&date=20130827" class="active">Tuesday</a> | <a href="/section/daily-report&date=20130828" >Wednesday</a> | <a href="/section/daily-report&date=20130829" >Thursday</a> | <a href="/section/daily-report&date=20130830" >Friday</a></p>
+    </div>-->
+			<div class="galleryView-Narrow-Content">
+    	<div class="header"><img src="/images/DailyReportPMlogo.jpg" alt="daily-report-home" width="289" height="64" />
+    	<p><a href="/section/daily-reportPM&date=20130826" >Monday</a> | <a href="/section/daily-reportPM&date=20130827" >Tuesday</a> | <a href="/section/daily-reportPM&date=20130828" >Wednesday</a> | <a href="/section/daily-reportPM&date=20130829" >Thursday</a> | <a href="/section/daily-reportPM&date=20130830" >Friday</a></p>
+    	</div>
+    <ul>
+        <!-- setting global taxonomy variable for AM/PM Functionality based on newest story -->
+		<li><a href="/section/daily-reportPM">Councilman says EBR can attract private transit system without dedicated tax</a></li>
+<!-- setting global taxonomy variable for AM/PM Functionality based on newest story -->
+		<li><a href="/section/daily-reportPM">Costco land deal could close as soon as today</a></li>
+<!-- setting global taxonomy variable for AM/PM Functionality based on newest story -->
+		<li><a href="/section/daily-reportPM">La. providing nearly $3M incentive package on Dow's $1B investment in Plaquemine</a></li>
+<!-- setting global taxonomy variable for AM/PM Functionality based on newest story -->
+		<li><a href="/section/daily-reportPM">Maginnis: Vitter's friends thinking ahead to 2015 for him</a></li>
+<!-- setting global taxonomy variable for AM/PM Functionality based on newest story -->
+		<li><a href="/section/daily-reportPM">Vitter says 'world community' may need to act in Syria</a></li>
+    </ul>
+     		<p align="center"><a href="/section/daily-reportAM"><img src="/images/read-am-home.jpg" alt="Read-AM-Home" width="" height="" /></a><br />
+        		<a href="#" class="red">SIGN UP</a> FOR DAILY REPORT<br/>AND OTHER ENEWSLETTERS<br/>DELIVERED TO YOUR INBOX<br/>
+        		<!-- <form style="text-align:center" accept-charset="UTF-8" name="IBNSubscribe" action="http://www.businessreport.com/section/loginnewssletter" method="POST" > 
+        			<input type="hidden" name="c" value="2fy5RN"> 
+        			<input type="text" name="email__sValue" value="" ><br> 
+        			<input type="Submit" value="Subscribe" > 
+        		</form> -->
+        		<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="5px">
+<TR>
+<TD align="center" ><form id="IBNSubscribeForm" accept-charset="UTF-8" action="">
+	<input id="IBNSubscribeEmail" type="text" name="email" size="30" > <input id="IBNSubscribeButton" type="submit" value="Subscribe">
+   <span id="IBNStatusMessage"></span>
+   </form></TD>
+</TR>
+</TABLE>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
+<script type="text/javascript">
+function isValidEmailAddress(emailAddress) {
+   var pattern = /^([a-zA-Z0-9])(([a-zA-Z0-9])*([._+-])*([a-zA-Z0-9]))*@(([a-zA-Z0-9-])+(.))+([a-zA-Z]{2,4})+$/;
+   return pattern.test(emailAddress);
+}
+(function($) {
+$.fn.EmailCampaignsSubscribe = function(client_id, lists, opt){
+   var defaults = {
+       form: "IBNSubscribeForm",
+       email: "IBNSubscribeEmail",
+       msg: "IBNStatusMessage",
+       button: "IBNSubscribeButton",
+       successMsg: "Thanks for signing up!",
+       emailValidation: true,
+       submitForm: false,
+       errorMsg: "Oops...check your email address"
+   };
+   var subscribeFunction = function(){
+       var valid = true;
+       if(opt.emailValidation && !isValidEmailAddress($("#"+opt.email).val())){
+           valid = false;
+       }
+       if(valid) {
+           var data = $("#"+opt.form).serialize();
+           var img = "";
+           for (i in lists) {
+                img += "<img style='display:none;' src='http://server1.emailcampaigns.net/autoadd/?c="+client_id+"&"+data+"&lid="+lists[i]+"'>";
+           }
+           $("#"+opt.form).html(opt.successMsg + img);
+       } else{
+           $("#"+opt.msg).html(opt.errorMsg);
+       }
+   };
+   var opt = $.extend(defaults, opt);
+   $("#"+opt.button).click( subscribeFunction );
+   $("#"+opt.form).submit( function(e) {
+       if ( ! opt.submitForm ) {
+           e.preventDefault();
+           e.stopPropagation();
+       }
+       subscribeFunction();
+   });
+};
+})(jQuery);
+</script> 
+<script type="text/javascript">jQuery.fn.EmailCampaignsSubscribe("2fy5RN",[3,4]);</script>
+    		</p>
+		</div>
+		<!--<p align="center">
+			<a href="/section/daily-reportPM"><img
+				src="/images/read-pm-home.jpg" alt="Read-PM-Home" width="" height="" />
+			</a><br /> <a href="http://clicks.skem1.com/signup/?c=2fy5RN" class="red">SIGN UP</a> FOR DAILY REPORT<br />AND
+			OTHER ENEWSLETTERS<br />DELIVERED TO YOUR INBOX<br />
+		<form align="center" accept-charset="UTF-8" name="IBNSubscribe"
+			action="http://clicks.skem1.com/signup/" method="POST">
+			<input type="hidden" name="c" value="2fy5RN"> <input
+				type="text" name="email__sValue" value=""><br> <input
+				type="Submit" value="Subscribe">
+		</form>
+		</p>--></div>
+
+<!-- /Daily Headlines -->
+            
+             
+     
+                <h3>Poll</h3>     
+            <div name="pollMini" id="pollMini585">
+<div name="PollMiniResult" id="PollMiniResult585">
+  </div>
+  <form name="PollMiniUrl">
+    <input name="url" type="hidden" value="/apps/pbcs.dll/miniquery?NoStat=1&TARGET=_top&W=130&H=60&Labels=leading&Category=businessreport0205&ObjectClass=-1&BGColor=&LabelTrim=" />
+  </form>
+</div>
+  
+            	 <br />
+            <div class="margin20">
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/POLLSPONSOR/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+</div>
+        
+							<div class="module clearfix">
+	<h2>Multimedia</h2>
+		<ul class="media">
+			<li class="first"><a href="#tab11"><span>Slide Shows</span></a></li>
+			<li class="video-tab"><a href="#tab12"><span>Video</span></a></li>
+		</ul>
+			<div class="multimedia_tab_container">
+				<div id="tab11" class="media_tab">
+					<div class="preview-container clearfix">
+						<div id="preview1" class="preview_content">
+<img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130821&amp;Category=BUSINESSREPORT0302&amp;ArtNo=821009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&ExactW=130&ExactH=130" alt="Baton Rouge Business Report Under construction 130x130-1" class="right" />
+<h5>Under construction</h5>
+<p>The Capital Region is experiencing a health care expansion unlike any other in recent history.</p>
+<p class="preview-more"><a href="http://www.businessreport.com/apps/pbcs.dll/gallery?Site=LB&Date=20130821&Category=BUSINESSREPORT0302&ArtNo=821009999&Ref=PH">See full Slide Show</a></p>
+</div><div id="preview2" class="preview_content">
+<img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130805&amp;Category=BUSINESSREPORT0302&amp;ArtNo=805009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&ExactW=130&ExactH=130" alt="Baton Rouge Business Report New LSU trademarks 130x130-1" class="right" />
+<h5>New LSU trademarks</h5>
+<p>LSU has trademarked a new Tigers logo for men's and women's clothing that is beginning to show up around Baton Rouge. <a href="/article/20130805/BUSINESSREPORT0112/130809905" target="_blank">Read the full story.</a></p>
+<p class="preview-more"><a href="http://www.businessreport.com/apps/pbcs.dll/gallery?Site=LB&Date=20130805&Category=BUSINESSREPORT0302&ArtNo=805009999&Ref=PH">See full Slide Show</a></p>
+</div><div id="preview3" class="preview_content">
+<img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130709&amp;Category=BUSINESSREPORT0302&amp;ArtNo=709009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&ExactW=130&ExactH=130" alt="Baton Rouge Business Report Wampold's World 130x130-1" class="right" />
+<h5>Wampold's World</h5>
+<p>Since its founding in 1981, Wampold Companies has developed, constructed and/or renovated more than 4,000 multifamily units throughout the state as well as 800,000 square feet of office space, condos and hotels. Construction has begun on part of an immense planned community, which will be years in the making. Here's a look at some of the company's key properties.</p>
+<p class="preview-more"><a href="http://www.businessreport.com/apps/pbcs.dll/gallery?Site=LB&Date=20130709&Category=BUSINESSREPORT0302&ArtNo=709009999&Ref=PH">See full Slide Show</a></p>
+</div><div id="preview4" class="preview_content">
+<img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130628&amp;Category=BUSINESSREPORT0302&amp;ArtNo=628009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&ExactW=130&ExactH=130" alt="Baton Rouge Business Report Planned development in Gonzales 130x130-1" class="right" />
+<h5>Planned development in Gonzales</h5>
+<br/>
+<br/>
+<p class="preview-more"><a href="http://www.businessreport.com/apps/pbcs.dll/gallery?Site=LB&Date=20130628&Category=BUSINESSREPORT0302&ArtNo=628009999&Ref=PH">See full Slide Show</a></p>
+</div>
+					</div>
+<!-- /.preview-container -->
+					<ul class="preview">
+        <li class="first"><a href="#preview1"><img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130821&amp;Category=BUSINESSREPORT0302&amp;ArtNo=821009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&amp;exactH=60&amp;exactW=60" alt="Baton Rouge Business Report 60x60-1" /></a></li>
+        <li><a href="#preview2"><img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130805&amp;Category=BUSINESSREPORT0302&amp;ArtNo=805009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&amp;exactH=60&amp;exactW=60" alt="Baton Rouge Business Report 60x60-1" /></a></li>
+        <li><a href="#preview3"><img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130709&amp;Category=BUSINESSREPORT0302&amp;ArtNo=709009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&amp;exactH=60&amp;exactW=60" alt="Baton Rouge Business Report 60x60-1" /></a></li>
+        <li><a href="#preview4"><img src="/apps/pbcsi.dll/bilde?Site=LB&amp;Date=20130628&amp;Category=BUSINESSREPORT0302&amp;ArtNo=628009999&amp;Ref=PH&amp;NewTbl=1&amp;Item=1&amp;exactH=60&amp;exactW=60" alt="Baton Rouge Business Report 60x60-1" /></a></li>
+				</div>
+<!-- === /#tab1 -->
+ 				<div id="tab12" class="media_tab">
+					<div class="preview-container clearfix">
+						<div id="video1" class="preview_content1">
+    	<img src="/storyimage/LB/20130806/225BATONROUGE0104/130809886/AR/0/AR-130809886.jpg&ExactW=130&ExactH=130" class="right" />
+	<h5>Meet Huey the Hotel Dog</h5>
+	<p>Huey is Hotel Indigo's mascot. The dog lives quite the...</p>
+	<p class="preview-more"><a href="/article/20130806/225BATONROUGE0104/130809886">Watch video</a></p>
+</div>
+ <!-- /#preview1 -->
+					</div>
+<!-- /.preview-container -->
+						<ul class="preview1">
+        <li class="first"><a href="#video1"><img src="/storyimage/LB/20130806/225BATONROUGE0104/130809886/AR/0/AR-130809886.jpg&exactH=60&exactW=60" alt="60x60-1" /></a></li>
+</ul>
+				</div>
+<!-- === /#tab2 -->
+ 			</div>
+<!-- /.tab_container -->
+		</div>
+<!-- / module -->
+
+  
+            </div> <!-- end sub_col-2 -->
+          </div> <!-- end wrapper -->
+        </div> <!-- end column -->
+      </div>
+      <div class="col-2">
+	<div class="col-2_topButtonAd">
+  	<!--<i mg src="http://www.iab.net/media/image/300x250.gif">-->
+  	
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/MEDIUMRECTANGLE01/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+
+	</div>
+	<div class="txt_indent_gray">
+		<!-- tabs begin -->
+		<div class="wrapper">
+			<ul class="tabs">
+				<li><a href="#tab1">Most Read</a></li>
+				<li><a href="#tab2">Recent Comments</a></li>
+				<li class="last"><a href="#tab3">Editors Picks</a></li>
+			</ul>
+			<div class="tab_container">
+				<div id="tab1" class="tab_content">
+					<div class="news">
+	<span class="date">08/05/2013</span><br />
+	<a href="/article/20130805/BUSINESSREPORT0112/130809905">LSU trademarks a new Tigers logo for fan apparel</a>
+  <div class="line_hor"></div>
+</div>
+<div class="news">
+	<span class="date">08/27/2013</span><br />
+	<a href="/article/20130827/BUSINESSREPORT0117/130829819">News alert: Dow to spend $1 billion on new plants in Plaquemine</a>
+  <div class="line_hor"></div>
+</div>
+<div class="news">
+	<span class="date">08/26/2013</span><br />
+	<a href="/article/20130826/BUSINESSREPORT0112/130829848">New appraisal of Perkins Rowe shows Bally's in trouble, moving out</a>
+  <div class="line_hor"></div>
+</div>
+<div class="news">
+	<span class="date">08/27/2013</span><br />
+	<a href="/article/20130827/BUSINESSREPORT0113/130829836">Baton Rouge's most expensive estate hasn't found any takers yet</a>
+  <div class="line_hor"></div>
+</div>
+<div class="news">
+	<span class="date">08/27/2013</span><br />
+	<a href="/article/20130827/BUSINESSREPORT0112/130829831">Sparkhound founder leaves company to launch Christian organization</a>
+  <div class="line_hor"></div>
+</div>
+
+					</div>
+				<div id="tab2" class="tab_content">
+					<div id="recentcomments" class="dsq-widget"><script type="text/javascript" src="http://brbusinessreport.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script></div>
+					
+				</div>
+				<div id="tab3" class="tab_content">
+					<div class="news">
+	<span class="date">08/27/2013</span><br />
+	<!--<a href="http://www.businessweek.com/articles/2013-08-27/five-reasons-the-debt-ceiling-fight-is-scarier-this-time">Five Reasons the Debt Ceiling Fight Is Scarier This Time</a>-->
+	 <a href="javascript: void(0)" onclick="window.open('http://www.businessweek.com/articles/2013-08-27/five-reasons-the-debt-ceiling-fight-is-scarier-this-time', 'windowname1', 'width=797, height=700'); return false;">Five Reasons the Debt Ceiling Fight Is Scarier This Time</a>
+  <div class="line_hor"></div>
+</div><div class="news">
+	<span class="date">08/27/2013</span><br />
+	<!--<a href="http://www.bloomberg.com/news/2013-08-27/consumer-confidence-index-in-u-s-increased-to-81-5-in-august.html">Consumer Confidence Index in U.S. Increases to 81.5</a>-->
+	 <a href="javascript: void(0)" onclick="window.open('http://www.bloomberg.com/news/2013-08-27/consumer-confidence-index-in-u-s-increased-to-81-5-in-august.html', 'windowname1', 'width=797, height=700'); return false;">Consumer Confidence Index in U.S. Increases to 81.5</a>
+  <div class="line_hor"></div>
+</div><div class="news">
+	<span class="date">08/27/2013</span><br />
+	<!--<a href="http://in.reuters.com/article/2013/08/27/vermont-nuclear-idINL2N0GS19D20130827">Entergy to shut controversial Vermont nuclear plant</a>-->
+	 <a href="javascript: void(0)" onclick="window.open('http://in.reuters.com/article/2013/08/27/vermont-nuclear-idINL2N0GS19D20130827', 'windowname1', 'width=797, height=700'); return false;">Entergy to shut controversial Vermont nuclear plant</a>
+  <div class="line_hor"></div>
+</div>
+				</div>
+			<!--containter end-->
+			</div>
+		<!--wrapper end-->	
+		</div>
+	<!-- tabs end -->        
+	</div>
+  <!-- text_indent_gray end -->
+	<div class="col-2_bottomButtonAd">
+	   
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/WIDESKYSCRAPER01/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+
+    </div>
+            <!-- Tag Cloud -->
+			 <style>
+.size1{ font-size: 10px }
+.size2{ font-size: 13px }
+.size3{ font-size: 16px }
+.size4{ font-size: 19px }
+.size5{ font-size: 22px }
+</style>
+<div class="tag_cloud">
+	<style>
+.size1{ font-size: 10px }
+.size2{ font-size: 13px }
+.size3{ font-size: 16px }
+.size4{ font-size: 19px }
+.size5{ font-size: 22px }
+</style>
+<h2 style="margin: 0.5em 0pt;">Popular Tags</h2>
+<div class="tag_cloud">
+<a href="/section/tagged&tagID=1763&tag=American football" class="size2" title="5 topics" rel="tag">American football</a>
+<a href="/section/tagged&tagID=1000&tag=Arts, culture and entertainment" class="size2" title="9 topics" rel="tag">Arts, culture and entertainment</a>
+<a href="/section/tagged&tagID=1199&tag=Beverage" class="size1" title="3 topics" rel="tag">Beverage</a>
+<a href="/section/tagged&tagID=1248&tag=Book" class="size1" title="3 topics" rel="tag">Book</a>
+<a href="/section/tagged&tagID=1741&tag=Children" class="size1" title="4 topics" rel="tag">Children</a>
+<a href="/section/tagged&tagID=1249&tag=Cinema industry" class="size1" title="3 topics" rel="tag">Cinema industry</a>
+<a href="/section/tagged&tagID=2414&tag=Community" class="size1" title="4 topics" rel="tag">Community</a>
+<a href="/section/tagged&tagID=1145&tag=Construction and property" class="size4" title="46 topics" rel="tag">Construction and property</a>
+<a href="/section/tagged&tagID=1093&tag=Disaster and accident" class="size3" title="13 topics" rel="tag">Disaster and accident</a>
+<a href="/section/tagged&tagID=1119&tag=Economy, business and finance" class="size4" title="40 topics" rel="tag">Economy, business and finance</a>
+<a href="/section/tagged&tagID=1497&tag=Employee" class="size3" title="13 topics" rel="tag">Employee</a>
+<a href="/section/tagged&tagID=1478&tag=Employment" class="size2" title="8 topics" rel="tag">Employment</a>
+<a href="/section/tagged&tagID=1153&tag=Energy and resource" class="size4" title="41 topics" rel="tag">Energy and resource</a>
+<a href="/section/tagged&tagID=2427&tag=Entrepreneur" class="size1" title="4 topics" rel="tag">Entrepreneur</a>
+<a href="/section/tagged&tagID=2397&tag=EVENTS" class="size3" title="18 topics" rel="tag">EVENTS</a>
+<a href="/section/tagged&tagID=2426&tag=Executive Spotlight" class="size1" title="4 topics" rel="tag">Executive Spotlight</a>
+<a href="/section/tagged&tagID=1194&tag=Food" class="size3" title="11 topics" rel="tag">Food</a>
+<a href="/section/tagged&tagID=1276&tag=Food" class="size1" title="3 topics" rel="tag">Food</a>
+<a href="/section/tagged&tagID=1085&tag=Fraud" class="size2" title="5 topics" rel="tag">Fraud</a>
+<a href="/section/tagged&tagID=1503&tag=Gaming and lottery" class="size1" title="3 topics" rel="tag">Gaming and lottery</a>
+<a href="/section/tagged&tagID=1545&tag=Government" class="size2" title="7 topics" rel="tag">Government</a>
+<a href="/section/tagged&tagID=1409&tag=Health" class="size4" title="38 topics" rel="tag">Health</a>
+<a href="/section/tagged&tagID=1721&tag=Health insurance" class="size1" title="4 topics" rel="tag">Health insurance</a>
+<a href="/section/tagged&tagID=1285&tag=Hotel and accommodation" class="size1" title="3 topics" rel="tag">Hotel and accommodation</a>
+<a href="/section/tagged&tagID=1174&tag=Insurance" class="size1" title="3 topics" rel="tag">Insurance</a>
+<a href="/section/tagged&tagID=1059&tag=Judge" class="size1" title="4 topics" rel="tag">Judge</a>
+<a href="/section/tagged&tagID=1068&tag=Laws" class="size2" title="8 topics" rel="tag">Laws</a>
+<a href="/section/tagged&tagID=1074&tag=Litigation" class="size1" title="3 topics" rel="tag">Litigation</a>
+<a href="/section/tagged&tagID=1015&tag=Music" class="size3" title="15 topics" rel="tag">Music</a>
+<a href="/section/tagged&tagID=1164&tag=Natural gas" class="size1" title="4 topics" rel="tag">Natural gas</a>
+<a href="/section/tagged&tagID=1461&tag=People" class="size4" title="57 topics" rel="tag">People</a>
+<a href="/section/tagged&tagID=1061&tag=Police" class="size2" title="6 topics" rel="tag">Police</a>
+<a href="/section/tagged&tagID=1518&tag=Politics" class="size5" title="91 topics" rel="tag">Politics</a>
+<a href="/section/tagged&tagID=1221&tag=Prices" class="size2" title="9 topics" rel="tag">Prices</a>
+<a href="/section/tagged&tagID=1148&tag=Real estate" class="size5" title="77 topics" rel="tag">Real estate</a>
+<a href="/section/tagged&tagID=2457&tag=Recipes" class="size2" title="8 topics" rel="tag">Recipes</a>
+<a href="/section/tagged&tagID=1287&tag=Restaurant and catering" class="size4" title="28 topics" rel="tag">Restaurant and catering</a>
+<a href="/section/tagged&tagID=1196&tag=Retail" class="size3" title="18 topics" rel="tag">Retail</a>
+<a href="/section/tagged&tagID=1339&tag=Sales" class="size1" title="3 topics" rel="tag">Sales</a>
+<a href="/section/tagged&tagID=1363&tag=School" class="size4" title="28 topics" rel="tag">School</a>
+<a href="/section/tagged&tagID=1657&tag=Science and technology" class="size1" title="3 topics" rel="tag">Science and technology</a>
+<a href="/section/tagged&tagID=1753&tag=Sport" class="size3" title="13 topics" rel="tag">Sport</a>
+<a href="/section/tagged&tagID=1372&tag=Students" class="size1" title="3 topics" rel="tag">Students</a>
+<a href="/section/tagged&tagID=1027&tag=Television" class="size2" title="5 topics" rel="tag">Television</a>
+<a href="/section/tagged&tagID=1508&tag=Tourism" class="size1" title="3 topics" rel="tag">Tourism</a>
+<a href="/section/tagged&tagID=1510&tag=Traffic" class="size1" title="4 topics" rel="tag">Traffic</a>
+<a href="/section/tagged&tagID=1289&tag=Transport" class="size4" title="51 topics" rel="tag">Transport</a>
+<a href="/section/tagged&tagID=1488&tag=Unemployment" class="size1" title="3 topics" rel="tag">Unemployment</a>
+<a href="/section/tagged&tagID=1368&tag=University" class="size3" title="25 topics" rel="tag">University</a>
+<a href="/section/tagged&tagID=1405&tag=Water" class="size1" title="4 topics" rel="tag">Water</a>
+</div>
+<!--50-->
+</div>
+
+			<!-- End Tag Cloud -->
+			<br />
+			<!-- Facebook widget -->
+			<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/businessreport" width="300" height="217"  show_faces="true" border_color="" stream="false" header="false"></fb:like-box>
+			<!-- End Facebook widget -->
+</div>
+    </div>
+     <div class="line_hor3"></div>
+     <div class="columfull">
+          <div class="wrapper">
+            <div class="sub_col-1">
+                <div class="pub-story">
+                    <div class="logo">
+                    
+
+<a href="http://225batonrouge.com/section/225BATONROUGE01"><img src="/storyimage/LB/20130801/BUSINESSREPORT1101/130809949/AR/0/AR-130809949.jpg" alt="225-Mag-Home" />
+
+<div align="center">Bleeding purple & gold</div>
+</a></div>
+                    	<!-- <p bsx :!macro name="sectionCatList" myCategory="%" myDays="240" myObjectclass="6" myCount="1" cachetime="10" cachequalifiers="category,categories,myCategory">  -->
+                </div>
+                <div class="pub-story">
+                    <div class="logo">
+                    
+
+<a href="http://www.businessreport.com/article/20130528/BUSINESSREPORT0403/130529754"><img src="/storyimage/LB/20130607/BUSINESSREPORT1102/130609862/AR/0/AR-130609862.jpg" alt="225-Mag-Home" />
+
+<div align="center">2013 Influential Women in Business</div>
+</a></div>
+                    	 <!-- <p bsx:!macro name="sectionCatList" myCategory="%" myDays="240" myObjectclass="6" myCount="1" cachetime="10" cachequalifiers="category,categories,myCategory">  -->
+                </div>
+                <div class="pub-story">
+                    <div class="logo">
+                    
+
+<a href="http://inregister.com/section/current-inRegister"><img src="/storyimage/LB/20130801/BUSINESSREPORT1103/130809948/AR/0/AR-130809948.jpg" alt="225-Mag-Home" />
+
+<div align="center">Founded on faith</div>
+</a></div>
+                    <!-- <p bsx:!macro name="sectionCatList" myCategory="%" myDays="240" myObjectclass="6" myCount="1" cachetime="10" cachequalifiers="category,categories,myCategory">  -->
+                </div>
+            </div>
+            <div class="sub_col-2">
+                <div class="guides">
+                    <span>Corporate Publications</span>
+                    <ul>   
+                        <li><a href="http://www.mydigitalpublication.com/publication/?m=17430&l=1">Annual Report</a></li>
+                        <li><a href="http://www.225batonrouge.com/section/healthandbeauty">Health and Beauty</a></li>
+                        <li><a href="http://digital.225batonrouge.com/publication/?i=134667">Menu Guide</a></li>
+                        <li><a href="http://try.businessreport.com/wnhc">What's New in Health Care</a></li>
+                        <li><a href="http://www.visitbatonrouge.com/resourcestools/visitorsguide/">Welcome</a></li>
+                         <!-- <li><a href="#">Book of Lists</a></li> -->
+                    </ul>
+                </div>
+                <div class="guides">
+                    <a href="http://try.businessreport.com/wnhc/"><img src="/storyimage/LB/20130617/BUSINESSREPORT1104/130619817/AR/0/AR-130619817.jpg" alt="225-Mag-Home" />
+
+                    <!-- <p align="center"><a href="#" class="black">Annual Report</a></p> -->
+                </div>
+                <div class="guides">
+                    <a href="http://www.mydigitalpublication.com/publication?m=17430&l=1"><img src="/storyimage/LB/20130419/BUSINESSREPORT1105/130419738/AR/0/AR-130419738.jpg" alt="225-Mag-Home" />
+
+                    <!-- <p align="center"><a href="#" class="black">Menu Guide</a></p>  -->
+                </div>
+            </div>
+          </div>  
+     </div>
+  </div>
+<!-- footer -->
+  <div id="footer_leaderboard">
+  	<div id="footer_leaderboardAd">
+  		<!--<img src="http://www.iab.net/media/image/728X90.gif" />-->
+  		
+<script type="text/javascript">
+<!--
+if (typeof pid === 'undefined') {
+  pid = Math.random() * 100000000000000000;
+}
+var idn = Math.random() * 100000000000000000;
+document.write('<s'+'cr'+'ip'+'t type'+'="text/javascript" src="http://lbads.sx.atl.publicus.com/apps/OAMS.dll/src/LB001/BOTTOMLEADERBOARD/FRONTPAGE/' + pid + '/-1/BUSINESSREPORTHOME/;idn=' + idn + ';Type=1?"><\/script>');
+//-->
+</script>
+
+  	</div>
+  	<div>
+  </div>
+  <div id="footer">
+    <div class="footer_container">
+     <div style="float:left;">
+          <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                <li>
+      			               <a href="/section/businessreport0401"><strong>Print Edition</strong></a>
+							</li>
+      		                <li>
+								<a href="/section/businessreport0401">Current Issue</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0402">Past Issues</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0403">Special Issues</a>
+							</li>
+							<li>
+								<a href="/section/lists">Lists</a>
+							</li>
+      	</ul>
+      </div>
+      <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                <li>
+      			               <a href="/section/businessreport02"><strong>Columnists</strong></a>
+      		                </li>
+      		                <li>
+								<a href="/apps/pbcs.dll/personalia?ID=rmccollister">Rolfe McCollister</a>
+							</li>
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=sriegel">Stephanie Riegel</a>
+							</li>
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=jmaginnis">John Maginnis</a>
+							</li>
+							<li>
+								<a href="/apps/pbcs.dll/personalia?ID=tcook">Tom Cook</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0205">Other</a>
+							</li>
+      	</ul>
+      </div>
+      </div>
+     <div style="float:left;">
+      <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                <li>
+      			               <a href="/section/businessreport0302"><strong>Multimedia</strong></a>
+							</li>
+      		                <li>
+								<a href="/section/businessreport0301">Video</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0302">Slideshows</a>
+							</li>
+      	</ul>
+      </div>
+      <div class="footer_links" style="clear:both;">
+      	<ul>
+      	                     <li>
+      			               <a href="/section/enewsletters"><strong>E-Newsletters</strong></a>
+      		                </li>
+                           <!--  <li>
+								<a href="/section/businessreport0101">Development</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0102">Entrepreneur</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0103">Executive Spotlight</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0104">Health Care</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0105">Industry</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0106">Money</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0107">People</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0108">Professions</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0109">Public Sector</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0110">The Region</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0111">Small Business</a>
+							</li> -->
+							<li>
+								<a href="/section/daily-report">Daily Report</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0113">Real Estate Weekly</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0114">Polls</a>
+							</li>
+							<!-- <li>
+								<a href="/section/lists">Lists</a>
+							</li> -->
+      	</ul>
+      </div>
+      </div>
+      <div style="float:left;">
+      <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                <li>
+      			               <a href="/section/businessreport05"><strong>Nominations</strong></a>
+							</li>
+      		                <li>
+								<a href="/section/businessreport0501">Business Awards and Hall of Fame</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0502">Influential Women in Business</a>
+							</li>
+							<li>
+								<a href="/section/businessreport0503">Forty Under 40</a>
+							</li>
+							<li>
+								<a href="/section/other-nominations">Other</a>
+							</li>
+							<li>
+								<a href="/section/past-winners">Past Winners</a>
+							</li>
+      	</ul>
+      </div>
+      <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                <li>
+      			               <a href="http://businessreport.eventbrite.com"><strong>Events</strong></a>
+							</li>
+      		                <li>
+								<a href="http://businessreport.eventbrite.com">LBI Events</a>
+							</li>
+							<li>
+								<a href="/section/events&events=Weekly-Planner">Weekly Planner</a>
+							</li>
+      	</ul>
+      </div>
+      </div>
+          <div class="footer_links">
+      	<ul>
+      		                <li>
+      			               <a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp"><strong>Circulation</strong></a>
+							</li>
+      		                <li>
+						  	  <a href="/section/enewsletters">Enewsletter sign ups</a>
+						  </li>
+						  <li>
+						  	<a href="/section/newsub">New subscriptions</a>
+						  </li>
+						  <li>
+						  	<a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp">Renewals</a>
+						  </li>
+						  <li>
+						  	<a href="https://bizjournal.newzware.com/ss70v2/labiz/common/template.jsp">Address change</a>
+						  </li>
+						  <li>
+						  	<a href="/section/lists">Purchase digital lists</a>
+						  </li>
+						  <li>
+						  	<a href="/section/reprint-request-form">Reprints</a>
+						  </li>
+						  <li>
+						  	<a href="/section/past-issues-order-form">Back / Special issues</a>
+						  </li>
+						  <li>
+						  	<a href="/section/businessreport0708">Newsstand locations</a>
+						  </li>
+				</ul>
+      </div>
+      <div style="float:left;">
+      <div class="footer_links" style="clear:both;">
+
+      	<ul>
+      		                <li>
+      			               <a href="mailto:editors@businessreport.com?subject=NEWSTIP"><strong>Interact</strong></a>
+							</li>
+      		 <li>
+						  	<a href="mailto:editors@businessreport.com?subject=NEWSTIP">Submit news tip/idea</a>
+						  </li>
+						  <li>
+						  	<a href="http://businessreport.com/section/events_add">Submit an event</a>
+						  </li>
+						  <li>
+						  	<a href="mailto:editors@businessreport.com?subject=PHOTOS">Submit a photo</a>
+						  </li>
+						  <li>
+						  	<a href="mailto:editors@businessreport.com?subject=PRESS RELEASE">Submit a press release</a>
+						  </li>
+						  <li>
+						  	<a href="mailto:editors@businessreport.com?subject=Letter to the editor">Write a letter to the editor</a>
+						  </li>
+						  <li>
+						  	<a href="http://votervoice.net/groups/brbr">Write public officials</a>
+						  </li>
+				</ul>
+      </div>
+
+      <div class="footer_links" style="clear:both;">
+	      		<ul>
+	      		 			<li>
+      			               <a href="#"><strong>Our Publications</strong></a>
+							</li>
+							<li>
+								<a href="http://www.225batonrouge.com">225</a>
+							</li>
+							<li>
+								<a href="http://www.inregister.com">inRegister</a>
+							</li>
+	     	 </ul>
+       </div>
+       </div>
+       <div style="float:left;">
+       <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                <li>
+      			               <a href="/section/businessreport1001"><strong>LBI</strong></a>
+							</li>
+      		<li>
+								<a href="/section/businessreport1001">About us</a>
+							</li>
+							<li>
+								<a href="/section/businessreport1002">Contact us</a>
+							</li>
+							<li>
+								<a href="/section/businessreport1003">Staff directory</a>
+							</li>
+							<li>
+								<a href="/section/businessreport1004">Work for us</a>
+							</li>
+							<li>
+								<a href="/section/terms_of_use">Terms of Use</a>
+							</li>
+							<li>
+								<a href="/section/privacy_policy">Privacy Policy</a>
+							</li>
+				</ul>
+      </div>
+       <div class="footer_links" style="clear:both;">
+      	<ul>
+      		                                            <li>
+                                                           <a href="//try.businessreport.com/advertising"><strong>Advertising</strong></a>
+                                                        </li>
+				</ul>
+      </div>
+      </div>
+      <!--<div class="bottom_menu"> <a href="/" class="act">Home page</a><span>|</span> <a href="/section/News" >News</a><span>|</span> <a href="/section/sports" >Sports</a><span>|</span> <a href="/section/arts" >Arts & Entertainment</a><span>|</span> <a href="/section/lifestyle" >Lifestyles</a><span>|</span> <a href="/section/opinion" >Opinion</a><span>|</span> <a href="/section/blogs" >Blogs</a><span>|</span> <a href="/section/classifieds" >Classifieds</a> </div>
+      <div class="copy"> <span>SAXOTECH</span> &copy;  2010. <a href="index-7.html">Privacy policy</a></div>-->
+    </div>
+    <img src="/images/VAVLogoTransp2.png" width="236" height="65" />
+  </div>
+</div>
+
+</body>
+</html>
+

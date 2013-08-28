@@ -1,0 +1,428 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>luxury rental car, rent luxury cars</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="content-language" content="en-EN">
+<meta name="language" content="en-EN">
+<meta name="distribution" content="global">
+<meta name="robots" content="index,follow,all">
+<meta http-equiv="Pragma" content="cache">
+<meta name="Identifier-URL" content="http://www.luxury-cars-rental.com/">
+<meta name= "Classification" content= "luxury rental car, luxury rental, luxury rentals, rent luxury cars, luxury cars, luxury car rentals.">
+<meta name="keywords" content="luxury rental car, luxury rental, luxury rentals, rent luxury cars, luxury cars, luxury car rentals, rent a porsche, rent a ferrari, rent a bentley, rent a mercedes, rent an aston martin, rent a bentley.">
+<meta name="description" content="Luxury rental car on Nice, Saint Tropez, Ibiza, Porto Cervo, Porto Vecchio, . Luxury rentals, luxury rental, luxury rentals, rent luxury cars, luxury cars, luxury car rentals, rent a porsche, rent a ferrari, rent a bentley, rent a mercedes, rent an aston martin, rent a bentley.">
+<meta name="abstract" content="luxury rental car, luxury rental, luxury rentals, rent luxury cars, luxury cars, luxury car rentals.">
+<meta name="REVISIT-AFTER" content="15 days">
+<link rel="SHORTCUT ICON" href="http://www.luxury-cars-rental.com/favicon.ico">
+<link href="common/style/style.css" rel="stylesheet" type="text/css">
+<!-- Chargement du javascript pour le plein ecran -->
+<script language="JavaScript1.2" src="common/js/plein_ecran.js"></script>
+<script language=JavaScript>
+//Préchargement des images
+voiture = new Image();
+voiture.src = "images/commun/location-voiture-hover-en.jpg";
+infos = new Image();
+infos.src = "images/commun/infos-hover.gif";
+mail = new Image();
+mail.src = "images/commun/mail_over.gif";
+accueil = new Image();
+accueil.src = "images/commun/home_over.gif";
+favoris = new Image();
+favoris.src = "images/commun/favoris_over.gif";
+french = new Image();
+french.src = "images/commun/french_over.gif";
+</script>
+
+<script LANGUAGE="JavaScript">
+<!--//BEGIN Script
+function favoris() {
+if ( navigator.appName != 'Microsoft Internet Explorer' )
+{ window.sidebar.addPanel("Care Luxury cars rental","http://www.luxury-cars-rental.com/",""); }
+else { window.external.AddFavorite("http://www.luxury-cars-rental.com/","Care Luxury cars rental"); } }
+//-->
+</script>
+
+<script language="javascript">
+	function affecte(aff,unaff)							// AFFECTATION LIGNE PAR LIGNE
+	{
+		sel=unaff.options.selectedIndex;				// Indice de l'élément sélectionné
+		if (sel != -1)									// Si -1, aucune sélection
+		{
+			aff_txt = unaff.options[sel].text;			// Nom de l'élément de la liste
+			aff_val = unaff.options[sel].value;			// Nom du value
+			aff_opt = new Option(aff_txt,aff_val,1,1);	// On crée un nouvel élément: nom affiché + nom value
+														// 3ème paramètre: defaultSelected
+ 														// 4ème paramètre: selected
+			aff.options[aff.options.length] = aff_opt;	// On insère l'élément dans la nouvelle liste
+			aff.options[aff.options.length].selected = true
+			unaff.options[sel] = null;					// On enlève l'élément transféré de la liste de départ
+		}
+		else
+		{
+			window.alert("Please select at least one vehicle !");
+		}
+	}
+		
+	function affectetout(aff,unaff)							// AFFECTATION DES LIGNES SELECTIONNEES
+	{
+		ind=(unaff.options.length);
+	
+		for (a = 0; a < ind; a += 1)
+		{
+			sel=unaff.options.selectedIndex;
+			if (sel != -1)
+			{
+				aff_txt = unaff.options[sel].text;
+				aff_val = unaff.options[sel].value;
+				aff_opt = new Option(aff_txt,aff_val,1,1); 
+				aff.options[aff.options.length] = aff_opt;
+				unaff.options[sel] = null;
+			}	
+		}
+	}
+
+function PostSelect(liste){
+  // On compte le nombre d'item de la liste select
+  Nblistselect = document.forms[liste].elements.listselect.length;
+  
+  // On lance une boucle pour selectionner tous les items
+  for(a=0; a<Nblistselect; a++){
+    document.forms[liste].elements.listselect.options[a].selected = true;
+  }
+  
+  // On modifie l'ID  du champ select pour que PHP traite cette 
+  // dernière comme un array
+  document.forms[liste].elements.listselect.name = "listselect[]";
+
+}
+</script>
+	<!-- Script pour vérifier le formulaire -->
+<script language=JavaScript>
+//Fonction pour vérifier l'adresse email
+function CheckMail(email)
+
+{
+	var reg = new RegExp('^[a-z0-9_.-]+([_|\.|-]{1}[a-z0-9_.-]+)*@[a-z0-9_.-]+([_|\.|-]­{1}[a-z0-9_.-]+)*[\.]{1}[a-z]{2,6}$', 'i');
+
+	if(reg.test(email))
+	{
+		return(true);
+	}
+	else
+	{
+		return(false);
+	}
+}
+
+//Fonction pour vérifier si c'est un chiffre
+function CheckNombre(nb)
+{
+// retourne true si c'est un nombre et false sinon
+return !(isNaN(nb));
+}
+//Fonction pour vérifier le formulaire
+function validera(formulairea)
+{
+	invalide=0
+	if (formulairea.arrivee.value==""){invalide=9}
+	if (formulairea.depart.value==""){invalide=8}
+	if (formulairea.listselect.value==""){invalide=7}
+	if (formulairea.paysb.value==""){invalide=6}
+	if (formulairea.email.value==""){invalide=5}
+	if (formulairea.email.value!=""){if (CheckMail(formulairea.email.value)==false){invalide=4}}
+	if (formulairea.telephone.value==""){invalide=3}
+	if (formulairea.prenom.value==""){invalide=2}
+	if (formulairea.nom.value==""){invalide=1}
+	if (invalide!=0) 
+	{
+	if (invalide==1) {alert("Please input your first name !")}
+	else if (invalide==2) {alert("Please input your last name !")}
+	else if (invalide==3) {alert("Please input your phone !")}
+	else if (invalide==4) {alert("Please input a valid e-mail address !")}
+	else if (invalide==5) {alert("Please input your e-mail address !")}
+	else if (invalide==6) {alert("Please input your country!")}
+	else if (invalide==7) {alert("Please select at least one vehicle !")}
+	else if (invalide==8) {alert("Please input your departure city !")}
+	else if (invalide==9) {alert("Please input your arrival city !")}
+	}
+	else {formulairea.submit()}
+}
+
+
+//Fonction pour vérifier le formulaire
+function validerc(formulairec)
+{
+	invalide=0
+	if (formulairec.arrivee.value==""){invalide=9}
+	if (formulairec.depart.value==""){invalide=8}
+	if (formulairec.listselect.value==""){invalide=7}
+	if (formulairec.paysb.value==""){invalide=6}
+	if (formulairec.email.value==""){invalide=5}
+	if (formulairec.email.value!=""){if (CheckMail(formulairec.email.value)==false){invalide=4}}
+	if (formulairec.telephone.value==""){invalide=3}
+	if (formulairec.prenom.value==""){invalide=2}
+	if (formulairec.nom.value==""){invalide=1}
+	if (invalide!=0) 
+	{
+	if (invalide==1) {alert("Please input your first name !")}
+	else if (invalide==2) {alert("Please input your last name !")}
+	else if (invalide==3) {alert("Please input your phone !")}
+	else if (invalide==4) {alert("Please input a valid e-mail address !")}
+	else if (invalide==5) {alert("Please input your e-mail address !")}
+	else if (invalide==6) {alert("Please input your country!")}
+	else if (invalide==7) {alert("Please select at least one vehicle !")}
+	else if (invalide==8) {alert("Please input your departure city !")}
+	else if (invalide==9) {alert("Please input your arrival city !")}
+	}
+	else {formulairec.submit()}
+}
+</script>
+</head>
+
+<body onload="plein_ecran();">
+<div id="global">
+<div id="container">
+<div id="subcontainer">
+
+<div id="menuannexe"><li style="margin:11px 6px 0 2px; padding:0; float:left; display:block;">
+<a href="http://www.luxury-cars-rental.com/" title="luxury rentals"
+onmouseover="accueil.src='images/commun/home_over.gif';"
+onmouseout="accueil.src='images/commun/home.gif';"
+onmousedown="accueil.src='images/commun/home_over.gif';"
+onmouseup="accueil.src='images/commun/home_over.gif';"><img name="accueil" src="images/commun/home.gif" border="0" alt="luxury rentals" title="luxury rentals"></a></p>
+</li>
+<li style="margin:1px 6px 0 2px; padding:0; float:left; display:block;">
+<a href="demande-informations.html" title="luxury rental"
+onmouseover="mail.src='images/commun/mail_over.gif';"
+onmouseout="mail.src='images/commun/mail.gif';"
+onmousedown="mail.src='images/commun/mail_over.gif';"
+onmouseup="mail.src='images/commun/mail_over.gif';"><img name="mail" src="images/commun/mail.gif" border="0" alt="luxury rental" title="luxury rental"></a></p>
+</li>
+<li style="margin:1px 6px 0 2px; padding:0; float:left; display:block;">
+<a href="javascript:void(favoris());" title="luxury rentals"
+onmouseover="favoris.src='images/commun/favoris_over.gif';"
+onmouseout="favoris.src='images/commun/favoris.gif';"
+onmousedown="favoris.src='images/commun/favoris_over.gif';"
+onmouseup="favoris.src='images/commun/favoris_over.gif';"><img name="favoris" src="images/commun/favoris.gif" border="0" alt="luxury rentals" title="luxury rentals"></a></p>
+</li>
+<li style="margin:1px 6px 0 2px; padding:0; float:left; display:block;">
+<a href="http://www.vip-moving-services.com/location-de-luxe.html" target="_parent" class="top"  title="French"
+onmouseover="french.src='images/commun/french_over.gif';"
+onmouseout="french.src='images/commun/french.gif';"
+onmousedown="french.src='images/commun/french_over.gif';"
+onmouseup="french.src='images/commun/french_over.gif';"><img name="french" src="images/commun/french.gif" border="0" alt="French" title="French"></a></p>
+</li>
+<li style="margin:1px 6px 0 2px; padding:0; float:left; display:block;">
+<a href="http://www.vip-moving-services.com/luxury-rental-services.html" target="_parent" class="top"  title="Russian"
+onmouseover="russian.src='images/commun/russian_over.gif';"
+onmouseout="russian.src='images/commun/russian.gif';"
+onmousedown="russian.src='images/commun/russian_over.gif';"
+onmouseup="russian.src='images/commun/russian_over.gif';"><img name="russian" src="images/commun/russian.gif" border="0" alt="Russian" title="Russian"></a></p>
+</li></div>
+
+<div id="top"><div style="text-align:center;"><a href="http://www.luxury-cars-rental.com/luxury-car-rental.html" title="luxury rentals"><img src="images/commun/care.gif" border="0" alt="luxury rentals" title="luxury rentals"></a></div>
+</div>
+
+<div id="animation"><div id="container0"><p class="nospace" id="player0"><img src="./images/centrales/audi-r8.jpg" border="0" alt="luxury rentals" title="luxury rentals" /></p></div>
+<script type="text/javascript" src="common/js/swfobject.js"></script>
+<script type="text/javascript">
+    var s0 = new SWFObject("common/flash/imagerotator.swf","rotator","800","200","7");
+    s0.addVariable("file","common/flash/en-imagerotator-accueil.php");
+    s0.addVariable("width","800");
+    s0.addVariable("height","200");
+    s0.addVariable("transition","slowfade");
+    s0.addVariable("shownavigation","false");
+    s0.addVariable("rotatetime","5");
+    s0.addVariable("bgcolor","#000000");
+    s0.addVariable("screencolor","0x000000");
+    s0.addVariable("overstretch","true");
+    s0.addParam("wmode","opaque");
+   s0.write("container0");
+</script></div>
+<div id="menu"><div class="pro_linedrop" title="luxury rentals">
+<ul class="select">
+<li class="line"><a href="#nogo" title="rent luxury car"><b>CARS</b><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul class="sub">
+		<li><a href="luxury-car-rentals.html" title="luxury car rental">Rent a car</a></li>
+		<li><a href="rent-a-luxury-car.html" title="rent luxury car">Car rental by brand</a></li>
+		<li><a href="car-driven-rental.html" title="car driven rental">Car driven rental</a></li>
+		<li><a href="luxury-car-rent.html" title="rent luxury cars">Car booking</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="lineb"><a href="luxury-car-rent.html" title="luxury rental"><b>RESERVATION</b></a></li>
+<li class="lineb"><a href="car-information.html" title="luxury rental"><b>ASK US FOR MORE INFORMATION</b></a></li>
+
+<li class="line lrt"><a href="#nogo" title="luxury rentals"><b class="arrow">COMPANY</b><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul class="sub rt">
+		<li><a href="luxury-rental-company.html" title="luxury rental">Company</a></li>
+		<li><a href="luxury-rental-agency.html" title="luxury rentals">Our agencies</a></li>
+		<li><a href="terms-and-conditions.html" title="luxury rental">Terms and conditions</a></li>
+		<li><a href="images/tarifs-care-2009-en.pdf" target="_blank">Fleet and rates</a></li>
+		<li><a href="links.html">Links</a></li>
+		<li><a href="legal-information.html">Legal information</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+</ul>
+</div></div>
+
+<div id="content">
+ <div id="colonnegaucheaccueil">
+   <H1 class="pluspetit" title="Luxury rentals, luxury car rental">WELCOME TO CARE <font color="#8b1300">LUXURY RENTAL</font> SERVING ALL AROUND THE WORLD</H1>
+    <p>
+    Care Luxury cars rental offers an unparalleled service to answer all the demands of our clients. Indeed, Care Luxury cars rental to surpass rather than meet customer expectations.<br />
+    <br />
+    Care Luxury cars rental is the first car rental company available all over the world and that's what makes it the elite organisation it is today. We specialize in providing you with a vast selection of top-of-the-range yachts, private jets and vehicles all around the world and we aim to offer an incomparable service to our clients thanks to our first-class network.<br /><br />
+    </p>
+ </div>
+<div id="colonnedroiteaccueil">
+   <H1 class="pluspetit" title="luxury rental">FOR AN ESTIMATE, CONTACT US</H1>
+    <p>
+    E-mail address : <a href="mailto:info@luxury-cars-rental.com?Subject=Demande d'informations en provenance du site Care Luxury cars rental" class="tarifs">info@luxury-cars-rental.com</a><br /><br />
+<div style="margin:0; padding:13px 0 0 1px; text-align:left;" align="left">
+<script type="text/javascript" src="common/js/flashobject.js"></script>
+<div id="flashpubinscription" style="width:260px; height:66px; margin:0; padding:10px 0 0 10px; text-align:left;" align="left"><img src="images/commun/reservation-en.gif" align="left" alt="luxury car rental, luxury rentals" title="luxury car rental, luxury rentals" /></div>
+<script type="text/javascript">
+var flashpubinscription = new FlashObject("common/flash/reservation-en.swf", "flashinscription", "260", "66", "8", "#000000");
+flashpubinscription.addParam("allowScriptAccess", "always");
+flashpubinscription.addParam("quality", "high");
+flashpubinscription.addParam("scale", "noscale");
+flashpubinscription.addParam("loop", "true");
+flashpubinscription.write("flashpubinscription");
+</script>   
+</div>
+</p>
+</div>
+<div style="width:800px; display:block; margin:20px 0 0 0; background-color:#000000;">
+<div align="center" style="margin:0; padding:0; width:800px; display:block; float:right; vertical-align:bottom;">
+<p class="nospace">
+<a href="luxury-car-rentals.html" target="_parent" title="luxury rental car" 
+onmouseover="voiture.src='images/commun/location-voiture-hover-en.jpg';"
+onmouseout="voiture.src='images/commun/location-voiture-en.jpg';"
+onmousedown="voiture.src='images/commun/location-voiture-hover-en.jpg';"
+onmouseup="voiture.src='images/commun/location-voiture-hover-en.jpg';"><img name="voiture" src="images/commun/location-voiture-en.jpg" border="0" alt="luxury rental car" title="luxury rental car" /></a>
+</p>
+</div>
+</div>
+<div id="bottom"><div style="width:800px; float:left; padding:0; margin:0; height:3px; background-color:#8b1300;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td align="center">
+            <table cellpadding="0" cellspacing="0" width="800" align="center" bgcolor="#000b12">
+            <tr>
+                <td colspan="12" height="15"></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="rent-an-aston-martin.html" target="_parent" title="Rent an Aston Martin" 
+                    onmouseover="aston.src='images/commun/aston-martin-hover.gif';"
+                    onmouseout="aston.src='images/commun/aston-martin.gif';"
+                    onmousedown="aston.src='images/commun/aston-martin-hover.gif';"
+                    onmouseup="aston.src='images/commun/aston-martin-hover.gif';"><img name="aston" src="images/commun/aston-martin.gif" border="0" alt="Rent an Aston Martin" title="Rent an Aston Martin" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-an-audi.html" target="_parent" title="Rent an Audi" 
+                    onmouseover="audi.src='images/commun/audi-hover.gif';"
+                    onmouseout="audi.src='images/commun/audi.gif';"
+                    onmousedown="audi.src='images/commun/audi-hover.gif';"
+                    onmouseup="audi.src='images/commun/audi-hover.gif';"><img name="audi" src="images/commun/audi.gif" border="0" alt="Rent an Audi" title="Rent an Audi" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-bentley.html" target="_parent" title="Rent a Bentley" 
+                    onmouseover="bentley.src='images/commun/bentley-hover.gif';"
+                    onmouseout="bentley.src='images/commun/bentley.gif';"
+                    onmousedown="bentley.src='images/commun/bentley-hover.gif';"
+                    onmouseup="bentley.src='images/commun/bentley-hover.gif';"><img name="bentley" src="images/commun/bentley.gif" border="0" alt="Rent a Bentley" title="Rent a Bentley" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-bmw.html" target="_parent" title="Rent a BMW" 
+                    onmouseover="bmw.src='images/commun/bmw-hover.gif';"
+                    onmouseout="bmw.src='images/commun/bmw.gif';"
+                    onmousedown="bmw.src='images/commun/bmw-hover.gif';"
+                    onmouseup="bmw.src='images/commun/bmw-hover.gif';"><img name="bmw" src="images/commun/bmw.gif" border="0" alt="Rent a BMW" title="Rent a BMW" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-ferrari.html" target="_parent" title="Rent a Ferrari" 
+                    onmouseover="ferrari.src='images/commun/ferrari-hover.gif';"
+                    onmouseout="ferrari.src='images/commun/ferrari.gif';"
+                    onmousedown="ferrari.src='images/commun/ferrari-hover.gif';"
+                    onmouseup="ferrari.src='images/commun/ferrari-hover.gif';"><img name="ferrari" src="images/commun/ferrari.gif" border="0" alt="Rent a Ferrari" title="Rent a Ferrari" /></a>
+                </td>
+                <td align="center">
+                   <a href="rent-a-hummer.html" target="_parent" title="Rent a Hummer" 
+                    onmouseover="hummer.src='images/commun/hummer-hover.gif';"
+                    onmouseout="hummer.src='images/commun/hummer.gif';"
+                    onmousedown="hummer.src='images/commun/hummer-hover.gif';"
+                    onmouseup="hummer.src='images/commun/hummer-hover.gif';"><img name="hummer" src="images/commun/hummer.gif" border="0" alt="Rent a Hummer" title="Rent a Hummer" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-jaguar.html" target="_parent" title="Rent a Jaguar" 
+                    onmouseover="jaguar.src='images/commun/jaguar-hover.gif';"
+                    onmouseout="jaguar.src='images/commun/jaguar.gif';"
+                    onmousedown="jaguar.src='images/commun/jaguar-hover.gif';"
+                    onmouseup="jaguar.src='images/commun/jaguar-hover.gif';"><img name="jaguar" src="images/commun/jaguar.gif" border="0" alt="Rent a Jaguar" title="Rent a Jaguar" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-lamborghini.html" target="_parent" title="Rent a Lamborghini" 
+                    onmouseover="lamborghini.src='images/commun/lamborghini-hover.gif';"
+                    onmouseout="lamborghini.src='images/commun/lamborghini.gif';"
+                    onmousedown="lamborghini.src='images/commun/lamborghini-hover.gif';"
+                    onmouseup="lamborghini.src='images/commun/lamborghini-hover.gif';"><img name="lamborghini" src="images/commun/lamborghini.gif" border="0" alt="Rent a Lamborghini" title="Rent a Lamborghini" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-mayback.html" target="_parent" title="Rent a Maybach" 
+                    onmouseover="maybach.src='images/commun/maybach-hover.gif';"
+                    onmouseout="maybach.src='images/commun/maybach.gif';"
+                    onmousedown="maybach.src='images/commun/maybach-hover.gif';"
+                    onmouseup="maybach.src='images/commun/maybach-hover.gif';"><img name="maybach" src="images/commun/maybach.gif" border="0" alt="Rent a Maybach" title="Rent a Maybach" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-mercedes.html" target="_parent" title="Rent a Mercedes" 
+                    onmouseover="mercedes.src='images/commun/mercedes-hover.gif';"
+                    onmouseout="mercedes.src='images/commun/mercedes.gif';"
+                    onmousedown="mercedes.src='images/commun/mercedes-hover.gif';"
+                    onmouseup="mercedes.src='images/commun/mercedes-hover.gif';"><img name="mercedes" src="images/commun/mercedes.gif" border="0" alt="Rent a Mercedes" title="Rent a Mercedes" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-porsche.html" target="_parent" title="Rent a Porsche" 
+                    onmouseover="porsche.src='images/commun/porsche-hover.gif';"
+                    onmouseout="porsche.src='images/commun/porsche.gif';"
+                    onmousedown="porsche.src='images/commun/porsche-hover.gif';"
+                    onmouseup="porsche.src='images/commun/porsche-hover.gif';"><img name="porsche" src="images/commun/porsche.gif" border="0" alt="Rent a Porsche" title="Rent a Porsche" /></a>
+                </td>
+                <td align="center">
+                    <a href="rent-a-rolls-royce.html" target="_parent" title="Rent a Rolls Royce" 
+                    onmouseover="rolls.src='images/commun/rolls-royce-hover.gif';"
+                    onmouseout="rolls.src='images/commun/rolls-royce.gif';"
+                    onmousedown="rolls.src='images/commun/rolls-royce-hover.gif';"
+                    onmouseup="rolls.src='images/commun/rolls-royce-hover.gif';"><img name="rolls" src="images/commun/rolls-royce.gif" border="0" alt="Rent a Rolls Royce" title="Rent a Rolls Royce" /></a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="12" height="10"></td>
+            </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2332577-9");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

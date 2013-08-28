@@ -1,0 +1,1448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">	
+	<head>
+		 
+		
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+		<!-- Used to verify webmaster tools -->
+		<meta name="verify-v1" content="P+G8uxo9s17ps+E2UEXOnJq/3f/XZ7YlokhyOPTrS2o=" />
+		<meta name="google-site-verification" content="_1cgFdB0a4CKV3i2uZ23L-DFRZjfqgeQ8Nbv0hBBdR4" />
+		<meta name="msvalidate.01" content="D9A1078FD2738539A86F85435761EBC9" />
+		<meta name="y_key" content="c8440d8af56defe4" />
+		
+		
+		
+		<meta name="keywords" content="Electric Cars, usnews best cars, car news, auto news, auto industry analysis, auto industry, automotive industry, auto recalls, car recalls" />
+		<meta name="description" content="The U.S. News Best Cars team brings you the latest car news, deals and advice with our Best Cars Blog." />
+		
+
+		
+		<title>Best Cars Blog - Electric Cars | U.S. News Best Cars</title>
+
+		<link type="text/css" rel="stylesheet" media="all" href="http://static.usnews.rankingsandreviews.com/css/yahoo-reset-font-min.rr1.css" />
+		<link type="text/css" rel="stylesheet" media="all" href="http://static.usnews.rankingsandreviews.com/css/base.rr51.css" />
+		<link type="text/css" rel="stylesheet" href="http://static.usnews.rankingsandreviews.com/css/jQuery/custom-theme/jquery-ui-1.8.20.custom.css" />
+		<link type="image/ico" rel="shortcut icon" href="http://static.usnews.rankingsandreviews.com/images/favicon.ico" />
+
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/jquery.cookie.js"></script>
+
+	    <script type="text/javascript">
+	       //global ad src for JS
+	       var gl_js_adsrc;
+	       
+	       var isrld = false;
+	       
+	       //track mob version collision
+	       var edata = null;
+	       var trackit = false;
+	       function mobcollision(fdata) {
+            	$.ajax({
+				  type: 'POST',
+				  url: '/ajax/moddesk/event/',
+				  data: fdata,
+				  success: function(data) {},
+				  dataType: "json",
+				  async:true
+			});
+           }
+            
+	       function mob_switch(obj) {
+	       	try {
+	       	   wt_track_event({category:'SwitchSite',action:'Mobile'});
+				$.cookie("usn_is_mob",null,{path:"/"});
+	           	$.cookie("usn_is_mob","Y",{path:"/"});
+	           	window.location.reload(true);
+	           } catch(ex) {
+	           	   console.log("Error:" + ex);
+	           } 
+	       }
+	       
+            try {
+            	//track mob version collision
+    	    	var event_val = "mobcookie-" + $.cookie("usn_is_mob") + ":mobtemplate-True:rldflag-" + $.cookie("rldflg") +":isrld-" + isrld;
+    			edata = {'type':'desktop','value':event_val,'loc':document.URL};
+            	
+	            if(( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $.cookie("usn_is_mob") == null)
+	               || $.cookie("usn_is_mob") == 'Y')  {
+	               	if ($.cookie("rldflg") == null && 'True' == 'True') {
+	                   $.cookie("rldflg",1,{path:"/"});
+	                   $.cookie("usn_is_mob",null,{path:"/"});
+	                   $.cookie("usn_is_mob","Y",{path:"/"});
+	                   isrld = true;
+	                   window.location.reload(true);
+	                }
+	                else if ('True' == 'True') {
+	                	//track mob version collision
+	            		trackit = true;
+	                }
+	            }
+	       } catch(err) {
+               	var event_val = "mobcookie-" + $.cookie("usn_is_mob") + ":mobtemplate-True:rldflag-" + $.cookie("rldflg") +":isrld-" + isrld + ':err-' + err;
+               	edata = {'type':'error-desktop','value':event_val,'loc':document.URL};
+               	trackit = true;
+	       	   	console.log("Error mob js detection: " + err);
+	       }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+            	//track mob version collision
+            	if (trackit) {
+            		mobcollision(edata);
+            	}
+            });
+            
+            if (!isrld) {
+                $.cookie("rldflg",null,{path:"/"});
+            }
+        </script>
+         
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/jquery.textbox-hinter.min.js"></script>
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/jquery.leanModal.min.js"></script>
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/jquery-ui-1.8.20.custom.min.js"></script>
+		<script type="text/javascript" src="/scripts/cars-trucks/used_vast.rr5.js"></script>
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/global_v2.rr2.js"></script>
+		<script type="text/javascript" src="/cars-trucks/dynamic_scripts/auto_finder.js"></script>
+		<script type="text/javascript" src="http://static.usnews.rankingsandreviews.com/scripts/cars-trucks/doubleClick.rr40.js"></script>
+
+		<script type="text/javascript">
+		    var show_allstate_widget = false;	
+		    function show_allstate_callback(is_blocked) {
+				if (is_blocked) {
+					show_allstate_widget = false;
+					$.cookie("show_allst",2,{ expires: 7,path: '/' });
+				}
+				else {
+					try {
+			            show_allstate_widget = Math.floor(Math.random()*2);
+			            var cookie_flag = show_allstate_widget ? 1 :2;
+			            $.cookie("show_allst",cookie_flag,{ path: '/' });
+			        }
+			        catch(err){ }
+				}
+			}
+	
+			function setup_allstate_widget_flag() {
+				if ($.cookie("show_allst") != null) {
+			        //Code to throttle allstate
+			       	show_allstate_widget = $.cookie("show_allst") == 1 ? true : false;
+			        return;
+			    }   	
+				$.ajax({
+					url: '/cars-trucks/aj/is_as_blocked/', 
+					async: false,
+					timeout: 600,
+					success: function(data) {
+				  		show_allstate_callback(data.blocked);
+				  	}
+				});
+			}		
+			
+			var template = -1;
+			template = 17;
+			// Double Click variables - TODO - These need to be set properly
+			ord = Math.random() * 10000000000000000;
+			product_details = '';
+			adParameters = '';
+			var rsTags = get_RS_tags();			
+		</script>
+		<script src="http://js.revsci.net/gateway/gw.js?csid=H05525&auto=t"></script>
+		
+		
+		
+	
+	<link rel="alternate" type="application/rss+xml" title="Best Cars Blog - U.S. News Rankings &amp; Reviews" href="http://localhost:8585/cars-trucks/feeds/daily-news-rss/best-cars-blog/" />
+	<link type="text/css" rel="stylesheet" media="all" href="http://static.usnews.rankingsandreviews.com/css/blog.rr3.css" />
+	
+	<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+			
+	<script type="text/javascript">
+		var usn_share_url='';
+		var usn_share_title='';
+		var usn_share_description='';
+	
+		function set_vars(u,t,d) {
+			usn_share_url=encodeURIComponent("http://usnews.rankingsandreviews.com" + u);
+			usn_share_title=encodeURIComponent(t);
+			usn_share_description=encodeURIComponent(d);
+		}
+		
+		function fbs_click(u,t,d) {
+			set_vars(u,t,d);
+			window.open('http://www.facebook.com/sharer.php?u='+usn_share_url+'&t='+usn_share_description,'sharer','toolbar=0,status=0,width=485,height=450');
+			return false;
+		}
+			
+		function es_click(u,t,d) {
+			set_vars(u,t,d);
+			window.open('/cars-trucks/aj/emailshare/?url=' + usn_share_url + '&title='+ usn_share_title,'email_share', 'width=485, height=480, menubar=0, status=0,toolbar=0, scrollbars=0'); 
+			return false;
+		}
+		
+		function ts_click(u,t,d) {
+			set_vars(u,t,d);
+			window.open('http://twitter.com/share?url=' + usn_share_url + '&related=USNewsCars&text=' + usn_share_description,'share','toolbar=0,status=0,width=485,height=450'); 
+			return false;
+		}
+	</script>
+
+			
+		
+		
+			
+			
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+  var ga_accounts = [
+	
+	['', 'UA-1727688-8'] ,
+	
+	['b.', 'UA-11570513-1'] 
+	                 
+	]; 
+  
+  function wt_track_pageview(f_tracking_url) {
+	  for(var i in ga_accounts) {
+		  var gacct = ga_accounts[i];
+		  if (f_tracking_url != "") {
+			_gaq.push([ gacct[0] + "_trackPageview" , f_tracking_url ]);
+		  }
+		  else {
+			_gaq.push([ gacct[0] + "_trackPageview" ]);
+		  }
+	  }  
+  }
+  
+  function wt_track_event(event) {
+	  for(var i in ga_accounts) {
+		  var gacct = ga_accounts[i];
+		  _gaq.push([gacct[0] + '_setAccount', gacct[1]]);
+		  
+		  if('label' in event) {
+            _gaq.push(['_trackEvent', event.category, event.action, event.label]);
+		  } 
+		  else {
+			_gaq.push(['_trackEvent', event.category, event.action]);
+		  }
+		  setTimeout(null,100);
+	  } 
+	  setTimeout(function() {},100);
+  }
+  
+  function track_pageviews() {
+	  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	  
+	  
+	  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	  _gaq.push(['_setAccount', 'UA-1727688-8']);
+	  _gaq.push(['_setDomainName', '.rankingsandreviews.com']);
+	  
+	 	  
+	        _gaq.push(['_setCustomVar',1,'Site Type','Full',3]);
+	 	  
+	 	  
+	 	  if(typeof show_allstate_widget != 'undefined') {
+	 		  if (show_allstate_widget) _gaq.push(['_setCustomVar',2,'Ad Units','Allstate Widget',3]);  	 		  
+	 	  }
+	 	  
+		  
+		  	_gaq.push(['_trackPageview']);
+		  
+		  
+		  _gaq.push(['_trackPageLoadTime']);
+		  
+		  _gaq.push(['_setCampaignCookieTimeout', 86400000]);
+	  
+	  _gaq.push(['b._require', 'inpage_linkid', pluginUrl]);
+	  _gaq.push(['b._setAccount', 'UA-11570513-1']);
+	  _gaq.push(['b._setDomainName', '.rankingsandreviews.com']);
+	  
+	 	  
+	        _gaq.push(['_setCustomVar',1,'Site Type','Full',3]);
+	 	  
+	 	  
+	 	  if(typeof show_allstate_widget != 'undefined') {
+	 		  if (show_allstate_widget) _gaq.push(['_setCustomVar',2,'Ad Units','Allstate Widget',3]);  	 		  
+	 	  }
+	 	  
+		  
+		  	_gaq.push(['b._trackPageview']);
+		  
+		  
+		  _gaq.push(['b._trackPageLoadTime']);
+		  
+		  _gaq.push(['_setCampaignCookieTimeout', 86400000]);
+	  
+  }
+  track_pageviews();
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+			
+		
+		<!-- Start Visual Website Optimizer Code -->
+		<script type='text/javascript'>
+		var _vis_opt_account_id = 25361;
+		var _vis_opt_url = typeof(_vis_opt_url)=="undefined" ? document.URL : _vis_opt_url;
+		var _vis_opt_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+		document.write('<s' + 'cript src="' + _vis_opt_protocol + 
+		'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a='+_vis_opt_account_id+'&url='
+		+encodeURIComponent(_vis_opt_url)+'&random='+Math.random()+'" type="text/javascript">' + '<\/s' + 'cript>');
+		</script>
+		
+		<script type='text/javascript'>
+		if(typeof(_vis_opt_settings_loaded) == "boolean") { document.write('<s' + 'cript src="' + _vis_opt_protocol + 
+		'd5phz18u4wuww.cloudfront.net/vis_opt.js" type="text/javascript">' + '<\/s' + 'cript>'); }
+		// if your site already has jQuery 1.4.2, replace vis_opt.js with vis_opt_no_jquery.js above
+		</script>
+		
+		<script type='text/javascript'>
+		if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function") {
+		        _vis_opt_top_initialize(); vwo_$(document).ready(function() { _vis_opt_bottom_initialize(); });
+		}
+		</script>
+		<!-- End Visual Website Optimizer Code -->
+	</head>
+
+<body>
+	<script type="text/javascript">
+	  var _kiq = _kiq || [];
+	  (function(){
+	    setTimeout(function(){
+	    var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript'; 
+	    s.async = true; s.src = '//s3.amazonaws.com/ki.js/13866/4u-.js'; f.parentNode.insertBefore(s, f);
+	    }, 1);
+	  })();
+	</script>
+
+	<div id="header">
+		<div id="header2">
+			 <a href="http://www.usnews.com" id="logo">
+			 	<span>US News &amp; World Report</span>
+			 </a>
+			 <div id='auto-logo' onclick="location.href='/cars-trucks/'">&nbsp;</div>
+			 
+			 <div class="nav">
+				<ul>
+					<li class="first">
+						<a class="home" href="/cars-trucks/">Home</a>
+						<ul>
+							<li id="sn-cars" class=""><a href="/cars-trucks/">Cars</a></li>
+							<li class="list-divider">Other sections:</li>
+							<li id="sn-politics" class=""><a href="http://www.usnews.com/news">Politics &amp; Policy</a></li>
+							<li id="sn-health" class=""><a href="http://www.usnews.com/health">Health</a></li> 
+							<li id="sn-money" class=""><a href="http://www.usnews.com/money">Money</a></li>      
+							<li id="sn-education" class=""><a href="http://www.usnews.com/education">Education</a></li>
+							<li id="sn-science" class=""><a href="http://www.usnews.com/science">Science</a></li>
+							<li id="sn-travel" class=""><a href="http://travel.usnews.com">Travel</a></li>
+							<li id="sn-home" class="last"><a href="http://www.usnews.com">U.S. News Home</a></li>
+						</ul>
+					</li>
+					<li><a href="/cars-trucks/rankings/">Car Rankings</a></li>
+					<li><a href="/cars-trucks/browse/">New Cars</a></li>
+					<li><a href="/cars-trucks/used-cars/">Used Cars</a></li>
+					<li class="last"><a href="/cars-trucks/best-cars-blog/">News</a></li>
+				</ul>
+				
+				<div id="banner-share">
+					<a href="/cars-trucks/feeds/daily-news-rss/best-cars-blog/" target="_blank"><img src="/images/social/rss-sm-gray.png" alt="RSS Feed"></a>
+					<a href="http://www.facebook.com/usnewsbestcars" target="_blank"><img src="/images/social/facebook-sm-gray.png" alt="Facebook"></a>
+					<a href="http://twitter.com/#!/USNewsCars" target="_blank"><img src="/images/social/twitter-sm-gray.png" alt="Twitter"></a>
+		        </div>
+		        
+				
+					
+<form method="post" action="" id="auto-finder">
+	<fieldset>
+		<label>Find a Car:</label>
+	
+		<select name="auto_make" class="car_make" style="width: 108px;">
+			<option value="ALL BRANDS">-- All Makes --</option>
+			
+				<option value="acura">Acura</option>
+			
+				<option value="aston-martin">Aston Martin</option>
+			
+				<option value="audi">Audi</option>
+			
+				<option value="bmw">BMW</option>
+			
+				<option value="buick">Buick</option>
+			
+				<option value="cadillac">Cadillac</option>
+			
+				<option value="chevrolet">Chevrolet</option>
+			
+				<option value="chrysler">Chrysler</option>
+			
+				<option value="dodge">Dodge</option>
+			
+				<option value="ferrari">Ferrari</option>
+			
+				<option value="fiat">FIAT</option>
+			
+				<option value="ford">Ford</option>
+			
+				<option value="gmc">GMC</option>
+			
+				<option value="honda">Honda</option>
+			
+				<option value="hummer">Hummer</option>
+			
+				<option value="hyundai">Hyundai</option>
+			
+				<option value="infiniti">Infiniti</option>
+			
+				<option value="isuzu">Isuzu</option>
+			
+				<option value="jaguar">Jaguar</option>
+			
+				<option value="jeep">Jeep</option>
+			
+				<option value="kia">Kia</option>
+			
+				<option value="lamborghini">Lamborghini</option>
+			
+				<option value="land-rover">Land Rover</option>
+			
+				<option value="lexus">Lexus</option>
+			
+				<option value="lincoln">Lincoln</option>
+			
+				<option value="lotus">Lotus</option>
+			
+				<option value="maserati">Maserati</option>
+			
+				<option value="mazda">Mazda</option>
+			
+				<option value="mercedes-benz">Mercedes-Benz</option>
+			
+				<option value="mercury">Mercury</option>
+			
+				<option value="mini">MINI</option>
+			
+				<option value="mitsubishi">Mitsubishi</option>
+			
+				<option value="nissan">Nissan</option>
+			
+				<option value="pontiac">Pontiac</option>
+			
+				<option value="porsche">Porsche</option>
+			
+				<option value="ram">Ram</option>
+			
+				<option value="saab">Saab</option>
+			
+				<option value="saturn">Saturn</option>
+			
+				<option value="scion">Scion</option>
+			
+				<option value="smart">Smart</option>
+			
+				<option value="subaru">Subaru</option>
+			
+				<option value="suzuki">Suzuki</option>
+			
+				<option value="tesla">Tesla</option>
+			
+				<option value="toyota">Toyota</option>
+			
+				<option value="volkswagen">Volkswagen</option>
+			
+				<option value="volvo">Volvo</option>
+			
+		</select>
+	
+		<select name="auto_model" class="car_model" disabled="disabled" style="width: 115px;">
+			 <option value="-1">-- Model --</option>
+		</select>
+	
+		<select name="finder_year" class="car_year" disabled="disabled" style="width: 57px;">
+			<option value="-1">----</option>
+		</select>	
+		<a class="car_submit btn">GO</a>
+	</fieldset>
+	
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+			 </div><!--/#nav-->
+		</div><!--/#header2-->
+	 </div>
+ 	<script type="text/javascript">
+		$('.nav ul li.first').hover(
+			function(){ $('.nav ul ul').css('left','auto'); },
+			function(){ $('.nav ul ul').css('left','-999em'); }
+		);
+	</script>
+	
+	<div id="body" class="lg-gutter">
+		<ul id="breadcrumbs">
+			<li><a href='/cars-trucks/'>Home</a> <span>></span> </li><li><a href="/cars-trucks/best-cars-blog/">Best Cars Blog</a> <span>></span> </li><li>Electric Cars</li>
+		</ul>
+		
+		<div id="top-banner">
+				
+	
+
+
+
+
+
+
+
+
+	<div class="banner pushdown" id="bannerId1" style="display:none;">
+		<script type="text/javascript">
+		
+		renderDoubleClickDynamic(1, adParameters,false);
+		
+		</script>
+		<script type="text/javascript">
+            adValidator("bannerId1");
+            setTimeout(function() {adValidator("bannerId1")},500);
+		</script>
+	</div>
+
+
+
+
+
+
+
+		</div>
+		
+		<div id="title-content">
+			
+		</div>
+		
+		<div id="content" class="blog-entries-list ">
+			
+			
+	<div id="header-image">
+		<a href="/cars-trucks/best-cars-blog/"><img src="/images/cars-trucks/blog/best_cars_blog_header.png" border="0"></a>
+	</div>
+
+	
+		
+			<div class="blog-entry"  >
+				<h2><a href="/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/">GM Promises To Make More Vehicles That Get 40 MPG By 2017</a></h2>
+				
+				
+
+<div class="share-buttons">
+	<a target="_blank" href="http://twitter.com/share?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/')" onclick="return ts_click('/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/','GM%20Promises%20To%20Make%20More%20Vehicles%20That%20Get%2040%20MPG%20By%202017','GM Promises To Make More Vehicles That Get 40 MPG By 2017 -- U.S. News Best Cars')" class="share-link twitter-share"></a>
+	<a class="share-link fb-button" href="http://www.facebook.com/share.php?u=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/')" onclick="return fbs_click('/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/','GM%20Promises%20To%20Make%20More%20Vehicles%20That%20Get%2040%20MPG%20By%202017','GM Promises To Make More Vehicles That Get 40 MPG By 2017 -- U.S. News Best Cars')" target="_blank" title="Share on Facebook..."></a>
+	<a class="share-link email-share" href="/cars-trucks/aj/emailshare/?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/')&title=GM%20Promises%20To%20Make%20More%20Vehicles%20That%20Get%2040%20MPG%20By%202017" onclick="return es_click('/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/','GM%20Promises%20To%20Make%20More%20Vehicles%20That%20Get%2040%20MPG%20By%202017','GM Promises To Make More Vehicles That Get 40 MPG By 2017 -- U.S. News Best Cars')" target="_blank">&nbsp;</a>
+</div>
+				
+				<ul class="byline">
+					<li><a class="blog-author" href="/cars-trucks/best-cars-blog/jenny-strieter">Jenny Strieter</a></li> 
+					<li>12:11PM Jul 15, 2013</li>
+					<li class="last"><a class="blog-comments-link" href="/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/#user_comments">Comments (1)</a></li>			
+				</ul>
+				
+				<div class="blog-content">
+					
+						
+							<img src="http://static.usnews.rankingsandreviews.com/images/article/201307/124776/2014-Chevrolet-SparkEV-050-medium.jpg" alt="2014 Chevrolet Spark EV" />			
+						
+					
+		
+					Eight General Motors models will get 40 mpg or higher by 2017, according to a GM press release regarding the 2012 Sustainability Report. The company plans on doubling the amount of vehicles that receive those ratings by 2017 along with other objectives including increasing the number of electrified vehicles out on the road and decreasing the amount of carbon dioxide emissions from its vehicles.
+Dan Akerson, chairman and CEO of General Motors, says, &ldquo;Our long-term approach to sustainability enables us ...
+					<a class="continue" href="/cars-trucks/best-cars-blog/2013/07/GM_Promises_To_Make_More_Vehicles_That_Get_40_MPG_By_2017/">continue reading<span>&raquo;</span></a>
+					
+					<p class="tags-list">Tags:
+					
+						
+							<a href="/cars-trucks/best-cars-blog/news">News</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/electric-cars">electric cars</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/cafe-fuel-economy">cafe fuel economy</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/general-motors">General Motors</a>
+						
+					
+					</p>
+					
+				</div>	
+			</div>
+		
+			<div class="blog-entry"  >
+				<h2><a href="/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/">Hybrid and Electric Vehicle Owners Could Pay Additional Taxes</a></h2>
+				
+				
+
+<div class="share-buttons">
+	<a target="_blank" href="http://twitter.com/share?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/')" onclick="return ts_click('/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/','Hybrid%20and%20Electric%20Vehicle%20Owners%20Could%20Pay%20Additional%20Taxes','Hybrid and Electric Vehicle Owners Could Pay Additional Taxes -- U.S. News Best Cars')" class="share-link twitter-share"></a>
+	<a class="share-link fb-button" href="http://www.facebook.com/share.php?u=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/')" onclick="return fbs_click('/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/','Hybrid%20and%20Electric%20Vehicle%20Owners%20Could%20Pay%20Additional%20Taxes','Hybrid and Electric Vehicle Owners Could Pay Additional Taxes -- U.S. News Best Cars')" target="_blank" title="Share on Facebook..."></a>
+	<a class="share-link email-share" href="/cars-trucks/aj/emailshare/?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/')&title=Hybrid%20and%20Electric%20Vehicle%20Owners%20Could%20Pay%20Additional%20Taxes" onclick="return es_click('/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/','Hybrid%20and%20Electric%20Vehicle%20Owners%20Could%20Pay%20Additional%20Taxes','Hybrid and Electric Vehicle Owners Could Pay Additional Taxes -- U.S. News Best Cars')" target="_blank">&nbsp;</a>
+</div>
+				
+				<ul class="byline">
+					<li><a class="blog-author" href="/cars-trucks/best-cars-blog/jenny-strieter">Jenny Strieter</a></li> 
+					<li>11:07AM Jun 03, 2013</li>
+					<li class="last"><a class="blog-comments-link" href="/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/#user_comments">Comments (6)</a></li>			
+				</ul>
+				
+				<div class="blog-content">
+					
+						
+							<img src="http://static.usnews.rankingsandreviews.com/images/article/201306/124739/UsndcfilesrvstrieterjNews_20132013LEAF_016.jpg" alt="2013 Nissan Leaf" />			
+						
+					
+		
+					If you live in a state that charges gasoline tax and you drive an electric or hybrid vehicle, you may have to start paying extra fees. ABC News reports that North Carolina, along with some other states, is considering legislation that would charge fees to electric and hybrid car drivers. Many states depend on a gas tax to fund road maintenance. With more fuel-efficient cars and electric vehicles on the road, state governments who charge this tax aren&rsquo;t receiving ...
+					<a class="continue" href="/cars-trucks/best-cars-blog/2013/06/Hybrid_and_Electric_Vehicle_Owners_Could_Pay_Additional_Taxes/">continue reading<span>&raquo;</span></a>
+					
+					<p class="tags-list">Tags:
+					
+						
+							<a href="/cars-trucks/best-cars-blog/news">News</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/electric-cars">electric cars</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/hybrid-vehicles">Hybrid vehicles</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/gas-tax">gas tax</a>
+						
+					
+					</p>
+					
+				</div>	
+			</div>
+		
+			<div class="blog-entry"  >
+				<h2><a href="/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/">Chevrolet Spark EV Earns Better MPGe Rating than Honda Fit EV, Fiat 500e and Mitsubishi i-MiEV</a></h2>
+				
+				
+
+<div class="share-buttons">
+	<a target="_blank" href="http://twitter.com/share?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/')" onclick="return ts_click('/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/','Chevrolet%20Spark%20EV%20Earns%20Better%20MPGe%20Rating%20than%20Honda%20Fit%20EV%2C%20Fiat%20500e%20and%20Mitsubishi%20i-MiEV','Chevrolet Spark EV Earns Better MPGe Rating than Honda Fit EV, Fiat 500e and Mitsubishi i-MiEV -- U.S. News Best Cars')" class="share-link twitter-share"></a>
+	<a class="share-link fb-button" href="http://www.facebook.com/share.php?u=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/')" onclick="return fbs_click('/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/','Chevrolet%20Spark%20EV%20Earns%20Better%20MPGe%20Rating%20than%20Honda%20Fit%20EV%2C%20Fiat%20500e%20and%20Mitsubishi%20i-MiEV','Chevrolet Spark EV Earns Better MPGe Rating than Honda Fit EV, Fiat 500e and Mitsubishi i-MiEV -- U.S. News Best Cars')" target="_blank" title="Share on Facebook..."></a>
+	<a class="share-link email-share" href="/cars-trucks/aj/emailshare/?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/')&title=Chevrolet%20Spark%20EV%20Earns%20Better%20MPGe%20Rating%20than%20Honda%20Fit%20EV%2C%20Fiat%20500e%20and%20Mitsubishi%20i-MiEV" onclick="return es_click('/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/','Chevrolet%20Spark%20EV%20Earns%20Better%20MPGe%20Rating%20than%20Honda%20Fit%20EV%2C%20Fiat%20500e%20and%20Mitsubishi%20i-MiEV','Chevrolet Spark EV Earns Better MPGe Rating than Honda Fit EV, Fiat 500e and Mitsubishi i-MiEV -- U.S. News Best Cars')" target="_blank">&nbsp;</a>
+</div>
+				
+				<ul class="byline">
+					<li><a class="blog-author" href="/cars-trucks/best-cars-blog/liz-opsitnik">Liz Opsitnik</a></li> 
+					<li>12:11PM Apr 25, 2013</li>
+					<li class="last"><a class="blog-comments-link" href="/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/#user_comments">Comments (0)</a></li>			
+				</ul>
+				
+				<div class="blog-content">
+					
+						
+							<img src="http://static.usnews.rankingsandreviews.com/images/article/201304/124712/2014_Chevrolet_Spark_EV_445w.jpg" alt="2014 Chevrolet Spark EV" />			
+						
+					
+						
+					
+						
+					
+		
+					The 2014 Chevrolet Spark EV has earned a 119 mpg-equivalent combined city/highway fuel economy rating from the EPA, Chevrolet says in a statement. The subcompact Spark EV is expected to travel 82 miles on a fully-charged battery.
+The Spark EV edges out the 2013 Honda Fit EV, which has a 118 combined mpg-e rating, the 2013 Fiat 500e&rsquo;s 116 mpg-e and the 2013 Mitsubishi i-MiEV&rsquo;s 112 mpg-e, but is beaten by the 2013 Scion iQ EV&rsquo;s ...
+					<a class="continue" href="/cars-trucks/best-cars-blog/2013/04/Chevrolet_Spark_EV_Earns_Better_MPGe_Rating_than_Honda_Fit_EV_Fiat_500e_and_Mitsubishi_i-MiEV/">continue reading<span>&raquo;</span></a>
+					
+					<p class="tags-list">Tags:
+					
+						
+							<a href="/cars-trucks/best-cars-blog/model-news">Model News</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/electric-cars">electric cars</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/fuel-economy">Fuel Economy</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/chevrolet-spark-ev">Chevrolet Spark EV</a>
+						
+					
+					</p>
+					
+				</div>	
+			</div>
+		
+			<div class="blog-entry"  >
+				<h2><a href="/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/">i3 Prototype Showcases BMW's Future</a></h2>
+				
+				
+
+<div class="share-buttons">
+	<a target="_blank" href="http://twitter.com/share?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/')" onclick="return ts_click('/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/','i3%20Prototype%20Showcases%20BMW%27s%20Future','i3 Prototype Showcases BMW&#39;s Future -- U.S. News Best Cars')" class="share-link twitter-share"></a>
+	<a class="share-link fb-button" href="http://www.facebook.com/share.php?u=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/')" onclick="return fbs_click('/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/','i3%20Prototype%20Showcases%20BMW%27s%20Future','i3 Prototype Showcases BMW&#39;s Future -- U.S. News Best Cars')" target="_blank" title="Share on Facebook..."></a>
+	<a class="share-link email-share" href="/cars-trucks/aj/emailshare/?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/')&title=i3%20Prototype%20Showcases%20BMW%27s%20Future" onclick="return es_click('/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/','i3%20Prototype%20Showcases%20BMW%27s%20Future','i3 Prototype Showcases BMW&#39;s Future -- U.S. News Best Cars')" target="_blank">&nbsp;</a>
+</div>
+				
+				<ul class="byline">
+					<li><a class="blog-author" href="/cars-trucks/best-cars-blog/colin-aylesworth">Colin Aylesworth</a></li> 
+					<li>12:38PM Apr 12, 2013</li>
+					<li class="last"><a class="blog-comments-link" href="/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/#user_comments">Comments (0)</a></li>			
+				</ul>
+				
+				<div class="blog-content">
+					
+						
+							<img src="http://static.usnews.rankingsandreviews.com/images/article/201304/124701/BMW_i3_Concept_Coupe25.jpg" alt="BMW i3, BMW, i3 Concept Coupe" />			
+						
+					
+						
+					
+		
+					Last year, the BMW i3 Concept Coupe was introduced at the Los Angeles Auto Show. BMW i is a new subdivision of BMW that will introduce electric and hybrid-electric vehicles to the automaker&rsquo;s lineup. BMW released a statement last December confirming that production of the electric i3 will start by the end of 2013. Elaborating on the release date, Car and Driver reports that the i3 will hit U.S. dealers in early 2014.
+Some sources have detailed a ...
+					<a class="continue" href="/cars-trucks/best-cars-blog/2013/04/I3_Prototype_Showcases_BMWs_Future/">continue reading<span>&raquo;</span></a>
+					
+					<p class="tags-list">Tags:
+					
+						
+							<a href="/cars-trucks/best-cars-blog/bmw">BMW</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/model-news">Model News</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/electric-cars">electric cars</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/bmw-i3">BMW i3</a>
+						
+					
+					</p>
+					
+				</div>	
+			</div>
+		
+			<div class="blog-entry blog-entry-last"  >
+				<h2><a href="/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/">Government Touts Electric Vehicles at Washington Auto Show</a></h2>
+				
+				
+
+<div class="share-buttons">
+	<a target="_blank" href="http://twitter.com/share?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/')" onclick="return ts_click('/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/','Government%20Touts%20Electric%20Vehicles%20at%20Washington%20Auto%20Show','Government Touts Electric Vehicles at Washington Auto Show -- U.S. News Best Cars')" class="share-link twitter-share"></a>
+	<a class="share-link fb-button" href="http://www.facebook.com/share.php?u=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/')" onclick="return fbs_click('/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/','Government%20Touts%20Electric%20Vehicles%20at%20Washington%20Auto%20Show','Government Touts Electric Vehicles at Washington Auto Show -- U.S. News Best Cars')" target="_blank" title="Share on Facebook..."></a>
+	<a class="share-link email-share" href="/cars-trucks/aj/emailshare/?url=encodeURIComponent('http://usnews.rankingsandreviews.com/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/')&title=Government%20Touts%20Electric%20Vehicles%20at%20Washington%20Auto%20Show" onclick="return es_click('/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/','Government%20Touts%20Electric%20Vehicles%20at%20Washington%20Auto%20Show','Government Touts Electric Vehicles at Washington Auto Show -- U.S. News Best Cars')" target="_blank">&nbsp;</a>
+</div>
+				
+				<ul class="byline">
+					<li><a class="blog-author" href="/cars-trucks/best-cars-blog/colin-aylesworth">Colin Aylesworth</a></li> 
+					<li>11:19AM Feb 01, 2013</li>
+					<li class="last"><a class="blog-comments-link" href="/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/#user_comments">Comments (3)</a></li>			
+				</ul>
+				
+				<div class="blog-content">
+					
+						
+							<img src="http://static.usnews.rankingsandreviews.com/images/article/201302/124639/DC_Auto_Show_2013_222.jpg" alt="" />			
+						
+					
+		
+					The U.S. Department of Energy outlined ambitious goals to increase the use of electric vehicles and reduce battery costs for consumers at the Washington, D.C. Auto Show. Dr. David Danielson, the assistant secretary for energy efficiency and renewable energy, said Thursday at a press conference at the auto show that electric vehicles are &ldquo;an essential part&rdquo; of the Obama administration&rsquo;s all-encompassing approach to reducing our dependence on imported fossil fuels.
+Danielson also spoke about the government&rsquo;s ...
+					<a class="continue" href="/cars-trucks/best-cars-blog/2013/02/Government_Touts_Electric_Vehicles_at_Washington_Auto_Show/">continue reading<span>&raquo;</span></a>
+					
+					<p class="tags-list">Tags:
+					
+						
+							<a href="/cars-trucks/best-cars-blog/news">News</a>,
+						
+					
+						
+							<a href="/cars-trucks/best-cars-blog/electric-cars">electric cars</a>
+						
+					
+					</p>
+					
+				</div>	
+			</div>
+		
+	
+
+	
+	
+		<a id="next-link" href="/cars-trucks/best-cars-blog/electric-cars/page1/">Next &raquo;</a>
+	
+
+		</div>
+
+		<div id="sidebar">
+			
+			
+	<div class="widget">
+	<h4>About this Blog</h4>
+	<div class="widget-body about-blog">
+		<p>
+			Managing Editor Jamie Page Deaton and the U.S. News Best Cars team bring you the latest car news, deals and advice. 
+			Join the conversation &mdash; we'd love to hear from you and help you choose your new car.
+		</p>
+		<div id="about-share">
+			Follow us: 
+			<a href="/cars-trucks/feeds/daily-news-rss/best-cars-blog/" class="rss-link"></a>
+			<a class="fb-link" href="http://www.facebook.com/usnewsbestcars" target="_blank" title="Follow us on Facebook..."></a>
+			<a class="twitter-link" target="_blank" href="http://twitter.com/#!/USNewsCars"></a>
+		</div>
+	</div>
+</div>
+	
+
+
+
+
+
+
+
+
+
+
+	<div id="doubleclickTile2" style="display:none;" class="ad_right ad">
+		<span class="usn-label">advertisement</span>
+		<script type="text/javascript">
+		
+		renderDoubleClickDynamic(2, adParameters,false);
+		
+		</script>
+		<script type="text/javascript">
+			adValidator("doubleclickTile2");
+			setTimeout(function() {adValidator("doubleclickTile2")},500);
+		</script>
+	</div>
+
+
+
+
+	
+
+<script>
+$(document).ready(function() {
+
+	//When page loads...
+	$(".search-tab_content").hide(); //Hide all content
+	$("ul.search-tabs li:first").addClass("active").show(); //Activate first tab
+	$(".search-tab_content:first").show(); //Show first tab content
+
+	//On Click Event
+	$("ul.search-tabs li").click(function() {
+
+		$("ul.search-tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		if($(this).children('a').attr('href') == '#archives-tab'){
+			$(this).css('padding-bottom','9px');
+			$(this).prev().css('margin-left','5px');
+		} else{
+			$(this).next().css('padding-bottom','7px');
+			$(this).css('margin-left','0px');
+		}
+		$(".search-tab_content").hide(); //Hide all tab content
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		$(activeTab).show();
+		return false;
+	});
+
+});
+</script>
+
+
+<div id="search-widget">
+
+	<ul class="search-tabs">
+		<li><a href="#category-tab">Categories</a></li>
+		<li><a href="#archives-tab">Archives</a></li>
+	</ul>
+	
+<div id="blog-search-tab-container">
+	<div id="category-tab" class="search-tab_content">
+		<p>
+		
+			
+					<a href="/cars-trucks/best-cars-blog/analysis">Analysis</a>,
+				
+		
+			
+					<a href="/cars-trucks/best-cars-blog/features">Features</a>,
+				
+		
+			
+					<a href="/cars-trucks/best-cars-blog/model-news">Model News</a>,
+				
+		
+			
+					<a href="/cars-trucks/best-cars-blog/news">News</a>,
+				
+		
+			
+					<a href="/cars-trucks/best-cars-blog/rankings">Rankings</a>,
+				
+		
+			
+					<a href="/cars-trucks/best-cars-blog/test-drives">Test Drives</a>,
+				
+		
+			
+					<a href="/cars-trucks/best-cars-blog/tips-and-advice">Tips and Advice</a>
+				
+		
+		</p>
+	</div>
+	<div id="archives-tab" class="search-tab_content">
+		<p>
+		
+			<a href="/cars-trucks/best-cars-blog/2013">2013</a>:
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/08">August</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/07">July</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/06">June</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/05">May</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/04">April</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/03">March</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/02">February</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2013/01">January</a>
+			 
+			
+			<br />
+		
+			<a href="/cars-trucks/best-cars-blog/2012">2012</a>:
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/12">December</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/11">November</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/10">October</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/09">September</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/08">August</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/07">July</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/06">June</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/05">May</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/04">April</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/03">March</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/02">February</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2012/01">January</a>
+			 
+			
+			<br />
+		
+			<a href="/cars-trucks/best-cars-blog/2011">2011</a>:
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/12">December</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/11">November</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/10">October</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/09">September</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/08">August</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/07">July</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/06">June</a> | 
+			 
+			
+			 
+			 	<a href="/cars-trucks/best-cars-blog/2011/05">May</a>
+			 
+			
+			<br />
+		
+		</p>
+	</div>
+</div>
+
+</div>
+	
+
+
+<div class="widget">
+	<h4>U.S. News Best Price Program</h4>
+	<div class="widget-body best-price-program">
+		<p>Buying a new car should always be this hassle-free. <a href="/cars-trucks/best-price-program/"><strong>Learn more &raquo;</strong></a></p>
+		<img id="best-price-logo" src="/images/bpp-logo.png" alt="U.S. News Best Price Program" />
+		<ul>
+			<li>Shoppers have seen average savings of $2,973 off MSRP</li>
+			<li>Upfront pricing &amp; guaranteed savings from certified dealers</li>
+			<li>No high pressure sales tactics</li>
+		</ul>
+		<script type="text/javascript" src="/cars-trucks/dynamic_scripts/auto_finder.js"></script>
+
+
+	<form id="bpp-form" method="GET">
+		<select name="auto_make" id="af_make_zag">
+			<option value="ALL BRANDS">Select Make</option>
+			
+				<option value="acura">Acura</option>
+			
+				<option value="audi">Audi</option>
+			
+				<option value="bmw">BMW</option>
+			
+				<option value="buick">Buick</option>
+			
+				<option value="cadillac">Cadillac</option>
+			
+				<option value="chevrolet">Chevrolet</option>
+			
+				<option value="chrysler">Chrysler</option>
+			
+				<option value="dodge">Dodge</option>
+			
+				<option value="fiat">FIAT</option>
+			
+				<option value="ford">Ford</option>
+			
+				<option value="gmc">GMC</option>
+			
+				<option value="honda">Honda</option>
+			
+				<option value="hyundai">Hyundai</option>
+			
+				<option value="infiniti">Infiniti</option>
+			
+				<option value="jaguar">Jaguar</option>
+			
+				<option value="jeep">Jeep</option>
+			
+				<option value="kia">Kia</option>
+			
+				<option value="land-rover">Land Rover</option>
+			
+				<option value="lexus">Lexus</option>
+			
+				<option value="lincoln">Lincoln</option>
+			
+				<option value="mazda">Mazda</option>
+			
+				<option value="mercedes-benz">Mercedes-Benz</option>
+			
+				<option value="mini">MINI</option>
+			
+				<option value="mitsubishi">Mitsubishi</option>
+			
+				<option value="nissan">Nissan</option>
+			
+				<option value="porsche">Porsche</option>
+			
+				<option value="ram">Ram</option>
+			
+				<option value="scion">Scion</option>
+			
+				<option value="smart">Smart</option>
+			
+				<option value="subaru">Subaru</option>
+			
+				<option value="suzuki">Suzuki</option>
+			
+				<option value="toyota">Toyota</option>
+			
+				<option value="volkswagen">Volkswagen</option>
+			
+				<option value="volvo">Volvo</option>
+			
+		</select>
+		<select name="auto_model" id="af_model_zag"  disabled="disabled">
+			 <option value="-1">Select Model</option>
+		</select>
+		<input type="text" id="af_zipcode_zag" class="zip-field"/>		
+		<img id="finder-submit-zag" alt="submit" src="/images/go-btn.png" />
+	</form>
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var make_zag=document.getElementById("af_make_zag");
+		var model_zag=document.getElementById("af_model_zag");
+		
+			$("#af_make_zag").quickChange(function(){
+				populateModelDropdown(null,make_zag,model_zag,"HAS_LEADS");
+			});
+		
+		
+		$("#finder-submit-zag").click(function(){
+			submit_full_zag_form();
+		});
+		
+		$('#bpp-form').submit(function () {
+			submit_full_zag_form();
+		    return false;    
+		});
+				
+		if ($("#af_make_zag").val() != "ALL BRANDS") {
+			populateModelDropdown(null,make_zag,model_zag,null);
+		}			
+	});
+	
+	function submit_full_zag_form() {
+		var chromeId = getLatestYearChrome($('#af_make_zag').val(),$('#af_model_zag option:selected').html());
+		var zipCode = $('#af_zipcode_zag').val();
+		var re = /^\d{5}([\-]\d{4})?$/;
+		var referrer_id = "ZUSNA0012";
+		if ($("#af_make_zag").val() == "ALL BRANDS"){
+			alert("Please choose a make");
+			return false;
+		}else {
+			if ($("#af_model_zag").val() == "NO MODEL"){
+				alert("Please choose a model");
+				return false;
+			}else {
+				if (!re.test(zipCode)) {
+					alert("Please enter a valid zip code");
+					return false;
+				}
+			}
+		}
+		submit_zag_form(chromeId, zipCode, referrer_id);
+	}
+</script>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {     		
+    	
+	});	
+</script>
+	
+
+
+	
+		<div class="widget custom-promo deals-widget">
+			<h4>Car Deals: August 2013</h4>
+			<div class="widget-body">
+				<p class="deals-widget">We've compiled a list of the best car deals available in the U.S. for this month.</p>
+<div class="deals-widget">
+<ul id="deal-types">
+<li id="new-deals" class="deals-btn"><a href="/cars-trucks/Best-Car-Deals/"><span>New Deals</span></a></li>
+<li id="lease-deals" class="deals-btn"><a href="/cars-trucks/best-car-deals/Car-Lease-Deals/"><span>Lease Deals</span></a></li>
+<li id="used-deals" class="deals-btn" style="margin-right: 0px;"><a href="/cars-trucks/Best-Car-Deals/Used-Car-Sales-and-Deals/"><span>Used Deals</span></a></li>
+</ul>
+</div>
+<h5>Deals by Manufacturer:</h5>
+<ul id="deal-manufacturer">
+<li><a href="/cars-trucks/Best-car-deals/Chevrolet-Deals/">Chevy Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Ford-Deals/">Ford Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Honda-Deals/">Honda Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Hyundai-Deals/">Hyundai Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Kia-Deals/">Kia Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Mazda-Deals/">Mazda Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Nissan-Deals/">Nissan Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Toyota-Deals/">Toyota Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Volkswagen-Deals/">VW Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Lexus-Deals/">Lexus Deals</a></li>
+<li><a href="/cars-trucks/best-car-deals/Subaru-Deals/">Subaru Deals</a></li>
+<li style="width: 34%;"><a href="/cars-trucks/best-car-deals/buick-and-GMC-Deals/">Buick/GMC Deals</a></li>
+</ul>
+			</div>
+		</div>
+	
+
+	<div class="widget text-promo best-cars">
+	<h4>2013 Best Cars for the Money Awards</h4>
+	<div class="widget-body">
+		<img class="show-right" alt="2013 Best Cars for the Money Awards" src="/images/cars-trucks/badges/Badge_BestCars_ForTheMoney_small.png">
+		<h5>Find great cars that are also great values.</h5>
+		<ul>
+			<li>Compact Car: <a href="/cars-trucks/Ford_Focus/2013/">Ford Focus</a></li>
+			<li>3-Row Midsize SUV: <a href="/cars-trucks/Hyundai_Santa-Fe/2013/">Hyundai Santa Fe</a></li>
+			<li>Compact SUV: <a href="/cars-trucks/Ford_Escape/2013/">Ford Escape</a></li>
+		</ul>
+	<p><a href="/cars-trucks/Best-Cars-for-the-Money/"><b>See all Best Cars for the Money for 2013 &raquo;</b></a></p>
+	
+	<div id="bcff">
+		<p>Find the right car for your family:<br>
+		<a href="/cars-trucks/Best-Cars-for-Families/">2013 Best Cars for Families Awards &raquo;</a></p>
+	</div>
+	</div>
+</div>
+
+	
+
+
+<div class="widget list-promo">
+	<h4>Top-Ranked Vehicles</h4>
+	<div class="widget-body">
+		
+
+		
+			
+
+<ul>
+<li><a href="/cars-trucks/rankings/Affordable-Midsize-SUVs/">Affordable Midsize SUVs</a></li>
+<li><a href="/cars-trucks/rankings/Full-Size-Pickup-Trucks/">Full Size Pickup Trucks</a></li>
+<li><a href="/cars-trucks/rankings/Affordable-Small-Cars/">Affordable Small Cars</a></li>
+<li><a href="/cars-trucks/rankings/Upscale-Midsize-Cars/">Upscale Midsize Cars</a></li>
+<li><a href="/cars-trucks/rankings/Affordable-Midsize-Cars/">Affordable Midsize Cars</a></li>
+</ul>
+
+<p><b><a href="/cars-trucks/rankings/">View&nbsp;rankings&nbsp;for all categories &raquo;</a></b></p>
+
+		
+	</div>
+</div>
+
+		
+
+		</div>
+		
+		<div id="foot-content">
+			
+	<div id="blog-footer">
+		<div class="blog-footer-column">
+			<h4><a href="/cars-trucks/browse/">New Cars &raquo;</a></h4>
+			<ul>
+				<li><a href="/cars-trucks/rankings/" class="blog-footer-link">New Car Rankings</a></li>
+				<li><a href="/cars-trucks/Best-Car-Deals/" class="blog-footer-link">New Car Deals</a></li>
+				<li><a href="/cars-trucks/browse/" class="blog-footer-link">Browse New Cars</a></li>
+			</ul>
+		</div>
+		<div class="blog-footer-column">
+			<h4><a href="/cars-trucks/used-cars/">Used Cars &raquo;</a></h4>
+			<ul>
+				<li><a href="/cars-trucks/used-cars/" class="blog-footer-link">Used Cars Home</a></li>
+				<li><a href="/cars-trucks/Best-Car-Deals/Used-Car-Sales-and-Deals/" class="blog-footer-link">Used Car Deals</a></li>
+				<li><a href="/cars-trucks/used-cars/Used_Car_Buying_Guide/" class="blog-footer-link">Used Car Buying Guide</a></li>
+			</ul>
+			
+		</div>
+		<div class="blog-footer-column">
+			<h4><a href="/cars-trucks/Best-Car-Deals/">Car Deals &raquo;</a></h4>
+			<ul>
+				<li><a href="/cars-trucks/Best-Car-Deals/" class="blog-footer-link">New Car Deals</a></li>
+				<li><a href="/cars-trucks/best-car-deals/Car-Lease-Deals/" class="blog-footer-link">Lease Deals </a></li>
+				<li><a href="/cars-trucks/Best-Car-Deals/Used-Car-Sales-and-Deals/" class="blog-footer-link">Used Car Deals </a></li>
+			</ul>
+		</div>
+		<div class="blog-footer-column">
+			<h4><a href="/cars-trucks/best-cars-blog/">Blog Posts &raquo;</a></h4>
+			<ul>
+				
+				<li><a href="/cars-trucks/best-cars-blog/2013/08/First_Pictures_of_Infiniti_Q30_Concept_Released/" class="blog-footer-link">First Pictures of Infiniti Q30 Concept Released</a></li>
+				
+				<li><a href="/cars-trucks/best-cars-blog/2013/08/Americans_Care_Less_About_Drunk_Driving_Other_Risky_Behaviors/" class="blog-footer-link">Americans Care Less About Drunk Driving, Other Risky Behaviors</a></li>
+				
+			</ul>
+		</div>
+		<div class="blog-footer-column last">
+			<h4><a href="/cars-trucks/Best-Cars-for-the-Money/">Awards &raquo;</a></h4>
+			<img src="/images/cars-trucks/badges/Badge_BestCars_Small.png" />
+			<ul>
+				<li><a href="/cars-trucks/Best-Cars-for-the-Money/" class="blog-footer-link">Best Cars for the Money</a></li>
+				<li><a href="/cars-trucks/Best-Cars-for-Families/" class="blog-footer-link">Best Cars for Families</a></li>
+			</ul>
+		</div>
+</div>
+
+	
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<ul id="foot-nav">
+			<!-- show if mob capable -->
+			<li class="first mob-hide" style="display:None"><a href="" onclick="mob_switch(this);return false;"><strong>Mobile Site</strong></a></li>
+			<li class="mob-hide" style="display:None"><a href="/aboutUs/">About Us</a></li>
+			<!-- show else -->
+			<li class="first mob-show"><a href="/aboutUs/">About Us</a></li>
+			<!-- end show if mob capable -->
+			<li><a href="/methodology/">How We Rank New Cars</a></li>
+			<li><a href="/methodology-used/">How We Rank Used Cars</a></li>
+			<li><a rel="nofollow" href="/contactUs/">Contact Us</a></li>
+			<li><a href="/siteMap/">Site Map</a></li>
+			<li><a href="http://www.usnews.com/">U.S. News Home</a></li>
+		</ul>
+		<div id="copy-legal">Use of this Web site constitutes acceptance of our <a rel="nofollow" href="/termsAndConditions/">Terms and Conditions of Use and Privacy Policy</a>. Copyright 2007-2013 &copy; U.S. News Rankings &amp; Reviews</div>
+	</div>
+	
+	<!-- mob links -->
+    <script type="text/javascript">
+        try {
+        	if ($.cookie("usn_is_mob") != undefined) {
+        	       $('.mob-hide').show();
+        	       $('.mob-show').hide();
+        	}   
+        }
+        catch (ex) {
+        }
+    </script>
+	<!-- end mob links -->
+	
+	<!-- Begin comScore Tag -->
+<script type="text/javascript">document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));</script>
+<script type="text/javascript">COMSCORE.beacon({    c1:2,    c2:"11307981",    c3:"",    c4:escape(window.location),    c5:"",    c6:"autos",    c15:""  });</script><noscript>  <div><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=11307981&amp;c3=&amp;c4=&amp;c5=&amp;c6=autos&amp;c15=&amp;cj=1" alt="comScore"/></div></noscript>
+<!-- End comScore Tag -->
+
+
+	
+	
+
+	<!-- Start Quantcast tag -->
+	<script type="text/javascript">
+	_qoptions={
+	qacct:"p-efoP1AkkGV9EU"
+	};
+	</script>
+	<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+	<noscript>
+	<img src="http://pixel.quantserve.com/pixel/p-efoP1AkkGV9EU.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+	</noscript>
+	<!-- End Quantcast tag -->
+	
+	<!-- crazyegg -->
+	<script type="text/javascript">document.write(unescape('%3Cscript type="text/javascript" src="'+document.location.protocol+'//dnn506yrbagrg.cloudfront.net/pages/scripts/0010/9297.js"%3E%3C%2Fscript%3E'))</script>
+	<!-- end crazy egg -->
+	
+	<!-- Begin BlueKai Tag -->
+	<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+	<script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
+	<script type="text/javascript">
+	if (gl_js_adsrc){
+		try {  
+			bk_addPageCtx("Year",(typeof(getAdParam(gl_js_adsrc,"yr"))!='undefined')?getAdParam(gl_js_adsrc,"yr"):'');
+			bk_addPageCtx("Model",(typeof(getAdParam(gl_js_adsrc,"mod"))!='undefined')?getAdParam(gl_js_adsrc,"mod"):'');
+			bk_addPageCtx("Make",(typeof(getAdParam(gl_js_adsrc,"mak"))!='undefined')?getAdParam(gl_js_adsrc,"mak"):'');
+			if (typeof(getAdParam(gl_js_adsrc,"body"))!='undefined') {
+				bk_addPageCtx("Body",(typeof(getAdParam(gl_js_adsrc,"body"))!='undefined')?getAdParam(gl_js_adsrc,"body"):'');
+			} else {
+				bk_addPageCtx("Body",(typeof(getAdParam(gl_js_adsrc,"type"))!='undefined')?getAdParam(gl_js_adsrc,"type"):'');
+			}
+			bk_addPageCtx("Type",(typeof(getAdParam(gl_js_adsrc,"type"))!='undefined')?getAdParam(gl_js_adsrc,"type"):'');
+			bk_addPageCtx("Style",(typeof(getAdParam(gl_js_adsrc,"style"))!='undefined')?getAdParam(gl_js_adsrc,"style"):'');
+			bk_addPageCtx("Section",(typeof(getAdParam(gl_js_adsrc,"prod"))!='undefined')?getAdParam(gl_js_adsrc, "prod"):'');
+			
+			bk_addPageCtx("Location",encodeURIComponent(document.location));
+			
+			
+			bk_ignore_meta = true;
+			bk_doJSTag(14415, 10);
+		}
+		catch (e) {console.error("bluekai error:" + e.message);}
+	}
+	</script>
+	<!-- End BlueKai Tag -->
+</body>
+
+</html>
+

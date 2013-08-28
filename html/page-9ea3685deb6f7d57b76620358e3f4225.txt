@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="Author" content="Apple Inc." />
+	<meta name="viewport" content="width=1024" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+	<link id="globalheader-stylesheet" rel="stylesheet" href="http://images.apple.com/global/nav/styles/navigation.css" type="text/css" />
+	
+
+	<title>Apple Retail Store - Business</title>
+	<meta name="omni_page" content="Retail Store - Business" />
+	<meta name="Description" content="We work with everyone from owners looking to expand the use of technology to IT professionals supporting Apple products at their companies." />
+	<link rel="stylesheet" href="http://images.apple.com/global/styles/base.css" type="text/css" />
+	<link rel="stylesheet" href="http://images.apple.com/v/retail/d/styles/retail.css" type="text/css" />
+	<link rel="stylesheet" href="http://images.apple.com/retail/styles/retail.css" type="text/css" />
+	<script src="http://images.apple.com/global/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/scripts/lib/sizzle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/scripts/feedstatistics.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/ac_base/ac_base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/global/ac_retina/ac_retina.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="http://images.apple.com/global/scripts/lib/event_mixins.js"></script>
+<script src="http://images.apple.com/global/scripts/swap_view.js"></script>
+<script src="http://images.apple.com/global/scripts/view_master_tracker.js"></script>
+<script src="http://images.apple.com/global/scripts/ac_autogallery.js"></script>
+<script src="http://images.apple.com/v/retail/d/scripts/util.js"></script>
+
+	<script src="http://images.apple.com/v/retail/d/scripts/moreinfo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://images.apple.com/v/retail/d/scripts/globalsearch.core.js"></script>
+</head>
+<body id="business" class="retail business">
+	
+	<script type="text/javascript">
+		var searchSection = 'global';
+		var searchCountry = 'us';
+		var aiRequestsEnabled = true;
+		var aiDisplaySuggestions = true;
+	</script>
+
+<script src="http://images.apple.com/global/nav/scripts/globalnav.js" type="text/javascript" charset="utf-8"></script>
+<nav id="globalheader">
+	<!--googleoff: all-->
+	<ul id="globalnav" role="navigation">
+		<li id="gn-apple"><a href="/"><span>Apple</span></a></li>
+		<li id="gn-store"><a href="http://store.apple.com/"><span>Store</span></a></li>
+		<li id="gn-mac"><a href="/mac/"><span>Mac</span></a></li>
+		<li id="gn-ipod"><a href="/ipod/"><span>iPod</span></a></li>
+		<li id="gn-iphone"><a href="/iphone/"><span>iPhone</span></a></li>
+		<li id="gn-ipad"><a href="/ipad/"><span>iPad</span></a></li>
+		<li id="gn-itunes"><a href="/itunes/"><span>iTunes</span></a></li>
+		<li id="gn-support" class="gn-last"><a href="/support/"><span>Support</span></a></li>
+	</ul>
+	<!--googleon: all-->
+	<div id="globalsearch">
+		<form action="/search/" method="post" class="search" id="g-search"><div class="sp-label">
+			<label for="sp-searchtext">Search</label>
+			<input type="text" name="q" id="sp-searchtext" accesskey="s" />
+		</div></form>
+		<div id="sp-magnify"><div class="magnify-searchmode"></div><div class="magnify"></div></div>
+		<div id="sp-results"></div>
+	</div>
+</nav>
+<script type="text/javascript">
+	AC.GlobalNav.Instance = new AC.GlobalNav();
+</script>
+
+	<div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+
+
+	
+
+
+
+
+	
+
+
+<script type="text/javascript">
+/* RSID: */
+
+var s_account="appleglobal,appleretail"
+
+</script>
+
+
+	<script type="text/javascript" src="http://images.apple.com/metrics/scripts/s_code_h.js"></script>
+
+
+
+<script type="text/javascript">
+
+s.pageName=AC.Tracking.pageName()+" (us)";
+s.channel="www.us.retailstore"
+
+
+//Map Tracking
+if (typeof Event !== 'undefined' && typeof $$ === 'function' && AC && AC.retail && typeof AC.retail.EventDispatch === 'function') {
+
+	AC.retail.EventDispatch().subscribeEvent("*", "::globalSearchReady", function() {
+		eventManager = AC.retail.EventDispatch();
+		var isDescendentOfTag = function isDescendentOfTag(node, tagType, maxParentDepthLevel) {
+				if (node && tagType && maxParentDepthLevel) {
+					if (node.tagName === tagType) {
+						return node;
+					} else if (maxParentDepthLevel) {
+						return isDescendentOfTag(node.parentNode, tagType, maxParentDepthLevel -= 1);
+					} else {
+						return false;
+					}
+				}
+			};
+		var searchInstances = AC.retail.AutoGlobalSearch().getGlobalSearchInstances();
+		var updateAnalytics = function(prop3Val, customName, eVar16Val, eventsVal) {
+				AC.Tracking.trackClick({
+					prop3: prop3Val,
+					eVar16: eVar16Val,
+					events: eventsVal
+				}, this, 'o', customName);
+			};
+		var locationGroupEventsAttached;
+		var trackLocatorNetworkUpdate = function(isDefaultLocation) {
+			if (!isDefaultLocation) {
+				updateAnalytics("Retail index - Find a store - Search", "retail search locator", "retail store search", "event6");
+			}
+				if (!locationGroupEventsAttached) {
+					eventManager.subscribeEvent($$(".listView")[0], "down", function(evt) {
+						if (AC.Element.hasClassName(evt.target, "more")) {
+							updateAnalytics("Find a store - List - View Store Details", "List - View Store Details");
+						}
+					});
+					eventManager.subscribeEvent($$(".mapView")[0], "down", function(evt) {
+						if (evt && evt.target) {
+							if (isDescendentOfTag(evt.target, "A", 5) && AC.Element.hasClassName(isDescendentOfTag(evt.target, "A", 5), "store-info")) {
+								updateAnalytics("Find a store - Map - View Store Details", "Map - View Store Details");
+							} else if (isDescendentOfTag(evt.target, "A", 5)) {
+								updateAnalytics("Find a store - Map - Learn more", "Map - Learn more");
+							}
+						}
+					});
+					locationGroupEventsAttached = true;
+				}
+			};
+
+		searchInstances.forEach(function(instanceOfGlobalSearch) {
+			if (instanceOfGlobalSearch.module && typeof instanceOfGlobalSearch.module.getModuleType === "function") {
+				if (instanceOfGlobalSearch.module.getModuleType() === "retail-locator") {
+					eventManager.subscribeEvent(instanceOfGlobalSearch.module, "::newNetworkLocationResults", trackLocatorNetworkUpdate);
+				}
+			}
+		});
+	});
+
+}
+
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+	<div id="main">
+		<nav id="productheader" data-hires="true">
+	<h2><a href="/retail/"><img src="http://images.apple.com/retail/images/product_header.png" alt="Apple Retail Store" width="224" height="30"></a></h2>
+	<ul>
+		<li id="pn-shop"><a href="/retail/shop/">Shop</a></li>
+		<li id="pn-learn"><a href="/retail/learn/">Learn</a></li>
+		<li id="pn-geniusbar"><a href="/retail/geniusbar/">Genius Bar</a></li>
+		<li id="pn-business"><a href="/retail/business/">Business</a></li>
+		
+			<li class="makereservation"><a href="http://concierge.apple.com/reservation/us/en/biz_consult/">Make a reservation</a></li>
+		
+	</ul>
+</nav>
+		<div id="content" data-hires="true" class="content">
+			<header class="sharednav">
+ 	<h1><img src = "http://images.apple.com/retail/business/images/title.png" width="648" height="40" alt="The best place to buy for business."/></h1>
+		<p class="intro">The dedicated Business Team at the Apple Store will take the time to learn about you and your business. We’ll do more than make sure you get the products and services you need — we’ll build a partnership so you’ll always have a trusted source for advice and inspiration.</p>
+
+<nav class="buttons">
+	<ul>
+		<li class="business one">
+			<a href ="/retail/business/" class="active">
+				<div class="active-button">
+					<h3></h3>
+				</div>
+				<p><span>We’ll work with you to </span>find the perfect solutions.</p>
+			</a>
+		</li>
+		<li class="joint-venture">
+			<a href ="/retail/jointventure/" class="passive">
+				<div class="passive-button">
+					<h3></h3>
+				</div>
+				<p><span>Setup, training, and support</span> for your business.</p>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+</header>
+			<section class="business">
+				<h1>Meet the Business Team.</h1>
+				<p>The Business Team knows technology inside and out. We work with businesses of all types and sizes — everyone from owners looking to expand the use of technology to IT professionals supporting Apple products at their companies. And because we have Apple Store locations all over the world, we’re available wherever you need us.</p>
+			</section>
+
+			<section class="events grid2col">
+			 	<div class="curved-shadow-small column first">
+					<img src="http://images.apple.com/retail/business/images/main.jpg" width="357" height="228" alt="" />
+				</div>
+				<div class="column last">
+					<h2>Come in for events.</h2>
+					<p>We offer events that feature industry experts like app developers, executives, and business owners throughout the year. You and your employees can learn from other professionals, exchange ideas, and network with peers in your community. <a href="http://itunes.apple.com/us/artist/ipad-in-business/id419220209?mt=2" class="more">View past events in iTunes</a></p>
+				</div>
+			</section>
+
+			<section class="brief grid2col">
+				<div class="column first">
+					<h2>Schedule a Briefing.</h2>
+					<p>When you’re ready for an in-depth discussion of your business needs, schedule a Briefing. You’ll meet with the Business Team in a quiet, relaxed setting at the store, either before regular hours or in a dedicated Briefing Room. We’ll work with you to find the right solutions — whether hardware, software, or services. We can even introduce you to a member of the <a href="http://consultants.apple.com/">Apple Consultants Network</a> to help get you up and running. </p>
+				</div>
+				<div class="curved-shadow-small column last">
+					<img src="http://images.apple.com/retail/business/images/events.jpg" width="357" height="228" alt=""  />
+				</div>
+			</section>
+
+			<section class="options">
+				<h2>Choose from flexible purchasing options.</h2>
+				<p>We offer a range of ways to purchase products, including lease programs, payment plans, and other <a href="/financing/">financing offers</a>. Need products right away? We have immediate access to store inventory. We can also custom-configure your products and have them shipped directly to your location.</p>
+			</section>
+
+			<section class="support grid2col">
+				<div class="curved-shadow-small column first">
+					<img src="http://images.apple.com/retail/business/images/support.jpg" width="357" height="228" alt="" />
+				</div>
+				<div class="column last">
+					<h2>Get support that goes beyond the basics.</h2>
+					<p>The Genius Bar is where you’ll get hands-on technical support for your Apple products, and our <a href="/retail/learn/">workshops</a> will help you and your employees learn new skills. For dedicated business support that’s customized for your company, consider <a href="/retail/jointventure/">Joint Venture</a>. With Joint Venture, we’ll set up your new Apple products, train you and your employees to get the most out of them, and make sure everything stays working with in-person and telephone&nbsp;support.</p>
+				</div>
+			</section>
+		</div><!--content-->
+		<aside class="faq shadow rounded gallery">
+			<a class="moreinfo-trigger" href="#">
+				<span class="moreinfo-link moreinfo-open">Open</span>
+				<span class="moreinfo-link moreinfo-close">Close</span>
+				<h2>Read frequently asked questions.</h2>
+			</a>
+			<dl id="moreinfo" class="moreinfo">
+			<dt>Can I meet the Business Team without an appointment?</dt>
+			<dd>Yes. Every store has a Business Team, and you should be able to meet with a Business Team member each time you visit a store — whether or not you have an appointment.</dd>
+
+			<dt>Can I work with more than one store?</dt>
+			<dd>Yes. Your company can take advantage of the Business Team’s services at any Apple Store in the world, whether you’re located in town or traveling. Our Business Team will ensure you have a seamless experience in any Apple Store you visit.</dd>
+
+			<dt>Can I purchase an iPhone business plan from Apple?</dt>
+			<dd>In select countries, yes. Business customers in the U.S., UK, Canada,  Japan, Hong Kong, and Australia can purchase and activate business phone plans in our stores.</dd>
+
+			<dt>Will you preload content for volume purchases of iPod, iPad, and Mac?</dt>
+			<dd>Yes, we can preload custom content such as photos, videos, audio files, contacts, calendar events, Safari bookmarks, home screen layouts, wallpapers, web clips, and device settings.</dd>
+
+			<dt>What purchasing or financing options are available?</dt>
+			<dd>We offer competitive leasing programs and trade-in options, and we can help arrange for a line of credit and special financing. We also accept purchase orders, and we can streamline the purchase and accounting process with an Apple Terms account.</dd>
+
+			<dt>Is Joint Venture for my IT staff or the rest of my employees?</dt>
+			<dd>Both. With Joint Venture, we can help IT professionals develop a strategy for supporting employees using Apple products. And all Joint Venture members get assistance with setup, training, and support.</dd>
+
+			<dt>What if I have a new employee join after my other employees have already gone through Joint Venture training?</dt>
+			<dd>We'll help your new employees get set up when you purchase new equipment, and our monthly Joint Venture Getting Started workshops make it easy to train one or a few new employees as they join your company.</dd>
+
+			<dt>Can I customize a training session for my employees?</dt>
+			<dd>Yes, we can customize your training sessions to cover exactly what your employees need. For example, we can focus on an important feature of Numbers, or we can get your employees started on Mac and iPhone at the same time. Just let us know what you want to cover, and we’ll work with you to make it happen.</dd>
+
+			<dt>Can you help with asset tagging?</dt>
+			<dd>Yes. Asset tags are customizable with up to three centered lines of text, and you can specify the starting number. The tag text is black on natural silver, laminated in matte clear tamperproof polyester.</dd>
+			</dl>
+		</aside>
+		<div class="grid3col callout promo content" data-hires="true">
+	<a href="/recycling/" class="column first">
+		<h3>Recycling and Trade-In</h3>
+		<p>We’ll take your old electronic equipment — iPhone, iPad, Mac, even PC — and give you an Apple gift card for its fair market value. <span class="more">Learn more </span>
+		</p>
+		<img src="http://images.apple.com/retail/jointventure/images/recycle.png" width="130" height="125" alt="" />
+	</a>
+	<a href="http://store.apple.com/us_smb_78313/browse/home/campaigns/corporate_gifting" class="column second">
+		<h3>Corporate Gifting</h3>
+		<p>Get volume pricing when you give iPad and iPod as corporate gifts, incentives, and&nbsp;promotions.<br />
+		<span class="more">Learn more</span></p>
+		<img src="http://images.apple.com/retail/jointventure/images/gift.png" width="138" height="152" alt="" />
+	</a>
+	
+	
+	<a href="/business/" class="column third">
+		<h3>Apple in Business</h3>
+		<p>Learn how Mac, iPad, and iPhone solutions can integrate with your business, and find out how other businesses are using them.
+		<span class="more">Learn more</span></p>
+		<img src="http://images.apple.com/retail/jointventure/images/business.png" width="258" height="103" alt="" />
+	</a>
+	
+</div>
+	</div>
+
+	
+	
+
+	
+
+
+	<footer id="globalfooter">
+		<div id="breadory">
+			<ol id="breadcrumbs">
+				<li class="home"><a href="/">Home</a></li>
+				<li><a href="/retail/">Apple Retail Store</a></li>
+				<li>Business</li>
+			</ol>
+			<div id="directorynav" class="retail">
+	<div id="dn-cola" class="column first">
+		<h3>Apple Retail Store</h3>
+		<ul>
+			<li><a href="/retail/">Find a Store</a></li>
+			<li><a href="/retail/storelist/">Complete Store List</a></li>
+			<li><a href="/retail/shop/">Shop How You Want</a></li>
+			<li><a href="/retail/learn/">Workshops and Learning</a></li>
+			<li><a href="/retail/geniusbar/">Genius Bar</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3>More Retail</h3>
+		<ul>
+			<li><a href="/retail/learn/one-to-one/">One to One</a></li>
+			<li><a href="/retail/personalsetup/">Personal Setup</a></li>
+			<li><a href="/retail/learn/youth/">Youth Programs</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3>Business</h3>
+		<ul>
+			<li><a href="/retail/business/">Business Support</a></li>
+			<li><a href="/retail/jointventure/">Joint Venture</a></li>
+		</ul>
+	</div>
+	<div class="capbottom"></div>
+</div>
+<div class="find-store">
+	<div class="grid3col">
+		<section class="column first">
+			<label for="retail-footer-search">Find an Apple Retail Store</label>
+			<input type="search" id="retail-footer-search" results="0" placeholder="City and State or Zip" class="global-retail-search" />
+			<a href="/retail/storelist/" class="more">Complete Store List</a>
+		</section>
+		<section class="column">
+			Shop the <a href="http://store.apple.com">Apple Online Store</a> (1-800-MY-APPLE)
+		</section>
+		<section class="column last">
+			Find a <a href="/buy/">reseller</a>
+		</section>
+	</div>
+</div>
+		</div>
+		<ul class="gf-links piped">
+	<li><a href="/about/" class="first">Apple Info</a></li>
+	<li><a href="/sitemap/">Site Map</a></li>
+	<li><a href="/hotnews/">Hot News</a></li>
+	<li><a href="/rss/">RSS Feeds</a></li>
+	<li><a href="/contact/" class="contact_us">Contact Us</a></li>
+	<li><a href="/choose-your-country/" class="choose"><img src="http://images.apple.com/global/elements/flags/22x22/usa.png" alt="Choose your country or region" width="22" height="22" data-hires="true" /></a></li>
+</ul>
+
+<div class="gf-sosumi">
+	<p>Copyright © 2013 Apple Inc. All rights reserved.</p>
+	<ul class="piped">
+		<li><a href="/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+		<li><a href="/privacy/">Privacy Policy</a></li>
+	</ul>
+</div>
+
+	</footer>
+</body>
+</html>

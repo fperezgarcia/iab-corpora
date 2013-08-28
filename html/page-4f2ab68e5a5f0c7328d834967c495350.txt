@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Welcome to Atlanta Luxury Auto</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link href="./css/stylesheet.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="./js/javascript.js" defer="defer"></script>
+		<script language="JavaScript" type="text/javascript" src="./js/wysiwyg.js"></script>
+		<script type="text/javascript" src="./js/virtualpaginate.js"></script>
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+function waitPreloadPage() { //DOM
+if (document.getElementById){
+document.getElementById('prepage').style.visibility='hidden';
+}else{
+if (document.layers){ //NS4
+document.prepage.visibility = 'hidden';
+}
+else { //IE4
+document.all.prepage.style.visibility = 'hidden';
+}
+}
+}
+</SCRIPT>
+	</head>
+<body onLoad="waitPreloadPage();">
+<DIV id="prepage" class="loading"> 
+Please wait... processing request.<br><img src='images/loading.gif' alt='loading'>
+</DIV>
+<div align="center">
+<table width="773" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td align="center" class="background">
+			<table width="760" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<td>
+						<table width="760" cellspacing="0" cellpadding="0" border="0">
+							<tr>
+								<td align="center" class="title"><img src="./images/alalogo.png" alt="Atlanta Luxury Auto"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" class="navigationbg">
+						<table width="760" cellspacing="0" cellpadding="0" border="0">
+							<tr>
+								<td align="center"><a href="index.php" class="nav">Home</a></td>
+								<td align="center">:</td>
+								<td align="center"><a href="listusedcars.php" class="nav">List Inventory</a></td>
+								<td align="center">:</td>
+								<td align="center"><a href="searchusedcars.php" class="nav">Search Inventory</a></td>
+								<td align="center">:</td>
+								<td align="center"><a href="quoterequest.php" class="nav">Request a Quote</a></td>
+								<td align="center">:</td>
+								<td align="center"><a href="specials.php" class="nav">Internet Specials</a></td>
+								<td align="center">:</td>
+								<td align="center"><a href="contacts.php" class="nav">Contact Information</a></td>
+								<td align="center">:</td>
+								<td align="center"><a href="findus.php" class="nav">Find us</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" class="pagetop"></td>
+				</tr>
+			</table>
+  					<table width="758" cellspacing="0" cellpadding="3" border="0">
+				<tr>
+					<td width="3"></td>
+					<td align="left" valign="top">
+						<table width="220" cellspacing="0" cellpadding="0" border="0">
+							<tr>
+								<td valign="top">
+									<table width="220" cellspacing="0" cellpadding="4" border="0">
+										<tr>
+											<td align="left"><span class="searchtitle">Vehicle Search</span>
+											<hr class="red"></td>
+										</tr>
+										<tr>
+											<td align="left">
+											<form name="select_entry" id="select_entry" method="post" action="searchresults.php">
+												<input type="hidden" name="search" value="1">
+												<table width="220" cellspacing="0" cellpadding="4" border="0">
+													<tr>
+														<td align="left"><b>Select Make:</b><br />
+														<select  name="make" size="1"  onchange="Javascript: showModels(this.value)">
+														<option value="all">------ All Makes ------</option>
+														<option value="CHRYSLER">CHRYSLER</option>
+<option value="DODGE">DODGE</option>
+<option value="Ford">Ford</option>
+<option value="HYUNDAI">HYUNDAI</option>
+<option value="Infiniti">Infiniti</option>
+<option value="MERCEDES">MERCEDES</option>
+<option value="MINI">MINI</option>
+<option value="NISSAN">NISSAN</option>
+<option value="TOYOTA">TOYOTA</option>
+<option value="VOLVO">VOLVO</option>
+														</select></td>
+													</tr>
+													<tr>
+														<td align="left"><b>Select Model:</b><br />
+														<div id="txtHint">
+														<select name="model">
+														<option value="all">------ All Models ------</option>
+																												</select>
+														</div></td>
+													</tr>
+													<tr>
+														<td align="left"><b>Select Price:</b><br />
+														<select name="price" size="1">
+															<option value="all">------ All Prices ------</option>
+  															<option value="1000">$1,000 or less</option>
+  															<option value="2000">$2,000 or less</option>
+  															<option value="3000">$3,000 or less</option>
+  															<option value="4000">$4,000 or less</option>
+  															<option value="5000">$5,000 or less</option>
+  															<option value="7500">$7,500 or less</option>
+  															<option value="10000">$10,000 or less</option>
+  															<option value="15000">$15,000 or less</option>
+  															<option value="20000">$20,000 or less</option>
+						  									<option value="25000">$25,000 or less</option>
+ 						 									<option value="30000">$30,000 or less</option>
+  															<option value="35000">$35,000 or less</option>
+  															<option value="40000">$40,000 or less</option>
+  															<option value="50000">$50,000 or less</option>
+  															<option value="60000">$60,000 or less</option>
+  															<option value="75000">$75,000 or less</option>
+  															<option value="100000">$100,000 or less</option>
+														</select></td>
+													</tr>
+													<tr>
+														<td align="left"><input type="submit" value="process vehicle search" class="button" name="submit"></td>
+													</tr>
+												</table>
+												</form>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left">
+									<table width="220" cellspacing="0" cellpadding="3" border="0">
+										<tr>
+											<td class="hours">Operating Hours</td>
+										</tr>
+										<tr>
+											<td><span class="blacktextbold">Sales</span><br />
+											Monday - Saturday: 8:30AM - 10:00PM<br />
+											Sunday: 10:00AM - 7:00PM</td>
+										</tr>
+										<tr>
+											<td><span class="blacktextbold">Service</span><br />
+											Monday - Friday: AM - 6:00PM<br />
+											Saturday: 8:00AM - 5:00PM<br />
+											Sunday: Closed</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td align="left">
+									<table width="225" cellspacing="0" cellpadding="3" border="0">
+										<tr>
+											<td class="invstats">Inventory Statistics</td>
+										</tr>
+										<tr>
+											<td>Total vehicles in inventory: <span class="redtext">17</span></td>
+										</tr>
+										<tr>
+											<td>Total vehicles with photos:  <span class="redtext">16</span></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td class="spaced" width="1"></td>
+					<td valign="top">
+						<table width="516" cellspacing="0" cellpadding="3" border="0">
+							<tr>
+								<td>
+									<table width="516" cellspacing="0" cellpadding="0" border="0">
+										<tr>
+											<td colspan="3"><img src="images/rightmiddletop.gif" alt=""></td>
+										</tr>
+										<tr>
+											<td align="center" width="145"><a href="listusedcars.php" style="border: 0"><img src="images/viewinventorybutton.gif" style="border: 0;" alt="View inventory"></a></td>
+											<td align="center" width="145"><a href="creditapplication.php" style="border: 0"><img src="images/getapprovedbutton.gif" style="border: 0" alt="Get Pre=Approved"></a></td>
+											<td><img src="images/rightbottomcar.gif" alt=""></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left"><span class="promoline">Welcome</span> <span class="bluetext">to our online showcase!</span></td>
+							</tr>
+							<tr>
+								<td align="left"><div class="grayline">&nbsp;</div></td>
+							</tr>
+							<tr>
+								<td align="left">Our auto brokerage business is one of the premier used car businesses in the Atlanta, GA, area. Our commitment to customer service is second to none. We offer financing and shipping to anywhere in the Continental U.S. We also have one of the most positive feedbacks in the entire county. Our primary concern is the satisfaction of our customers. Our online dealership was created to enhance the buying experience for each and every one of our internet customers. Please feel free to call us at  (770) 789-2335 or send us an email by <a href="mailto:atlantaluxuryauto@gmail.com">clicking here</a>.</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="left"><span class="featuredtitle">Featured Vehicles</span></td>
+							</tr>
+							<tr>
+								<td align="left"><div class="grayline">&nbsp;</div></td>
+							</tr>
+							<tr>
+								<td align="left">
+								<span class="redtextbold">Mouse over photo for larger view</span><br>
+								<table width="510" cellspacing="0" cellpadding="0" border="0" class="vehicleborder">
+<tr>
+<td>
+<table width="510" cellspacing="0" cellpadding="4" border="0">
+<tr><td><a href="vehicledetails.php?vid=222"><img src="images/vehimages/thumbs/thumbnail_80105473412388.jpg" width="100" height="75" alt="" class="border" onmouseover="zxcZoom(this,'./images/vehimages/80105473412388.jpg',250,200,10,'C');" onmouseout="javascript:zxcZoom(this);" /></a></td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="left"><span class="vehicletitle">2002 MERCEDES 430 CLK</span></td>
+</tr>
+<tr><td width="300" align="left">FULLY LOADED...</td>
+</tr>
+</table>
+</td>
+<td valign="top" class="price">$9,989</td>
+</tr>
+<tr class="detailsbg">
+<td></td>
+<td align="left"><span class="arrow">> </span><a href="quoterequest.php?vid=222">quote request</a></td><td align="center" width="60"><span class="arrow">> </span><a href="vehicledetails.php?vid=222">details</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br /><table width="510" cellspacing="0" cellpadding="0" border="0" class="vehicleborder">
+<tr>
+<td>
+<table width="510" cellspacing="0" cellpadding="4" border="0">
+<tr><td><a href="vehicledetails.php?vid=215"><img src="images/vehimages/thumbs/thumbnail_29130860314986.jpg" width="100" height="75" alt="" class="border" onmouseover="zxcZoom(this,'./images/vehimages/29130860314986.jpg',250,200,10,'C');" onmouseout="javascript:zxcZoom(this);" /></a></td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="left"><span class="vehicletitle">2006 MINI COOPER S</span></td>
+</tr>
+<tr><td width="300" align="left">RARE AUTOMATIC COOPER S CONVERTIBLE WITH THE SPORTS PACKAGE, WINTER PACKAGE, NEW TIRES AND BRAKES.  XENON LIGHTS AND BLACK LEATHER....</td>
+</tr>
+</table>
+</td>
+<td valign="top" class="price">$16,989</td>
+</tr>
+<tr class="detailsbg">
+<td></td>
+<td align="left"><span class="arrow">> </span><a href="quoterequest.php?vid=215">quote request</a></td><td align="center" width="60"><span class="arrow">> </span><a href="vehicledetails.php?vid=215">details</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br /><table width="510" cellspacing="0" cellpadding="0" border="0" class="vehicleborder">
+<tr>
+<td>
+<table width="510" cellspacing="0" cellpadding="4" border="0">
+<tr><td><a href="vehicledetails.php?vid=213"><img src="images/vehimages/thumbs/thumbnail_16038305748547.jpg" width="100" height="75" alt="" class="border" onmouseover="zxcZoom(this,'./images/vehimages/16038305748547.jpg',250,200,10,'C');" onmouseout="javascript:zxcZoom(this);" /></a></td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="left"><span class="vehicletitle">2001 VOLVO C70 HT</span></td>
+</tr>
+<tr><td width="300" align="left">JUST TRADED IN - O1 VOLVO C70 HT CONVERTIBLE - FULLY LOADED WITH AUTOMATIC, WOOD TRIM, POWER TOP, CLIMATE CONTROL, SPORTS WHEELS, CD CHANGER ETC......</td>
+</tr>
+</table>
+</td>
+<td valign="top" class="price">$6,995</td>
+</tr>
+<tr class="detailsbg">
+<td></td>
+<td align="left"><span class="arrow">> </span><a href="quoterequest.php?vid=213">quote request</a></td><td align="center" width="60"><span class="arrow">> </span><a href="vehicledetails.php?vid=213">details</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br /><table width="510" cellspacing="0" cellpadding="0" border="0" class="vehicleborder">
+<tr>
+<td>
+<table width="510" cellspacing="0" cellpadding="4" border="0">
+<tr><td><a href="vehicledetails.php?vid=212"><img src="images/vehimages/thumbs/thumbnail_75022563352995.jpg" width="100" height="75" alt="" class="border" onmouseover="zxcZoom(this,'./images/vehimages/75022563352995.jpg',250,200,10,'C');" onmouseout="javascript:zxcZoom(this);" /></a></td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="left"><span class="vehicletitle">2001 MERCEDES ML55 AMG</span></td>
+</tr>
+<tr><td width="300" align="left">FULLY LOADED ML55 MERCEDES WITH THE AMG PACKAGE.  AWESOME PEARL GREEN WITH ALMOST LIKE NEW BLACK LEATHER.  FULLY LOADED WITH NAVIGATION AND HEATED SEA...</td>
+</tr>
+</table>
+</td>
+<td valign="top" class="price">$11,989</td>
+</tr>
+<tr class="detailsbg">
+<td></td>
+<td align="left"><span class="arrow">> </span><a href="quoterequest.php?vid=212">quote request</a></td><td align="center" width="60"><span class="arrow">> </span><a href="vehicledetails.php?vid=212">details</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br /><table width="510" cellspacing="0" cellpadding="0" border="0" class="vehicleborder">
+<tr>
+<td>
+<table width="510" cellspacing="0" cellpadding="4" border="0">
+<tr><td><a href="vehicledetails.php?vid=206"><img src="images/vehimages/thumbs/thumbnail_39079045415412.jpg" width="100" height="75" alt="" class="border" onmouseover="zxcZoom(this,'./images/vehimages/39079045415412.jpg',250,200,10,'C');" onmouseout="javascript:zxcZoom(this);" /></a></td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="left"><span class="vehicletitle">2005 CHRYSLER CROSSFIRE SRT</span></td>
+</tr>
+<tr><td width="300" align="left">    * Power Windows, Locks, Mirrors
+    * Remote Entry
+    * Dual Power Seats
+    * Heated Seats
+    * Leather and Suede Seats
+    * Infinity AM/...</td>
+</tr>
+</table>
+</td>
+<td valign="top" class="price">$16,989</td>
+</tr>
+<tr class="detailsbg">
+<td></td>
+<td align="left"><span class="arrow">> </span><a href="quoterequest.php?vid=206">quote request</a></td><td align="center" width="60"><span class="arrow">> </span><a href="vehicledetails.php?vid=206">details</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<table width="760" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<td class="pagebottom"></td>
+				</tr>
+				<tr>
+					<td class="bottomnavbg" align="center">
+						<table width="755" cellspacing="0" cellpadding="2" border="0">
+							<tr>
+								<td align="center">
+									<table width="550" cellspacing="0" cellpadding="2" border="0">
+										<tr>
+											<td><a href="index.php" class="bottomnav">Home</a></td>
+											<td>|</td>
+											<td><a href="listusedcars.php" class="bottomnav">List Used Cars</a></td>
+											<td>|</td>
+											<td><a href="searchusedcars.php" class="bottomnav">Search Used Cars</a></td>
+											<td>|</td>
+											<td><a href="specials.php" class="bottomnav">Specials</a></td>
+											<td>|</td>
+											<td><a href="quoterequest.php" class="bottomnav">Quote Request</a></td>
+											<td>|</td>
+											<td><a href="contacts.php" class="bottomnav">Contacts</a></td>
+											<td>|</td>
+											<td><a href="findus.php" class="bottomnav">Find us</a></td>
+										</tr>
+									</table>						
+								</td>
+							</tr>
+							<tr>
+								<td align="center" class="textbottom">Copyright &copy; 2008 Atlanta Luxury Auto - All Right's reserved.</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>    		  		

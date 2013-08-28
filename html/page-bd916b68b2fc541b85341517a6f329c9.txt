@@ -1,0 +1,357 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="robots" content="index,follow"><meta name="rating" content="General">
+<link rel="stylesheet" rev="stylesheet" href="/css/common/style.css?10279" media="screen">
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+
+<script type="text/javascript">
+<!--
+
+google.load('jquery', '1.3'); 
+
+  // This function displays the ad results.
+  // It must be defined above the script that calls show_ads.js
+  // to guarantee that it is defined when show_ads.js makes the call-back.
+  var google_adnum = 0;
+
+
+  function google_afs_request_done(google_ads) {
+
+    // Proceed only if we have ads to display!
+    if (google_ads.length < 1 || google_ads[google_adnum] == undefined)
+      return;
+
+    // Display ads in a table
+    document.write('<table class="google" cellspacing="0">');
+
+    document.write("<tr><td>");
+
+    // Print "Ads By Google" -- include link to Google feedback page if available
+    document.write('<div class="adsby">');
+    document.write("<a href='https://www.google.com/adsense/support/bin/request.py?contact=afs_violation&hl=en'>Ads by Google</a>");
+    document.write("</div>");
+
+    // For text ads, display each ad in turn.
+    // In this example, each ad goes in a new row in the table.
+    if (google_ads[google_adnum].type == 'text/narrow') {
+      for(i = google_adnum; i <  google_adnum + 4; i++) {
+        if (google_ads[i] != undefined && google_ads[i] != null) {
+          document.write("<div class=\"adsense\">" +
+            "<a href=\"" +  google_ads[i].url + "\">" +
+            google_ads[i].line1 + "</a><br/> " +
+            google_ads[i].line2 + " " +
+            google_ads[i].line3 + "<br/>" +
+            "<span class=\"url\"><a href=\"" +
+            google_ads[i].url +
+            "\">" +
+            google_ads[i].visible_url +
+            "</a></span></div>");
+        }
+      }
+      google_adnum = i;
+    }
+
+    // Finish up anything that needs finishing up
+    document.write ("</td></tr></table>");
+  }
+
+
+  google_hints = "Automotive";
+
+-->
+</script>
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-8952751094992228");
+  GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+  GA_googleAddSlot("ca-pub-8952751094992228", "Oakland_BusinessDirectory_All_Middle_160x600");GA_googleAddSlot("ca-pub-8952751094992228", "Oakland_BusinessDirectory_All_Top_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "Oakland_BusinessDirectory_All_Bottom_300x250");GA_googleAddSlot("ca-pub-8952751094992228", "Oakland_BusinessDirectory_All_Top_930x35");  GA_googleFetchAds();
+</script>
+
+<!-- verification code for weblvds google webmaster tools account -->
+<meta name="google-site-verification" content="y1TlrC5lrEoF-jxBYZiRj54fwmyLQd2Y5z509LH89d8" />
+    <title>East Bay Automotive - Oakland.com</title>
+    <script type="text/javascript">
+        function showElement(id) {
+            document.getElementById(id).style.display="";
+        }
+        function hideElement(id) {
+            document.getElementById(id).style.display="none";
+        }
+	    function setSubdistrictDivPosition() {
+	      var divscroll = document.getElementById("divscroll");
+	      var selectedSubdistrict = document.getElementById("selectedSubdistrict");
+	      if (divscroll != null && selectedSubdistrict != null) {
+	        var offsetTop = 0;
+	        if (navigator.appName == "Microsoft Internet Explorer") {
+	          offsetTop = selectedSubdistrict.offsetTop;
+	          // Internet Explorer miscalculates offsetTop the first time
+	          offsetTop = selectedSubdistrict.offsetTop;
+	        } else if (navigator.appName == "Netscape") {
+	          offsetTop = selectedSubdistrict.offsetTop - divscroll.offsetTop;
+	        } else {
+	          offsetTop = selectedSubdistrict.offsetTop;
+	        }
+	        divscroll.scrollTop = offsetTop;
+	      }
+        }
+    </script>
+    </head>
+
+<body onLoad="setSubdistrictDivPosition();">
+
+
+
+
+<!-- Render Admin Panel -->
+<!-- NavBar Begins -->
+<div id="navBar" class="clearfix">
+	<dl>
+		<dt>Free!</dt>
+		<dd>
+			<ul>
+				<li>
+					<a href="/app/event-post/?tag=topnav">List your event</a>
+				</li><li class="divider">|</li>
+				<li>
+					<a href="/business-post/businesses/add">List your business</a>
+				</li><li class="divider">|</li>
+				<li><a href="/business-directory">View categories</a></li>
+			</ul>
+		<dd>
+	</dl>
+
+<style type="text/css">
+ul#userMenu { margin:0;padding:0;}
+ul#userMenu li{ display:inline;list-style:none;}
+div#navBar a:visited { color:#777; }
+</style>
+
+	<ul id="userMenu">
+ 
+		<li><a href="/app/login.php?dest=%2Fautomotive%2Fbusiness-directory"  id="singLink">Sign in</a></li>
+		<li class="divider">|</li>
+		<li><a href="/app/register/register.php" id="accountLink">Register</a></li>
+		<li class="divider">|</li>
+		<li><a href="http://mail.oakland.com/">Mail</a></li>
+	</ul></div>
+<!-- @NavBar Ends -->
+<div id="frame">
+
+<table id="header" cellspacing="0">
+    <tr> 
+      <td rowspan="2" class="logo"><a href="/"><img src="/images/common/header-logo.gif" alt="Oakland" border="0" /></a></td>
+      <td align="right" valign="top" class="clearfix">
+        <link rel="stylesheet" type="text/css" href="/css/common/google-search/main.css" />
+        <!-- SiteWide Search Begins -->
+<link rel="stylesheet" type="text/css" href="/css/common/google-search/main.css" />
+<form name="site-wideSearch" class="clearfix" id="site-wideSearch" method="get" action="/app/search.php">
+    <fieldset>
+        <input type="hidden" name="cx" value="000890308230987991142:1xf3o6ih0tw" />
+        <input type="hidden" name="cof" value="FORID:10" />
+        <input type="image" src="/images/common/button_sitewide-search.gif" class="button" />
+        <div class="input"><input type="text" name="q" id="sbi" class="field"/></div>
+    </fieldset>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=site-wideSearch"></script>
+<!-- SiteWide Search Ends -->
+      </td>
+      <td align="right" valign="top"> 
+	  </td>
+    </tr>
+    <tr> 
+      <td id="nav_bar" align="right" valign="bottom">
+	    <a href="/restaurants">Restaurants</a>|<a href="/hotels">Hotels</a>|<a href="/attractions">Attractions</a>|<a href="/nightlife">Nightlife</a>|<a href="/realestate">Real Estate</a>|<a href="/jobs">Jobs</a>|<a href="/autodealers">Cars</a>|<a href="/business-directory">Directory</a>|<a href="/app/site-map.php">More</a> 
+      </td>
+    </tr>
+  </table> 
+  <table id="bar" cellspacing="0">
+    <tr> 
+      <td></td>
+    </tr>
+  </table>
+
+
+  <!-- Topic Title Begins -->
+  <table id="topicsnav" cellspacing="0">
+    <tr> 
+      <td class="title"> 
+        <h1>East Bay Automotive</h1>
+        <div class="subnav"></div>      </td>
+      <td id="listyour">
+		        <img src="/images/common/addyour.gif" border="0" /> <a href="/business-post/businesses/add">Add your organization or business</a>
+		    </td>
+	  
+    </tr>
+  </table>
+  <!-- Topic Title Ends -->
+<table id="content" cellspacing="0">
+    <tbody>
+    <tr> 
+      <td id="contentL"> 
+        <table id="topics" cellspacing="0">
+          <tbody>
+          <tr> 
+            <td id="topicsT"></td>
+          </tr>
+          <tr> 
+            <td id="topicsM">
+                <a href='/automotive/business-directory' class='ON'>Automotive</a><br/><a href='/automotive/business-directory/auto-racing'>Auto Racing</a><br/><a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a><br/><a href='/automotive/business-directory/body-collision'>Paint & Collision</a><br/><a href='/automotive/business-directory/tires'>Tires</a><br/><a href='/automotive/business-directory/car-dealers'>Car Dealers</a><br/><a href='/automotive/business-directory/car-parts'>Car Parts</a><br/><a href='/automotive/business-directory/car-rentals'>Car Rentals</a><br/><a href='/automotive/business-directory/brake-oil-tune-ups'>Brake, Oil & Tune-ups</a><br/><a href='/automotive/business-directory/car-insurance'>Car Insurance</a><br/><a href='/automotive/business-directory/car-wash'>Car Wash</a><br/><a href='/automotive/business-directory/detailers'>Detailers</a><br/><a href='/automotive/business-directory/towing'>Towing</a><br/><a href='/automotive/business-directory/gas-stations'>Gas Stations</a><br/><a href='/automotive/business-directory/motorcycle-insurance'>Motorcycle Insurance</a><br/><a href='/automotive/business-directory/parking'>Parking</a><br/><a href='/automotive/business-directory/driving-school'>Driving School</a><br/><a href='/automotive/business-directory/drivers'>Drivers</a><br/><a href='/automotive/business-directory/used-car-dealers'>Used Car Dealers</a><br/><a href='/automotive/business-directory/recreational-vehicle-dealers'>Recreational Vehicle Dealers</a><br/><a href='/automotive/business-directory/motorcycles'>Motorcycle & Scooter Dealers</a><br/><a href='/automotive/business-directory/mufflers-exhausts'>Mufflers & Exhausts</a><br/><a href='/automotive/business-directory/smog-check'>Smog Check</a><br/><a href='/automotive/business-directory/home-car-audio'>Home & Car Audio</a><br/><a href='/automotive/business-directory/auto-glass'>Auto Glass</a><br/><a href='/automotive/business-directory/auto-wrecking'>Auto Wrecking</a><br/><a href='/automotive/business-directory/car-alarm'>Car Alarm</a><br/><a href='/automotive/business-directory/motorcycle-parts'>Motorcycle Parts</a><br/>            </td>
+          </tr>
+          <tr> 
+            <td id="topicsB">&nbsp;</td>
+          </tr>
+        	</tbody>
+        </table>
+        <table id="topics" cellspacing="0">
+          <tbody>
+          <tr> 
+            <td id="topicsT"></td>
+          </tr>
+          <tr> 
+            <td id="topicsM">
+            	<div class="indi">Districts</div>
+            	<a href='/automotive/business-directory' class='ON'>East Bay</a><br/><div id='divscroll'>
+<a href='/automotive/business-directory/east-bay/alameda'>Alameda</a><br/><a href='/automotive/business-directory/east-bay/alamo'>Alamo</a><br/><a href='/automotive/business-directory/east-bay/albany'>Albany</a><br/><a href='/automotive/business-directory/east-bay/antioch'>Antioch</a><br/><a href='/automotive/business-directory/east-bay/bay-point'>Bay Point</a><br/><a href='/automotive/business-directory/east-bay/benicia'>Benicia</a><br/><a href='/automotive/business-directory/east-bay/berkeley-cal-campus'>Berkeley</a><br/><a href='/automotive/business-directory/east-bay/berkeley'>Berkeley (Cal Campus)</a><br/><a href='/automotive/business-directory/east-bay/berkeley-west'>Berkeley (West)</a><br/><a href='/automotive/business-directory/east-bay/berkeley-hills'>Berkeley Hills</a><br/><a href='/automotive/business-directory/east-bay/brentwood'>Brentwood</a><br/><a href='/automotive/business-directory/east-bay/byron'>Byron</a><br/><a href='/automotive/business-directory/east-bay/castro-valley'>Castro Valley</a><br/><a href='/automotive/business-directory/east-bay/clayton'>Clayton</a><br/><a href='/automotive/business-directory/east-bay/concord'>Concord</a><br/><a href='/automotive/business-directory/east-bay/crockett'>Crockett</a><br/><a href='/automotive/business-directory/east-bay/danville'>Danville</a><br/><a href='/automotive/business-directory/east-bay/discovery-bay'>Discovery Bay</a><br/><a href='/automotive/business-directory/east-bay/dixon'>Dixon</a><br/><a href='/automotive/business-directory/east-bay/dublin'>Dublin</a><br/><a href='/automotive/business-directory/east-bay/el-cerrito'>El Cerrito</a><br/><a href='/automotive/business-directory/east-bay/el-sobrante'>El Sobrante</a><br/><a href='/automotive/business-directory/east-bay/emeryville'>Emeryville</a><br/><a href='/automotive/business-directory/east-bay/fairfield'>Fairfield</a><br/><a href='/automotive/business-directory/east-bay/fremont'>Fremont</a><br/><a href='/automotive/business-directory/east-bay/hayward'>Hayward</a><br/><a href='/automotive/business-directory/east-bay/hercules'>Hercules</a><br/><a href='/automotive/business-directory/east-bay/kensington'>Kensington</a><br/><a href='/automotive/business-directory/east-bay/lafayette'>Lafayette</a><br/><a href='/automotive/business-directory/east-bay/livermore'>Livermore</a><br/><a href='/automotive/business-directory/east-bay/martinez'>Martinez</a><br/><a href='/automotive/business-directory/east-bay/moraga'>Moraga</a><br/><a href='/automotive/business-directory/east-bay/newark'>Newark</a><br/><a href='/automotive/business-directory/east-bay/oakland'>Oakland</a><br/><a href='/automotive/business-directory/east-bay/oakland-airport-coliseum'>Oakland (Airport/Coliseum)</a><br/><a href='/automotive/business-directory/east-bay/oakland-downtown'>Oakland (Downtown)</a><br/><a href='/automotive/business-directory/east-bay/oakland-jack-london-square'>Oakland (Jack London Square)</a><br/><a href='/automotive/business-directory/east-bay/oakland-lake-merritt-grand-avenue'>Oakland (Lake Merritt/Grand Avenue)</a><br/><a href='/automotive/business-directory/east-bay/oakland-millsmont-bancroft'>Oakland (Millsmont/Bancroft)</a><br/><a href='/automotive/business-directory/east-bay/oakland-piedmont-montclair'>Oakland (Piedmont/Montclair)</a><br/><a href='/automotive/business-directory/east-bay/oakland-temescal'>Oakland (Temescal)</a><br/><a href='/automotive/business-directory/east-bay/oakland-zoo-international-blvd'>Oakland (Zoo/International Blvd.)</a><br/><a href='/automotive/business-directory/east-bay/oakland-hills'>Oakland Hills</a><br/><a href='/automotive/business-directory/east-bay/oakley'>Oakley</a><br/><a href='/automotive/business-directory/east-bay/orinda'>Orinda</a><br/><a href='/automotive/business-directory/east-bay/pacheco'>Pacheco</a><br/><a href='/automotive/business-directory/east-bay/pinole'>Pinole</a><br/><a href='/automotive/business-directory/east-bay/pittsburg'>Pittsburg</a><br/><a href='/automotive/business-directory/east-bay/pleasant-hill'>Pleasant Hill</a><br/><a href='/automotive/business-directory/east-bay/pleasanton'>Pleasanton</a><br/><a href='/automotive/business-directory/east-bay/richmond'>Richmond</a><br/><a href='/automotive/business-directory/east-bay/rio-vista'>Rio Vista</a><br/><a href='/automotive/business-directory/east-bay/rodeo'>Rodeo</a><br/><a href='/automotive/business-directory/east-bay/san-leandro'>San Leandro</a><br/><a href='/automotive/business-directory/east-bay/san-lorenzo'>San Lorenzo</a><br/><a href='/automotive/business-directory/east-bay/san-pablo'>San Pablo</a><br/><a href='/automotive/business-directory/east-bay/san-ramon'>San Ramon</a><br/><a href='/automotive/business-directory/east-bay/suisun-city'>Suisun City</a><br/><a href='/automotive/business-directory/east-bay/travis-afb'>Travis AFB</a><br/><a href='/automotive/business-directory/east-bay/union-city'>Union City</a><br/><a href='/automotive/business-directory/east-bay/vacaville'>Vacaville</a><br/><a href='/automotive/business-directory/east-bay/vallejo'>Vallejo</a><br/><a href='/automotive/business-directory/east-bay/walnut-creek'>Walnut Creek</a><br/></div>
+            </td>
+          </tr>
+          <tr> 
+            <td id="topicsM">
+            	<div class="indi">See also</div>
+                <a href='/automotive/business-directory/bay-area'>Bay Area</a><br/><a href='/automotive/business-directory/san-francisco'>San Francisco</a><br/><a href='/automotive/business-directory/north-bay'>North Bay</a><br/><a href='/automotive/business-directory/south-bay'>South Bay</a><br/><a href='/automotive/business-directory/peninsula'>Peninsula</a><br/><a href='/automotive/business-directory/santa-cruz-and-monterey'>Santa Cruz & Monterey</a><br/>            </td>
+          </tr>
+          <tr> 
+            <td id="topicsB">&nbsp;</td>
+          </tr>
+        	</tbody>
+        </table>
+        <div class="banner_verti_left"><script type="text/javascript">
+  GA_googleFillSlot("Oakland_BusinessDirectory_All_Middle_160x600");
+</script></div>        
+      </td>
+      <td id="contentpad">&nbsp;</td>
+      <td id="contentM" style="padding-top:0px;">
+                <table class="2banners" width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%">
+                <div class="banner_google" style="border: 0px "><div id="banner_google_1"></div><script src="http://www.google.com/adsense/search/ads.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+var pageOptions = {"pubId":"pub-0032919224847766","siteLinks":false,"adPage":1,"channel":"8850570755","query":"Automotive in Oakland"};
+
+var adblock1 = {"container":"banner_google_1","number":4,"width":"420px","fontFamily":"Arial,Helvetica,sans-serif","fontSizeTitle":"14px","fontSizeDescription":"12px","fontSizeDomainLink":"12px","colorTitleLink":"#3080CB","colorText":"#666666","colorDomainLink":"#999999"};
+
+var adblock2 = {"container":"banner_google_1","number":4,"width":"420px","fontFamily":"Arial,Helvetica,sans-serif","fontSizeTitle":"14px","fontSizeDescription":"12px","fontSizeDomainLink":"12px","colorTitleLink":"#3080CB","colorText":"#666666","colorDomainLink":"#999999"};
+adblock2.container = 'banner_google_2';
+
+google_adnum = google_adnum + 4;
+new google.ads.search.Ads(pageOptions, adblock1, adblock2);
+</script><!-- Google Ads End --></div>        </td><td><div class="banner_horizontal_right"><script type="text/javascript">
+  GA_googleFillSlot("Oakland_BusinessDirectory_All_Top_300x250");
+</script></div></td></tr></table>        
+                    <!-- Listings Filters Begin -->
+            <div id="listingFilters" class="clearfix">
+                <div id="listingSortFilters" class="clearfix">
+                    East Bay Automotive                </div>            
+                
+                                    <div id="listingPagination" class="clearfix">
+                    Page:  &nbsp; <strong>1</strong> <a href='/automotive/business-directory/2'>2</a> <a href='/automotive/business-directory/3'>3</a> <a href='/automotive/business-directory/4'>4</a> <a href='/automotive/business-directory/5'>5</a> <a href='/automotive/business-directory/6'>6</a> <a href='/automotive/business-directory/7'>7</a> <a href='/automotive/business-directory/8'>8</a> <a href='/automotive/business-directory/9'>9</a> <a href='/automotive/business-directory/10'>10</a> ... &nbsp;<a href='/automotive/business-directory/2'>Next&nbsp;&raquo;</a>&nbsp;|&nbsp;1&nbsp;to&nbsp;20&nbsp;of&nbsp;9750                    </div>
+                
+            </div>
+            <!-- @Listings Filters End -->
+		
+		    <table id="list" cellspacing="0">
+		    	<tr class="enhanced" >	<td class="enh" rowspan="2">		<a href="/boyd-s-body-and-auto-repair-b266057">		<img src="/images/bl/57/266057a_tn80x80.jpg" border="0">		</a>	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/emeryville'>Emeryville</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div>		<div class="title"><a href="/boyd-s-body-and-auto-repair-b266057">Boyds Body &amp; Auto Repair</a>		</div>      <span class="location">1245 Powell St, Emeryville, CA 94608  (<a href="http://maps.google.com?q=1245+Powell+St%2C+Emeryville%2C+CA+94608" target="_blank">Map</a>)</span><div class="blurb">**** Free Estimates****
+*** All Insurance Welcome***
+
+*Full Maintenance Programs 
+*Computer precision color matching
+
+ -Transmission
+... <br /><a href="/boyd-s-body-and-auto-repair-b266057" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box"><img src="/images/common/icon_featured.jpg" border="0" /></td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 654-0425<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">		<a href="http://www.sanjose.com/lemans-karting-racing/">		<img src="/images/bl/28/265928a_tn80x80.jpg" border="0">		</a>	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/fremont'>Fremont</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-racing'>Auto Racing</a></div>		<div class="title"><a href="http://www.sanjose.com/lemans-karting-racing/">LeMans Indoor Karting</a>		</div>      <span class="location">45957 Hotchkiss Street, Fremont, CA 94539  (<a href="http://maps.google.com?q=45957+Hotchkiss+Street%2C+Fremont%2C+CA+94539" target="_blank">Map</a>)</span><div class="blurb">Kart Racing in the Bay Area. 
+LeMans Karting provides the ultimate racing experience at our state of the art indoor/outdoor racing facility.... <br /><a href="http://www.sanjose.com/lemans-karting-racing/" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box"><img src="/images/common/icon_featured.jpg" border="0" /></td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  1.866.668.7621<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">		<a href="/lemans-karting-b28885311">		<img src="/images/bl/11/28885311a_tn80x80.jpg" border="0">		</a>	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/fremont'>Fremont</a>, <a href='/automotive/business-directory'>Automotive</a></div>		<div class="title"><a href="/lemans-karting-b28885311">Lemans Karting</a>		</div>      <span class="location">45957 Hotchkiss St, Fremont, CA 94539  (<a href="http://maps.google.com?q=45957+Hotchkiss+St%2C+Fremont%2C+CA+94539" target="_blank">Map</a>)</span><div class="blurb">Whether seeking the perfect family destination, corporate party event  venue or just a fun place to go with friends, nothing could be better... <br /><a href="/lemans-karting-b28885311" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box"><img src="/images/common/icon_featured.jpg" border="0" /></td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  510 7709001<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">		<a href="/park-ride-fly-usa-oakland-international-airport-b24269371">		<img src="/images/bl/71/24269371a_tn80x80.jpg" border="0">		</a>	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/oakland-airport-coliseum'>Oakland (Airport/Coliseum)</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/parking'>Parking</a></div>		<div class="title"><a href="/park-ride-fly-usa-oakland-international-airport-b24269371">Park Ride Fly USA - Oakland International Airport</a>		</div>      <span class="location">Serving the Bay Area, Oakland, CA -  (<a href="http://maps.google.com?q=Serving+the+Bay+Area%2C+Oakland%2C+CA+-" target="_blank">Map</a>)</span><div class="blurb">As frequent travelers ourselves, we know how frustrating it can be to waste precious time circling around an airport parking lot looking for... <br /><a href="/park-ride-fly-usa-oakland-international-airport-b24269371" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box"><img src="/images/common/icon_featured.jpg" border="0" /></td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  1 866.922. PARK (7275)<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">&nbsp;	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/antioch'>Antioch</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a>, <a href='/automotive/business-directory/mufflers-exhausts'>Mufflers & Exhausts</a></div>		<div class="title"><a href="/auto-diagnostic-and-repair-b1767191">Auto Diagnostic &amp; Repair</a>		</div>      <span class="location">810 W 10th St, Antioch, CA 94509  (<a href="http://maps.google.com?q=810+W+10th+St%2C+Antioch%2C+CA+94509" target="_blank">Map</a>)</span><div class="blurb">         When your vehicle needs fixing  from a major repair to a minor tune-up Let the professionals at Auto Diagnostic and Repair restore... <br /><a href="/auto-diagnostic-and-repair-b1767191" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box">  <img src="/images/common/icon_verified.jpg" border="0" /> </td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (925) 238-7075<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">&nbsp;	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/berkeley'>Berkeley (Cal Campus)</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div>		<div class="title"><a href="/charlies-garage-b224198">Charlie's Garage</a>		</div>      <span class="location">618 San Pablo Ave, Albany, CA 94706  (<a href="http://maps.google.com?q=618+San+Pablo+Ave%2C+Albany%2C+CA+94706" target="_blank">Map</a>)</span><div class="blurb">Charlie's Garage Was Founded In 1985 And Has Been Successfully Servicing Fine Japanese, German and Jeep Automobiles In The Albany, Oakland,... <br /><a href="/charlies-garage-b224198" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box">  <img src="/images/common/icon_verified.jpg" border="0" /> </td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 849-0859<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">&nbsp;	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/berkeley'>Berkeley (Cal Campus)</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div>		<div class="title"><a href="/charlies-garage-b224199">Charlie's Garage</a>		</div>      <span class="location">618 San Pablo Ave, Albany, CA 94706  (<a href="http://maps.google.com?q=618+San+Pablo+Ave%2C+Albany%2C+CA+94706" target="_blank">Map</a>)</span><div class="blurb">Charlie's Garage Was Founded In 1985 And Has Been Successfully Servicing Fine Japanese, German and Jeep Automobiles In The Albany, Oakland,... <br /><a href="/charlies-garage-b224199" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box">  <img src="/images/common/icon_verified.jpg" border="0" /> </td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 849-0859<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">&nbsp;	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/albany'>Albany</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div>		<div class="title"><a href="/dana-meyer-auto-care-b224266">Dana Meyer Auto Care</a>		</div>      <span class="location">660 San Pablo Ave, Albany, CA 94706  (<a href="http://maps.google.com?q=660+San+Pablo+Ave%2C+Albany%2C+CA+94706" target="_blank">Map</a>)</span><div class="blurb">http://cms.yext.com/cms/bf1f638b-6464-4ed6-a1bf-fbe9d01c23ce.gif
+
+
+
+As an independent car care shop we provide an excellent track record of... <br /><a href="/dana-meyer-auto-care-b224266" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box">  <img src="/images/common/icon_verified.jpg" border="0" /> </td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 527-1938<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr class="enhanced" >	<td class="enh" rowspan="2">&nbsp;	</td>	<td class="name" rowspan="2"> <div class='cat'><a href='/automotive/business-directory/east-bay/hayward'>Hayward</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div>		<div class="title"><a href="/harts-automotive-b177425">Hart's Automotive</a>		</div>      <span class="location">2543 W Winton Ave, Hayward, CA 94545  (<a href="http://maps.google.com?q=2543+W+Winton+Ave%2C+Hayward%2C+CA+94545" target="_blank">Map</a>)</span><div class="blurb">http://cms.getfelix.com/cms/3dc04770-9180-4fe5-80fb-a766e5967680.jpeg
+
+
+
+Serving Hayward Ca with all of your auto repair needs
+
+Call today 
+</div>	</td><td rowspan="2" class="price"> &nbsp;</td>	<td class="icon_box">  <img src="/images/common/icon_verified.jpg" border="0" /> </td></tr><tr class="enhanced" style="border-top; none"><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 400-5375<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr id="adSenseFeaturedRow"><td class="enh" style="border-bottom: 1px dotted #D3D3D3;">&nbsp;</td><td class="name" id="adSenseFeatured" colspan="3"><div class="banner_pagination" style="border: 0px "><div id="banner_google_2"></div><!-- Google Ads End --></div></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/san-leandro'>San Leandro</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div><div class="titlefree"><a href="/002-service-b28694601">002 Service</a></div>3947 Carmel Way, San Leandro, CA 94578  (<a href="http://maps.google.com?q=3947+Carmel+Way%2C+San+Leandro%2C+CA+94578" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 614-8125<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/fremont'>Fremont</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/car-parts'>Car Parts</a></div><div class="titlefree"><a href="/034-efi-b2215081">034 Efi</a></div>42968 Osgood Rd, Fremont, CA 94539  (<a href="http://maps.google.com?q=42968+Osgood+Rd%2C+Fremont%2C+CA+94539" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 657-6707<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/fairfield'>Fairfield</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/car-parts'>Car Parts</a></div><div class="titlefree"><a href="/1-800-radiator-b3045051">1 800 Radiator</a></div>2020 N Texas St, Fairfield, CA 94533  (<a href="http://maps.google.com?q=2020+N+Texas+St%2C+Fairfield%2C+CA+94533" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (707) 428-0676<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/concord'>Concord</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/car-parts'>Car Parts</a></div><div class="titlefree"><a href="/1-800-radiator-and-automotive-repair-b22129661">1 800 Radiator & Automotive Repair</a></div>1025 Shary Ct, Concord, CA 94518  (<a href="http://maps.google.com?q=1025+Shary+Ct%2C+Concord%2C+CA+94518" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (925) 687-7724<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/hayward'>Hayward</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div><div class="titlefree"><a href="/1-888-car-help-b177646">1 888 Car Help</a></div>74 W Jackson St, Hayward, CA 94544  (<a href="http://maps.google.com?q=74+W+Jackson+St%2C+Hayward%2C+CA+94544" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (888) 227-4357<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/berkeley-cal-campus'>Berkeley</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/towing'>Towing</a></div><div class="titlefree"><a href="/1-tow-truck-service-b28418251">1 Tow Truck Service</a></div>2109 University Ave, Berkeley, CA 94704  (<a href="http://maps.google.com?q=2109+University+Ave%2C+Berkeley%2C+CA+94704" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 280-0638<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/benicia'>Benicia</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/car-parts'>Car Parts</a></div><div class="titlefree"><a href="/1-800-radiator-b29063991">1-800-Radiator</a></div>4401 Park Rd, Benicia, CA 94510  (<a href="http://maps.google.com?q=4401+Park+Rd%2C+Benicia%2C+CA+94510" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (707) 747-7400<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/oakland'>Oakland</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/car-parts'>Car Parts</a></div><div class="titlefree"><a href="/1-800-radiator-b28423851">1-800-Radiator</a></div>351 Embarcadero, Oakland, CA 94606  (<a href="http://maps.google.com?q=351+Embarcadero%2C+Oakland%2C+CA+94606" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (866) 362-2394<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/san-leandro'>San Leandro</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/towing'>Towing</a></div><div class="titlefree"><a href="/1-2-price-towing-b24535552">1/2 Price Towing</a></div>1271 Washington Ave, San Leandro, CA 94577  (<a href="http://maps.google.com?q=1271+Washington+Ave%2C+San+Leandro%2C+CA+94577" target="_blank">Map</a></span>)<div class="blurb">We are located in San Leandro, (just south of Oakland). We do serve the greater bay area and have flatbed and traditional trucks, but there...<br /> <a href="/1-2-price-towing-b24535552" class="moreLink">&#8594;&nbsp;View&nbsp;Details</a></div></td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 317-2122<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/albany'>Albany</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/auto-motorcycle-repair'>Auto/Motorcycle Repair</a></div><div class="titlefree"><a href="/101-auto-body-b135083">101 Auto Body</a></div>1223 San Pablo Ave, Albany, CA 94706  (<a href="http://maps.google.com?q=1223+San+Pablo+Ave%2C+Albany%2C+CA+94706" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 559-8819<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr><tr><td class='enh'>&nbsp;</td><td class='name'><div class='cat'><a href='/automotive/business-directory/east-bay/hercules'>Hercules</a>, <a href='/automotive/business-directory'>Automotive</a>, <a href='/automotive/business-directory/car-insurance'>Car Insurance</a>, <a href='/automotive/business-directory/motorcycle-insurance'>Motorcycle Insurance</a></div><div class="titlefree"><a href="/123-insurance-solutions-b28948921">123 Insurance Solutions</a></div>1309 Sycamore Ave, Hercules, CA 94547  (<a href="http://maps.google.com?q=1309+Sycamore+Ave%2C+Hercules%2C+CA+94547" target="_blank">Map</a></span>)</td>	<td class="price"> &nbsp;	</td><td class="phone"> <img src="/images/common/icon_phone.gif" border="0" />  (510) 964-1131<br/>	</td></tr><tr><td colspan="4" class="line"><img src="/images/common/spacer.gif" height="1" /></td></tr>		    </table>
+	
+            <!-- Listings Filters Begin -->
+            <div id="listingFilters" class="clearfix">
+                <div id="listingSortFilters" class="clearfix">
+                    East Bay Automotive                </div>            
+
+                                    <div id="listingPagination" class="clearfix">
+                    Page:  &nbsp; <strong>1</strong> <a href='/automotive/business-directory/2'>2</a> <a href='/automotive/business-directory/3'>3</a> <a href='/automotive/business-directory/4'>4</a> <a href='/automotive/business-directory/5'>5</a> <a href='/automotive/business-directory/6'>6</a> <a href='/automotive/business-directory/7'>7</a> <a href='/automotive/business-directory/8'>8</a> <a href='/automotive/business-directory/9'>9</a> <a href='/automotive/business-directory/10'>10</a> ... &nbsp;<a href='/automotive/business-directory/2'>Next&nbsp;&raquo;</a>&nbsp;|&nbsp;1&nbsp;to&nbsp;20&nbsp;of&nbsp;9750                    </div>
+                
+            </div>
+            <!-- @Listings Filters End -->
+			
+		 		 <div class="banner_line"></div>
+		 <br/>
+                <table class="2banners" width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%">
+                                </td><td><div class="banner_horizontal_right">
+        <script type="text/javascript">
+  GA_googleFillSlot("Oakland_BusinessDirectory_All_Bottom_300x250");
+</script>        </div>
+        </td></tr></table>
+        <br/>
+        		 
+      </td>
+    </tr>
+  </tbody>
+  </table>
+  <script type="text/javascript">if ( typeof(google_adnum) != "undefined" && google_adnum <1) {
+            document.getElementById("adSenseFeaturedRow").style.display = "none";
+        }</script> 
+<div id="footer">
+  <a href="/advertise" >Advertise</a> | 
+  <a href="/business-post/businesses/add" >List Your Business</a> | 
+  <a href="/app/event-post/" >List Your Event</a>
+</div>
+<br clear="all"/>
+<div id="copyright">
+  Copyright 2013 Oakland.com: A City Guide by <a href="http://www.boulevards.com/" target="_blank">Boulevards</a>.
+  All rights reserved. Data provided in part by Factual.
+</div>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+                    google.load('jquery', '1');
+            google.setOnLoadCallback(function() {
+                jQuery.noConflict();
+                jQuery('a[href^="http"]').not('a[href*="oakland.com"]').click(function() {
+                    var href = jQuery(this).attr('href');
+                    if (href.indexOf("://") > 0) {
+                        var outgoing = '/outgoing/' + href.split("://",2)[1];
+                        urchinTracker(outgoing);
+                    }
+                });
+            });
+                window.google_analytics_uacct = 'UA-584946-28';
+        _uacct = 'UA-584946-28';
+                        _userv = 2;
+        urchinTracker();
+    </script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qacct="p-d5buRHCDjoZz-";quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-d5buRHCDjoZz-" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-d5buRHCDjoZz-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript>
+
+<!-- Casale Media: Pop Under Oakland (130220) -->
+<script type="text/javascript"><!--
+var casaleD=new Date();var casaleR=(casaleD.getTime()%8673806982)+Math.random();
+var casaleU=escape(window.location.href);
+var casaleHost=' type="text/javascript" src="http://as.casalemedia.com/s?s=';
+document.write('<scr'+'ipt'+casaleHost+'130220&amp;u=');
+document.write(casaleU+'&amp;f=1&amp;id='+casaleR+'"><\/scr'+'ipt>');
+//--></script>
+<!-- DO NOT MODIFY --></body>
+</html>

@@ -1,0 +1,246 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>Toyota Pickup Auto N' Parts Marketplace</title><META NAME="DESCRIPTION" CONTENT="The Toyota Pickup - Vehicle Parts, Accessories, and Tips"></META><META NAME="KEYWORDS" CONTENT="Toyota Pickup  part store, Toyota Pickup  auto parts, Toyota Pickup  car parts, Toyota Pickup  body parts, Toyota Pickup  used parts, Used Toyota Pickup  cars, Toyota Pickup  buying tips, buy Toyota Pickup , sell Toyota Pickup , Toyota Pickup  classifieds, Toyota Pickup  car dealers"></META><META NAME="ROBOTS" CONTENT="FOLLOW"></META><META NAME="REVISIT-AFTER" CONTENT="5 days"></META><link rel="stylesheet" href="images/stylesheet.css"><script language="JavaScript"> 
+      function xtranslate(s){
+         enc_shab='zyxwvutsrqponmlkjihgfedcba-:_/.';
+         
+         res = '';          
+         for (i=0; i<s.length; i++){
+           ch = s.substring(i,i+1);
+           z = enc_shab.indexOf(ch);
+           if (z>=0){
+             z = enc_shab.length-z-1;
+             res+=enc_shab.substring(z,z+1);
+           } else
+             res+=ch;
+         }
+         return res;
+      }       
+      function goContactUs(){
+         location=xtranslate('nbbfwyybfmskafzsgiycqd-msqcysghbusbxacznbij');
+         return false;
+      }
+      function goCheckOut(){
+         location=xtranslate('nbbfwyyiudkqbzuabgfudbcpumdzsgiygdrqdznbij');
+         return false;
+      }
+      function goOrderTracking(){
+         location=xtranslate('nbbfwyyiudkqbzuabgfudbcpumdzsgiygdrqdxbduskmhoznbij');
+         return false;
+      }
+
+      function goApfModelPage(){
+         location=xtranslate('nbbfwyy:::zuabgfudbcpumdzsgiybg/gbuvcxyfmskafvsubujgoznbij');
+         return false;
+      }
+
+      function doAddToOrder(product_key, make, model, year){
+         document.orderForm.action=xtranslate('nbbfwyyiudkqbzuabgfudbcpumdzsgiygdrqdznbij');
+         document.orderForm.campain.value='tpickup.com';
+         document.orderForm.add_product.value=product_key;
+         document.orderForm.make.value=make;
+         document.orderForm.model.value=model;
+         document.orderForm.year.value=year;
+         document.orderForm.submit();
+      }
+
+      function crop(s){
+         var s1=s;
+         if (s.indexOf('/')>0)
+            s1=s.substring(0,s.indexOf('/'));
+	 return s1;
+      }
+
+      function gotoPage(href,extrapath){
+         var indexPos = href.indexOf('index.html');
+         if (indexPos>0)
+            href = href.substring(0,indexPos) + href.substring(indexPos+10);
+         if (href.indexOf('?')>0) 
+            href += "&campaign=tpickup.com";
+         else href += "?campaign=tpickup.com";
+
+         if (extrapath && extrapath!='') href += "&" + extrapath;
+
+         location.href=xtranslate('nbbfwyyiudkqbzuabgfudbcpumdzsgi')+href;
+      }
+
+      function goToBanner(href){
+         location.href=href;
+      }
+
+      function getAccess(){
+         location=xtranslate('nbbfwyymhpgzacqrfudb_zsgiyngbjmhqycmohafznbij');
+         return false;
+      }
+
+      function goCarParts(make,model,year,part_type){        
+        if (year!='')
+           href = xtranslate('nbbfwyyiudkqbzuabgfudbcpumdzsgiybg/gbuvcxypmhrxfdgrasbznbij')+'?make=[make_key]&model=[model_key]&year=[year_key]';
+        if (part_type!='')
+           href = xtranslate('nbbfwyyiudkqbzuabgfudbcpumdzsgiybg/gbuvcxypmhrxfdgrasbznbij')+'?make=[make_key]&model=[model_key]&year=[year_key]&part_type=[part_type_key]';
+        z = href.indexOf('[make_key]');
+        if (z>=0)
+            href = href.substring(0,z)+make+href.substring(z+10,href.length);
+        z = href.indexOf('[model_key]');
+        if (z>=0)
+            href = href.substring(0,z)+model+href.substring(z+11,href.length);
+        z = href.indexOf('[year_key]');
+        if (z>=0)
+            href = href.substring(0,z)+year+href.substring(z+10,href.length);
+        z = href.indexOf('[part_type_key]');
+        if (z>=0)
+            href = href.substring(0,z)+part_type+href.substring(z+15,href.length);
+        location=href;
+      }
+
+      function goToShopInfo(){
+         location.href="http://shop.autopartsfair.com/customer_service/";
+      }
+
+      function goShopCheckOut(){
+         location="http://shop.autopartsfair.com/basket.php";
+         return false;
+      }
+      function goShopOrderTracking(){
+         location="http://shop.autopartsfair.com/account.php?section=track";
+         return false;
+      }
+
+     
+   function sendForm()
+   { 
+      var f=document.cusForm;
+      var selP = f.problem
+      
+      if (selP!=null && selP.options[selP.selectedIndex].value=="-")
+      {
+         window.alert("Please select a subject");
+         return;
+      }
+      if (f.Fname.value=="")
+      {
+         window.alert("Please enter your first name");
+         return;
+      }
+      if (f.Lname.value=="")
+      {
+         window.alert("Please enter your last name");
+         return;
+      }
+      var g = f.HowHear;
+      if (g.options[g.selectedIndex].value=="-") {
+         window.alert("Please select how did you hear about us");
+         return;
+      }
+      if (f.Email.value=="")
+      {
+         window.alert("Please enter your Email");
+         return;
+      }
+      
+      f.action=xtranslate('nbbfwyy:::zuabgfudbcpumdzsgi')+document.getElementById('ss').value;
+
+      f.submit(); 
+   }
+
+     
+   function Register()
+   { 
+      var f=document.registerForm;
+      if (f.name.value=="")
+      {
+         window.alert("Please enter the contact name");
+         return;
+      }
+      if (f.email.value=="")
+      {
+         window.alert("Please enter contact email");
+         return;
+      }
+      if (f.address.value=="")
+      {
+         window.alert("Please enter the address");
+         return;
+      }
+      if (f.city.value=="")
+      {
+         window.alert("Please enter the City");
+         return;
+      }
+      if (f.state.value=="")
+      {
+         window.alert("Please enter the State");
+         return;
+      }
+      
+      f.action = xtranslate('nbbfwyy:::zuabgfudbcpumdzsgiydqomcbqdznbij');
+      f.submit(); 
+      return;
+   }
+   </script></head><body style="padding:0; margin:0; overflow:auto"><table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="200" class="maintoyota"><img src="images/logo-toyota-pickup2.gif" width="200" height="90" border="0"></td><td height="90" width="100%" class="maintoyota" style="padding-left:10;padding-bottom:4" valign="bottom"><h1>The Toyota Pickup - Vehicle Parts, Accessories, and Tips</h1></td><td height="90" width="462" class="maintoyota"><img src="images/main-toyota-pickup2.jpg" width="462" height="90" border="0"></td></tr><tr><td height="4"></td></tr><tr><td class="toolbar" height="2" colspan="3"></td></tr></table><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="toolbar" height="28"><table width="100%" cellpadding="0" cellspacing="0" border="0" align="right"><tr><td class="normalFont" align="right"><a href="index.html" title="Home"><img src="images/b-home.gif" width="110" height="28" border="0" align="absmiddle"></a><a href="resources/information.html" title="About Us"><img src="images/b-about-us.gif" border="0" align="absmiddle" width="110" height="28"></a><a href="resources/articles.html" title="Articles"><img src="images/b-articles.gif" border="0" align="absmiddle" width="110" height="28"></a><a href="services/newsletter.html" title="Newsletter"><img src="images/b-newsletter.gif" border="0" align="absmiddle" width="110" height="28"></a><a title="Forum" href="http://tpickup.com/forum"><img src="images/b-forum.gif" border="0" align="absmiddle" width="110" height="28"></a><a href="services/contact_us.html" title="Contact Us"><img src="images/b-contacts.gif" border="0" align="absmiddle" width="110" height="28"></a><a href="services/register.html" title="Register"><img src="images/b-register.gif" border="0" align="absmiddle" width="110" height="28"></a><img src="images/clear.gif" width="12" height="1" border="0" align="absmiddle"></td></tr></table></td></tr></table></td></tr><tr><td height="100%" align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%"><tr><td valign="top" align="left" width="20%"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding-left:12;padding-right:6;padding-bottom:10;padding-top:10" class="normalFont"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft"><img src="images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC" width="100%" valign="top" nowrap=""><p class="caption">Buy Parts Online</p></td><td class="frameRight"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="100%" valign="top"><table cellpadding="0" cellspacing="1" border="0"><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="bodyparts/index.html">Body Parts</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="engines/index.html">Engines</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="lights/index.html">Lights/Lamps</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="bumpers/index.html">Bumper</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="brakes/index.html">Brakes</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="mirrors/index.html">Mirror</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="exhausts/index.html">Exhaust</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="steering/index.html">Steering</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="suspensions/index.html">Suspension</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="clutches/index.html">Clutch</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="belts/index.html">Drive Belt</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="electrical/index.html">Ignition</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="fuel_filters/index.html">Fuel System</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="accessory/index.html">Accessory</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="radiator/index.html">Radiator</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="wheels/index.html">Wheels &amp; Rims</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="wheel_covers/index.html">Wheel Covers</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="conditioning/index.html">Air Conditioning Parts</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="transmission/index.html">Automatic Transmissions</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="locators/part_locator.html">Used Car Parts</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="other_parts/index.html">Other</a></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table></td></tr><tr><td style="padding-left:12;padding-right:6;padding-bottom:10;padding-top:10" class="normalFont"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft"><img src="images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC" width="100%" valign="top" nowrap=""><p class="caption">Locating Services</p></td><td class="frameRight"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="100%" valign="top"><table cellpadding="0" cellspacing="1" border="0"><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="locators/part_locator.html">Used Part Locator</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="locators/parts_hotline.html">Auto Part Leads</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="locators/car_finder.html">Used Car Finder</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="locators/new_quote.html">New Car Quote</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="locators/sell.html">Sell Your Vehicle</a></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table></td></tr><tr><td style="padding-left:12;padding-right:6;padding-bottom:10;padding-top:10" class="normalFont"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft"><img src="images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC" width="100%" valign="top" nowrap=""><p class="caption">Insurance/Loan Quote</p></td><td class="frameRight"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="100%" valign="top"><table cellpadding="0" cellspacing="1" border="0"><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/auto_finance.html">Auto Finance</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/auto_insurance.html">Auto Insurance</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/warranty.html">Extended Warranty</a></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table></td></tr><tr><td style="padding-left:12;padding-right:6;padding-bottom:10;padding-top:10" class="normalFont"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft"><img src="images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC" width="100%" valign="top" nowrap=""><p class="caption">Resources</p></td><td class="frameRight"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="100%" valign="top"><table cellpadding="0" cellspacing="1" border="0"><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/maintenance.html">Maintenance Tips</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/news.html">Automotive News</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/history_info.html">History Report</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/repair_info.html">Repair Information</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/car_care.html">Car Care </a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="services/salvage-toyota.html">Salvage Yards</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="services/body_shops.html">Body Shops</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="services/cardealers.html">Car Dealers</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="services/repair_shops.html">Repair Shops</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="services/part_stores.html">Parts Stores</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="resources/photo.html">Car Photos</a></td></tr><tr><td style="padding-top:2;"><img src="images/red-dot.gif" width="5" height="5" border="0"></td><td class="grayLink" style="padding-top:2;"><a href="auto_directory/index.html">Directory </a></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table></td></tr><tr><td style="padding-left:12;padding-right:6;padding-bottom:10;padding-top:10" class="normalFont" align="center"><a href="javascript:goToBanner('http://www.insurance.com/autolanding.aspx?cp=1533')"><img src="images/ban_insurance.jpg" border="0"></a></td></tr></table></td><td valign="top" width="80%"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding-left:12;padding-bottom:10;padding-top:10" class="normalFont"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td colspan="2" class="caption"><span style="color:black" nowrap="">Toyota Pickup Auto N' Parts Marketplace</span> - The Toyota Pickup - Vehicle Parts, Accessories, and Tips</td></tr><tr><td colspan="2" class="normalFont" style="padding-top:10;padding-right:10"></td></tr></table></td></tr><tr><td style="padding-left:12;padding-bottom:10" class="normalFont"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td class="toolbar" style="padding:2 2 2 10">Buy Auto Parts Here</td></tr><tr><td height="58" valign="top" class="s"><script>
+   function goCarPartsX(a){
+      if (a!=""){
+      location=a;
+      document.getElementById('carSelect').innerHTML='<center class="blackLink"><br><b>Loading, please wait ...</b></center>';}
+   }
+
+</script><div id="carSelect" style="height:100%;width:100%" width="100%" valign="center"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td style="padding:5 5 0 5" width="33%" class="redFont">Part Store:<br><select name="provider" class="selectFont" style="width:100%" onchange="location=''+this.value"><option selected="" value="">select ...</option><option value="bodyparts/index.html">Body Parts</option><option value="engines/index.html">Engines</option><option value="lights/index.html">Lights/Lamps</option><option value="bumpers/index.html">Bumper</option><option value="brakes/index.html">Brakes</option><option value="mirrors/index.html">Mirror</option><option value="exhausts/index.html">Exhaust</option><option value="steering/index.html">Steering</option><option value="suspensions/index.html">Suspension</option><option value="clutches/index.html">Clutch</option><option value="belts/index.html">Drive Belt</option><option value="electrical/index.html">Ignition</option><option value="fuel_filters/index.html">Fuel System</option><option value="accessory/index.html">Accessory</option><option value="radiator/index.html">Radiator</option><option value="wheels/index.html">Wheels &amp; Rims</option><option value="wheel_covers/index.html">Wheel Covers</option><option value="conditioning/index.html">Air Conditioning Parts</option><option value="transmission/index.html">Automatic Transmissions</option><option value="used_parts/index.html">Used Part Finder</option><option value="cars_finder/index.html">Used Car Dealer</option><option value="inf_engineparts/index.html">Auto Engine Parts</option></select></td><td height="58" style="padding:5 5 0 5" class="redFont" width="40">Your<br>Vehicle:&nbsp; 
+                </td><td style="padding:5 5 0 5" width="33%" class="redFont">Year:<br><select name="year" class="selectFont" style="width:100%" onchange="goCarPartsX(''+this.value)" disabled=""><option selected="" value="">select ...</option></select></td><td style="padding:5 5 0 5" width="4%" class="redFont">&nbsp;
+                </td><td style="padding:5 5 0 5" width="33%" class="redFont">Part Category:<br><select name="part_type" class="selectFont" style="width:100%" onchange="goCarPartsX(''+this.value)" disabled=""><option selected="" value="">select ...</option></select></td></tr></table></div></td></tr></table><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:5"><tr><td width="6" valign="bottom"><table width="6" border="0" cellspacing="0" cellpadding="0"><tr><td width="6" colspan="2" height="6"><img src="images/x-tl.gif" width="6" height="6"></td></tr><tr><td width="2" bgcolor="#0F66FF" height="40"><!----></td><td width="4" class="search"><!----></td></tr><tr><td width="6" colspan="2" height="6"><img src="images/x-bl.gif" width="6" height="6"></td></tr></table></td><td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="28" width="50"><img src="images/clear.gif" width="50" height="1"></td><td height="28" width="10%">&nbsp;</td><td height="30" rowspan="2"><img src="images/top.gif" width="48" height="30"></td><td height="28" width="100%">&nbsp;</td></tr><tr><td height="2" bgcolor="#0F66FF"></td><td height="2" bgcolor="#0F66FF"></td><td height="2" bgcolor="#0F66FF"></td></tr><tr><td class="search" height="48" style="padding-left:8" colspan="4"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><img src="images/provider.gif" width="163" height="14" alt="Select Part Store"></td><td><a href="lights/index.html"><img border="0" src="images/a_lights.jpg" width="63" height="38" alt="Go to Lights/Lamps Store"></a></td><td><a href="radiator/index.html"><img border="0" src="images/a_radiators.jpg" width="63" height="38" alt="Go to Radiators Store"></a></td><td><a href="bumpers/index.html"><img border="0" src="images/a_bumpers.jpg" width="63" height="38" alt="Go to Bumpers Store"></a></td><td><a href="bodyparts/index.html"><img border="0" src="images/a_exterior_parts.jpg" width="63" height="38" alt="Go to Bodyparts Store"></a></td><td><a href="engines/index.html"><img border="0" src="images/a_car_engines.jpg" width="63" height="38" alt="Go to Engines Store"></a></td><td><a href="electrical/index.html"><img border="0" src="images/a_engine_parts.jpg" width="63" height="38" alt="Go to Ingnition Parts Store"></a></td><td><a href="wheels/index.html"><img border="0" src="images/a_alloy_wheels.jpg" width="63" height="38" alt="Go to Wheels Store"></a></td><td><a href="mirrors/index.html"><img border="0" src="images/a_mirrors.gif" width="63" height="38" alt="Go to Mirrors Store"></a></td></tr></table></td></tr><tr><td height="2" bgcolor="#0F66FF" colspan="4"></td></tr></table></td><td width="6" valign="bottom"><table width="6" border="0" cellspacing="0" cellpadding="0"><tr><td width="6" colspan="2" height="6"><img src="images/x-tr.gif" width="6" height="6"></td></tr><tr><td width="4" class="search"><!----></td><td width="2" bgcolor="#0F66FF" height="40"><!----></td></tr><tr><td width="6" colspan="2" height="6"><img src="images/x-br.gif" width="6" height="6"></td></tr></table></td></tr></table></td></tr><tr><td style="padding-left:12;padding-bottom:10" class="normalFont"><table border="0" cellpadding="0" width="100%" cellspacing="0" class="normalFont"><tr><td><img src="images/top-toyota-pickup.jpg" width="311" height="192" border="0" align="right"><p align="justify">
+Welcome the wide world of Toyota pickup where you find all the necessary information on Toyota pickup parts, accessories and tips on buying it. You are to find this site a site full of necessary information on the necessary steps that have to be taken to buy Toyota pickups. You learn about the best places to go to buy Toyota pickups and how it is best to drive your Toyota pickup. On this site, you find a complete and detailed listing of all the repairs, accessories, dealers and all the necessary information about the Toyota pickup.
+</p>
+<p align="justify">
+The aim of this site is to provide you with the necessary information for you to make solid and important decisions about the purchase, everyday use and driving of the Toyota pickup. There is always the possibility of you meeting an accident, and in such incidents, you are sure to need parts for use in the Toyota pickup. And this is where we can help you with finding the right parts of your Toyota pickup. Moreover, on visiting this site, there is no need of you looking for any better customer service for your Toyota pickup as we have the complete listings of dealers, and tips on dealing with the service department.
+</p>
+<p align="justify">
+The one thing that the Toyota pickup is known for is its mileage and easy maintenance. Remember that the Toyota pickup is a car that will last a long time, and take you to many places in your life. It will be your lifetime partner so you need regular maintenance of the car for its performance and longevity of the car life. 
+</p>
+<p align="justify">
+You just have to visit the site, and look for the required parts for your car. And if you have any parts to be sold, you can also list them on the site. This site is solely for your Toyota pickup and all parts and information you find here are about Toyota pickup. This is for you to save time and energy if and when you need of find specific information, part or accessory for the Toyota pickup.
+</p>
+<p align="justify">
+You find all you want to know about the overall parts and accessories about the Toyota pickup on this site. This includes information about brakes, bumpers, mirrors, wheel covers, engine parts and many more. You find an exciting line up of information on this site with which it is possible for you to be kept up to date and informed about the Toyota pickup.
+</p>
+<p align="justify">
+Surfing through the site, you will find important links to places for you to sell your Toyota pickup, where you can buy a brand new Toyota pickup and links on the places you have to go to buy auto parts for the Toyota pickup too. Make it a point to bookmark this site so that you will be informed about the constant updates and changes on the information we have here about the Toyota pickup. This is to accommodate all new information, resellers, parts, accessories and links is available to you. 
+</p>
+<p align="justify">
+So if you are the owner of a Toyota pickup, you have to shop here on this website where you will find information about your vehicle, buy and sell new parts and even buy spare parts for your Toyota pickup car. 
+</p></td><td width="10px">&nbsp;</td></tr></table></td></tr><tr><td style="padding-left:12;padding-bottom:10" class="normalFont"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td colspan="2" class="caption">Most Popular Toyota Pickup  Items:</td></tr><tr><td colspan="2" class="normalFont" style="padding-top:10;padding-right:10"></td></tr></table><table width="100%" cellpadding="0" cellspacing="0" border="0"><form name="orderForm" method="POST"><input type="hidden" name="add_product"><input type="hidden" name="campain"><input type="hidden" name="year"><input type="hidden" name="make"><input type="hidden" name="model"><tr><td style="font-size:8px; padding:0 5 0 0" width="50%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft2"><img src="/images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC2" width="100%" valign="top"><div nowrap="" style="display:inline;color:#000000;">1987 - 1988&nbsp;Toyota&nbsp;Pickup&nbsp;</div><div nowrap="" style="display:inline;;color:#000000">Right Headlight Door</div>&nbsp;
+           </td><td class="frameRight2"><img src="images/clear.gif" width="1" height="1" border="0"></td></tr><tr><td colspan="3" class="divider" height="4px"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="70%" valign="top"><table border="0" cellspacing="3" cellpadding="1" width="100%"><tr><td height="100%" width="200"><table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0"><tr><td height="100%" align="center" valign="center" style="padding-top:5; padding-bottom:5"><a href="javascript:gotoPage('/toyota-exterior_parts/catalog-item-1349.html')"><img src="./images/products_small/bodyparts/6718.jpg" alt="Right Headlight Door" border="0"></a></td></tr></table></td></tr><tr><td valign="top"><table border="0" cellspacing="3" cellpadding="0"><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Description:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">Passenger Side, 4WD, Chrome</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>For Vehicle:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">1987 - 1988 Toyota Pickup</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Retail Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="text-decoration:line-through">$44.52</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Discount Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="color:red">$17.11*</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Stock Number:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">TPP3281</span></td></tr></table></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table><br><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft2"><img src="/images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC2" width="100%" valign="top"><div nowrap="" style="display:inline;color:#000000;">1989 - 1995&nbsp;Toyota&nbsp;Pickup&nbsp;</div><div nowrap="" style="display:inline;;color:#000000">Rear View Mirror</div>&nbsp;
+           </td><td class="frameRight2"><img src="images/clear.gif" width="1" height="1" border="0"></td></tr><tr><td colspan="3" class="divider" height="4px"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="70%" valign="top"><table border="0" cellspacing="3" cellpadding="1" width="100%"><tr><td height="100%" width="200"><table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0"><tr><td height="100%" align="center" valign="center" style="padding-top:5; padding-bottom:5"><a href="javascript:gotoPage('/toyota-exterior_parts/catalog-item-28150.html')"><img src="./images/products_small/bodyparts/gb87y.jpg" alt="Rear View Mirror" border="0"></a></td></tr></table></td></tr><tr><td valign="top"><table border="0" cellspacing="3" cellpadding="0"><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Description:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">Interior, With Light, Black</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>For Vehicle:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">1989 - 1995 Toyota Pickup</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Retail Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="text-decoration:line-through">$24.68</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Discount Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="color:red">$18.16*</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Stock Number:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">TPPTY12B</span></td></tr></table></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table><br></td><td style="font-size:8px; padding:0 5 0 0" width="50%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft2"><img src="/images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC2" width="100%" valign="top"><div nowrap="" style="display:inline;color:#000000;">1989 - 1991&nbsp;Toyota&nbsp;Pickup&nbsp;</div><div nowrap="" style="display:inline;;color:#000000">Right Front Bumper End</div>&nbsp;
+           </td><td class="frameRight2"><img src="images/clear.gif" width="1" height="1" border="0"></td></tr><tr><td colspan="3" class="divider" height="4px"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="70%" valign="top"><table border="0" cellspacing="3" cellpadding="1" width="100%"><tr><td height="100%" width="200"><table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0"><tr><td height="100%" align="center" valign="center" style="padding-top:5; padding-bottom:5"><a href="javascript:gotoPage('/toyota-exterior_parts/catalog-item-1441.html')"><img src="./images/products_small/bodyparts/6562.jpg" alt="Right Front Bumper End" border="0"></a></td></tr></table></td></tr><tr><td valign="top"><table border="0" cellspacing="3" cellpadding="0"><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Description:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">Passenger Side, 4WD, Painted</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>For Vehicle:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">1989 - 1991 Toyota Pickup</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Retail Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="text-decoration:line-through">$56.92</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Discount Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="color:red">$22.16*</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Stock Number:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">TPP3437</span></td></tr></table></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table><br><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="8" height="8"><img src="images/frame-tl.gif" width="8" height="8"></td><td height="8" class="frameTop"><img src="images/clear.gif" width="1" height="1"></td><td width="8" height="8"><img src="images/frame-tr.gif" width="8" height="8"></td></tr><tr><td class="frameLeft2"><img src="/images/clear.gif" width="1" height="1"></td><td height="23" class="frameTopC2" width="100%" valign="top"><div nowrap="" style="display:inline;color:#000000;">1993 - 1995&nbsp;Toyota&nbsp;Pickup 2WD&nbsp;</div><div nowrap="" style="display:inline;;color:#000000">14" OEM Wheel Cover</div>&nbsp;
+           </td><td class="frameRight2"><img src="images/clear.gif" width="1" height="1" border="0"></td></tr><tr><td colspan="3" class="divider" height="4px"></td></tr><tr><td class="frameLeftW"><img src="images/clear.gif" width="1" height="1"></td><td class="normalFont" width="70%" valign="top"><table border="0" cellspacing="3" cellpadding="1" width="100%"><tr><td height="100%" width="200"><table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0"><tr><td height="100%" align="center" valign="center" style="padding-top:5; padding-bottom:5"><a href="javascript:gotoPage('/toyota-wheels_rims/catalog-item-1754.html')"><img src="./images/products_small/keystone/udx38932f.jpg" alt="14&#34; OEM Wheel Cover" border="0"></a></td></tr></table></td></tr><tr><td valign="top"><table border="0" cellspacing="3" cellpadding="0"><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Description:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">Bright Silver; 5 Spoke</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>For Vehicle:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">1993 - 1995 Toyota Pickup 2WD</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Retail Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="text-decoration:line-through">$56</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Discount Price:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="color:red">$39.99*</span></td></tr><tr><td valign="top" align="right" nowrap="" class="normalFont" style="padding-left:10"><b>Stock Number:</b></td><td valign="top" align="left" class="normalFont" style="padding-left:10" width="100%"><span style="">TPPFWC61067U20</span></td></tr></table></td></tr></table></td><td class="frameRightW"><img src="images/clear.gif" width="1" height="1"></td></tr><tr><td><img src="images/frame-bl.gif" width="8" height="8"></td><td height="8" class="frameBottom"><img src="images/clear.gif" width="1" height="1"></td><td><img src="images/frame-br.gif" width="8" height="8"></td></tr></table><br></td></tr></form><tr><td style="padding-left:10"><img src="images/mayvary.gif"></td><td></td></tr></table></td></tr><tr><td><div style="padding:2" align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3662128729899151";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2006-12-03: kiosk
+google_ad_channel = "2743952832";
+google_color_border = "CCCCCC";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div></td></tr></table></td></tr></table></td></tr><tr><td><table width="100%" cellpadding="0" cellspacing="5" border="0" align="center"><tr><td height="60"></td></tr><tr><td class="border" height="1"></td></tr><tr><td class="footer" align="center"><div style="padding:2" align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3662128729899151";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al";
+//2006-12-03: kiosk
+google_ad_channel = "2743952832";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div></td></tr><tr><td class="border" height="1"></td></tr><tr><td class="normalFont" align="center"><a href="index.html">Home</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="auto_directory/index.html">Auto Directory</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="services/contact_us.html">Contact Us</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="resources/information.html">Information</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="javascript:goCheckOut();">Check Out</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="javascript:goOrderTracking()">Order Tracking</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="resources/privacy_policy.html">Privacy Policy</a></td></tr><tr><td class="footer" align="center">&nbsp;</td></tr><tr><td class="footer" align="center">Copyright &copy; 2006:Pickup Auto N' Parts Marketplace. All rights reserved. // Site is powered by <a href="http://www.tpickup.com">Pickup Auto N' Parts Marketplace</a>.
+         </td></tr><tr><td class="footer" align="center"><img src="images/toyota-footer.gif" border="0" width="420px" height="14px"></td></tr></table></td></tr></table></body></html>

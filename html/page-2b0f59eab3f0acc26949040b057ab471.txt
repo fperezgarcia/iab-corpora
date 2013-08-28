@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+
+<head lang="en-US">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<script type="text/javascript">/*<![CDATA[*/(function(a){function b(a,b){if(+a)return~a||(d.cookie=h+"=; path=/");j=d.createElement(e),k=d.getElementsByTagName(e)[0],j.src=a,b&&(j.onload=j.onerror=b),k.parentNode.insertBefore(j,k)}function c(){n.api||b(l.shift()||-1,c)}if(this.Mobify)return;var d=document,e="script",f="mobify",g="."+f+".com/",h=f+"-path",i=g+"un"+f+".js",j,k,l=[!1,1],m,n=this.Mobify={points:[+(new Date)],tagVersion:[6,1],ajs:"https://a.mobify.com/garmin/a.js"},o=/((; )|#|&|^)mobify-path=([^&;]*)/g.exec(location.hash+"; "+d.cookie);o?(m=o[3])&&!+(m=o[2]&&sessionStorage[h]||m)&&(l=[!0,"//preview"+g+escape(m)]):(l=a()||l,l[0]&&l.push("//cdn"+i,"//files01"+i)),l.shift()?(d.write('<plaintext style="display:none;">'),setTimeout(c)):b(l[0])})(function(){if(/ip(hone|od)|android.*(mobile)|blackberry.*applewebkit/i.test(navigator.userAgent)){return[1,"//cdn.mobify.com/sites/garmin/production/mobify.js"]}return[0,Mobify.ajs]})/*]]>*/</script>
+
+<meta charset="utf-8">
+<meta name="locale" content="United States">
+<meta name="language" content="English">
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://static.garmincdn.com/com.garmin/ui/css/base.lib-v1.3-min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.garmincdn.com/com.garmin/ui/js/jquery.lib-v1.3-min.js"></script>
+
+<link href="https://static.garmincdn.com/com.garmin.www/ui/css/responsive-nav.min-v1.0.0.css" rel="stylesheet" type="text/css">
+<script src="https://static.garmincdn.com/com.garmin.www/ui/js/responsive-nav.min-v1.0.0.js"></script>
+<script type="text/javascript" src="//tealium.hs.llnwd.net/o43/utag/garmin/main/prod/utag.js"></script>
+<style type="text/css">/* Bens Video Code Fix */
+.video-embed { position: relative; padding-bottom: 75%; height: 0; overflow: hidden;}
+.video-embed.widescreen {padding-bottom: 56.25%;}
+.video-embed iframe, .video-embed object,.video-embed embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#global-footer {background-color: #efefef;}
+/* edit-this style */ .ee-edit-this {position: absolute; top: 6px; left: 6px; z-index: 1000;}
+</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31920-1']);
+  _gaq.push(['_setDomainName', 'garmin.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>	
+
+
+
+<title>On the Road | Garmin | United States</title>
+<meta name="channel" content="Product">
+<meta name="section" content="Store">
+<meta name="description" content="Hit the highways and never look back with our portable street navigators. There's an easy-to-use navigator for any vehicle — and any budget.">
+<meta name="keywords" content="road, automotive, motorcycles, trucking, cars, trucks, street, highways, navigators, navigation, pnds, nulink">
+
+
+<link rel="stylesheet" type="text/css" href="//static.garmincdn.com/com.garmin.www/ui/src-css/jquery.overlay-v1.0.0.css">
+<link rel="stylesheet" type="text/css" href="//static.garmincdn.com/com.garmin.www/ui/src-css/market-v1.0.0.css">
+<style type="text/css">.slide-show {width: 940px; min-height: 320px;}</style>
+<script type="text/javascript" src="//static.garmincdn.com/com.garmin.www/ui/src-js/jquery.cycle-v1.0.0.js"></script>
+<script type="text/javascript" src="//static.garmincdn.com/com.garmin.www/ui/src-js/jquery.touchwipe.min-v1.0.0.js"></script> 
+<script type="text/javascript" src="//static.garmincdn.com/com.garmin.www/ui/src-js/jquery.carousel-v1.0.0.js"></script>
+<script type="text/javascript" src="//static.garmincdn.com/com.garmin.www/ui/src-js/jquery.tools-v1.0.0.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.slide-show').cycle({
+		fx: 'scrollHorz',
+		pager:  '.slide-show-nav',
+		speed: 300,
+		timeout: 5000,
+		pause: 1
+	});
+	jQuery('.carousel').cycle({
+		fx: 'scrollHorz',
+		easing: 'swing',
+		timeout: 0,
+		speed: 300,
+		next: '.page-btn.next',
+		prev: '.page-btn.prev',
+		nowrap: 'true'
+	});
+	// Touchwipe Plugin
+	jQuery(".slide-show").touchwipe({
+      		wipeLeft: function() {jQuery(".slide-show").cycle("next");},
+      		wipeRight: function() {jQuery(".slide-show").cycle("prev");}
+	});
+	
+	jQuery('.videos').garminLoadYoutubePlaylist({
+    	playItemClass:   'ytLink',
+    	videoTemplateId: 'ytVideoTmpl'   	
+    	
+    });
+    jQuery("a[rel], img[rel]").overlay({
+        mask: {
+            color: '#000',
+            loadSpeed: 200,
+            opacity: 0.9
+        }
+    });
+});
+</script>
+
+<style type="text/css">@media screen and (max-width: 767px){body.explore .background-takeover{display:none}}</style>
+<link rel="stylesheet" type="text/css" href="https://static.garmincdn.com/com.garmin.www/ui/src-css/responsive.min-v1.0.2.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="220" class="ee en-US explore ontheroad ">
+<!-- testing for cache busting on explore market page -->
+
+
+
+<div id="touch-menu">
+	<ul>
+		
+		<li class="country-selector has-menu">
+		    
+		    <a class="flag-en-US">United States</a>
+		    
+		    <ul class="country-selector secondary-menu">
+		    
+			<li><a class="flag-en-AU" data-locale="en-AU" href="http://www.garmin.com/au" title="Australia">Australia</a></li>    
+		    
+			<li><a class="flag-es-AR" data-locale="es-AR" href="http://www.garmin.com/es-AR" title="Argentina">Argentina</a></li>    
+		    
+			<li><a class="flag-az-AZ" data-locale="az-AZ" href="http://www.garmin.az" title="Azerbaijan">Azerbaijan</a></li>    
+		    
+			<li><a class="flag-be-BY" data-locale="be-BY" href="http://www.garmin.by" title="Belarus">Belarus</a></li>    
+		    
+			<li><a class="flag-fr-BE" data-locale="fr-BE" href="http://www.garmin.com/fr-BE" title="Belgique - Français">Belgique - Français</a></li>    
+		    
+			<li><a class="flag-nl-BE" data-locale="nl-BE" href="http://www.garmin.com/nl-BE" title="België - Nederlands">België - Nederlands</a></li>    
+		    
+			<li><a class="flag-pt-BR" data-locale="pt-BR" href="http://www.garmin.com/br" title="Brasil">Brasil</a></li>    
+		    
+			<li><a class="flag-bg-BG" data-locale="bg-BG" href="http://www.garmin.bg" title="Bulgaria">Bulgaria</a></li>    
+		    
+			<li><a class="flag-en-CA" data-locale="en-CA" href="http://buy.garmin.com/shop/" title="Canada - English">Canada - English</a></li>    
+		    
+			<li><a class="flag-fr-CA" data-locale="fr-CA" href="http://www.amb-inc.com/fr/accueil/" title="Canada - Fran&#xe7;ais">Canada - Fran&#xe7;ais</a></li>    
+		    
+			<li><a class="flag-es-CL" data-locale="es-CL" href="http://www.garmin.com/es-CL" title="Chile">Chile</a></li>    
+		    
+			<li><a class="flag-zh-CN" data-locale="zh-CN" href="http://www.garmin.com.cn/" title="中国 - 中文">中国 - 中文</a></li>    
+		    
+			<li><a class="flag-hr-HR" data-locale="hr-HR" href="http://www.garmin.com.hr" title="Croatia">Croatia</a></li>    
+		    
+			<li><a class="flag-cs-CZ" data-locale="cs-CZ" href="http://www.garmin.cz" title="Czech Republic">Czech Republic</a></li>    
+		    
+			<li><a class="flag-da-DK" data-locale="da-DK" href="http://www.garmin.com/da-DK" title="Danmark">Danmark</a></li>    
+		    
+			<li><a class="flag-es-EC" data-locale="es-EC" href="http://www.garmin.ec/" title="Ecuador">Ecuador</a></li>    
+		    
+			<li><a class="flag-ar-EG" data-locale="ar-EG" href="http://www.garmin-egypt.com" title="Egypt">Egypt</a></li>    
+		    
+			<li><a class="flag-es-ES" data-locale="es-ES" href="http://www.garmin.com/es-ES" title="España">España</a></li>    
+		    
+			<li><a class="flag-et-EE" data-locale="et-EE" href="http://www.jakari.ee" title="Estonia">Estonia</a></li>    
+		    
+			<li><a class="flag-fr-FR" data-locale="fr-FR" href="http://www.garmin.com/fr-FR" title="France">France</a></li>    
+		    
+			<li><a class="flag-de-DE" data-locale="de-DE" href="http://www.garmin.com/de-DE" title="Deutschland">Deutschland</a></li>    
+		    
+			<li><a class="flag-el-GR" data-locale="el-GR" href="http://www.garmin.gr" title="Greece">Greece</a></li>    
+		    
+			<li><a class="flag-hu-HU" data-locale="hu-HU" href="http://www.garmin.hu" title="Hungary">Hungary</a></li>    
+		    
+			<li><a class="flag-en-IN" data-locale="en-IN" href="http://www.garmin.co.in" title="India">India</a></li>    
+		    
+			<li><a class="flag-id-ID" data-locale="id-ID" href="http://id.garmin.com/" title="Indonesia">Indonesia</a></li>    
+		    
+			<li><a class="flag-ar-IQ" data-locale="ar-IQ" href="http://www.navcom.me" title="Iraq">Iraq</a></li>    
+		    
+			<li><a class="flag-en-IE" data-locale="en-IE" href="http://www.garmin.com/en-IE" title="Ireland">Ireland</a></li>    
+		    
+			<li><a class="flag-he-IL" data-locale="he-IL" href="http://www.garminway.com" title="Israel">Israel</a></li>    
+		    
+			<li><a class="flag-it-IT" data-locale="it-IT" href="http://www.garmin.com/it-IT" title="Italia">Italia</a></li>    
+		    
+			<li><a class="flag-ja-JP" data-locale="ja-JP" href="http://www.garmin.co.jp" title="Japan">Japan</a></li>    
+		    
+			<li><a class="flag-ar-JO" data-locale="ar-JO" href="http://www.navcom.me" title="Jordan">Jordan</a></li>    
+		    
+			<li><a class="flag-ko-KR" data-locale="ko-KR" href="http://www.garmin.kr" title="Korea">Korea</a></li>    
+		    
+			<li><a class="flag-ar-KW" data-locale="ar-KW" href="http://www.garminkw.com" title="Kuwait">Kuwait</a></li>    
+		    
+			<li><a class="flag-lv-LV" data-locale="lv-LV" href="http://www.garmin.lv" title="Latvia">Latvia</a></li>    
+		    
+			<li><a class="flag-ar-LB" data-locale="ar-LB" href="http://www.garminlb.com" title="Lebanon">Lebanon</a></li>    
+		    
+			<li><a class="flag-lt-LT" data-locale="lt-LT" href="http://www.garmin.lt/lt/" title="Lithuania">Lithuania</a></li>    
+		    
+			<li><a class="flag-es-MX" data-locale="es-MX" href="http://www.garmin.com/es-MX" title="México">México</a></li>    
+		    
+			<li><a class="flag-ar-MA" data-locale="ar-MA" href="http://www.garmin-maroc.com" title="Morocco">Morocco</a></li>    
+		    
+			<li><a class="flag-nl-NL" data-locale="nl-NL" href="http://www.garmin.com/nl-NL" title="Nederland">Nederland</a></li>    
+		    
+			<li><a class="flag-en-NZ" data-locale="en-NZ" href="http://www.garmin.com/nz/" title="New Zealand">New Zealand</a></li>    
+		    
+			<li><a class="flag-nb-NO" data-locale="nb-NO" href="http://www.garmin.com/nb-NO" title="Norway">Norway</a></li>    
+		    
+			<li><a class="flag-ar-OM" data-locale="ar-OM" href="http://www.suhailbahwangroup.com" title="Oman">Oman</a></li>    
+		    
+			<li><a class="flag-de-AT" data-locale="de-AT" href="http://www.garmin.com/de-AT" title="Österreich">Österreich</a></li>    
+		    
+			<li><a class="flag-en-PH" data-locale="en-PH" href="http://ph.garmin.com/" title="Philippines">Philippines</a></li>    
+		    
+			<li><a class="flag-pl-PL" data-locale="pl-PL" href="http://www.garmin.com/pl-PL" title="Polska">Polska</a></li>    
+		    
+			<li><a class="flag-pt-PT" data-locale="pt-PT" href="http://www.garmin.com/pt-PT" title="Portugal">Portugal</a></li>    
+		    
+			<li><a class="flag-ar-QA" data-locale="ar-QA" href="http://www.garmin.qa" title="Qatar">Qatar</a></li>    
+		    
+			<li><a class="flag-ro-RO" data-locale="ro-RO" href="http://www.garmin.ro" title="Romania">Romania</a></li>    
+		    
+			<li><a class="flag-ru-RU" data-locale="ru-RU" href="http://www.garmin.ru" title="Russia">Russia</a></li>    
+		    
+			<li><a class="flag-en-SA" data-locale="en-SA" href="http://www.garmin.com.sa" title="Saudi Arabia">Saudi Arabia</a></li>    
+		    
+			<li><a class="flag-en-SG" data-locale="en-SG" href="http://www.garmin.com.sg/" title="Singapore - English">Singapore - English</a></li>    
+		    
+			<li><a class="flag-sk-SK" data-locale="sk-SK" href="http://www.garmin.sk" title="Slovakia">Slovakia</a></li>    
+		    
+			<li><a class="flag-sl-SI" data-locale="sl-SI" href="http://www.garmin.si" title="Slovenia">Slovenia</a></li>    
+		    
+			<li><a class="flag-en-ZA" data-locale="en-ZA" href="http://www.garmin.co.za/" title="Sub-Saharan Africa">Sub-Saharan Africa</a></li>    
+		    
+			<li><a class="flag-fi-FI" data-locale="fi-FI" href="http://www.garmin.com/fi-FI" title="Suomi">Suomi</a></li>    
+		    
+			<li><a class="flag-sv-SE" data-locale="sv-SE" href="http://www.garmin.com/sv-SE" title="Sverige">Sverige</a></li>    
+		    
+			<li><a class="flag-fr-CH" data-locale="fr-CH" href="http://www.garmin.ch" title="Switzerland">Switzerland</a></li>    
+		    
+			<li><a class="flag-zh-TW" data-locale="zh-TW" href="http://www.garmin.com.tw/" title="台灣 - 中文">台灣 - 中文</a></li>    
+		    
+			<li><a class="flag-zh-TH" data-locale="zh-TH" href="http://www.garmin.co.th" title="Thailand">Thailand</a></li>    
+		    
+			<li><a class="flag-tr-TR" data-locale="tr-TR" href="http://www.garmin.com.tr" title="Turkey">Turkey</a></li>    
+		    
+			<li><a class="flag-uk-UA" data-locale="uk-UA" href="http://www.garmin.com.ua" title="Ukraine - Aeroscan">Ukraine - Aeroscan</a></li>    
+		    
+			<li><a class="flag-uk-UA" data-locale="uk-UA" href="http://www.garmin.ua" title="Ukraine - Navionika">Ukraine - Navionika</a></li>    
+		    
+			<li><a class="flag-en-GB" data-locale="en-GB" href="http://www.garmin.com/en-GB" title="United Kingdom">United Kingdom</a></li>    
+		    
+			<li><a class="flag-en-US" data-locale="en-US" href="http://www.garmin.com/en-US" title="United States">United States</a></li>    
+		    
+			<li><a class="flag-ar-YE" data-locale="ar-YE" href="http://www.garminyemen.com" title="Yemen">Yemen</a></li>    
+		    
+		    </ul>
+		</li>
+		
+	</ul>
+	<ul id="login-state">
+				
+		<li id="logged-out" class="logged-out">
+			<a class="sign-in-link" href="https://my.garmin.com/mygarmin/login.htm">Sign In</a>
+		</li>
+		<li id="logged-in" class="logged-in has-menu">
+			<a class="signed-in-sir" href="#">Your Account</a>
+			<ul class="secondary-menu">
+				
+				<li><a href="https://my.garmin.com/">Account Home</a></li>
+				
+				<li><a href="https://my.garmin.com/mygarmin/customers/myUnits.htm">Your Products</a></li>
+				
+				<li><a href="https://buy.garmin.com/en-US/US/manage-account.ep">Order History</a></li>
+				
+				<li><a href="https://my.garmin.com/mygarmin/customers/myGarminHome.faces">Repair History</a></li>
+				
+				<li><a href="https://my.garmin.com/mygarmin/logout.jsp">Sign Out</a></li>
+				
+			</ul>
+		</li>
+	</ul>
+	<ul class="x-main-nav">	
+						
+		<li class="has-menu"><a href="#">Shop</a>
+			<a class="landing-button ss-icon" href="http://buy.garmin.com">&#x25BB;</a>
+			<ul class="secondary-menu shop-dropdown">
+				<li class="road-link"><a href="https://buy.garmin.com/en-US/US/on-the-road/cOnTheRoad-p1.html" title="On the Road">On the Road</a></li>
+				<li class="go-link"><a href="https://buy.garmin.com/en-US/US/on-the-go/cOnTheGo-p1.html" title="On the Go">On the Go</a></li>
+				<li class="sports-link"><a href="https://buy.garmin.com/en-US/US/into-sports/cIntoSports-p1.html" title="Into Sports">Into Sports</a></li>
+				<li class="trail-link"><a href="https://buy.garmin.com/en-US/US/on-the-trail/cOnTheTrail-p1.html" title="On the Trail">On the Trail</a></li>
+				<li class="water-link"><a href="https://buy.garmin.com/en-US/US/on-the-water/cOnTheWater-p1.html" title="On the Water">On the Water</a></li>
+				<li class="air-link"><a href="https://buy.garmin.com/en-US/US/in-the-air/cInTheAir-p1.html" title="In the Air">In the Air</a></li>
+				<li class="oem-link"><a href="https://buy.garmin.com/en-US/US/cOEM-p1.html" title="Sensors &amp; Boards">Sensors &amp; Boards</a></li>
+			</ul>
+		</li>
+		<li class="has-menu"><a href="#">Explore</a>
+			<ul class="secondary-menu explore-dropdown">
+			
+				<li class="road-link"><a href="http://www.garmin.com/en-US/explore/ontheroad/">On the Road</a></li>
+			
+				<li class="sports-link"><a href="http://www.garmin.com/en-US/explore/intosports/">Into Sports</a></li>
+			
+				<li class="trail-link"><a href="http://www.garmin.com/en-US/explore/onthetrail/">On the Trail</a></li>
+			
+				<li class="go-link"><a href="http://www.garmin.com/en-US/explore/onthego/">On the Go</a></li>
+			
+				<li class="water-link"><a href="http://www.garmin.com/en-US/explore/onthewater/">On the Water</a></li>
+			
+				<li class="air-link"><a href="http://www.garmin.com/en-US/explore/intheair/">In the Air</a></li>
+			
+			</ul>
+		</li>
+		<li class="has-menu"><a href="http://www.garmin.com/en-US/maps-accessories/">Maps &amp; Accessories</a>
+			<a class="landing-button ss-icon" href="http://www.garmin.com/en-US/maps-accessories/">&#x25BB;</a>
+			<ul class="secondary-menu maps-etc-dropdown">
+				
+					<li class="Maps"><a onclick="header_data(action_d, 'Maps');" href="http://www.garmin.com/en-US/maps/" title="Maps">Maps</a></li>
+				
+					<li class="Accessories"><a onclick="header_data(action_d, 'Accessories');" href="http://www.garmin.com/en-US/shop/accessories" title="Accessories">Accessories</a></li>
+				
+					<li class="Extras"><a onclick="header_data(action_d, 'Extras');" href="http://www.garmin.com/us/extras/" title="Extras">Extras</a></li>
+				
+			</ul>
+		</li>
+		<li class="has-menu"><a href="http://www.garmin.com/us/support/">Support</a>
+			<a class="landing-button ss-icon" href="http://www.garmin.com/us/support/">&#x25BB;</a>
+			<ul class="secondary-menu support-dropdown">
+				
+					<li class="reg" class="first"><a onclick="header_data(action_e, 'Registration');" href="http://my.garmin.com/mygarmin/marketing/register.htm" title="Registration">Registration</a></li>
+				
+					<li class="software"><a onclick="header_data(action_e, 'Software');" href="http://www.garmin.com/support/download.jsp" title="Software">Software</a></li>
+				
+					<li class="manuals" class="last"><a onclick="header_data(action_e, 'Manuals');" href="https://buy.garmin.com/support/manuals/searchManuals.faces?refresh=true" title="Manuals">Manuals</a></li>
+				
+					<li class="faqs" class="first"><a onclick="header_data(action_e, 'FAQs');" href="https://support.garmin.com/support/searchSupport/search.htm" title="FAQs">FAQs</a></li>
+				
+					<li class="repair"><a onclick="header_data(action_e, 'Repair');" href="https://my.garmin.com/rma/repair/repairLanding.htm" title="Repair">Repair</a></li>
+				
+					<li class="warranty" class="last"><a onclick="header_data(action_e, 'Warranty');" href="http://www.garmin.com/support/warranty.html" title="Warranty">Warranty</a></li>
+				
+					<li class="learning-center" class="first"><a onclick="header_data(action_e, 'Learning Center');" href="http://www.garmin.com/learningcenter/" title="Learning Center">Learning Center</a></li>
+				
+					<li class="contact-support"><a onclick="header_data(action_e, 'Contact Support');" href="http://www.garmin.com/us/support/contact" title="Contact Support">Contact Support</a></li>
+				
+			</ul>
+		</li>
+	</ul>					
+	
+		<ul class="x-footer-links">
+		<li><a href="//www.garmin.com/apps">Mobile Apps</a></li>
+		<li><a href="//www.garmin.com/company/stores/chicago/">Retail Store</a></li>
+		<li><a href="//www.garmin.com/us/dealerlocator">Find a Store or Dealer</a></li>
+	</ul>
+	<ul class="x-footer-links">
+		<li><a href="//www.garmin.com/en-US/company/about/">About Us</a></li>
+		<li><a href="//www.garmin.com/en-US/company/careers/">Careers</a></li>
+		<li><a href="//www.garmin.com/contactUs/">Contact Us</a></li>
+	</ul>
+	<ul class="x-footer-links">
+		<li><a href="//my.garmin.com">myGarmin</a></li>
+		<li><a href="//connect.garmin.com">Garmin Connect</a></li>
+		<li><a href="//www.opencaching.com">OpenCaching</a></li>
+		<li><a href="//fly.garmin.com">flyGarmin</a></li>
+		<li><a href="//adventures.garmin.com">Garmin Adventures</a></li>
+	</ul>
+	<ul class="x-footer-links">
+		<li><a href="http://www.garmin.com/solutions/">Commercial Solutions</a></li>
+		<li><a href="http://developers.garmin.com/">Developers</a></li>
+		<li><a href="http://dealers.garmin.com/">Dealer Resource Center</a></li>
+	</ul>
+	</div>
+<div id="content">
+<script type="text/javascript">
+	action_a = "Homepage";
+	action_b = "Explore";
+	action_c = "Shop";
+	action_d = "Maps Etc";
+	action_e = "Support";
+	action_f = "Utility Bar: ";
+	action_f1 = action_f + "Cart";
+	action_f2 = action_f + "Country Selector";
+	action_f3 = action_f + "Your Account";
+	action_f4 = action_f + "Search";
+	_gaq = _gaq ? _gaq : []; 
+	var header_data = function (a,b) { _gaq.push( ['_trackEvent', 'Global Header', a, b] ); };
+
+
+        /*****************
+        ***
+        *** Remove this when we have INTL search results. 
+        ***
+        *************/
+        var pageHost           = window.location.host;
+	var pagePath           = window.location.pathname;
+	var currentLocale      = pagePath.split('/')[1];
+	var localeCookiePref   = garminGlobalStore.getGlobal('locale');
+	var pageLang           = jQuery('html').attr('lang');
+	if (typeof(pageLang) != 'undefined') {
+		jQuery('html').attr('lang',pageLang.replace('_','-'));
+	} else {
+		if (typeof(currentLocale) != 'undefined' && currentLocale.length == 5) {
+			jQuery('html').attr('lang',currentLocale);
+		} else if (localeCookiePref != -1) {
+			jQuery('html').attr('lang',localeCookiePref);
+		} else {
+			jQuery('html').attr('lang','en-US');
+		}
+	}
+	pageLang = jQuery('html').attr('lang');
+        //object containing the Google Search Appliance localization strings:
+  	var GSALocales = {
+  		"es-AR":"garmin_ar_fe",
+		"de-AT":"garmin_at_fe",
+		"en-AU":"garmin_au_fe",
+		"fr-BE":"garmin_be_fr_fe",
+		"nl-BE":"garmin_be_nl_fe",
+		"pt-BR":"garmin_br_fe",
+		"es-CL":"garmin_cl_fe",
+		"zh-CN":"garmin_cn_fe",
+		"de-DE":"garmin_de_fe",
+		"da-DK":"garmin_dk_fe",
+		"es-ES":"garmin_es_fe",
+		"fi-FI":"garmin_fi_fe",
+		"fr-FR":"garmin_fr_fe",
+		"it-IT":"garmin_it_fe",
+		"es-MX":"garmin_mx_fe",
+		"nl-NL":"garmin_nl_fe",
+		"nb-NO":"garmin_no_fe",
+		"en-NZ":"garmin_nz_fe",
+		"pl-PL":"garmin_pl_fe",
+		"pt-PT":"garmin_pt_fe",
+		"sv-SE":"garmin_se_fe",
+		"en-GB":"garmin_uk_fe",
+		"en-ZA":"garmin_za_fe",
+		"en-CA":"garmin_fe"
+  	}
+
+	function setupSearch() {
+	  	
+  		if (typeof(GSALocales[pageLang]) != 'undefined' && jQuery('input[name=proxystylesheet]').length == 0) {
+			/* hidden values for info to go to GSA */
+			var searchForm   = jQuery('#suggestion_form');
+			var searchLocale = GSALocales[pageLang];
+		  	searchForm.append('<input value="'+searchLocale+'" name="proxystylesheet" type="hidden">');
+			searchForm.append('<input value="'+searchLocale+'" name="client" type="hidden">');
+			searchForm.append('<input value="xml_no_dtd" name="output" type="hidden">');
+			searchForm.append('<input value="date:D:L:d1" name="sort" type="hidden">');
+			searchForm.append('<input value="3" name="entqr" type="hidden">');
+			searchForm.append('<input value="UTF-8" name="oe" type="hidden">');
+			searchForm.append('<input value="UTF-8" name="ie" type="hidden">');
+			searchForm.append('<input value="1" name="ud" type="hidden">');
+			searchForm.append('<input value="0" name="filter" type="hidden">');
+			searchForm.append('<input value="'+searchLocale.substr(0,searchLocale.length - 3)+'" name="site" type="hidden">');
+		  	searchForm.attr('action','http://search.garmin.com/search');
+		}
+	}
+        jQuery(document).ready(function(){
+                setupSearch();
+        });
+</script>
+
+<div id="global-header-wrapper">
+  
+  <div id="global-utility-bar">
+<div class="container container_24">
+<ul>
+<li id="login-state">
+  <div id="logged-out" class="logged-out">
+    <a class="sign-in-link" data-locale="en-US" href="https://my.garmin.com/mygarmin/login.htm?service=http%3A%2F%2Fwww.garmin.com%2Fen-US">Sign In</a>
+  </div>
+  <div id="logged-in" class="logged-in has-menu" style="display: none;">
+    <a onclick="header_data(action_f3, 'Your Account');"class="signed-in-link" href="#">Your Account</a>
+    <span class="dd-arrow"></span>
+    <div class="dropdown">
+      <ul>
+        <li><a onclick="header_data(action_f3, 'Account Home');" href="https://my.garmin.com/">Account Home</a></li><li><a onclick="header_data(action_f3, 'Your Products');" href="https://my.garmin.com/mygarmin/customers/myUnits.htm">Your Products</a></li><li><a onclick="header_data(action_f3, 'Order History');" href="https://buy.garmin.com/en-US/US/manage-account.ep">Order History</a></li><li><a onclick="header_data(action_f3, 'Repair History');" href="https://my.garmin.com/mygarmin/customers/myGarminHome.faces">Repair History</a></li><li><a onclick="header_data(action_f3, 'Sign Out');" href="https://my.garmin.com/mygarmin/logout.jsp">Sign Out</a></li>
+      </ul>
+    </div>
+  </div>
+</li>
+
+<li class="country-selector has-menu">
+  <a class="flag-en-US">United States</a>
+  <span class="dd-arrow"></span>
+  <div class="dropdown" id="api-locale-options">
+    
+    <ul>
+      <li><a class="flag-es-AR " data-locale="es-AR" href="/es-AR" title="Argentina">Argentina</a></li><li><a class="flag-en-AU " data-locale="en-AU" href="http://www.garmin.com/au" title="Australia">Australia</a></li><li><a class="flag-nl-BE " data-locale="nl-BE" href="/nl-BE" title="België (Nederlands)">België (Nederlands)</a></li><li><a class="flag-fr-BE " data-locale="fr-BE" href="/fr-BE" title="Belgique (Français)">Belgique (Français)</a></li><li><a class="flag-pt-BR " data-locale="pt-BR" href="http://www.garmin.com/br/" title="Brasil">Brasil</a></li><li><a class="flag-en-CA " data-locale="en-CA" href="https://buy.garmin.com/shop/" title="Canada (English)">Canada (English)</a></li>
+    </ul>
+    <ul>
+      <li><a class="flag-es-CL " data-locale="es-CL" href="/es-CL" title="Chile">Chile</a></li><li><a class="flag-da-DK " data-locale="da-DK" href="/da-DK" title="Danmark">Danmark</a></li><li><a class="flag-de-DE " data-locale="de-DE" href="/de-DE" title="Deutschland">Deutschland</a></li><li><a class="flag-es-ES " data-locale="es-ES" href="/es-ES" title="España">España</a></li><li><a class="flag-fr-FR " data-locale="fr-FR" href="/fr-FR" title="France">France</a></li><li><a class="flag-en-IE " data-locale="en-IE" href="/en-IE" title="Ireland">Ireland</a></li>
+    </ul>
+    <ul>
+      <li><a class="flag-it-IT " data-locale="it-IT" href="/it-IT" title="Italia">Italia</a></li><li><a class="flag-es-MX " data-locale="es-MX" href="/es-MX" title="México">México</a></li><li><a class="flag-nl-NL " data-locale="nl-NL" href="/nl-NL" title="Nederland">Nederland</a></li><li><a class="flag-nb-NO " data-locale="nb-NO" href="/nb-NO" title="Norge">Norge</a></li><li><a class="flag-de-AT " data-locale="de-AT" href="/de-AT" title="Österreich">Österreich</a></li><li><a class="flag-pl-PL " data-locale="pl-PL" href="/pl-PL" title="Polska">Polska</a></li>
+    </ul>
+    <ul>
+      <li><a class="flag-pt-PT " data-locale="pt-PT" href="/pt-PT" title="Portugal">Portugal</a></li><li><a class="flag-fi-FI " data-locale="fi-FI" href="/fi-FI" title="Suomi">Suomi</a></li><li><a class="flag-sv-SE " data-locale="sv-SE" href="/sv-SE" title="Sverige">Sverige</a></li><li><a class="flag-en-GB " data-locale="en-GB" href="/en-GB" title="United Kingdom">United Kingdom</a></li><li><a class="flag-en-US active" data-locale="en-US" href="/en-US" title="United States">United States</a></li>
+    </ul>
+    <div class="distributors-container"><div style="clear:both;"></div><hr /><h6>Distributors</h6><ul> <li> <a class="flag-ko-KR " data-locale="ko-KR" href="http://www.garmin.kr/" title="한국">한국</a> </li> <li> <a class="flag-th-TH " data-locale="th-TH" href="http://www.garmin.co.th/" title="ประเทศไทย">ประเทศไทย</a> </li> <li> <a class="flag-az-AZ " data-locale="az-AZ" href="http://www.garmin.az/" title="Azerbaijan">Azerbaijan</a> </li> <li> <a class="flag-be-BY " data-locale="be-BY" href="http://www.garmin.by/" title="Belarus">Belarus</a> </li> <li> <a class="flag-pt-BR " data-locale="pt-BR" href="http://www.garmin.com/br/" title="Brasil">Brasil</a> </li> <li> <a class="flag-fr-CA " data-locale="fr-CA" href="http://www.amb-inc.com/fr/accueil/" title="Canada (Français)">Canada (Français)</a> </li> <li> <a class="flag-cs-CZ " data-locale="cs-CZ" href="http://www.garmin.cz/" title="Česká republika">Česká republika</a> </li> <li> <a class="flag-es-EC " data-locale="es-EC" href="http://www.garmin.ec/" title="Ecuador">Ecuador</a> </li> <li> <a class="flag-et-EE " data-locale="et-EE" href="http://www.jakari.ee/" title="Eesti">Eesti</a> </li> <li> <a class="flag-ar-EG " data-locale="ar-EG" href="http://www.garmin-egypt.com/" title="Egypt">Egypt</a> </li> </ul> <ul> <li> <a class="flag-hr-HR " data-locale="hr-HR" href="http://www.garmin.com.hr/" title="Hrvatska">Hrvatska</a> </li> <li> <a class="flag-en-IN " data-locale="en-IN" href="http://www.garmin.co.in" title="India">India</a> </li> <li> <a class="flag-id-ID " data-locale="id-ID" href="http://id.garmin.com/" title="Indonesia">Indonesia</a> </li> <li> <a class="flag-he-IL " data-locale="he-IL" href="http://www.garminway.com/" title="Israel">Israel</a> </li> <li> <a class="flag-ar-KW " data-locale="ar-KW" href="http://www.garminkw.com/" title="Kuwait">Kuwait</a> </li> <li> <a class="flag-lv-LV " data-locale="lv-LV" href="http://www.garmin-latvia.lv/" title="Latvia">Latvia</a> </li> <li> <a class="flag-ar-LB " data-locale="ar-LB" href="http://www.garminlb.com/" title="Lebanon">Lebanon</a> </li> <li> <a class="flag-lt-LT " data-locale="lt-LT" href="http://www.garmin.lt/lt/" title="Lithuania">Lithuania</a> </li> <li> <a class="flag-hu-HU " data-locale="hu-HU" href="http://www.garmin.hu/" title="Magyarország">Magyarország</a> </li> <li> <a class="flag-ar-MA " data-locale="ar-MA" href="http://www.garmin-maroc.com/" title="Morocco">Morocco</a> </li> </ul> <ul> <li> <a class="flag-ar-OM " data-locale="ar-OM" href="http://www.suhailbahwangroup.com/" title="Oman">Oman</a> </li> <li> <a class="flag-en-PH " data-locale="en-PH" href="http://ph.garmin.com/" title="Philippines">Philippines</a> </li> <li> <a class="flag-ar-QA " data-locale="ar-QA" href="http://www.garmin.qa/" title="Qatar">Qatar</a> </li> <li> <a class="flag-ro-RO " data-locale="ro-RO" href="http://www.garmin.ro/" title="Romania">Romania</a> </li> <li> <a class="flag-en-SA " data-locale="en-SA" href="http://www.garmin.com.sa/" title="Saudi Arabia">Saudi Arabia</a> </li> <li> <a class="flag-en-SG " data-locale="en-SG" href="http://www.garmin.com.sg/" title="Singapore - English">Singapore - English</a> </li> <li> <a class="flag-sl-SI " data-locale="sl-SI" href="http://www.garmin.si/" title="Slovenija">Slovenija</a> </li> <li> <a class="flag-sk-SK " data-locale="sk-SK" href="http://www.garmin.sk/" title="Slovensko">Slovensko</a> </li> <li> <a class="flag-en-ZA " data-locale="en-ZA" href="http://www.garmin.co.za/" title="Sub-Saharan Africa">Sub-Saharan Africa</a> </li> <li> <a class="flag-fr-CH " data-locale="fr-CH" href="http://www.garmin.ch/" title="Switzerland">Switzerland</a> </li> </ul> <ul> <li> <a class="flag-tr-TR " data-locale="tr-TR" href="http://www.garmin.com.tr/" title="Türkiye">Türkiye</a> </li> <li> <a class="flag-ar-YE " data-locale="ar-YE" href="http://www.garminyemen.com/" title="Yemen">Yemen</a> </li> <li> <a class="flag-el-GR " data-locale="el-GR" href="http://www.garmin.gr/" title="Ελλάδα">Ελλάδα</a> </li> <li> <a class="flag-bg-BG " data-locale="bg-BG" href="http://www.garmin.bg/" title="България">България</a> </li> <li> <a class="flag-ru-RU " data-locale="ru-RU" href="http://www.garmin.ru/" title="Россия">Россия</a> </li> <li> <a class="flag-uk-UA " data-locale="uk-UA" href="http://www.garmin.com.ua/" title="Ukraine (Аэроскан)">Ukraine (Аэроскан)</a> </li> <li> <a class="flag-uk-UA " data-locale="uk-UA" href="http://www.garmin.ua/" title="Ukraine (Навионика)">Ukraine (Навионика)</a> </li> <li> <a class="flag-zh-CN " data-locale="zh-CN" href="http://www.garmin.com.cn/" title="中国 - 中文">中国 - 中文</a> </li> <li> <a class="flag-zh-TW " data-locale="zh-TW" href="http://www.garmin.com.tw/" title="台灣 - 中文">台灣 - 中文</a> </li> <li> <a class="flag-ja-JP " data-locale="ja-JP" href="http://www.garmin.co.jp/" title="日本">日本</a> </li> </ul></div><script type="text/javascript">jQuery('.distributors-container').hide();jQuery('.country-selector .dropdown > ul').last().append('<li><a class="flag-all-other" href="#">All Other Countries</a>');jQuery('.country-selector .flag-all-other').on('click',function(e){e.preventDefault();e.stopPropagation();jQuery('.distributors-container').toggle(); jQuery(this).hide();});</script>   
+  </div><!-- eo: .dropdown -->
+  <script type="text/javascript">
+    var autoSelect = false;
+    if(autoSelect) {
+      window.garminEvent.trigger('api:locale-selector:auto-select');
+    }
+  </script>
+</li>
+
+<li class="global-search">
+<form action="https://support.garmin.com/search/generalResults.faces" method="get" name="searchform" id="suggestion_form" class="global-search-form float-right input-append snack-size">
+<input value="Shop" name="site" type="hidden">
+<input type="text" class="global-search-text search-field defaultify" data-default="Search Garmin.com" autocomplete="off" value="" maxlength="256" name="q">
+<button class="global-search-btn btn1" onclick="submit()" data-text="Go" name="Go">
+<img src="https://static.garmincdn.com/com.garmin/ui/images/search-white.png" width="14" alt="Go">
+</button>
+</form>
+</li>
+
+</ul>
+</div>
+<!-- eo: .container -->
+</div>
+<!-- eo: #global-utility-bar -->
+  <div class="container container_24">
+    <div id="global-header" class="span-24 grid_24 span24 global_override">
+      <h1 id="global-logo" class="float-left"><a href="http://www.garmin.com/en-US" title="Garmin">Garmin</a></h1>  
+          <ul id="header-primary-nav">
+      <li id="primary-explore" class="has-menu">
+        <h2><a onclick="header_data(action_a, 'Explore');" href="http://www.garmin.com/en-US" title="Explore">Explore<span>Discover Features</span></a></h2><span class="dd-arrow"></span>
+        <ul id="menu-explore" class="dropdown w-icon">
+          <li class="on-the-road"><a onclick="header_data(action_b, 'On the Road');" href="http://www.garmin.com/en-US/explore/ontheroad/" title="On the Road">On the Road<span>Auto, Motorcycles, Trucks &amp; RV</span></a></li><li class="into-sports"><a onclick="header_data(action_b, 'Into Sports');" href="http://www.garmin.com/en-US/explore/intosports/" title="Into Sports">Into Sports<span>Run, Bike, Swim &amp; Golf</span></a></li><li class="on-the-trail"><a onclick="header_data(action_b, 'On the Trail');" href="http://www.garmin.com/en-US/explore/onthetrail/" title="On the Trail">On the Trail<span>Hiking, Geocaching &amp; Hunting</span></a></li><li class="on-the-go"><a onclick="header_data(action_b, 'On the Go');" href="http://www.garmin.com/en-US/explore/onthego/" title="On the Go">On the Go<span>Apps &amp; Tracking</span></a></li><li class="on-the-water"><a onclick="header_data(action_b, 'On the Water');" href="http://www.garmin.com/en-US/explore/onthewater/" title="On the Water">On the Water<span>Boating, Sailing &amp; Fishing</span></a></li><li class="in-the-air"><a onclick="header_data(action_b, 'In the Air');" href="http://www.garmin.com/en-US/explore/intheair/" title="In the Air">In the Air<span>Airplanes &amp; Helicopters</span></a></li>
+        </ul>
+      </li><!-- eo: #primary-explore -->
+      
+      <li id="primary-devices" class="has-menu">
+        <h2><a onclick="header_data(action_c, 'Shop');" href="https://buy.garmin.com/" title="Shop Landing">Shop<span>Buy Devices</span></a></h2><span class="dd-arrow"></span>
+        <div id="menu-devices" class="mega dropdown">
+          <div class="row">
+            <div class="span5 first">
+              <h3><a onclick="header_data(action_c, 'On the Road');" href="https://buy.garmin.com/en-US/US/on-the-road/cOnTheRoad-p1.html" title="On the Road">On the Road</a></h3>
+              <ul>
+                <li><a onclick="header_data(action_c, 'Automotive');" href="https://buy.garmin.com/en-US/US/cOnTheRoad-cAutomotive-p1.html" title="Automotive">Automotive</a></li><li><a onclick="header_data(action_c, 'Motorcycles');" href="https://buy.garmin.com/en-US/US/cOnTheRoad-cMotorcycles-p1.html" title="Motorcycles">Motorcycles</a></li><li><a onclick="header_data(action_c, 'Trucking');" href="https://buy.garmin.com/en-US/US/cOnTheRoad-cTrucking-p1.html" title="Trucking">Trucking</a></li><li><a onclick="header_data(action_c, 'RV');" href="https://buy.garmin.com/en-US/US/cOnTheRoad-c518-p1.html" title="RV">RV</a></li><li><a onclick="header_data(action_c, 'Cameras');" href="https://buy.garmin.com/en-US/US/cOnTheRoad-c533-p1.html" title="Cameras">Cameras</a></li>
+              </ul>
+              <h3><a onclick="header_data(action_c, 'On the Go');" href="https://buy.garmin.com/en-US/US/on-the-go/cOnTheGo-p1.html" title="On the Go">On the Go</a></h3>
+              <ul>
+                <li><a onclick="header_data(action_c, 'Apps');" href="https://buy.garmin.com/en-US/US/cOnTheGo-cApps-p1.html" title="Apps">Apps</a></li><li><a onclick="header_data(action_c, 'Cameras');" href="https://buy.garmin.com/en-US/US/cOnTheGo-c534-p1.html" title="Cameras">Cameras</a></li><li><a onclick="header_data(action_c, 'Tracking');" href="https://buy.garmin.com/en-US/US/cOnTheGo-cTrackLocate-p1.html" title="Tracking">Tracking</a></li>
+              </ul>
+            </div><!-- eo: .span5 -->
+            <div class="span5 first">
+              <h3><a onclick="header_data(action_c, 'Into Sports');" href="https://buy.garmin.com/en-US/US/into-sports/cIntoSports-p1.html" title="Into Sports">Into Sports</a></h3>
+              <ul>
+                <li><a onclick="header_data(action_c, 'Golfing');" href="https://buy.garmin.com/en-US/US/into-sports/golfing/cIntoSports-cGolfing-p1.html" title="Golfing">Golfing</a></li><li><a onclick="header_data(action_c, 'Running');" href="https://buy.garmin.com/en-US/US/into-sports/running/cIntoSports-cRunning-p1.html" title="Running">Running</a></li><li><a onclick="header_data(action_c, 'Cycling');" href="https://buy.garmin.com/en-US/US/into-sports/cycling/cIntoSports-cCycling-p1.html" title="Cycling">Cycling</a></li><li><a onclick="header_data(action_c, 'Swimming');" href="https://buy.garmin.com/en-US/US/into-sports/swimming/cIntoSports-cSwimming-p1.html" title="Swimming">Swimming</a></li><li><a onclick="header_data(action_c, 'Multisport');" href="https://buy.garmin.com/en-US/US/into-sports/multisport/cIntoSports-cMultisport-p1.html" title="Multisport">Multisport</a></li>
+              </ul>
+              <h3><a onclick="header_data(action_c, 'On the Trail');" href="https://buy.garmin.com/en-US/US/on-the-trail/cOnTheTrail-p1.html" title="On the Trail">On the Trail</a></h3>
+              <ul>
+                <li><a onclick="header_data(action_c, 'Handhelds');" href="https://buy.garmin.com/en-US/US/on-the-trail/handhelds/cOnTheTrail-cHandheld-p1.html" title="Handhelds">Handhelds</a></li><li><a onclick="header_data(action_c, 'Wrist-worn');" href="https://buy.garmin.com/en-US/US/on-the-trail/wrist-worn/cOnTheTrail-cWristworn-p1.html" title="Wrist-worn">Wrist-worn</a></li><li><a onclick="header_data(action_c, 'Two-way Radios');" href="https://buy.garmin.com/en-US/US/on-the-trail/two-way-radios/cOnTheTrail-cTwowayRadio-p1.html" title="Two-way Radios">Two-way Radios</a></li><li><a onclick="header_data(action_c, 'Dog Tracking &amp; Training');" href="https://buy.garmin.com/en-US/US/on-the-trail/dog-tracking-training/cOnTheTrail-cDogTrackingTraining-p1.html" title="Dog Tracking &amp; Training">Dog Tracking &amp; Training</a></li><li><a onclick="header_data(action_c, 'Pet Obedience');" href="https://buy.garmin.com/en-US/US/on-the-trail/pet-obedience/cOnTheTrail-cPetObedience-p1.html" title="Pet Obedience">Pet Obedience</a></li><li><a onclick="header_data(action_c, 'Action Cameras');" href="https://buy.garmin.com/en-US/US/cOnTheTrail-c531-p1.html" title="Action Cameras">Action Cameras</a></li>
+              </ul>
+            </div><!-- eo: .span5 -->
+            <div class="span5">
+              <h3><a onclick="header_data(action_c, 'On the Water');" href="https://buy.garmin.com/en-US/US/on-the-water/cOnTheWater-p1.html" title="On the Water">On the Water</a></h3>
+              <ul>
+                <li><a onclick="header_data(action_c, 'Chartplotters');" href="https://buy.garmin.com/en-US/US/on-the-water/chartplotters/cOnTheWater-cChartplotters-p1.html" title="Chartplotters">Chartplotters</a></li><li><a onclick="header_data(action_c, 'Sounders');" href="https://buy.garmin.com/en-US/US/on-the-water/sounders/cOnTheWater-cSounders-p1.html" title="Sounders">Sounders</a></li><li><a onclick="header_data(action_c, 'Fishfinder/GPS Combos');" href="https://buy.garmin.com/en-US/US/on-the-water/fishfindergpscombos/cOnTheWater-c519-p1.html" title="Fishfinder/GPS Combos">Fishfinder/GPS Combos</a></li><li><a onclick="header_data(action_c, 'Fishfinders');" href="https://buy.garmin.com/en-US/US/on-the-water/fishfinders/cOnTheWater-cFishfinders-p1.html" title="Fishfinders">Fishfinders</a></li><li><a onclick="header_data(action_c, 'Handhelds & Wrist-worn');" href="https://buy.garmin.com/en-US/US/on-the-water/handhelds-wrist-worn/cOnTheWater-cHandhelds-p1.html" title="Handhelds & Wrist-worn">Handhelds & Wrist-worn</a></li><li><a onclick="header_data(action_c, 'Radar');" href="https://buy.garmin.com/en-US/US/on-the-water/radar/cOnTheWater-cRadar-p1.html" title="Radar">Radar</a></li><li><a onclick="header_data(action_c, 'Autopilots');" href="https://buy.garmin.com/en-US/US/cOnTheWater-cAutopilots2-p1.html" title="Autopilots">Autopilots</a></li><li><a onclick="header_data(action_c, 'Communications');" href="https://buy.garmin.com/en-US/US/on-the-water/communications/cOnTheWater-cCommunications-p1.html" title="Communications">Communications</a></li><li><a onclick="header_data(action_c, 'Instruments');" href="https://buy.garmin.com/en-US/US/on-the-water/instruments-sensors/cOnTheWater-cInstrumentsSensors-p1.html" title="Instruments">Instruments</a></li><li><a onclick="header_data(action_c, 'Transducers');" href="https://buy.garmin.com/en-US/US/on-the-water/transducers/cOnTheWater-cTransducers-p1.html" title="Transducers">Transducers</a></li><li><a onclick="header_data(action_c, 'Networking');" href="https://buy.garmin.com/en-US/US/on-the-water/networking/cOnTheWater-cNetworking-p1.html" title="Networking">Networking</a></li>
+              </ul>
+            </div><!-- eo: .span5 -->
+            <div class="span5 last">
+              <h3><a onclick="header_data(action_c, 'In the Air');" href="https://buy.garmin.com/en-US/US/in-the-air/cInTheAir-p1.html" title="In the Air">In the Air</a></h3>
+              <ul>
+                <li><a onclick="header_data(action_c, 'Flight Decks');" href="https://buy.garmin.com/en-US/US/in-the-air/flight-decks/cInTheAir-cFlightDecks-p1.html" title="Flight Decks">Flight Decks</a></li><li><a onclick="header_data(action_c, 'Avionics &amp; Safety');" href="https://buy.garmin.com/en-US/US/in-the-air/avionics-safety/cInTheAir-cAvionics-p1.html" title="Avionics &amp; Safety">Avionics &amp; Safety</a></li><li><a onclick="header_data(action_c, 'Sport Aviation');" href="https://buy.garmin.com/en-US/US/in-the-air/sport-aviation/cInTheAir-cSportAviation-p1.html" title="Sport Aviation">Sport Aviation</a></li><li><a onclick="header_data(action_c, 'Portable GPS');" href="https://buy.garmin.com/en-US/US/in-the-air/portable-gps/cInTheAir-cPortableGPS-p1.html" title="Portable GPS">Portable GPS</a></li>
+              </ul>
+              <h3><a onclick="header_data(action_c, 'Sensors &amp; Boards');" href="https://buy.garmin.com/en-US/US/cOEM-p1.html" title="Sensors &amp; Boards">Sensors &amp; Boards</a></h3>
+            </div><!-- eo: .span5 -->
+          </div><!-- eo: .row -->
+        </div><!-- eo: #menu-devices -->
+      </li>
+      
+      <li id="primary-maps-etc" class="has-menu">
+        <h2><a onclick="header_data(action_d, 'Maps &amp; Accessories Landing');" href="http://www.garmin.com/en-US/maps-accessories/" title="Maps &amp; Accessories">Maps &amp; Accessories<span>Find Content, Services &amp; More</span></a></h2><span class="dd-arrow"></span>
+        <ul id="menu-maps-etc" class="dropdown w-icon">
+          <li class="maps"><a onclick="header_data(action_d, 'Maps');" href="http://www.garmin.com/en-US/maps/" title="Maps">Maps<span>Buy &amp; Update Maps</span></a></li><li class="accessories"><a onclick="header_data(action_d, 'Accessories');" href="http://www.garmin.com/en-US/shop/accessories" title="Accessories">Accessories<span>Find Cables, Mounts &amp; More</span></a></li><li class="extras"><a onclick="header_data(action_d, 'Extras');" href="http://www.garmin.com/us/extras/" title="Extras">Extras<span>Download Services, Apps &amp; More</span></a></li>
+        </ul>
+      </li>
+
+      <li id="primary-support" class="has-menu last">
+        <h2><a onclick="header_data(action_e, 'Support Landing');" href="http://www.garmin.com/us/support/" title="Support">Support<span>Get Help</span></a></h2><span class="dd-arrow"></span>
+        <ul id="menu-support" class="dropdown w-icon">
+          <li class="registration"><a onclick="header_data(action_e, 'Registration');" href="http://my.garmin.com/mygarmin/marketing/register.htm" title="Registration">Registration</a></li><li class="software"><a onclick="header_data(action_e, 'Software');" href="http://www.garmin.com/support/download.jsp" title="Software">Software</a></li><li class="manuals"><a onclick="header_data(action_e, 'Manuals');" href="https://buy.garmin.com/support/manuals/searchManuals.faces?refresh=true" title="Manuals">Manuals</a></li><li class="faq"><a onclick="header_data(action_e, 'FAQs');" href="https://support.garmin.com/support/searchSupport/search.htm" title="FAQs">FAQs</a></li><li class="repair"><a onclick="header_data(action_e, 'Repair');" href="https://my.garmin.com/rma/repair/repairLanding.htm" title="Repair">Repair</a></li><li class="warranty"><a onclick="header_data(action_e, 'Warranty');" href="http://www.garmin.com/support/warranty.html" title="Warranty">Warranty</a></li><li class="learning-center"><a onclick="header_data(action_e, 'Learning Center');" href="http://www.garmin.com/learningcenter/" title="Learning Center">Learning Center</a></li><li class="contact-support"><a onclick="header_data(action_e, 'Contact Support');" href="http://www.garmin.com/us/support/contact" title="Contact Support">Contact Support</a></li>
+        </ul>
+      </li>
+    </ul>
+    </div><!--eo: #global header-->
+  </div><!-- eo: .container -->
+</div>
+<div class="container">
+	<div id="touch-nav">
+		<a href="#" class="off-canvas-nav">Menu</a>
+	</div>
+	
+	<a href="http://www.garmin.com/en-US" title="Home"><h1 id="global-logo-m">Garmin</h1></a>
+</div>
+<div class="container">
+    <div class="row">
+    	<div class="span24 breadcrumbs">
+<ul class="navigation horizontal">
+    
+    <li>Explore</li>
+    
+</ul>
+        
+                <h1>On the Road</h1>
+</div><!-- eo: .breadcrumbs -->
+            
+	    <div class="span24 slide-show-container">
+        	<div class="slide-show">
+	       		
+	       		    		    	       		<div class="market banner right">
+	       		<a title="Head-Up Display (HUD)" href="https://buy.garmin.com/en-US/US/prod134348.html" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - HUD - Market Banner - 8/18/13', 1]);">
+	            	<img class="round-tl round-tr" src="http://static.garmincdn.com/gdc/market-pages/banners/on-the-road/hud.jpg" alt="Head-Up Display (HUD)" width="940" height="320" />
+	            	</a>
+	            	<div class="message-container">
+	            		<div class="banner-message">
+    		    			<h4>Head-Up Display</h4>
+    		    			<h6>Navigation meets projection.</h6>
+    		    			<p><a href="https://buy.garmin.com/en-US/US/prod134348.html" class="btn1" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - HUD - Market Banner - 8/18/13', 1]);">Learn More</a></p>
+    		    		</div><!-- eo: .banner-message -->
+	            	</div><!-- eo: .message-container -->
+    		    </div><!-- eo: .market.banner -->
+    		        		        		    
+	       		    		    	       		<div class="market banner right">
+	       		<a title="Civilization on Demand RV 760LMT" href="http://sites.garmin.com/rv/" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - RV - Market Banner - 6/11/13', 2]);">
+	            	<img class="round-tl round-tr" src="https://static.garmincdn.com/gdc/market-pages/banners/on-the-road/rv-market.jpg" alt="Civilization on Demand RV 760LMT" width="940" height="320" />
+	            	</a>
+	            	<div class="message-container">
+	            		<div class="banner-message">
+    		    			<h4>Civilization on Demand</h4>
+    		    			<h6>Introducing RV 760LMT RV GPS &amp; Trip Planner</h6>
+    		    			<p><a href="http://sites.garmin.com/rv/" class="btn1" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - RV - Market Banner - 6/11/13', 2]);">Learn More</a></p>
+    		    		</div><!-- eo: .banner-message -->
+	            	</div><!-- eo: .message-container -->
+    		    </div><!-- eo: .market.banner -->
+    		        		        		    
+	       		    		    	       		<div class="market banner black">
+	       		<a title="On the Road 2013 nuvi Line" href="http://www.garmin.com/nuvi" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - New Nuvi Line - Hero - 1/6/13', 3]);">
+	            	<img class="round-tl round-tr" src="https://static.garmincdn.com/gdc/market-pages/banners/on-the-road/on-the-road-nuvi-market-banner.jpg" alt="On the Road 2013 nuvi Line" width="940" height="320" />
+	            	</a>
+	            	<div class="message-container">
+	            		<div class="banner-message">
+    		    			<h4>Real Navigation</h4>
+    		    			<h6>Introducing the new 2013 n&uuml;vi line.</h6>
+    		    			<p><a href="http://www.garmin.com/nuvi" class="btn1" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - New Nuvi Line - Hero - 1/6/13', 3]);">Find Yours</a></p>
+    		    		</div><!-- eo: .banner-message -->
+	            	</div><!-- eo: .message-container -->
+    		    </div><!-- eo: .market.banner -->
+    		        		        		    
+	       		    		    	       		<div class="market banner right black">
+	       		<a title="" href="http://sites.garmin.com/dezl/" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - Dezl - 9/14/12', 4]);">
+	            	<img class="round-tl round-tr" src="https://static.garmincdn.com/gdc/market-pages/banners/on-the-road/dezl-760lmt.jpg" alt="" width="940" height="320" />
+	            	</a>
+	            	<div class="message-container">
+	            		<div class="banner-message">
+    		    			<h4>It's a Big Deal.</h4>
+    		    			<h6>d&#x113;zl<sup>&trade;</sup> 760LMT truck navigator</h6>
+    		    			<p><a href="http://sites.garmin.com/dezl/" class="btn1" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - Dezl - 9/14/12', 4]);">Look Closer</a></p>
+    		    		</div><!-- eo: .banner-message -->
+	            	</div><!-- eo: .message-container -->
+    		    </div><!-- eo: .market.banner -->
+    		        		        		    
+	       		    		    	       		<div class="market banner">
+	       		<a title="" href="http://sites.garmin.com/zumo" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - Zumo - 9/14/12', 5]);">
+	            	<img class="round-tl round-tr" src="https://static.garmincdn.com/gdc/market-pages/banners/on-the-road/zumo-350lm.jpg" alt="" width="940" height="320" />
+	            	</a>
+	            	<div class="message-container">
+	            		<div class="banner-message">
+    		    			<h4>Style. Passion. Intelligence.</h4>
+    		    			<h6>And that's before you turn it on...</h6>
+    		    			<p><a href="http://sites.garmin.com/zumo" class="btn1" onClick="_gaq.push(['_trackEvent', 'Market Page Banners - ontheroad', 'Click', 'OTR - Zumo - 9/14/12', 5]);">More z&#x16b;mo</a></p>
+    		    		</div><!-- eo: .banner-message -->
+	            	</div><!-- eo: .message-container -->
+    		    </div><!-- eo: .market.banner -->
+    		        		        		    
+    		</div><!-- eo: .slide-show -->
+    		
+    		    		
+    		    		<div class="slide-show-nav"></div>
+    		    		
+  	    </div><!--eo: .slide-show-container -->
+  	    
+  	      	    
+  	      	    
+  	      	    
+  	      	    
+  	      	    
+  	    
+  	    <ul class="span24 market-sub-nav">
+	  	    
+	  	    <li class="first"><a href="https://buy.garmin.com/en-US/US/cOnTheRoad-cAutomotive-c2013line-p1.html">2013 n&uuml;vi Line</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="https://buy.garmin.com/shop/shop.do?cID=401" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Previous Models']);">Previous Models</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="https://buy.garmin.com/shop/shop.do?cID=420" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Apps']);">Apps</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="https://buy.garmin.com/en-US/US/cOnTheRoad-c533-p1.html" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Cameras']);">Cameras</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="http://www.garmin.com/us/maps/updates" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Map Updates']);">Map Updates</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="http://www8.garmin.com/traffic/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Traffic']);">Traffic</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="http://www8.garmin.com/vehicles/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Garage']);">Garage</a></li>
+	  	      	    	
+	  	      	    	    <li><a href="https://buy.garmin.com/en-US/US/buy-maps.ep" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Sub Nav', 'Maps for New Regions']);">Maps for New Regions</a></li>
+	  	      	    	
+  	    </ul>
+  	    <div class="span24 carousel-container">
+  	    	  	    	<div class="controls">
+	  	    	<span class="pagination-buttons">
+	  	    	<a class="page-btn left prev" title="Previous" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', '{Previous}']);">&#8249;</a>
+	  	    	<a class="page-btn right next" title="Next" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', '{Next}']);">&#8250;</a>
+	  	    	</span><!-- eo: .pagination-buttons -->
+  	    	</div><!-- eo: .controls -->
+  	    	  	    	<div class="carousel">
+  	    	  	    	    <ul>
+  	    	        
+  	    	        <li>
+  	    	            <a href="http://www.garmin.com/nuvi" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'Automotive-img']);"><img src="https://static.garmincdn.com/gdc/market-pages/carousel/on-the-road/automotive.png" alt="Automotive" width="140" height="250"></a>
+  	    	            <h3 class="h4">Automotive</h3>
+  	    	            <p>Powerful street navigators for wherever adventure takes you.</p>
+  	    	            <a class="btn1 btn-sm" href="http://www.garmin.com/nuvi" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'Automotive-button']);">Shop Now</a>
+  	    	        </li>
+  	    	        
+  	    	        <li>
+  	    	            <a href="http://sites.garmin.com/zumo/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'Motorcycle-img']);"><img src="https://static.garmincdn.com/gdc/market-pages/carousel/on-the-road/motorcycle.png" alt="Motorcycle" width="140" height="250"></a>
+  	    	            <h3 class="h4">Motorcycle</h3>
+  	    	            <p>Motorcycle-friendly navigators designed by bikers.</p>
+  	    	            <a class="btn1 btn-sm" href="http://sites.garmin.com/zumo/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'Motorcycle-button']);">Shop Now</a>
+  	    	        </li>
+  	    	        
+  	    	        <li>
+  	    	            <a href="http://sites.garmin.com/dezl/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'Trucking-img']);"><img src="https://static.garmincdn.com/gdc/market-pages/carousel/on-the-road/trucking.png" alt="Trucking" width="140" height="250"></a>
+  	    	            <h3 class="h4">Trucking</h3>
+  	    	            <p>Trucking-friendly navigators for the long haul.</p>
+  	    	            <a class="btn1 btn-sm" href="http://sites.garmin.com/dezl/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'Trucking-button']);">Shop Now</a>
+  	    	        </li>
+  	    	        
+  	    	    </ul>
+  	    	  	    	  	    	    <ul>
+  	    	        
+  	    	        <li>
+  	    	            <a href="http://sites.garmin.com/rv/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'RV-img']);"><img src="https://static.garmincdn.com/gdc/market-pages/carousel/on-the-road/rv.png" alt="RV" width="140" height="250"></a>
+  	    	            <h3 class="h4">RV</h3>
+  	    	            <p>Trip planning and features made just for the RV lifestyle.</p>
+  	    	            <a class="btn1 btn-sm" href="http://sites.garmin.com/rv/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Carousel', 'RV-button']);">Shop Now</a>
+  	    	        </li>
+  	    	        
+  	    	    </ul>
+  	    	  	    	  	    	  	    	  	    	</div><!-- eo: .carousel -->
+  	    </div><!-- eo: .carouse-container -->
+    </div><!--eo: .row -->
+</div><!-- eo: .container -->
+<div class="container-bg">
+<div class="container top">
+    	<div class="row explore-column-content">
+  	    	
+  	    	<div class="span7">
+  	    	    
+  	    	    <h2 class="h3">Be a n&uuml;vi Star</h2>
+  	    	    <a href="http://www.garmin.com/us/products/ontheroad/voicestudio"><img height="85" alt="" width="85" name="" src="http://www8.garmin.com/vehicles/m/g/mic-85x85.jpg" class="float-left" style="margin-right:10px;" /></a>
+<p>Put family and friends on your n&uuml;vi with <a href="http://www.garmin.com/us/products/ontheroad/voicestudio">Voice Studio</a>. It'll give your n&uuml;vi a little more personality! </p>
+<br/>
+  	    	    
+  	    	    <h2 class="h3">Plan Your Trip</h2>
+  	    	    <img height="85" alt="BaseCamp" width="85" src="http://static.garmincdn.com/en/m/g/market-page-images/on-the-trail/ic-basecamplogo.jpg" class="float-left" style="margin-right:10px;" />
+<p><a href="http://www.garmin.com/us/products/onthetrail/basecamp">BaseCamp™</a> lets you view maps and create and save routes for your next road trip. Best of all, it's free!
+  	    	    
+  	    	      	    	    <h2 class="h3">Helpful Links</h2>
+  	    	    <ul class="market-links">
+  	    	    	
+  	    	    	<li><a href="https://my.garmin.com/mygarmin/login.htm?service=https%3A%2F%2Fmy.garmin.com%2Fmygarmin%2Fcustomers%2FmyGarminHome.faces" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Quick Links', 'myGarmin&trade;']);">myGarmin&trade;</a></li>
+  	    	    	
+  	    	    	<li><a href="http://www8.garmin.com/automotive/servicenotices.jsp" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Quick Links', 'nüvi Battery Recall']);">nüvi Battery Recall</a></li>
+  	    	    	
+  	    	    </ul>
+  	    	      	    	</div><!-- eo: .span7 -->    
+  	    	<div class="span16 offset1 clearfix bottom market-border">
+  	    		  	    	    <h2 class="h3">Featured Videos</h2>
+  	    	    <div class="videos large-preview bottom">
+  	    	    	<ul>
+  	    	        	
+  	    	        	<li><a class="ytLink" data-type="video" href="http://www.youtube.com/watch?v=Mqx2_9_Rlbg" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Videos', 1]);">Youtube Video</a></li>
+  	    	        	
+  	    	        	<li><a class="ytLink" data-type="video" href="http://www.youtube.com/watch?v=eT3nyBjsuJ8" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Videos', 1]);">Youtube Video</a></li>
+  	    	        	
+  	    	        	<li><a class="ytLink" data-type="video" href="http://www.youtube.com/watch?v=lJQdB8Eahbs" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Videos', 1]);">Youtube Video</a></li>
+  	    	        	
+  	    	        </ul>
+  	    	    </div><!-- eo: .videos -->
+  	    	      	    	    <h2 class="h3">News</h2>
+  	    	      	    	    <script src="http://feeds2.feedburner.com/GarminOnTheRoad?format=sigpro&nItems=3&excerptFormat=plain&excerptLength=25" type="text/javascript"></script>
+  	    	    <p><a href="http://garmin.blogs.com/my_weblog/automotive/" onClick="_gaq.push(['_trackEvent', 'Market Page - ontheroad', 'Blog', 'link']);">More On the Road News</a></p>
+  	    	      	    	</div><!-- eo: .span16 -->
+  	    	
+  	    	<div class="span12 clear">
+  	    		<div class="boxable clearfix">
+  	    			  	    			<a href="http://sites.garmin.com/dezl/"><img src="https://static.garmincdn.com/gdc/market-pages/content/on-the-road/dezl-minisite.jpg" style="margin-right:20px;" /></a>
+<a href="http://sites.garmin.com/zumo/"><img src="https://static.garmincdn.com/gdc/market-pages/content/on-the-road/zumo-minisite.jpg" /></a>
+  	    		</div><!-- eo: .boxable -->
+  	    	</div><!-- eo: .span12 -->
+  	    	<div class="span12">
+  	    		<div class="boxable clearfix">
+  	    			<h2 class="h3">Stay Informed</h2>  	    			<p>Subscribe to our On the Road Newsletter.</p>
+<form action="https://my.garmin.com/optIn/SignUp" method="post" class="global-search-form input-append text-only">
+	<input type="hidden" name="l" value="en" />
+	<input type="hidden" name="r" value="javascript:history.go(-1)" />
+	<input type="hidden" name="e" value="On the Road Newsletter - Market page" />
+	<input id="FormEmail" size="19" name="a" type="text" value="Email" class="defaultify search-field" data-default="Email" />
+	<button class="btn1 global-search-btn" style="border-radius: 0 4px 4px 0">Sign Up</button>
+	<p class="disclaimer-block">By clicking <strong>Sign Up</strong>, you agree to the <a href="http://www8.garmin.com/privacy/">privacy policy</a>.</p>
+</form>
+  	    		</div><!-- eo: .boxable -->
+  	    	</div><!-- eo: .span12 -->
+  	    </div><!--eo: .row -->
+    </div><!-- eo: .container -->
+</div><!-- eo: .container-bg -->
+
+<script type="text/javascript">
+  _gaq = _gaq ? _gaq : []; 
+  var footer_data = function (a,b) { _gaq.push( ['_trackEvent', 'Global Footer', a,b] ); };
+</script>
+<div id="global-footer">
+  <div class="container">
+    <div class="row">
+  <div class="span5">
+    <h5>Customer Service</h5>
+    <ul>
+      <li><a onclick="footer_data('Column 1', 'Special Offers');" href="http://garmin.blogs.com/promotions/" title="Special Offers">Special Offers</a></li><li><a onclick="footer_data('Column 1', 'Shipping &amp; Delivery');" href="http://www.garmin.com/en-US/shop/shipping-delivery" title="Shipping &amp; Delivery">Shipping &amp; Delivery</a></li><li><a onclick="footer_data('Column 1', 'Returns &amp; Refunds');" href="http://www.garmin.com/en-US/shop/returns-refunds" title="Returns &amp; Refunds">Returns &amp; Refunds</a></li><li><a onclick="footer_data('Column 1', 'Find a Store or Dealer');" href="http://www.garmin.com/us/dealerlocator" title="Find a Store or Dealer">Find a Store or Dealer</a></li><li><a onclick="footer_data('Column 1', 'Contact Us');" href="http://www.garmin.com/contactUs/" title="Contact Us">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="span5">
+    <h5>Company</h5>
+    <ul>
+      <li><a onclick="footer_data('Column 2', 'About Us');" href="http://www.garmin.com/en-US/company/about/" title="About Us">About Us</a></li><li><a onclick="footer_data('Column 2', 'Blog');" href="http://garmin.blogs.com/" title="Blog">Blog</a></li><li><a onclick="footer_data('Column 2', 'Investors');" href="http://www.garmin.com/en-US/company/investors" title="Investors">Investors</a></li><li><a onclick="footer_data('Column 2', 'Newsroom');" href="http://www8.garmin.com/company/newsroom/" title="Newsroom">Newsroom</a></li><li><a onclick="footer_data('Column 2', 'Retail Store');" href="http://www8.garmin.com/company/stores/chicago/" title="Retail Store">Retail Store</a></li>
+    </ul>
+  </div>
+  <div class="span5">
+    <h5>Careers</h5>
+    <ul>
+      <li><a onclick="footer_data('Column 3', 'Jobs');" href="http://www.garmin.com/en-US/company/careers/" title="Jobs">Jobs</a></li><li><a onclick="footer_data('Column 3', 'Benefits');" href="http://www.garmin.com/us/company/careers/benefits/" title="Benefits">Benefits</a></li><li><a onclick="footer_data('Column 3', 'Life at Garmin');" href="http://www.garmin.com/us/company/careers/lifeatgarmin/" title="Life at Garmin">Life at Garmin</a></li><li><a onclick="footer_data('Column 3', 'Students    ');" href="http://www.garmin.com/us/company/careers/students/" title="Students    ">Students    </a></li>
+    </ul>
+  </div>
+  <div class="span5">
+    <h5>Garmin Sites</h5>
+    <ul>
+      <li><a onclick="footer_data('Column 4', 'myGarmin');" href="http://my.garmin.com/" title="myGarmin">myGarmin</a></li><li><a onclick="footer_data('Column 4', 'Garmin Connect');" href="http://connect.garmin.com/" title="Garmin Connect">Garmin Connect</a></li><li><a onclick="footer_data('Column 4', 'OpenCaching');" href="http://www.opencaching.com/" title="OpenCaching">OpenCaching</a></li><li><a onclick="footer_data('Column 4', 'flyGarmin');" href="http://fly.garmin.com/" title="flyGarmin">flyGarmin</a></li><li><a onclick="footer_data('Column 4', 'Garmin Adventures');" href="http://adventures.garmin.com/en-US/" title="Garmin Adventures">Garmin Adventures</a></li>
+    </ul>
+  </div>
+  <div class="span4">
+    <h5>Partners</h5>
+    <ul>
+      <li><a onclick="footer_data('Column 5', 'Fleet Management');" href="http://www.garmin.com/solutions/" title="Fleet Management">Fleet Management</a></li><li><a onclick="footer_data('Column 5', 'Developers');" href="http://developer.garmin.com/" title="Developers">Developers</a></li><li><a onclick="footer_data('Column 5', 'Dealer Resource Center');" href="http://dealers.garmin.com/" title="Dealer Resource Center">Dealer Resource Center</a></li><li><a onclick="footer_data('Column 5', 'Education');" href="http://garmin.com/education" title="Education">Education</a></li>
+    </ul>
+  </div>
+</div>
+    <div class="row">
+      <div class="span24 footer-logo text-center">
+        <img src="https://static.garmincdn.com/com.garmin/ui/images/navigation-global/garmin_logo_on_w.png" alt="Garmin International" width="120" height="40">
+      </div>
+    </div>
+    <div class="row">
+  <div class="span24 disclaimer-block text-center">
+    <p>
+      <a onclick="footer_data('Disclaimer', 'Site Map');" href="http://www.garmin.com/siteIndex.html" title="Site Map">Site Map</a>&nbsp; &bull; &nbsp;<a onclick="footer_data('Disclaimer', 'Terms of Use');" href="http://www.garmin.com/en-US/legal/terms-of-use" title="Terms of Use">Terms of Use</a>&nbsp; &bull; &nbsp;<a onclick="footer_data('Disclaimer', 'Statement of Privacy');" href="http://www.garmin.com/en-US/legal/privacy-statement" title="Statement of Privacy">Statement of Privacy</a>&nbsp; &bull; &nbsp;      
+      Copyright &copy; 1996-2013 Garmin Ltd. or its subsidiaries
+    </p>
+  </div>
+</div>
+    <!-- Start Cookie Preferences -->
+<div class="row">
+  <div class="span24 cookieprefs text-center" id="teconsent" style="color:#555555">
+    <script type="text/javascript" src="https://consent.truste.com/notice?domain=garmin.com&c=teconsent&text=true&language=en"></script>
+  </div>
+</div>
+<!-- End Cookie Preferences -->
+    <!-- Start Footer Social -->
+<div class="row">
+  <div class="span24 social text-center">
+    <div id="fb-root"></div>
+<script src="https://connect.facebook.net/en_US/all.js#appId=110156719079735&amp;xfbml=1"></script>
+<fb:like href="https://www.facebook.com/garmin" send="false" layout="button_count" width="100" show_faces="false" font=""></fb:like>
+    <a onclick="footer_data('Social', 'Twitter');" href="https://twitter.com/Garmin" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @Garmin</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <a onclick="footer_data('Social', 'YouTube');" href="http://www.youtube.com/user/garminblog" class="btn-sec btn-sm desaturate">
+  <img src="https://static.garmincdn.com/com.garmin/ui/images/social/youtube-sm.png" alt="garminblog YouTube Channel" />
+  Subscribe
+</a>
+    
+  </div>
+</div>
+<!-- End Footer Social -->
+  </div>
+  <!--eo: container container_24-->
+</div>
+</div><!-- /#content -->
+        
+	</body>
+</html>
+
+ 

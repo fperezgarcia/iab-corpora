@@ -1,0 +1,136 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta http-equiv="description" content="From this splash page you can enter the CyberAuto corporate site or jump directly to any of our automotive performance stores!" />
+<meta http-equiv="keywords" content="cyberspace automotive performance cyberauto group racing seats usa ep miata alamo motorsports fuel-pumps.net fast hyundai cox import" />
+<title>CYBERSPACE AUTOMOTIVE PERFORMANCE!</title>
+<link type="text/css" rel="stylesheet" href="cyberauto.css" />
+
+<bgsound src="sound/vgertermshock4.wav" loop="-1" /><!--This only seems to work in IE.  Not concerned enough to fix for others.-->
+
+<!--[if lt IE 7]>
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+   var arVersion = navigator.appVersion.split("MSIE")
+   var version = parseFloat(arVersion[1])
+   if ((version >= 5.5) && (document.body.filters)) 
+   {
+      for(var i=0; i<document.images.length; i++)
+      {
+         var img = document.images[i]
+         var imgName = img.src.toUpperCase()
+         if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+         {
+            var imgID = (img.id) ? "id='" + img.id + "' " : ""
+            var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+            var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+            var imgStyle = "display:inline-block;" + img.style.cssText 
+            if (img.align == "left") imgStyle = "float:left;" + imgStyle
+            if (img.align == "right") imgStyle = "float:right;" + imgStyle
+            if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+            var strNewHTML = "<span " + imgID + imgClass + imgTitle
+            + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+            + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+            + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>" 
+            img.outerHTML = strNewHTML
+            i = i-1
+         }
+      }
+   }    
+}
+window.attachEvent("onload", correctPNG);
+</script>
+<![endif]-->
+
+</head>
+
+<body id="splash">
+
+
+  <!-- AMS -->
+  <a class="info" href="http://www.alamomotorsports.com" id="AMSLogoPos"
+                  onclick="window.open(this.href); return false;" 
+                  onkeypress="window.open(this.href); return false;">
+    <img src="images/ams-logo.png" alt="Go To The AlamoMotorsports.Com Website!" />
+    <span id="AMSPopoverPos"><img src="images/ams_site_image.gif" alt="AMS Site Image" />
+    </span>
+  </a>
+
+  <!-- COX -->
+  <a class="info" href="http://www.coximport.com" id="COXLogoPos"
+                  onclick="window.open(this.href); return false;" 
+                  onkeypress="window.open(this.href); return false;">
+    <img src="images/cox-logo.png" alt="Go To The CoxImport.Com Website!" />
+    <span id="COXPopoverPos"><img src="images/cox_site_image.gif" alt="COX Site Image" />
+    </span>
+  </a>
+
+  <!-- EPM -->
+  <a class="info" href="websites.html" id="EPMLogoPos"
+                  onclick="window.open(this.href); return false;" 
+                  onkeypress="window.open(this.href); return false;">
+    <img src="images/epm-logo.png" alt="Go To The EPMiata.Com Website!" />
+    <span id="EPMPopoverPos"><img src="images/epm_site_image.gif" alt="EPM Site Image" />
+    </span>
+  </a>
+
+  <!-- FPN -->
+  <a class="info" href="http://www.fuel-pumps.net" id="FPNLogoPos"
+                  onclick="window.open(this.href); return false;" 
+                  onkeypress="window.open(this.href); return false;">
+    <img src="images/fpn-logo.png" alt="Go To The Fuel-Pumps.Net Website!" />
+    <span id="FPNPopoverPos"><img src="images/fpn_site_image.gif" alt="FPN Site Image" />
+    </span>
+  </a>
+
+  <!-- HPS -->
+  <a class="info" href="websites.html" id="HPSLogoPos"
+                  onclick="window.open(this.href); return false;" 
+                  onkeypress="window.open(this.href); return false;">
+    <img src="images/hps-logo.png" alt="Go To The FastHyundai.Com Website!" />
+    <span id="HPSPopoverPos"><img src="images/hps_site_image.gif" alt="FHS Site Image" />
+    </span>
+  </a>
+
+  <!-- RSU -->
+  <a class="info" href="http://www.racing-seats-usa.com" id="RSULogoPos"
+                  onclick="window.open(this.href); return false;" 
+                  onkeypress="window.open(this.href); return false;">
+    <img src="images/rsu-logo.png" alt="Go To The Racing-Seats-USA.Com Website!" />
+    <span id="RSUPopoverPos"><img src="images/rsu_site_image.gif" alt="RSU Site Image" />
+    </span>
+  </a>
+
+  <!-- CAP -->
+  <div id="CAPLogoPos">
+     <a class="info" href="http://www.cyberauto.com/about.html">
+       <img src="images/cap-logo-transparent.gif" alt="Click here to enter the Cyberspace Automotive Performance corporate website or else select one of the five e-commerce sites!" />
+     </a>
+     <object type="application/x-shockwave-flash" data="images/CAP-logo.swf" width="470" height="165" >
+       <param name="movie" value="images/CAP-logo.swf" />
+       <param name="wmode" value="transparent" />
+       <embed src="images/CAP-logo.swf" wmode="transparent" /><!--This line not W3C Compliant.  I leave it here as a fallback for older browsers-->
+     </object>	
+  </div>
+  
+  <!--And More -->
+  <div id="AndMorePos">
+    <p id="SplashpageTextLarge"><a href="websites.html">And More...</a></p>
+  </div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-369374-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+
+</html>

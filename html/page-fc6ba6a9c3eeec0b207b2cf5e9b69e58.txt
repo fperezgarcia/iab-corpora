@@ -1,0 +1,2052 @@
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+	
+	
+	
+	
+		
+	
+	
+	
+	
+
+	
+
+	
+
+	
+		
+		
+		
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	
+		
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Title, Keywords, Description -->
+	<title>EVANSVILLE AUTO &amp; TRUCK ACCESSORIES</title>
+
+	<script type="text/javascript" src="/stats/session-hit.js"></script><script type="text/javascript">biz_hit("session=1308280129106266&uri=&query_string=company_key%3DEVANSVILLE-AUTO-and-TRUCK-ACCESSORIES&referrer=");</script>
+	<!-- Browser -->
+		<meta name="robots" content="index,vfollow"/>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/site.css"/>
+
+	<!-- FAVICON, Social -->
+	<link rel="SHORTCUT ICON" href="/area/048/images/favicon.ico"/>
+	<link rel="image_src" href="/area/048/images/logo.240x60.png"/>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="/js/click_stats.js"></script>
+	<script type="text/javascript" src="/js/search_complete.js"></script>
+	<script type="text/javascript" src="/js/functions.js"></script>
+	<script type="text/javascript" src="/js/layout_functions.js"></script>
+	<script type="text/javascript" src="/tools/flash_video/swfobject.js"></script>
+
+				<!-- Facebook JavaScript -->
+			<div id="fb-root"></div>
+			<script type="text/javascript">var go_fb_appId = '104001942994382';</script>
+			<script type="text/javascript" src="/js/facebook_init.js"></script>
+			<script type="text/javascript" src="/user/facebook-platform/javascript/fbconnect.js"></script>
+			<script type="text/javascript" src="/js/facebook_points.js"></script>
+			<script type="text/javascript" src="/js/recommend_biz.js"></script>
+			<script type="text/javascript" src="/js/rate_movie.js"></script>
+			<script type="text/javascript" src="/js/download_coupon.js"></script>
+						<!-- Inline JavaScript -->
+			<script>
+				var banner_sponsor_url = null;
+				var banner_left_url = null;
+				var banner_right_url = null;
+				window.onscroll = slide_banner;
+				window.onresize = slide_banner;
+				function init_side_banners()
+				{
+					if (banner_sponsor_url)
+						load_content('banner_sponsor_content', banner_sponsor_url);
+					if (banner_left_url)
+						load_content('banner_left_content', banner_left_url); 
+					if (banner_right_url)
+						load_content('banner_right_content', banner_right_url); 
+				}
+			</script>
+			
+			<script language="javascript" src="/js/facebook_points.js"></script>
+
+			<SCRIPT SRC="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAlJQ7UeF85UKYysrjNXU08RSCnfZvk7uphHpeOyXjQYht41RVkBQlcbGSMqRod5vD_x7HvLlp29raRw" TYPE="text/javascript"></SCRIPT>
+
+			<SCRIPT>
+
+				var map;
+				var square = null;
+				var default_icon;
+				var popup_marker;
+				var biz_location_markers = new Array;
+				var directionsPanel;
+				var directions;
+
+				function initialize(address_to,address_from)
+				{
+					
+					
+
+					var ADDRESS_TO;
+
+					ADDRESS_TO=address_to;
+					ADDRESS_TO=ADDRESS_TO.replace("(","").replace(")","");
+
+					directionsPanel = document.getElementById("route");
+					directions = new GDirections(map, directionsPanel);
+					directions.clear();
+					directions.load(address_from + " to " + ADDRESS_TO);
+				}
+
+				function do_map()
+				{
+
+					// Icons
+
+					default_icon = new GIcon();
+					default_icon.image = "/images/maps/default_marker.png";
+					default_icon.shadow = "/images/maps/default_marker_shadow.png";
+					default_icon.iconSize = new GSize(19, 36);
+					default_icon.shadowSize = new GSize(35, 36);
+					default_icon.iconAnchor = new GPoint(10, 35);
+					default_icon.infoWindowAnchor = new GPoint(10, 35);
+
+					// Create Document
+			
+					map = new GMap2(document.getElementById("map"));
+
+					// Set Zoom & Center
+
+                    var square = new GLatLngBounds();
+                    square.extend(new GLatLng(37.995244,-87.474986));
+                    square.extend(new GLatLng(37.995244,-87.474986));
+                   	var newZoom = map.getBoundsZoomLevel(square) - 6;     
+					
+					//alert(square);
+					
+                    map.setCenter(square.getCenter(), newZoom, G_NORMAL_MAP);
+					
+                    map.addControl(new GSmallMapControl());
+                    map.enableDoubleClickZoom();
+                    map.enableScrollWheelZoom();
+
+					//alert(newZoom);
+
+					do_markers(map.getZoom());
+
+				}
+
+				function do_markers(zoom)
+				{
+
+					
+
+						// no logo marker
+					  	create_marker(37.995244,-87.474986, "595397034", "9201367", 0, false,
+							"EVANSVILLE AUTO &amp; TRUCK ACCESSORIES", "6224 E MORGAN AVE", "EVANSVILLE", "IN", "47715-2330", "812-471-1800");
+
+					
+
+				}
+
+				function findPosY(obj)
+				{
+  				var curtop = 0;
+  				if(obj.offsetParent)
+      				while(1)
+      				{
+        				curtop += obj.offsetTop;
+        				if(!obj.offsetParent)
+          				break;
+        				obj = obj.offsetParent;
+      				}
+  				else if(obj.y)
+      				curtop += obj.y;
+  				return curtop;
+				}
+
+				function biz_marker_click(m_biz, m_biz_location, m_marker)
+				{
+					map.checkResize();
+
+                    var square = new GLatLngBounds();
+                    square.extend(new GLatLng(37.995244,-87.474986));
+                    square.extend(new GLatLng(37.995244,-87.474986));
+                   	var newZoom = map.getBoundsZoomLevel(square) - 6;
+                    map.setCenter(square.getCenter(), newZoom, G_NORMAL_MAP);
+
+					map.panTo(m_marker.getLatLng());
+
+					// RESULTS PAGE 
+
+					document.getElementById('LOC_SELECTED').value=m_biz_location;
+
+				}
+
+				function biz_marker_zoom(m_biz, m_biz_location, m_marker)
+				{
+					map.checkResize();
+					
+					map.panTo(m_marker.getLatLng());
+
+					// RESULTS PAGE 
+
+					//document.getElementById('LOC_TR_' + document.getElementById('LOC_SELECTED').value).bgColor='#FFFFFF';
+
+					// NEED TO ADD ADDITIONAL SCRIPT TO HANDLE THE TRs IN DIRECTIONS SECTION
+
+					document.getElementById('LOC_SELECTED').value=m_biz_location;
+					document.getElementById('address_to').value=m_marker.getLatLng();
+
+				}
+
+				function create_marker(latitude, longitude, biz, biz_location, marker_size, has_logo, company, address, city, state, zip, phone)
+				{
+
+					var marker;				
+
+					if (marker_size == 2)
+					{
+
+						//  add biz logo marker
+						marker_icon = new GIcon();
+						marker_icon.image = "/biz/landmark/" + biz + ".png";
+						marker_icon.shadow = "/biz/landmark/shadow.png";
+						marker_icon.iconSize = new GSize(150, 146);
+						marker_icon.shadowSize = new GSize(223, 146);
+						marker_icon.iconAnchor = new GPoint(74, 145);
+						marker_icon.infoWindowAnchor = new GPoint(74, 145);
+
+						marker = new GMarker(new GPoint(longitude, latitude), marker_icon);
+
+					}
+					else if (marker_size == 1)
+					{
+
+						//  add biz logo marker
+						marker_icon = new GIcon();
+						marker_icon.image = "/biz/landmark/" + biz + "_mini.png";
+						marker_icon.shadow = "/biz/landmark/mini_shadow.png";
+						marker_icon.iconSize = new GSize(75, 73);
+						marker_icon.shadowSize = new GSize(112, 73);
+						marker_icon.iconAnchor = new GPoint(37, 72);
+						marker_icon.infoWindowAnchor = new GPoint(37, 72);
+
+						marker = new GMarker(new GPoint(longitude, latitude), marker_icon);
+
+					}
+					else
+					{
+
+						// add default marker
+
+	                    var marker;
+                    	marker = new GMarker(new GPoint(longitude, latitude), default_icon);
+                    	biz_location_markers[biz + ',' + biz_location] = marker;
+	
+                    	map.addOverlay(marker);
+
+					}
+
+					biz_location_markers[biz + ',' + biz_location] = marker;
+
+						var info_content = '<IFRAME SRC="/maps/NEW_biz_info.amp?biz=' + biz
+							+ '&biz_location=' + biz_location + '" STYLE="width: 300px; height: 85px; border: 0px;" FRAMEBORDER=NO SCROLLING=NO></IFRAME>';
+						var description_content = '<IFRAME SRC="/maps/NEW_biz_description.amp?biz=' + biz
+							+ '&biz_location=' + biz_location + '" STYLE="width: 300px; height: 85px; border: 0px;" FRAMEBORDER=NO SCROLLING=AUTO></IFRAME>';
+						var directions_content = '<IFRAME SRC="/maps/NEW_biz_directions.amp?biz=' + biz
+							+ '&biz_location=' + biz_location + '" STYLE="width: 300px; height: 85px; border: 0px;" FRAMEBORDER=NO SCROLLING=AUTO></IFRAME>';
+
+						var tab_data = [
+							new GInfoWindowTab("Info", info_content),
+							new GInfoWindowTab("Description", description_content)
+							//,
+							//new GInfoWindowTab("Directions", directions_content)
+						];
+
+						GEvent.addListener(marker, "click", function() { biz_marker_zoom(biz, biz_location, marker) });
+						//GEvent.addListener(marker, "click", function() { marker.openInfoWindowTabsHtml(tab_data) });
+
+					map.addOverlay(marker);
+
+					popup_marker = marker;
+
+				}
+
+			</SCRIPT>
+
+		
+</head>
+
+<body style="overflow-y: scroll; background-image: url(/homepage/layout_image.php?type=LAYOUT_BG);
+		background-size: cover; background-repeat: no-repeat; background-attachment: fixed;"
+	onload="do_map(); init_side_banners();" onunload="GUnload()">
+
+
+<div style="text-align: center; height: 134px; margin: 0px auto; overflow: visible;
+		">
+	<div style="text-align: center; margin: 0px auto 10px;">
+<div class="header_nav rounded_bottom_40" style="margin: 0px auto;">
+<div style="font-size: 13px; margin-top: 3px;" class="header_nav_element_left">
+<a rel="nofollow" href="http://TriStateHomePage.com/">
+TriStateHomePage.com &bull; WTVW</a>
+</div>
+<div class="header_nav_element_right">
+<a href="/account/">
+Business Login</a>
+</div>
+<div class="header_nav_divider_right">|</div>
+<div class="header_nav_element_right">
+<a href="/signup/">
+Business Signup</a>
+</div>
+<div class="header_nav_divider_right">|</div>
+<div class="header_nav_element_right">
+<a href="/user/">
+User Login</a>
+</div>
+<div class="header_nav_divider_right">|</div>
+<div class="header_nav_element_right">
+<a href="/contact.amp?C=Y">
+Contact Us</a>
+</div>
+<div class="header_nav_divider_right">|</div>
+<div class="header_nav_element_right">
+<a href="/contact.amp?C=Y&amp;amp;subject=Advertising">
+Advertise With Us</a>
+</div>
+<div class="header_nav_divider_right">|</div>
+<div onclick="shareHomepage('TriStateHomepage.biz', 'Evansville, IN', '048.0');" class="onclick header_nav_element_right">
+Share On Facebook</div>
+</div>
+</div>
+<input type="hidden" name="SEARCH_BG" value="#01518f" id="SEARCH_BG">
+<input type="hidden" name="SEARCH_FONT" value="WHITE" id="SEARCH_FONT">
+<input type="hidden" name="SECTION" value="profile" id="SECTION">
+<div style="overflow-x: hidden; height: 800px; width: 1190px; margin: 0px auto;">
+<div style="height: 110px; position: relative;">
+<div style="position: relative; width: 1190px;">
+<div style="width: 1190px; height: 80px; position: absolute; top: 20px; z-index: 900; background: #333333;" class="rounded_topright_40"></div>
+<div id="DIV_search_helper" style="background: #FFFFFF; position: absolute; top: 80px; left: 366px; width: 308px; display: none; z-index: 1600; padding: 5px 5px 0px 5px;" class="rounded_bottom_15 box_shadow">
+</div>
+</div>
+<div style="text-align: left; overflow: visible; width: 1190px; height: 100px; position: relative;">
+<div class="div_logo_corners"
+style="position: absolute; top: 0px; width: 340px; height: 99px; z-index: 1100;
+border-top: 2px solid #222222;
+border-right: 2px solid #222222;
+border-left: 2px solid #222222;
+background-image: url(/homepage/layout_image.php?type=LOGO_BG);
+background-repeat: no-repeat;"></div>
+<div id="DIV_LOGO" class="div_logo_corners"
+style="width: 320px; height: 89px; position: absolute; top: 0px; left: 10px; z-index: 1200; padding: 24px 20px 0px 20px;">
+<a href="/">
+<img src="/area/048.0/images/logo.240x60.png" width="240" height="60" alt="TriStateHomepage.biz" title="TriStateHomepage.biz">
+</a>
+</div>
+<div id="DIV_SEARCH"
+class="rounded_topright_40 box_shadow"
+style="position: absolute; z-index: 1001; top: 20px; left: 0px; width: 850px; height: 79px; background: #01518f;">
+<div style="position: absolute; left: 366px; top: 12px; color: WHITE; font-size: 12px;">
+Find a Business in Evansville, IN:
+</div>
+<form method="get" id="LAYOUT_SEARCH_FORM" action="/search.amp" onsubmit="return document.getElementById('biz_search').value.length > 0;">
+<div style="width: 354px; height: 32px; position: absolute; top: 28px; left: 360px;">
+<div style="position: absolute; top: 0px; left: 0px; width: 320px; height: 32px; background-image: url(/images/search_box.png);">
+<input id="biz_search" type="text" name="key" value="" autocomplete="off"
+style="width: 320px; height: 32px; border: 0px; background: none;
+font-size: 16px; color: #000000; padding: 4px 8px;"
+placeholder=""
+onkeyup="searchHelper(this.value, event);"
+onkeydown="searchHelperKeyDown(this.value, event);"
+onclick="this.focus(); searchHelper(this.value, event);"
+onmouseover=""/>
+</div>
+<div style="position: absolute; top: 0px; left: 321px; cursor: pointer;
+background-image: url(/images/search_button.png); border: none; width: 32px; background-color: transparent; height: 32px;"
+onmouseover="this.style.backgroundImage = 'url(/images/search_button_on.png)';"
+onmouseout="this.style.backgroundImage = 'url(/images/search_button.png)';"
+onclick="location.href = '/search.amp?key=' + encodeURIComponent(document.getElementById('biz_search').value);">
+</div>
+<img src="/images/search_button_on.png" style="width: 0px; height: 0px; display: none;" alt=""/>
+</div>
+</form>
+</div>
+<div style="width: 330px; height: 79px; position: absolute; top: 0px; left: 860px; top: 20px; z-index: 1001;">
+<a href="/classifieds/">
+<img src="/images/classified_teaser.png" width="330" height="79" class="rounded_topright_40" alt="Free Classified Ads!">
+</a>
+</DIV>
+</div>
+</div>
+</div>
+
+</div>
+
+	<div style="text-align: center; min-width: 1190px; width: 100%; height: 50px; margin-bottom: 10px; background-image: url(/images/transparent_black_50.png);">
+
+		<div style="text-align: left; width: 1190px; height: 47px; padding-left: 18px; padding-right: 18px; padding-bottom: 6px; padding-top: 5px; margin: 0px auto;">
+<a href="/"><div style="text-align: center; width: 103px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/home.png" title="Home" alt="Home"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/classifieds/"><div style="text-align: center; width: 128px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/classifieds.png" title="Classifieds" alt="Classifieds"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/classifieds/category.amp?category=1&amp;subcategory=1"><div style="text-align: center; width: 123px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/autos.png" title="New &amp; Used Cars" alt="New &amp; Used Cars"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/coupons/"><div style="text-align: center; width: 120px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/coupon.png" title="Coupons" alt="Coupons"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/jobs/"><div style="text-align: center; width: 88px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/jobs.png" title="Jobs" alt="Jobs"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/tributes/"><div style="text-align: center; width: 138px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/obituaries.png" title="Obituaries" alt="Obituaries"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/events.amp"><div style="text-align: center; width: 108px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/events.png" title="Events" alt="Events"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="/movies/"><div style="text-align: center; width: 115px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/movies.png" title="Movies" alt="Movies"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="http://tristatehomepage.com/news" target="_blank" rel=nofollow><div style="text-align: center; width: 113px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/weather.png" title="Weather" alt="Weather"/></div></a>
+<div style="width: 2px; height: 33px; float: left;"></div><a href="http://tristatehomepage.com/news" target="_blank" rel=nofollow><div style="text-align: center; width: 100px; float: left; border-radius: 5px;" onmouseover="this.style.backgroundColor='#222222';" onmouseout="this.style.background='none';"><img style="margin-top: 3px;" src="/images/nav_top/full_images/news.png" title="News" alt="News"/></div></a>
+</div>
+
+	</div>
+
+				<div style="width: 1190px; margin: 0px auto;">
+
+				<!-- Left banner -->
+				<div style="width: 180pxpx; float: left;">
+					<div style="margin-left: 18px; border: 1px solid #000000; background-color: #FFFFFF; width: 162px; height: 602px;">
+						
+						<div id="banner_left_content"></div>
+						<script>
+						banner_left_url = "/banner.php?TYPE=MAIN_Y\&JS_CONTENT=Y\&SIDE=LEFT\&SECTION=profile\&CONTEXT_ID=\&category=1\&subcategory=\&BANNER_CATEGORY=\&BANNER_SUBCATEGORY=";
+						</script>
+
+					</div>
+				</div>
+
+				<!-- Right banner -->
+				<div style="width: 180px; float: right;">
+					<div style="margin-right: 18px; border: 1px solid #000000; background-color: #FFFFFF;width: 162px; height: 602px;">
+
+						
+						<div id="banner_right_content"></div>
+						<script>
+							banner_right_url = "/banner.php?TYPE=MAIN_Y\&JS_CONTENT=Y\&SIDE=RIGHT\&SECTION=profile\&CONTEXT_ID=\&category=1\&subcategory=\&BANNER_CATEGORY=\&BANNER_SUBCATEGORY=";
+						</script>
+						
+					</div>
+				</div>
+			
+	<div class="rounded_all_15" style="background: #FFFFFF; width: 810px; margin: 0px auto; overflow: hidden;">
+				<div style="background: #222222; width: 100%;">
+					</div>
+		
+
+		<!-- Check for valid NAV items -->
+
+		
+
+		
+
+		
+
+		<!-- Set DEFAULT if we don't have one -->
+
+		
+			
+				
+			
+		
+
+		
+
+		
+			
+			  
+				
+		
+
+		<DIV CLASS="rounded_all" STYLE="background: #222222;">
+	
+		<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+		<TR>
+		<TD VALIGN="TOP">
+		
+			<DIV ID="LOGO_SECTION_595397034" STYLE="background-color: #222222;" CLASS="rounded_left">
+		
+				<DIV STYLE="padding: 10px;" CLASS="rounded_top_left">
+					<DIV STYLE="background: #ffffff; padding: 10px;" CLASS="rounded_all_5">
+						<IMG SRC="/biz/logo.php?biz=595397034&amp;size=120x90" WIDTH="120" HEIGHT="90" ALT="EVANSVILLE AUTO &amp; TRUCK ACCESSORIES" BORDER="0" CLASS="rounded_all_5">
+					</DIV>
+				</DIV>
+				
+			</DIV>
+		
+		</TD>
+		<TD VALIGN="TOP" WIDTH="100%">
+		
+			<DIV ID="INFO_SECTION_595397034" STYLE="background-color: #222222;" CLASS="rounded_right">
+	
+				<DIV ID="HEADER_595397034" STYLE="height: 50px;" CLASS="rounded_bottom_right background_rgba_white_20">
+					<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%" HEIGHT="50">
+						<TR>
+						<TD NOWRAP STYLE="padding-left: 20px;">
+							<B STYLE="display: block; font-size: 18px; color: #FFFFFF; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><A HREF="/biz/profile/EVANSVILLE-AUTO-and-TRUCK-ACCESSORIES.html" STYLE="color: #FFFFFF; text-decoration: none;">EVANSVILLE AUTO &amp; TRUCK ACCESSORIES</A></B>
+						</TD>
+						
+						</TD>
+						</TR>
+					</TABLE>
+				</DIV>
+				
+				<DIV STYLE="color: #ffffff; padding: 10px;">
+					
+						<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+						<TR><TD VALIGN="TOP" STYLE="color: #ffffff;">
+							<IMG SRC="/images/nav_top/address_white_20x20.png" WIDTH="14" HEIGHT="14" ALIGN="ABSMIDDLE"> 6224 E MORGAN AVE<br/>
+							EVANSVILLE, IN<br/>
+							47715-2330<br/>
+						</TD><TD VALIGN="TOP" STYLE="padding-left: 20px; color: #ffffff;">
+							<IMG SRC="/images/nav_top/phone_white_20x20.png" WIDTH="14" HEIGHT="14" ALIGN="ABSMIDDLE"> 812-471-1800
+						</TD></TR>
+						</TABLE>
+					
+				</DIV>
+				
+			</DIV>							
+			
+		</TD>
+		</TR>
+		</TABLE>
+		
+		</DIV>
+
+							
+		
+		<!-- Default data sections -->
+
+		<DIV ID="DIV_data" STYLE="margin: 10px 0px 0px 10px; float: left; width: 613px; padding: 10px; position: relative; background-color: #222222; overflow: hidden; border-radius: 10px 0px 10px 10px;" CLASS="background_rgba_white_20">	
+			
+			<!-- Map -->
+			<DIV ID="DIV_map" STYLE="height: 330px; display: block; position: relative;" ALIGN="CENTER">
+				
+				<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+					<TR><TD VALIGN="TOP">
+						<!-- Directions -->
+						<DIV ID="DIV_directions" STYLE="display: none; z-index: 1100;" ALIGN="CENTER">
+							<DIV ID="DIRECTIONS_DIV" STYLE="background: #ffffff; display: none; width: 300px; height: 500px; overflow-y: auto; padding: 10px;" CLASS="rounded_left">
+	<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+	<TR><TD>
+
+	<DIV STYLE="display: none; cursor: pointer; " ONCLICK="
+	if ( directions )
+	{
+		directions.clear();
+	}
+	document.getElementById('DIV_map').style.height='300px';
+	document.getElementById('map').style.height='300px';
+	document.getElementById('MAP_OPTION').value='SHRINK';
+	document.getElementById('IMG_OPTION').src='/images/profile/expand_map.png';
+	document.getElementById('NAV_DIV').style.display='block';
+	document.getElementById('DIRECTIONS_DIV').style.display='none';
+	map.checkResize();
+	square = new GLatLngBounds();
+	square.extend(new GLatLng(37.995244,-87.474986));
+	square.extend(new GLatLng(37.995244,-87.474986));	   			
+	newZoom = map.getBoundsZoomLevel(square) - 6;
+	map.setCenter(square.getCenter(), newZoom, G_NORMAL_MAP);			
+	
+		biz_marker_click('595397034', '9201367', biz_location_markers['595397034,9201367']);
+	
+	">
+		Close Directions&nbsp;&nbsp;<IMG SRC="/images/profile/close.png" ALIGN="ABSMIDDLE"><IMG SRC="/images/blank.gif" HEIGHT="1" WIDTH="40"><BR>
+	</DIV>
+	
+	<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+	<TR><TD>
+		<DIV STYLE="background: #444444; padding: 5px 10px; color: #ffffff; cursor: pointer" CLASS="rounded_all_5" ALIGN="CENTER"
+			ONCLICK="document.getElementById('ADDRESS_FROM_FORM').style.display = 'block';"
+		>
+			Change Route Points
+		</DIV>
+	</TD><TD STYLE="padding-left: 10px;"></TD><TD>
+		<DIV STYLE="background: #444444; padding: 5px 10px; color: #ffffff; cursor: pointer;" CLASS="rounded_all_5" ALIGN="CENTER"
+			ONCLICK="
+				document.getElementById('ADDRESS_FROM_FORM').style.display = 'none';
+				document.getElementById('DIRECTIONS_DIV').style.display = 'none';
+				document.getElementById('DIV_INFO_RIGHT').style.display = 'block';
+				if ( directions )
+				{
+					directions.clear();
+				}
+				document.getElementById('DIV_map').style.height='300px';
+				document.getElementById('map').style.height='300px';
+				document.getElementById('MAP_OPTION').value='SHRINK';
+				document.getElementById('IMG_OPTION').src='/images/profile/expand_map.png';
+				do_map();
+			"		
+		>
+			Close
+		</DIV>	
+	</TD></TR>
+	</TABLE>
+						
+	<DIV ID="route" ALIGN="LEFT">
+	
+		<FORM METHOD="POST" STYLE="margin: 0px;" ID="DIRECTIONS_FORM">
+				<INPUT TYPE="HIDDEN" NAME="address_from" VALUE="" ID="address_from" STYLE="border: 0px; width: 150px; height: 30px; padding: 4px; font-size: 14px;">
+				<INPUT TYPE="HIDDEN" NAME="address_to" ID="address_to" VALUE="37.995244,-87.474986"	
+		</FORM>
+	</DIV>	
+			
+	</TD><TD STYLE="padding-right: 10px;">
+	</TD></TR>
+	</TABLE>
+	
+</DIV>
+
+<DIV ID="ADDRESS_FROM_FORM" STYLE="display: none; 
+	padding: 10px;
+	position: absolute; bottom: 70px; left: 70px; width: 360px; z-index: 1100;
+	background: #333333;
+	"
+	CLASS="rounded_all box_shadow"
+>
+
+		<FORM METHOD="POST" STYLE="margin: 0px;">
+		<INPUT TYPE="HIDDEN" NAME="LOC_SELECTED" VALUE="9201367" ID="LOC_SELECTED">
+		<TABLE CELLPADDING="4" CELLSPACING="0" BORDER="0" WIDTH="100%">
+		<TR>
+		<TD COLSPAN="2">
+				<B STYLE="color: #ffffff; font-size: 14px;">1. Choose a destination:</B><BR>
+				
+				<TABLE CELLPADDING="4" CELLSPACING="0" BORDER="0" WIDTH="100%">
+				
+											
+					<TR ID="LOC_TR_9201367" 
+							STYLE="cursor: pointer;" CLASS="background_rgba_white_20;"
+							ONCLICK="
+				document.getElementById('LOC_TR_' + document.getElementById('LOC_SELECTED').value).className = '';							
+								biz_marker_zoom('595397034', '9201367', biz_location_markers['595397034,9201367']);
+								document.getElementById('LOC_TR_9201367').className = 'background_rgba_white_20';
+							"
+					>
+					<TD><IMG SRC="/images/profile/arrow.png"><BR></TD>
+					<TD STYLE="font-size: 9px; color: #ffffff;">6224 E MORGAN AVE</TD>
+					<TD STYLE="font-size: 9px; color: #ffffff;">EVANSVILLE</TD>
+					<TD STYLE="font-size: 11px; color: #ffffff;" ALIGN="RIGHT"></TD>
+					</TR>
+					
+				
+				
+				</TABLE><BR>
+
+			<B STYLE="color: #ffffff; font-size: 14px;">2. Where are you traveling from?</B><BR>
+		</TD>
+		<TD ALIGN="RIGHT" STYLE="padding: 5px 10px;" VALIGN="TOP">
+			<IMG SRC="/images/profile/close.png" WIDTH="18" HEIGHT="20" STYLE="cursor: pointer;"
+				ONCLICK="
+					if ( ! directions )
+					{
+						document.getElementById('ADDRESS_FROM_FORM').style.display='none';								
+						document.getElementById('DIV_directions').style.display='block';								
+					}
+					document.getElementById('ADDRESS_FROM_FORM').style.display='none';
+					document.getElementById('DIV_directions').style.display='block';
+					return false;
+				"
+			>
+		</TD>
+		</TR>
+		<TR><TD NOWRAP STYLE="padding-right: 10px;">
+			<B STYLE="color: #ffffff;">Street Address:</B><BR>
+			<INPUT TYPE="TEXT" NAME="from_street" ID="from_street" VALUE="" STYLE="width: 140px;">
+		</TD><TD NOWRAP STYLE="padding-right: 10px;">
+			<B STYLE="color: #ffffff;">( City, State ) &nbsp;&nbsp;Or&nbsp;&nbsp; ( Zip ):</B><BR>
+			<INPUT TYPE="TEXT" NAME="from_citystatezip" ID="from_citystatezip" VALUE="" STYLE="width: 140px;">
+		</TD><TD WIDTH="100%">
+			<BR>
+			<IMG SRC="/images/profile/go.png" STYLE="cursor: pointer;"
+				ONCLICK="
+					if ( directions )
+					{
+						GUnload();
+						do_map();
+						directions.clear();
+					}
+					document.getElementById('ADDRESS_FROM_FORM').style.display='none';
+					document.getElementById('address_from').value=document.getElementById('from_street').value + ', ' + document.getElementById('from_citystatezip').value;									
+					document.getElementById('MAP_OPTION').value='EXPAND';
+					document.getElementById('IMG_OPTION').src='/images/profile/shrink_map.png';
+					document.getElementById('DIRECTIONS_DIV').style.display='block';
+					//document.getElementById('NAV_DIV').style.display='none';
+					document.getElementById('DIV_map').style.height='500px';
+					document.getElementById('map').style.height='500px';
+					
+			   			biz_marker_click('595397034', '9201367', biz_location_markers['595397034,9201367']);
+		   			
+					if ( document.getElementById('LOC_SELECTED').value == '9201367' )
+					{
+						document.getElementById('address_to').value='37.995244, -87.474986';
+						if ( document.getElementById('LOC_SELECTED').value != '' )
+						{
+				document.getElementById('LOC_TR_' + document.getElementById('LOC_SELECTED').value).className = '';							
+			}
+						biz_marker_zoom('595397034', '9201367', biz_location_markers['595397034,9201367']);
+						document.getElementById('LOC_TR_9201367').className = 'background_rgba_white_20';						
+					}
+					document.getElementById('DIV_INFO_RIGHT').style.display = 'none';
+					initialize(document.getElementById('address_to').value, document.getElementById('from_street').value + ', ' + document.getElementById('from_citystatezip').value);
+					return false;
+				"
+			><BR>
+		</TD><TD>
+		</TD></TR>
+		</TABLE>
+		</FORM>
+</DIV>
+
+
+						</DIV>
+					</TD><TD></TD><TD WIDTH="100%" VALIGN="TOP">
+				
+						
+						
+						
+								
+							<!-- get coordinates -->
+	
+
+	
+
+	
+	
+
+		
+
+	    
+
+		
+
+		
+
+        	            
+        	
+	
+		
+
+		
+		
+		
+		
+		
+
+		
+	
+		<DIV ID="map" STYLE="width: 100%; height: 330px;"  CLASS="rounded_all"></DIV>
+
+	
+
+					
+							
+						<INPUT TYPE="HIDDEN" ID="MAP_OPTION" NAME="MAP_OPTION" VALIE="SHRINK">
+						
+						<DIV STYLE="position: relative; top: -39px; height: 30px; width: 100%;" ALIGN="CENTER">
+							<DIV STYLE="height: 30px; width: 230px;">
+								<IMG SRC="/images/profile/get_directions.png" WIDTH="106" HEIGHT="30" STYLE="cursor: pointer;"
+				 					ONCLICK="
+									document.getElementById('ADDRESS_FROM_FORM').style.display = 'block';
+									document.getElementById('DIV_directions').style.display = 'block';
+									return cl('595397034','DIRECTIONS','VIEW');">
+								<IMG ID="IMG_OPTION" SRC="/images/profile/expand_map.png" WIDTH="106" HEIGHT="30" STYLE="cursor: pointer;"
+									ONCLICK="
+										if ( document.getElementById('MAP_OPTION').value == 'EXPAND' )
+										{
+											if ( directions )
+											{
+												directions.clear();
+											}
+											document.getElementById('DIV_map').style.height='330px';
+											document.getElementById('map').style.height='330px';
+											document.getElementById('MAP_OPTION').value='SHRINK';
+											document.getElementById('IMG_OPTION').src='/images/profile/expand_map.png';
+											document.getElementById('NAV_DIV').style.display='block';
+											document.getElementById('DIRECTIONS_DIV').style.display='none'; 
+											
+												biz_marker_click('595397034', '9201367', biz_location_markers['595397034,9201367']);
+											
+										}
+										else
+										{
+											document.getElementById('DIV_map').style.height='500px';
+											document.getElementById('map').style.height='500px';
+											document.getElementById('MAP_OPTION').value='EXPAND';
+											document.getElementById('IMG_OPTION').src='/images/profile/shrink_map.png';
+											
+												biz_marker_click('595397034', '9201367', biz_location_markers['595397034,9201367']);
+											
+										}">
+							</DIV>
+						</DIV>
+						
+					</TD></TR>
+				</TABLE>
+
+			</DIV>		
+						
+			<!-- Contact -->
+			<DIV ID="DIV_contact" STYLE="display: none; background: #ffffff; height: 330px; padding: 10px;" CLASS="rounded_all">
+				
+
+
+
+
+
+
+
+
+
+	
+		
+			<!-- TRACK STATS IN JAVASCRIPT OR PROFILE.AMP -->
+		
+	
+
+	<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+	<TR><TD VALIGN="TOP">
+
+		<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD VALIGN="TOP">
+			<B><BIG>Your Contact Information:</BIG></B><BR>
+			<IMG SRC="/images/blank.gif" HEIGHT="27" WIDTH="1"><BR>
+
+			<FORM METHOD="POST" STYLE="margin: 0px;" ID="CONTACT_FORM" NAME="CONTACT_FORM">
+			<INPUT TYPE="HIDDEN" VALUE="S" NAME="S">
+			<INPUT TYPE="HIDDEN" VALUE="contact" NAME="SELECTED">
+			<INPUT TYPE="HIDDEN" VALUE="" NAME="ERROR" ID="ERROR">
+			<INPUT TYPE="HIDDEN" NAME="DEFAULT" VALUE="contact">
+
+			<TABLE CELLPADDING="2" CELLSPACING="2" BORDER="0">
+			<TR><TD><B>*Name:</B></TD><TD>
+				<INPUT TYPE="TEXT" NAME="user_name" VALUE="" SIZE="18" ID="user_name">
+			</TD></TR>
+			<TR><TD HEIGHT="5"></TD></TR>
+			<TR><TD VALIGN="TOP" >
+				<IMG SRC="/images/blank.gif" HEIGHT="4" WIDTH="1"><BR>
+				<B>*Email:</B>
+			</TD><TD>
+				<INPUT TYPE="TEXT" NAME="user_email" VALUE="" SIZE="18" ID="user_email"><BR>
+				
+			</TD></TR>
+			<TR><TD HEIGHT="5"></TD></TR>
+			<TR><TD  VALIGN="TOP">
+				<IMG SRC="/images/blank.gif" HEIGHT="4" WIDTH="1"><BR>
+				<B>*Phone:</B>
+			</TD><TD VALIGN="TOP">
+				<INPUT TYPE="TEXT" NAME="user_phone" VALUE="" SIZE="16"><BR>
+				
+			</TD></TR>
+		</TABLE>
+	
+	</TD></TR>
+	</TABLE>
+
+	<B>( * These are required fields. )</B><BR>
+
+	</TD><TD WIDTH="20"></TD><TD VALIGN="TOP">
+
+		<B><BIG>Your Message:</BIG></B><BR><BR>
+		<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD STYLE="padding-bottom: 5px;">
+			<B>*Message Subject:</B><BR>
+			<INPUT TYPE="TEXT" NAME="user_subject" VALUE="" STYLE="width: 220px;">
+		</TD></TR>
+		<TR><TD>
+			<B>*Message Comments:</B><BR>
+			<TEXTAREA NAME="user_comments" ROWS="4" STYLE="width: 220px;"></TEXTAREA>
+		</TD></TR>
+		</TABLE>
+
+	</TD></TR>
+	</TABLE>
+
+	<DIV STYLE="height: 10px;"></DIV>
+
+	<DIV ALIGN="CENTER">
+			<BUTTON CLASS="SEARCH_BUTTON"
+				ONCLICK="
+					
+						if ( document.getElementById('user_name').value == '' )
+						{
+							document.getElementById('user_name').style.background='#FFFF00';											
+							document.getElementById('ERROR').value='Y';
+						}
+					
+						if ( document.getElementById('user_email').value == '' )
+						{
+							document.getElementById('user_email').style.background='#FFFF00';											
+							document.getElementById('ERROR').value='Y';
+						}
+					
+						if (  document.getElementById('ERROR').value != 'Y' )
+					{
+						document.CONTACT_FORM.submit();
+					}
+					return false;
+				"
+			>Send Message</BUTTON>
+	</DIV>
+
+	</FORM>
+
+
+
+			</DIV>
+			
+			<!-- Coupons -->
+			<DIV ID="DIV_coupon" STYLE="display: none; background: #ffffff; height: 330px; padding: 10px; overflow-y: auto;" CLASS="rounded_all">
+				
+				
+
+									
+			</DIV>
+				
+			<!-- SMS -->
+			<DIV ID="DIV_sms" STYLE="display: none; background: #ffffff; height: 330px; padding: 10px; overflow-y: auto;" CLASS="rounded_all">
+					<DIV STYLE="padding: 0px 10px;">
+
+
+
+   	<FORM METHOD="POST" ACTION="http://www.tristatehomepage.biz/tools/sms/listing.amp">
+	
+	<INPUT TYPE="HIDDEN" VALUE="S" NAME="S">
+	<INPUT TYPE="HIDDEN" NAME="biz" VALUE="595397034">
+	<INPUT TYPE="HIDDEN" NAME="biz_location" VALUE="9201367">
+	<INPUT TYPE="HIDDEN" NAME="RETURN_URI" VALUE="/biz/profile.amp?biz=595397034&amp;DEFAULT=sms&amp;SENT=Y">
+
+	<B><BIG>Send to Cell Phone</BIG></B><BR><BR>
+
+	<DIV STYLE="padding: 4px; background-color: #EEEEEE; border: 1px solid #CCCCCC; border-radius: 4px;">
+	<B>Enter Your Cell Phone Number:&nbsp;&nbsp;</B><BR>
+	<INPUT ID="sms_number" TYPE="TEXT" NAME="sms_number" VALUE="">&nbsp;<INPUT TYPE="SUBMIT" VALUE="Send"><BR>
+	</DIV>
+
+	</FORM>
+	
+
+	&nbsp;<BR>
+
+	<SPAN STYLE="font-family: Consolas, Lucida Console, Courier New, monospace;">
+	<B>EVANSVILLE AUTO &amp; TRUCK ACCESSORIES</B><BR>
+	<B>6224 E MORGAN AVE</B><BR>
+	<B>EVANSVILLE, IN 47715-2330</B><BR>
+	Ph: <B>812-471-1800</B><BR>
+	
+
+	
+	</SPAN>
+	
+
+
+</DIV>
+			</DIV>
+			
+			<!-- Video -->
+			<DIV ID="DIV_video" STYLE="display: none; background: #000000; height: 330px; padding: 10px; overflow-y: auto;" CLASS="rounded_all">
+				
+<script type='text/javascript' src='/tools/flash_video/swfobject.js'></script>
+<script type='text/javascript' src='/tools/flash_video/sendEvent.js'></script>
+
+<DIV STYLE="height:280px; background-color: #000000;">
+<TABLE CELLPADDING="0" BORDER="0" CELLSPACING="0" WIDTH="100%" BGCOLOR="#000000">
+<TR>
+	<TD ALIGN="CENTER" STYLE="padding-top: 32px;">
+		<p id="player1"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+		<script type="text/javascript">
+			var s1 = new SWFObject('/tools/flash_video/player.swf','mpl','100%','240','9');
+			s1.addParam("allowfullscreen","true");
+			s1.addParam('allowscriptaccess','always');
+			s1.addParam('bgcolor','#000000');
+			s1.addVariable('backcolor', '#000000');
+			s1.addVariable('screencolor', '#000000');
+			s1.addVariable("image","http://video.golocal.biz/video/595397034/thumb.png");
+			s1.addVariable("file","http://video.golocal.biz/video/595397034/595397034_.flv");
+			s1.addVariable('enablejs', 'true');
+			s1.addVariable('autostart', 'true');
+			s1.addVariable('skin','http://www.tristatehomepage.biz/tools/flash_video/skins/dangdang.swf');
+			s1.addVariable('javascriptid', 'mpl');
+			s1.write("player1");
+		</script>
+	</TD>
+</TR>
+</TABLE>
+</DIV>
+					
+			</DIV>				
+			
+			<!-- Reviews -->
+			<DIV ID="DIV_reviews" STYLE="display: none;">
+			</DIV>					
+		</DIV>
+
+		<div style="float: left; margin: 10px 0px 0px 0px; width: 175px; white-space: nowrap; overflow: hidden;">
+			<INPUT TYPE="HIDDEN" ID="NAV_SELECTED" NAME="NAV_SELECTED" VALUE="map">
+			
+				
+			
+			
+			
+			
+			
+				
+			
+			
+			
+			
+				
+					<DIV ID="NAV_map" STYLE="background-color: #222222; padding: 5px 10px 5px 10px; cursor: pointer;" 
+						CLASS="rounded_right background_rgba_white_20"
+						ONMOUSEOVER="
+							if ( document.getElementById('NAV_SELECTED').value != 'map' )
+							{
+								document.getElementById('IMAGE_map').className = '';
+								document.getElementById('TEXT_map').style.color = '#ffffff';
+							}
+						"
+						ONMOUSEOUT="
+							if ( document.getElementById('NAV_SELECTED').value != 'map' )
+							{
+								document.getElementById('IMAGE_map').className = 'alpha_40';
+								document.getElementById('TEXT_map').style.color = '#999999';
+							}								
+						"
+						
+							ONCLICK="										
+								if ( document.getElementById('NAV_SELECTED').value != 'map' )
+								{
+									document.getElementById('DIV_' + document.getElementById('NAV_SELECTED').value).style.display = 'none';
+									document.getElementById('NAV_' + document.getElementById('NAV_SELECTED').value).className = 'rounded_right';											
+									document.getElementById('TEXT_' + document.getElementById('NAV_SELECTED').value).style.color = '#999999';
+									document.getElementById('IMAGE_' + document.getElementById('NAV_SELECTED').value).className = 'alpha_40';
+									document.getElementById('NAV_SELECTED').value = 'map';										
+									document.getElementById('DIV_map').style.display = 'block';
+									document.getElementById('NAV_map').className = 'rounded_right background_rgba_white_20';
+									document.getElementById('TEXT_map').style.color = '#ffffff';
+									document.getElementById('IMAGE_map').className = '';
+									document.getElementById('DIV_directions').style.display = 'none';
+									
+										do_map();
+																						
+								}										
+							"
+						
+					>
+							<IMG ID="IMAGE_map" style="vertical-align: middle; display: inline-block;" SRC="/images/nav_top/map_white_20x20.png" WIDTH="20" HEIGHT="20" >
+							<DIV ID="TEXT_map" STYLE="display: inline-block; color: #ffffff; font-weight: bold;">
+								&nbsp;Map & Directions
+							</DIV>
+					</DIV>
+					<div style="height: 1px;"></div>
+				
+			
+				
+			
+				
+			
+				
+					<DIV ID="NAV_sms" STYLE="background-color: #222222; padding: 5px 10px 5px 10px; cursor: pointer;" 
+						CLASS="rounded_right "
+						ONMOUSEOVER="
+							if ( document.getElementById('NAV_SELECTED').value != 'sms' )
+							{
+								document.getElementById('IMAGE_sms').className = '';
+								document.getElementById('TEXT_sms').style.color = '#ffffff';
+							}
+						"
+						ONMOUSEOUT="
+							if ( document.getElementById('NAV_SELECTED').value != 'sms' )
+							{
+								document.getElementById('IMAGE_sms').className = 'alpha_40';
+								document.getElementById('TEXT_sms').style.color = '#999999';
+							}								
+						"
+						
+							ONCLICK="										
+								if ( document.getElementById('NAV_SELECTED').value != 'sms' )
+								{
+									document.getElementById('DIV_' + document.getElementById('NAV_SELECTED').value).style.display = 'none';
+									document.getElementById('NAV_' + document.getElementById('NAV_SELECTED').value).className = 'rounded_right';											
+									document.getElementById('TEXT_' + document.getElementById('NAV_SELECTED').value).style.color = '#999999';
+									document.getElementById('IMAGE_' + document.getElementById('NAV_SELECTED').value).className = 'alpha_40';
+									document.getElementById('NAV_SELECTED').value = 'sms';										
+									document.getElementById('DIV_sms').style.display = 'block';
+									document.getElementById('NAV_sms').className = 'rounded_right background_rgba_white_20';
+									document.getElementById('TEXT_sms').style.color = '#ffffff';
+									document.getElementById('IMAGE_sms').className = '';
+									document.getElementById('DIV_directions').style.display = 'none';
+																						
+								}										
+							"
+						
+					>
+							<IMG ID="IMAGE_sms" style="vertical-align: middle; display: inline-block;" SRC="/images/nav_top/text_white_20x20.png" WIDTH="20" HEIGHT="20" CLASS="alpha_40">
+							<DIV ID="TEXT_sms" STYLE="display: inline-block; color: #999999; font-weight: bold;">
+								&nbsp;Text to My Phone
+							</DIV>
+					</DIV>
+					<div style="height: 1px;"></div>
+				
+			
+				
+			
+				
+			
+		</div>
+		
+		
+			
+			
+				
+			
+		
+
+		
+
+		
+
+		
+		
+		<div style="clear: both;"></div>
+		<DIV ID="DIV_INFO_RIGHT" style="margin: 10px 0px 0px 0px;">
+			<div id="DIV_INFO_RIGHT_TOP" style="overflow: hidden;">
+				<div style="float: left; width: 212px; margin: 0px 0px 10px 10px;">		
+					<DIV ID="NAV_" STYLE="background-color: #222222; padding: 5px 15px 5px 10px;" 
+						CLASS="rounded_top background_rgba_white_20">
+						<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" HEIGHT="20">
+						<TR><TD>
+							<DIV ID="TEXT_" STYLE="color: #ffffff; font-weight: bold;">
+								
+								&nbsp;Business Location:
+							</DIV>
+						</TD></TR>
+						</TABLE>
+					</DIV>
+
+					<!-- Biz Locations -->	
+
+					<DIV STYLE="height: 140px; padding: 0px 10px 10px 10px; background-color: #222222;" CLASS="rounded_bottom background_rgba_white_20">
+							
+						<DIV STYLE="height: 140px; overflow-y: auto;">
+							
+								
+								
+									
+									
+									<DIV STYLE="padding: 3px; cursor: pointer;" CLASS="rounded_all_5 background_rgba_black_20"
+										ONCLICK="
+											if ( document.getElementById('NAV_SELECTED').value != 'map' )
+											{
+												document.getElementById('DIV_' + document.getElementById('NAV_SELECTED').value).style.display = 'none';
+												document.getElementById('NAV_' + document.getElementById('NAV_SELECTED').value).className = 'rounded_top';
+												document.getElementById('TEXT_' + document.getElementById('NAV_SELECTED').value).style.color = '#999999';
+												document.getElementById('IMAGE_' + document.getElementById('NAV_SELECTED').value).className = 'alpha_40';
+												document.getElementById('NAV_SELECTED').value = 'map';
+												document.getElementById('DIV_map').style.display = 'block';
+												document.getElementById('NAV_map').className = 'rounded_top background_rgba_white_20';
+												document.getElementById('TEXT_map').style.color = '#ffffff';
+												document.getElementById('IMAGE_map').className = '';
+												document.getElementById('DIV_directions').style.display = 'none';
+												do_map();
+											}											
+											document.getElementById('LOC_TR_' + document.getElementById('LOC_SELECTED').value).className = '';							
+											biz_marker_zoom('595397034', '9201367', biz_location_markers['595397034,9201367']);
+											document.getElementById('LOC_TR_9201367').className = 'background_rgba_white_20';">
+											<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+												<TR><TD COLSPAN="2">
+													
+												</TD></TR>
+												
+													<TR><TD VALIGN="TOP" STYLE="padding-right: 3px;">
+														<IMG SRC="/images/nav_top/address_white_20x20.png" WIDTH="14" HEIGHT="14"><br/>
+													</TD><TD STYLE="font-size: 10px; color: #ffffff;">
+														6224 E MORGAN AVE<br/>
+														EVANSVILLE, IN 47715-2330<br/>
+													</TD></TR>
+												
+												
+										</TABLE>
+									</DIV>
+									<DIV STYLE="height: 5px;"></DIV>
+								
+						  	
+						</DIV>					
+					</DIV>
+					
+				</div>
+			
+				
+						
+				
+					
+
+						<div style="float: left; width: 212px; margin: 0px 0px 10px 10px;">
+						<DIV STYLE="height: 170px; padding: 5px 15px 5px 10px; color: #ffffff; background-color: #222222;" CLASS="rounded_all background_rgba_white_20">					
+							<DIV STYLE="color: #ffffff; font-weight: bold;">
+								&nbsp;See more like this in:
+							</DIV>
+							<DIV STYLE="height: 10px;"></DIV>					
+							
+							
+								<DIV STYLE="padding: 5px;" CLASS="rounded_all_5 background_rgba_black_20">
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+										  <IMG style="display: block;" SRC="/images/category/1_white_20x20.png" WIDTH="14" HEIGHT="14" ALT="Evansville Automotive RVs & Campers">
+										</TD><TD STYLE="padding-left: 5px;">
+																<A HREF="/category/evansville/Automotive/RVs-and-Campers.html" STYLE="display: block; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none;">RVs & Campers</A> 
+										</TD></TR>
+									</TABLE>
+								</DIV>
+								<DIV STYLE="height: 5px;"></DIV>
+							
+								<DIV STYLE="padding: 5px;" CLASS="rounded_all_5 background_rgba_black_20">
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+										  <IMG style="display: block;" SRC="/images/category/1_white_20x20.png" WIDTH="14" HEIGHT="14" ALT="Evansville Automotive Truck Repair & Service">
+										</TD><TD STYLE="padding-left: 5px;">
+																<A HREF="/category/evansville/Automotive/Truck-Repair-and-Service.html" STYLE="display: block; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none;">Truck Repair & Service</A> 
+										</TD></TR>
+									</TABLE>
+								</DIV>
+								<DIV STYLE="height: 5px;"></DIV>
+							
+								<DIV STYLE="padding: 5px;" CLASS="rounded_all_5 background_rgba_black_20">
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+										  <IMG style="display: block;" SRC="/images/category/1_white_20x20.png" WIDTH="14" HEIGHT="14" ALT="Evansville Automotive Automotive Restoration">
+										</TD><TD STYLE="padding-left: 5px;">
+																<A HREF="/category/evansville/Automotive/Automotive-Restoration.html" STYLE="display: block; color: #ffffff; font-size: 12px; font-weight: bold; text-decoration: none;">Automotive Restoration</A> 
+										</TD></TR>
+									</TABLE>
+								</DIV>
+								<DIV STYLE="height: 5px;"></DIV>
+							
+						</DIV>
+						
+						</div>
+					
+				
+
+				
+				</div>
+
+				<div id="DIV_INFO_RIGHT_BOTTOM" style="overflow: hidden;">
+			
+
+				
+			</div>
+
+			</DIV>
+		
+			<DIV STYLE="clear: both;"></DIV>
+	
+				
+				
+
+				
+
+				<DIV CLASS="rounded_top" STYLE="padding: 5px 10px 0px 10px; color: #FFFFFF; margin: 0px 0px 0px 10px; width: 300px; position: relative; background: #444444;" ALIGN="CENTER">
+					<B STYLE="font-size: 12px; color: #FFFFFF; padding: 0px;">Category Matches</B>
+				</DIV>
+
+				<DIV STYLE="margin: 0px 10px 10px 10px; background: #444444; padding: 0px 10px 10px 10px;" CLASS="rounded_bottom_right">
+		
+					<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+						
+						
+						
+						
+							
+							
+							
+								
+									<TR>
+								
+								
+						
+								
+						
+									
+									
+						
+								
+								<TD WIDTH="25%" STYLE="padding: 10px 10px 0px 0px;">
+									<DIV ID="DIV_CAT_235" STYLE="cursor: pointer; padding: 5px; position: relative;" CLASS="rounded_all_5 background_rgba_white_20"
+										ONCLICK="location.href='/category/evansville/Automotive/RVs-and-Campers.html';"
+										ONMOUSEOVER="document.getElementById('DIV_CAT_235').style.backgroundColor='#666666';"
+										ONMOUSEOUT="document.getElementById('DIV_CAT_235').style.backgroundColor='';"
+									>
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+									<TR><TD STYLE="padding-right: 5px;">
+										<IMG SRC="/image/Automotive/1.png" WIDTH="20" HEIGHT="20" STYLE="display: block; position: relative; z-index: 1000;" ALT="Evansville Automotive RVs & Campers">
+									</TD><TD>
+										<A HREF="/category/evansville/Automotive/RVs-and-Campers.html" STYLE="display: block; font-size: 10px; color: #ffffff; text-decoration: none; font-weight: bold;">RVs & Campers</A>
+									</TD></TR>
+									</TABLE>
+									</DIV>
+								</TD>
+								
+									
+								
+							
+						
+							
+							
+							
+								
+								
+						
+								
+						
+									
+									
+						
+								
+								<TD WIDTH="25%" STYLE="padding: 10px 10px 0px 0px;">
+									<DIV ID="DIV_CAT_417" STYLE="cursor: pointer; padding: 5px; position: relative;" CLASS="rounded_all_5 background_rgba_white_20"
+										ONCLICK="location.href='/category/evansville/Automotive/Truck-Repair-and-Service.html';"
+										ONMOUSEOVER="document.getElementById('DIV_CAT_417').style.backgroundColor='#666666';"
+										ONMOUSEOUT="document.getElementById('DIV_CAT_417').style.backgroundColor='';"
+									>
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+									<TR><TD STYLE="padding-right: 5px;">
+										<IMG SRC="/image/Automotive/1.png" WIDTH="20" HEIGHT="20" STYLE="display: block; position: relative; z-index: 1000;" ALT="Evansville Automotive Truck Repair & Service">
+									</TD><TD>
+										<A HREF="/category/evansville/Automotive/Truck-Repair-and-Service.html" STYLE="display: block; font-size: 10px; color: #ffffff; text-decoration: none; font-weight: bold;">Truck Repair & Service</A>
+									</TD></TR>
+									</TABLE>
+									</DIV>
+								</TD>
+								
+									
+								
+							
+						
+							
+							
+							
+								
+								
+						
+								
+						
+									
+									
+						
+								
+								<TD WIDTH="25%" STYLE="padding: 10px 10px 0px 0px;">
+									<DIV ID="DIV_CAT_539" STYLE="cursor: pointer; padding: 5px; position: relative;" CLASS="rounded_all_5 background_rgba_white_20"
+										ONCLICK="location.href='/category/evansville/Automotive/Automotive-Restoration.html';"
+										ONMOUSEOVER="document.getElementById('DIV_CAT_539').style.backgroundColor='#666666';"
+										ONMOUSEOUT="document.getElementById('DIV_CAT_539').style.backgroundColor='';"
+									>
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+									<TR><TD STYLE="padding-right: 5px;">
+										<IMG SRC="/image/Automotive/1.png" WIDTH="20" HEIGHT="20" STYLE="display: block; position: relative; z-index: 1000;" ALT="Evansville Automotive Automotive Restoration">
+									</TD><TD>
+										<A HREF="/category/evansville/Automotive/Automotive-Restoration.html" STYLE="display: block; font-size: 10px; color: #ffffff; text-decoration: none; font-weight: bold;">Automotive Restoration</A>
+									</TD></TR>
+									</TABLE>
+									</DIV>
+								</TD>
+								
+									
+									</TR>
+								
+							
+						
+					</TABLE>
+				</DIV>			
+		
+			
+
+			
+				
+				<DIV STYLE="margin: 0px 10px 10px 10px;">
+			
+					<DIV STYLE="background: #444444; padding: 10px; font-size: 14px; color: #ffffff;" CLASS="rounded_all">
+						<B>Similar Businesses:</B>
+					</DIV>
+					<DIV STYLE="height: 10px;"></DIV>
+					
+
+							  
+						
+						  	
+						  	
+								
+						  	
+			 			
+						  	
+						  	
+								
+						  	
+			 			
+						  	
+						  	
+								
+						  	
+			 			
+			  			
+
+
+	
+
+
+
+	
+	
+
+	
+		
+	
+	
+
+
+
+
+
+
+
+
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<DIV ID="PREMIUM_LISTING_607371557" STYLE="position: relative;"
+	ONMOUSEOVER="
+		document.getElementById('LOGO_SECTION_607371557').style.backgroundColor = '#444444';
+		document.getElementById('INFO_SECTION_607371557').style.backgroundColor = '#444444';
+	"
+	ONMOUSEOUT="
+		document.getElementById('LOGO_SECTION_607371557').style.backgroundColor = '#666666';
+		document.getElementById('INFO_SECTION_607371557').style.backgroundColor = '#666666';
+	"	
+>
+
+<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+	<TR>
+	<TD VALIGN="TOP">
+	
+		<DIV ID="LOGO_SECTION_607371557" STYLE="height: 160px; background-color: #666666;" CLASS="rounded_left background_rgba_white_20">
+	
+			<DIV STYLE="padding: 10px; width: 160px; height: 130px;" CLASS="rounded_top_left">
+				<DIV STYLE="background: #ffffff; padding: 10px;" CLASS="rounded_all_5">
+					<A ONMOUSEDOWN="return cl('607371557');" HREF="/biz/profile/Mills-Truck-Equipment.html" REL="NOFOLLOW"><IMG SRC="http://www.tristatehomepage.biz/biz/logo.php?biz=607371557&amp;size=120x90" 
+				    	WIDTH="120" HEIGHT="90" ALT="Mills Truck Equipment &amp; Body Shop" BORDER="0" STYLE="" CLASS="rounded_all_5"></A><BR>
+				</DIV>
+			</DIV>			
+	
+			<DIV STYLE="height: 30px; padding-left: 10px;" CLASS="rounded_bottom_left background_rgba_black_20">
+				<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" HEIGHT="30"><TR><TD HEIGHT="30">
+					<div class="fb-like" data-href="http://www.tristatehomepage.biz/biz/profile/Mills-Truck-Equipment.html" data-send="true" data-layout="button_count" data-show-faces="true" data-font="arial" data-colorscheme="dark"></div>
+				</TD></TR></TABLE>
+			</DIV>
+		
+		</DIV>
+		
+	</TD>
+	<TD VALIGN="TOP" WIDTH="100%">
+		<DIV ID="INFO_SECTION_607371557" STYLE="height: 160px; background-color: #666666; position: relative;" CLASS="rounded_right background_rgba_white_20">
+		
+			<DIV ID="HEADER_607371557" STYLE="height: 40px; position: relative; cursor: pointer;" CLASS="rounded_bottom_right background_rgba_black_20" ONCLICK="location.href='/biz/profile.amp?biz=607371557';">
+				<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%" HEIGHT="40">
+					<TR>
+					<TD NOWRAP STYLE="padding-left: 10px;">
+						<B STYLE="font-size: 14px; color: #FFFFFF;text-shadow: 1px 1px 1px rgba(0,0,0,0.5);"><A HREF="/biz/profile/Mills-Truck-Equipment.html" STYLE="color: #FFFFFF; text-decoration: none;" REL="NOFOLLOW">Mills Truck Equipment &amp; Body Shop</A></B><BR>
+					</TD>
+					<TD WIDTH="100%">
+					</TD>
+					</TR>
+				</TABLE>
+			</DIV>
+			
+			<DIV ID="SMS_607371557" STYLE="height: 90px; overflow: hidden; padding-top: 5px; display: none;">
+				<TABLE CELLPADDINg="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+				<TR><TD WIDTH="65%" VALIGN="TOP">
+	        
+			
+					<DIV STYLE="padding: 3px;" CLASS="background_rgba_black_20">
+						<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+						<TR><TD COLSPAN="2">
+								
+						</TD></TR>
+						
+							<TR><TD VALIGN="TOP" STYLE="padding-right: 3px;">
+								<IMG SRC="/images/nav_top/address_white_20x20.png" WIDTH="14" HEIGHT="14"><BR>
+							</TD><TD STYLE="font-size: 10px; color: #ffffff;">
+								5900 OLD BOONVILLE HWY<BR>
+								EVANSVILLE, IN<BR>
+							</TD></TR>
+						
+						
+							<TR><TD VALIGN="TOP" STYLE="padding-right: 3px;">
+								<IMG SRC="/images/nav_top/phone_white_20x20.png" WIDTH="14" HEIGHT="14"><BR>
+							</TD><TD STYLE="font-size: 10px; color: #ffffff;">																		
+								812-479-9700<BR>
+							</TD></TR>
+						
+						</TABLE>
+					</DIV>	
+				<TD STYLE="padding: 10px;" VALIGN="TOP"><DIV STYLE="width: 1px; height: 60px;" CLASS="background_rgba_white_20"></DIV></TD>					
+				<TD WIDTH="35%" VALIGN="TOP" STYLE="padding-right: 5px;" VALIGN="TOP">					        				
+					<DIV STYLE="padding: 1px; font-size: 9px; color: #ffffff; position: relative;" ALIGN="CENTER" CLASS="rounded_top background_rgba_black_20">
+						Text Business to My Phone:
+					</DIV>
+					<DIV STYLE="padding: 0px 5px 5px 5px; position: relative;" CLASS="rounded_bottom_5 background_rgba_black_20">				
+					
+							<DIV STYLE="padding: 3px;" CLASS="background_rgba_white_20">
+
+					    <FORM METHOD="POST" STYLE="margin: 0px;" ACTION="http://www.tristatehomepage.biz/tools/sms/listing.amp">
+					    <INPUT TYPE="HIDDEN" NAME="S" VALUE="S">
+					    <INPUT TYPE="HIDDEN" NAME="biz" VALUE="607371557">
+					    <INPUT TYPE="HIDDEN" NAME="biz_location" VALUE="9201367">
+					    <INPUT TYPE="HIDDEN" NAME="RETURN_URI" VALUE="/biz/profile/EVANSVILLE-AUTO-and-TRUCK-ACCESSORIES.html">
+					    <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%">
+					        <TR>
+					        <TD NOWRAP><B STYLE="font-size: 10px; color: #FFFFFF;">My Cell #:</B></TD>
+					        <TD><INPUT TYPE="TEXT" NAME="sms_number" VALUE="" STYLE="width: 100px;"></TD>                              
+					        <TD></TD>
+					        <TD><INPUT TYPE="SUBMIT" VALUE="Send"></TD>
+					        </TR>
+					        <TR>
+					        <TD>
+					        </TD>
+					        <TD COLSPAN="2" STYLE="font-size: 10px; color: #ffffff;">
+					        	ex. 555-555-5555				        
+					        </TD>
+					        </TR>
+					    </TABLE>
+					    </FORM>
+					    
+					    </DIV>
+					    
+					</DIV>
+				</TD></TR>
+				</TABLE>			
+			</DIV>
+			
+			<DIV ID="BODY_607371557" STYLE="height: 90px; overflow: hidden; padding-top: 5px; display: block;">
+				<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%" HEIGHT="70">
+					<TR>
+					<TD WIDTH="65%" VALIGN="TOP">
+						
+						<DIV STYLE="height: 80px; overflow-y: auto; cursor: pointer;" ONCLICK="location.href='/biz/profile.amp?biz=607371557';">
+							
+								
+								
+								<DIV STYLE="padding: 3px;" CLASS="background_rgba_black_20">
+									<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+									<TR><TD COLSPAN="2">
+											
+									</TD></TR>
+									
+										<TR><TD VALIGN="TOP" STYLE="padding-right: 3px;">
+											<IMG SRC="/images/nav_top/address_white_20x20.png" WIDTH="14" HEIGHT="14"><BR>
+										</TD><TD STYLE="font-size: 10px; color: #ffffff;">
+											5900 OLD BOONVILLE HWY<BR>
+											EVANSVILLE, IN<BR>
+										</TD></TR>
+									
+									
+										<TR><TD VALIGN="TOP" STYLE="padding-right: 3px;">
+											<IMG SRC="/images/nav_top/phone_white_20x20.png" WIDTH="14" HEIGHT="14"><BR>
+										</TD><TD STYLE="font-size: 10px; color: #ffffff;">																		
+											812-479-9700<BR>
+										</TD></TR>
+									
+									</TABLE>
+								</DIV>
+								<DIV STYLE="height: 5px;"></DIV>
+								
+							
+						</DIV>
+					</TD>
+					<TD STYLE="padding: 10px;" VALIGN="TOP"><DIV STYLE="width: 1px; height: 60px;" CLASS="background_rgba_white_20"></DIV></TD>					
+					<TD WIDTH="35%" VALIGN="TOP">
+						<DIV STYLE="height: 70px; color: #ffffff; font-size: 10px; cursor: pointer;" ONCLICK="location.href='/biz/profile.amp?biz=607371557';">
+							MISSION STATEMENT
+
+Create Value for Others, with Attitude, Service and Pride.
+
+A Can Do Attitude, Fast Efficient Service,
+
+And Pride in the Quality of Our Production.<BR>							
+						</DIV>
+					</TD>
+					<TD STYLE="padding: 10px;" VALIGN="TOP"><DIV STYLE="width: 1px; height: 60px;" CLASS="background_rgba_white_20"></DIV></TD>					
+					<TD STYLE="padding-right: 5px;"> 
+						<!-- SET BIZ LINK FOR SiteShot and Website link -->
+						
+							
+							
+								
+							
+						
+						
+							<DIV STYLE="padding: 1px; font-size: 9px; color: #ffffff; position: relative;" ALIGN="CENTER" CLASS="rounded_top background_rgba_black_20">
+								Website
+							</DIV>
+							<DIV STYLE="padding: 0px 5px 5px 5px; position: relative;" CLASS="rounded_bottom_5 background_rgba_black_20">
+								<A ONMOUSEDOWN="return cl('607371557');"  HREF="http://www.millstruck.com/" REL="NOFOLLOW">
+							    <IMG SRC="http://www.tristatehomepage.biz/biz/siteshot.php?biz=607371557&amp;size=80x60" WIDTH=80 HEIGHT=60 ALT="Mills Truck Equipment &amp; Body Shop" BORDER="0"></A><BR>								
+							</DIV>
+						
+					</TD>
+					</TR>
+				</TABLE>
+			</DIV>
+			
+			<DIV STYLE="height: 30px; padding-right: 5px; position: relative;" CLASS="background_rgba_black_20 rounded_bottomright_only">
+			<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" WIDTH="100%" HEIGHT="30">
+					<TR>
+					<TD WIDTH="100%">
+					</TD>
+					
+					
+						
+					
+					
+						
+					
+					
+					
+					
+					
+						
+					
+					
+						
+						
+							
+						
+						
+						
+						
+					
+
+					
+
+					
+
+					
+
+					
+						
+							
+						
+					
+						
+					
+						
+							
+						
+					
+						
+					
+						
+					
+						
+							
+						
+					
+						
+					
+						
+							
+						
+					
+						
+					
+						
+					
+					
+						
+							
+						
+						
+							<TD STYLE="padding-left: 5px;" NOWRAP>
+								<DIV 
+									STYLE="padding: 3px 6px; text-align: center; cursor: pointer; position: relative; z-index: 1;" 
+									CLASS="rounded_all background_rgba_black_20"
+									
+										ONCLICK="
+											
+												location.href='/biz/profile.amp?biz=607371557&DEFAULT=contact';
+											
+										"
+									
+									ONMOUSEOVER="this.style.backgroundColor = '#999999';"
+									ONMOUSEOUT="this.style.backgroundColor = '';"
+									>
+										<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+											<IMG style="display: block;" SRC="/images/nav_top/contact_white_20x20.png" WIDTH="14" HEIGHT="14">
+										</TD><TD STYLE="padding-left: 3px;">
+																				
+												<A HREF="/biz/profile.amp?biz=607371557&DEFAULT=contact" STYLE="display: block;color: #ffffff; font-size: 10px; text-decoration: none;" REL="NOFOLLOW">Contact Us</A>
+											
+										</TD></TR>
+										</TABLE>
+								</DIV>			              
+							</TD>							
+						
+					
+						
+							
+						
+						
+					
+						
+							
+						
+						
+							<TD STYLE="padding-left: 5px;" NOWRAP>
+								<DIV 
+									STYLE="padding: 3px 6px; text-align: center; cursor: pointer; position: relative; z-index: 1;" 
+									CLASS="rounded_all background_rgba_black_20"
+									
+										ONCLICK="
+											
+												location.href='/biz/profile.amp?biz=607371557&DEFAULT=map';
+											
+										"
+									
+									ONMOUSEOVER="this.style.backgroundColor = '#999999';"
+									ONMOUSEOUT="this.style.backgroundColor = '';"
+									>
+										<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+											<IMG style="display: block;" SRC="/images/nav_top/map_white_20x20.png" WIDTH="14" HEIGHT="14">
+										</TD><TD STYLE="padding-left: 3px;">
+																				
+												<A HREF="/biz/profile.amp?biz=607371557&DEFAULT=map" STYLE="display: block;color: #ffffff; font-size: 10px; text-decoration: none;" REL="NOFOLLOW">Map</A>
+											
+										</TD></TR>
+										</TABLE>
+								</DIV>			              
+							</TD>							
+						
+					
+						
+							
+						
+						
+					
+						
+							
+						
+						
+					
+						
+							
+						
+						
+							<TD STYLE="padding-left: 5px;" NOWRAP>
+								<DIV 
+									STYLE="padding: 3px 6px; text-align: center; cursor: pointer; position: relative; z-index: 1;" 
+									CLASS="rounded_all background_rgba_black_20"
+									
+										ONCLICK="
+											if ( document.getElementById('BODY_607371557').style.display == 'block' )
+											{
+												document.getElementById('BODY_607371557').style.display = 'none';
+												document.getElementById('SMS_607371557').style.display = 'block';
+											}
+											else
+											{
+												document.getElementById('BODY_607371557').style.display = 'block';
+												document.getElementById('SMS_607371557').style.display = 'none';										
+											}
+										"
+									
+									ONMOUSEOVER="this.style.backgroundColor = '#999999';"
+									ONMOUSEOUT="this.style.backgroundColor = '';"
+									>
+										<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+											<IMG style="display: block;" SRC="/images/nav_top/text_white_20x20.png" WIDTH="14" HEIGHT="14">
+										</TD><TD STYLE="padding-left: 3px;">
+											
+												<FONT STYLE="display: block; color: #ffffff; font-size: 10px; text-decoration: none;">Text to My Phone</FONT>																		
+											
+										</TD></TR>
+										</TABLE>
+								</DIV>			              
+							</TD>							
+						
+					
+						
+							
+						
+						
+					
+						
+							
+						
+						
+							<TD STYLE="padding-left: 5px;" NOWRAP>
+								<DIV 
+									STYLE="padding: 3px 6px; text-align: center; cursor: pointer; position: relative; z-index: 1;" 
+									CLASS="rounded_all background_rgba_black_20"
+									
+										ONCLICK="
+											
+												window.open('http://www.millstruck.com/','NEW');
+											
+										"
+									
+									ONMOUSEOVER="this.style.backgroundColor = '#999999';"
+									ONMOUSEOUT="this.style.backgroundColor = '';"
+									>
+										<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+										<TR><TD>
+											<IMG style="display: block;" SRC="/images/nav_top/web_white_20x20.png" WIDTH="14" HEIGHT="14">
+										</TD><TD STYLE="padding-left: 3px;">
+																				
+												<A TARGET="NEW" HREF="http://www.millstruck.com/" STYLE="display: block;color: #ffffff; font-size: 10px; text-decoration: none;" REL="NOFOLLOW">Website</A>
+											
+										</TD></TR>
+										</TABLE>
+								</DIV>			              
+							</TD>							
+						
+					
+						
+							
+						
+						
+					
+						
+							
+						
+						
+					
+
+					
+					
+					
+					</TR>
+				</TABLE>
+				</DIV>
+							
+		</DIV>
+	</TD>
+	</TR>
+</TABLE>
+
+</DIV>
+
+
+
+	
+
+
+					
+
+					
+					
+				</DIV>
+			
+
+		
+
+		
+								
+			
+		
+		
+
+		</div>
+
+				</div>
+			
+	<div style="clear: both;"></div>
+
+	<div class="footer_main rounded_top_15">
+<div class="cat_container" style="width: 808px;">
+<div>
+<a href="/category/evansville/Automotive.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Automotive/1.png" class="alpha_20" alt="Evansville Automotive">
+<div class="cat_text">Automotive</div>
+</div>
+</a>
+<a href="/category/evansville/Business-Services.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Business-Services/2.png" class="alpha_20" alt="Evansville Business Services">
+<div class="cat_text">Business Services</div>
+</div>
+</a>
+<a href="/category/evansville/Community.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Community/9.png" class="alpha_20" alt="Evansville Community">
+<div class="cat_text">Community</div>
+</div>
+</a>
+<a href="/category/evansville/Computers-and-Technology.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Computers-and-Technology/3.png" class="alpha_20" alt="Evansville Computers & Technology">
+<div class="cat_text">Computers & Technology</div>
+</div>
+</a>
+</div>
+<div>
+<a href="/category/evansville/Construction-and-Remodel.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Construction-and-Remodel/8.png" class="alpha_20" alt="Evansville Construction & Remodel">
+<div class="cat_text">Construction & Remodel</div>
+</div>
+</a>
+<a href="/category/evansville/Family-and-Education.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Family-and-Education/5.png" class="alpha_20" alt="Evansville Family & Education">
+<div class="cat_text">Family & Education</div>
+</div>
+</a>
+<a href="/category/evansville/Financial-and-Legal.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Financial-and-Legal/6.png" class="alpha_20" alt="Evansville Financial & Legal">
+<div class="cat_text">Financial & Legal</div>
+</div>
+</a>
+<a href="/category/evansville/Food-and-Dining.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Food-and-Dining/7.png" class="alpha_20" alt="Evansville Food & Dining">
+<div class="cat_text">Food & Dining</div>
+</div>
+</a>
+</div>
+<div>
+<a href="/category/evansville/Health-and-Medical.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Health-and-Medical/10.png" class="alpha_20" alt="Evansville Health & Medical">
+<div class="cat_text">Health & Medical</div>
+</div>
+</a>
+<a href="/category/evansville/Real-Estate.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Real-Estate/11.png" class="alpha_20" alt="Evansville Real Estate">
+<div class="cat_text">Real Estate</div>
+</div>
+</a>
+<a href="/category/evansville/Shopping-and-Services.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Shopping-and-Services/12.png" class="alpha_20" alt="Evansville Shopping & Services">
+<div class="cat_text">Shopping & Services</div>
+</div>
+</a>
+<a href="/category/evansville/Sports-and-Entertainment.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Sports-and-Entertainment/4.png" class="alpha_20" alt="Evansville Sports & Entertainment">
+<div class="cat_text">Sports & Entertainment</div>
+</div>
+</a>
+</div>
+<div>
+<a href="/category/evansville/Travel.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Travel/13.png" class="alpha_20" alt="Evansville Travel">
+<div class="cat_text">Travel</div>
+</div>
+</a>
+<a href="/category/evansville/Community/Emergency-Services.html">
+<div class="footer_element rounded_all_5" style="width: 202px;">
+<img src="/image/Community/Emergency-Services/emergency.png" class="alpha_20" alt="Evansville Emergency Services">
+<div class="cat_text">Emergency Services</div>
+</div>
+</a>
+</div>
+</div>
+<br/><div class="copyright">
+<a href="http://www.golocal.biz"><img alt="GoLocal.biz Publishing Platform" class="alpha_20" src="/images/golocal_logo.24.png"></a><br/>
+Site content Copyright &copy; 2013 TriStateHomepage.biz.<br/>
+System software Copyright &copy; 2004-2013 <a href="http://www.golocal.biz" style="color: #666666;">GoLocal.biz</a>. All Rights Reserved.<br/>
+All trademarks are the property of their respective owners.<br/>
+</div>
+</div>
+
+</body>
+
+</html>
+

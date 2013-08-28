@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_head1"><meta http-equiv="X-UA-Compatible" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	Strictly Diesel - Diagnostic Tools
+</title><meta name="description" content="Diagnostic Tools" /><meta name="keywords" content="Diagnostic Tools" />
+    
+    
+  
+    <script type="text/javascript" src="jscripts/isearch.js"></script>
+    <script type="text/javascript" src="jscripts/tsearch.js"></script>
+    <script type="text/javascript" src="jscripts/compunixCommon.js"></script>
+    <script type="text/javascript" src="jscripts/jquery-1.6.2.min.js"></script>
+    <!--[if IE 6]>
+    <style type="text/css">img, div, { behavior: url("js/iepngfix.htc") }
+    </style>
+    <![endif]-->
+    <script src="jscripts/iepngfix_tilebg.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="jscripts/jquery.anythingslider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#slider').anythingSlider();
+        });
+    </script>
+    <script src="jscripts/global.js" type="text/javascript"></script>
+
+    
+
+<!--[if IE]>
+<style type="text/css">
+.AddToCartButton, .AddToWishButton{padding-bottom:0px !important;}
+</style>
+<![endif]-->
+
+<!-- Compunix Jquey Shadowbox files -->
+         <script type="text/javascript" src="jscripts/jquery-1.6.2.min.js"></script>
+    	 <script type="text/javascript" src="jscripts/shadowbox.js"></script> 
+
+         
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<link href="App_Themes/Skin_1/0reset.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Skin_1/1cartStyle.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Skin_1/2compunixStyle.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Skin_1/3customStyle.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Skin_1/4anythingslider.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Skin_1/cGallery.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Skin_1/shadowbox.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    
+    <!--
+PAGE INVOCATION: /c-21-diagnostic-tools.aspx
+PAGE REFERRER: 
+STORE LOCALE: en-US
+STORE CURRENCY: USD
+CUSTOMER ID: 0
+AFFILIATE ID: 0
+CUSTOMER LOCALE: en-US
+CURRENCY SETTING: USD
+CACHE MENUS: True
+-->
+
+    <form name="aspnetForm" method="post" action="c-21-diagnostic-tools.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg0NTA1NjU3Ng9kFgJmD2QWBAIBD2QWBAIDDxYCHgdjb250ZW50BRBEaWFnbm9zdGljIFRvb2xzZAIEDxYCHwAFEERpYWdub3N0aWMgVG9vbHNkAgcPZBYEAgUPFgIeBFRleHQFNjxzcGFuIGNsYXNzPSJTZWN0aW9uVGl0bGVUZXh0Ij5EaWFnbm9zdGljIFRvb2xzPC9zcGFuPmQCBw9kFgICAQ9kFgICAQ8WAh8BBekqPCEtLSBYbWxQYWNrYWdlOiBlbnRpdHkubm9tbXlncmlkLnhtbC5jb25maWcgLS0+CjxkaXYgaWQ9InN1YnBhZ2VfcmlnaHRfY29sdW1uIj4NCiAgPGRpdiBjbGFzcz0ic3VicGFnZV9jb250ZW50Ij4NCiAgICA8ZGl2IGNsYXNzPSJsZWZ0X2NvbnRlbnQiPg0KICAgICAgPGRpdiBjbGFzcz0iY2F0ZWdvcnktdGl0bGUiPg0KICAgICAgICA8aDE+RGlhZ25vc3RpYyBUb29sczwvaDE+DQogICAgICAgIDxwIGNsYXNzPSJ0ZXh0Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsiPkF1dG9FbmdpbnVpdHkncyBTY2FuIFRvb2wgaXMgYSBoYXJkd2FyZSBhbmQgc29mdHdhcmUgY29tYmluYXRpb24gZm9yIFdpbmRvd3MgYmFzZWQgUENzIGFuZCBMYXBUb3BzLiA8YnIgLz4NCjxiciAvPg0KQXV0b0VuZ2ludWl0eSdzIFNjYW4gVG9vbCB3YXMgZGVzaWduZWQgdG8gYmUgYXMgZWFzeSB0byBsZWFybuKAlGFzIGl0IGlzIHBvd2VyZnVsLiBTY2FuIFRvb2wgY29tZXMgd2l0aCBhbiBhdXRvbWF0ZWQgaW5zdGFsbGF0aW9uIHByb2Nlc3MsIGEgY29tcGxldGUgYW5kIGNvbXByZWhlbnNpdmUgVXNlciBHdWlkZSwgYW5kIGFuIGVhc3ktdG8tdXNlIGludGVyZmFjZS4gWW91IHdvbid0IGhhdmUgdG8gc3BlbmQgdmFsdWFibGUgdGltZSBsZWFybmluZyBhbm90aGVyIHBpZWNlIG9mIHNvZnR3YXJlLCB5b3UgY2FuIGZvY3VzIG9uIHdoYXQncyBpbXBvcnRhbnTigJRzZXJ2aWNpbmcgdGhlIHZlaGljbGUuIDxiciAvPg0KPGJyIC8+DQpXaGF0IEF1dG9FbmdpbnVpdHkncyBTY2FuIFRvb2wgY2FuIGRvOiA8YnIgLz4NCuKAoiBTYXZlLCBwcmludCwgcmVhZCBhbmQgY2xlYXIgU3RvcmVkIGFuZCBQZW5kaW5nIFAsIFUsIEIsIGFuZCBDIFRyb3VibGUgQ29kZXMuPGJyIC8+DQo8c3BhbiBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyI+4oCiIDwvc3Bhbj5TdXBwb3J0aW5nIFAwIC0gUDkgZ2VuZXJpYyBhbmQgbWFudWZhY3R1cmVyIHNwZWNpZmljIGNvZGVzIChpbmNsdWRpbmcgdGhlIG5ldyBsZXR0ZXJlZCBjb2RlcyAoZS5nLiwgUDA2QTApIDxiciAvPg0K4oCiIFRoZSBsYXJnZXN0IG1hbnVmYWN0dXJlciBzcGVjaWZpYyB0cm91YmxlIGNvZGUgbGlicmFyeSBvZiBhbGwgUEMvUERBLWJhc2VkIHNjYW4gdG9vbHMgKDMwLDAwMCspIDxiciAvPg0K4oCiIFJlYWQgYW5kIGNsZWFyIEZyZWV6ZSBGcmFtZSBkYXRhIDxiciAvPg0K4oCiIFZpZXcgbGl2ZSB2ZWhpY2xlIHNlbnNvcnMgaW4gYSBtZXRlciwgZ3JhcGgsIG9yIGdyaWQgZm9ybWF0IDxiciAvPg0K4oCiIFZpZXcgb3h5Z2VuIHNlbnNvciBsaXZlIGRhdGEgYW5kIHRlc3QgcmVzdWx0cyA8YnIgLz4NCuKAoiBWaWV3IGFsbCAxMSBJbnNwZWN0aW9uL01haW50ZW5hbmNlIHN5c3RlbXMgYW5kIE1vZGUgNiBkYXRhIDxiciAvPg0K4oCiIFVubGltaXRlZCBsb2dnaW5nIG9mIGxpdmUgdmVoaWNsZSBzZW5zb3JzIGluIFRYVCwgWE1MLCBvciBDU1YgKDFtcyBsb2dnaW5nIGFjY3VyYWN5KSA8YnIgLz4NCuKAoiBQbGF5YmFjayB5b3VyIGRhdGEgbG9ncyBmb3Igb2ZmbGluZSBhbmFseXNpcyA8YnIgLz4NCuKAoiBSdW4gYW5kIHF1ZXJ5IHNwZWNpZmljIGNvbXBvbmVudCBhbmQgc3lzdGVtIHRlc3RzLiBTdXBwb3J0IGZvciBnZW5lcmljIGFuZCBlbmhhbmNlZCBiaS1kaXJlY3Rpb25hbCB0ZXN0cyA8YnIgLz4NCuKAoiBWaWV3IGdlbmVyaWMgYW5kIG1hbnVmYWN0dXJlciBlbmhhbmNlZCBkYXRhIG9uIHRoZSBzYW1lIHRvb2wgPGJyIC8+DQrigKIgRW5nbGlzaCBvciBNZXRyaWMgKFNJKSB1bml0cyBvZiBtZWFzdXJlIHN1cHBvcnRlZCA8YnIgLz4NCuKAoiBDb25maWd1cmUgeW91ciBzZW5zb3JzJyByYW5nZXMsIHNjYWxpbmcgdmFsdWUsIGF1ZGlibGUgYWxlcnQgdHJpZ2dlcnMsIHVuaXRzLCBhbmQgc2FtcGxpbmcgcmF0ZSA8YnIgLz4NCuKAoiBTYXZhYmxlIGNvbmZpZ3VyYXRpb25zLiBTZXQgdXAgdGhlIGludGVyZmFjZSB0byBzdWl0IHlvdXIgcHJlZmVyZW5jZXMgYW5kIHNhdmUgaXQgc28geW91IG5ldmVyIGhhdmUgdG8gZG8gaXQgYWdhaW4gPGJyIC8+DQrigKIgU3VwcG9ydHMgMTk5NiBhbmQgbmV3ZXIgcGFzc2VuZ2VyIHZlaGljbGVzLCB3aGV0aGVyIGl0IGJlIGRvbWVzdGljLCBBc2lhbiwgb3IgRXVyb3BlYW4uIDxiciAvPg0KPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsiPuKAoiA8L3NwYW4+U0FFIGludGVyZmFjZXM6IEoxODUwIChQV00gYW5kIFZQTSksIElTTy05MTQxLTIsIElTTy0xNDIzMCBbS1dQMjAwMF0sIGFuZCBDQU4gWzExYml0IGFuZCAyOWJpdF0gPGJyIC8+DQo8YnIgLz4NClNvbWV0aGluZyB3ZSBvZmZlciB0aGF0IHRoZSBvdGhlcnMgZG9u4oCZdDogPGJyIC8+DQrigKIgVHJ1ZSBQbHVnLW4tUGxheSBVU0IgMi4wIGludGVyZmFjZTxzdXA+MTwvc3VwPiA8YnIgLz4NCuKAoiBGYWN0b3J5IHNjYW4gdG9vbCBvcHRpb25zIGF2YWlsYWJsZSAobm90IGluY2x1ZGVkIGluIGJhc2Uga2l0KSA8YnIgLz4NCuKAoiBBbGwgZ2VuZXJpYyBzY2FuIHRvb2xzIGNhbiBvbmx5IGFjY2VzcyB0aGUgcG93ZXJ0cmFpbiwgbm8gbWF0dGVyIHdoYXQgU0FFIE1vZGVzIChKMTk3OS9KMjE5MCkgdGhleSB1c2UgZm9yIGNvbW11bmljYXRpb24uIFdpdGggb3VyIGV4cGFuc2lvbnMsIHlvdSBjYW4gYWNjZXNzIGRvemVucyBvZiBzeXN0ZW1zIChBQlMsIHRyYW5zbWlzc2lvbiwgR0VNLCBTUlMvQWlyYmFncywgSW5zdHJ1bWVudCBDbHVzdGVyLCBldGMuKSBnZW5lcmljIHNjYW4gdG9vbHMgY2FuJ3QgZXZlbiBzZWUuIFRoaXMgZ2l2ZXMgeW91IGFjY2VzcyB0byB0aG91c2FuZHMgb2Ygc2Vuc29ycyBhbmQgZG96ZW5zIG9mIGJpLWRpcmVjdGlvbmFsIGNvbnRyb2xzL3N5c3RlbSB0ZXN0cy4gQ2xpY2sgaGVyZSB0byBzZWUgb3VyIGVuaGFuY2VkIHN1cHBvcnQgZm9yIEZvcmQsIEdNLCBDaHJ5c2xlciBUb3lvdGEsIE1hemRhLCBOaXNzYW4sIEJNVywgTGFuZCBSb3ZlciwgSG9uZGEsIFN1YmFydSwgTWl0c3ViaXNoaSwgSXN1enUsIFBvcnNjaGUsIE1lcmNlZGVzLCBIeXVuZGFpL0tpYSwgSmFndWFyICwgYW5kIEF1ZGkvVlcuIENsaWNrIGhlcmUgZm9yIGNvbXBsZXRlIGVuaGFuY2VkIG9wdGlvbiBkZXRhaWxzLiA8YnIgLz4NCuKAoiBPcHRpb25hbCBleHBhbnNpb25zIGFsbG93aW5nIHlvdSB0byBjb21tdW5pY2F0ZSB3aXRoIG5vbi1PQkQtSUkgdmVoaWNsZXMgbGlrZSB0aGUgUG93ZXJzdHJva2UsIER1cmFtYXgsIGFuZCBDdW1taW5zIGRpZXNlbHMuIDxiciAvPg0K4oCiIEJpLWRpcmVjdGlvbmFsIHN1cHBvcnQuIFlvdSBoYXZlIHRoZSBhYmlsaXR5IHRvIGluaXRpYXRlIHN5c3RlbSBhbmQgY29tcG9uZW50IHRlc3RzPHN1cD4yIDwvc3VwPjxiciAvPg0K4oCiIE1vZGUgNiBzdXBwb3J0LiBJZiBhIHN5c3RlbSB0ZXN0IGZhaWxzLCBub3cgeW91IGNhbiBzZWUgdGhlIHJlc3VsdHMgZnJvbSB0aGUgZmFpbGluZyBjb21wb25lbnQ7IG5vdCBqdXN0IHRoZSBzeXN0ZW0uIE91ciBNb2RlIDYgZGF0YSBpcyBmdWxseSB0cmFuc2xhdGVkIHNvIHlvdSBkb24ndCBoYXZlIHRvIHdhc3RlIGhvdXJzIGxvb2tpbmcgdGhlIHNjYWxlIGFuZCBkZWZpbml0aW9ucy48c3VwPjI8L3N1cD4gPGJyIC8+DQrigKIgTW9kZSA5IHN1cHBvcnQuIEZ1bGwgRUNNIGluZm9ybWF0aW9uIGluY2x1ZGluZyBDQUwsIENWTiwgYW5kIFZJTiByZXBvcnRpbmcgPGJyIC8+DQrigKIgU3VwcG9ydCBmb3IgQ0FOIGFuZCBldmVuIHRoZSBDQU4gNnggTW9kZTxzdXA+Mzwvc3VwPiA8YnIgLz4NCuKAoiBTdXBwb3J0IGZvciB0aGUgbmV3IGV4dGVuZGVkIHNlbnNvciBsaXN0ICgyMzMgc2Vuc29ycy0tc3VwcG9ydGluZyB0aGUgU0FFIEoxOTc5IE1heSAyMDA3IGFkZGl0aW9ucykgPGJyIC8+DQrigKIgQUxMIHRoZSBPQkQtSUkgdmVoaWNsZSBpbnRlcmZhY2VzIGluIGEgc2luZ2xlIGNhYmxlLCBydWdnZWQgY2FzZS4gVGhpcyBpcyBhIHNhdmluZ3Mgb2YgaHVuZHJlZHMgb2YgZG9sbGFycyBvdmVyIHRoZSBjb21wZXRpdG9ycycgdW5pdHMgPGJyIC8+DQo8YnIgLz4NCjwvc3Bhbj48c3BhbiBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyI+PHN1cD4xPC9zdXA+UEMgdmVyc2lvbiBvbmx5LiA8YnIgLz4NCjxzdXA+Mjwvc3VwPlN1cHBvcnQgZm9yIHRoaXMgZmVhdHVyZSBpcyB2ZWhpY2xlIGRlcGVuZGFudC4gPGJyIC8+DQo8c3VwPjM8L3N1cD5DQU4gaXMgdXNlZCBpbiBhbGwgMjAwNCBGb3JkLCBNYXpkYSwgYW5kIHNvbWUgTWVyY2VkZXMsIGFuZCBUb3lvdGEuIENBTiBpcyB0aGUgbmV3IHJlcXVpcmVkIGVsZWN0cmljYWwgT0JESUkgaW50ZXJmYWNlIGZvciBwYXNzZW5nZXIgdmVoaWNsZXMgc3RhcnRpbmcgaW4gdGhlIDIwMDggbW9kZWwgeWVhci4gPC9zcGFuPjwvc3Bhbj48L3A+DQogICAgICAgIDxkaXYgY2xhc3M9InN1YkVudGl0aWVzIHN1YkNhdGVnb3JpZXMiPg0KICAgICAgICAgIDxkaXYgY2xhc3M9ImhvbWUtcHJvZHVjdHMiPg0KICAgICAgICAgICAgPGRpdiBjbGFzcz0iZWFjaC1wcm9kIj4NCiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0icHJvZC1pbWFnZSI+PGEgaHJlZj0iL2MtMTE2LWF1dG9lbmdpbnVpdHktdG9vbC1idW5kbGVzLmFzcHgiIHRpdGxlPSJhdXRvZW5naW51aXR5LXRvb2wtYnVuZGxlcyI+PGltZyBib3JkZXI9IjAiIGlkPSJFbnRpdHlQaWMxMTYiIG5hbWU9IkVudGl0eVBpYzExNiIgc3R5bGU9ImN1cnNvcjpoYW5kO2N1cnNvcjpwb2ludGVyOyIgc3JjPSIvaW1hZ2VzL0NhdGVnb3J5L2ljb24vMTE2LmpwZyIgYWx0PSJBdXRvRW5naW51aXR5IFRvb2wgQnVuZGxlcyIgLz48L2E+PC9kaXY+DQogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImRlc2MiPkF1dG9FbmdpbnVpdHkgVG9vbCBCdW5kbGVzPC9kaXY+DQogICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICA8ZGl2IGNsYXNzPSJob21lLXByb2R1Y3RzIj4NCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImVhY2gtcHJvZCI+DQogICAgICAgICAgICAgIDxkaXYgY2xhc3M9InByb2QtaW1hZ2UiPjxhIGhyZWY9Ii9jLTExNy1hdXRvZW5naW51aXR5LWV4cGFuc2lvbnMuYXNweCIgdGl0bGU9ImF1dG9lbmdpbnVpdHktZXhwYW5zaW9ucyI+PGltZyBib3JkZXI9IjAiIGlkPSJFbnRpdHlQaWMxMTciIG5hbWU9IkVudGl0eVBpYzExNyIgc3R5bGU9ImN1cnNvcjpoYW5kO2N1cnNvcjpwb2ludGVyOyIgc3JjPSIvaW1hZ2VzL0NhdGVnb3J5L2ljb24vMTE3LmpwZyIgYWx0PSJBdXRvRW5naW51aXR5IEV4cGFuc2lvbnMiIC8+PC9hPjwvZGl2Pg0KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJkZXNjIj5BdXRvRW5naW51aXR5IEV4cGFuc2lvbnM8L2Rpdj4NCiAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgIDxkaXYgc3R5bGU9ImNsZWFyOiBib3RoOyI+PC9kaXY+DQogICAgICAgIDwvZGl2Pg0KICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQogIDwvZGl2Pg0KPC9kaXY+ZGRLp1ib3RcG9wRMXotlOaL6paql7Q==" />
+
+
+<script src="jscripts/formvalidate.js" type="text/javascript"></script>
+<script src="jscripts/core.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=cXfSsBZe-I9K8VBJn3tk44npyGCWS6z9nKZZxDEezA8dKI8ykOE4z62vaRiUEXxgif3KnuK18zzMVTBLX7mBzOEOTzPV6QjGx6N2QaCZQPyPCRHirIWNTA_Sz3z9gvetVT66tkX6NGvGRUbqhCYht_qmKz41&amp;t=33137d1a" type="text/javascript"></script>
+<script src="jscripts/product.js" type="text/javascript"></script>
+    
+<div id="wrap">
+	<div id="header-top">
+    	
+        <ul class="top-links">
+            <li><a class="cur" href="default.aspx">Home</a></li>
+            <li>|</li>
+            <li><a href="t-ProjectTrucks.aspx">Project Trucks</a></li>
+            <li>|</li>
+            <li><a href="manufacturers.aspx">Brands</a></li>
+            <li>|</li>
+            <li><a href="t-DieselSites.aspx">Diesel Sites</a></li>
+            <li>|</li>
+            <li><a href="t-faq.aspx">FAQ</a></li>
+            <li>|</li>
+            <li><a href="account.aspx">Order Status</a></li>
+            <li>|</li>
+            <li><a href="account.aspx">My Account</a></li>
+        </ul>
+    </div><!--//header-top-->
+    <div id="header-bottom">
+    	<div class="logo"></div>
+        <div class="we-are-die-hard">
+        	we are die hard diesel <br />
+            <span>Service &bull; Repair &bull; Parts</span>
+        </div><!--//we-are-die-hard-->
+        <div class="free-shipping"><img src="images/free-shipping-over-150.png" alt="" /></div>
+        <div class="cart-box">
+        	<p>0 Items in your cart</p>
+            <div class="clearboth"></div>
+            <a class="red-btn" href="shoppingcart.aspx">View Cart</a>
+            <a class="red-btn" href="smartcheckout.aspx">Checkout</a>
+        </div><!--//cart-box-->
+    </div><!--//header-bottom-->
+    <div id="navbar">
+    	<ul>
+        	<li class="separator"></li>
+            <li><a href="t-services.aspx">Shop Services</a></li>
+            <li class="separator"></li>
+            <li><a href="t-about.aspx">About Us</a></li>
+            <li class="separator"></li>
+            <li><a href="news.aspx">News &amp; Events</a></li>
+            <li class="separator"></li>
+            <li><a href="e-photogallery.aspx">Gallery</a></li>
+            <li class="separator"></li>
+            <li><a href="t-contact.aspx">Contact Us</a></li>
+            <li class="separator"></li>
+        </ul>    
+        <div class="searchBar">
+            <input id="Search" type="text" style="width:125px;padding:2px;" onkeyup="tSearch(this)" value="Search" onkeydown="if (event.keyCode == 13) {window.location.href='csearch.aspx?CategoryID=0&ManufacturerID=0&SectionID=0&PriceRange=0&SortBy=1&PageSize=12&AndOr=AND&DisplayMode=Grid&Search='+this.value; return false;}" />
+		        
+		        <script type="text/javascript">
+		            $('#Search').focus(function() { if ($(this).val() == 'Search') { $(this).val(''); } });
+		            $('#Search').blur(function() { if ($(this).val() == '') { $(this).val('Search')} });
+		        </script>
+            <input id="btncSearch" class="searchMMY" style="float:right; margin-top:0;" type="button" value="Go" onclick="window.location.href='csearch.aspx?CategoryID=0&ManufacturerID=0&SectionID=0&PriceRange=0&SortBy=1&PageSize=12&AndOr=AND&DisplayMode=Grid&Search='+document.getElementById('Search').value;" />
+            </div>
+    </div><!--//navbar-->
+    <div class="content-wrap">
+    	<div class="sidebar-content">
+        	
+            <div class="sidebar-box">
+            	<div class="title-top">Shop By Category</div>
+                <div class="bottom-cont">                    
+                    <ul id="categoryAccordion" class="tame sidebar-categories">
+  <li class="tame"><a href="c-81-additives.aspx">Additives</a></li>
+  <li class="tame"><a href="c-7-air-intake-products.aspx">Air Intake Products</a></li>
+  <li class="tame"><a href="c-135-alternators.aspx">Alternators</a></li>
+  <li class="tame"><a href="c-79-aux-fuel-tanks.aspx">Aux. Fuel Tanks</a></li>
+  <li class="tame"><a href="c-52-braking-products.aspx">Braking Products</a></li>
+  <li class="tame"><a href="c-20-centramatic-balancers.aspx">Centramatic Balancers</a></li>
+  <li class="tame"><a href="c-118-cummins-conversion.aspx">Cummins Conversion</a></li>
+  <li class="tame"><a href="c-21-diagnostic-tools.aspx" style="font-weight:bold">Diagnostic Tools</a><ul class="tame">
+      <li class="tame"><span class="catMark">&gt;&gt;</span> 
+                    <a href="c-116-autoenginuity-tool-bundles.aspx">AutoEnginuity Tool Bundles</a></li>
+      <li class="tame"><span class="catMark">&gt;&gt;</span> 
+                    <a href="c-117-autoenginuity-expansions.aspx">AutoEnginuity Expansions</a></li>
+    </ul>
+  </li>
+  <li class="tame"><a href="c-82-differential-products.aspx">Differential Products</a></li>
+  <li class="tame"><a href="c-84-egr-products.aspx">EGR Products</a></li>
+  <li class="tame"><a href="c-24-electrical-items.aspx">Electrical Items</a></li>
+  <li class="tame"><a href="c-8-electronic-performance.aspx">Electronic Performance</a></li>
+  <li class="tame"><a href="c-57-engine-products.aspx">Engine Products</a></li>
+  <li class="tame"><a href="c-6-exhaust-products.aspx">Exhaust Products</a></li>
+  <li class="tame"><a href="c-10-fuel-injectors.aspx">Fuel Injectors</a></li>
+  <li class="tame"><a href="c-9-fuel-system.aspx">Fuel System</a></li>
+  <li class="tame"><a href="c-5-gauges-monitors.aspx">Gauges &amp; Monitors</a></li>
+  <li class="tame"><a href="c-83-gift-certificates.aspx">Gift Certificates</a></li>
+  <li class="tame"><a href="c-14-injection-pumps.aspx">Injection Pumps</a></li>
+  <li class="tame"><a href="c-12-intercoolers-tubes.aspx">Intercoolers / Tubes</a></li>
+  <li class="tame"><a href="c-80-lighting-products.aspx">Lighting Products</a></li>
+  <li class="tame"><a href="c-46-maintenance-products.aspx">Maintenance Products</a></li>
+  <li class="tame"><a href="c-19-misc-accessories.aspx">Misc Accessories</a></li>
+  <li class="tame"><a href="c-120-new-products.aspx">New Products</a></li>
+  <li class="tame"><a href="c-15-performance-packages.aspx">Performance Packages</a></li>
+  <li class="tame"><a href="c-134-steering-products.aspx">Steering Products</a></li>
+  <li class="tame"><a href="c-22-strictly-apparel.aspx">Strictly Apparel</a></li>
+  <li class="tame"><a href="c-132-tools-books.aspx">Tools &amp; Books</a></li>
+  <li class="tame"><a href="c-18-transmission-products.aspx">Transmission Products</a></li>
+  <li class="tame"><a href="c-11-turbo-upgrades.aspx">Turbo Upgrades</a></li>
+  <li class="tame"><a href="c-16-water-meth-injection.aspx">Water / Meth Injection</a></li>
+</ul>
+                </div><!--//bottom-cont-->            
+            </div><!--//sidebar-box-->
+            
+            <div class="sidebar-box">
+            	<div class="title-top">Shop By Brand</div>
+                <div class="bottom-cont">
+                    <select id="manufacturerSelect" class="tame dropdown-brand" onchange="window.location.href = (this.options[this.selectedIndex].value);"><option value="0">All Brands</option>
+  <option class="tame" value="m-5-afe.aspx">aFe</option>
+  <option class="tame" value="m-9-airaid.aspx">AIRAID</option>
+  <option class="tame" value="m-23-alliant-power.aspx">Alliant Power</option>
+  <option class="tame" value="m-46-arp.aspx">ARP</option>
+  <option class="tame" value="m-54-ati-performance.aspx">ATI Performance</option>
+  <option class="tame" value="m-37-autoenginuity.aspx">Autoenginuity</option>
+  <option class="tame" value="m-6-autometer.aspx">AutoMeter</option>
+  <option class="tame" value="m-28-baldwin.aspx">Baldwin</option>
+  <option class="tame" value="m-45-beans-diesel.aspx">Beans Diesel</option>
+  <option class="tame" value="m-48-bg-products.aspx">BG Products</option>
+  <option class="tame" value="m-56-bosch.aspx">Bosch</option>
+  <option class="tame" value="m-47-bulletproof-diesel.aspx">Bulletproof Diesel</option>
+  <option class="tame" value="m-22-centramatic.aspx">Centramatic</option>
+  <option class="tame" value="m-7-cfm.aspx">CFM+</option>
+  <option class="tame" value="m-44-colorbond.aspx">Colorbond</option>
+  <option class="tame" value="m-43-complete-performance.aspx">Complete Performance</option>
+  <option class="tame" value="m-55-dc-power-engineering.aspx">DC Power Engineering</option>
+  <option class="tame" value="m-40-delphi.aspx">Delphi</option>
+  <option class="tame" value="m-26-dieselsite.aspx">Dieselsite</option>
+  <option class="tame" value="m-33-dodge-chrysler.aspx">Dodge / Chrysler</option>
+  <option class="tame" value="m-38-dp-tuner.aspx">DP-Tuner</option>
+  <option class="tame" value="m-2-driven-diesel.aspx">Driven Diesel</option>
+  <option class="tame" value="m-49-edge-products.aspx">Edge Products</option>
+  <option class="tame" value="m-50-fass.aspx">FASS</option>
+  <option class="tame" value="m-32-ford-motorcraft.aspx">Ford / Motorcraft</option>
+  <option class="tame" value="m-36-fuelab.aspx">Fuelab</option>
+  <option class="tame" value="m-14-garrett.aspx">Garrett</option>
+  <option class="tame" value="m-57-gates.aspx">Gates</option>
+  <option class="tame" value="m-34-gm-chevrolet.aspx">GM / Chevrolet</option>
+  <option class="tame" value="m-41-gos-performance.aspx">GOS Performance</option>
+  <option class="tame" value="m-12-hs-performance.aspx">H&amp;S Performance</option>
+  <option class="tame" value="m-17-hughes-performance.aspx">Hughes Performance</option>
+  <option class="tame" value="m-16-international.aspx">International</option>
+  <option class="tame" value="m-24-john-wood-automotive.aspx">John Wood Automotive</option>
+  <option class="tame" value="m-18-kcm-diesel.aspx">KCM Diesel</option>
+  <option class="tame" value="m-11-maghytec.aspx">MagHytec</option>
+  <option class="tame" value="m-13-magnaflow.aspx">MagnaFlow</option>
+  <option class="tame" value="m-19-marshall-instruments.aspx">Marshall Instruments</option>
+  <option class="tame" value="m-3-mbrp.aspx">MBRP</option>
+  <option class="tame" value="m-20-melling.aspx">Melling</option>
+  <option class="tame" value="m-58-parker.aspx">Parker</option>
+  <option class="tame" value="m-10-pml.aspx">PML</option>
+  <option class="tame" value="m-51-ppe.aspx">PPE</option>
+  <option class="tame" value="m-30-pureflow-airdog.aspx">PureFlow AirDog</option>
+  <option class="tame" value="m-25-river-city-diesel.aspx">River City Diesel</option>
+  <option class="tame" value="m-8-sb-filters.aspx">S&amp;B Filters</option>
+  <option class="tame" value="m-53-smarty.aspx">Smarty</option>
+  <option class="tame" value="m-52-snow-performance.aspx">Snow Performance</option>
+  <option class="tame" value="m-31-stage-8-fasteners.aspx">Stage 8 Fasteners</option>
+  <option class="tame" value="m-21-strictly-diesel.aspx">Strictly Diesel</option>
+  <option class="tame" value="m-15-swamps-diesel-performance.aspx">Swamps Diesel Performance</option>
+  <option class="tame" value="m-27-terminator-engineering.aspx">Terminator Engineering</option>
+  <option class="tame" value="m-35-tru-cool.aspx">Tru-Cool</option>
+  <option class="tame" value="m-39-victor-reinz.aspx">Victor Reinz</option>
+  <option class="tame" value="m-42-wix.aspx">WIX</option></select>
+                </div><!--//bottom-cont-->            
+            </div><!--//sidebar-box-->
+            
+            <div class="sidebar-box">
+            	<div class="title-top">Follow Us</div>
+                <div class="bottom-cont">
+                    
+                    <p><div style="text-align:center"><ul class="sidebar-social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/pages/Strictly-Diesel/62981792815"></a></li>
+                        <li><a class="youtube" href="https://www.youtube.com/user/StrictlyDieselRacing"></a></li>
+                    </ul></div></p>
+<p><br><br><div style="margin-top:10px"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=ll55t6cab&p=oi&m=1102653127019" target="_blank"><img src="./images/EMailListButton.gif" alt="Sign Up for our Mailing List!" border="0" align="center"></a></div></p>
+                    <div class="clearboth"></div>
+                </div><!--//bottom-cont-->            
+            </div><!--//sidebar-box-->
+            
+            
+            
+            
+        
+        </div><!--//sidebar-content-->
+        
+        <div class="mid-content">
+            <div id="breadcrumb">                
+                
+                Now In: <span class="SectionTitleText">Diagnostic Tools</span>
+            </div>
+
+        	<div class="select-vehicle-box">
+            	<div class="text-image"><img src="images/select-your-vehicle.png" alt="" /></div>
+                <div class="vehicle-dropdowns">
+                    <div id="MMY_MainContainer" class="MMY_MainContainer">
+  <div id="MMY_MakeSelect" class="MMY_MakeSelect"><select id="MakeSelector"><option value="-"> - Select Make - </option></select></div>
+  <div id="MMY_ModelSelect" class="MMY_ModelSelect"><select id="ModelSelector"><option value="-"> - Select Model - </option></select></div>
+  <div id="MMY_YearSelect" class="MMY_YearSelect"><select id="YearSelector"><option value="-"> - Select Year - </option></select></div>
+</div>
+<div id="MMY_spinner" style="display: none;" class="MMY_spinner"><img src="images/spinner.gif"></div>
+<div id="MMY_go" style="display: none;" class="MMY_go"><input class="searchMMY red-btn" type="button" value="Search" onclick="window.location.href='e-mmyproducts.aspx';"><span class="clearMMY"></span></div><script type="text/javascript">
+                      var make = '';
+                      var model = '';
+                      var year = '';
+                      var productid = '0';
+                      var requestedPage = 'c-21-diagnostic-tools.aspx'.replace('.aspx','');
+                      var hasMMY = NaN;
+                      function MakeSelector_onChange(value)
+                      {
+                        $('.selectMe').attr('class','');
+                        if(value != '-')
+                        {
+                          document.getElementById('MMY_spinner').style.display = "block";  
+                          make = value;
+                          sendAJAXRequest("ajaxCompunixMMYRequest.aspx?RequestedPage="+requestedPage+"&Make="+make+"&Model=&Year=&ID=ModelSelector&ProductID=" + productid, '', function(response) {
+                                 document.getElementById('MMY_ModelSelect').innerHTML = response; HideSpinner();
+                          });
+                        }
+                      }
+                      function ModelSelector_onChange(value)
+                      {
+                        $('.selectMe').attr('class','');
+                        if(value != '-')
+                        {
+                          document.getElementById('MMY_spinner').style.display = "block";
+                          model = value;
+                          sendAJAXRequest("ajaxCompunixMMYRequest.aspx?RequestedPage="+requestedPage+"&Make="+make+"&Model="+model+"&Year=&ID=YearSelector&ProductID=" + productid, '', function(response) {
+                                 document.getElementById('MMY_YearSelect').innerHTML = response; HideSpinner();
+                          });
+                        }
+                      }
+                      function YearSelector_onChange(value)
+                      {
+                        $('.selectMe').attr('class','');
+                        if(value != '-')
+                        {
+                          document.getElementById('MMY_spinner').style.display = "block";
+                          year = value;
+                          sendAJAXRequest((window.parent.location.href.indexOf("APSC") > -1 ? "phoneOrderMMYRequest.aspx" : "ajaxCompunixMMYRequest.aspx") + "?RequestedPage="+requestedPage+"&Make="+make+"&Model="+model+"&Year="+year +  "&ProductID=" + productid, '', function(response) {
+                            //                          
+                              if('c-21-diagnostic-tools.aspx' != 'default.aspx')
+                              {
+                                window.location.reload();
+                              }
+                              else
+                              {
+                                window.location.href = 'e-mmyproducts.aspx';
+                                HideSpinner();
+                              }
+                            });
+                        }
+                      }          
+                      function HideSpinner()
+                      {
+                        document.getElementById('MMY_spinner').style.display = "none";
+                      }
+                      function ShowGoButton()
+                      {
+                        document.getElementById('MMY_go').style.display = "block";
+                      }
+                      
+                      document.getElementById('MMY_spinner').style.display = "block";
+                      var selectionContent = '';
+                      if(hasMMY > 0)
+                      {
+                            sendAJAXRequest("ajaxCompunixMMYRequest.aspx?RequestedPage="+requestedPage+"&Make=&Model=&Year=&AutoFill=True&ProductID=" + productid, '', function(response) {
+                                  document.getElementById('MMY_MainContainer').innerHTML = response; HideSpinner(); ShowGoButton();
+                            });
+                        }
+                        else
+                        {
+                            if(requestedPage.indexOf('-mmy-') > 0 || requestedPage.indexOf('_') > 0 )
+							{
+								sendAJAXRequest("ajaxCompunixMMYRequest.aspx?RequestedPage="+requestedPage+"&Make=&Model=&Year=&ProductID=" + productid, '', function(response) {
+                                  document.getElementById('MMY_MainContainer').innerHTML = response; HideSpinner();
+                                });
+							}
+							else
+							{
+								sendAJAXRequest("ajaxCompunixMMYRequest.aspx?RequestedPage="+requestedPage+"&Make=&Model=&Year=&ID=MakeSelector&ProductID=" + productid, '', function(response) {
+                                  document.getElementById('MMY_MakeSelect').innerHTML = response; HideSpinner();
+                                });
+							}                            
+                    }
+                </script>
+                </div><!--//vehicle-dropdowns-->
+                <!-- <div class="car-image"><img src="images/select-vehicle-image.png" alt="" /></div> -->
+                <div class="car-image"><img src="images/select-vehicle-image.gif" alt="" /></div>
+            </div><!--//select-vehicle-box-->
+
+            <!-- CONTENTS START -->
+            
+    <div id="ctl00_PageContent_pnlContent">
+	      
+        <!-- XmlPackage: entity.nommygrid.xml.config -->
+<div id="subpage_right_column">
+  <div class="subpage_content">
+    <div class="left_content">
+      <div class="category-title">
+        <h1>Diagnostic Tools</h1>
+        <p class="text"><span style="font-size: 10px;"><span style="font-size: 10px;">AutoEnginuity's Scan Tool is a hardware and software combination for Windows based PCs and LapTops. <br />
+<br />
+AutoEnginuity's Scan Tool was designed to be as easy to learn—as it is powerful. Scan Tool comes with an automated installation process, a complete and comprehensive User Guide, and an easy-to-use interface. You won't have to spend valuable time learning another piece of software, you can focus on what's important—servicing the vehicle. <br />
+<br />
+What AutoEnginuity's Scan Tool can do: <br />
+• Save, print, read and clear Stored and Pending P, U, B, and C Trouble Codes.<br />
+<span style="font-size: 10px;">• </span>Supporting P0 - P9 generic and manufacturer specific codes (including the new lettered codes (e.g., P06A0) <br />
+• The largest manufacturer specific trouble code library of all PC/PDA-based scan tools (30,000+) <br />
+• Read and clear Freeze Frame data <br />
+• View live vehicle sensors in a meter, graph, or grid format <br />
+• View oxygen sensor live data and test results <br />
+• View all 11 Inspection/Maintenance systems and Mode 6 data <br />
+• Unlimited logging of live vehicle sensors in TXT, XML, or CSV (1ms logging accuracy) <br />
+• Playback your data logs for offline analysis <br />
+• Run and query specific component and system tests. Support for generic and enhanced bi-directional tests <br />
+• View generic and manufacturer enhanced data on the same tool <br />
+• English or Metric (SI) units of measure supported <br />
+• Configure your sensors' ranges, scaling value, audible alert triggers, units, and sampling rate <br />
+• Savable configurations. Set up the interface to suit your preferences and save it so you never have to do it again <br />
+• Supports 1996 and newer passenger vehicles, whether it be domestic, Asian, or European. <br />
+<span style="font-size: 10px;">• </span>SAE interfaces: J1850 (PWM and VPM), ISO-9141-2, ISO-14230 [KWP2000], and CAN [11bit and 29bit] <br />
+<br />
+Something we offer that the others don’t: <br />
+• True Plug-n-Play USB 2.0 interface<sup>1</sup> <br />
+• Factory scan tool options available (not included in base kit) <br />
+• All generic scan tools can only access the powertrain, no matter what SAE Modes (J1979/J2190) they use for communication. With our expansions, you can access dozens of systems (ABS, transmission, GEM, SRS/Airbags, Instrument Cluster, etc.) generic scan tools can't even see. This gives you access to thousands of sensors and dozens of bi-directional controls/system tests. Click here to see our enhanced support for Ford, GM, Chrysler Toyota, Mazda, Nissan, BMW, Land Rover, Honda, Subaru, Mitsubishi, Isuzu, Porsche, Mercedes, Hyundai/Kia, Jaguar , and Audi/VW. Click here for complete enhanced option details. <br />
+• Optional expansions allowing you to communicate with non-OBD-II vehicles like the Powerstroke, Duramax, and Cummins diesels. <br />
+• Bi-directional support. You have the ability to initiate system and component tests<sup>2 </sup><br />
+• Mode 6 support. If a system test fails, now you can see the results from the failing component; not just the system. Our Mode 6 data is fully translated so you don't have to waste hours looking the scale and definitions.<sup>2</sup> <br />
+• Mode 9 support. Full ECM information including CAL, CVN, and VIN reporting <br />
+• Support for CAN and even the CAN 6x Mode<sup>3</sup> <br />
+• Support for the new extended sensor list (233 sensors--supporting the SAE J1979 May 2007 additions) <br />
+• ALL the OBD-II vehicle interfaces in a single cable, rugged case. This is a savings of hundreds of dollars over the competitors' units <br />
+<br />
+</span><span style="font-size: 10px;"><sup>1</sup>PC version only. <br />
+<sup>2</sup>Support for this feature is vehicle dependant. <br />
+<sup>3</sup>CAN is used in all 2004 Ford, Mazda, and some Mercedes, and Toyota. CAN is the new required electrical OBDII interface for passenger vehicles starting in the 2008 model year. </span></span></p>
+        <div class="subEntities subCategories">
+          <div class="home-products">
+            <div class="each-prod">
+              <div class="prod-image"><a href="/c-116-autoenginuity-tool-bundles.aspx" title="autoenginuity-tool-bundles"><img border="0" id="EntityPic116" name="EntityPic116" style="cursor:hand;cursor:pointer;" src="/images/Category/icon/116.jpg" alt="AutoEnginuity Tool Bundles" /></a></div>
+              <div class="desc">AutoEnginuity Tool Bundles</div>
+            </div>
+          </div>
+          <div class="home-products">
+            <div class="each-prod">
+              <div class="prod-image"><a href="/c-117-autoenginuity-expansions.aspx" title="autoenginuity-expansions"><img border="0" id="EntityPic117" name="EntityPic117" style="cursor:hand;cursor:pointer;" src="/images/Category/icon/117.jpg" alt="AutoEnginuity Expansions" /></a></div>
+              <div class="desc">AutoEnginuity Expansions</div>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+    
+</div>
+
+            <!-- CONTENTS END -->
+        
+        </div><!--//mid-content-->
+        
+        <div class="sidebar-content">
+        
+        	<div class="sidebar-box">
+            	<div class="title-top">Get in Contact</div>
+                <div class="bottom-cont">
+                	<div class="sidebar-contact">
+                    	<p><b>info@strictlydiesel.com</b></p>
+<p><b>Phone: (623) 582-4404</b><br />
+Press <b>2</b> for Service<br />
+Press <b>3</b> for Sales / Orders</p>
+<p>Fax: (623) 582-4406</p>
+<div class="map-box"><img alt="" src="images/map-location.jpg" />
+<p><a href="t-contact.aspx">View Larger Map</a></p>
+</div>
+<p class="margin-b">621 W Lone Cactus Dr Phoenix, AZ 85027</p>
+<p class="margin-b"><b>SHOP HOURS:</b><br />
+Monday thru Friday <br />
+7am to 6pm MST<br />
+<a href="t-holidayschedule.aspx">Office Closures</a></p>
+                    </div><!--//sidebar-contact-->                    
+                    <div class="clearboth"></div>
+                </div><!--//bottom-cont-->            
+            </div><!--//sidebar-box-->
+            
+            
+            <div class="sidebar-box">
+            	<div class="title-top">Pay with PayPal</div>
+                <div class="bottom-cont">
+                	<div class="sidebar-paypal">
+                        <div style="text-align:center" align="center"><script type="text/javascript" data-pp-pubid="b63f4d7fdf" data-pp-placementtype="120x240"> (function (d, t) {
+ "use strict";
+ var s = d.getElementsByTagName(t)[0], n = d.createElement(t);
+ n.src = "//paypal.adtag.where.com/merchant.js";
+ s.parentNode.insertBefore(n, s);
+ }(document, "script"));
+</script></div>                    	
+                    </div>                 
+                    <div class="clearboth"></div>
+                </div>           
+            </div>
+            
+            <div class="sidebar-box">
+            	<div class="title-top">Reviews</div>
+                <div class="bottom-cont">
+                	<div class="sidebar-testimonials">
+                    	
+                        <div class="each-testi">
+  <div class="testi-box">
+                    "Solid quality part! Just as advertised it Eliminated my SES light for over boost. But more importantly the customer service and speedy delivery from Strictly Diesel was outstanding! They will see plenty more of my business!"
+                    <div class="tip"></div>
+  </div>
+  <p>Cory S.  on 
+                    <a href="/p-2677-driven-diesel-overboost-annihilator.aspx">Driven Diesel Overboost Annihilator</a></p>
+</div>
+<div class="each-testi">
+  <div class="testi-box">
+                    "Fit well on my '05 Excursion A-piller.
+I had to do a small bit of trimming to
+get the piller w/gauge to fit.
+Perhaps the '05 Ex has a slightly different handle/A-piller than the Super Duty.  It looks great."
+                    <div class="tip"></div>
+  </div>
+  <p>Steve M.  on 
+                    <a href="/p-1953-1-gauge-pod-15318.aspx">1 Gauge Pod (15318)</a></p>
+</div>
+<div class="each-testi">
+  <div class="testi-box">
+                    "Better throttle response and more torque my injectors are no longer starving for fuel."
+                    <div class="tip"></div>
+  </div>
+  <p>yordan c.  on 
+                    <a href="/p-2797-fuelab-41401-1000hp-fuel-pump.aspx">Fuelab 41401 (1000hp) Fuel Pump</a></p>
+</div>
+                    </div><!--//sidebar-testimonials-->                    
+                    <div class="clearboth"></div>
+                </div><!--//bottom-cont-->            
+            </div><!--//sidebar-box-->
+            
+
+            
+        
+        </div><!--//sidebar-content-->    
+    
+    	<div class="clearboth"></div>
+        
+       	<div class="footer-top">
+            <br><div style="float:left; height:72px; margin-left:10px; margin-top:7px"><a title="Strictly Diesel BBB Business Review" href="https://www.bbb.org/central-northern-western-arizona/business-reviews/engines-diesel/strictly-diesel-inc-in-phoenix-az-15006744/#bbbonlineclick"><img alt="Strictly Diesel BBB Business Review" style="border: 0;" src="https://seal-central-northern-western-arizona.bbb.org/seals/black-seal-120-61-strictly-diesel-inc-15006744.png" /></a></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:0px"><!-- (c) 2005, 2012. Authorize.Net is a registered trademark of CyberSource Corporation --><div class="AuthorizeNetSeal" align="center" style="text-align:center;"> <script type="text/javascript" language="javascript">var ANS_customer_id="c2ba155c-3526-4986-94b2-1e89410ebf92";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script></div></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:0px"><!-- Begin Official PayPal Seal --><a href="https://www.paypal.com/us/verified/pal=sales%40strictlydiesel%2ecom" target="_blank"><img src="https://www.paypal.com/en_US/i/icon/verification_seal.gif" width="72" height="72" border="0" alt="Official PayPal Seal"></A></div><!-- End Official PayPal Seal -->
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:8px"><!-- Begin DigiCert/ClickID site seal HTML and JavaScript --><div id="DigiCertClickID_l8VtNRIk" data-language="en_US"></div><script type="text/javascript">var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_l8VtNRIk", "13", "s", "black", "l8VtNRIk"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());</script><!-- End DigiCert/ClickID site seal HTML and JavaScript --></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:0px"><a href="./t-security.aspx"><img src="./images/SecureShoppingLogo.jpg" alt="Shop With Confidence!"></a></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:0px"><a href="./t-EverydayPricing.aspx"><img src="./images/LowPriceGuarantee.jpg"></a></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:0px"><a href="./t-custsat.aspx"><img src="./images/SatisfactionGuarantee.jpg"></a></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:9px"><a href="./t-shipping.aspx"><img src="./images/ups_logo.gif" alt="We Proudly Use UPS!"></a></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:0px"><img src="./images/SEMAMember.jpg"></div>
+
+<div style="float:left; height:72px; margin-left:10px; margin-top:19px"><a href="http://www.nhrda.com" target="_blank"><img src="./images/nhrda-logo.jpg" alt="We Support The NHRDA!"></a></div>
+        </div><!--//footer-top-->
+
+    	<div class="clearboth"></div>
+        
+        <div id="footer">
+        	<div class="foot-nav">
+                <div class="col-1">
+<h3>Customer Service</h3>
+<ul>
+    <li><a href="t-contact.aspx">Contact Us</a> </li>
+    <li><a href="t-shipping.aspx">Shipping Info</a> </li>
+    <li><a href="t-productdocs.aspx">Product Docs</a> </li>
+</ul>
+</div>
+<!--//col-1-->
+<div class="col-2">
+<h3>Notices &amp; Policies</h3>
+<ul>
+    <li><a href="t-termsandconditions.aspx">Terms and Conditions</a> </li>
+    <li><a href="t-PrivacySecurity.aspx">Privacy & Security Policy</a> </li>
+    <li><a href="t-policies.aspx">Complete Policy Listing</a> </li>
+</ul>
+</div>
+<!--//col-2-->
+<div class="col-3">
+<h3>My Account</h3>
+<ul>
+    <li><a href="account.aspx#OrderHistory">Order Status</a> </li>
+    <li><a href="account.aspx">My Account</a> </li>
+    <li><a href="t-returns.aspx">Return an Item</a> </li>
+</ul>
+</div>
+<!--//col-3-->
+<div class="col-4">
+<h3>Corporate Info</h3>
+<ul>
+    <li><a href="t-about.aspx">About Us</a> </li>
+    <li><a href="news.aspx">Our News</a> </li>
+    <li><a href="s-4-blog.aspx">Our Blog</a> </li>
+</ul>
+</div>
+<!--//col-4-->
+            </div><!--//foot-nav-->
+            
+            <div class="foot-right-col">
+                            	<img alt="" src="images/way-of-payments.png" /><p>Copyright © 2011 StrictlyDiesel <br />All Rights Reserved. Privacy Policy</p>
+            </div><!--//foot-right-col-->
+    	</div><!--//footer-->
+    
+    	<div class="clearboth"></div>
+        
+       	<div class="footer-top">
+            <div style="clear:both; text-align:center; padding:7px; font-size:9px; background-color:#222222; color:#FFF">
+  <hr style="width:60%; color:#FFF; background-color:#FFF; height:1px; margin-bottom:7px; border:none">
+  Many of the aftermarket products that we sell are not legal for sale or use in the state of California on any pollution controlled motor vehicle. Some performance products are not legal for sale or use on a pollution controlled vehicle in any state. If your vehicle is used on public roads and highways, it is your responsibility to make sure that it complies with all applicable local, state and federal regulations.</div>
+        </div><!--//footer-top-->
+        <!--Compunix-->
+    	<div class="clearboth"></div>
+    </div><!--//content-wrap-->
+    
+</div><!--//wrap-->
+
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5974198-4");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,1236 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML lang="en">
+	<HEAD>
+		<title>Classic Car Price Guide, Classic Car Values, Classic Car Prices, Antique Car 
+			Prices, Antique Car Values</title>
+		<meta content="en-us" http-equiv="Content-Language">
+		<META name="keywords" content="classic auto network, classic cars, post ad, vehicle parts, sell car, muscle cars, hot rods, for sale, wanted ads, browse cars, racing cars, exotic, foreign, street rods, motorcycles, restoration, antique cars">
+		<meta name="description" content="ClassicAutoNetwork.com - Place your car in front of millions of visitors">
+		<META name="revisit-after" content="20 days">
+		<META name="robots" content="index, follow">
+		<script language="javascript" src="Classic_Car_Price_Guide.js"></script>
+		<script language="javascript" type="text/javascript">
+			function openWin(url)
+			{
+				var j=window.open(url,"jj","left=20, top=20, width=900,height=600,toolbar=0,statusbar=0,scrollbars=1,resizable=1");
+			}
+			//Function Added by tushard@ecotech on 21Apr09 to resolve page reload issue
+						
+			function enterKeyEventBtn(e)
+			{	
+				var key = getkey(e);
+				if(key==13)
+				{	
+					document.getElementById('ibtnSubmitPg').focus();
+				}
+			}
+			
+			function getkey(e)
+			{
+				if (window.event)
+					return window.event.keyCode;
+				else if (e)
+					return e.which;
+				else
+					return null;
+			}
+			function fndisplay()
+			{
+		
+			
+			if(document.getElementById("ddlSource").value=='Other')
+				{
+					document.getElementById("txtSourc").style.display='';
+									
+				}
+				else
+				{
+				document.getElementById("txtSourc").style.display='none';
+				document.getElementById("ddlSource").style.display='';
+				
+				}
+			}
+			
+			function fndisplayOther()
+			{
+		
+			
+			if(document.getElementById("ddlSelect").value=='Other')
+				{
+					document.getElementById("txtInquiring").style.display='';
+					
+				}
+				else
+				{
+				document.getElementById("txtInquiring").style.display='none';
+				document.getElementById("ddlSelect").style.display='';
+				
+				}
+			}
+			
+			function fnValidateForm()
+			{
+				var strMsg="";
+				
+				//Year
+				if(document.getElementById("ddlCarYear").selectedIndex==0)
+				{
+					strMsg = strMsg + "Year" + "<br />";
+				}
+				
+				//Make
+				if(document.getElementById("ddlMake").selectedIndex==0)
+				{
+					strMsg = strMsg + "Make" + "<br />";
+				}
+				
+				//Model
+				if(document.getElementById("ddlModel").selectedIndex==0)
+				{
+					strMsg = strMsg + "Model" + "<br />";
+				}
+				//Select
+				if(document.getElementById("ddlSelect").value=='Select Inquiring')
+				{
+					strMsg = strMsg + "Inquiring To" + "<br />";
+				}
+				//Source
+				if(document.getElementById("ddlSource").value=='Select Source')
+				{
+					strMsg = strMsg + "Source" + "<br />";
+				}
+				
+				if(document.getElementById("ddlSelect").value=='Other')
+				{
+					if(document.getElementById("txtInquiring").value=="")
+					{
+						strMsg = strMsg + "Inquiring To" + "<br />";
+						document.getElementById("txtInquiring").focus();
+					}
+				}
+				if(document.getElementById("ddlSource").value=='Other')
+				{
+					if(document.getElementById("txtSourc").value=="")
+					{
+						strMsg = strMsg + "Source" + "<br />";
+						document.getElementById("txtSourc").focus();
+					}
+				}
+				//Mileage
+				if(trim(document.getElementById("txtMileage").value)!="")
+				{
+					var reg = /[-]|[a-zA-Z0-9]/;
+					if(!reg.test(document.getElementById("txtMileage").value))
+					{
+						strMsg = strMsg + "Valid Mileage" + "<br />";
+					}
+				}
+				
+				//First Name
+				if(trim(document.getElementById("txtFName").value)!="")
+				{
+					var reg = /^[a-zA-Z0-9'\s]|^[-.]/;
+					if(!reg.test(document.getElementById("txtFName").value))
+					{
+						strMsg = strMsg + "Valid First Name" + "<br />";
+					}
+				}
+				else
+				{
+					strMsg = strMsg + "First Name" + "<br />";
+				}
+				
+				//Last Name
+				if(trim(document.getElementById("txtLName").value)!="")
+				{
+					var reg = /^[a-zA-Z0-9'\s]|^[-.]/;
+					if(!reg.test(document.getElementById("txtLName").value))
+					{
+						strMsg = strMsg + "Valid Last Name" + "<br />";
+					}
+				}
+				else
+				{
+					strMsg = strMsg + "Last Name" + "<br />";
+				}
+				
+				//Email Address
+				if(trim(document.getElementById("txtEmail").value)!="")
+				{
+					var reg = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+					if(!reg.test(document.getElementById("txtEmail").value))
+					{
+						strMsg = strMsg + "Valid Email Address" + "<br />";
+					}
+				}
+				else
+				{
+					strMsg = strMsg + "Email Address" + "<br />";
+				}
+				
+				//Phone
+				if(trim(document.getElementById("txtPhone").value)!="")
+				{
+					var reg = /^[a-zA-Z0-9-+\s]/;
+					if(!reg.test(document.getElementById("txtPhone").value))
+					{
+						strMsg = strMsg + "Valid Phone" + "<br />";
+					}
+				}
+				
+				
+				//Zip				
+				if(trim(document.getElementById("txtZip").value)!="")
+				{
+					var reg = /^[A-Za-z0-9\s]|^[-]+/;
+					if(!reg.test(document.getElementById("txtZip").value))
+					{
+						strMsg = strMsg + "Valid Zip Code" + "<br />";
+					}
+				}
+							
+				if(strMsg!="")
+				{
+					document.getElementById("lblErrMsg").innerHTML=strMsg;
+					document.getElementById("dvErrMsg").style.display="block";
+					strMsg="";
+					location.href = "#top";
+					return false;
+				}
+				else
+				{
+					document.getElementById("lblErrMsg").innerHTML="";
+					document.getElementById("dvErrMsg").style.display="none";
+					return true;
+				}
+			}
+			
+			function trim(pstrString)
+			{
+				var intLoop=0;
+
+				for(intLoop=0; intLoop<pstrString.length; )
+				{
+					if(pstrString.charAt(intLoop)==" ")
+						pstrString=pstrString.substring(intLoop+1, pstrString.length);
+					else
+						break;
+				}
+
+				for(intLoop=pstrString.length-1; intLoop>=0; intLoop=pstrString.length-1)
+				{
+					if(pstrString.charAt(intLoop)==" ")
+						pstrString=pstrString.substring(0,intLoop);
+					else
+						break;
+				}
+				return pstrString;
+			}
+			
+			// function for counting & restricting characters in textarea
+			function setmaxch(id, noOfChar)
+			{
+				if (id.value.length >= noOfChar)
+				{
+					id.value = id.value.substring(0, noOfChar);
+				}
+			}				
+			function fnChar(maxval,objid,txtcnt)
+			{	
+				var tot=maxval;
+				var l=(objid.value).length;
+				if(l<=maxval)
+				{
+					txtcnt.value= tot-l;
+				}
+				else
+				{
+					setmaxch(objid,maxval);
+					txtcnt.value=  maxval-(objid.value).length;
+					objid.focus();
+				}
+				return true;
+			}
+		</script>
+	</HEAD>
+	<body onload="fillYear();" bottomMargin="0" leftMargin="0" rightMargin="0" topMargin="0"
+		marginwidth="0" marginheight="0">
+		<form name="frmPost" method="post" action="classic_car_price_guide.aspx" id="frmPost">
+<input type="hidden" name="__VIEWSTATE" value="dDwtNzI2OTY4MzkzO3Q8O2w8aTwxPjs+O2w8dDw7bDxpPDE+O2k8Mz47aTwzNz47aTwzOT47aTw0MT47PjtsPHQ8O2w8aTw1Pjs+O2w8dDxwPHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Oz47Oz47Pj47dDw7bDxpPDE+O2k8Mz47aTw1PjtpPDc+O2k8MTE+Oz47bDx0PHA8O3A8bDxvbkNsaWNrOz47bDxDbGVhcignTGVmdFBhcnRfU2Vjb25kYXJ5MV90eHRGWWVhcicpXDs7Pj4+Ozs+O3Q8cDw7cDxsPG9uQ2xpY2s7PjtsPENsZWFyKCdMZWZ0UGFydF9TZWNvbmRhcnkxX3R4dFRZZWFyJylcOzs+Pj47Oz47dDxwPDtwPGw8b25DbGljazs+O2w8Q2xlYXIoJ0xlZnRQYXJ0X1NlY29uZGFyeTFfdHh0TWFrZScpXDs7Pj4+Ozs+O3Q8cDw7cDxsPG9uQ2xpY2s7PjtsPENsZWFyKCdMZWZ0UGFydF9TZWNvbmRhcnkxX3R4dE1vZGVsJylcOzs+Pj47Oz47dDxwPGw8XyFJdGVtQ291bnQ7PjtsPGk8MT47Pj47bDxpPDA+Oz47bDx0PDtsPGk8MT47aTwzPjs+O2w8dDxwPHA8bDxUZXh0O05hdmlnYXRlVXJsOz47bDxqZWZmIGhhd2VzOy4uL21lbWJlcnNfcHJvZmlsZS5hc3B4P3ByZmlkPTExOTE7Pj47Pjs7Pjt0PHA8cDxsPEltYWdlVXJsO05hdmlnYXRlVXJsOz47bDwuLi9NYWtlVGh1bWJOYWlsLmFzcHg/aD0xMjAmdz05MCZwcm9mPWltYWdlcy9Db21tdW5pdHlMb2dvLy8maW1nPTsuLi9tZW1iZXJzX3Byb2ZpbGUuYXNweD9wcmZpZD0xMTkxOz4+Oz47Oz47Pj47Pj47Pj47dDw7bDxpPDE+Oz47bDx0PHA8bDxUZXh0Oz47bDxDb250YWN0IGluZm9ybWF0aW9uOjs+Pjs7Pjs+Pjt0PHA8O3A8bDxvbmNsaWNrOz47bDxyZXR1cm4gZm5WYWxpZGF0ZUZvcm0oKTs+Pj47Oz47dDw7bDxpPDE+O2k8Mz47PjtsPHQ8cDxwPGw8SW1hZ2VVcmw7Q29tbWFuZE5hbWU7Q29tbWFuZEFyZ3VtZW50Oz47bDwuLi9pbWFnZXMvQmFubmVyQWRzL0Jhbm5lckhvcml6b250YWxCYW5uZXJ3aXRoTF8yMDA3OTE0LmpwZztGb290ZXJCYW5uZXJBZENsaWNrTGVmdDsxMzs+PjtwPGw8b25DbGljazs+O2w8amF2YXNjcmlwdDogT3BlbkZvb3RlckJhbm5lckFkKCdodHRwOi8vd3d3LmNsYXNzaWNhdXRvbmV0d29yay5jb20vQ2xhc3NpY19DYXJfUHJpY2VfR3VpZGUuYXNweCcpXDs7Pj4+Ozs+O3Q8cDxwPGw8SW1hZ2VVcmw7Q29tbWFuZE5hbWU7Q29tbWFuZEFyZ3VtZW50Oz47bDwuLi9pbWFnZXMvQmFubmVyQWRzL0hvcml6b250YWxCYW5uZXJNZWV0VGhvdXNhbl8yMDA3NjYuanBnO0Zvb3RlckJhbm5lckFkQ2xpY2tSaWdodDs1Oz4+O3A8bDxvbkNsaWNrOz47bDxqYXZhc2NyaXB0OiBPcGVuRm9vdGVyQmFubmVyQWQoJ2h0dHA6Ly93d3cuY2xhc3NpY2F1dG9uZXR3b3JrLmNvbS9jb21tdW5pdHkuYXNweCcpXDs7Pj4+Ozs+Oz4+Oz4+Oz4+O2w8dG9wcGFydF9zZWNvbmRhcnkxOmlidG5IaWRkZW47dG9wcGFydF9zZWNvbmRhcnkxOmlidG5Mb2dpbjt0b3BwYXJ0X3NlY29uZGFyeTE6Y2hrUmVtZW1iZXJNZTtMZWZ0UGFydF9TZWNvbmRhcnkxOmlidG5TdWJtaXQ7aWJ0blN1Ym1pdFBnO0JvdHRvbTE6aWJ0bkZvb3RlckJhbm5lckFkTGVmdDtCb3R0b20xOmlidG5Gb290ZXJCYW5uZXJBZFJpZ2h0Oz4+1GZOpIaXlE6knsltcT1YkVuUYMU=" />
+	<script language=JavaScript>
+ arrYears = new Array(63);
+ for(cnt=0;cnt<63;cnt++){ arrYears[cnt]=new Array(1);}
+arrYears[0][0]=fdU('1945');
+arrYears[1][0]=fdU('1946');
+arrYears[2][0]=fdU('1947');
+arrYears[3][0]=fdU('1948');
+arrYears[4][0]=fdU('1949');
+arrYears[5][0]=fdU('1950');
+arrYears[6][0]=fdU('1951');
+arrYears[7][0]=fdU('1952');
+arrYears[8][0]=fdU('1953');
+arrYears[9][0]=fdU('1954');
+arrYears[10][0]=fdU('1955');
+arrYears[11][0]=fdU('1956');
+arrYears[12][0]=fdU('1957');
+arrYears[13][0]=fdU('1958');
+arrYears[14][0]=fdU('1959');
+arrYears[15][0]=fdU('1960');
+arrYears[16][0]=fdU('1961');
+arrYears[17][0]=fdU('1962');
+arrYears[18][0]=fdU('1963');
+arrYears[19][0]=fdU('1964');
+arrYears[20][0]=fdU('1965');
+arrYears[21][0]=fdU('1966');
+arrYears[22][0]=fdU('1967');
+arrYears[23][0]=fdU('1968');
+arrYears[24][0]=fdU('1969');
+arrYears[25][0]=fdU('1970');
+arrYears[26][0]=fdU('1971');
+arrYears[27][0]=fdU('1972');
+arrYears[28][0]=fdU('1973');
+arrYears[29][0]=fdU('1974');
+arrYears[30][0]=fdU('1975');
+arrYears[31][0]=fdU('1976');
+arrYears[32][0]=fdU('1977');
+arrYears[33][0]=fdU('1978');
+arrYears[34][0]=fdU('1979');
+arrYears[35][0]=fdU('1980');
+arrYears[36][0]=fdU('1981');
+arrYears[37][0]=fdU('1982');
+arrYears[38][0]=fdU('1983');
+arrYears[39][0]=fdU('1984');
+arrYears[40][0]=fdU('1985');
+arrYears[41][0]=fdU('1986');
+arrYears[42][0]=fdU('1987');
+arrYears[43][0]=fdU('1988');
+arrYears[44][0]=fdU('1989');
+arrYears[45][0]=fdU('1990');
+arrYears[46][0]=fdU('1991');
+arrYears[47][0]=fdU('1992');
+arrYears[48][0]=fdU('1993');
+arrYears[49][0]=fdU('1994');
+arrYears[50][0]=fdU('1995');
+arrYears[51][0]=fdU('1996');
+arrYears[52][0]=fdU('1997');
+arrYears[53][0]=fdU('1998');
+arrYears[54][0]=fdU('1999');
+arrYears[55][0]=fdU('2000');
+arrYears[56][0]=fdU('2001');
+arrYears[57][0]=fdU('2002');
+arrYears[58][0]=fdU('2003');
+arrYears[59][0]=fdU('2004');
+arrYears[60][0]=fdU('2005');
+arrYears[61][0]=fdU('2006');
+arrYears[62][0]=fdU('2007');
+</script>
+
+
+			<div align="center">
+				<table id="table1" class="w1002" border="0" cellSpacing="0" summary="Main Table" cellPadding="0">
+					<TBODY>
+						<tr>
+							<td>
+<LINK href="controls/style_sheet.css" type="text/css" rel="stylesheet">
+<LINK href="controls/style1.css" type="text/css" rel="stylesheet">
+<link href="controls/scroll-rel-h.css" rel="stylesheet" type="text/css">
+<LINK href="controls/style2.css" type="text/css" rel="stylesheet">
+<LINK href="controls/style_sheet_rollovers_new.css" type="text/css" rel="stylesheet">
+<SCRIPT src="controls/dw_scrollObj.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="controls/dw_hoverscroll.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">
+/*************************************************************************
+  This code is from Dynamic Web Coding at www.dyn-web.com
+  Copyright 2001-4 by Sharon Paine
+  See Terms of Use at www.dyn-web.com/bus/terms.html
+  regarding conditions under which you may use this code.
+  This notice must be retained in the code as is!
+*************************************************************************/
+
+function initScrollLayer() {
+  var wndo = new dw_scrollObj('wn', 'lyr1', 't1');
+  dw_scrollObj.GeckoTableBugFix('wn');
+}
+function initScrollLayer1() {
+  var wndo = new dw_scrollObj('wns', 'lyr1', 't1');
+  dw_scrollObj.GeckoTableBugFix('wns');
+}
+</SCRIPT>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function openWin2(url)
+{
+var j=window.open(url,"jj","left=20, top=20, width=550,height=550,scrollbars=1") 
+}
+
+function openWins(url)
+{
+var j=window.open(url,"jj","left=20, top=20, width=700,height=600,scrollbars=1") 
+}
+
+function openWinchart(url)
+{
+var j=window.open(url,"jj","left=20, top=20, width=600,height=485,scrollbars=1") 
+}
+
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+
+//-->
+</script>
+<script language="JavaScript">
+
+if ((screen.width == 800))
+{	
+ document.write("<link rel='stylesheet' type='text/css' href='controls/800_600.css'>");
+}
+else if ((screen.width == 1024))
+{
+	document.write("<link rel='stylesheet' type='text/css' href='controls/1024_768.css'>");
+
+
+}
+else if ((screen.width == 1152))
+{
+    document.write("<link rel='stylesheet' type='text/css' href='controls/1152_864.css'>");
+}
+else if ((screen.width == 1280))
+{	
+  document.write("<link rel='stylesheet' type='text/css' href='controls/1280_720.css'>");
+}
+
+Explorer = (document.all);
+document.onkeydown = KeyCheck;
+var ctrlName='';
+
+function KeyCheck(e)
+{
+	var KeyID = (Explorer) ? event.keyCode : e.which;
+	if (KeyID=='13') 
+	{ 
+			if(ctrlName=="txtUsername") 
+			{ 
+				document.getElementById("toppart_secondary1_txtPassword").focus();												
+				ctrlName="txtPassword";
+				return false;
+			}
+			else if(ctrlName=="txtPassword")
+			{ 
+				document.getElementById("toppart_secondary1_ibtnLogin").click();					
+				ctrlName="ibtnLogin";
+				return false;
+			}
+			else if(ctrlName=="txtFYear") 
+			{ 
+				if(document.getElementById("LeftPart_Home1_txtFYear") != null)
+				{
+					document.getElementById("LeftPart_Home1_txtTYear").focus();								
+					Clear('LeftPart_Home1_txtTYear');				
+				}
+				else
+				{
+					document.getElementById("LeftPart_Secondary1_txtTYear").focus();								
+					Clear('LeftPart_Secondary1_txtTYear');				
+				}				
+				ctrlName='txtTYear';
+				return false;
+			}
+			else if(ctrlName=="txtTYear")
+			{ 
+				if(document.getElementById("LeftPart_Home1_txtTYear") != null)
+				{
+					document.getElementById("LeftPart_Home1_txtMake").focus(); 				
+					Clear('LeftPart_Home1_txtMake');
+				}
+				else
+				{
+					document.getElementById("LeftPart_Secondary1_txtMake").focus(); 				
+					Clear('LeftPart_Secondary1_txtMake');
+				}
+				ctrlName='txtMake';
+				return false;
+			}
+			else if(ctrlName=="txtMake")
+			{ 
+				if(document.getElementById("LeftPart_Home1_txtMake")!= null)
+				{
+					document.getElementById("LeftPart_Home1_txtModel").focus();
+					Clear('LeftPart_Home1_txtModel');
+				}
+				else
+				{
+					document.getElementById("LeftPart_Secondary1_txtModel").focus();
+					Clear('LeftPart_Secondary1_txtModel');
+				}
+				ctrlName='txtModel';
+				return false;
+			}
+			else  if(ctrlName=="txtModel")
+			{
+				if(document.getElementById("LeftPart_Home1_txtMake")!= null)
+				{
+					document.getElementById("LeftPart_Home1_ibtnSubmit").click();
+					ctrlName='ibtnSubmit';
+				}
+				else
+				{
+					document.getElementById("LeftPart_Secondary1_ibtnSubmit").click();
+					ctrlName='ibtnSubmit';
+				}
+				 
+				 return false;
+			}			
+	}
+	else
+	{   
+		return true;	 
+	}
+}
+
+</script>
+<LINK href="images/favicon.ico" rel="SHORTCUT ICON">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="table2">
+	<tr>
+		<td width="9" bgcolor="#0000ff"><img height="9" alt="Page Corner" src="images/page_top_left_crnr.gif" width="9" border="0"></td>
+		<td width="99%" background="images/page_top_mid_bg.gif"><img src="images/spacer.gif" alt="" width="1" height="1"></td>
+		<td width="9"><img height="9" alt="Page Corner" src="images/page_top_right_crnr.gif" width="9" border="0"></td>
+	</tr>
+	<tr>
+		<td vAlign="top" width="9" background="images/page_left_brdr_bg.gif"><IMG height="1" src="images/spacer.gif" width="5" border="0"></td>
+		<td width="100%"><table id="table3" cellSpacing="0" cellPadding="0" width="100%" summary="Toppart content"
+				border="0">
+				<tr>
+					<td>
+						<table id="table4" cellSpacing="0" cellPadding="0" width="100%" summary="Logo and Login"
+							border="0">
+							<tr>
+								<td width="10%" align="left" vAlign="top"><A href="home.aspx"><IMG height="109" alt="CLASSICAUTONETWORK.COM" src="images/logo_classic_auto_top01.jpg"
+											width="372" border="0"></A></td>
+								<td vAlign="top" width="90%" background="images/checkboard_bg.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="right" class="login_box_pad"><table width="352" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td align="left" class="login_box">
+															<table cellSpacing="0" cellPadding="0" width="95%" align="center" border="0">
+														<tr>
+															<td><input type="image" name="toppart_secondary1:ibtnHidden" id="toppart_secondary1_ibtnHidden" src="images/spacer.gif" alt="" border="0" /></td>
+														</tr>
+														</table>
+
+															<table id="toppart_secondary1_pnlLogin" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td>
+
+																<TABLE cellSpacing="0" cellPadding="2" width="95%" align="center" border="0">
+																	<TR>
+																		<TD width="36%"><IMG height="2" alt="" src="images/spacer.gif" width="5"></TD>
+																		<TD width="39%"><IMG height="2" alt="" src="images/spacer.gif" width="5"></TD>
+																		<TD width="25%"><IMG height="2" alt="" src="images/spacer.gif" width="5"></TD>
+																	</TR>
+																	<TR>
+																		<TD class="homefieldlable" align="left">Username</TD>
+																		<TD class="homefieldlable" align="left">Password</TD>
+																		<TD class="homefieldlable" vAlign="bottom" align="left" rowSpan="2">
+																				<input type="image" name="toppart_secondary1:ibtnLogin" id="toppart_secondary1_ibtnLogin" tabindex="3" src="images/buttons/login.gif" alt="" border="0" /></TD>
+																	</TR>
+																	<TR>
+																		<TD align="left">
+																			<input name="toppart_secondary1:txtUsername" type="text" maxlength="50" id="toppart_secondary1_txtUsername" tabindex="1" class="homefields" onFocus="javascript:ctrlName='txtUsername'" /></TD>
+																		<TD align="left">
+																			<input name="toppart_secondary1:txtPassword" type="password" maxlength="12" id="toppart_secondary1_txtPassword" tabindex="2" class="homefields" onFocus="javascript:ctrlName='txtPassword'" /></TD>
+																	</TR>
+																	<TR>
+																		<TD class="lnkforgot" vAlign="top" align="left" colSpan="3">
+																		<table cellpadding="0" cellspacing="0">
+																			<tr><td class="lnkforgot" vAlign="top" align="left">																		
+																				<A class="lnkforgot" href="members_registration.aspx">FREE 
+																				Registration</A> &nbsp; | &nbsp; <A class="lnkforgot" href="forgot_password.aspx">
+																				Forgot Login</A>&nbsp;&nbsp;&nbsp;
+																				</td>
+																				<td class="lnkforgot" vAlign="top" align="left"><span class="chkRemember"><input id="toppart_secondary1_chkRememberMe" type="checkbox" name="toppart_secondary1:chkRememberMe" tabindex="4" /></span></td>
+																				<td class="lnkforgot" vAlign="top" align="left"> &nbsp;Remember Me</td>
+																		</tr></table>
+																		</td>	
+																	</TR>
+																</TABLE>
+															
+</td></tr></table>
+															
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="32" align="left" valign="bottom"><img src="images/classic_cars_new.gif" alt="" width="580" height="24" hspace="6" vspace="0"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellPadding="0" cellSpacing="0" id="table5" summary="Top Navigation">
+							<tr>
+								<td><IMG height="34" alt="Logo Bottom Part" src="images/logo_classic_auto_top02_.jpg" width="294"
+										border="0"></td>
+								<td>
+									<div class="topnav1sec"><A href="post_ad.aspx"><IMG height="34" alt="Place Ad" src="images/lnk_place_ad_sec.gif" width="90" border="0"></A></div>
+								</td>
+								<td>
+									<div class="topnav2sec"><A href="browse_cars.aspx"><IMG height="34" alt="Browse Cars" src="images/lnk_browsecars_sec.gif" width="123" border="0"></A></div>
+								</td>
+								<td>
+									<div class="topnav3sec"><A href="DTIFrame.aspx"><IMG height="34" alt="New/Used" src="images/btnDt.jpg" width="77" border="0"></A></div>
+								</td>
+								<td>
+									<div class="topnav4sec"><A href="dealers.aspx"><IMG height="34" alt="Dealers" src="images/lnk_dealers_sec.gif" width="92" border="0"></A></div>
+								</td>
+								<td>
+									<div class="topnav5sec"><A href="car_clubs.aspx"><IMG height="34" alt="Car Clubs" src="images/lnk_carclubs_sec.gif" width="108" border="0"></A></div>
+								</td>
+								<td>
+									<div class="topnav6sec"><A href="car_forum.aspx"><IMG height="34" alt="Car Forum" src="images/lnk_carforum_sec.gif" width="103" border="0"></A></div>
+								</td>
+								<td>
+									<div class="topnav7sec"><A href="advertise.aspx"><IMG height="34" alt="Advertise" src="images/lnk_advertise_sec.gif" width="97" border="0"></A></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td valign="top" width="1%" background="images/page_right_brdr_bg.gif"><img height="1" src="images/page_right_brdr_bg.gif" width="9" border="0"></td>
+	</tr>
+</table>
+</td>
+						</tr>
+						<tr>
+							<td vAlign="top">
+								<table id="table20" border="0" cellSpacing="0" summary="middle part" cellPadding="0" width="100%">
+									<TBODY>
+										<tr>
+											<td vAlign="top" background="images/page_left_brdr_bg.gif" width="1%"><IMG border="0" src="images/page_left_brdr_bg.gif" width="9" height="1"></td>
+											<td vAlign="top">
+												<table id="table23" class="w984" border="0" cellSpacing="0" summary="Middle Section" cellPadding="0">
+													<TBODY>
+														<tr>
+															<td class="leftpartbgimgcurve" vAlign="top" width="10%">
+
+<script language="javascript">
+function Clear(id)
+{
+	document.getElementById(id).value = "";
+}
+</script>
+<table width="200" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left"><table width="174" border="0" align="left" cellpadding="0" cellspacing="0" id="table26" summary="">
+      <tr>
+        <td><table id="table27" cellspacing="0" cellpadding="0" width="100%" summary="" border="0">
+            <tr>
+              <td width="1%"><img  alt="tspacer" src="images/tspacer.gif" width="1" border="0" /></td>
+              <td valign="top" align="center" width="100%"><table id="table28" cellspacing="0" cellpadding="0" width="100%" summary="Quick Search"
+							border="0">
+                  <tr>
+                    <td align="center"><img  alt="tspacer" src="images/tspacer.gif" width="1" height="3" border="0" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><label for="year"><img height="11" alt="Quick Search" src="home_files/quick_search.gif" width="151" border="0" /></label></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img  alt="tspacer" src="images/tspacer.gif" width="1" height="3" border="0" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><table id="table29" cellspacing="0" cellpadding="0" width="82%" summary="" border="0">
+                        <tr>
+                          <td align="center" width="33%"><input name="LeftPart_Secondary1:txtFYear" type="text" value="Year" maxlength="50" id="LeftPart_Secondary1_txtFYear" class="txtfield1" onFocus="javascript:ctrlName='txtFYear'" onClick="Clear('LeftPart_Secondary1_txtFYear');" /></td>
+                          <td align="center" width="33%"><img height="10" alt="To" src="images/to.gif" width="18" border="0" /> </td>
+                          <td align="center" width="33%"><input name="LeftPart_Secondary1:txtTYear" type="text" value="Year" maxlength="50" id="LeftPart_Secondary1_txtTYear" class="txtfield1" onFocus="javascript:ctrlName='txtTYear'" onClick="Clear('LeftPart_Secondary1_txtTYear');" /></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img  alt="tspacer" src="images/tspacer.gif" width="1" height="3" border="0" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><input name="LeftPart_Secondary1:txtMake" type="text" value="Make" maxlength="50" id="LeftPart_Secondary1_txtMake" class="txtfield" onFocus="javascript:ctrlName='txtMake'" onClick="Clear('LeftPart_Secondary1_txtMake');" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img  alt="tspacer" src="images/tspacer.gif" width="1" height="3" border="0" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><input name="LeftPart_Secondary1:txtModel" type="text" value="Model" maxlength="50" id="LeftPart_Secondary1_txtModel" class="txtfield" onFocus="javascript:ctrlName='txtModel'" onClick="Clear('LeftPart_Secondary1_txtModel');" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img  alt="tspacer" src="images/tspacer.gif" width="1" height="3" border="0" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center" class="searchheight" ><a href="search_results.aspx"></a>
+                        <input type="image" name="LeftPart_Secondary1:ibtnSubmit" id="LeftPart_Secondary1_ibtnSubmit" src="images/buttons/search.gif" alt="Search" border="0" /></td>
+                  </tr>
+              </table></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><table id="table30" cellspacing="0" cellpadding="0" width="100%" summary="Left Navigation"
+				border="0" align="center" >
+            <tr>
+              <td align="right"><div class="leftnav1home"><a href="advanced_search.aspx"><img height="30" alt="Advanced Search" src="home_files/link_advanced_search.gif" width="167"
+									border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td align="right"><div class="leftnav2home"><a href="Classic_Car_Price_Guide.aspx"><img height="30" alt="What's It Worth" src="home_files/link_historical_valuation.gif"
+									width="167" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td align="right"><div class="leftnav3home"><a href="members_my_saved_searches.aspx"><img height="30" alt="Saved Searches" src="home_files/link_saved_searches.gif" width="167"
+									border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td align="right"><div class="leftnav4home"><a href="members.aspx?goto=nt"><img height="30" alt="Member Console" src="home_files/link_member_console.gif" width="167" border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td align="right"><div class="leftnav5home"><a href="community.aspx"><img height="30" alt="Members &amp; Events" src="home_files/link_members_events.gif" width="167"
+									border="0" /></a></div></td>
+            </tr>
+            <tr>
+              <td align="right"><div class="leftnav6home"><a href="tell_a_friend.aspx"><img height="34" alt="Referral Program!" src="home_files/link_referral_program.gif" width="167" border="0" /></a></div></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td valign="top"><table id="table31" cellspacing="0" cellpadding="2" width="100%" summary="Newsletter Signup"
+				border="0">
+            
+                <tr>
+                  <td align="center" class="homeblutext" ><a id="LeftPart_Secondary1_rptMember__ctl0_lblUsername" href="members_profile.aspx?prfid=1191">jeff hawes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="105" class="homememimg"><a id="LeftPart_Secondary1_rptMember__ctl0_hlnkCommunityLogo" href="members_profile.aspx?prfid=1191"><img src="MakeThumbNail.aspx?h=120&amp;w=90&amp;prof=images/CommunityLogo//&amp;img=" alt="" border="0" /></a>
+                  </td>
+                </tr>
+              
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</td>
+															<td vAlign="top" width="90%">
+																<table id="table24" border="0" cellSpacing="0" summary="Content Section" cellPadding="0"
+																	width="100%">
+																	<TBODY>
+																		<tr>
+																			<td width="99%"><IMG border="0" alt="tspacer" src="images/tspacer.gif" width="1" height="1"></td>
+																			<td width="1%"><IMG border="0" alt="tspacer" src="images/tspacer.gif" width="12" height="14"></td>
+																		</tr>
+																		<tr>
+																			<td class="popuptext" width="99%">
+																				<h1 style="FONT-SIZE: 17px" class="popuptext">Welcome To The Classic Auto Network 
+																					Classic Car Price Guide!</h1>
+																			</td>
+																			<td width="1%"></td>
+																		</tr>
+																		<tr>
+																			<td width="99%"><IMG border="0" alt="tspacer" src="images/tspacer.gif" width="1" height="14">
+																				<table id="table251" border="0" cellSpacing="0" summary="Content Section" cellPadding="0"
+																					width="100%">
+																					<tr>
+																						<td class="textblack">One of the toughest things for anyone who follows trends in 
+																							Classic Car Prices is how do you determine Collector Car Values or the current 
+																							Value of Classic Cars? Fortunately we have made it easy for you to determine 
+																							today’s market value of your favorite vehicles. Enter your request below and we 
+																							will get you an answer as to the latest pricing and trends!
+																							<br>
+																							<br>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="center"><span style="FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 16px"><b>Enter 
+																									your request below by Year, Make and Model. It’s free to get a quote! </b>
+																							</span></td>
+																					</tr>
+																					<tr>
+																						<td class="bodytext" align="center"><a name="top"></a>Fields marked with
+																							<span class="redstar">*</span>
+																							are compulsory</td>
+																					</tr>
+																				</table>
+																			</td>
+																			<td width="1%"></td>
+																		</tr>
+																		<tr>
+																			<td><a name="top"></a>
+																				<div style="DISPLAY: none" id="dvErrMsg"><span id="lblSummary" class="validation">Please Enter the following</span><br>
+																					<span id="lblErrMsg" class="validation"></span></div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td width="99%"><IMG border="0" alt="tspacer" src="images/tspacer.gif" width="1" height="14">
+																				<table id="table251" border="0" cellSpacing="0" summary="Content Section" cellPadding="0"
+																					width="100%">
+																					<tr>
+																						<td class="textblack" width="50%"></td>
+																						<td rowSpan="2" width="50%">
+																					<tr>
+																						<td align="center">
+																							<table style="BORDER-BOTTOM: #ff0000 1px solid; BORDER-LEFT: #ff0000 1px solid; BORDER-TOP: #ff0000 1px solid; BORDER-RIGHT: #ff0000 1px solid"
+																								id="table252" border="0" cellSpacing="0" cellPadding="0" width="90%">
+																								<tr>
+																									<td>
+																										<table id="table253" border="0" cellSpacing="2" cellPadding="2" width="100%">
+																											<TR>
+																												<td colSpan="3" align="center"><span style="FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 14px"><strong>Fill 
+																															in your request below!</strong></span></td>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" width="25%" align="left">Year:
+																													<span class="redstar">*</span></TD>
+																												<TD width="3%">&nbsp;</TD>
+																												<TD id="tdYear" width="67%" align="left"><select name="ddlCarYear" id="ddlCarYear">
+</select>
+																												</TD>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" align="left">Make:
+																													<span class="redstar">*</span></TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdMake" width="67%" align="left"><select name="ddlMake" id="ddlMake">
+</select>
+																												</TD>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" align="left">Model:
+																													<span class="redstar">*</span></TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdModel" width="67%" align="left"><select name="ddlModel" id="ddlModel">
+</select>
+																												</TD>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" align="left">Inquiring To:
+																													<span class="redstar">*</span></TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdBuySell" width="67%" align="left"><select name="ddlSelect" id="ddlSelect" Class="field3" onchange="fndisplayOther()" style="width: 200px">
+	<option selected="selected" value="Select Inquiring">Select Inquiring</option>
+	<option value="Buy">Buy</option>
+	<option value="Sell">Sell</option>
+	<option value="Other">Other</option>
+</select>
+																														<br/>
+																														<input name="txtInquiring" type="text" id="txtInquiring" style="display:none" />
+																												</TD>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" align="left">Source:
+																													<span class="redstar">*</span></TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdSource" align="left" width="67%">
+																													<select name="ddlSource" id="ddlSource" class="fieldsec41" onChange="fndisplay()">
+	<option selected="selected" value="Select Source">Select Source</option>
+	<option value="Google">Google</option>
+	<option value="Yahoo">Yahoo</option>
+	<option value="Direct">Direct</option>
+	<option value="Referral">Referral</option>
+	<option value="Other">Other</option>
+
+</select>
+																													<br/>
+																													<input name="txtSourc" type="text" id="txtSourc" style="display:none" /></TD>
+																											</TR>
+																											<!--<TR>
+																												<TD class="fieldlable" align="left">Buy/Sell:
+																													<span class="redstar">*</span></TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdBuySell" align="left" width="67%"><select name="Select1" id="Select1">
+</select>
+																												</TD>
+																											</TR>-->
+																											<TR>
+																												<TD class="fieldlable" align="left">Mileage:</TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdMileage" width="67%" align="left"><input name="txtMileage" type="text" maxlength="50" id="txtMileage" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></TD>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" align="left">Condition:</TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdCondition" width="67%" align="left"><input name="txtCondition" type="text" maxlength="50" id="txtCondition" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></TD>
+																											</TR>
+																											<TR>
+																												<TD class="fieldlable" align="left">Other Info:</TD>
+																												<TD>&nbsp;</TD>
+																												<TD id="tdOtherInfo" width="67%" align="left"><textarea name="txtOtherInfo" rows="5" cols="22" id="txtOtherInfo" onkeyup="return fnChar(150,document.getElementById('txtOtherInfo'),document.getElementById('txtCount'));"></textarea><input id="txtCount" class="cntBox" title="character(s)" disabled value="150" readOnly>
+																												</TD>
+																											</TR>
+																											<TR>
+																												<td height="5" colSpan="3"></td>
+																											</TR>
+																										</table>
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td height="8"></td>
+																					</tr>
+																				</table>
+																			</td>
+																			<td width="1%"></td>
+																		</tr>
+																		<input name="hidYear" id="hidYear" type="hidden" /> <input name="hidMake" id="hidMake" type="hidden" />
+																		<input name="hidModel" id="hidModel" type="hidden" />
+																		<br>
+																		<br>
+																		<tr>
+																			<td width="99%">
+																				<table id="table252" border="0" cellSpacing="0" summary="Content Section" cellPadding="0"
+																					width="100%">
+																					<br>
+																					<tr>
+																						<td colSpan="5" align="center"><span style="FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 16px"><b>Enter 
+																									your contact information below and we’ll get back to you with a quote! </b>
+																							</span></td>
+																					</tr>
+																				</table>
+																			<td width="1%"></td>
+																		</tr>
+																		<tr>
+																			<td class="popuptext" width="99%">&nbsp;<!--<a name="MeetMembers" id="MeetMembers">Meet Just a Few of Our Members!</a>-->
+																			</td>
+																			<td width="1%"></td>
+																		</tr>
+																		<tr>
+																			<td width="99%">
+																				<table id="table25" border="0" cellSpacing="0" summary="Content Section" cellPadding="0"
+																					width="100%">
+																					<TBODY>
+																						<tr>
+																							<td class="bodytext" align="right">&nbsp;
+																							</td>
+																						</tr>
+																						<tr>
+																							<td><IMG border="0" alt="" src="images/tspacer.gif" width="1" height="5"></td>
+																						</tr>
+																						<tr>
+																							<td id="idContactInfo">
+																								<table id="table49" border="0" cellSpacing="0" summary="Contact Info" cellPadding="0" width="100%">
+																									<TBODY>
+																										<tr>
+																											<td class="tablehead">Contact information:</td>
+																										</tr>
+																										<tr>
+																											<td class="greybrdr" align="center">
+																												<table id="table53" border="0" summary="" cellPadding="0" width="90%" align="left">
+																													<TBODY>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="fname">First Name: <span class="redstar">*</span></label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtFName" type="text" maxlength="50" id="txtFName" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																															<td vAlign="top" width="30%" align="left">&nbsp;</td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="lname">Last Name: <span class="redstar">*</span></label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtLName" type="text" maxlength="50" id="txtLName" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																															<td vAlign="top" width="30%" align="left">&nbsp;</td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="email">Email Address: <span class="redstar">*</span></label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtEmail" type="text" maxlength="50" id="txtEmail" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																															<td vAlign="middle" rowSpan="3" width="30%" align="center"><!--
+										Commented By: SachinP@Ecotech
+										On          : 15 April 2009
+										<IMG src="images/try_risk_free.jpg">--></td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="phone">Phone: </label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtPhone" type="text" maxlength="50" id="txtPhone" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																															<td vAlign="top" width="30%" align="left">&nbsp;</td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="address">Address: 
+                                </label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtAddress" type="text" maxlength="50" id="txtAddress" class="fieldsec42" /></td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="city">City: </label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtCity" type="text" maxlength="50" id="txtCity" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="state">State: </label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtState" type="text" maxlength="50" id="txtState" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																															<td vAlign="top" width="30%" align="left">&nbsp;</td>
+																														</tr>
+																														<tr>
+																															<td class="fieldlable" vAlign="top" width="30%" align="left"><label for="zip">Zip Code: </label></td>
+																															<td vAlign="top" width="40%" align="left"><input name="txtZip" type="text" maxlength="50" id="txtZip" class="fieldsec41" onkeydown="if(event.keyCode == 13) return enterKeyEventBtn(event);" /></td>
+																															<td vAlign="top" width="30%" align="left">&nbsp;</td>
+																														</tr>
+																													</TBODY></table>
+																											</td>
+																										</tr>
+																									</TBODY></table>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td>&nbsp;<!--<a href="#MeetMembers" id="formdown"></a>--></td>
+																						</tr>
+																						<tr>
+																							<td align="center"><input type="image" name="ibtnSubmitPg" id="ibtnSubmitPg" onclick="return fnValidateForm()" src="images/buttons/submit.gif" alt="Submit" align="Middle" border="0" /></td>
+																						</tr>
+																						<tr>
+																							<td>&nbsp;
+																							</td>
+																						</tr>
+																						<tr>
+																							<td align="center"><span style="FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 16px; FONT-WEIGHT: bold">Ready to sell your 
+                              vehicle?</span>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td align="center"><span style="FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 16px; FONT-WEIGHT: bold">Place an ad and sell it in 
+                              our community. There is a one time fee to list 
+                              your vehicle until it is sold!</span>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td align="center"><span style="FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 16px; FONT-WEIGHT: bold">If you are a Dealer use the 
+                              Dealers button to place an ad</span>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td align="center"><A href="post_ad.aspx"><IMG style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px"
+																										title="Place ad" alt="Place ad" align="middle" src="images/buttons/Place_Ad.gif"></A><A href="dealers.aspx?PlaceAd=y"><IMG style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px"
+																										title="Dealers" alt="Dealers" align="middle" src="images/buttons/dealers.gif">
+																								</A>
+																							</td>
+																						</tr>
+																					</TBODY></table>
+																			</td>
+																			<td width="1%">&nbsp;</td>
+																		</tr>
+																		<tr>
+																			<td width="99%">&nbsp;</td>
+																			<td width="1%">&nbsp;</td>
+																		</tr>
+																	</TBODY></table>
+															</td>
+														</tr>
+													</TBODY></table>
+											</td>
+											<td vAlign="top" background="images/page_right_brdr_bg.gif" width="1%"><IMG border="0" src="images/page_right_brdr_bg.gif" width="9" height="1"></td>
+										</tr>
+									</TBODY></table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+<script language="javascript" type="text/javascript">
+	function OpenFooterBannerAd(URL)
+	{
+		window.open(URL);
+	}
+</script>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table14" summary="Bottom Part">
+	<tr>
+		<td>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table16" summary="Bottom Links">
+				<tr>
+					<td width="1%" background="images/page_left_brdr_bg.gif" valign="top">
+						<img border="0" src="images/page_left_brdr_bg.gif" width="9" height="1"></td>
+					<td width="99%">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table17" summary="">
+							<tr>
+								<td>
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table18" summary="">
+										<tr>
+											<td width="1%">
+												<img border="0" src="images/btm_redline_left.gif" width="9" height="30"></td>
+											<td width="99%" background="images/btm_redline_mid.gif">
+												<img border="0" src="images/btm_redline_mid.gif" width="1" height="30"></td>
+											<td align="right" width="1%">
+												<img border="0" src="images/btm_redline_right.gif" width="6" height="30"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td background="images/btmlinks_bg.gif">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table19" summary="Bottom Links">
+										<tr>
+											<td width="1">
+												<img border="0" src="images/tspacer.gif" alt="tspacer" width="10" height="22"></td>
+											<td width="50%" class="linkbtm" align="left">
+												<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table20">
+													<tr>
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table21">
+																<tr>
+																	<td nowrap>
+																		<a class="linkbtm" href="about_us.aspx">About Us</a></td>
+																	<td>
+																		<img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																	<td class="linkbtm">|</td>
+																	<td><img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table22">
+																<tr>
+																	<td nowrap>
+																		<a class="linkbtm" href="contact_us.aspx">Contact Us</a></td>
+																	<td>
+																		<img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																	<td class="linkbtm">|</td>
+																	<td><img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																</tr>
+															</table>
+														</td>														
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table25">
+																<tr>
+																	<td nowrap>
+																		<a class="linkbtm" href="scam_safety.aspx">SCAM Safety</a></td>
+																	<td>
+																		<img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																	<td class="linkbtm">|</td>
+																	<td><img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table26">
+																<tr>
+																	<td nowrap>
+																		<a class="linkbtm" href="privacy_policy.aspx">Privacy Policy</a></td>
+																	<td>
+																		<img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																	<td class="linkbtm">|</td>
+																	<td><img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table27">
+																<tr>
+																	<td nowrap>
+																		<a class="linkbtm" href="terms_of_use.aspx">Terms of Use</a></td>
+																	<td>
+																		<img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																	<td class="linkbtm">|</td>
+																	<td><img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table28">
+																<tr>
+																	<td nowrap>
+																		<a href="report_a_bug.aspx" class="linkbtm">Report a Bug</a></td>
+																	<td>
+																		<img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																	<td class="linkbtm">|</td>
+																	<td><img border="0" src="images/tspacer.gif" width="7" height="1" alt=""></td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table border="0" cellpadding="0" cellspacing="0" id="table29">
+																<tr>
+																	<td nowrap>
+																		<a class="linkbtm" href="sitemap.aspx">Site Map</a></td>
+																	<td>
+																	</td>
+																	<td class="linkbtm"></td>
+																	<td></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width="50%" class="copyright" align="right">
+												© 2006 ClassicAutoNetwork.com All Rights Reserved.
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="1%" background="images/page_right_brdr_bg.gif" valign="top">
+						<img border="0" src="images/page_right_brdr_bg.gif" width="9" height="1"></td>
+				</tr>
+				<tr>
+					<td width="1%">
+						<img border="0" src="images/page_btm_left_crnr.gif" width="9" height="9"></td>
+					<td width="99%" background="images/page_btm_mid_bg.gif">
+						<img border="0" src="images/page_btm_mid_bg.gif" width="1" height="9"><img border="0" src="images/page_btm_mid_bg.gif" width="1" height="9"></td>
+					<td width="1%">
+						<img border="0" src="images/page_btm_right_crnr.gif" width="9" height="9"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img border="0" src="images/tspacer.gif" alt="tspacer" width="1" height="11"></td>
+	</tr>
+	<tr>
+		<td align="center">
+			<table border="0" cellpadding="0" cellspacing="0" id="table15" summary="Banner and Logos"
+				width="97%">
+				<tr>
+					<td valign="top" align="left">						
+						<input type="image" name="Bottom1:ibtnFooterBannerAdLeft" id="Bottom1_ibtnFooterBannerAdLeft" onClick="javascript: OpenFooterBannerAd('http://www.classicautonetwork.com/Classic_Car_Price_Guide.aspx');" src="images/BannerAds/BannerHorizontalBannerwithL_2007914.jpg" alt="Space to view Footer Banner Ads" />
+					 </td> 
+					<td valign="top" align="right">						
+						<input type="image" name="Bottom1:ibtnFooterBannerAdRight" id="Bottom1_ibtnFooterBannerAdRight" onClick="javascript: OpenFooterBannerAd('http://www.classicautonetwork.com/community.aspx');" src="images/BannerAds/HorizontalBannerMeetThousan_200766.jpg" alt="Space to view Footer Banner Ads" />
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+	<td align="center"><div>&nbsp;<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+		_uacct = "UA-2350063-1";
+		urchinTracker();
+		</script>		
+		</div>	
+	</td>
+</tr>
+</table>
+</td>
+						</tr>
+					</TBODY></table>
+			</div>
+		<script>document.getElementById('toppart_secondary1_ibtnHidden').focus();</script>
+
+</form>
+		</TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY>
+		<DIV></DIV>
+		</FORM>
+	</body>
+</HTML>

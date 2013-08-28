@@ -1,0 +1,2001 @@
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" class="ie6 "> <![endif]-->  
+<!--[if IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" class="ie7 "> <![endif]-->  
+<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" class="ie8 "> <![endif]-->  
+<!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" class="ie9 "> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" class=""> <!--<![endif]-->  
+<head>
+<base href="http://www.mywesttexas.com/content/tncms/live/" />
+<meta name="googlebot" content="noarchive" />
+<meta name="description" content="West Texas News and Community" />
+<meta name="keywords" content="business" />
+<meta property="fb:app_id" content="361381078011" />
+<meta property="og:title" content="Mywesttexas.com" />
+<meta property="og:site_name" content="Mywesttexas.com" />
+<meta property="og:url" content="http://www.mywesttexas.com/business/" />
+<meta property="og:description" content="West Texas News and Community" />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_jqueryui/resources/styles/jquery-ui-default.min.css?_dc=1359548577" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_advertising/resources/styles/ads.min.css?_dc=1375954409" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/global/resources/styles/_navigation/dropdown.linear.css?_dc=1329836441" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/global/resources/styles/_navigation/themes/default/default.linear.css?_dc=1329836475" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_base_library/resources/styles/styles.min.css?_dc=1377589236" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_theme_palette/resources/styles/_switcher.css?_dc=1369832500" />
+<link rel="stylesheet" href="global/resources/styles/_palettes/none.css" />
+<link rel="stylesheet" href="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/global/resources/styles/_site/site.css?_dc=1377032369" />
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_yepnope/resources/scripts/yepnope.min.js?_dc=1361977240"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_jquery/resources/scripts/jquery.min.js?_dc=1354096976"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_jqueryui/resources/scripts/jquery-ui.min.js?_dc=1359548577"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_base_library/resources/scripts/user.js?_dc=1377589236"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_advertising/resources/scripts/ads.min.js?_dc=1375954409"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_jquery_plugins/resources/scripts/jquery.cookie.js?_dc=1375274391"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_flowplayer/resources/scripts/flowplayer-3.2.6.min.js?_dc=1369243856"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_flowplayer/resources/scripts/flowplayer.playlist-3.0.7.min.js?_dc=1369243856"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/ads/tncms-ad-limits.js?_dc=1377655246"></script>
+<script type="text/javascript"  src="/shared-content/art/tncms-ad-manager/ads.js"></script>
+
+
+
+<script type='text/javascript'>
+
+$(document).ready(function(){
+    var pageURL = location.href.toLowerCase();
+    var sbFirstSlide = (document.cookie.indexOf('sbb_'+pageURL) == -1); //check cookie for 'already seen today'
+    var sbTrigger = jQuery('#slidebartrigger');
+    var slideState = 0;		//0=up, 1=down
+    var downTM, upTM;
+    function slideUp(){
+        if(slideState==1){
+	        if(downTM) clearTimeout(downTM);
+	        jQuery("#slidebar").slideToggle(200);
+	        slideState=0;
+	        sbTrigger.removeClass("closeSlide").one('click', slideDown);
+        }
+    }	
+    function slideDown(){
+        if(slideState==0){
+	        if(upTM) clearTimeout(upTM);
+	        jQuery("#slidebar").slideToggle(500);
+	        slideState=1;
+	        sbTrigger.removeClass("firstSlide");
+	        sbTrigger.addClass("closeSlide").one('click', slideUp);
+        }
+    }
+    function setSBBCookie(){
+        var oneDay = new Date();
+        oneDay.setUTCDate(oneDay.getUTCDate()+1);
+        oneDay.setUTCHours(0, 0, 0, 0); //set to literally day-by-day, rather than 24 hours
+        document.cookie="sbb_"+pageURL+"=true;path=/;expires="+oneDay.toUTCString();
+    }
+    if(sbFirstSlide){
+        slideDown();
+        setSBBCookie();
+        downTM=setTimeout(slideUp,8000);
+    }else{sbTrigger.removeClass("firstSlide").one('click', slideDown);}
+    
+});
+</script>
+
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<!-- Domain: www.mywesttexas.com,
+     BLOX CMS version: 1.13.11,
+     BLOX Template version: 1.13.9.3,
+     BLOX Application: editorial,
+     BLOX Application Skin: editorial-core-base,
+     User status: User is not logged in,
+     Timestamp: 9:09:16 pm  --><title>Mywesttexas.com: Business</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript" language="javascript">
+        // <![CDATA[  
+        townnews_common_user_validate(true);
+        // ]]>
+        </script><script type="text/javascript">
+        jQuery(function() {
+          jQuery("p.published time").timeago();
+          jQuery("p.updated time").timeago();
+          jQuery("section.comments time").timeago();
+    
+          if (jQuery.cookie("forced_logout")) {	  
+		 	 // standard session expiration notice 
+		 	 setTimeout("$('#login-box-form-panel').dialog('open');",1000);
+             $('#login-box-form-panel').prepend('<div class="ui-state-error ui-corner-all"><h3>You have been logged out.</h3><p>Logging in from multiple locations may be the cause.</p></div>');		 
+            jQuery.cookie("forced_logout", null, { path: '/', expires: -10});
+		  }
+    
+       });
+    </script>    
+        <script type="text/javascript">
+        // <![CDATA[
+        if (location.protocol == "https:"){
+            window.location = "http://www.mywesttexas.com/business/";
+        }
+        // ]]>
+        </script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+if(typeof(vo)=="undefined"){
+    if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"initializing vo"});}
+    voCatcher = false;
+    vo = new Object({
+        embed:[],
+        embedPost:[],
+        standalone:[]
+    });
+    function tncms_video_ad(adId, videoUrl, videoClickUri, properties){
+        if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"catching video ad: " + adId});}
+        
+        videoUrlPath = window.location.protocol+"//"+window.location.host
+
+        
+        if(properties.embed==1){
+            if(properties.rolltype=="post"){
+            vo.embedPost.push({
+                adId:adId,
+                videoUrl:videoUrlPath+videoUrl,
+                videoClickUri:videoClickUri,
+                width:properties.width,
+                height:properties.height,
+                volume:properties.volume,
+                autoplay:properties.autoplay,
+                rolltype:properties.rolltype,
+                playlistItem:{
+
+
+    url:window.location.protocol+"//"+window.location.host+videoUrl,
+    autoPlay:true,
+    autoBuffering:false,
+    onStart: function(){ if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Start Event: "+clip.url});}
+        if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url});}
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url+" type: "+clipType});}
+                _gaq.push(['_trackEvent', 'videos', 'play', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url+" _gaq undefined"});}}        
+    },
+    
+    onResume: function(clip) {  
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];             
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Resuming: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'play', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Resuming: "+clip.url+" _gaq undefined"});}}      
+    },
+
+    onPause: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Paused: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'pause', clip.url, parse(this.getTime())]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Paused: "+clip.url+" _gaq undefined"});}}
+    },
+
+    onStop: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Stopped: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'stop', clip.url, parseInt(this.getTime())]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Stopped: "+clip.url+" _gaq undefined"});}}    
+    },
+
+    onFinish: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Finished: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'finish', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Finished: "+clip.url+" _gaq undefined"});}}
+    },
+    onBeforeFinish: function(){
+        vo.post[0].watched = true;
+        vo.post[0].lock = false;
+
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"finished playing ad video"});}
+            
+        
+        if(automaticSwapFromAd){
+            
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"attempting to swap to active video in to "+this.id()});}
+            swapSubstituteHTML("#"+this.id(),jQuery("#"+this.id()).parents(".blox-multimedia").find(".blox-multimedia-text .item.playing a.load-video").first());
+
+        }
+
+        automaticSwapFromAd = false;
+        vo.post.reverse().pop();
+        
+    }
+
+
+},
+                properties:properties
+            });
+            }else{
+            vo.embed.push({
+                adId:adId,
+                videoUrl:videoUrlPath+videoUrl,
+                videoClickUri:videoClickUri,
+                width:properties.width,
+                height:properties.height,
+                volume:properties.volume,
+                autoplay:properties.autoplay,
+                rolltype:properties.rolltype,
+                playlistItem:{
+
+
+    url:window.location.protocol+"//"+window.location.host+videoUrl,
+    autoPlay:false,
+    autoBuffering:false,
+    onStart: function(){ if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Start Event: "+clip.url});}
+        if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url});}
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url+" type: "+clipType});}
+                _gaq.push(['_trackEvent', 'videos', 'play', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url+" _gaq undefined"});}}        
+    },
+    
+    onResume: function(clip) {  
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];             
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Resuming: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'play', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Resuming: "+clip.url+" _gaq undefined"});}}      
+    },
+
+    onPause: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Paused: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'pause', clip.url, parse(this.getTime())]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Paused: "+clip.url+" _gaq undefined"});}}
+    },
+
+    onStop: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Stopped: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'stop', clip.url, parseInt(this.getTime())]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Stopped: "+clip.url+" _gaq undefined"});}}    
+    },
+
+    onFinish: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Finished: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'finish', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Finished: "+clip.url+" _gaq undefined"});}}
+    },
+    onBeforeFinish: function(){
+        vo.embed[0].watched = true;
+        vo.embed[0].lock = false;
+
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"finished playing ad video"});}
+            
+        
+        if(automaticSwapFromAd){
+            
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"attempting to swap to active video in to "+this.id()});}
+            swapSubstituteHTML("#"+this.id(),jQuery("#"+this.id()).parents(".blox-multimedia").find(".blox-multimedia-text .item.playing a.load-video").first());
+
+        }
+
+        automaticSwapFromAd = false;
+        vo.embed.reverse().pop();
+        
+    }
+
+
+},
+                properties:properties
+            });
+            }
+        }else{
+            vo.standalone.push({
+                adId:adId,
+                videoUrl:videoUrlPath+videoUrl,
+                videoClickUri:videoClickUri,
+                width:properties.width,
+                height:properties.height,
+                volume:properties.volume,
+                autoplay:properties.autoplay,
+                rolltype:properties.rolltype,
+                playlistItem:{
+
+
+    url:window.location.protocol+"//"+window.location.host+videoUrl,
+    autoPlay:false,
+    autoBuffering:false,
+    onStart: function(){ if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Start Event: "+clip.url});}
+        if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url});}
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url+" type: "+clipType});}
+                _gaq.push(['_trackEvent', 'videos', 'play', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Playing: "+clip.url+" _gaq undefined"});}}        
+    },
+    
+    onResume: function(clip) {  
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];             
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Resuming: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'play', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Resuming: "+clip.url+" _gaq undefined"});}}      
+    },
+
+    onPause: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Paused: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'pause', clip.url, parse(this.getTime())]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Paused: "+clip.url+" _gaq undefined"});}}
+    },
+
+    onStop: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Stopped: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'stop', clip.url, parseInt(this.getTime())]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Stopped: "+clip.url+" _gaq undefined"});}}    
+    },
+
+    onFinish: function(clip) {
+        if(typeof(_gaq)!="undefined"){
+            var clipType = clip.url.split(".")[clip.url.split(".").length-1];
+                
+            if(clipType!="jpg"){
+                if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Finished: "+clip.url});}
+                _gaq.push(['_trackEvent', 'videos', 'finish', clip.url]);
+            }
+        }else{if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Video Ad - Finished: "+clip.url+" _gaq undefined"});}}
+    },
+    onBeforeFinish: function(){
+        vo.embed[0].watched = true;
+        vo.embed[0].lock = false;
+
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"finished playing ad video"});}
+            
+        
+        if(automaticSwapFromAd){
+            
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"attempting to swap to active video in to "+this.id()});}
+            swapSubstituteHTML("#"+this.id(),jQuery("#"+this.id()).parents(".blox-multimedia").find(".blox-multimedia-text .item.playing a.load-video").first());
+
+        }
+
+        automaticSwapFromAd = false;
+        vo.embed.reverse().pop();
+        
+    }
+
+
+},
+                properties:properties            
+            });
+        }
+    }
+}
+voCatcher = true;
+
+/* ]]> */
+</script>
+
+<!--[if lt IE 7]> 
+		<script type="text/javascript" src="global/resources/scripts/_navigation/jquery.dropdown.js"></script> 
+	<![endif]--><!--[if IE]>
+	<link media="screen" href="global/resources/styles/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+	<link media="screen" href="global/resources/styles/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- Firefox 2 Styles -->
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function(){
+	// detect FF2								
+	jQuery.each(jQuery.browser, function(i, val) {
+		if(i=="mozilla" && jQuery.browser.version.substr(0,3)=="1.8"){
+			var ff2Styles = 'global/resources/styles/ff2.css'; 
+			$('<link rel="stylesheet" type="text/css" href="'+ff2Styles+'" >').appendTo("head");
+		}
+	});								
+})
+//]]>
+</script><link media="print" href="global/resources/styles/print.css" rel="stylesheet" type="text/css" /><link rel="search" type="application/opensearchdescription+xml" title="Mywesttexas.com Search" href="http://www.mywesttexas.com/search/opensearch/generic.xml" />
+
+    
+    
+
+<script type="text/javascript">
+    //<![CDATA[
+<!--
+
+yld_mgr = {};
+yld_mgr.slots = {};
+yld_mgr.container_type="js";
+yld_mgr.request_type="ac"; 
+yld_mgr.pub_id="20579328415"; //PUB ID
+yld_mgr.site_name="www.mywesttexas.com"; //SITE NAME
+yld_mgr.content_topic_id_list=["20201501"];
+yld_mgr.cstm_sctn_list=["section_front"]; //CUSTOM SECTION
+var customCategory = [""]; //CUSTOM CATEGORY
+var content_type_list=["fn_news"]; //CONTENT TYPE
+
+
+// DEFINE YOUR AD SLOTS
+
+
+yld_mgr.slots = {};
+
+yld_mgr.slots.A728_slot = {};
+yld_mgr.slots.A728_slot.ad_size_list=["728x90"];
+yld_mgr.slots.A728_slot.ad_delivery_mode="ipatf";
+yld_mgr.slots.A728_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.A728_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.A234_slot = {};
+yld_mgr.slots.A234_slot.ad_size_list=["234x60"];
+yld_mgr.slots.A234_slot.ad_delivery_mode="ipatf";
+yld_mgr.slots.A234_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.A234_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.RM_slot = {};
+yld_mgr.slots.RM_slot.ad_size_list=["1x1"];
+yld_mgr.slots.RM_slot.ad_delivery_mode="ipatf";
+yld_mgr.slots.RM_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.RM_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.A300_slot = {};
+yld_mgr.slots.A300_slot.ad_size_list=["300x250"];
+yld_mgr.slots.A300_slot.ad_delivery_mode="ipatf";
+yld_mgr.slots.A300_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.A300_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.B170_slot = {};
+yld_mgr.slots.B170_slot.ad_size_list=["170x150"];
+yld_mgr.slots.B170_slot.ad_delivery_mode="ipbtf";
+yld_mgr.slots.B170_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.B170_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.B468_slot = {};
+yld_mgr.slots.B468_slot.ad_size_list=["468x60"];
+yld_mgr.slots.B468_slot.ad_delivery_mode="ipbtf";
+yld_mgr.slots.B468_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.B468_slot.cstm_content_cat_list=[""]   //custom content category left blank if not used.
+
+yld_mgr.slots.B728_slot = {};
+yld_mgr.slots.B728_slot.ad_size_list=["728x90"];
+yld_mgr.slots.B728_slot.ad_delivery_mode="ipbtf";
+yld_mgr.slots.B728_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.B728_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.A160_slot = {};
+yld_mgr.slots.A160_slot.ad_size_list=["160x600"];
+yld_mgr.slots.A160_slot.ad_delivery_mode="ipatf";
+yld_mgr.slots.A160_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.A160_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.S160_slot = {};
+yld_mgr.slots.S160_slot.ad_size_list=["160x600"];
+yld_mgr.slots.S160_slot.ad_delivery_mode="ipstf";
+yld_mgr.slots.S160_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.S160_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.B300x600_slot = {};
+yld_mgr.slots.B300x600_slot.ad_size_list=["300x600"];
+yld_mgr.slots.B300x600_slot.ad_delivery_mode="ipbtf";
+yld_mgr.slots.B300x600_slot.ad_format_list=["Standard Graphical","Rich Media"];
+yld_mgr.slots.B300x600_slot.cstm_content_cat_list=[""];  //custom content category left blank if not used.
+
+yld_mgr.slots.S300_slot = {};
+yld_mgr.slots.S300_slot.ad_size_list=["300x250"];
+yld_mgr.slots.S300_slot.ad_delivery_mode="ipstf";
+yld_mgr.slots.S300_slot.ad_format_list=["Standard Graphical","Rich Media"]; 
+yld_mgr.slots.S300_slot.cstm_content_cat_list=[""]; //custom content category left blank if not used.
+
+
+//-->
+    //]]>
+</script>
+<script src="http://e.yieldmanager.net/script.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="xNnVfsZTVBWcZfJ0g8VA3xLs604yxyfE-XDF2qcsuS8" />
+<meta name="msvalidate.01" content="413490AB8B4C8646430571E6A42CDACD" />
+<META name="y_key" content="b7ecaaeb522529c1">
+<meta property="fb:admins" content="683724462"/>
+<meta property="fb:page_id" content="361381078011" />
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: 'your app id', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+<script src="http://hosted2.ap.org/scripts/CustomNews.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="Mywesttexas | Midland Reporter-Telegram | Top Stories" href="http://www.mywesttexas.com/search/?q=&t=&l=10&d=&d1=&d2=&s=start_time&sd=desc&c[]=top_stories&f=rss">
+
+<script>
+  $(document).ready(function(){
+  $('#local-form').hide();
+  $('input:radio[name=toggle-search]').click(function() {
+    if ($(this).attr("id")=='local-search') {
+      $("#local-form").show();
+      $("#tn-form").hide();
+
+    } else {
+      $("#local-form").hide();
+      $("#tn-form").show();    }
+  });      
+  });
+  </script>
+
+<link href="https://plus.google.com/103502793848088463078" rel="publisher" />
+
+<script type="text/javascript">
+if(document.location.protocol=='http:'){
+ var Tynt=Tynt||[];Tynt.push('dV8kckAZur3O5rab7jrHcU');Tynt.i={"cc":"1","st":true,"ap":"Read more:"};
+ (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
+}
+</script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11953893-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head><body>
+<script type='text/javascript' src='http://stats.townnews.com/shared-content/stats/common/tracker.js'></script>
+<script type='text/javascript'>
+<!--
+ if (typeof(TNStats_Tracker) !== 'undefined' && typeof(TNTracker) === 'undefined') { TNTracker = new TNStats_Tracker('mywesttexas.com'); TNTracker.setTrackerDomain('stats.townnews.com'); TNTracker.trackPageView(); }
+// -->
+</script>
+
+    
+
+<div id="popoverAd" title="Advertisement" style="display:none; position:fixed; z-index: 1002;">
+		<a class="close float-right" href="javascript:void(0);" style="color:#fff; font-weight:bold; font-size:14px;">
+			Close
+		</a>
+		<div class="clear"></div><div class="ad-position standard"><div id="ad-popover" class="advertisement"><div id="tncms-region-ads-popover" class="tncms-region-ads"></div></div></div>
+	</div>
+	<div class="ui-widget-overlay" style="display:none; z-index: 1001; background:rgba(0,0,0,0.7); opacity:1;"></div>
+	<script type="text/javascript">
+	// <![CDATA[
+		$(function(){
+			var $popover = $.Deferred()
+				.done(function(){
+					var $i = $('#popoverAd');
+						$i.find('.tncms-region-ads').show();
+						$i.css({
+							left:$(window).width()/2 - ($i.width()/2),
+							top:($(window).height()/2) - ($i.height()/2)
+						}).show();
+						$i.siblings('.ui-widget-overlay').css({
+							width: $(window).width(),
+							height: $(document).height()
+						}).show();
+						$i.find('.close').bind('click',function(){
+							$i.siblings('.ui-widget-overlay').fadeOut(750).
+							siblings('#popoverAd').animate({left:-$i.outerWidth()}, 750, 'easeInOutBack');
+						});
+				});
+
+			// logic for whether to load popover or not
+			var bloxAdpopover = $.cookie('blox-popover');
+			// No longer creating EMPTY cookie, so the ad can be section specific.
+                        //if (bloxAdpopover != 'EMPTY'){
+				if( $('#popoverAd .tncms-region-ads').children(':not("script")').length==0 ){
+					//$.cookie("blox-popover", "EMPTY", {path: '/'});
+				}else{
+					if(bloxAdpopover == null){
+						var date = new Date();
+						var minutes =5;
+						date.setTime(date.getTime() + (minutes * 60 * 1000)); 				
+					
+						$.cookie("blox-popover", "wait", {path: '/', expires: date});
+						$popover.resolve();
+					};
+				};
+			//};
+		});
+		// ]]>
+	</script>
+
+
+
+
+    <div id="blox-html-container" class="venue-app app-editorial url-default depth-2 ads-preview-false theme-none ui-theme-default grid-300_4-4-4 index business  business  ">
+
+
+
+<div id="blox-wrapper" class="container_12">
+    <div id="leaderboard-top">
+    
+	
+	
+	
+	<!-- Above the Fold 728x90 ad position-->
+	<div id="top-leaderboard-spot"><script type="text/javascript">yld_mgr.place_ad_here("A728_slot");</script></div>
+
+	<!--Above the Fold 234x60 ad position-->
+	<div id="top-tile-spot"><script type="text/javascript">yld_mgr.place_ad_here("A234_slot");</script></div>
+
+
+    
+</div>
+
+
+    <!--header start-->
+    <div id="blox-header">
+        
+        
+        <h1 class="vcard"><a href="/" class="fn url org" rel="index">MyWestTexas.com</a></h1>
+        <div id="header-sponsor">
+    
+	<div id="tncms-region-ads-header-sponsor" class="tncms-region-ads"></div>
+    
+</div>
+
+<script type="text/javascript">
+	recognizedText = "";
+	loggedInText = "";
+</script>
+
+<div id="blox-user-panel" class="standard blox-loading blox-user-panel ui-widget ui-widget-content ui-corner-all">
+    <dl style="display:none;">
+        
+        <dt id="uIcon" class="uIcon">
+            <img id="defaultAvatar" class="blox-img-loader" alt="default avatar" src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_jquery_plugins/resources/images/place_holder.png?_dc=1375274391" data-original="editorial/editorial-core-base/resources/images/user_70.png" />
+        </dt>
+        
+        <dd id="uUser" class="uUser">
+            Welcome to the site! Login or Signup below.
+        </dd>
+        <dd id="uNav" class="uNav">
+    <a href="javascript:void(0)"  class="open-modal-login-panel login-link" rel="nofollow">Login</a><span class="panel-delimiter">|</span><a class="signup-link" href="https://mywesttexas-dot-com.bloxcms.com/users/signup/?referer_url=/business/" rel="nofollow">Signup</a>
+        </dd>
+        <dd id="uNavReauth" class="uNavReauth">
+            <a href="javascript:void(0)"  class="open-modal-login-panel login-link" rel="nofollow">Login</a><span class="panel-delimiter">|</span><a class="login-link" href="/users/login/?referer_url=/users/admin" rel="nofollow">My Dashboard</a><span class="panel-delimiter">|</span><a class="signup-link" href="https://mywesttexas-dot-com.bloxcms.com/users/signup/?referer_url=/business/" rel="nofollow">Register</a>
+            <form id="tncms-logout-form" class="logout-form" method="post" action="https://mywesttexas-dot-com.bloxcms.com/users/logout/" >
+        
+                <fieldset style="display: none">
+                    <input type="hidden" name="referer_url" value="/business/" />
+                </fieldset>
+        
+            </form>
+            <script type="text/javascript">
+		function tncms_logout() {
+                    savelogoutParams();
+                    oForm = document.getElementById('tncms-logout-form');
+                    oForm.submit();
+                    return false;        
+                }			
+            </script>
+        </dd>
+        <dd id="uNavOut" class="uNavOut">
+            <form id="tncms-logout-form2" class="logout-form" method="post" action="https://mywesttexas-dot-com.bloxcms.com/users/logout/" >
+            
+                <fieldset style="display: none">
+                    <input type="hidden" name="referer_url" value="/business/" />
+                </fieldset>
+            
+                <fieldset>
+                <a class="logout-link" href="javascript:tncms_logout();">Logout</a><span class="panel-delimiter">|</span><a href="https://mywesttexas-dot-com.bloxcms.com/users/admin/" rel="nofollow">My Dashboard</a>
+                </fieldset>
+            </form>
+            
+        </dd>
+    </dl>
+</div>
+<script type="text/javascript">
+/*<![CDATA[*/
+// login display based on cookie
+    var sUsername = $.cookie('tncms-screenname');
+    var sDisplayname = sUsername;
+    var sAuthToken = $.cookie('tncms-authtoken');
+    var sAvatar = $.cookie('tncms-avatarurl');
+    var insertableUserName = "";
+    if(sUsername != null){insertableUserName=", <a href=\"/users/profile/"+sUsername.replace(/\+/g," ")+"\">"+sDisplayname.replace(/\+/g,"&nbsp;")+"</a>";}
+    var welcomeMessage = "Welcome back"+insertableUserName;    
+
+    if ((sAuthToken == null) && (sUsername == null)) {
+        $('#post-comment').hide();
+        $('#logout-dialog').hide();
+        $('.uNavOut').hide();
+        $('.uNavReauth').remove();
+        $('.not-logged-in').show();
+} else if ((sAuthToken == null) && (sUsername != null)) {
+        if(typeof(recognizedText)!="undefined"){if(recognizedText!=""){
+            welcomeMessage = recognizedText.replace("[USER_NAME]",insertableUserName);
+        }}
+        $('#post-comment').hide();
+        $('#logout-dialog').hide();
+        $('.uUser').html(welcomeMessage);
+        $('.uNavOut').remove();
+        $('.uNav').remove();
+        $('.uNavReauth').show();
+        $('.not-logged-in').show();
+
+    } else {
+        if(typeof(loggedInText)!="undefined"){if(loggedInText!=""){
+            welcomeMessage = loggedInText.replace("[USER_NAME]",insertableUserName);
+        }}
+        $('#login-dialog').hide();
+        $('.uUser').html(welcomeMessage);
+        $('.uNav').hide();
+        $('.uNavOut').show();
+        $('.uNavReauth').hide();
+
+        $('#post-comment').show();
+        $('.not-logged-in').hide();
+        $('.logged-in').show();
+    }
+    if((sAvatar!=null)){
+        if($('#customAvatar').length > 0){
+            $('#defaultAvatar').hide();
+            $('#customAvatar').show();
+        }else{           
+            $('#defaultAvatar').remove();
+            $('.uIcon').each(function(index) { 
+                if ($(this).children().length==0){
+                    $(this).append('<img class="custom-avatar" src="'+sAvatar+'" alt="custom avatar"/>');
+                }
+            });    
+        }
+    }
+    // show panel when user info is in place
+    $('div.blox-user-panel dl').show();
+    $('.blox-loading.blox-user-panel').removeClass('blox-loading');
+// end login display based on cookie
+        function tncms_logout2() {
+			savelogoutParams();
+            oForm = document.getElementById('tncms-logout-form2');
+            oForm.submit();
+            return false;        
+        }
+		
+		
+	function savelogoutParams() {		
+		var cur_params = window.location.href.match(/\?.*/);
+		if (cur_params){
+			cur_params = cur_params.toString();
+			var orig_refer = $(".logout-form").find('input[name="referer_url"]').val();
+			if (orig_refer) orig_refer = orig_refer.toString();
+			var cur_paramsString = cur_params.replace(/[\?&]_dc=[0-9.]*/,"");
+			if (orig_refer.indexOf("?") != -1){
+				cur_paramsString = cur_paramsString.replace("?","&");
+			}
+			if (cur_paramsString){
+				var final_refer = orig_refer+cur_paramsString; 
+				$(".logout-form").find('input[name="referer_url"]').val(final_refer);
+				var test_val = $(".logout-form").find('input[name="referer_url"]').val();
+			}
+		}	
+	}				
+/*]]>*/        
+</script>
+
+
+        <div class="top-right-one">
+            <div id="tncms-region-top-right-one" class="tncms-region "><div id="tncms-block-19380" class="tncms-block">
+
+<div id="weather-bug">
+    <div id="icon" class="blox-wx-icon-50">
+        <a href="http://weather.mywesttexas.com/US/TX/Midland.html" title="Detailed Forecast" >
+        <img class="blox-transparency" src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_weather/resources/images/weather_icons/icons_50x50/21.png?_dc=1361977249" alt="Clear" />
+        <!--<span class="weather-icon w21"></span>-->
+        </a>
+    </div>
+    <div id="temp"><a href="http://weather.mywesttexas.com/US/TX/Midland.html" title="Detailed Forecast" >84&deg;</a></div>
+    <div id="conditions"><a href="http://weather.mywesttexas.com/US/TX/Midland.html" title="Detailed Forecast" >Clear</a></div>
+</div></div></div>
+        </div>
+
+        <div class="top-right-icons">
+<a href="http://local.mywesttexas.com/"><img border="0" src="global/resources/images/_site/busdir.gif"></a>
+<a href="http://www.mywesttexas.com/placeanad/"><img border="0" src="global/resources/images/_site/placead.gif"></a>
+<a href="https://www.myhearstnewspaper.com/Midland/Subscribe1_new.aspx"><img border="0" src="global/resources/images/_site/subscribe.gif"></a>
+        </div>
+
+
+    </div><!--navigation start-->
+
+<ul id="nav" class="dropdown dropdown-linear
+">
+    <li class="inactive first-nav-link"><a href="/" class="dir">Home</a>
+        <ul> 
+            <li><a href="/calendar/">Calendar</a></li>
+            <li><a rel="external" href="http://www.legacy.com/obituaries/mywesttexas/">Obituaries</a></li>
+            <li><a href="/midlandcrime/">Crime</a></li>
+            <li><a href="http://weather.mywesttexas.com/US/TX/Midland.html">Weather</a></li>
+            <li style="background-color:#739fe0;"><a rel="external" href="http://www.mrt-e.com/" target="_blank">MRTe</a></li>
+            <li><a href="/submissions/">Submissions</a></li>
+            <li><a rel="external" href="https://www.myhearstnewspaper.com/Midland/Subscribe1_new.aspx">Subscribe</a></li>
+            <li><a href="/advertising/">Advertising FAQ’s</a></li>
+            <li><a href="/mwtlive/">MWTLive</a></li>
+        </ul>
+    </li>
+    <li class="inactive"><a href="/news/" class="dir">News</a>
+        <ul>
+            <li><a rel="external" href="http://www.legacy.com/obituaries/mywesttexas/">Obituaries</a></li>
+            <li><a href="/news/opinion/">Opinion</a></li>
+            <li><a href="/news/education/">Education</a></li>
+            <li><a href="/editors_picks/">Editor’s Picks</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/data/">Data</a></li>
+            <li><a href="/Photos/">Photos</a></li>
+            <li><a rel="external" href="http://www.myopenforum.com" target="_blank">MyOpenForum</a></li>
+        </ul>
+    </li>
+    <li class="inactive"><a href="/sports/" class="dir">Sports</a>
+        <ul>
+            <li><a href="/sports/blogs/">Blogs</a></li>
+            <li><a href="/football/">Football</a></li>
+            <li><a href="/bulldogs/">Bulldogs</a></li>
+            <li><a href="/rebels/">Rebels</a></li>
+            <li><a href="/chaps/">Chaps</a></li>
+            <li><a href="/rockhounds/">RockHounds</a></li>
+            <li><a href="/cowboys/">Cowboys</a></li>
+            <li><a href="/westtexassports/">West Texas Sports</a></li>
+            <li><a href="/sports/guidelines/">Sports Guidelines</a></li>
+         </ul>
+    </li>
+    <li class="active-horizontal"><a href="/business/" class="dir">Business</a>
+        <ul>
+            <li><a href="/business/oil/">Oil</a></li>
+            <li><a href="http://local.mywesttexas.com">Business Directory</a></li>
+            <li><a href="/business/fyi/">FYI</a></li>
+            <li><a href="/business/healthy_living">Healthy Living</a></li>
+            <li><a href="/press_release/">Press Releases</a></li>
+        </ul>
+    </li>
+    <li class="inactive"><a href="/pulse/" class="dir">Pulse</a>
+        <ul>
+            <li><a href="/calendar/">Calendar</a></li>
+            <li><a href="/entertainment/food/">Food</a></li>
+            <li><a href="/entertainment/movies/">Movies</a></li>
+            <li><a rel="external" href="http://tvlistings.zap2it.com/tvlistings/ZCGrid.do?aid=midtexadn">TV Times</a></li>
+        </ul>
+    </li>
+    <li class="inactive"><a href="/life/" class="dir">West Texas living</a>
+        <ul>
+            <li><a href="/life/faith/">Faith</a></li>
+            <li><a href="/life/namesfaces/">Names & Faces</a></li>
+            <li><a href="/life/tallcityteens/">Tall City Teens</a></li>
+            <li><a href="/life/celebrations/">Celebrations</a></li>
+            <li><a rel="external" href="http://www.mywesttexas.com/app/comics/comics.html">Comics</a></li>
+            <li><a href="/entertainment/games/">Puzzles & Games</a></li>
+            <li><a rel="external" href="http://www.mywesttexas.com/coupons/">Coupons</a></li>
+            <li><a href="/restaurants/">Inspection Reports</a></li>
+            <li><a href="/life/guidelines/">Celebrations Guidelines</a></li>
+        </ul>
+    </li>
+
+    <li class="inactive"><a rel="external" href="http://www.mywesttexas.com/photos" class="dir" target="_blank">Social</a>
+        <ul>
+            <li><a rel="external" href="https://www.facebook.com/TheReporterTelegram">Facebook</a></li>            
+            <li><a rel="external" href="http://www.twitter.com/mwtnews">Twitter News</a></li>
+            <li><a rel="external" href="http://www.twitter.com/mwtsports">Twitter Sports</a></li>
+            <li><a rel="external" href="https://foursquare.com/v/midland-reportertelegram/4bacb655f964a52007063be3">Foursquare</a></li>
+            <li><a rel="external" href="https://plus.google.com/103502793848088463078">Google+</a></li>
+            <li><a rel="external" href="http://www.youtube.com/mywesttexas" class="dir">YouTube</a></li>
+        </ul>
+    </li>
+<li class="inactive"><a rel="external" href="http://www.mywesttexas.com/submissions/" class="dir" target="_blank">Reader Services</a>
+        <ul>
+            <li><a rel="external" href="https://www.myhearstnewspaper.com/Midland/Subscribe1_new.aspx">Subscribe</a></li>
+            <li><a rel="external" href="https://www.myhearstnewspaper.com/Midland/login.aspx?ReturnUrl=%2fMidland%2fSecurePage%2fselectaccount.aspx">My Account</a></li>
+            <li><a rel="external" href="https://www.myhearstnewspaper.com/Midland/login.aspx?ReturnUrl=%2fMidland%2fSecurePage%2fVacationStop.aspx">Vacation Hold</a></li>
+            <li><a rel="external" href="http://www.mywesttexas.com/placeanad/">Place an Ad</a></li>          
+            <li><a rel="external" href="http://www2.mywesttexas.com/nie/">Newspapers In Education</a></li>
+            <li><a rel="external" href="https://www.1.dat-e-baseonline.com/front/deb.asp?zx=295">Login to Contests</a></li>
+            <li><a rel="external" href="https://www.1.dat-e-baseonline.com/front/deb.asp?Action=reg&zx=295">Register for Contests</a></li>
+            <!--<li><a rel="external" href="http://mywesttexas.mycapture.com/mycapture/index.asp">Purchase a Photo</a></li>-->
+            <li><a href="/contact_us/">Contact Us</a></li>
+        </ul>
+    </li>
+    <li class="nav-secondary"><a href="/jobs/" class="dir">Jobs</a>
+    </li>
+    <li class="nav-secondary"><a href="/homes/" class="dir">Homes</a>
+    </li>
+     <li class="last-nav-link nav-secondary "><a href="/classifieds/" class="dir">Classifieds</a>
+    </li>
+    <li class="nav-secondary"><a href="http://findnsave.mywesttexas.com/" class="dir">Shopping</a>
+    </li>
+    <li class="nav-secondary"><a href="/classifieds/vehicle/car/" class="dir">Auto</a>
+    </li>
+</ul><!--container start-->
+    <div id="blox-container" class="container_12">
+
+        <div class="clear"></div><div id="pencil">
+    
+	<div id="tncms-region-ads-pencil" class="tncms-region-ads"></div>
+    
+</div>
+<div id="tncms-region-top-two-index" class="tncms-region "><div id="tncms-block-710636" class="tncms-block"><div class="blox-html-asset">
+			
+
+			
+            			
+        			<div id="textadwrap">
+<a href="http://www.halo.com/promo-calendars/promotional-wall-calendars.aspx">HALO wall calendars</a> | <a href="http://www.reversemortgagelendersdirect.com/texas-reverse-mortgage/">HECM Texas</a>
+</div>
+    			
+    		</div>
+		</div></div><div class="clear"></div>
+            <div id="blox-left-col" class="grid_8">
+            
+                
+                <div id="blox-index" class="blox-content">
+                
+<div id="blox-breadcrumbs">
+<ul>
+        <li>
+            <a href="/">
+            Home
+            </a>
+        </li>
+</ul>
+<div class="clear"></div>
+</div>
+
+                
+                
+                
+                <div id="index-section-title">
+                    <h1 class="index-section-flag">
+                        Business
+                    </h1>
+                
+	<a href="/search/?q=&t=article&l=10&d=&d1=&d2=&s=start_time&sd=desc&c[]=business&f=rss"><img src="global/resources/images/rss-icon.gif" class="index-title-icon" alt="rss feed" /></a>
+	<div id="section-sponsor">
+    
+	<div id="tncms-region-ads-section-sponsor" class="tncms-region-ads"></div>
+    
+</div>
+</div>
+                    
+                    
+                    
+                        <div id="center-one-index">
+                            <div id="tncms-region-center-one-index" class="tncms-region "><div id="tncms-block-496655" class="tncms-block"><div class="blox-html-asset">
+			
+
+			
+            			
+        			<a href="http://bit.ly/JnTr2H " target="_blank"><img src="http://www.mywesttexas.com/app/art/MidlandCoC-Umbrella0Banner-620x150-1.jpg" width="620" height="150" border="0"></a>
+    			
+    		</div>
+		</div><div id="tncms-block-568639" class="tncms-block">
+
+
+
+
+
+
+	
+<div class="blox-top-story">
+    
+	<div class="blox-top-story-holder">
+
+		
+		<div class="lead-presentation-photo">
+			<div class="photo-container">
+			<a href="/top_stories/article_e911b274-0f76-11e3-bc6a-001a4bcf887a.html" title="Energy lobbyists set sights on lesser prairie chicken">
+				
+                                    <img class="story-image" alt="&lt;p&gt;Pumpjack at sunset Thursday in Midland. James Durbin/Reporter-Telegram&lt;/p&gt;
+" src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/assets/v3/editorial/f/88/f88791ba-a433-51bd-a692-9c00635fae08/509c5a225d05a.preview-300.jpg"  />
+                                
+			</a>
+			</div>
+		
+	
+		</div>
+		
+		<div class="blox-asset-content blox-asset-content-extension" >
+			
+            
+			<h3 class="blox-headline"><a href="/top_stories/article_e911b274-0f76-11e3-bc6a-001a4bcf887a.html" title="Energy lobbyists set sights on lesser prairie chicken">Energy lobbyists set sights on lesser prairie chicken</a></h3>
+			
+             
+			<ul class="blox-icons">
+                                    
+                
+				<li></li>
+                
+				<li></li>
+                
+				<li>
+            <a href="/top_stories/article_e911b274-0f76-11e3-bc6a-001a4bcf887a.html" class="tn-tooltip" title="1 image">
+            
+            <span class="asset-related-icon image"></span>
+        
+            </a></li>
+            </ul>
+			
+			
+			
+			<p>Some of Texas’ biggest oil and gas lobbyists are hoping to take control of the fate of the fast-disappearing lesser prairie chicken — much like they did with the dunes sagebrush lizard this year.</p>
+			
+            <ul class="blox-comments">
+				
+				<li>
+					
+                                            
+                                                <img src="global/resources/images/icon-03.gif" alt="icon" />
+                                            
+					
+					<span class="blox-updated">
+					posted: August 27
+					</span>
+				</li>
+				
+					<li>
+					
+        <span class="blox-no-comments" >
+        
+            <span class="ui-icon ui-icon-comment blox-comments-icon"></span><a href="/top_stories/article_e911b274-0f76-11e3-bc6a-001a4bcf887a.html#user-comment-area">
+                
+                    Comments
+                
+                 <em>(0)</em>
+            </a>
+        
+        </span>
+    
+					</li>	
+				
+            </ul>
+			
+		</div>
+		
+		
+        
+		
+			
+		
+
+
+	
+	<div class="blox-sub-title">
+		<h4>
+        	
+                More From 
+			
+        </h4>
+	</div>	 
+    	<div class="blox-local-news-column">
+        	<ul class="blox-list">
+		
+    		<li>
+				<h3><a href="/top_stories/article_d9c5b9e4-0ebf-11e3-9373-001a4bcf887a.html" title="Hold the water: Some firms fracturing without it">
+					Hold the water: Some firms fracturing without it</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/top_stories/article_63cd9b82-0d3c-11e3-a436-001a4bcf887a.html" title="Contracting crimes reveal dark side to booming housing, construction sector">
+					Contracting crimes reveal dark side to booming housing, construction sector</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/oil/article_512bcab2-0c60-11e3-a6d0-001a4bcf887a.html" title="US rig count falls 15 this week to 1,776">
+					US rig count falls 15 this week to 1,776</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_68c31486-0c11-11e3-93a1-0019bb2963f4.html" title="Building Permits 8/25">
+					Building Permits 8/25</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_329376da-0c11-11e3-8604-0019bb2963f4.html" title="Next few earnings reporting seasons may just be plain boring">
+					Next few earnings reporting seasons may just be plain boring</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_e4472f3a-0c10-11e3-80f3-0019bb2963f4.html" title="Texas’ long-term prosperity should continue, but challenges loom">
+					Texas’ long-term prosperity should continue, but challenges loom</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_9a0df78c-0c10-11e3-ab20-0019bb2963f4.html" title="FTC finds 12 of 39 funeral homes in Texas with significant violations">
+					FTC finds 12 of 39 funeral homes in Texas with significant violations</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_19fdae2a-0c10-11e3-85bb-0019bb2963f4.html" title="Couple needs to get financial house in order before buying one">
+					Couple needs to get financial house in order before buying one</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_83ffab6c-0c0f-11e3-9e67-0019bb2963f4.html" title="Gymboree leaves mall for larger space in The Commons">
+					Gymboree leaves mall for larger space in The Commons</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_f0b7111a-0c0e-11e3-85ca-0019bb2963f4.html" title="Mom of three boys opens men’s clothing store">
+					Mom of three boys opens men’s clothing store</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/oil/article_bf0bbd6a-0ba9-11e3-b3b7-0019bb2963f4.html" title="Work continues on plan to conserve lesser prairie chicken">
+					Work continues on plan to conserve lesser prairie chicken <em>(3)</em></a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_58314e2a-0b86-11e3-a5ee-001a4bcf887a.html" title="New Chamber leader: Midland can’t let fear of next bust hold it back">
+					New Chamber leader: Midland can’t let fear of next bust hold it back <em>(26)</em></a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/article_185801fe-0b86-11e3-b87b-001a4bcf887a.html" title="Midland Chamber gives out volunteer awards">
+					Midland Chamber gives out volunteer awards</a>
+				</h3>
+			</li>
+    		
+
+
+		
+    		<li>
+				<h3><a href="/business/oil/article_9d446cf2-091c-11e3-b3a1-001a4bcf887a.html" title="Oil falls near $107 a barrel; pump price steady">
+					Oil falls near $107 a barrel; pump price steady</a>
+				</h3>
+			</li>
+    
+			</ul>
+    	</div>
+			
+
+		
+	 </div>
+	<div class="clear"></div>
+</div>	
+
+<div class="clear"></div>
+</div><div id="tncms-block-83357" class="tncms-block"><iframe src="http://widget.newsinc.com/thumb_midlandpost01.html?wid=1614&cid=504&sitesection=midlandreporter_biz&freewheel=90006" scrolling="no" height="165" width="600" frameborder="0" scrolling="no"></iframe></div></div>
+                        </div>
+                    <div id="tncms-region-center-one-index-and-assets" class="tncms-region "></div><!--<div id="center-top">
+    
+	-->
+
+	<!--Below the Fold 468x60 ad position-->
+	<!--<script type="text/javascript">yld_mgr.place_ad_here("B468_slot");</script>-->
+
+   <!-- -->
+<!--</div>-->
+
+            
+                    <div id="blox-top-left" class="grid_4 alpha clear-left">
+                    <div id="tncms-region-center-two-index" class="tncms-region "><div id="tncms-block-19403" class="tncms-block">
+</div></div>    
+                    </div>
+                    
+                    <div id="blox-top-right" class="grid_4 omega">
+                    <div id="center-right-top">
+    
+        <div id="tncms-region-ads-center-right-top" class="tncms-region-ads"></div>
+    
+</div><div id="tncms-region-center-three-index" class="tncms-region "><div id="tncms-block-19404" class="tncms-block"></div></div><div id="center-right-bottom">
+    
+        <div id="tncms-region-ads-center-right-bottom" class="tncms-region-ads"></div>
+    
+</div>
+                    </div>
+                
+                    
+                    
+                    <div class="clear"></div>
+                    
+                    
+                    <div id="center-four-index">
+                        <div id="tncms-region-center-four-index" class="tncms-region "></div>
+                    </div>        
+                    <div id="center-middle">
+    
+	<div id="tncms-region-ads-center-middle" class="tncms-region-ads"></div>
+    
+</div>
+
+            
+                    
+            
+                    <div id="blox-bottom-left" class="grid_4 alpha clear-left">
+                    <div id="tncms-region-center-five-index" class="tncms-region "></div>    
+                    </div>
+                    
+                    <div id="blox-bottom-right" class="grid_4 omega">
+                    <div id="tncms-region-center-six-index" class="tncms-region "></div>
+                    </div>
+                    
+                
+                    <div class="clear"></div>
+                    
+                    <div id="center-seven-index"> 
+                        <div id="tncms-region-center-seven-index" class="tncms-region "></div>
+                    </div>    
+                    <div id="center-bottom">
+    
+	<div id="tncms-region-ads-center-bottom" class="tncms-region-ads"></div>
+    
+</div>
+      
+                <div id="blox-bottom-lower-left" class="grid_4 alpha clear-left">
+                    <div id="tncms-region-center-eight-index" class="tncms-region "></div>
+                </div>
+                
+                <div id="blox-bottom-lower-right" class="grid_4 omega">
+                    <div id="tncms-region-center-nine-index" class="tncms-region "></div>
+                </div>
+                
+                    
+                    
+                    <div class="clear"></div>
+                    
+                    <div id="center-ten-index">
+                        <div id="tncms-region-center-ten-index" class="tncms-region "></div>
+                    </div>
+                                
+                </div>
+            
+            </div>   
+            <div id="blox-right-col" class="grid_4">
+                
+   <div id="SocialWapper">
+<div id="socialtext">
+      <h4>Follow Us:</h4>
+    </div>
+    <div id="socialbuttons">
+            <a href="http://www.facebook.com/TheReporterTelegram" target="_blank"><img src="http://www.mywesttexas.com/app/art/buttons/34x34_fb.gif" width="34" height="34" border="none"></a>
+    </div>
+    <div id="socialbuttons2">
+        <a href="http://twitter.com/mwtnews" target="_blank"><img src="http://www.mywesttexas.com/app/art/buttons/34x34_twitter.gif" width="34" height="34" border="none"></a>
+    </div>
+    <div id="socialbuttons2">
+        <a href="https://foursquare.com/v/midland-reportertelegram/4bacb655f964a52007063be3" target="_blank"><img src="http://www.mywesttexas.com/app/art/buttons/34x34_foursquare.gif" width="34" height="34" border="none"></a>
+    </div>
+    <div id="socialbuttons3">
+        <a href="http://www.mywesttexas.com/rss/" target="_blank"><img src="http://www.mywesttexas.com/app/art/buttons/34x34_rss.gif" width="34" height="34" border="none"></a>
+    </div>
+    <div id="socialbuttons4">
+        <a href="https://plus.google.com/103502793848088463078?prsrc=3" target="_blank"><img src="http://www.mywesttexas.com/app/art/buttons/gplus-34.gif" width="34" height="34" border="none"></a>
+    </div>
+
+</div>
+
+
+
+
+<div id="blox-header-search">
+
+<div id="form-toggle">
+<form action="" method="get">
+<label><input name="toggle-search" type="radio" id="tn-search" value="" checked="checked"/>Site</label>
+<label><input name="toggle-search" type="radio" id="local-search"/>Businesses</label>
+</form>
+</div>
+<div id="local-form" style="display:none;">
+<a HREF="http://local.mywesttexas.com/" rel="external">
+local.mywesttexas.com Search</a>
+<!-- SiteSearch Google -->
+<form name="localsearch" method=GET action="http://local.mywesttexas.com/search" target="_blank">
+<input TYPE=text class="search-bar" name="keyword"  value="" onKeyUp="document.sitesearch.q.value=this.value;"/>
+<input type="submit" class="search-submit" name=btnG VALUE="Go"/>
+</form>
+<!-- SiteSearch Google -->
+</div>
+
+
+
+
+
+<div id="tn-form">        
+        <a href="/search?q=&amp;t=article&amp;l=25&amp;d=&amp;d1=&amp;d2=&amp;s=start_time&amp;sd=desc&amp;f=html&amp;adv=true" class="advanced-search">Advanced Search</a>
+        
+        <form name="sitesearch" id="blox-search-form" action="/search" method="get">
+            <div>
+                <input type="hidden" name="t" value="article" />
+                <input name="q" type="text" class="search-bar" value="" size="25" onKeyUp="document.localsearch.keyword.value=this.value;" />
+                <input type="hidden" id="sd" name="sd" value="desc" />
+                <input type="hidden" id="s" name="s" value="start_time" />                
+                <input class="search-submit" type="submit" value="Go" />
+            </div>
+        </form>
+</div>
+
+</div>
+    <div id="rail-top">
+
+    
+	
+
+	<!-- Above the Fold 300x250 ad position-->
+	<script type="text/javascript">yld_mgr.place_ad_here("A300_slot");</script> 
+
+    
+</div>
+
+
+   <div id="tncms-region-side-rail-top" class="tncms-region "><div id="tncms-block-445143" class="tncms-block"><div class="blox-html-asset">
+			
+        			<div class="blox-title">
+            				
+    
+        <h3 class="block-title-color" style="background-color:white;">
+                  Business Videos
+                
+        </h3>
+        			</div>
+        			
+        		
+
+			
+            			
+        			<iframe src='http://embed.newsinc.com/Thumbnail/iframe.html?wid=8896&cid=504&freewheel=90006&sitesection=midlandreporter_nws_biz_sec&parent=ndn_sliding_launcher_1&type=slider' height='250' width='300' frameborder='no' scrolling='no' noresize marginwidth='0px' marginheight='0px'></iframe>
+    			
+    		</div>
+		</div></div>
+   
+
+ 
+   
+    <div id="rail-middle">
+    
+	
+	<!--Spans the Fold 300x600 ad position-->
+	<script type="text/javascript">yld_mgr.place_ad_here("B300x600_slot");</script>
+
+        
+</div>
+
+   
+
+   <div id="tncms-region-side-rail-middle" class="tncms-region "><div id="tncms-block-19459" class="tncms-block"></div></div><div id="rail-bottom">
+    
+    <div id="tncms-region-ads-rail-bottom" class="tncms-region-ads"></div>
+    
+</div>
+<div id="rail-bottom-secondary">
+    
+    <div id="tncms-region-ads-rail-bottom-secondary" class="tncms-region-ads"></div>
+    
+</div>
+<div class="clear"></div><div id="tncms-region-side-rail-bottom" class="tncms-region "><div id="tncms-block-84934" class="tncms-block"></div></div>
+            </div>
+            
+            <div class="clear"></div>
+   
+    
+
+
+        <div class="clear"></div>
+        
+    </div>
+
+        <div class="clear"></div>
+
+        <div id="leaderboard-bottom">
+    
+	
+		
+
+	<!-- Below the Fold 728x90 ad position-->
+	<script type="text/javascript">yld_mgr.place_ad_here("B728_slot");</script>
+
+    
+</div>
+
+
+        <div class="clear"></div>
+
+    <!-- end main container -->
+    </div>
+
+<!-- end wrapper -->
+
+
+<div id="blox-footer">
+    <!--bottom-block-holder start-->
+    <div class="blox-bottom-block-holder">
+        <div class="footer-section-block start">
+
+            <dl class="custom-footer-column">
+                <dt class="news"><a href="/news/">News</a></dt>
+                <dd><a href="/news/top_stories/">Top Stories</a></dd>
+                <dd><a href="/news/local/">Local News</a></dd>
+                <dd><a href="/news/state_and_national/">State and National</a></dd>
+                <dd><a href="/news/crime/">Crime Reports</a></dd>
+                <dd><a rel="external" href="http://www.legacy.com/mywesttexas/DeathNotices.asp">Obituaries</a></dd>
+                <dd><a href="/news/opinion/">Editorial & Opinion</a></dd>
+                <dd><a href="/rss/">Mywesttexas Rss</a></dd>
+            </dl>
+            <dl class="custom-footer-column">
+                <dt class="sports"><a href="/sports/" class="dir">Sports</a></dt>
+                    <dd><a href="/sports/top_stories/">Top Stories</a></dd>
+                <dd><a href="/sports/highschool/football/">High School Football</a></dd>
+                    <dd><a href="/sports/highschool/football/standings/">HS Football Standings</a></dd>
+                    <dd><a href="/sports/guidelines/">Sports Guidelines</a></dd>
+                    <dd><a rel="external" href="http://www.mywesttexasfootball.com/">MyWestTexas Football</a></dd>
+            </dl>
+            <dl class="custom-footer-column">
+                <dt class="business"><a href="/business/">Business</a></dt>
+                <dd><a href="/business/oil/">Oil & Gas</a></dd>
+                    <dd><a href="/business/fyi/">FYI</a></dd>
+                    <dd><a href="/business/healthy_living">Healthy Living</a></dd>
+                <dd><a href="http://local.mywesttexas.com">Business Directory</a></dd>
+            </dl>
+            <dl class="custom-footer-column">
+                <dt class="entertainment"><a href="/entertainment/">Entertain</a></dt>
+                <dd><a href="/entertainment/movies/">Movies</a></dd>
+                    <dd><a href="/frame/?s=horoscopes.astrology.com/tn/horo/dailyover.html&h=1600">Horoscopes</a></dd>
+                <dd><a href="/entertainment/games/">Games</a></dd>
+                <dd><a href="/entertainment/comics/">Comics</a></dd>
+                <dd><a rel="external" href="http://tvlistings.zap2it.com/tvlistings/ZCGrid.do?aid=midtexadn">TV Times</a></dd>
+            </dl>
+            <dl class="custom-footer-column">
+                <dt class="life"><a href="/life/">Life</a></dt>
+                <dd><a href="/life/top_stories/">Top Stories</a></dd>
+                <dd><a href="/life/faith/">Religion & Faith</a></dd>
+                <dd><a href="/life/celebrations/">Weddings & Celebrations</a></dd>
+                <dd><a href="/life/guidelines/">Lifestyle Guidelines</a></d>
+                <dd><a href="/submissions/">Lifestyle Forms</a></dd>
+            </dl>
+            <dl class="custom-footer-column">
+                <dt class="other">Other Stuff</dt>
+                <dd><a href="/blogs/">Blogs</a></dd>
+                <dd><a href="/video/">Video</a></dd>
+                <dd><a href="/classifieds/">Classifieds</a></dd>
+                <dd><a href="/classifieds/homes/">Homes</a></dd>
+                <dd><a href="/car/">Cars</a></dd>
+                <dd><a rel="external" href="http://jobsearch.local-jobs.monster.com/Search.aspx?wt.mc_n=mrtjobs&ch=mrtjobs&q=&where=Midland,%20Tx&re=130&cy=us&brd=1">Find Midland Jobs</a></dd>
+                <dd><a href="https://www.myhearstnewspaper.com/Midland/Subscribe1_new.aspx">Home Delivery</a></dd>
+                <dd><a href="/privacypolicy/">Privacy Policy</a></dd>
+                <dd><a href="/terms/">Terms of use</a></dd>
+                
+            </dl>
+        </div>
+    </div>
+        <div class="footer-section-block contact">
+        <h4 class="sub"><a href="/contact_us/">Contact us</a></h4>
+            <p>MyWestTexas.com<br />
+                <p>Midland Reporter-Telegram</p>
+                <p><strong>Phone number:</strong> (432) 682-5311  	</p>
+                <p><strong>Address:</strong> 201 E Illinois Ave<br />
+        Midland, TX 79701</p>
+        </div>
+
+        <div class="footer-section-block search end">
+            <h4>Search</h4>
+            <form id="footer-search" method="get" action="/search">
+                <p>
+                    <!--<input type="hidden" name="s" value="start_time" />
+                    <input type="hidden" name="sd" value="desc" />-->
+                    <input type="hidden" name="d1" value="1 year ago" />
+                    <input class="search-bar" type="text" name="q" value="" />
+                    <input class="search-submit" type="submit" value="Search" />
+                </p>
+                <p><label>Search in:</label></p>
+                <div class="search-options">
+                
+<div id="searchSectionsFooter">
+
+    <input type="hidden" name="c[]" id="sectionCollectionFooter" value="" />
+    <input type="hidden" name="t" id="typeCollectionFooter" value="" />        
+    <div class="col1">
+
+        <input type="checkbox" class="all checked" value="all" checked="checked" />
+        <label>All</label>
+        <br />
+
+        <input type="checkbox" class="section-box regular" value="news*" />
+        <label>News</label>
+        <br />
+
+        <input type="checkbox" class="section-box regular" value="sports*" />
+        <label>Sports</label>
+        <br />
+
+        <input type="checkbox" class="section-box regular" value="entertainment*" />
+        <label>Entertainment</label>
+        <br />
+
+    </div>
+    
+
+    <div class="col2">
+
+        <input type="checkbox" class="section-box regular" value="business*" />
+        <label>Business</label>
+        <br />
+
+        <input type="checkbox" class="section-box regular" value="opinion*" />
+        <label>Opinion</label>
+        <br />
+
+        <input type="checkbox" class="type-box regular" value="image OR collection" />
+        <label>Photo Galleries</label>
+        <br />
+
+    </div>
+    
+    
+</div>    
+<script type="text/javascript">
+$(document).ready(function(){
+    //$(".search-options input[type='checkbox'].checked").click();
+//all button interactions
+    var regularBox = $(".search-options input[type='checkbox'].regular");
+    var allBox = $(".search-options input[type='checkbox'].all");
+    // uncheck all option if section or type is chosen
+    $(regularBox).click(function() {
+        $(allBox).each(function(){
+            if($(this).is(':checked')){
+                this.checked = !this.checked;
+            }
+        });
+    });
+    // uncheck section and type filters if all is selected
+    $(allBox).click(function() {
+        $(regularBox).each(function(){
+            if($(this).is(':checked')){
+                this.checked = !this.checked;
+            }
+        });
+    });
+});
+
+// rework section list
+    function updateSectionListFooter() {         
+        var allSectionsFooter = '';
+        var allTypesFooter = '';
+        $('#searchSectionsFooter :checked').each(function(){
+            if ($(this).val() == 'all'){
+                $('#sectionCollectionFooter').removeAttr('name');
+                $('#typeCollectionFooter').removeAttr('name');    
+            }
+            else if($(this).attr('class') == 'section-box regular'){
+                $('#sectionCollectionFooter').attr('name','c[]');
+                if (allSectionsFooter == ''){
+                    allSectionsFooter = $(this).val();
+                }
+                else{
+                    allSectionsFooter += (',' + $(this).val());
+                };
+            }
+            else if($(this).attr('class') == 'type-box regular'){
+                $('#typeCollectionFooter').attr('name','t');
+                if (allTypesFooter == ''){
+                    allTypesFooter = $(this).val();
+                }
+                else{
+                    allTypesFooter += (',' + $(this).val());
+                };
+            };
+        });
+        $('#sectionCollectionFooter').val(allSectionsFooter)
+        $('#typeCollectionFooter').val(allTypesFooter)
+    }
+    $(function() {
+        $('#searchSectionsFooter input').click(updateSectionListFooter);
+        updateSectionListFooter();
+    });
+</script>
+                <div class="clear"></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="print-only-logo" style="display:none;">
+    <img src="global/resources/images/print-logo.gif" />
+</div>
+
+
+<p class="copyright"><strong>&copy; Copyright 2013, <a href="/">Mywesttexas.com</a>, Midland, TX</strong>. Powered by <a href="http://bloxcms.com" title="Blox Content Management System">Blox CMS</a> from <a href="http://townnews.com" title="TownNews Newspaper Content Management">TownNews.com</a>.</p>
+<center><a href="http://hearst.com/newspapers/" target="_blank"><img src="http://www.mywesttexas.com/app/art/hearst_bw.gif" width="234" height="44" border="none"></a></center>
+</div>
+<!-- end footer -->
+
+
+<div id="login-box-form-panel" class="login-box-form ui-corner-all ui-widget-content" title="Login to Mywesttexas.com" style="display:none">
+
+
+    
+    <div class="login-column-single no-signup login-column no-openid last">
+ 
+
+
+   
+
+        <form id="tncms-login-form-panel" class="tncms-login-form" method="post" action="https://mywesttexas-dot-com.bloxcms.com/users/login/">
+        <fieldset>
+             <input type="hidden" name="referer_url" value="/business/" />         
+            <label for="username">Screen Name or Email</label>
+            <input id="username-panel" type="text" name="username" class="text ui-widget-content" value="" tabindex="200"/>
+            <label for="password">Password</label>
+            <a title="Forgot password" id="password-reset-open-panel" href="javascript:void(0)" rel="nofollow">Forgot?</a>
+            <input id="password-panel" type="password" name="password" value="" class="password text ui-widget-content" tabindex="201" />
+            
+            <input type="submit" id="login-form-submit-panel" class="jquery-ui-button clear" value="Login" tabindex="202" />
+        </fieldset>
+        </form>    
+		
+    
+    <form id="tncms-password-reset-form-panel" method="post" action="https://mywesttexas-dot-com.bloxcms.com/users/forgot/" style="display:none;">
+        <fieldset>
+            <input type="hidden" name="referer_url" value="" />
+            <label for="username">Screen Name or Email</label>
+            <input type="text" name="username" id="username-pass-panel" class="text ui-widget-content" value="" tabindex="203"/><!--ui-widget-content-->
+            <input type="submit" id="password-reset-submit-panel" class="password-reset-submit jquery-ui-button" value="Change Password" tabindex="204"/>
+            <a title="Cancel forgot password" id="password-reset-close-panel" href="javascript:void(0)" style="clear:left; float:left;">Now I remember!</a>
+        </fieldset>
+    </form>
+    <div class="clear"></div>
+    </div>
+
+    <div class="login-box-create-acount">
+        <a title="create an account" id="login-box-create-link-panel" href="https://mywesttexas-dot-com.bloxcms.com/users/signup/?referer_url=/business/" rel="nofollow">
+            Need an account? Create one now.
+        </a>
+    </div>    
+    
+<div class="clear"></div>
+</div>
+<script type="text/javascript">    
+    $(function(){
+    // create login-box form dialog
+        $('#login-box-form-panel').dialog({
+            autoOpen: false,
+            width: 345,
+            modal: true,
+            resizable: false,
+            show: {
+                effect: 'drop',
+                direction: 'up',
+                duration: 200
+            },
+            hide: {
+                effect: 'drop',
+                direction: 'up',
+                duration: 100
+            },
+            buttons:{
+                Cancel: function(){
+                    $(this).dialog('close');
+                }
+            }
+        });
+    // open login when open-modal-login class is clicked    
+        $('.open-modal-login-panel').click(function(){
+            $('#login-box-form-panel').dialog('open');
+            $("[aria-labelledby=ui-dialog-title-login-box-form-panel] .ui-dialog-buttonpane").addClass("login");
+            $("[aria-labelledby=ui-dialog-title-login-box-form-panel]").addClass("jquery-ui-edit");
+            $(".ui-dialog-buttonpane.login button:last").addClass("cancel");
+        });
+    });    
+// switch to pasword forgot form    
+    $('#password-reset-open-panel').click(function(){
+        $("#tncms-password-reset-form-panel").show();
+        $("#tncms-login-form-panel").hide();
+        $("#ui-dialog-title-login-box-form-panel").text("Change your password");
+    });
+// switch back to login form    
+    $('#password-reset-close-panel').click(function(){
+        $("#tncms-login-form-panel").show();
+        $("#tncms-password-reset-form-panel").hide();
+        $("#ui-dialog-title-login-box-form-panel").text("Login to Mywesttexas.com");
+    });
+// display loader when create account or openid process begins
+    $("button.openid-button, a#login-box-create-link-panel").click(function() {
+        $("#login-box-form-panel").addClass("openid-form-processing blox-loading");
+        $(".register-column, .login-column-left, .login-column-right, a#login-box-create-link-panel").hide();
+    });    
+// style buttons    
+    $(".jquery-ui-button").button()
+
+// validate form
+var valAuthToken = $.cookie('tncms-authtoken');
+if (valAuthToken == null){
+$(document).ready(function() {
+// validate login form fields
+    $("#tncms-login-form-panel").validate({
+        rules: {    
+            username: {
+                required:true},
+            password: {
+                required:true}
+        },
+        messages: {
+            username: {
+                required:"Screen name or email address required."},
+            password: {
+                required:"Password required."}    
+        }
+    });
+// validate forgot form fields
+    $("#tncms-password-reset-form-panel").validate({
+        rules: {    
+            username: {
+                required:true}
+        },
+        messages: {
+            username: {
+                required:"Screen name or email address required."}
+        }
+    });    
+});
+}
+
+/* add parameters to referer URL */
+$("#tncms-login-form-panel").submit(function() {
+// would be nice to work logout into this too. It should work.
+	var cur_params = window.location.href.match(/\?.*/);
+	if (cur_params){
+		cur_params = cur_params.toString();
+		var orig_refer = $(this).find('input[name="referer_url"]').val();
+		if (orig_refer) orig_refer = orig_refer.toString();
+		var cur_paramsString = cur_params.replace(/[\?&]_dc=[0-9.]*/,"");
+		if (orig_refer.indexOf("?") != -1){
+			cur_paramsString = cur_paramsString.replace("?","&");
+		}
+		if (cur_paramsString){
+			var final_refer = orig_refer+cur_paramsString; 
+			$(this).find('input[name="referer_url"]').val(final_refer);
+		}
+	}	
+});
+</script>
+        
+    <!--[if IE 6]>
+     <script type="text/javascript" src="components/core_base_library/resources/scripts/ddBelatedPNG.js"></script>
+     <script type="text/javascript">
+      jQuery(function(){
+       DD_belatedPNG.fix('.blox-transparency,.ui-icon,.ui-icon-pause,.ui-icon-seek-next,#blox-body-nav');
+      });
+     </script>
+    <![endif]-->
+    
+    
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(function(){
+    if(typeof(vo)!="undefined"){ if(vo.standalone.length>0){
+        fallbackPlayer = new Array();
+        fallbackPlaylist = new Array();
+        var adCounter = 0;
+        var width = 300;
+        var height = 240;
+        jQuery.each(vo.standalone,function(){
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Pushing Video Ad "+vo.standalone[adCounter].adId+" into #fallbackPlayer"+adCounter});}
+                
+            fallbackPlayer.push("blox-ad-"+vo.standalone[adCounter].adId+"-player");
+            fallbackPlaylist.push([vo.standalone[adCounter].playlistItem]);
+
+            fallbackPlaylist[adCounter][0].autoBuffering=true;
+            fallbackPlaylist[adCounter][0].bufferLength=1;
+
+            if(vo.standalone[adCounter].autoplay==1){
+                fallbackPlaylist[adCounter][0].autoPlay = true;
+            }
+    
+            if((typeof(vo.standalone[adCounter].width)!="undefined")&&(vo.standalone[adCounter].width!=0)){
+                width = vo.standalone[adCounter].width;
+            }
+            if((typeof(vo.standalone[adCounter].height)!="undefined")&&(vo.standalone[adCounter].height!=0)){
+                height = vo.standalone[adCounter].height;
+            }
+
+            fallbackPlaylist[adCounter][0].metadata = false;
+
+            linkItem = "<a id=\""+fallbackPlayer[adCounter]+"\" class=\"video-ad\" href=\"javascript:void(0)\" style=\"width:"+width+"px; height:"+height+"px; display:block; position:relative; z-index:1;margin:10px;\"></a>";
+            
+            // this handles the click link in the video player when clicking on the video
+            function addClickURLtoVideo(){}
+            
+            jQuery("#blox-ad-"+vo.standalone[adCounter].adId).append(linkItem);
+            flowplayer(fallbackPlayer[adCounter], "http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_flowplayer/resources/flash/flowplayer-3.2.7.swf?_dc=1369243856",{
+                plugins:{controls:null},
+                clip:{
+                    linkUrl:vo.standalone[adCounter].videoClickUri,
+                    linkWindow:'_blank'
+                },
+                playlist:fallbackPlaylist[adCounter],
+                onPause:function(){
+                    //alert('click');
+                }
+            });
+            jQuery("#"+fallbackPlayer[adCounter]+"_api").css({"margin":"0px"});
+            
+            adCounter++;
+        });
+    } }
+});
+/* ]]> */
+</script>
+
+    
+    <script type="text/javascript">
+        /* fix for tabs (delayed loading)*/
+        $(window).load(function() {
+            // waited until all assets loaded;
+            $('.tabset').show();
+        });
+    </script>
+    
+    <script>
+    var _gaq = _gaq || [];
+    $(function() {
+    
+        
+    (function() {
+        loadAddThis({
+            'addthisID': 'ra-4d90f9fb04328fb0',
+            'gaID': 'none',
+            'twitterID': 'townnews'
+         });
+    })();
+
+        
+    
+    
+        (function() {
+            loadFacebook({
+                'fbID': '361381078011'
+            });
+        })();
+    
+
+        
+        
+    });
+    </script>
+    
+    <div id="fb-root"></div>
+
+    
+
+
+<div id="page-curl">
+    
+    
+    <!-- Rich Media 1x1 ad position-->
+    <script type="text/javascript">yld_mgr.place_ad_here("RM_slot");</script>
+
+    
+</div>
+
+
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_external_jquery_plugins/resources/scripts/external.common.min.js?_dc=1375274391"></script>
+<script type="text/javascript"  src="http://bloximages.chicago2.vip.townnews.com/mywesttexas.com/content/tncms/live/components/core_internal_jquery_plugins/resources/scripts/internal.common.min.js?_dc=1376553484"></script></body>
+</html>

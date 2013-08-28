@@ -1,0 +1,186 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	Multi-State -- Roadside Assistance Program
+</title><link rel="Stylesheet" type="text/css" charset="utf-8" href="/css/style.css" />
+    <!--[if lt IE 8]>
+    <link rel="Stylesheet" type="text/css" charaset="utf-8" href="/css/ie7.css" />
+    <![endif]-->
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+    <script type="text/javascript" language="javascript">
+        
+        function selectQuickLink(a,title, url) {
+            ql = document.getElementById('qlspan');
+            if (ql) ql.innerHTML = title;
+            qlu = document.getElementById('qlurl');
+            if (qlu) qlu.innerHTML = url;
+            setTimeout("selectGo()", 750);
+        }
+
+        function selectGo() {
+            qlu = document.getElementById('qlurl');
+            if (qlu.innerHTML.length > 1) window.location = qlu.innerHTML;
+
+        }
+
+        var navImages = Array('/images/Producers_White.gif', '/images/Producers.gif', 
+            '/images/Customers_White.gif', '/images/Customers.gif', 
+            '/images/Carriers_White.gif', '/images/Carriers.gif',
+            '/images/Services_White.gif', '/images/Services.gif',
+            '/images/About_White.gif', '/images/About.gif');
+            
+        for (i = 0; i < navImages.length; i++) {
+            var n = new Image();
+            n.src = navImages[i];
+        }
+    </script>
+    
+    <link rel="Stylesheet" type="text/css" href="/css/contact.css" />
+    <style type="text/css">
+        h1.page_title { background: url('/images/titles/title_roadsideassistance.jpg'); }
+        h3.subtitle { display: block; width: 241px; height: 37px; text-indent: -500px; overflow: hidden; }
+        .bullet
+        {
+        	list-style-image: url('/images/li.gif')
+        }
+        .bullet li { margin-bottom: 5px; }
+        .divforms
+        { 
+        	padding-top: 20px;
+        	float: left;
+        	width: 47%;
+        }
+        .indent { padding-left: 20px; }
+    </style>
+<!--[if lt IE 8]>
+    <style type="text/css">
+        .bullet li { margin-bottom: 5px; margin-left: 50px; }
+    </style>
+<![endif]-->
+<style type="text/css" media="all">
+#ServicesNavItem { background: url('/images/Services.gif'); }
+</style>
+</head>
+<body>
+    <div id="Main">
+        <div id="TopBar">
+            <a href="/" title="Multi-State" id="Logo"><img src="/images/Logo.gif" alt="Multi-State" /></a>
+            <div id="QuickSelectDiv">
+                <a href="javascript:selectGo();"><img src="/images/Go.gif" alt="" id="Go" /></a>
+                <div id="QuickSelect">
+                    <span id="qlspan">Quick Links</span><span id="qlurl" style="height: 1px; width: 1px; overflow: hidden;"></span>
+                    <div id="QuickDrop">
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'Producer Login','https://www.multi-stateinsurance.com/proLogin.aspx');">Producer Login</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'Customer Login','https://www.msiga.com/MyPolicy/');">Customer Login</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'Contact Us','/contact/');">Contact Us</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'Direct Deposit Authorization Form','https://www.multi-stateinsurance.com/PDF/directDeposit.pdf');">Producer Direct Deposit Authorization Form</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'EFT Authorization Form','https://www.multi-stateinsurance.com/PDF/EFT.pdf');">Producer EFT Authorization Form</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'CA Producer Appointment App','/Documents/CA-Producer-Appointment-Application.pdf');">CA Producer Appointment App</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'TX Producer Appointment App','/Documents/TX-Producer-Appointment-Application.pdf');">TX Producer Appointment App</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'Agency Update Form - Texas','/Documents/WA_Producer_Appointment_App.pdf');">WA Producer Appointment App</a></div>
+                        <div class="QuickLink"><a href="javascript:void(0);" onclick="selectQuickLink(this,'Agency Update Form - Texas','/Documents/AGENCY UPDATE FORM - TEXAS.pdf');">Agency Update Form - Texas</a></div>
+                    </div>
+                </div>
+           </div>
+            <ul id="MainNav">
+                <li id="ProducerNavItem">
+                    <a href="https://www.multi-stateinsurance.com/prologin.aspx" class="navitem" title="Producer Portal">Producers</a>
+                    
+                </li>
+                <li id="CustomersNavItem">
+                    <a href="/customers/" class="navitem" title="Customers">Customers</a>
+                    <ul class="SubNav" style="width: 150px;">
+                        <li style="width: 150px;"><a href="/customers/claims.aspx" title="Claims Info" class="subnavitemli">Claims Info</a></li> 
+                        <li style="width: 150px;"><a href="/MyPolicy/" title="Multi-State Customer Login" class="subnavitemli">My Policy</a></li>
+                        <li style="width: 150px;"><a href="/customers/faqs.aspx" class="subnavitemli" title="FAQs">FAQs</a></li>
+                        <li style="width: 150px;"><a href="/customers/customer-info.aspx" class="subnavitemli" title="Customer Information">Customer Information</a></li>
+                    </ul>
+                </li>
+                <li id="CarriersNavItem">
+                    <a href="/carriers/" class="navitem">Carriers</a>
+                </li>
+                <li id="ServicesNavItem">
+                    <a href="/services/" title="Services" class="navitem">Services</a>
+                    <ul class="SubNav">
+                        <li style="width: 200px;"><a href="/services/auto.aspx" class="subnavitemli" title="Private Passenger Auto Insurance">Private Passenger Auto</a></li>
+                        <li style="width: 200px;"><a href="/services/roadside-assistance.aspx" title="Roadside Assistance Program">Roadside Assistance</a>
+                        <li style="width: 200px;"><a href="/services/homeowners.aspx" class="subnavitemli" title="Homeowners &amp; Renters Insurance">Homeowner's Insurance</a></li>
+                    </ul>
+                </li>
+                <li id="AboutNavItem">
+                    <a href="/about/" class="navitem" title="About">About</a>
+                    <ul class="SubNav">
+                        <li style="width: 200px;"><a href="/" class="subnavitemli" title="Home Page">Home Page</a></li>
+                        <li style="width: 200px;"><a href="/about/company-news/" class="subnavitemli" title="Company News">Company News</a></li>
+                        <li style="width: 200px;"><a href="/about/employment/" class="subnavitemli" title="Employment Opportunities">Employment Opportunities</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        
+        
+        
+    <div id="Center">
+        <h1 class="page_title">Roadside Assistance</h1>
+        <div id="Breadcrumb">
+            <a href="/" title="Home Page">Home</a> &gt; <a href="/services/" title="Services">Services</a> &gt; Roadside Assistance
+        </div>
+        <div id="Page">
+            <p>At Multi-State, we are not only committed to servicing your policy and handling claims in a fast and efficient manner, 
+                but we also want to help keep you safe out on the road. Many of our private passenger auto programs include a roadside assistance program.
+                We represent both Nations Safe Drivers and Road America programs.</p> 
+            <p>If you have purchased Roadside Assistance and would like to contact the appropriate provider, please see below.</p>
+            <div>
+                <div class="divforms">
+                    For policies beginning with <b>NIC</b> or <b>TMS</b>
+                    <img src="/Images/Services/nations-safe-driver.gif" alt="" class="indent" style="margin-top: 10px;" />
+                    <p class="indent">24 Hour Roadside Assistance: (800) 745-5791
+                    <br />
+                    Customer Service: (800) 338-2680</p>
+                    <ul class="bullet" style="margin-left: -10px;">
+                        <li><a href="/Documents/TOWING_ONLY_CLAIMS_ FORM.pdf" target="_blank">Nations Safe Driver Claims Form</a></li>
+                    </ul>
+                </div>
+                <div class="divforms">
+                    For policies beginning with <b>WAC, CNM, NMC & SMC</b>
+                    <img src="/Images/Services/road-america.gif" alt="" class="indent" style="margin-top: 10px;" />
+                    <p class="indent">24 Hour Roadside Assistance : (800) 325-9028
+                    <br />
+                    Customer Service: (800) 442-4690
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="Footer">
+            <div id="FooterText">&copy; 2010-2013 Multi-State Insurance Services | CA #0D08447 | TX #1557695<br />
+                Multi-State General Agency | TX #1695738
+            </div>
+            <ul id="FooterNav">
+                <li><a href="/about/" title="About">About</a></li>
+                <li><a href="/services/" title="Services">Services</a></li>
+                <li><a href="/carriers/">Carriers</a></li>
+                <li><a href="/customers/" title="Customers">Customers</a></li>
+                <li><a href="https://www.multi-stateinsurance.com/proLogin.aspx">Producers</a></li>
+                <li style="border: 0;"><a href="/contact/" title="Contact Multi-State">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-19352384-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+    </script>
+</body>
+</html>

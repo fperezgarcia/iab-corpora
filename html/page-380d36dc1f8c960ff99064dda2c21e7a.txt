@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ALTIUS - AUTOMOTIVE</title>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.js"></script>
+<script language="javascript">
+function passvalue(frm)
+{
+	var name=document.getElementById('name').value;
+	var email=document.getElementById('email').value;
+        var pattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+
+	if(name=='' || name=='Name')
+	{
+		alert("Enter Your Name")
+		document.getElementById('name').focus();
+		return false;
+	}
+	else if(email=='' || email=='Email Address')
+	{
+		alert("Enter Your Email")
+		document.getElementById('email').focus();
+		return false;
+	}else if(!pattern.test(document.getElementById('email').value)){
+            alert("Enter Valid Email Address");
+            document.getElementById("email").focus();
+            return false;
+        }
+	else
+	{
+            frm.submit();
+		//window.location="subscribe.php?name="+name+"&mail="+email;
+	}
+
+}
+function blank_name()
+{
+	document.getElementById('name').value='';
+}
+function blank_mail()
+{
+	document.getElementById('email').value='';
+}
+</script>
+
+<script language="javascript">
+   $(document).ready(function(){
+   //To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+   //Vertical Sliding
+   $('.boxgrid.slidedown').hover(function(){
+   $(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+   }, function() {
+   $(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
+   });
+   //Horizontal Sliding
+  $('.boxgrid.slideright').hover(function(){
+  $(".cover", this).stop().animate({left:'325px'},{queue:false,duration:300});
+  }, function() {
+  $(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
+  });
+  //Diagnal Sliding
+  $('.boxgrid.thecombo').hover(function(){
+  $(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
+  }, function() {
+  $(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
+  });
+  //Partial Sliding (Only show some of background)
+  $('.boxgrid.peek').hover(function(){
+  $(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
+  }, function() {
+  $(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+  });
+  //Full Caption Sliding (Hidden to Visible)
+  $('.boxgrid.captionfull').hover(function(){
+  $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:1000});
+  }, function() {
+  $(".cover", this).stop().animate({top:'260px'},{queue:false,duration:1000});
+  });
+  //Caption Sliding (Partially Hidden to Visible)
+  $('.boxgrid.caption').hover(function(){
+  $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+  }, function() {
+  $(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});
+  });
+  });
+  
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="droplinetabs.css" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script src="droplinemenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+droplinemenu.arrowimage.src="images/down.gif"
+//build menu with DIV ID="myslidemenu" on page:
+droplinemenu.buildmenu("droplinetabs1")
+</script>
+</head>
+
+<body>
+    <div id="mainContainer">
+    <div id="header"><a href="index.php"><img src="images/logo.jpg"></a>
+<!--			<div id="subscibe">
+			<span>Subscribe to our Newsletter</span><br>
+			<span>Name:</span> <input type="text" id="username" value="" size="10" />
+			<span>Email:</span><input type="text" id="username" value="" size="10" />
+			<a href="#"><img src="images/aero.gif"></a>
+
+
+			</div>-->
+                        <div id="subscibe">
+                                           <form name="frm" method="post" action="subscribe.php">
+               <span>Subscribe to our Newsletter</span>
+               <input type="text" id="name" name="name" size="10" value="Name" onfocus="blank_name()"/>
+               <input type="text" id="email" name="email" size="10"  value="Email Address" onfocus="blank_mail()"/>
+               <img src="images/aero.gif" onclick="passvalue(frm)">
+                   
+               </form>
+           </div> 
+    </div>
+    <div id="droplinetabs1" class="droplinetabs">
+				<ul>
+				<li><a href="index.php"><span>Home</span></a></li>
+				<li><a href="aboutus.php"><span>About us</span></a>
+				  <ul>
+					  <li><a href="vision.php">Vision</a></li>
+					  <li><a href="company.php">Company</a></li>
+					  <li><a href="team.php">Team</a></li>
+					  <li><a href="facility.php">Facility</a></li>
+				  </ul>
+				</li>
+				<li><a href="news.php"><span>News &amp; Events</span></a></li>
+				<li><a href="careers.php"><span>Careers</span></a></li>
+				<li><a href="contact.php"><span>Contact us</span></a></li>
+			</ul>
+		</div>
+    
+<div id="contBox1">
+                    <div id="imageHolder1"><div id="homebannerBox2">
+                            <div class="boxgrid captionfull"><img src="images/altius_home_banner1a.jpg" border="0">
+                                <div class="cover boxcaption">Small displacement and heavy <br>fuel powered high performance engines<br></div></div></div></div>
+
+            <div id="imageHolder2"><div id="homebannerBox2">
+                    <div class="boxgrid captionfull"><img src="images/altius_home_banner1b.jpg" border="0">
+                    <div class="cover boxcaption">Multi-fuel powered light ground vehicles<br><br>
+                        </div></div></div></div>
+
+            <div id="imageHolder3"><div id="homebannerBox3"><div class="boxgrid captionfull"><img src="images/altius_home_banner1c.jpg" border="0">
+                        <div class="cover boxcaption">Civilian motorcycles and Rural Transport Vehicles (RTVs)<br><br></div></div></div></div>
+    
+            <div id="imageHolder4"><div id="homebannerBox4"><div class="boxgrid captionfull"><img src="images/altius_home_banner1d.jpg" border="0">
+                        <div class="cover boxcaption">Design and development of electric powertrains and vehicles<br><br></div></div></div></div>
+
+            <div id="imageHolder5"><div id="homebannerBox5"><div class="boxgrid captionfull"><img src="images/altius_home_banner1e.jpg" border="0">
+                    <div class="cover boxcaption">Design and development of power generation products<br><br></div></div></div></div>
+                    
+</div>
+          
+		<div id="contBoxtop1">
+			<div id="inBoxtop1"><div id="imgSetRStop"><p><span>Welcome to Altius Automotive Technologies</span>
+			</div></div>
+		</div>
+
+		<div id="conthome1">
+			<div id="inhome01"><div id="imgSetLS1"><p>Altius Automotive Technologies (AAT) provides power solutions for the automotive and speciality  automotive industries. A technology company, Altius is focused on the development and manufacture of high performance and ultra efficient multi-fuel engines for specialized automotive and hybrid applications. <br><br>
+			AAT, promoted by automotive professionals, manufactures engines under license from Hayes-DT, USA. Hayes-DT is a technology leader in diesel and lightweight gas powered engines and vehicles. Variants of our engines will also be available for civilian uses in micro commercial vehicles and compact, light weight, portable power generation sets.
+			</p></div></div>
+
+		</div>
+
+		    <div id="footer">
+			<ul>
+				<li><a href="aboutus.php">About us</a></li>
+				<li>|</li>
+				<li><a href="careers.php">Careers</a></li>
+				<li>|</li>
+				<li><a href="contact.php">Contact us</a></li>
+			</ul>
+			<div id="Credits"><ul>
+				<li>site developed and maintained by <a href="http://www.dotcue.com" target="_blank">dotCue</a></li><li><span>Copyright 2011, Altius. All Rights Reserved.</span></li></ul>
+		</div>
+    </div>
+</body>
+</html>

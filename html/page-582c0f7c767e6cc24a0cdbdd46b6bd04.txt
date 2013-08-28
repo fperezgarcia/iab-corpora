@@ -1,0 +1,991 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+    <script type="text/javascript">
+        <!--
+        // parseUri 1.2.2
+        // (c) Steven Levithan <stevenlevithan.com>
+        // MIT License
+
+        function parseUri (str) {
+            var	o   = parseUri.options,
+                    m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+                    uri = {},
+                    i   = 14;
+
+            while (i--) uri[o.key[i]] = m[i] || "";
+
+            uri[o.q.name] = {};
+            uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+                if ($1) uri[o.q.name][$1] = $2;
+            });
+
+            return uri;
+        };
+
+        parseUri.options = {
+            strictMode: false,
+            key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+            q:   {
+                name:   "queryKey",
+                parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+            },
+            parser: {
+                strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+                loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+            }
+        };
+
+        function createCookie(name,value,days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+
+        function areCookiesEnabled() {
+            var r = false;
+            createCookie("cookiesEnabled", "true", 1);
+            if (readCookie("cookiesEnabled") != null) {
+                r = true;
+                eraseCookie("cookiesEnabled");
+            }
+            return r;
+        }
+
+        (function(){
+            var referrer = '';
+            var referrerKw = '';
+            if (typeof document.referrer != 'undefined') {
+                // pound's for google.
+                var oUri = parseUri(document.referrer.replace('#','?'));
+
+                referrer = oUri.host;
+                if (typeof oUri.queryKey.q != 'undefined') {
+                    referrerKw = decodeURIComponent(oUri.queryKey.q).replace('site:essortment.com','').replace(/[^a-zA-Z0-9\s]+/g,' ').replace(/\s\s/g,' ');
+                } else if (typeof oUri.queryKey.p != 'undefined') {
+                    referrerKw = decodeURIComponent(oUri.queryKey.p).replace('site:essortment.com','').replace(/[^a-zA-Z0-9\s]+/g,' ').replace(/\s\s/g,' ');
+                } else {
+                    referrerKw = 'collecting hobbies';
+                }
+            }
+            // oUri.file == 'google.html' ||
+            if ((referrer.indexOf('.google.com') > -1 || referrer.indexOf('.yahoo.com') > -1 || referrer.indexOf('.bing.com') > -1) && areCookiesEnabled()) {
+                oUri = parseUri(document.location.href);
+
+                if (referrerKw.length > 0) {
+                    // "&cof=FORID%3A10&sa=Search&cx=partner-pub-6167988213978292%3A6447045120&ie=UTF-8&ss=1280j221896j10&ref=" + referrer + "%2F&siteurl=www.essortment.com" + encodeURIComponent(oUri.path))
+                    document.location.replace("/search.htm?r=" + encodeURIComponent(oUri.relative) + "&q=" + encodeURIComponent(referrerKw));
+                }
+            }
+        })();
+        // -->
+    </script>
+
+
+
+	<meta name="date" content="1986-05-16 00:00:00">
+	<meta charset="utf-8"/>
+	<meta name="msvalidate.01" content="129B5DE6FF8DD0ECBDD457C93FF101E3" />
+	<meta property="og:site_name" content="Essortment"/>
+	<meta property="fb:app_id" content="141718515877590"/>
+	<meta property="fb:admins" content=""/>
+	
+	<link rel="stylesheet" href="http://www.essortment.com/css.css" media="all" type="text/css"/>
+	<link rel="shortcut icon" href="http://www.essortment.com/favicon.ico" />
+	<link rel="icon" href="http://www.essortment.com/favicon.ico" />
+	
+	
+	
+
+	<!-- Custom JS to render Google AdSense ads -->
+	<script type="text/javascript" src="http://www.essortment.com/adsense.js"></script>
+	<!-- End Custom JS to render Google AdSense ads -->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.essortment.com/jquery.scrollto.min.js"></script>
+
+	<!-- Demdex Tag Insertion Manager -->
+	<script type="text/javascript" src="http://www.essortment.com/dil_essortment.js"></script>
+	<!-- End Demdex Tag Insertion Manager -->	
+	<script type="text/javascript">
+        if (typeof readCookie != 'function') {
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            }
+        }
+
+        var gUtmSource = '';
+        var gUtmMedium = '';
+        (function(){
+            var pattern=/utm_source=([a-zA-Z0-9]+)&utm_medium=([a-zA-Z0-9]+)/;
+            var result = pattern.exec(readCookie('utm_params'));
+
+            if (result != null && result.length == 3) {
+                gUtmSource = result[1];
+                gUtmMedium = result[2];
+            }
+        })();
+
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = document.location.href;
+            }
+            name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+            var regexS = "[\\?&]"+name+"=([^&#]*)";
+            var regex = new RegExp( regexS );
+            var results = regex.exec( url );
+            if( results == null )
+            return '';
+            else
+            return results[1];
+        }
+
+        function IsAdWords() {
+            var utmSource = getParameterByName("utm_source");
+
+            if (utmSource.length > 0) {
+                utmSource = decodeURIComponent(utmSource);
+                utmSource = utmSource.replace(/[^a-zA-Z0-9\_\-]+/g,'');
+
+                createCookie("utm_source", utmSource);
+
+                if (utmSource.toLowerCase() == "adwords") {
+                    return true;
+                }
+            } else if (readCookie("utm_source") != null) {
+                if (readCookie("utm_source").toLowerCase() == "adwords") {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+		function doAutoSearch()
+		{
+			if ('referrer' in document && 'host' in location && (getParameterByName('afsforce', document.location.search) == 1 || document.referrer.length > 0) && document.referrer.substring(0, location.host.length + 7) != 'http://' + location.host)
+			{
+				var utm_medium = decodeURIComponent(getParameterByName('utm_medium', document.location.search)).replace(/\+/g, " ");
+				var utm_source = decodeURIComponent(getParameterByName('utm_source', document.location.search)).replace(/\+/g, " ");
+				var keywords = decodeURIComponent(getParameterByName('q', document.location.search)).replace(/\+/g, " ");
+				if (keywords.length > 0 && utm_medium.length > 0)
+				{
+					if (utm_source.length > 0)
+					{
+						$('#cse-search-box').append('<input type="hidden" name="utm_source" value="' + utm_source + '" />');
+					}
+					if (utm_medium.length > 0)
+					{
+						$('#cse-search-box').append('<input type="hidden" name="channel" value="' + utm_medium + '" />');
+					}
+					$('#cse-search-box input[name="q"]').val(keywords);
+					$('#cse-search-box').submit();
+				}
+			}
+		}
+	</script>
+
+	<script src="//cdn.optimizely.com/js/7970001.js"></script>
+	
+
+
+
+
+
+
+
+
+	
+	<title>Auto Questions: How Diesel Engines Work</title>
+	<meta name="description" content="A description of the basic four stroke Diesel engine cycle used in automotive Diesel engines." />
+	<meta property="og:description" content="A description of the basic four stroke Diesel engine cycle used in automotive Diesel engines."/>	
+	
+
+	<meta property="og:title" content="Auto Questions: How Diesel Engines Work"/>
+	<link rel="canonical" href="http://www.essortment.com/auto-questions-diesel-engines-work-57226.html" />
+
+	
+	<meta property="og:url" content="http://www.essortment.com/auto-questions-diesel-engines-work-57226.html"/>
+	
+	
+	<meta property="og:image" content="http://www.essortment.com/images/essortment_glass_73x73.jpg"/>
+	
+	<meta property="og:type" content="article"/>
+
+		
+	
+	
+	
+	
+	<meta name="description" content="A description of the basic four stroke Diesel engine cycle used in automotive Diesel engines.">
+	<meta name="template" content="article">
+	
+	<!-- START OMNITURE CODE -->
+	<meta name="wa_lr" scheme="DMINSTR2" content="en-US" />
+	
+	
+	<meta property="legacyKey" content="39447"/>
+	
+	<meta name="contentid" scheme="DMINSTR2" content="39447" />
+	<meta name="category" scheme="DMINSTR2" content="Collecting & Hobbies" />
+
+	
+    	<meta name="pagetype" scheme="DMINSTR2" content="Legacy Article" />
+	
+	<meta name="siteid" scheme="DMINSTR2" content="ESTC" />
+	<!-- END OMNITURE CODE -->
+
+	
+	<script type="text/javascript">
+		var tag = escape('pub-6167988213978292;2838000268|pub-6167988213978292;2838000268|pub-6167988213978292;2838000268');
+    	document.write ('<meta name="ltvtag" scheme="DMINSTR2" content="' + tag + '">');
+	</script>
+	
+
+
+
+	<script src="http://scripts.demandmedia.com/wm.js" type="text/javascript"></script>	
+
+
+
+
+
+	<!-- Set up Yahoo related text ads -->
+	<script type="text/javascript">
+		// Get the keywords, if any.
+		// If opYahoo1Click is equal to one, then forget it.
+		if (typeof(opYahoo1Click) != 'undefined' && opYahoo1Click == 1) {
+			document.write('\n\n<!-- One click ads disabled by Optimost. -->\n');
+		} else {
+			var keywords = '';
+			if (document.referrer != '') {
+				var domainName = document.referrer.split('/')[2].toLowerCase();
+				if (domainName.indexOf('google.com') > -1 || domainName.indexOf('ask.com') > -1 || domainName.indexOf('bing.com') > -1) {
+					keywords = getParameterByName('q', document.referrer);
+				} else if (domainName.indexOf('yahoo.com') > -1) {
+					keywords = getParameterByName('p', document.referrer);
+				}
+			}
+			// Allow back door keywords.
+			var backDoorKeywords = getParameterByName('k', document.location.href);
+			if (backDoorKeywords != '') {
+				keywords = backDoorKeywords;
+			}
+			// Build ad URL and display it.
+			if (keywords != '') {
+				var url = 'http://xml.demandmedia.overture.com/d/search/p/demandmedia/js/?Partner=enom_retargeting_search&config=1234567890&serveUrl=' + encodeURIComponent(window.location.href) + '&Keywords=' + keywords + '&maxCount=4&cb=' + Math.floor(Math.random() * 100000);
+				// this doesn't appear to be used anymore, commenting it out.
+				// document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + url + '"></SCR'+'IPT>');
+			}
+		}
+	</script>
+
+    <style type="text/css">
+        .yahoo336x280 { width:336px; margin-left:180px; text-align:left; }
+        .yahoo336x280 a.title { font-size:15px; font-weight:bold; color:#437AAE; text-decoration:underline; }
+        .yahoo336x280 a.host { font-size:15px; font-weight:normal; color:#437AAE; text-decoration:none; text-transform:lowercase; }
+        .yahoo336x280 p.desc { font-size:15px; font-weight:normal; color:#000; text-decoration:none; }
+
+        .yahoo300x250 { width:336px; text-align:left; }
+        .yahoo300x250 a.title { font-size:15px; font-weight:bold; color:#437AAE; text-decoration:underline; }
+        .yahoo300x250 a.host { font-size:15px; font-weight:normal; color:#437AAE; text-decoration:none; text-transform:lowercase; }
+        .yahoo300x250 p.desc { font-size:15px; font-weight:normal; color:#000; text-decoration:none; }
+    </style>
+
+    <script type="text/javascript">
+        <!--
+        function YahooShowListings(k) {
+            if (k==null){k=1;}
+            var i=((k-1)*24)+6;
+            var j=0;
+            while (i < zSr.length && j < 4 ) {
+                var descr = zSr[i++]; // listing description
+                var unused1 = zSr[i++]; // (ignore)
+                var clickURL = zSr[i++]; // listing link
+                var title = zSr[i++]; // listing title
+                var sitehost = zSr[i++]; // advertiserâs domain name
+                var unused2 = zSr[i++]; // (ignore)
+                document.write('<a class="title" target="_new" href="' + clickURL + '">' + title + '</a> ');
+                document.write('<a class="host" target="_new" href="http://' + sitehost + '/">' + sitehost + '</a>');
+                document.write('<p class="desc">' + descr + '</p>');
+                j++;
+            }
+        }
+        // -->
+    </script>
+
+    <script type="text/javascript">
+        var strCategoryNameUrlSafe = 'collecting-hobbies';
+        var bolIsQS = false;
+
+        if (typeof bolShowMediaNet == "undefined")
+        {
+          var bolShowMediaNet = true;
+        }
+
+        if (!bolShowMediaNet && (typeof document.referrer != 'undefined')) {
+            var objURI = parseUri(document.referrer.replace('#','?'));
+            var strRefHost = objURI.host;
+
+            if ((strRefHost.indexOf('.essortment.com') > -1 && objURI.file == 'search.htm' && (typeof objURI.queryKey.r != 'undefined')) || strRefHost.indexOf('.yahoo.com') > -1 || strRefHost.indexOf('.bing.com') > -1 || strRefHost.indexOf('.google.com') > -1) {
+                bolIsQS = true;
+
+                if (typeof objURI.queryKey.q != 'undefined') {
+                    var strRefKeywords = decodeURIComponent(objURI.queryKey.q).replace('site:essortment.com','').replace(/[^a-zA-Z0-9\s]+/g,' ').replace(/\s\s/g,' ');
+                } else if (typeof objURI.queryKey.p != 'undefined') {
+                    var strRefKeywords = decodeURIComponent(objURI.queryKey.p).replace('site:essortment.com','').replace(/[^a-zA-Z0-9\s]+/g,' ').replace(/\s\s/g,' ');
+                } else {
+                    var strRefKeywords = 'collecting hobbies';
+                }
+
+                var strURI = parseUri(document.location.href).protocol + '://' + parseUri(document.location.href).host + parseUri(document.location.href).path;
+
+                document.write('<scr' + 'ipt type="text/javascript" src="http://xml.overture.com/d/search/p/demandmedia/js/?Partner=enom_essortment_qs_search&mkt=us&serveUrl=' + encodeURIComponent(strURI) + '&Keywords=' + encodeURIComponent(strRefKeywords) + '&outputCharEnc=utf8&keywordCharEnc=utf8&maxCount=8&adultFilter=any&cb=123abc"></scr' + 'ipt>');
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+
+
+	<div id="master">
+	<div id="header" class="flc">
+		
+		
+			<a rel="http://www.essortment.com/" class="track"><img src="http://www.essortment.com/images/clear.gif" alt="Articles - Free Online Articles on Health, Science, Education" class="sprites essortment_glassGIF logo" /></a>
+			
+		
+		
+		<div class="search">
+	<!-- BEGIN Google Search Code -->
+			<form action="/search.htm" id="cse-search-box">
+				<div>
+					<input type="hidden" name="cof" value="FORID:10" />
+					<input type="text" name="q" size="31" />
+					<input type="submit" name="sa" value="Search" />
+
+                    <input type="hidden" name="cx" value="partner-pub-6167988213978292:6447045120" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+
+					<!-- <input type="hidden" name="cx" value="partner-pub-6167988213978292:2fh5d1-ontm" /> -->
+					<!-- <input type="hidden" name="ie" value="ISO-8859-1" /> -->
+				</div>
+			</form>
+			<script type='text/javascript'>doAutoSearch();</script>
+			<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+	<!-- END Google Search Code -->
+		</div>
+	</div><!-- /#header -->
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+		<div id="breadcrumbs">
+			<ol class="flc">
+				<li><a rel="http://www.essortment.com/" class="track">Home</a> <span class="sprites liPNG"></span></li>
+				
+				
+					<li><a href="http://www.essortment.com/collecting-hobbies/">Collecting & Hobbies</a> <span class="sprites liPNG"></span></li>
+				
+				<li class="last"><a href="http://www.essortment.com/auto-questions-diesel-engines-work-57226.html">Auto Questions: How Diesel Engines Work</a></li>
+			</ol>
+		</div><!-- /#breadcrumbs -->
+		<div id="pageframe" class="article">
+		<div class="flc"><br/></div>
+		<div class="massiveContainer">
+			<div class="massive flc">
+				<div class="left module token">
+					<div class="mainbody flc">
+					
+						<div class="particulars flc">
+							<!--<img class="avatar" alt="" src="http://www.essortment.com/images/blank.jpg" height="64" width="64"/>-->
+								<!-- google_ad_section_start -->
+								<h1 class="articletitle">Auto Questions: How Diesel Engines Work</h1>
+								<!-- google_ad_section_end -->
+								
+						</div><!-- /.particulars -->
+
+		
+
+						<div class="content">
+							<div class="leftsidebar" id="leftsidebar">
+									<!-- BEGIN POD Related Ad Links Widget -->
+									<script type="text/javascript" charset="utf-8">
+									HL_WIDGET_OPTIONS = {
+									"header": "Collecting & Hobbies Ads",
+									"linksResultsPageUrl" : "/radlinks.htm",
+									"widgetID" : 800,
+									"customerID" : 91
+									}
+									</script>
+									<script src="http://js.hotkeys.com/js/widget/hotlinks.js" type="text/javascript" charset="utf-8" id="hotlinksScript"></script>
+									<!-- END    Related Ad Links Widget -->
+															
+								<div id="relatedestc" class="catentry"></div>
+								<script>   
+								  _DMW_loc = "relatedestc";   
+								  _DMW_title = "More Like This";   
+								  _DMW_id = "25";   
+								  _DMW_type = "VERTICAL";
+								  _dmwm.collectWidgets();
+								</script>   
+								<script>   								
+								  _DMW_loc = "trehow";   
+								  _DMW_title = "Trending Now";   
+								  _DMW_id = "46";   
+								  _DMW_type = "VERTICAL";
+								  _dmwm.collectWidgets(); 
+								</script>
+								<script>  
+								  window._DMWO = window._DMWO || {};
+								  window._DMWO.sbsehow = window._DMWO.sbsehow || {};
+									window._DMWO.sbsehow.imgSize = [100, 72];
+									window._DMWO.sbsehow.imgLoc = 'top';
+/*
+								  _DMW_loc = "bottomehow";  
+								  _DMW_title = "Popular Partner Articles";  
+								  _DMW_id = "41";  
+								  _DMW_type = "HORIZONTAL";  
+								  _dmwm.collectWidgets();
+                         */
+								</script>  
+								
+								<div id="DMINSTR" type="adimpression" data-type="adTracking"
+									name="&amp;adunit_id=pub-6167988213978292&amp;ad_unit_type=CNT&amp;ad_unit_network=GAP&amp;revenue_basis=CPC&amp;ad_position=LB&amp;revenue_tag=2838000268">																
+								<div id="GoogleAdsense160x600" class="ad google">
+								
+								
+									<script type="text/javascript"><!--
+										google_ad_client = "pub-6167988213978292";
+										google_ad_width = 160;
+										google_ad_height = 600;
+										google_ad_format = "160x600_as";
+										google_ad_channel ="2838000268, 2244068056, 2426488435";
+										if (gUtmSource.toLowerCase() == 'adwords') { google_ad_channel = google_ad_channel + ', ' + gUtmMedium; }
+										google_color_border = "FFFFFF";
+										google_color_bg = "FFFFFF";
+										google_color_link = "437AAE";
+										google_color_url = "437AAE";
+										google_color_text = "000000";//-->
+									</script>
+									<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+								
+								
+								</div><!-- /ad.google -->
+								</div><!-- /DMINSTR -->
+							</div><!-- /.leftsidebar -->
+							<div id="main-content">
+							
+							<div id="DMINSTR" type="adimpression" data-type="adTracking" name="&amp;adunit_id=pub-6167988213978292&amp;ad_unit_type=CNT&amp;ad_unit_network=GAP&amp;revenue_basis=CPC&amp;ad_position=MT&amp;revenue_tag=2838000268" >
+                                <div id="GoogleAdsense336x280" class="ad subgoogle">
+    <script type='text/javascript'>
+
+            if (bolIsQS)
+            {
+                document.write('<div class="yahoo336x280">');
+                YahooShowListings(1);
+                document.write('</div>');
+            }
+            else
+            {
+                if (strCategoryNameUrlSafe == 'arts-culture')
+                {
+                    ad_order = 1;
+                    num_ads = 4;
+                    type = 'text_image_flash';
+                    channels = '2838000268, 7461115626, 2426488435, 6499374751, 6563068779';
+                    if (gUtmSource.toLowerCase() == 'adwords') { channels = channels + ', ' + gUtmMedium; }
+                    ad_client = 'pub-6167988213978292';
+                    class_name = '';
+                    image_size = '336x280';
+                    print_google_ad(ad_order,num_ads,type,channels,ad_client,class_name);
+                }
+                else
+                {
+                    google_ad_client = "pub-6167988213978292";
+                    google_ad_width = 336;
+                    google_ad_height = 280;
+                    google_ad_format = "336x280_as";
+                    google_ad_channel = "2838000268, 7461115626, 2426488435, 6563068779";
+                    if (gUtmSource.toLowerCase() == 'adwords') { google_ad_channel = google_ad_channel + ', ' + gUtmMedium; }
+                    google_color_border = "FFFFFF";
+                    google_color_bg = "FFFFFF";
+                    google_color_link = "437AAE";
+                    google_color_url = "437AAE";
+                    google_color_text = "000000";
+                    document.write('<scr' + 'ipt type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></scr' + 'ipt>');
+                }
+            }
+
+    </script>
+                                </div>
+							</div><!-- /DMINSTR -->
+							<!-- google_ad_section_start -->
+							 <!-- Else if it is old/legacy content -->
+							
+								<h2 class="summary">A description of the basic four stroke Diesel engine cycle used in automotive Diesel engines.</h2>
+						
+															
+														
+							<div class="KonaBody">
+							
+							
+							
+								
+															
+							
+														
+								
+								
+								
+								<div class="articleContentPart">
+								
+									
+										<div data-cme-module="stronglinks" data-cme-module-min="0" data-cme-module-max="10">										
+											<p>
+<div class="KonaBody">Building on previous work, in 1892 Rudolf Diesel was granted a patent for a variation on the Otto cycle gasoline engine that he felt offered a number of advantages over the currently available gasoline engines of the day.  The primary advantage was then, and remains today, a more efficient engine - getting more effective use out of the energy available in the fuel being burned in the engine.  
+	
+										</div>
+																	
+									
+									
+									
+										
+																	
+								
+									
+										<p>
+<p>The changes in that Diesel made come down to two things:  First, in a gasoline powered four cycle engine the fuel and air are drawn into the cylinder together - this allows for simpler engineering, but places an effective limit on how compressed the fuel-air mixture can become before the compressed vapors will self-ignite (Don't worry, I'll explain that more a little later on.); Secondly, ignition of the mixture of fuel and air is done electrically by means of a spark plug.  Diesel noted the tendency of high compression to cause self-ignition of the fuel-air mixture in the gasoline engines, and decided to build an engine where, instead of being a problem, that would be an advantage.  
+
+																	
+									
+									
+									
+										
+																	
+								
+									
+										<p>
+<p>So, how does this self-ignition occur?  
+<p>
+<p>When a gas changes pressure its temperature is affected as well.  To understand this we have to look at what temperature is.  Temperature measures the average molecular kinetic energy, or to think of it a different way, how often the molecules in the substance bounce off each other.  The more molecule on molecule collisions in the substance occur, the hotter the substance will be.  So, if we have a balloon of air at, say, one atmosphere pressure, and it is at temperature X, then we shrink the balloon so that it contains half the volume it used to hold, the pressure in the balloon will go up by a factor of 2.  And suddenly, because the molecules in the balloon have less room to move around without colliding with other molecules, the temperature of the air in the balloon will go up, as well.  
+
+																	
+									
+									
+									
+									
+										<div id="DMINSTR" type="adimpression" data-type="adTracking" name="&amp;adunit_id=pub-6167988213978292&amp;ad_unit_type=CNT&amp;ad_unit_network=GAP&amp;revenue_basis=CPC&amp;ad_position=M2&amp;revenue_tag=2838000268" >
+                                            <div id="GoogleAdsense300x250" class="ad googleinline">
+    <script type='text/javascript'>
+
+            if (bolIsQS)
+            {
+                document.write('<div class="yahoo300x250">');
+                YahooShowListings(2);
+                document.write('</div>');
+            }
+            else
+            {
+                if (strCategoryNameUrlSafe == 'arts-culture')
+                {
+                    ad_order = 2;
+                    num_ads = 4;
+                    type = 'text_image_flash';
+                    channels = '2838000268, 5990168106, 2426488435, 1936588302';
+                    if (gUtmSource.toLowerCase() == 'adwords') { channels = channels + ', ' + gUtmMedium; }
+                    ad_client = 'pub-6167988213978292';
+                    class_name = '';
+                    image_size = '300x250';
+                    print_google_ad(ad_order,num_ads,type,channels,ad_client,class_name);
+                }
+                else
+                {
+                    google_ad_client = "pub-6167988213978292";
+                    google_ad_width = 300;
+                    google_ad_height = 250;
+                    google_ad_format = "300x250_as";
+                    google_ad_channel = "2838000268, 5990168106, 2426488435";
+                    if (gUtmSource.toLowerCase() == 'adwords') { google_ad_channel = google_ad_channel + ', ' + gUtmMedium; }
+                    google_color_border = "FFFFFF";
+                    google_color_bg = "FFFFFF";
+                    google_color_link = "437AAE";
+                    google_color_url = "437AAE";
+                    google_color_text = "000000";
+                    document.write('<scr' + 'ipt type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></scr' + 'ipt>');
+                }
+            }
+
+    </script>
+                                            </div>
+										</div><!--DMINSTR-->								
+										
+										
+																	
+								
+									
+										<p>
+<p>Thus we can see that if you increase the pressure of a sample of any gas, it will also increase the temperature of the gas as well - this is why, when pumping up a bicycle tire the pump gets so hot, the air in the pump cylinder is being pressurized, making its temperature rise as well.  Likewise, if you reduce the pressure of that gas sample, the temperature will drop - this can be seen when using an aerosol spray can, it's not just imagination that makes one think that the spray comes out cooled.  Both of these are called adiabatic temperature changes.  That's a big word that simply means the temperature changed without actually putting any heat energy into the gas, or taking any out.  
+
+																	
+									
+									
+									
+										
+																	
+								
+									
+										<p>
+<p>The first stroke of the four stroke Diesel engine is almost the same as the first stroke in the Otto cycle gasoline engine:  It's an intake stroke, but where a gasoline engine draws in a mix of fuel and air, the Diesel engine draws in just air.  The second stroke of the Diesel engine is identical to the gasoline engine - the compression stroke.  The air in the Diesel engine's cylinder is being compressed to a much higher pressure than would be happening in a gasoline engine, and there is, as yet, no fuel in the cylinder.  Now, as the air is being compressed it is also rising in temperature, through the adiabatic heating I'd mentioned earlier.  
+
+																	
+									
+									
+									
+										
+																	
+								
+									
+										<p>
+<p>When the piston is at the top of its travel in the cylinder, with the compressed air at a high pressure and temperature, the fuel injection port opens, and shoots in a measured spurt of fuel into the cylinder.  When the fuel mixes with the compressed air the high temperature of the compressed air in the cylinder makes the fuel and air combust without any additional energy needed - eliminating the need for spark plugs.  (Diesel engines may use glow plugs, but these are simply an additional heating element to help the engine get up to operating temperatures in cold starts, during normal operation, they aren't needed, or used.)  Incidentally, it was the engineering of the injection port that proved to be one of the most difficult parts that Diesel faced in making his engine because it has to force fuel into the cylinder while the cylinder is near its maximum pressure, then it must act as a seal during the combustion of the fuel and air, or the force that Diesel wanted to harness would leak back out through the fuel port.  
+<p>
+<p>The third stroke of the Diesel engine is identical to the third stroke in the Otto cycle engine - the power stroke, where the energy of the combustion of the fuel is transferred to the crank shaft of the engine.  And the fourth stroke, too, is identical - the exhaust stroke, expelling the used combustion products from the cylinder in preparation for the next cycle.  </p></p></p></p></p></p></p></p></p></p></p></p></p></p></div></p>
+																	
+									
+									
+									
+										
+																	
+								
+								</div>
+								<!-- google_ad_section_end -->
+								
+								<div id="divPhotoCredit"></div>
+									
+
+		
+								<div style="display: block">
+
+
+                                
+                        <div id="incite-bottom-frame">       
+                            <h4 class="DM53-widget-header DM53-widget-header1" style="clear: both; line-height: 1.4em; border-bottom: 3px solid #DDDDDD; font-size: 16px; font-weight:400; color:#333333; text-shadow: 0 2px 3px #BBBBBB;">Trending Now</h4>
+                        <script class="herbie-script" data-id="5">  
+                            (function(){
+                                var insEl = document.getElementsByTagName("script")[0],
+                                    script = document.createElement("script");
+                                script.src="http://scripts.demandmedia.com/herbie/b101.js";
+                                script.async = true;
+                                insEl.parentNode.insertBefore(script,insEl);
+                            }());
+ 
+                        </script>
+                       
+                        </div>
+                       
+                                
+
+
+								<div id="bottomehow"></div>	
+                                <!-- vestigial DIV -->
+								</div> 							
+							</div><!-- /.KonaBody -->
+						
+						</div>
+
+						</div><!-- /.content -->
+
+					</div><!-- /.mainbody -->
+				</div><!-- /.left.module -->
+
+				<div class="right module" id="sidebar">
+					<div class="ad square">
+						<!-- BEGIN STANDARD TAG - 300 x 250 - Essortment: Run-of-site - DO NOT MODIFY -->
+						<!-- BEGIN 300 x 250 - Essortment: Run-of-site - DO NOT MODIFY -->
+						<script type="text/javascript">
+							ord=Math.floor(Math.random()*10000000000000000);
+							document.write(modify_dart_tag('<script language="JavaScript" src="http://ad.doubleclick.net/adj/dmd.essortment/;tile=1;dcopt=ist;%dx%;sz=300x250;ord=' + ord + '?" type="text/javascript"><\/script>'));
+						</script>
+						<noscript>
+							<a href="http://ad.doubleclick.net/jump/dmd.essortment/;tile=1;sz=300x250;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/dmd.essortment/;tile=1;sz=300x250;ord=123456789?" width="300" height="250" border="0" alt=""></a>
+						</noscript>
+
+						<!-- END 300 x 250 - Essortment: Run-of-site -->
+						
+						<!-- END TAG -->
+					</div><!-- /.ad.square -->
+
+					<div id="trehowed" class="catentry"></div>
+			
+					<!-- div class="catentry">
+						<h2 class="entryheader smaller">Popular Articles</h2>
+						<ul class="tracked trackedID-2 bullet normal">
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-diesel-two-stroke-engines-work-57228.html">Auto Questions: How Diesel Two-Stroke Engines Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/car-engines-work-57387.html">How Car Engines Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-rotary-engines-work-57224.html">Auto Questions: How Rotary Engines Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-car-engines-work-57227.html">Auto Questions: How Car Engines Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-hemi-engines-work-57229.html">Auto Questions: How Hemi Engines Work</a></span></li>
+							
+						
+						</ul>
+					</div--> <!-- /.catentry -->
+
+					
+					<div class="catentry">
+						<h2 class="entryheader smaller">More Essortment Articles</h2>
+						<ul class="tracked trackedID-4 bullet normal">
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-harley-davidson-engines-work-57225.html">Auto Questions: How Harley-Davidson Engines Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-gear-ratios-work-57572.html">Auto Questions: How Gear Ratios Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-gasoline-works-57582.html">Auto Questions: How Gasoline Works</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-torque-converters-work-57592.html">Auto Questions: How Torque Converters Work</a></span></li>
+							
+						
+							
+							<li class="flc"><span class="sprites liPNG"></span> <span><a href="http://www.essortment.com/auto-questions-automatic-transmissions-work-57233.html">Auto Questions: How Do Automatic Transmissions Work?</a></span></li>
+							
+						
+						</ul>
+					</div><!-- /.catentry -->
+																		
+				</div><!-- /.right.module -->
+			</div><!-- /.massive -->
+			</div><!-- /.massiveContainer -->
+
+
+
+<div id="bottom">
+	<div class="tabs">
+		<ul class="controls flc">
+			<li><div class="spritesRepeatX controls02PNG a"><span><span>Popular Articles</span></span></span></div></li>
+		</ul>
+		<div class="tabmaster">
+			<div class="tabwrap">
+				<!-- Popular Articles -->
+				<div class="tabentry" id="popular-articles">
+					<div class="slide-master flc">
+						<div class="viewport2">
+							<img alt="" src="http://www.essortment.com/images/collecting-hobbies.jpg" height="93" width="144"/>
+							<ul class="left">
+								
+																																		
+										<li><a href="http://www.essortment.com/auto-questions-disc-brakes-work-57243.html">Auto Questions: How Disc Brakes Work</a></i>
+										
+																		
+																																		
+										<li><a href="http://www.essortment.com/auto-questions-harley-davidson-works-57583.html">Auto Questions: How Harley-Davidson Works</a></i>
+										
+																		
+																																		
+										<li><a href="http://www.essortment.com/change-engine-oil-57405.html">How To Change Your Engine Oil</a></i>
+										
+																		
+																																		
+										<li><a href="http://www.essortment.com/auto-questions-fuel-processors-work-57565.html">Auto Questions: How Fuel Processors Work</a></i>
+										
+																		
+																																		
+										<li><a href="http://www.essortment.com/four-types-abuse-effects-58792.html">The Four Types Of Abuse And The Effects</a></i>
+																														
+											</ul><ul class="left">
+										
+																		
+																									
+										<li><a href="http://www.essortment.com/harley-davidson-works-59544.html">How A Harley-Davidson Works</a></i>
+																		
+																									
+										<li><a href="http://www.essortment.com/auto-questions-sequential-gearboxes-work-57569.html">Auto Questions: How Sequential Gearboxes Work</a></i>
+																		
+																									
+										<li><a href="http://www.essortment.com/rules-cricket-58848.html">The Rules Of Cricket</a></i>
+																		
+																									
+										<li><a href="http://www.essortment.com/auto-repair-replace-car-headlight-bulbs-57515.html">Auto Repair: How To Replace Car Headlight Bulbs</a></i>
+																		
+								</ul>
+						</div><!-- /.viewport -->
+					</div><!-- /.slide-master -->
+				</div><!-- /.tabentry -->
+			</div><!-- /.tabwrap -->
+		</div><!-- /.tabmaster -->
+	</div><!-- /.tabs -->
+</div><!-- /#bottom -->
+
+
+
+
+			<div class="ad banner">
+				<!-- BEGIN STANDARD TAG - 728 x 90 - Essortment: Run-of-site - DO NOT MODIFY -->
+				<script type="text/javascript">
+				//ord=Math.random()*10000000000000000;
+				document.write(modify_dart_tag('<script language="JavaScript" src="http://ad.doubleclick.net/adj/dmd.essortment/;tile=2;%dx%;sz=728x90;ord=' + ord + '?" type="text/javascript"><\/script>'));
+				</script><noscript><a href="http://ad.doubleclick.net/jump/dmd.essortment/;tile=2;sz=728x90;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/dmd.essortment/;tile=2;sz=728x90;ord=123456789?" width="728" height="90" border="0" alt=""></a></noscript>
+				<!-- END TAG -->
+			</div><!-- /.ad.banner -->
+			
+			<!-- Kontera ContentLink -->
+			<script type="text/javascript">
+			var dc_UnitID = 14;
+			var dc_PublisherID = 7763;
+			var dc_AdLinkColor = 'blue';
+			var dc_adprod='ADL';
+			var dc_startInterval = 30000;
+			var dc_flowMode = 4;
+			</script>
+			<script type="text/javascript" src="http://kona.kontera.com/javascript/lib/KonaLibInline.js"></script>
+			<!-- Kontera ContentLink -->
+
+		</div><!-- /#pageframe.home -->	
+	</div><!-- /#master -->
+	<script type="text/javascript">
+		request_google_ads();
+	</script>
+    <script type="text/javascript">
+        if ('referrer' in document && (typeof console != "undefined")) {
+            console.log('referrer: ' + document.referrer);
+        }
+    </script>
+
+
+</div><!-- /.massive -->
+<div id="footer" class="module flc">
+	<p>
+		
+			<a id="_bapw-link"><img id="_bapw-icon" style="display:inline !important;vertical-align:middle !important"/>AdChoices</a> |
+			<a class="track" rel="http://www.essortment.com/privacy.htm">Privacy Policy</a> |
+			<a class="track" rel="http://www.essortment.com/disclaimer.htm">Terms of Use</a>
+		
+	</p>
+</div><!-- /#footer.module -->
+
+<div id="legals">
+	<p>&copy; Demand Media 2011</p>
+</div><!-- /#legals -->
+
+			<!-- Google Analytics -->
+			<script type="text/javascript" src="http://opt-n.net/adj/portal.aspx?cat=main"></script>
+			<script type="text/javascript">insertBot();</script>
+			<script type="text/javascript" src="http://www.google-analytics.com/urchin.js">
+			</script>
+			<script type="text/javascript">
+			_uacct = "UA-2130855-11";
+			_udn="essortment.com";
+			urchinTracker();
+			</script>
+			<!-- end Google Analytics -->
+			<!-- Begin comScore Tag -->
+			<script type="text/javascript">
+			document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			COMSCORE.beacon({ c1:2, c2:6036385, c3:"", c4:"", c5:"", c6:"", c15:"" });
+			</script>
+			<noscript>
+			<img src="http://b.scorecardresearch.com/b?c1=2&c2=6036385&c3=&c4=&c5=&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+			</noscript>
+			<!-- End comScore Tag --> 
+
+			<!-- Casale Media 2008 (C) -->
+			<!-- Ad Format: Pop Under -->
+			<!-- Domain(s): essortment.com -->
+			<script type="text/javascript"><!--
+			if (!IsAdWords()) {
+			    var casaleD=new Date();var casaleR=(casaleD.getTime()%8673806982)+Math.random();
+			    var casaleU=escape('essortment.com');
+			    var casaleHost=' type="text/javascript" src="http://as.casalemedia.com/s?s=';
+			    document.write('<scr'+'ipt'+casaleHost+'94844&amp;u=');
+			    document.write(casaleU+'&amp;f=1&amp;id='+casaleR+'"><\/scr'+'ipt>');
+			}
+			//--></script>
+			<!-- Casale Media 2008 (C) -->
+
+			<script src="http://vs.dmtracker.com/tags/vsboone.js"></script>    
+			<script src="http://i.lsimg.net/ls_images/vs.js" type="text/javascript"></script>
+			<noscript><img src="http://vs.dmtracker.com/images/zig.gif?Log=1"/></noscript>
+			</div><!-- /#pageframe.home -->				
+		</div><!-- /#master -->
+		<script type="text/javascript">
+			request_google_ads();
+		</script>
+		
+        <script type="text/javascript">
+        if (!IsAdWords()) {
+            var infolinks_pid = 1496668;
+            var infolinks_wsid = 1;
+            document.write('<scr'+'ipt type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></scr'+'ipt>');
+        }
+        </script>
+
+		<script type="text/javascript" src="http://www.essortment.com/common.js"></script>
+		<script type="text/javascript">
+			(function(){var e=document,b,a=(e.location.protocol=="https:"?"https":"http"),c=(a=="https"?"https://info.evidon.com/c/betrad/pub/":"http://cdn.betrad.com/pub/");e.getElementById("_bapw-icon").src=c+"icon1.png";
+			e.getElementById("_bapw-link").onclick=function(){var f=this;function d(i,l){var j=e.getElementsByTagName("head")[0]||e.documentElement,h=false,g=e.createElement("script");function k(){g.onload=g.onreadystatechange=null;
+			j.removeChild(g);l()}g.src=i;g.onreadystatechange=function(){if(!h&&(this.readyState=="loaded"||this.readyState=="complete")){h=true;k()}};g.onload=k;j.insertBefore(g,j.firstChild)}this.onclick="return false";
+			d(a+"://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js",function(){d(c+"pub1.js",function(){BAPW.i(f,{pid:46,ocid:374},false)})});return false};b=new Image();b.src=a+"://l.betrad.com/pub/p.gif?pid=46&ocid=374&ii=1&r="+Math.random()}());
+		</script>
+	</body>
+</html>
+

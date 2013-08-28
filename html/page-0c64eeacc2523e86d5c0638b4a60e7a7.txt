@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaDescription" name="DESCRIPTION" content="Pfaff Tuning offers unique tuning solutions for all automobile enthusiasts. Personalize your vehicle with Pfaff auto tuning parts, car accessories and upgrade your vehicle performance." /><meta id="MetaKeywords" name="KEYWORDS" content="Auto Tuning,Cars for Sale,Vehicle Performance, Auto Parts, Car Accessories, Ontario, Tuning Solutions,Service Technicians, Woodbridge, Vehicle Protection, Performance Parts,Car Tuning Parts, Appearance Upgrades, Car Tuning Performance" /><meta id="MetaCopyright" name="COPYRIGHT" content="&amp;copy; Copyright 2013 Pfaff Tuning. All Rights Reserved. A Division of Pfaff Automotive Partners." /><meta id="MetaAuthor" name="AUTHOR" content="pfafftuning" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link id="ADesktopModules_CodingStaff_ContentRotator" rel="stylesheet" type="text/css" href="/DesktopModules/CodingStaff.ContentRotator/module.css" /><link id="APortals__default_" rel="stylesheet" type="text/css" href="/Portals/_default/default.css" /><link id="APortals_308_Skins_pfaff_tuning_" rel="stylesheet" type="text/css" href="/Portals/308/Skins/pfaff-tuning/skin.css" /><link id="APortals_308_Containers_schedule_container_schedule_container_css" rel="stylesheet" type="text/css" href="/Portals/308/Containers/schedule_container/schedule_container.css" /><link id="APortals_308_Containers_autoworks_container_autoworks_container_css" rel="stylesheet" type="text/css" href="/Portals/308/Containers/autoworks_container/autoworks_container.css" /><script type="text/javascript" src="/Resources/Shared/Scripts/jquery/jquery.min.js" ></script><meta name="google-site-verification" content="j3a-1zgWJEpnDNz5y3bj2zyoKrvfcPIF1JYZVTx7FfQ" />
+<meta name="google-site-verification" content="4U6kkrZqmJohKnLYHma-2Dp6YZkHwRY7vcnddXyyjt8" />
+<meta name="msvalidate.01" content="E3E33835290F594B4DFD4227418EB71C" />
+<META name="y_key" content="a6baf4fa28824f63" /><link rel="SHORTCUT ICON" href="/Portals/308/favicon.ico" /><title>
+	PFAFF Tuning Home
+</title></head>
+<body id="Body">
+    <form name="Form" method="post" action="/Default.aspx" id="Form" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NDIyOTEzMjkPZBYGZg8WAh4EVGV4dAV5PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRyYW5zaXRpb25hbC5kdGQiPmQCAQ9kFg4CBA8WAh4HVmlzaWJsZWhkAgUPFgIeB2NvbnRlbnQFuAFQZmFmZiBUdW5pbmcgb2ZmZXJzIHVuaXF1ZSB0dW5pbmcgc29sdXRpb25zIGZvciBhbGwgYXV0b21vYmlsZSBlbnRodXNpYXN0cy4gUGVyc29uYWxpemUgeW91ciB2ZWhpY2xlIHdpdGggUGZhZmYgYXV0byB0dW5pbmcgcGFydHMsIGNhciBhY2Nlc3NvcmllcyBhbmQgdXBncmFkZSB5b3VyIHZlaGljbGUgcGVyZm9ybWFuY2UuZAIGDxYCHwIF6gFBdXRvIFR1bmluZyxDYXJzIGZvciBTYWxlLFZlaGljbGUgUGVyZm9ybWFuY2UsIEF1dG8gUGFydHMsIENhciBBY2Nlc3NvcmllcywgT250YXJpbywgVHVuaW5nIFNvbHV0aW9ucyxTZXJ2aWNlIFRlY2huaWNpYW5zLCBXb29kYnJpZGdlLCBWZWhpY2xlIFByb3RlY3Rpb24sIFBlcmZvcm1hbmNlIFBhcnRzLENhciBUdW5pbmcgUGFydHMsIEFwcGVhcmFuY2UgVXBncmFkZXMsIENhciBUdW5pbmcgUGVyZm9ybWFuY2VkAgcPFgIfAgVhJmNvcHk7IENvcHlyaWdodCAyMDEzIFBmYWZmIFR1bmluZy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4gQSBEaXZpc2lvbiBvZiBQZmFmZiBBdXRvbW90aXZlIFBhcnRuZXJzLmQCCA8WBB8CZB8BaGQCCQ8WAh8CBQtwZmFmZnR1bmluZ2QCDA8WAh8CBQ1JTkRFWCwgRk9MTE9XZAICD2QWAgIBD2QWBmYPZBYCZg8WAh8BaBYCZg9kFgJmD2QWBgIDDxBkZBYAZAIPD2QWAmYPDxYGHghJbWFnZVVybAUUL2ltYWdlcy9jb2xsYXBzZS5naWYeDUFsdGVybmF0ZVRleHQFCE1pbmltaXplHgdUb29sVGlwBQhNaW5pbWl6ZWRkAhEPZBYCAgEPZBYCAgEPZBYQAgEPEGRkFgBkAgUPEGRkFgBkAgcPEGRkFgBkAgsPEGRkFgBkAg8PEGRkFgBkAhUPEGRkFgBkAhkPEGRkFgFmZAIdDxBkZBYAZAIFD2QWAmYPZBYaAgEPZBYCZg8PFgQfBQULcGZhZmZ0dW5pbmceC05hdmlnYXRlVXJsBT5odHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9BZG1pbi9Ib21lL3RhYmlkLzEyODU0L0RlZmF1bHQuYXNweGRkAgMPFgIfAWcWAmYPFgIeBWNsYXNzBSxEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS02NzU0NxYCAgEPZBYKAgEPDxYCHwFoZGQCAg9kFgICAg8WAh8BaGQCBA8WAh8HBQxETk5BbGlnbmxlZnQWAgICDw9kFgIfBwULTW9kRE5OSFRNTEMWAgIBD2QWAgICDxYCHwFoZAIGD2QWAmYPDxYCHwFoZGQCCA9kFgJmDw8WAh8BaGRkAgUPFgIfAWcWAmYPFgIfBwUsRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNjc1NDgWAgIBD2QWCgIBDw8WAh8BaGRkAgIPZBYCAgIPFgIfAWhkAgQPFgIfBwUMRE5OQWxpZ25sZWZ0FgICAg8PZBYCHwcFC01vZEROTkhUTUxDFgICAQ9kFgICAg8WAh8BaGQCBg9kFgJmDw8WAh8BaGRkAggPZBYCZg8PFgIfAWhkZAIHDxYCHwcFF3R1bmluZ1BhbmUgRE5ORW1wdHlQYW5lZAIJD2QWAgIBDxYCHwAFyz8NCjx1bCBpZD0iSG91c2VNZW51VG9wMiI+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtSG9tZSI+PGEgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20iIHRpdGxlPSJIb21lIj5Ib21lPC9hPjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTMwNjMiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazEzMDYzIiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9BYm91dFVzL3RhYmlkLzEzMDYzL0RlZmF1bHQuYXNweCIgdGl0bGU9IkFib3V0IFBGQUZGIFR1bmluZyIgdGFiaW5kZXg9IjEiPkFib3V0IFVzPC9hPg0KPHVsPjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0xMzA4MCI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMTMwODAiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL0NvbnRhY3RVcy90YWJpZC8xMzA3NC9EZWZhdWx0LmFzcHgiIHRpdGxlPSJDb250YWN0IHVzIiB0YWJpbmRleD0iMSI+Q29udGFjdCB1czwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTI4MjQyIj48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsyODI0MiIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vQWJvdXRVcy9PdXJTdGFmZi90YWJpZC8yODI0Mi9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQZmFmZiBUdW5pbmcgVGVhbSIgdGFiaW5kZXg9IjEiPk91ciBTdGFmZjwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTEzMDgxIj48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsxMzA4MSIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vQWJvdXRVcy9QYXJ0bmVycy90YWJpZC8xMzA4MS9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQZmFmZiBUdW5pbmcgUGFydG5lcnMiIHRhYmluZGV4PSIxIj5QYXJ0bmVyczwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTEzMDgyIj48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsxMzA4MiIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vQWJvdXRVcy9QZmFmZkF1dG93b3Jrcy90YWJpZC8xMzA4Mi9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQZmFmZiBBdXRvd29ya3MsIFdvb2RicmlkZ2UsIFRvcm9udG8sIEJvbHRvbiwgQXVkaSBDb2xsaXNpb24gUmVwYWlyLCBBdXRvIEJvZHkgUmVwYWlycyIgdGFiaW5kZXg9IjEiPlBmYWZmIEF1dG93b3JrczwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTI3MDA1Ij48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsyNzAwNSIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vQWJvdXRVcy9BY2Nlc3NpYmlsaXR5L3RhYmlkLzI3MDA1L0RlZmF1bHQuYXNweCIgdGl0bGU9IlBGQUZGIFR1bmluZyBBY2Nlc3NpYmlsaXR5IiB0YWJpbmRleD0iMSI+QWNjZXNzaWJpbGl0eTwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTE0NzU5Ij48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsxNDc1OSIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vQWJvdXRVcy9FbXBsb3ltZW50T3Bwb3J0dW5pdGllcy90YWJpZC8xNDc1OS9EZWZhdWx0LmFzcHgiIHRpdGxlPSJFbXBsb3ltZW50IE9wcG9ydHVuaXRpZXMsIEF1dG9tb3RpdmUgSW5kdXN0cnksIFBmYWZmIFR1bmluZyBKb2IgT3Bwb3J0dW5pdGllcywgQXV0byBKb2JzLCBDYXJlZXJzLCBWYXVnaGFuLCBKb2IgU2VhcmNoLCBBdXRvbW90aXZlIEVtcGxveW1lbnQsIFBmYWZmIFR1bmluZyBKb2IgVmFjYW5jaWVzLCBDYXJlZXIgT3Bwb3J0dW5pdGllcyIgdGFiaW5kZXg9IjEiPkVtcGxveW1lbnQgT3Bwb3J0dW5pdGllczwvYT4NCjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMzI1NTYiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazMyNTU2IiBocmVmPSJodHRwOi8vcGZhZmZtb3RvcnNwb3J0cy5jb20vIiB0YXJnZXQ9Il9ibGFuayIiIHRpdGxlPSJQZmFmZiBNb3RvcnNwb3J0cyIgdGFiaW5kZXg9IjEiPlBmYWZmIE1vdG9yc3BvcnRzPC9hPjwvbGk+DQo8L3VsPjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTMwNjgiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazEzMDY4IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy90YWJpZC8xMzA2OC9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQZmFmZiBUdW5pbmcgU3VwcG9ydGVkIEJyYW5kcyIgdGFiaW5kZXg9IjEiPlByb2R1Y3RzPC9hPg0KPHVsPjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0xNTE0NSI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMTUxNDUiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1Byb2R1Y3RzL3RhYmlkLzEzMDY4L0RlZmF1bHQuYXNweCIgdGl0bGU9IlBmYWZmIFR1bmluZyBQcm9kdWN0cywgVG9yb250bywgUGVyZm9ybWFuY2UgUGFydHMsIENhc3Ryb2wsIFBpcmVsbGkgVGlyZXMsIFJlbm50ZWNoLCBXb29kYnJpZGdlLCBPbnRhcmlvIiB0YWJpbmRleD0iMSI+VmlldyBQcm9kdWN0czwvYT4NCjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTMwODUiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazEzMDg1IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy9GZWF0dXJlZFByb2R1Y3QvdGFiaWQvMTMwODUvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUEZBRkYgVHVuaW5nIEZlYXR1cmVkIFByb2R1Y3RzIiB0YWJpbmRleD0iMSI+RmVhdHVyZWQgUHJvZHVjdDwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTM4MTE2Ij48YSBpZD0iSG91c2VNZW51VG9wMkxpbmszODExNiIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vUHJvZHVjdHMvUGZhZmZUdW5pbmdEUklWRVRTaGlydHMvdGFiaWQvMzgxMTYvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUGZhZmYgVHVuaW5nIERSSVZFIFQtU2hpcnQncyIgdGFiaW5kZXg9IjEiPlBmYWZmIFR1bmluZyBEUklWRSBULVNoaXJ0J3M8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0xNTAzOSI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMTUwMzkiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1Byb2R1Y3RzL1NjaGVkdWxlU2VydmljZS90YWJpZC8xNTAzOS9EZWZhdWx0LmFzcHgiIHRpdGxlPSJTY2hlZHVsZSBTZXJ2aWNlIEFwcG9pbnRtZW50IHdpdGggUEZBRkYgVHVuaW5nIiB0YWJpbmRleD0iMSI+U2NoZWR1bGUgU2VydmljZTwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTE1MDQwIj48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsxNTA0MCIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vUHJvZHVjdHMvUGFydHNSZXF1ZXN0L3RhYmlkLzE1MDQwL0RlZmF1bHQuYXNweCIgdGl0bGU9IlBhcnRzIFJlcXVlc3QiIHRhYmluZGV4PSIxIj5QYXJ0cyBSZXF1ZXN0PC9hPjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTMwNzAiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazEzMDcwIiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy9DbGVhcmFuY2UvdGFiaWQvMTMwNzAvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUGZhZmYgVHVuaW5nIENsZWFyYW5jZSBBcmVhIiB0YWJpbmRleD0iMSI+Q2xlYXJhbmNlPC9hPjwvbGk+DQo8L3VsPjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTMwNjkiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazEzMDY5IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9DYXJzZm9yU2FsZS90YWJpZC8xMzA2OS9EZWZhdWx0LmFzcHgiIHRpdGxlPSJDYXJzIGZvciBTYWxlIGF0IFBGQUZGIFR1bmluZyIgdGFiaW5kZXg9IjEiPkNhcnMgZm9yIFNhbGU8L2E+DQo8L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTI5MTc1Ij48YSBpZD0iSG91c2VNZW51VG9wMkxpbmsyOTE3NSIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vU2VydmljZXMvdGFiaWQvMjkxNzUvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUGZhZmYgVHVuaW5nIFNlcnZpY2VzIE9mZmVyZWQiIHRhYmluZGV4PSIxIj5TZXJ2aWNlczwvYT4NCjx1bD48bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTU1MDUiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazE1NTA1IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9TZXJ2aWNlcy9QZmFmZkF1dG9TYWxvbi90YWJpZC8xNTUwNS9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQRkFGRiBUdW5pbmcgQXV0byBTYWxvbiIgdGFiaW5kZXg9IjEiPlBmYWZmIEF1dG8gU2Fsb248L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0yOTE4MCI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMjkxODAiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1NlcnZpY2VzL0FsaWdubWVudFNlcnZpY2VzL3RhYmlkLzI5MTgwL0RlZmF1bHQuYXNweCIgdGl0bGU9IlBmYWZmIFR1bmluZyBBbGlnbm1lbnQgU2VydmljZXMiIHRhYmluZGV4PSIxIj5BbGlnbm1lbnQgU2VydmljZXM8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0yOTE4MSI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMjkxODEiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1NlcnZpY2VzL0VDVVR1bmluZy90YWJpZC8yOTE4MS9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQZmFmZiBUdW5pbmcgRUNVIFR1bmluZyIgdGFiaW5kZXg9IjEiPkVDVSBUdW5pbmc8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0yOTIwNCI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMjkyMDQiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1NlcnZpY2VzL1BhcnRzSW5zdGFsbGF0aW9uL3RhYmlkLzI5MjA0L0RlZmF1bHQuYXNweCIgdGl0bGU9IlBmYWZmIFR1bmluZyBQYXJ0cyBJbnN0YWxsYXRpb24iIHRhYmluZGV4PSIxIj5QYXJ0cyBJbnN0YWxsYXRpb248L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0yOTIxMCI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMjkyMTAiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1NlcnZpY2VzL1RyYWNrUHJlcGFyYXRpb24vdGFiaWQvMjkyMTAvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUGZhZmYgVHVuaW5nIFRyYWNrIFByZXBhcmF0aW9uIiB0YWJpbmRleD0iMSI+VHJhY2sgUHJlcGFyYXRpb248L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0yOTIyMSI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMjkyMjEiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1NlcnZpY2VzL01haW50ZW5hbmNlL3RhYmlkLzI5MjIxL0RlZmF1bHQuYXNweCIgdGl0bGU9IlBmYWZmIFR1bmluZyBBdXRvbW90aXZlIFBhcnRuZXJzIiB0YWJpbmRleD0iMSI+TWFpbnRlbmFuY2U8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0yOTIyMiI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMjkyMjIiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1NlcnZpY2VzL1BhaW50aW5nU2VydmljZXMvdGFiaWQvMjkyMjIvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUGZhZmYgVHVuaW5nIFBhaW50aW5nIFNlcnZpY2VzIiB0YWJpbmRleD0iMSI+UGFpbnRpbmcgU2VydmljZXM8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0zMzA0NCI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMzMwNDQiIGhyZWY9Imh0dHA6Ly9wZmFmZmF1dG8ubmV0L3NlbGwteW91ci1jYXIvIiB0YXJnZXQ9Il9ibGFuayIiIHRpdGxlPSJTZWxsIFlvdXIgVmVoaWNsZSIgdGFiaW5kZXg9IjEiPlNlbGwgWW91ciBWZWhpY2xlPC9hPjwvbGk+DQo8L3VsPjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTMwNzEiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazEzMDcxIiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9HYWxsZXJ5L3RhYmlkLzEzMDcxL0RlZmF1bHQuYXNweCIgdGl0bGU9IlBGQUZGIFR1bmluZyBQaG90byBHYWxsZXJ5IiB0YWJpbmRleD0iMSI+R2FsbGVyeTwvYT4NCjx1bD48bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMTUwMzgiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazE1MDM4IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9HYWxsZXJ5L1dhbGxwYXBlcnMvdGFiaWQvMTUwMzgvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUEZBRkYgVHVuaW5nIFdhbGxwYXBlciBQaWN0dXJlcyIgdGFiaW5kZXg9IjEiPldhbGxwYXBlcnM8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0xNjEwNyI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMTYxMDciIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL0dhbGxlcnkvQnVpbHRWZWhpY2xlcy90YWJpZC8xNjEwNy9EZWZhdWx0LmFzcHgiIHRpdGxlPSJQZmFmZiBUdW5pbmcgQnVpbHQgQ2FycyIgdGFiaW5kZXg9IjEiPkJ1aWx0IFZlaGljbGVzPC9hPg0KPC9saT4NCjwvdWw+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0xMzA3MiI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMTMwNzIiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL05ld3MvdGFiaWQvMTMwNzIvRGVmYXVsdC5hc3B4IiB0aXRsZT0iVHVuaW5nIE5ld3Nyb29tIiB0YWJpbmRleD0iMSI+TmV3czwvYT4NCjx1bD48bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMjkzNzMiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazI5MzczIiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9OZXdzL1VwY29taW5nRXZlbnRzL3RhYmlkLzI5MzczL0RlZmF1bHQuYXNweCIgdGl0bGU9IlBmYWZmIFR1bmluZywgUGZhZmYgQXV0b21vdGl2ZSBQYXJ0bmVycywgVHJhY2sgRGF5cywgTGFwcGluZywgU29jaWFsIEV2ZW50cywgQ2FycyBhbmQgQ29mZmVlIiB0YWJpbmRleD0iMSI+VXBjb21pbmcgRXZlbnRzPC9hPjwvbGk+DQo8bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMzkyMjYiPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazM5MjI2IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9OZXdzL1BmYWZmVHVuaW5nTmV3c2xldHRlckF1Z3VzdDIwMTMvdGFiaWQvMzkyMjYvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUGZhZmYgVHVuaW5nIE5ld3NsZXR0ZXIgQXVndXN0IDIwMTMiIHRhYmluZGV4PSIxIj5QZmFmZiBUdW5pbmcgTmV3c2xldHRlciBBdWd1c3QgMjAxMzwvYT4NCjx1bD48bGkgaWQ9IkhvdXNlTWVudVRvcDJJdGVtMzkyMjciPjxhIGlkPSJIb3VzZU1lbnVUb3AyTGluazM5MjI3IiBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9OZXdzL1BmYWZmVHVuaW5nTmV3c2xldHRlckF1Z3VzdDIwMTMvUHJvZHVjdHNvZnRoZU1vbnRoTmV3c2xldHRlckF1Z3VzdDIwMTMvdGFiaWQvMzkyMjcvRGVmYXVsdC5hc3B4IiB0aXRsZT0iUHJvZHVjdHMgb2YgdGhlIE1vbnRoIHwgTmV3c2xldHRlciBBdWd1c3QgMjAxMyIgdGFiaW5kZXg9IjEiPlByb2R1Y3RzIG9mIHRoZSBNb250aCB8IE5ld3NsZXR0ZXIgQXVndXN0IDIwMTM8L2E+PC9saT4NCjxsaSBpZD0iSG91c2VNZW51VG9wMkl0ZW0zOTI1MCI+PGEgaWQ9IkhvdXNlTWVudVRvcDJMaW5rMzkyNTAiIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL05ld3MvUGZhZmZUdW5pbmdOZXdzbGV0dGVyQXVndXN0MjAxMy9CdWlsZG9mdGhlTW9udGhOZXdzbGV0dGVyQXVndXN0MjAxMy90YWJpZC8zOTI1MC9EZWZhdWx0LmFzcHgiIHRpdGxlPSJCdWlsZCBvZiB0aGUgTW9udGggfCBOZXdzbGV0dGVyIEF1Z3VzdCAyMDEzIiB0YWJpbmRleD0iMSI+QnVpbGQgb2YgdGhlIE1vbnRoIHwgTmV3c2xldHRlciBBdWd1c3QgMjAxMzwvYT48L2xpPg0KPGxpIGlkPSJIb3VzZU1lbnVUb3AySXRlbTM5MjI4Ij48YSBpZD0iSG91c2VNZW51VG9wMkxpbmszOTIyOCIgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vTmV3cy9QZmFmZlR1bmluZ05ld3NsZXR0ZXJBdWd1c3QyMDEzL1ByZW1pZXJDbGVhcmFuY2VJdGVtc05ld3NsZXR0ZXJBdWd1c3QyMDEzL3RhYmlkLzM5MjI4L0RlZmF1bHQuYXNweCIgdGl0bGU9IlByZW1pZXIgQ2xlYXJhbmNlIEl0ZW1zIHwgTmV3c2xldHRlciBBdWd1c3QgMjAxMyIgdGFiaW5kZXg9IjEiPlByZW1pZXIgQ2xlYXJhbmNlIEl0ZW1zIHwgTmV3c2xldHRlciBBdWd1c3QgMjAxMzwvYT48L2xpPg0KPC91bD48L2xpPg0KPC91bD48L2xpPg0KPC91bD5kAgsPFgIfAWcWAmYPFgIfBwU+RG5uTW9kdWxlIERubk1vZHVsZS1Db2RpbmdTdGFmZkNvbnRlbnRSb3RhdG9yIERubk1vZHVsZS0xNzY3MjkWAgIBD2QWCgIBDw8WAh8BaGRkAgIPZBYCAgIPFgIfAWhkAgQPZBYCAgIPD2QWAh8HBR1Nb2RDb2RpbmdTdGFmZkNvbnRlbnRSb3RhdG9yQxYCAgEPZBYEAgEPFgIfAWhkAgMPZBYEZg8WAh4LXyFJdGVtQ291bnQCDBYYZg9kFgJmDxUBogE8cD48YSBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy9Qcm9kdWN0c0JyYWJ1cy5hc3B4Ij48aW1nIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjM1MCIgYm9yZGVyPSIwIiBzcmM9Ii9Qb3J0YWxzLzMwOC9CcmFidXNfQ1RBLmpwZyIgYWx0PSIiIC8+PC9hPjwvcD5kAgEPZBYCZg8VAbIBPHA+PGEgaHJlZj0iaHR0cDovL3d3dy5wZmFmZnR1bmluZy5jb20vUHJvZHVjdHMvUHJvZHVjdHNBRFYxV2hlZWxzLmFzcHgiPjxpbWcgd2lkdGg9IjEwMDAiIGhlaWdodD0iMzUwIiBib3JkZXI9IjAiIHNyYz0iL1BvcnRhbHMvMzA4L05ldyBCYW5uZXJzL0FEVjFCYW5uZXIuanBnIiBhbHQ9IiIgLz48L2E+PC9wPmQCAg9kFgJmDxUBtgE8cD48YSBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy9Qcm9kdWN0c0FrcmFwb3ZpYy5hc3B4Ij48aW1nIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjM1MCIgYm9yZGVyPSIwIiBzcmM9Ii9Qb3J0YWxzLzMwOC9OZXcgQmFubmVycy9Ba3JhcG92aWNCYW5uZXIuanBnIiBhbHQ9IiIgLz48L2E+PC9wPmQCAw9kFgJmDxUBsAE8cD48YSBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy9Qcm9kdWN0c0hSRVdoZWVscy5hc3B4Ij48aW1nIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjM1MCIgYm9yZGVyPSIwIiBzcmM9Ii9Qb3J0YWxzLzMwOC9OZXcgQmFubmVycy9IUkVCYW5uZXIuanBnIiBhbHQ9IiIgLz48L2E+PC9wPmQCBA9kFgJmDxUBsgE8cD48YSBocmVmPSJodHRwOi8vd3d3LnBmYWZmdHVuaW5nLmNvbS9Qcm9kdWN0cy9Qcm9kdWN0c1RlY2hhcnQuYXNweCI+PGltZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIzNTAiIGJvcmRlcj0iMCIgc3JjPSIvUG9ydGFscy8zMDgvTmV3IEJhbm5lcnMvVGVjaEFydEJhbm5lci5qcGciIGFsdD0iIiAvPjwvYT48L3A+ZAIFD2QWAmYPFQGhATxwPjxhIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL0NhcnNmb3JTYWxlLmFzcHgiPjxpbWcgd2lkdGg9IjEwMDAiIGhlaWdodD0iMzUwIiBib3JkZXI9IjAiIHNyYz0iL1BvcnRhbHMvMzA4L05ldyBCYW5uZXJzLzk2NEJhbm5lci5qcGciIGFsdD0iIiAvPjwvYT48L3A+ZAIGD2QWAmYPFQHDATxwPjxhIGhyZWY9Imh0dHA6Ly93d3cucGZhZmZ0dW5pbmcuY29tL1Byb2R1Y3RzL1ZpZXdQcm9kdWN0cy9Qcm9kdWN0c0ZvcmdlbGluZS5hc3B4Ij48aW1nIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjM1MCIgYm9yZGVyPSIwIiBzcmM9Ii9Qb3J0YWxzLzMwOC9OZXcgQmFubmVycy9Gb3JnZUxpbmVCYW5uZXIuanBnIiBhbHQ9IiIgLz48L2E+PC9wPmQCBw9kFgJmDxUBdDxwPjxpbWcgd2lkdGg9IjEwMDAiIGhlaWdodD0iMzUwIiBib3JkZXI9IjAiIHNyYz0iL1BvcnRhbHMvMzA4L05ldyBCYW5uZXJzL01jTGFyZW5UcmFuc3BvcnRCYW5uZXIuanBnIiBhbHQ9IiIgLz48L3A+ZAIID2QWAmYPFQFrPHA+PGltZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIzNTAiIGJvcmRlcj0iMCIgc3JjPSIvUG9ydGFscy8zMDgvTmV3IEJhbm5lcnMvQm94c3RlckJhbm5lci5qcGciIGFsdD0iIiAvPjwvcD5kAgkPZBYCZg8VAWQ8cD48aW1nIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjM1MCIgYm9yZGVyPSIwIiBzcmM9Ii9Qb3J0YWxzLzMwOC9OZXcgQmFubmVycy9UdXJib1MuanBnIiBhbHQ9IiIgLz48L3A+ZAIKD2QWAmYPFQFhPHA+PGltZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIzNTAiIGJvcmRlcj0iMCIgc3JjPSIvUG9ydGFscy8zMDgvTmV3IEJhbm5lcnMvREJTLmpwZyIgYWx0PSIiIC8+PC9wPmQCCw9k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" />
+</div>
+
+
+<script src="/js/dnncore.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function autoIframe(frameId, moreSpace){try{frame = document.getElementById(frameId);innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;objToResize = (frame.style) ? frame.style : frame;objToResize.height =  innerDoc.body.scrollHeight +moreSpace;}catch(err){ window.status = err.message;}}//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=QbEfIm2aPvT5Cxcc_1pn1i__-eh36TzRKkqi7iNnPHvZFLkUDUlTjL4Jw95JUv9anqmwlcTXBoxp6UJ0I_L-RH2eCchuOTgFuCDIx37CYi3Ibo53VHbbb3EUIAZrH_yjtJbYsRlNMnTGAWVf9wX1pZ09cmI1&amp;t=ffffffffb868b5f4" type="text/javascript"></script>
+<script src="/DesktopModules/CodingStaff.ContentRotator/scripts/jquery-1.3.2.min.cs.js" type="text/javascript"></script>
+<script src="/DesktopModules/CodingStaff.ContentRotator/scripts/jquery.cycle.all.min.js" type="text/javascript"></script>
+
+        
+        
+<link rel="SHORTCUT ICON" href="/Portals/308/favicon.ico" />
+<table summary="Page Content Holder" id="wrapie" class="PageWidth" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div id="HP">
+        <table border="0" cellspacing="0" cellpadding="0" align="center">
+          <!--Top Menu-->
+          <tr>
+            <td valign="top"><table class="topbg" align="center" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><a id="dnn_dnnLOGO_hypLogo" title="pfafftuning" href="http://www.pfafftuning.com/Admin/Home/tabid/12854/Default.aspx"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/308/logo.jpg" alt="pfafftuning" style="border-width:0px;" /></a></td>
+                      </tr>
+                      <tr>
+                        <td id="dnn_AddressPane" class="AddressPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67547"><a name="67547"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr67547_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr67547_ContentPane" class="DNNAlignleft">
+        <!-- Start_Module_67547 --><div id="dnn_ctr67547_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67547_HtmlModule_lblContent" class="Normal">
+	<p>33 Auto Park Circle, Woodbridge, Ontario L4L 8R1 |&#160;<strong>(<span style="font-family: Calibri, sans-serif; font-size: 11pt;">888) 469-3758</span></strong></p>
+<p><span lang="EN-US" style="font-size:11.0pt;font-family:
+&quot;Calibri&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-ansi-language:EN-US;mso-fareast-language:EN-CA;mso-bidi-language:
+AR-SA">&#160;<br />
+</span></p>
+</div>
+
+</div><!-- End_Module_67547 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+                      </tr>
+                    </table></td>
+                  <td id="dnn_contactPane" valign="top" class="contactPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67548"><a name="67548"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr67548_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr67548_ContentPane" class="DNNAlignleft">
+        <!-- Start_Module_67548 --><div id="dnn_ctr67548_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67548_HtmlModule_lblContent" class="Normal">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td width="125" style="text-align: right;"><img width="85" height="36" src="/Portals/308/50-Best-2013-White.png" alt="" /></td>
+            <td align="right"><script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+            <p style="text-align: right">&#160;</p>
+            <p style="text-align: right"><!-- Place this tag where you want the +1 button to render. --></p>
+            <div class="g-plusone" data-size="small" data-href="http://pfafftuning.com">&#160;</div>
+            <!-- Place this tag after the last +1 button tag. --> <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script><a href="http://www.facebook.com/Pfaff.Tuning" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','/Portals/308/f-o.jpg',1)" target="_blank"><img width="19" hspace="4" height="19" border="0" src="/Portals/308/Logos/Facebook-Icon.png" alt="Facebook" name="Image5" /></a><a href="http://twitter.com/#!/pfafftuning" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','/Portals/308/Twitter-o.jpg',1)" target="_blank"><img width="19" hspace="4" height="19" border="0" src="/Portals/308/Logos/twitter-icon.png" alt="Twitter" name="Image3" /></a><a target="_blank" onmouseover="MM_swapImage('Image4','','/portals/308/youtube-color.png',1)" onmouseout="MM_swapImgRestore()" href="http://www.youtube.com/pfafftuning"><img width="19" hspace="4" height="19" border="0" id="Image4" name="Image4" alt="Youtube" src="/Portals/308/Logos/youtube_icon.png" /></a>
+            <p>&#160;</p>
+            <p style="text-align: right"><a href="/contactus.aspx">Contact Us</a> | <a href="/Sitemap.aspx">Sitemap</a>&#160;&#160;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
+    po.src = "https://apis.google.com/js/plusone.js?publisherid=100515516475022231247";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</div>
+
+</div><!-- End_Module_67548 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+                  
+                </tr>
+              </table></td>
+          </tr>
+          <!--Top Menu End-->
+          <!--Nav-->
+          <tr>
+            <td valign="top" align="center" id="NavBar2">
+<script language="Javascript" type="text/javascript" src="http://www.edealer.ca/common.js"></script>
+
+<ul id="HouseMenuTop2">
+<li id="HouseMenuTop2ItemHome"><a href="http://www.pfafftuning.com" title="Home">Home</a></li>
+<li id="HouseMenuTop2Item13063"><a id="HouseMenuTop2Link13063" href="http://www.pfafftuning.com/AboutUs/tabid/13063/Default.aspx" title="About PFAFF Tuning" tabindex="1">About Us</a>
+<ul><li id="HouseMenuTop2Item13080"><a id="HouseMenuTop2Link13080" href="http://www.pfafftuning.com/ContactUs/tabid/13074/Default.aspx" title="Contact us" tabindex="1">Contact us</a></li>
+<li id="HouseMenuTop2Item28242"><a id="HouseMenuTop2Link28242" href="http://www.pfafftuning.com/AboutUs/OurStaff/tabid/28242/Default.aspx" title="Pfaff Tuning Team" tabindex="1">Our Staff</a></li>
+<li id="HouseMenuTop2Item13081"><a id="HouseMenuTop2Link13081" href="http://www.pfafftuning.com/AboutUs/Partners/tabid/13081/Default.aspx" title="Pfaff Tuning Partners" tabindex="1">Partners</a></li>
+<li id="HouseMenuTop2Item13082"><a id="HouseMenuTop2Link13082" href="http://www.pfafftuning.com/AboutUs/PfaffAutoworks/tabid/13082/Default.aspx" title="Pfaff Autoworks, Woodbridge, Toronto, Bolton, Audi Collision Repair, Auto Body Repairs" tabindex="1">Pfaff Autoworks</a></li>
+<li id="HouseMenuTop2Item27005"><a id="HouseMenuTop2Link27005" href="http://www.pfafftuning.com/AboutUs/Accessibility/tabid/27005/Default.aspx" title="PFAFF Tuning Accessibility" tabindex="1">Accessibility</a></li>
+<li id="HouseMenuTop2Item14759"><a id="HouseMenuTop2Link14759" href="http://www.pfafftuning.com/AboutUs/EmploymentOpportunities/tabid/14759/Default.aspx" title="Employment Opportunities, Automotive Industry, Pfaff Tuning Job Opportunities, Auto Jobs, Careers, Vaughan, Job Search, Automotive Employment, Pfaff Tuning Job Vacancies, Career Opportunities" tabindex="1">Employment Opportunities</a>
+</li>
+<li id="HouseMenuTop2Item32556"><a id="HouseMenuTop2Link32556" href="http://pfaffmotorsports.com/" target="_blank"" title="Pfaff Motorsports" tabindex="1">Pfaff Motorsports</a></li>
+</ul></li>
+<li id="HouseMenuTop2Item13068"><a id="HouseMenuTop2Link13068" href="http://www.pfafftuning.com/Products/tabid/13068/Default.aspx" title="Pfaff Tuning Supported Brands" tabindex="1">Products</a>
+<ul><li id="HouseMenuTop2Item15145"><a id="HouseMenuTop2Link15145" href="http://www.pfafftuning.com/Products/tabid/13068/Default.aspx" title="Pfaff Tuning Products, Toronto, Performance Parts, Castrol, Pirelli Tires, Renntech, Woodbridge, Ontario" tabindex="1">View Products</a>
+</li>
+<li id="HouseMenuTop2Item13085"><a id="HouseMenuTop2Link13085" href="http://www.pfafftuning.com/Products/FeaturedProduct/tabid/13085/Default.aspx" title="PFAFF Tuning Featured Products" tabindex="1">Featured Product</a></li>
+<li id="HouseMenuTop2Item38116"><a id="HouseMenuTop2Link38116" href="http://www.pfafftuning.com/Products/PfaffTuningDRIVETShirts/tabid/38116/Default.aspx" title="Pfaff Tuning DRIVE T-Shirt's" tabindex="1">Pfaff Tuning DRIVE T-Shirt's</a></li>
+<li id="HouseMenuTop2Item15039"><a id="HouseMenuTop2Link15039" href="http://www.pfafftuning.com/Products/ScheduleService/tabid/15039/Default.aspx" title="Schedule Service Appointment with PFAFF Tuning" tabindex="1">Schedule Service</a></li>
+<li id="HouseMenuTop2Item15040"><a id="HouseMenuTop2Link15040" href="http://www.pfafftuning.com/Products/PartsRequest/tabid/15040/Default.aspx" title="Parts Request" tabindex="1">Parts Request</a></li>
+<li id="HouseMenuTop2Item13070"><a id="HouseMenuTop2Link13070" href="http://www.pfafftuning.com/Products/Clearance/tabid/13070/Default.aspx" title="Pfaff Tuning Clearance Area" tabindex="1">Clearance</a></li>
+</ul></li>
+<li id="HouseMenuTop2Item13069"><a id="HouseMenuTop2Link13069" href="http://www.pfafftuning.com/CarsforSale/tabid/13069/Default.aspx" title="Cars for Sale at PFAFF Tuning" tabindex="1">Cars for Sale</a>
+</li>
+<li id="HouseMenuTop2Item29175"><a id="HouseMenuTop2Link29175" href="http://www.pfafftuning.com/Services/tabid/29175/Default.aspx" title="Pfaff Tuning Services Offered" tabindex="1">Services</a>
+<ul><li id="HouseMenuTop2Item15505"><a id="HouseMenuTop2Link15505" href="http://www.pfafftuning.com/Services/PfaffAutoSalon/tabid/15505/Default.aspx" title="PFAFF Tuning Auto Salon" tabindex="1">Pfaff Auto Salon</a></li>
+<li id="HouseMenuTop2Item29180"><a id="HouseMenuTop2Link29180" href="http://www.pfafftuning.com/Services/AlignmentServices/tabid/29180/Default.aspx" title="Pfaff Tuning Alignment Services" tabindex="1">Alignment Services</a></li>
+<li id="HouseMenuTop2Item29181"><a id="HouseMenuTop2Link29181" href="http://www.pfafftuning.com/Services/ECUTuning/tabid/29181/Default.aspx" title="Pfaff Tuning ECU Tuning" tabindex="1">ECU Tuning</a></li>
+<li id="HouseMenuTop2Item29204"><a id="HouseMenuTop2Link29204" href="http://www.pfafftuning.com/Services/PartsInstallation/tabid/29204/Default.aspx" title="Pfaff Tuning Parts Installation" tabindex="1">Parts Installation</a></li>
+<li id="HouseMenuTop2Item29210"><a id="HouseMenuTop2Link29210" href="http://www.pfafftuning.com/Services/TrackPreparation/tabid/29210/Default.aspx" title="Pfaff Tuning Track Preparation" tabindex="1">Track Preparation</a></li>
+<li id="HouseMenuTop2Item29221"><a id="HouseMenuTop2Link29221" href="http://www.pfafftuning.com/Services/Maintenance/tabid/29221/Default.aspx" title="Pfaff Tuning Automotive Partners" tabindex="1">Maintenance</a></li>
+<li id="HouseMenuTop2Item29222"><a id="HouseMenuTop2Link29222" href="http://www.pfafftuning.com/Services/PaintingServices/tabid/29222/Default.aspx" title="Pfaff Tuning Painting Services" tabindex="1">Painting Services</a></li>
+<li id="HouseMenuTop2Item33044"><a id="HouseMenuTop2Link33044" href="http://pfaffauto.net/sell-your-car/" target="_blank"" title="Sell Your Vehicle" tabindex="1">Sell Your Vehicle</a></li>
+</ul></li>
+<li id="HouseMenuTop2Item13071"><a id="HouseMenuTop2Link13071" href="http://www.pfafftuning.com/Gallery/tabid/13071/Default.aspx" title="PFAFF Tuning Photo Gallery" tabindex="1">Gallery</a>
+<ul><li id="HouseMenuTop2Item15038"><a id="HouseMenuTop2Link15038" href="http://www.pfafftuning.com/Gallery/Wallpapers/tabid/15038/Default.aspx" title="PFAFF Tuning Wallpaper Pictures" tabindex="1">Wallpapers</a></li>
+<li id="HouseMenuTop2Item16107"><a id="HouseMenuTop2Link16107" href="http://www.pfafftuning.com/Gallery/BuiltVehicles/tabid/16107/Default.aspx" title="Pfaff Tuning Built Cars" tabindex="1">Built Vehicles</a>
+</li>
+</ul></li>
+<li id="HouseMenuTop2Item13072"><a id="HouseMenuTop2Link13072" href="http://www.pfafftuning.com/News/tabid/13072/Default.aspx" title="Tuning Newsroom" tabindex="1">News</a>
+<ul><li id="HouseMenuTop2Item29373"><a id="HouseMenuTop2Link29373" href="http://www.pfafftuning.com/News/UpcomingEvents/tabid/29373/Default.aspx" title="Pfaff Tuning, Pfaff Automotive Partners, Track Days, Lapping, Social Events, Cars and Coffee" tabindex="1">Upcoming Events</a></li>
+<li id="HouseMenuTop2Item39226"><a id="HouseMenuTop2Link39226" href="http://www.pfafftuning.com/News/PfaffTuningNewsletterAugust2013/tabid/39226/Default.aspx" title="Pfaff Tuning Newsletter August 2013" tabindex="1">Pfaff Tuning Newsletter August 2013</a>
+<ul><li id="HouseMenuTop2Item39227"><a id="HouseMenuTop2Link39227" href="http://www.pfafftuning.com/News/PfaffTuningNewsletterAugust2013/ProductsoftheMonthNewsletterAugust2013/tabid/39227/Default.aspx" title="Products of the Month | Newsletter August 2013" tabindex="1">Products of the Month | Newsletter August 2013</a></li>
+<li id="HouseMenuTop2Item39250"><a id="HouseMenuTop2Link39250" href="http://www.pfafftuning.com/News/PfaffTuningNewsletterAugust2013/BuildoftheMonthNewsletterAugust2013/tabid/39250/Default.aspx" title="Build of the Month | Newsletter August 2013" tabindex="1">Build of the Month | Newsletter August 2013</a></li>
+<li id="HouseMenuTop2Item39228"><a id="HouseMenuTop2Link39228" href="http://www.pfafftuning.com/News/PfaffTuningNewsletterAugust2013/PremierClearanceItemsNewsletterAugust2013/tabid/39228/Default.aspx" title="Premier Clearance Items | Newsletter August 2013" tabindex="1">Premier Clearance Items | Newsletter August 2013</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</td>
+          </tr>
+          <!--Nav End-->
+          <tr>
+            <td id="dnn_bannerPane" valign="top" class="bannerPane"><div class="DnnModule DnnModule-CodingStaffContentRotator DnnModule-176729"><a name="176729"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr176729_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr176729_ContentPane">
+        <!-- Start_Module_176729 --><div id="dnn_ctr176729_ModuleContent" class="ModCodingStaffContentRotatorC">
+	
+<div class="contentRotator">
+    
+    
+        <div style="position:relative">
+            <div id="rotate176729" class="container" style="z-index:1;width:998px;height:350px">
+                
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/Products/ProductsBrabus.aspx"><img width="1000" height="350" border="0" src="/Portals/308/Brabus_CTA.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/Products/ProductsADV1Wheels.aspx"><img width="1000" height="350" border="0" src="/Portals/308/New Banners/ADV1Banner.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/Products/ProductsAkrapovic.aspx"><img width="1000" height="350" border="0" src="/Portals/308/New Banners/AkrapovicBanner.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/Products/ProductsHREWheels.aspx"><img width="1000" height="350" border="0" src="/Portals/308/New Banners/HREBanner.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/Products/ProductsTechart.aspx"><img width="1000" height="350" border="0" src="/Portals/308/New Banners/TechArtBanner.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/CarsforSale.aspx"><img width="1000" height="350" border="0" src="/Portals/308/New Banners/964Banner.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><a href="http://www.pfafftuning.com/Products/ViewProducts/ProductsForgeline.aspx"><img width="1000" height="350" border="0" src="/Portals/308/New Banners/ForgeLineBanner.jpg" alt="" /></a></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><img width="1000" height="350" border="0" src="/Portals/308/New Banners/McLarenTransportBanner.jpg" alt="" /></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><img width="1000" height="350" border="0" src="/Portals/308/New Banners/BoxsterBanner.jpg" alt="" /></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><img width="1000" height="350" border="0" src="/Portals/308/New Banners/TurboS.jpg" alt="" /></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><img width="1000" height="350" border="0" src="/Portals/308/New Banners/DBS.jpg" alt="" /></p>   
+                                </div>  
+                            
+                                <div id="rotateItem" class="item" style="width:998px;height:350px">
+                                    <p><img width="1000" height="350" border="0" src="/Portals/308/New Banners/991.jpg" alt="" /></p>   
+                                </div>  
+                            
+            </div>
+            
+        </div>
+        <script type="text/javascript">
+            (function() {        
+                jQueryCS(document).ready(function() {
+                    jQueryCS('#rotate'+176729).show();                    
+                    jQueryCS('#rotate'+176729).cycle({
+		                fx: 'fade', 
+                        speed:   1000, 
+                        timeout:  5000,
+		                pause: 1,
+		                random: 0 ,
+		                next:'.next',
+		                prev:'.prev',
+		                pager: '#nav',
+		                pagerEvent: 'click',
+		                pagerAnchorBuilder: function(index, DOMelement) {
+		                    return '<a href="#" class="navigation">&nbsp;&nbsp;&nbsp;&nbsp;</a>'; 
+		                }
+	                });
+                });      
+            })();
+        </script>
+    
+</div>
+    
+</div><!-- End_Module_176729 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+          </tr>
+        </table>
+        <!--Content-->
+        <div id="cp">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td id="dnn_SchedulePane" valign="top" class="SchedulePane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67629"><a name="67629"></a>
+
+<div class="container2">
+<div class="actions2"></div>
+	<div><!-- style="display:table; clear:both;"-->
+<div class="t2"><div class="b2"><div class="l2"><div class="r2"><div class="bl2"><div class="br2"><div class="tl1"><div class="tr2">
+<div class="title2"><img alt="Tuning News Events" src="/Portals/308/containers/schedule_container/head.jpg" /></div><div class="center2">
+<div id="dnn_ctr67629_ContentPane" class="FullContentPane DNNAlignleft"><!-- Start_Module_67629 --><div id="dnn_ctr67629_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67629_HtmlModule_lblContent" class="Normal">
+	<p><span style="color: rgb(255, 255, 255);">Pfaff Tuning will be at Berlin Klassik this year!</span></p>
+<p><span style="color: rgb(255, 255, 255);">On September 8th come stop by our booth for some swag and check out our most recent builds!</span></p>
+<p><span style="color: rgb(255, 255, 255);"><br type="_moz" />
+</span></p>
+<p><span style="color: rgb(255, 255, 255);">For details:&#160;</span><a href="https://www.facebook.com/BERLINKLASSIK"><span style="color: rgb(255, 255, 255);">www.facebook.com/BERLINKLASSIK</span></a></p>
+</div>
+
+</div><!-- End_Module_67629 --></div></div>
+<div class="icons">
+			<span></span>
+		</div>
+</div>
+</div></div></div></div></div></div></div></div>
+</div>
+
+</div>
+
+</div></td>
+
+              <td id="dnn_ContentPane" valign="top" class="HomeContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67630"><a name="67630"></a>
+
+<div class="container3">
+<div class="actions3"></div>
+	<div><!-- style="display:table; clear:both;"-->
+<div class="t3"><div class="b3"><div class="l3"><div class="r3"><div class="bl3"><div class="br3"><div class="tl3"><div class="tr3">
+<div class="title3"><img alt="Pfaff Auto Salon" src="/Portals/308/containers/autoworks_container/head.jpg" /></div><div class="center3">
+<div id="dnn_ctr67630_ContentPane" class="FullContentPane DNNAlignleft"><!-- Start_Module_67630 --><div id="dnn_ctr67630_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67630_HtmlModule_lblContent" class="Normal">
+	<p>Pfaff Tuning is pleased to offer a variety of detailing packages for your vehicle.&#160;</p>
+<p><span style="color: #ffffff">- Sebring Package $149.00 </span></p>
+<p><span style="color: #ffffff">- Daytona Package $199.00 </span></p>
+<p><span style="color: #ffffff">- Petit Lemans Package&#160;$279.00 </span></p>
+<p><span style="color: #ffffff">- Lemans 24hrs Package&#160;$499.00 </span></p>
+<p>&#160;</p>
+<p><a href="/LinkClick.aspx?link=15505&amp;tabid=12854"><span style="color: #ffffff"><u><strong>Click here for more information</strong></u></span></a></p>
+</div>
+
+</div><!-- End_Module_67630 --></div></div>
+<div class="icons">
+			<span></span>
+		</div>
+</div>
+</div></div></div></div></div></div></div></div>
+</div>
+
+</div>
+
+</div></td>
+
+              <td id="dnn_FeaturePane" valign="top" class="FeaturePane"><div class="DnnModule DnnModule-DNN_IFrame DnnModule-88665"><a name="88665"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr88665_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr88665_ContentPane">
+        <!-- Start_Module_88665 --><div id="dnn_ctr88665_ModuleContent" class="ModDNNIFrameC">
+	<iframe id="dnn_ctr88665_IFrame_htmIFrame" src="http://www.youtube.com/embed/d3D9Viu31Kc" height="225" allowtransparency="true" frameborder="0" width="400" scrolling="no" onload="if (window.parent &amp;&amp; window.parent.autoIframe) {window.parent.autoIframe('dnn_ctr88665_IFrame_htmIFrame',0);}">Your browser does not support inline frames</iframe>
+
+</div><!-- End_Module_88665 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+            </tr>
+          </table>
+          <!--Content End-->
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><table class="footerbg" align="center" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td id="dnn_FooterPane" class="FooterPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67564"><a name="67564"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr67564_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr67564_ContentPane" class="DNNAlignleft">
+        <!-- Start_Module_67564 --><div id="dnn_ctr67564_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67564_HtmlModule_lblContent" class="Normal">
+	<p style="text-align: center;"><a href="http://www.pfafftuning.com">Home</a> | <a href="/aboutus.aspx">About Us</a> | <a href="/products.aspx">Products</a> | <a href="/carsforsale.aspx">Cars for Sale</a> | <a href="/clearance.aspx">Clearance</a> | <a href="/gallery.aspx">Gallery</a> | <a href="/Sitemap.aspx">Sitemap</a></p>
+</div>
+
+</div><!-- End_Module_67564 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <!--bottom pane-->
+          <table class="bottombg" align="center" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td id="dnn_BottomPane" class="BottomPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67594"><a name="67594"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr67594_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr67594_ContentPane" class="DNNAlignleft">
+        <!-- Start_Module_67594 --><div id="dnn_ctr67594_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67594_HtmlModule_lblContent" class="Normal">
+	<p style="text-align: center;">Auto Tuning - Vehicle Performance - Service Technicians - Auto Parts - Car Accessories - Tuning Solutions - Vehicle Protection - Performance Parts<br />
+&#160; Car Tuning Parts - Appearance Upgrades - Car Tuning Performance – Used Cars</p>
+</div>
+
+</div><!-- End_Module_67594 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+            </tr>
+            <tr>
+              <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="CopyPane"><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="SkinObject">&copy; Copyright 2013 Pfaff Tuning. All Rights Reserved. A Division of Pfaff Automotive Partners.</span>
+</td>
+                    <td valign="top" align="right"><table class="logincon" align="right" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td class="EdealerPane"><a href="http://www.edealer.ca" target="_blank"> <img border="0" alt="e-dealer" src="/Portals/308/edealer_logo.png"/> </a></td>
+                        </tr>
+						<tr>
+						<td align="right">
+						<table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+				  <td id="dnn_TermPane" class="TermPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-67571"><a name="67571"></a>
+<center>
+<div class="containermaster_transparent" style="padding:0; margin:0">
+    <div>
+        <div><span id="dnn_ctr67571_dnnTITLE_lblTitle" class="MyHead"></span>
+
+
+
+        </div>
+    </div>
+    <div>
+        <div id="dnn_ctr67571_ContentPane" class="DNNAlignleft">
+        <!-- Start_Module_67571 --><div id="dnn_ctr67571_ModuleContent" class="ModDNNHTMLC">
+	<div id="dnn_ctr67571_HtmlModule_lblContent" class="Normal">
+	<p><a href="/TermsConditions.aspx">Terms &amp; Conditions</a>   | <a href="/PrivacyPolicy.aspx">Privacy Policy</a> |</p>
+</div>
+
+</div><!-- End_Module_67571 --></div>
+    </div>
+    <div>
+        <div>
+         
+         
+        </div>
+    </div>
+</div>
+</center>
+
+
+
+</div></td>
+
+						  <td valign="top" align="right"><span id="Login">
+                            <a id="dnn_dnnLOGIN_cmdLogin" class="SkinObject" href="javascript:__doPostBack('dnn$dnnLOGIN$cmdLogin','')">Login</a>
+                            </span> </td>
+							</tr></table>
+							</td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+          <!--bottom pane End-->
+        </div>
+      </div></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19467943-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+adroll_adv_id = "BXRTNDA3VVA4TPXKZ6ZNP6";
+adroll_pix_id = "VN6ZP2UP3RAYZE26IBYRUR";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+__adroll_loaded=true;
+var scr = document.createElement("script");
+var host = (("https:" == document.location.protocol) ? " https://s.adroll.com" : " http://a.adroll.com");
+scr.setAttribute('async', 'true');
+scr.type = "text/javascript";
+scr.src = host + "/j/roundtrip.js";
+((document.getElementsByTagName('head') || [null])[0] ||
+document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+if(oldonload){oldonload()}};
+}());
+</script>
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

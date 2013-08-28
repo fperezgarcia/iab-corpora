@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vail Wheels and Wings | Cars, Aircraft and Motorcycle Show in Vail, Colorado</title>
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/animation/animation-min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/menu/assets/skins/sam/menu.css"/>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/container/container_core-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/menu/menu-min.js"></script>
+<script type="text/javascript">
+            //<![CDATA[
+            // Initialize and render the menu bar when it is available in the DOM
+            YAHOO.util.Event.onContentReady("productsandservices", function () {
+            var oMenuBar = new YAHOO.widget.MenuBar("productsandservices", { 
+                                                            autosubmenudisplay: true, 
+                                                            hidedelay: 750, 
+                                                            lazyload: true });
+          var oSubmenuData = [
+          
+{
+id: "Home",
+itemdata: [
+]},
+{
+id: "Contact Us",
+itemdata: [
+{ text: "Board of Directors", url: "/node/15767" },
+{ text: "Press Center", url: "/press-center" }
+]},
+{
+id: "Registration",
+itemdata: [
+{ text: "Vehicle Registration", url: "/register" },
+{ text: "Car Corral", url: "/register-car-coral" },
+{ text: "Car Classes", url: "/car-classes" },
+{ text: "Aircraft Registration", url: "/aircraft-online-registration" },
+{ text: "2013 Featured Marque", url: "/2013-featured-marque" },
+]},
+{
+id: "Events Schedule",
+itemdata: [
+{ text: "Car Auction", url: "/wheels-and-wings-events-schedule" },
+{ text: "Vail Village Car Show", url: "/vail-village-car-show" },
+{ text: "Wheels and Wings", url: "/wheels-and-wings" },
+]},
+{
+id: "Sponsors",
+itemdata: [
+{ text: "Be A Sponsor", url: "/be-a-sponsor" },
+{ text: "Contact Us", url: "/Contact-us" }
+]},
+{
+id: "Charities",
+itemdata: [
+]},
+{
+id: "Tickets",
+itemdata: [
+]},
+{
+id: "Visitors Guide",
+itemdata: [
+{ text: "Directions/Parking", url: "/directions-parking-vail-car-show" },
+{ text: "Local Lodging", url: "/lodging-in-Vail" },
+{ text: "Prepare to Attend", url: "/prepare-to-attend-car-show-in-Vail" }
+]},
+{
+id: "Kids Activities",
+itemdata: [
+]},
+          ];var ua = YAHOO.env.ua,
+                    oAnim;  // Animation instance
+                function onSubmenuBeforeShow(p_sType, p_sArgs) {
+                    var oBody,
+                        oElement,
+                        oShadow,
+                        oUL;
+                    if (this.parent) {
+                        oElement = this.element;
+                        oShadow = oElement.lastChild;
+                        oShadow.style.height = "0px";
+                        if (oAnim && oAnim.isAnimated()) {
+                            oAnim.stop();
+                            oAnim = null;
+                        }
+                        oBody = this.body;
+                        //  Check if the menu is a submenu of a submenu.
+                        if (this.parent && 
+                            !(this.parent instanceof YAHOO.widget.MenuBarItem)) {
+                            if (ua.gecko) {
+                                oBody.style.width = oBody.clientWidth + "px";
+                            }
+                            if (ua.ie == 7) {
+                                oElement.style.width = oElement.clientWidth + "px";
+                            }
+                        }
+                        oBody.style.overflow = "hidden";
+                        oUL = oBody.getElementsByTagName("ul")[0];
+                        oUL.style.marginTop = ("-" + oUL.offsetHeight + "px");
+                    }
+                }
+
+               function onTween(p_sType, p_aArgs, p_oShadow) {
+                    if (this.cfg.getProperty("iframe")) {
+                        this.syncIframe();
+                    }
+                    if (p_oShadow) {
+                        p_oShadow.style.height = this.element.offsetHeight + "px";
+                    }
+                }
+                function onAnimationComplete(p_sType, p_aArgs, p_oShadow) {
+                    var oBody = this.body,
+                        oUL = oBody.getElementsByTagName("ul")[0];
+                    if (p_oShadow) {
+                        p_oShadow.style.height = this.element.offsetHeight + "px";
+                    }
+                    oUL.style.marginTop = "";
+                    oBody.style.overflow = "";
+                    //  Check if the menu is a submenu of a submenu.
+                    if (this.parent && 
+                        !(this.parent instanceof YAHOO.widget.MenuBarItem)) {
+                        // Clear widths set by the "beforeshow" event handler
+                        if (ua.gecko) {
+                            oBody.style.width = "";
+                        }
+                        if (ua.ie == 7) {
+                            this.element.style.width = "";
+                        }
+                    }
+                }
+                function onSubmenuShow(p_sType, p_sArgs) {
+                    var oElement,
+                        oShadow,
+                        oUL;
+                    if (this.parent) {
+                        oElement = this.element;
+                        oShadow = oElement.lastChild;
+                        oUL = this.body.getElementsByTagName("ul")[0];
+                        oAnim = new YAHOO.util.Anim(oUL, 
+                            { marginTop: { to: 0 } },
+                            .5, YAHOO.util.Easing.easeOut);
+                        oAnim.onStart.subscribe(function () {
+                            oShadow.style.height = "100%";
+                        });
+                        oAnim.animate();
+                        if (YAHOO.env.ua.ie) {
+                            oShadow.style.height = oElement.offsetHeight + "px";
+                            oAnim.onTween.subscribe(onTween, oShadow, this);
+                        }
+                        oAnim.onComplete.subscribe(onAnimationComplete, oShadow, this);
+                    }
+                }oMenuBar.subscribe("beforeRender", function () {
+                    if (this.getRoot() == this) {this.getItem(1).cfg.setProperty("submenu", oSubmenuData[1]);
+this.getItem(2).cfg.setProperty("submenu", oSubmenuData[2]);
+this.getItem(3).cfg.setProperty("submenu", oSubmenuData[3]);
+this.getItem(4).cfg.setProperty("submenu", oSubmenuData[4]);
+this.getItem(7).cfg.setProperty("submenu", oSubmenuData[7]);
+}}); oMenuBar.subscribe("beforeShow", onSubmenuBeforeShow);
+                oMenuBar.subscribe("show", onSubmenuShow);
+oMenuBar.render();            
+            });
+            //]]>
+            </script>
+<style type='text/css'>#cart-block-contents { display: none; }</style>
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/cck/theme/content-module.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/date/date.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/date/date_popup/themes/jquery.timeentry.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/fckeditor/fckeditor.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/filefield/filefield.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/lightbox2/css/lightbox_alt.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/ubercart/uc_attribute/uc_attribute.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/ubercart/uc_order/uc_order.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/ubercart/uc_product/uc_product.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/ubercart/uc_store/uc_store.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/views_slideshow/contrib/views_slideshow_singleframe/views_slideshow.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/views_slideshow/contrib/views_slideshow_thumbnailhover/views_slideshow.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/views/css/views.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/ubercart/uc_cart/uc_cart_block.css?O" />
+<link type="text/css" rel="stylesheet" media="all" href="/themes/theme422/style.css?O" />
+	<script type="text/javascript" src="/misc/jquery.js?O"></script>
+<script type="text/javascript" src="/misc/drupal.js?O"></script>
+<script type="text/javascript" src="/modules/lightbox2/js/lightbox.js?O"></script>
+<script type="text/javascript" src="/modules/views_slideshow/js/jquery.cycle.all.min.js?O"></script>
+<script type="text/javascript" src="/modules/views_slideshow/contrib/views_slideshow_singleframe/views_slideshow.js?O"></script>
+<script type="text/javascript" src="/modules/views_slideshow/contrib/views_slideshow_thumbnailhover/views_slideshow.js?O"></script>
+<script type="text/javascript" src="/modules/ubercart/uc_cart/uc_cart_block.js?O"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip" }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/default/files", "default_image": "/modules/lightbox2/images/brokenimage.jpg", "border_size": "10", "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": "0", "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 1, "disable_resize": 0, "disable_zoom": 0, "force_show_nav": 0, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 }, "ucCollapsedBlock": 1 });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if (Drupal.jsEnabled) { $(document).ready(function() { $('body').addClass('yui-skin-sam'); } ); };
+//--><!]]>
+</script>
+	
+	<script src="//misc/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script.js"></script>
+	<!--
+	<script type="text/javascript" src="/themes/theme422/js/cufon-yui.js"></script>
+	<script type="text/javascript" src="/themes/theme422/js/cufon-replace.js"></script>
+	
+	
+	<script type="text/javascript" src="/themes/theme422/js/Arial_700.font.js"></script>
+-->
+	<script type="text/javascript" src="/themes/theme422/js/jquery.galleriffic.js"></script>
+	<script type="text/javascript" src="/themes/theme422/js/jquery.opacityrollover.js"></script>
+	
+	
+</head>
+<body id="body">
+	
+	<div class="main">
+		<div class="main-bg">
+		
+			<div class="main-width">
+			
+				<div class="header">
+					
+					<div class="logo">
+						<div class="indent">												</div>
+					</div>
+					
+					<div class="search">
+						<div class="search-bg"><div class="indent">
+													</div></div>
+					</div>
+					
+				</div>
+				
+									
+					<div class="main-menu">
+						<div class="menu-indent">
+							
+            <!-- YUI Menu div-->
+            <div id="productsandservices" class="yuimenubar yuimenubarnav">
+              <div class="bd">
+                <ul  style="text-decoration:none" class="first-of-type"><li  class="yuimenubaritem"><a href="/home" class="yuimenubaritemlabel active">Home</a></li><li  class="yuimenubaritem"><a href="/Contact-us" class="yuimenubaritemlabel">Contact Us</a></li><li  class="yuimenubaritem"><a href="/Registration" class="yuimenubaritemlabel">Registration</a></li><li  class="yuimenubaritem"><a href="/schedule-of-events" class="yuimenubaritemlabel">Events Schedule</a></li><li  class="yuimenubaritem"><a href="/sponsors" class="yuimenubaritemlabel">Sponsors</a></li><li  class="yuimenubaritem"><a href="/charities" class="yuimenubaritemlabel">Charities</a></li><li  class="yuimenubaritem"><a href="http://www.vailautoshow.com/node/12" class="yuimenubaritemlabel">Tickets</a></li><li  class="yuimenubaritem"><a href="/visit-Vail-Valley" class="yuimenubaritemlabel">Visitors Guide</a></li><li  class="yuimenubaritem"><a href="/kids" class="yuimenubaritemlabel">Kids Activities</a></li></ul>
+          </div>
+       </div>						</div>
+					</div>
+					
+															<div id="slideshow-container">
+<div class="block block-block" id="block-block-2">
+	<div class="bgr"><div class="block-bg">
+		<div class="title">
+			<div><div>
+				<h3>Slideshows</h3>
+			</div></div>
+		</div>
+	
+		<div class="indent">
+			<iframe width="942" height="321" src="node/15725" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" name="slides">
+
+</iframe>
+<a href="node/15725" target="slides"><img src="/themes/theme422/images/VintageClassicCustomButton.png" width="227" height="105"/></a>
+<a href="node/15728" target="slides"><img src="/themes/theme422/images/AircraftButton.png" width="227" height="105"/></a>
+<a href="node/15727" target="slides"><img src="/themes/theme422/images/MotorcyclesButton.png" width="227" height="105"/></a>
+<a href="node/15726" target="slides"><img src="/themes/theme422/images/StreetRodsMoreButton.png" width="227" height="105"/></a>
+<div style="width:425px" id="__ss_13453042"><strong style="display:block;margin:12px 0 4px"><br />
+<br />
+</strong></div>		</div>
+	
+	</div></div>
+</div>
+</div>
+						
+
+				
+				<div class="content">
+							
+					<div class="corner-left-bot"><div class="corner-right-bot">	
+							
+													<div class="column-left">
+								
+								
+<div class="block block-block" id="block-block-1">
+	<div class="bgr"><div class="block-bg">
+		<div class="title">
+			<div><div>
+				<h3>FOURTH Annual WHEELS AND WINGS SHOW</h3>
+			</div></div>
+		</div>
+	
+		<div class="indent">
+			<div><strong>Friday, September 6, 2013</strong></div>
+<div><a href="/registration">Registrant Check-In</a></div>
+<div>Auto Auction</div>
+<div>&nbsp;</div>
+<div><strong>Saturday, September 7 , 2013</strong></div>
+<div><a href="/wheels-and-wings">Wheels and Wings - Vail Valley Jet Center</a></div>
+<div>&nbsp;</div>
+<div><strong>Sunday September 8, 2013</strong></div>
+<div><a href="/vail-village-car-show">Vail Automotive Classic - Vail Village</a></div>
+<div>&nbsp;</div>
+<p class="rteleft"><strong>Follow Us</strong></p>
+<p class="rteleft"><a href="http://www.facebook.com/home.php#!/pages/Vail-Automotive-Classic/133502379995999" target="_blank"><img border="2" src="/sites/default/files/Images/facebook-32x32.jpg" alt="" /></a>&nbsp; <a href="http://twitter.com/#!/Vailautoclassic" target="_blank"><img border="2" src="/sites/default/files/Images/twitter-32x32.jpg" alt="" /></a>&nbsp; <a href="http://www.flickr.com/photos/vailautomotiveclassic/" target="_blank"><img border="2" src="/sites/default/files/Images/flickr-32x32.jpg" alt="" /></a>&nbsp;</p>
+		</div>
+	
+	</div></div>
+</div>
+
+<div class="block block-block" id="block-block-10">
+	<div class="bgr"><div class="block-bg">
+		<div class="title">
+			<div><div>
+				<h3>AUTO AUCTION</h3>
+			</div></div>
+		</div>
+	
+		<div class="indent">
+			<div><strong>Friday, September 6, 2013</strong></div>
+<div><strong>Car Viewing 5:00 PM</strong></div>
+<div><strong>Auction 6:30 PM</strong></div>
+<p><img src="/sites/default/files/img/porsche%20race_0.JPG" width="200" height="134" alt="" /></p>
+<p class="rteright"><a href="/wheels-and-wings-events-schedule">more&gt;&gt;&gt;</a></p>
+		</div>
+	
+	</div></div>
+</div>
+
+<div class="block block-block" id="block-block-9">
+	<div class="bgr"><div class="block-bg">
+		<div class="title">
+			<div><div>
+				<h3>Featured Marque</h3>
+			</div></div>
+		</div>
+	
+		<div class="indent">
+			<p><img src="/sites/default/files/pdf/mg.JPG" width="200" height="120" alt="" />British Motorcars, Classic &amp; Modern</p>
+<p class="rteright"><a href="/2013-featured-marque">more &gt;&gt;&gt;</a></p>
+		</div>
+	
+	</div></div>
+</div>
+
+<div class="block block-uc_cart" id="block-uc_cart-0">
+	<div class="bgr"><div class="block-bg">
+		<div class="title">
+			<div><div>
+				<h3><a href="/cart"><span class="cart-block-icon-empty" title="View your shopping cart."></span></a><span class="cart-block-title-bar" title="Show/hide shopping cart contents.">Shopping cart<span class="cart-block-arrow"></span></span></h3>
+			</div></div>
+		</div>
+	
+		<div class="indent">
+			<div id="cart-block-contents"><p class="uc-cart-empty">There are no products in your shopping cart.</p></div><table class="cart-block-summary"><tbody><tr><td class="cart-block-summary-items"><span class="num-items">0</span> Items</td><td class="cart-block-summary-total"><label>Total:</label> <span class="uc-price">$0.00</span></td></tr></tbody></table>		</div>
+	
+	</div></div>
+</div>
+								
+							</div>
+												
+						<div class="column-center">
+						
+							<div class="">
+								<div class="corner-left"><div class="corner-right">
+							
+								</div></div>
+							</div>
+							
+															<div id="custom">
+																	</div>
+														
+														<h2>  THE FOURTH ANNUAL VAIL AUTOMOTIVE CLASSIC &amp; WHEELS AND WINGS SHOW, September  6-8, 2013</h2>																																			<!-- start main content -->
+							
+	<div class="node">
+		
+			
+				<div class="indent">
+					
+									
+					<div class="text-box">
+						<div class="taxonomy"></div>
+					
+						<p>The most comprehensive auto, aircraft and motorcycle show in Western Colorado. The WHEELS AND WINGS SHOW features an unparrelled display of machinery. With over 200 cars, 40 airplanes and other aircraft, and 50 motorcycles, the 2013 show will amaze and entertain.</p>
+<center> <iframe width="560" height="315" src="http://www.youtube.com/embed/wpVkvpE6euk?rel=0" frameborder="0" allowfullscreen=""></iframe> </center>
+<p>&nbsp;</p>
+<p>The Wheels and Wings show celebrates the art of the machine. As transportation has become so central to every aspect of our lives, cars and planes have gone far beyond their humble utilitarian origins, &nbsp;constantly redefining technology, style and shaping our culture. The skill, engineering and mechanical ability infused in these vehicles is nothing less than a triumph of the human spirit. Many represent some of the finest technology of their day, while others provide a touchstone to our past or a hint of where we might be heading. They remind us of what is possible when passion and craft take over and work becomes art. We hope you will find all of these machines as interesting as we do and that you enjoy the show.</p>
+<hr />
+<hr />
+<p>&nbsp;</p>
+<center>
+<p><img src="/sites/default/files/img/johnwaugh.jpg" width="151" height="105" alt="" /></p>
+<p><strong>Visit&nbsp;<a href="http://web.sendtoprint.net/proofbook/login.asp?chkcook=1&amp;UserID=VAC2012&amp;secure_account_id=2661&amp;secure_users_id=414272">John Waugh.com</a>&nbsp;to see all of the 2012 photos</strong></p>
+</center>
+<p>&nbsp;</p><div class="field field-type-filefield field-field-pdf">
+      <div class="field-label">PDF Upload:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="filefield-file"><img class="filefield-icon field-icon-application-pdf"  alt="application/pdf icon" src="http://www.vailautoshow.com/modules/filefield/icons/application-pdf.png" /><a href="http://www.vailautoshow.com/sites/default/files/pdf/DOUG L CARD_0.pdf" type="application/pdf; length=123674">DOUG L CARD.pdf</a></div>        </div>
+        </div>
+</div>
+						
+											</div>
+						
+				</div>
+			
+	</div>
+
+							
+						</div>
+					
+						<div class="footer"><div class="footer-bg">
+							<div class="width">
+								<div class="indent">
+									
+									<div class="footer-menu">
+										<ul class=""><li class="first menu-241 active-trail active"><a href="/home" class="active"><span  title="Welcome to the Vail Automotive Classic" class="menu-241 active-trail"><span>Home</span></span></a></li>
+<li class="menu-471"><a href="/Contact-us"><span  title="Contact Us" class="menu-471"><span>Contact Us</span></span></a></li>
+<li class="menu-235"><a href="/Registration"><span  title="Registration Info" class="menu-235"><span>Registration</span></span></a></li>
+<li class="menu-222"><a href="/schedule-of-events"><span  title="Schedule Of Events" class="menu-222"><span>Events Schedule</span></span></a></li>
+<li class="menu-236"><a href="/sponsors"><span  title="Sponsors" class="menu-236"><span>Sponsors</span></span></a></li>
+<li class="menu-237"><a href="/charities"><span  title="Charities" class="menu-237"><span>Charities</span></span></a></li>
+<li class="menu-1044"><a href="http://www.vailautoshow.com/node/12"><span  title="" class="menu-1044"><span>Tickets</span></span></a></li>
+<li class="menu-234"><a href="/visit-Vail-Valley"><span  title="Visitors Guide" class="menu-234"><span>Visitors Guide</span></span></a></li>
+<li class="last menu-1089"><a href="/kids"><span  title="Kids Activities" class="menu-1089"><span>Kids Activities</span></span></a></li>
+</ul>									</div>
+									
+									
+									<div class="footer-text">
+																			</div>
+									
+								</div>
+							</div>
+						</div></div>
+						
+					</div></div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript" src="/modules/google_analytics/googleanalytics.js?O"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{var pageTracker = _gat._getTracker("UA-17927467-1");pageTracker._trackPageview();} catch(err) {}
+//--><!]]>
+</script>
+	
+</body></html>

@@ -1,0 +1,1403 @@
+
+<!--
+108
+8/27/2013 6:40:10 PM
+/fcx-clarity/index.aspx?
+Release: 14.43.1A
+//-->
+
+
+<html>
+<head>
+    
+<title>Honda FCX Clarity Overview - Fuel Cell Electric Vehicle - Site</title>
+
+<meta name="keywords" content="honda fcx hydrogen fuel cell car vehicle fuel stack electric, fcev" />
+
+<meta name="description" content="Learn about the Honda FCX Clarity, the world's first dedicated platform hydrogen vehicle. It's the zero-emission sedan of the future. A reality today. Developed with fuel cell technology, the FCX uses a remarkable new alternative fuel source." />
+<meta name="robots" content="NOODP" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="false" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+
+<meta property="og:image" content="http://automobiles.honda.com/images/_global/icons/honda-facebook-icon.png" />
+
+    <link rel="Stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="Stylesheet" type="text/css" href="/css/standard.css" />
+    <link rel="Stylesheet" type="text/css" href="/css/2008/fcx-clarity/model.css" />
+
+    <script language="javascript" type="text/javascript" src="/js/main.js"></script>
+
+    <script language="JavaScript" src="/js/clientdetection.js" type="text/javascript"></script>
+
+    <style type="text/css">
+	    .Accolades  {background: url('/images/2008/fcx-clarity/background-accolades.gif') no-repeat;}
+	    #frmOverview {margin:0px; padding:0px;}
+	    #Pano   {background: url('/images/2008/fcx-clarity/overview/pano.jpg') no-repeat;}
+	        #PanoMsrp   {margin-top:336px; padding-left:640px; float:left;}
+	            #PanoMsrpPrice  {font-size:18px; font-weight:bold; color:#ffffff; width:130px;}
+	                #PanoMsrpPrice a, #PanoMsrpPrice a:active, #PanoMsrpPrice a:hover, #PanoMsrpPrice a:active  {color:#ffffff; font-size:10px;}
+	            #PanoMsrpNote  {color:#ffffff; width:130px;}
+	    #SendFriend { float:left; }	    
+	    #ContentMidCenter { width:613px; }
+	   #BannerAds{float:left; position:relative; left: 12px; top:10px; height:110px}
+	   #BannerAdsFCX{float:left; position:relative; left: 12px; top:10px; height:120px}
+</style>
+</head>
+<body>
+    <div id="PageContainer">
+        <div id="PageLeftColumn">
+            <img src="/images/_controls/global-header/background-header-left.png" width="17" height="51" />
+        </div>
+        <div id="PageCenterColumn">
+            
+<script language="javascript" type="text/javascript">
+
+
+
+var searchBox = function() {
+
+    var sPlaceholderText = '';
+    var oToolTipDiv = null;
+
+    return {
+    
+        focus : function() {
+        
+            if (sPlaceholderText == '') {
+                sPlaceholderText = document.getElementById('HeaderSearchText').value;
+            }
+
+            if (document.getElementById('HeaderSearchText').value == sPlaceholderText) {
+                document.getElementById('HeaderSearchText').value = '';
+            }
+        
+        } , 
+        
+        blur : function() {
+        
+            if (document.getElementById('HeaderSearchText').value == '') {
+                document.getElementById('HeaderSearchText').value = sPlaceholderText;
+            }
+        
+        } , 
+
+        tooltip : function() {
+	        
+	        var id = 'HeaderSearchTooltip';
+	        var speed = 10;
+	        var timer = 20;
+	        var endalpha = 95;
+	        var alpha = 0;
+	        var ie = document.all ? true : false;
+	        var sTooltipHtml = ' \
+	            <p class="top">Enter any search criteria or keywords to search the site.</p> \
+	            <p class="mid">To Locate a Dealer</> \
+	            <p class="bot">Enter your 5 digit zip code to locate a dealer near you.</p> \
+	            ';
+
+	        var fade = function(d){
+
+		        var a = alpha;
+		        if((a != endalpha && d == 1) || (a != 0 && d == -1)){
+			        var i = speed;
+			        if(endalpha - a < speed && d == 1){
+				        i = endalpha - a;
+			        }else if(alpha < speed && d == -1){
+				        i = a;
+			        }
+			        alpha = a + (i * d);
+			        oToolTipDiv.style.opacity = alpha * .01;
+			        if (!ie) {
+			            oToolTipDiv.style.filter = 'alpha(opacity=' + alpha + ')';
+			        }
+		        }else{
+			        clearInterval(timer);
+			        if(d == -1){oToolTipDiv.style.display = 'none'}
+		        }
+	        }
+
+        	
+	        return {
+		        show:function(){
+			        if(oToolTipDiv == null){
+				        oToolTipDiv = document.createElement('div');
+				        oToolTipDiv.setAttribute('id',id);
+				        document.body.appendChild(oToolTipDiv);
+				        oToolTipDiv.innerHTML = sTooltipHtml;
+			        }
+			        oToolTipDiv.style.opacity = 0;
+			        if (!ie) {
+				        oToolTipDiv.style.filter = 'alpha(opacity=0)';
+				    }
+				    var rect = document.getElementById('HeaderSearchField').getBoundingClientRect();
+                    oToolTipDiv.style.top = rect.bottom + 10 + 'px';
+			        oToolTipDiv.style.left = rect.left - 100 + 'px';
+			        oToolTipDiv.style.display = 'block';
+			        clearInterval(timer);
+			        timer = setInterval(function(){fade(1)},timer);
+		        },
+		        hide:function(){
+			        clearInterval(timer);
+			        timer = setInterval(function(){fade(-1)},timer);
+		        }
+	        };
+        }
+            
+    }
+
+}();
+
+
+
+
+
+
+
+
+
+
+    function GlobalNavigationChangeModel(){
+        var oField=document.getElementById("HeaderModelSelector");
+        var sUrl=oField.options[oField.selectedIndex].value;
+        var sUrlSiteSection=oField.options[oField.selectedIndex].text;
+        if(sUrl!=""){
+            if(typeof isHondaHomePage !=="undefined"){
+                if(isHondaHomePage==true) TrackNavigationClick(sUrlSiteSection);
+            }
+            top.location.href="http://automobiles.honda.com" + sUrl;
+        }
+    }
+    // This function will redirect to search results page.
+    function GlobalNavigationSearchSite(){
+      if (document.getElementById("HeaderSearchText").value.replace(/ /g,'').length > 0) {
+        // If 5 digits, do a dealer locator search
+        if (document.getElementById("HeaderSearchText").value.match(/(\d{5})/g)) {
+            top.location = 'http://automobiles.honda.com/tools/dealer-locator/results.aspx?address=&city=&state=&zip=' + document.getElementById("HeaderSearchText").value + '&dealername=&filters=&fromsection=NEW';
+        } else {
+            top.location = "http://automobiles.honda.com/search-results.aspx?question="+escape(document.getElementById("HeaderSearchText").value);
+        }
+        
+      }
+      else {
+      alert("You must enter a question before submitting");
+      }    
+    }
+    function TrackNavigationClick(SiteSection){
+        var s=s_gi(s_account);
+        s.linkTrackVars='prop16,prop21,prop23,prop24,prop25,eVar31,eVar21,eVar23,eVar24,eVar25';
+        s.prop21=Currentprop21;
+        s.prop23=Currentprop23;
+        s.prop24=Currentprop24;
+        s.prop25=Currentprop25;
+        s.eVar21=s.prop21;
+        s.eVar23=s.prop23;
+        s.eVar24=s.prop24;
+        s.eVar25=s.prop25;
+        s.prop16="Home Page Site Nav DropDown : "+SiteSection;
+        s.eVar31="Home Page Site Nav DropDown : "+SiteSection;
+        s.tl(this,'o','GLOBAL NAVIGATION CLICK');
+    }
+</script>
+
+<div id="HeaderContainer">
+    <form id="HeaderForm" onsubmit="GlobalNavigationSearchSite(); return false;">
+        <div id="HeaderLogo"><a href="http://automobiles.honda.com/" target="_top" onmouseover="SwitchImg('HondaLogo', '/images/_controls/global-header/honda-logo-over.gif')" onmouseout="SwitchImg('HondaLogo', '/images/_controls/global-header/honda-logo-off.gif')"><img src="/images/_controls/global-header/honda-logo-off.gif" id="HondaLogo" width="73" height="51" /></a></div>
+        <div id="HeaderModelSelect">
+            
+                    <div id="DropDownText">
+                        <span>Select a Model</span>
+                        <div id="DropDownTextLinks">
+                        
+                            <a href="/accord-coupe" style="display: block; clear: both; font-size: 10px;">Accord Coupe</a>
+                        
+                            <a href="/accord-sedan" style="display: block; clear: both; font-size: 10px;">Accord Sedan</a>
+                        
+                            <a href="/accord-plug-in" style="display: block; clear: both; font-size: 10px;">Accord Plug-In</a>
+                        
+                            <a href="/civic-coupe" style="display: block; clear: both; font-size: 10px;">Civic Coupe</a>
+                        
+                            <a href="/civic-hybrid" style="display: block; clear: both; font-size: 10px;">Civic Hybrid Sedan</a>
+                        
+                            <a href="/civic-hf" style="display: block; clear: both; font-size: 10px;">Civic HF Sedan</a>
+                        
+                            <a href="/civic-natural-gas" style="display: block; clear: both; font-size: 10px;">Civic Natural Gas</a>
+                        
+                            <a href="/civic-sedan" style="display: block; clear: both; font-size: 10px;">Civic Sedan</a>
+                        
+                            <a href="/civic-si-coupe" style="display: block; clear: both; font-size: 10px;">Civic Si Coupe</a>
+                        
+                            <a href="/civic-si-sedan" style="display: block; clear: both; font-size: 10px;">Civic Si Sedan</a>
+                        
+                            <a href="/crosstour" style="display: block; clear: both; font-size: 10px;">Crosstour</a>
+                        
+                            <a href="/cr-v" style="display: block; clear: both; font-size: 10px;">CR-V SUV</a>
+                        
+                            <a href="/cr-z" style="display: block; clear: both; font-size: 10px;">CR-Z Sport Hybrid</a>
+                        
+                            <a href="/fcx-clarity" style="display: block; clear: both; font-size: 10px;">FCX Clarity Electric Vehicle</a>
+                        
+                            <a href="/fit" style="display: block; clear: both; font-size: 10px;">Fit 5-Door</a>
+                        
+                            <a href="/fit-ev" style="display: block; clear: both; font-size: 10px;">Fit EV</a>
+                        
+                            <a href="/insight-hybrid" style="display: block; clear: both; font-size: 10px;">Insight Hybrid</a>
+                        
+                            <a href="/odyssey" style="display: block; clear: both; font-size: 10px;">Odyssey Minivan</a>
+                        
+                            <a href="/pilot" style="display: block; clear: both; font-size: 10px;">Pilot SUV</a>
+                        
+                            <a href="/ridgeline" style="display: block; clear: both; font-size: 10px;">Ridgeline Truck</a>
+                        
+                            <a href="/alternative-fuel-vehicles/">Hybrid and Alternative Fuel Vehicles</a>
+                            <a href="/all-models.aspx">All Models</a>
+                            <a href="/certified-used/">Certified Used Cars</a>
+                            <a href="/future-cars/">Future Models &amp; Concepts</a>
+                        </div>
+                    </div>
+                    <script language="Javascript">
+                
+                        var sContent = '';
+            
+                        sContent += '<select name="HeaderModelSelector" id="HeaderModelSelector" class="HeaderModelSelector" onchange="GlobalNavigationChangeModel()">';
+                            sContent += '<option value="">Select a Model</option>';
+                        
+                            sContent += '<option value="/accord-coupe">Accord Coupe</option>';
+                        
+                            sContent += '<option value="/accord-sedan">Accord Sedan</option>';
+                        
+                            sContent += '<option value="/accord-plug-in">Accord Plug-In</option>';
+                        
+                            sContent += '<option value="/civic-coupe">Civic Coupe</option>';
+                        
+                            sContent += '<option value="/civic-hybrid">Civic Hybrid Sedan</option>';
+                        
+                            sContent += '<option value="/civic-hf">Civic HF Sedan</option>';
+                        
+                            sContent += '<option value="/civic-natural-gas">Civic Natural Gas</option>';
+                        
+                            sContent += '<option value="/civic-sedan">Civic Sedan</option>';
+                        
+                            sContent += '<option value="/civic-si-coupe">Civic Si Coupe</option>';
+                        
+                            sContent += '<option value="/civic-si-sedan">Civic Si Sedan</option>';
+                        
+                            sContent += '<option value="/crosstour">Crosstour</option>';
+                        
+                            sContent += '<option value="/cr-v">CR-V SUV</option>';
+                        
+                            sContent += '<option value="/cr-z">CR-Z Sport Hybrid</option>';
+                        
+                            sContent += '<option value="/fcx-clarity">FCX Clarity Electric Vehicle</option>';
+                        
+                            sContent += '<option value="/fit">Fit 5-Door</option>';
+                        
+                            sContent += '<option value="/fit-ev">Fit EV</option>';
+                        
+                            sContent += '<option value="/insight-hybrid">Insight Hybrid</option>';
+                        
+                            sContent += '<option value="/odyssey">Odyssey Minivan</option>';
+                        
+                            sContent += '<option value="/pilot">Pilot SUV</option>';
+                        
+                            sContent += '<option value="/ridgeline">Ridgeline Truck</option>';
+                        
+                            sContent += '<option value="/alternative-fuel-vehicles/">Hybrid and Alternative Fuel Vehicles</option>';
+                            sContent += '<option value="/all-models.aspx">All Models</option>';
+                            sContent += '<option value="/certified-used/">Certified Used Cars</option>';
+                            sContent += '<option value="/future-cars/">Future Models &amp; Concepts</option>';
+                        sContent += '</select>';
+                        
+                        document.getElementById('HeaderModelSelect').innerHTML = sContent;
+                
+                    </script>
+                
+            
+        </div>
+        
+        <div class="HeaderLink"><a href="http://automobiles.honda.com/tools/dealer-locator/" target="_top">Find a Dealer</a></div>
+        <div class="HeaderDiv"><img src="/images/_controls/global-header/header-div.gif" width="1" height="31" /></div>
+        <div class="HeaderLink"><a href="/fcx-clarity/drive-fcx-clarity.aspx" target="_top">Build Your Honda</a></div>
+        <div class="HeaderDiv"><img src="/images/_controls/global-header/header-div.gif" width="1" height="31" /></div>
+        <div class="HeaderLink"><a href="/fcx-clarity/drive-fcx-clarity.aspx" target="_top">Request a Quote</a></div>
+        <div class="HeaderDiv"><img src="/images/_controls/global-header/header-div.gif" width="1" height="31" /></div>
+        <div class="HeaderLink"><a href="http://automobiles.honda.com/tools/compare/" target="_top">Compare Vehicles</a></div>
+        
+            <div id="HeaderSearchField"><input type="text" id="HeaderSearchText" onmouseover="searchBox.tooltip().show();" onmouseout="searchBox.tooltip().hide();" value="Search / Find A Dealer" onfocus="searchBox.focus();" onblur="searchBox.blur();" /></div>
+        
+    </form>
+</div>
+
+            <div class="clr">
+            </div>
+            <div id="PageContent">
+                <div id="ContentMid">
+                    <div id="ContentLeft">
+                        <div id="LeftsideNav">
+                            
+
+<script language="javascript">
+    function SelectNavItem(NavID) {
+        SelectionOff("ModelNavItem");
+        SelectionChangeState(document.getElementById('NavItem'+NavID), "On");
+    }
+    
+    function SelectionChangeState(oDiv, NewState){
+        var ClassName=oDiv.className;
+        ClassName=ClassName.replace("Off", "");
+        ClassName=ClassName.replace("On", "");
+        oDiv.className=ClassName + NewState;
+    }
+    
+    function SelectionOff(NavClass) {
+        var x=document.getElementsByTagName('div');
+        var arr = new Array();
+        for(var i=0;i<x.length;i++){
+            att = x[i].getAttribute("name");
+            if(att == NavClass) {
+                SelectionChangeState(x[i], "Off");
+            }
+        }    
+    }
+</script>
+<style type="text/css">
+#LeftsideNavTop ul { font-family: Helvetica; font-weight: normal; font-style: normal; list-style: none; padding: 0px; margin: 0px; }
+#LeftsideNavTop ul li a { display: block; text-decoration: none; font-size: 13px; padding: 7px 0 7px 10px; letter-spacing: 1px; font-weight: normal; background: url(/images/_controls/models-navigation-all/divider.png) no-repeat center bottom; }
+#LeftsideNavTop ul li.header { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; padding: 5px 0 5px 10px; font-weight: bold; }
+
+#LeftsideNavTop ul li a {display:inline-block;}
+#LeftsideNavTop ul li a {display:block;}
+</style>
+<div id="LeftSideNavContainer">
+
+<div id="MenuTitle"><a href="http://automobiles.honda.com/fcx-clarity/" target="_top"><img src="/images/2008/fcx-clarity/modelnav-menutitle.gif" width="164" height="35" border="0" alt="FCX Clarity" /></a></div>
+
+<div id="LeftsideNavTop">
+<ul class="nav">
+                <li><a href="http://automobiles.honda.com/fcx-clarity/" class="selected" target="_top">Overview</a></li>
+            </ul><ul class="nav">
+                <li><a href="http://automobiles.honda.com/fcx-clarity/specifications.aspx" class="" target="_top">Specifications</a></li>
+            </ul><ul class="subnav">    <li class="header">Gallery</li>
+                <li><a href="http://automobiles.honda.com/fcx-clarity/exterior-photos.aspx" class="" target="_top">Photos</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/exterior-360-view.aspx" class="" target="_top">360 Views</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/videos.aspx" class="" target="_top">Videos</a></li>
+            </ul><ul class="subnav">    <li class="header">Features</li>
+                <li><a href="http://automobiles.honda.com/fcx-clarity/exterior.aspx" class="" target="_top">Exterior</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/interior.aspx" class="" target="_top">Interior</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/performance.aspx" class="" target="_top">Performance</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/safety.aspx" class="" target="_top">Safety</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/refueling.aspx" class="" target="_top">Refueling</a></li>
+            </ul><ul class="subnav">    <li class="header">Fuel Cells</li>
+                <li><a href="http://automobiles.honda.com/fcx-clarity/about-fuel-cells.aspx" class="" target="_top">About</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/fuel-cell-benefits.aspx" class="" target="_top">Benefits</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/fuel-cell-comparison.aspx" class="" target="_top">Comparison</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/fuel-cell-evolution.aspx" class="" target="_top">Evolution</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/hydrogen-safety.aspx" class="" target="_top">Hydrogen Safety</a></li>
+            </ul><ul class="subnav">    <li class="header">Technology</li>
+                <li><a href="http://automobiles.honda.com/fcx-clarity/how-fcx-works.aspx" class="" target="_top">How It Works</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/vflow.aspx" class="" target="_top">V Flow</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/battery.aspx" class="" target="_top">Battery</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/motor.aspx" class="" target="_top">Motor</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/powertrain.aspx" class="" target="_top">Powertrain</a></li>
+            </ul><ul class="subnav">    <li class="header">The Drive</li>
+                <li><a href="http://automobiles.honda.com/fcx-clarity/drive-fcx-clarity.aspx" class="" target="_top">On the Road</a></li>
+            
+                <li><a href="http://automobiles.honda.com/fcx-clarity/customer-experiences/" class="" target="_top">Feedback</a></li>
+            </ul><ul class="nav">
+                <li><a href="http://automobiles.honda.com/fcx-clarity/faq.aspx" class="" target="_top">FAQs</a></li>
+            </ul><ul class="nav">
+                <li><a href="http://automobiles.honda.com/fcx-clarity/reviews.aspx" class="" target="_top">Awards & Accolades</a></li>
+            </ul><ul class="nav">
+                <li><a href="http://automobiles.honda.com/fcx-clarity/home-energy-station.aspx" class="" target="_top">Home Energy Station</a></li>
+            </ul>
+</div>
+
+
+
+</div>
+
+
+
+
+<script language="JavaScript">
+if (navigator.userAgent.toLowerCase().indexOf('ipad') > 0) {
+    if (document.getElementById('NavItemvideos')) {
+        document.getElementById('NavItemvideos').style.display = 'none';
+    }
+}
+</script>
+                        </div>
+                        <div id="ContentMidLeft">
+                            <div id="ToolsFrame" style=" background-color:White;">
+                                <div id="ToolsFrameTop"></div>
+                                <div id="ToolsFrameMid">
+                                    
+<div id="SendFriend">
+
+<script language="javascript" type="text/javascript">
+function openForwardWindow() {
+     mywindow = window.open("http://automobiles.honda.com/tools/forward.aspx", "ForwardWindow", "location=0,status=0,scrollbars=0,height=440,width=575");
+
+}
+</script>
+
+
+    <div class="ToolsTitle">
+        <div class="iconimage"><a class="Titlelink" href="#" onclick="openForwardWindow(); return false;" target="_blank"><img src="/images/_global/icons/icon-sendtoafriend.gif" width="22" height="22" border="0" /></a></div>
+        <div class="icontext"><a class="Titlelink" href="#" onclick="openForwardWindow(); return false;">Forward</a></div>
+    </div>
+    <div class="clr"></div>    
+</div>
+                                </div>
+                                <div id="ToolsFrameBottom">
+                                </div>
+ 
+                               
+
+
+<style type="text/css">
+#DtiBanner{float:right; position:relative; top:5px; width:165px;border:0px solid #999999;}
+#DtiTop{background: url('/images/_controls/models-bannerads-fcx/dtimoduletop.gif') no-repeat; height:155px;}
+#DtiMid{float:left; height:110px; width:165px; background: url('/images/_controls/models-bannerads-fcx/dtimodulemid.gif'); background-repeat:repeat-y;}
+#DtiText{float:left; position:relative; top:10px; left:10px; width:150px;}
+#WatchButton{float:left; position:relative; top:15px; left:30px; width:101px;}
+#DtiBtm{float:left; height:10px; width:165px; background: url('/images/_controls/models-bannerads-fcx/dtimodulebtm.gif') no-repeat; }
+</style>
+
+
+<div id="DtiBanner">
+    <div id="DtiTop"></div>
+
+    <div id="DtiMid">
+
+        <div id="DtiText">
+Sachito Fujimoto shares his vision for a vehicle he believes will change the world in the short film <i>Racing Against Time</i>.
+        </div>
+       <div id="WatchButton"><a href="http://dreams.honda.com/"><img src="/images/_controls/models-bannerads-fcx/btnWatchShortFilm.gif" border="0" /></a></div> 
+    
+    </div>
+    
+    <div id="DtiBtm"></div>
+</div>  
+                                
+                                <div id="ToolsFrame2" style=" background-color:White;">
+                                    <div id="ToolsFrameTop2"></div>
+                                    <div id="ToolsFrameMid2"> 
+      <div id="NewAndNotable">
+        <div class="ToolsTitle">
+            <div class="iconimage"><img src="/images/_global/icons/icon-newandnotable.gif" width="23" height="22" /></div>    
+            <div class="icontext">New & Notable</div>
+        </div>
+
+		
+		
+    </div>
+    </div>
+                                    <div id="ToolsFrameBottom2"></div>
+                                  
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="ContentMain">
+                        <div id="Pano">
+                            
+		
+		<script language="JavaScript">
+        var oDetection=new ClientDetection();
+        if(!oDetection.HasFlash()){
+          document.write('<div id="Pano" style="background: url(\'/images/2008/fcx-clarity/overview/pano.jpg\') no-repeat; height:380px">');
+          document.write('<div id="PanoMsrp">');
+         document.write('<div style="margin-left:105px;margin-top:11px;font-size:9px;"><a href="#Disclaimers" style="color:white;text-decoration:underline;">[1]</a></div>');
+          document.write('</div>');
+  
+          document.write('</div>');
+		  
+        } else {
+			
+			document.write('<div id="Pano"></div>');
+				EmbededObjectWriteContent("Pano", "<object classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0\" width=\"797\" height=\"380\" align=\"middle\" id=\"ModelTour\" name=\"ModelTour\">" +
+				"<param name=\"allowScriptAccess\" value=\"sameDomain\" />" +
+				"<param name=\"movie\" value=\"/images/2008/fcx-clarity/overview/tour.swf?xmlSource=/feeds/omniture-flash-tracking.aspx\" />" +
+				"<param name=\"quality\" value=\"high\" />" +
+				"<param name=\"bgcolor\" value=\"#ffffff\" />" +
+				"<param name=\"menu\" value=\"false\" />" +
+				"<param name=\"wmode\" value=\"opaque\" />" +
+				"<param name=\"FlashVars\" value=\"dir=/images/2008/fcx-clarity/overview/features/&msrp=&PageName=2009+FCX+Clarity+Overview&Channel=FCX+Clarity&skipIntro=1\" />" + 
+				"<embed src=\"/images/2008/fcx-clarity/overview/tour.swf?xmlSource=/feeds/omniture-flash-tracking.aspx\" FlashVars=\"dir=/images/2008/fcx-clarity/overview/features/&msrp=&PageName=2009+FCX+Clarity+Overview&Channel=FCX+Clarity&skipIntro=1\" menu=\"false\" quality=\"high\" bgcolor=\"#ffffff\" width=\"797\" height=\"380\" id=\"ModelTour\" name=\"ModelTour\" align=\"middle\" allowscriptaccess=\"sameDomain\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\"  wmode=\"opaque\" />" +
+				"</object>");
+			
+			document.cookie="anims="+get_cookie("anims")+"fcx-clarity,;path=/";
+			
+        }
+		
+		function get_cookie(Name) {
+		var search = Name + "="
+		var returnvalue = "";
+		if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+			// if cookie exists
+			if (offset != -1) {
+			offset += search.length
+			// set index of beginning of value
+			end = document.cookie.indexOf(";", offset);
+			// set index of end of cookie value
+			if (end == -1) end = document.cookie.length;
+			returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+	// Functions for tracking the tour
+	function TrackEvent (sEvent , iBenchmark) {
+    
+        sEvent = sEvent.toUpperCase();
+
+        switch (sEvent) {
+            case 'START':
+                var sLinkName = 'FCX CLARITY:OVERVIEW TOUR VIDEO START';
+                s.linkTrackVars = 'prop1,prop2,prop12,prop20,prop21,prop23,prop24,prop25,prop26,prop27,prop28,prop37,eVar10,eVar11,eVar19,eVar20,eVar21,eVar23,eVar24,eVar25,eVar26,eVar27,events';
+                s.linkTrackEvents = 'event19,event18';
+                s.prop20 = 'FCX CLARITY OVERVIEW TOUR VIDEO';
+                s.prop26 = 'HONDA CARS:FCX CLARITY:OVERVIEW TOUR VIDEO';
+                s.eVar19 = 'VIDEO START';
+                s.eVar20 = s.prop20;
+                s.events = 'event19,event18';
+                CallSDotTL(s , true , sLinkName , 'o');
+				
+
+				document.getElementById('TourTrackingTags').innerHTML = '';
+				document.getElementById('TourTrackingTags').innerHTML += '<img width="1" height="1" src="http://pixel1097.everesttech.net/1097/p?ev_09_FCX_Clarity_Tour_Start=1" />';
+				
+                break;
+            case 'BENCHMARK':
+                var sLinkName = 'FCX CLARITY:OVERVIEW TOUR VIDEO BENCHMARK';
+                s.linkTrackVars = 'prop1,prop2,prop12,prop20,prop21,prop23,prop24,prop25,prop26,prop27,prop28,prop37,eVar10,eVar11,eVar19,eVar20,eVar21,eVar23,eVar24,eVar25,eVar26,eVar27,events';
+                s.linkTrackEvents = 'event18';
+                s.prop20 = 'FCX CLARITY OVERVIEW TOUR VIDEO';
+                s.prop26 = 'HONDA CARS:FCX CLARITY:OVERVIEW TOUR VIDEO';
+                s.eVar19 = iBenchmark + ' SECONDS';
+                s.eVar20 = s.prop20;
+                s.events = 'event18';
+                CallSDotTL(s , true , sLinkName , 'o');
+
+
+				document.getElementById('TourTrackingTags').innerHTML = '';				
+
+
+				break;
+            case 'END':
+                var sLinkName = 'FCX CLARITY:OVERVIEW TOUR VIDEO END';                
+                s.linkTrackVars = 'prop1,prop2,prop12,prop20,prop21,prop23,prop24,prop25,prop26,prop27,prop28,prop37,eVar10,eVar11,eVar19,eVar20,eVar21,eVar23,eVar24,eVar25,eVar26,eVar27,events';
+                s.linkTrackEvents = 'event20,event18';
+                s.prop20 = 'FCX CLARITY OVERVIEW TOUR VIDEO';
+                s.prop26 = 'HONDA CARS:FCX CLARITY:OVERVIEW TOUR VIDEO';
+                s.eVar19 = 'VIDEO END';
+                s.eVar20 = s.prop20;
+                s.events = 'event20,event18';
+                CallSDotTL(s , true , sLinkName , 'o');                
+				
+				document.getElementById('TourTrackingTags').innerHTML = '';				
+				document.getElementById('TourTrackingTags').innerHTML += '<img width="1" height="1" src="http://pixel1097.everesttech.net/1097/p?ev_09_FCX_Clarity_Tour_Complete=1" />';
+				
+				
+				
+                break;
+        }
+    
+    }
+    
+	// View important information layer content
+	function GetMoreInfoContent() {
+
+		return '[1] The Honda Satellite-Linked Navigation System™ is available in the United States, except Alaska. Please see your Honda dealer for details.<br><br>[2] Fuel economy estimates and driving range based on EPA test data. Your actual driving distance will vary depending on how you drive and maintain your vehicle. <br><br>[3] Subject to limited availability, in designated, limited California market regions, to approved lessees by American Honda Finance Corp. Closed end lease for FCX Clarity FCEV, for qualified lessees meeting specific use and operation requirements. Not all applicants will qualify. No purchase option. Zero capitalized cost reduction. Taxes, license, title fees, liability insurance extra. Monthly payments of $600.00 for 36 months. Total monthly payments $21,600.00. No mileage limitation or excess mileage cost. See one of three authorized FCX Clarity FCEV dealers for complete details.<br><br><br><br>';
+	}
+
+	</script> 
+	<div id="TourTrackingTags" style="width: 5px; height: 5px; overflow: hidden;"></div>
+    
+                        </div>
+                        <div id="ContentMidCenter">
+
+                            <!-- facebook module -->
+                            
+
+
+<style type="text/css">
+
+    #FacebookContent { float:left; width: 610px; height: 38px; border: 1px solid #d6d3d4; background: url(/images/_controls/models-facebook-all/fb-background.jpg); margin-left: 0px; margin-bottom: 5px; display: inline; }
+		#FacebookIcon{float:left; margin-left: 18px; margin-top: 9px;}
+		#FacebookTitle { float:left; margin-left: 10px; margin-top: 11px; }
+		#FacebookTitle  a { text-decoration: none; }
+        
+        #Buttons{float:left; margin-left: 27px; width: 300px; margin-top: 7px; } 
+	
+</style>
+
+
+ <div id="FacebookContent" class="ToolsTitle">
+ 
+    <div id="FacebookIcon" class="iconimage"><img src="/images/_global/icons/icon-facebook.gif" /></div>    
+    <div id="FacebookTitle" class="icontext"><a href="http://www.facebook.com/hondafcxclarity" onclick="s.linkTrackVars='prop37'; CallSDotTL(s , true , 'FCX CLARITY:FIND US ON FACEBOOK' , 'e'); return LeaveSite('http://www.facebook.com/hondafcxclarity');">Find us on Facebook</a></div>
+    
+   <div id="Buttons">
+            
+	    <div id="fb-root"></div>
+
+   </div>
+</div>
+
+
+<script language="JavaScript">
+
+  
+function LoadFB() {
+        var e = document.createElement('script');
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js#xfbml=1';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+      }
+
+OnLoadAppend("LoadFB();");
+  
+
+
+
+window.fbAsyncInit = function() {
+
+    FB.init({appId: '101654119923935', status: true, cookie: true, xfbml: true});              
+
+    var likebtn = document.createElement('div');
+    likebtn.innerHTML = '<fb:like href="http://www.facebook.com/hondafcxclarity" show_faces="false" width="300"></fb:like>';
+    document.getElementById('fb-root').appendChild(likebtn);
+
+
+    FB.Event.subscribe('edge.create', function(response) {
+        s.linkTrackVars = 'prop37';
+        CallSDotTL(s , true , 'FCX CLARITY:LIKE THIS PAGE ON FACEBOOK' , 'o');
+            
+    });
+
+    FB.Event.subscribe('edge.remove', function(response) {
+        s.linkTrackVars = 'prop37';
+        CallSDotTL(s , true , 'FCX CLARITY:UNLIKE THIS PAGE ON FACEBOOK' , 'o');
+    });
+    
+    
+};
+
+</script>
+
+
+                            
+<h1 id="MainTitle">The 2008 FCX Clarity</h1>
+<script language="javascript">document.getElementById('MainTitle').style.display = 'none';</script>
+<h2 style="margin:0px;padding:0px;"><div id="OverviewIntro">The Zero-Emissions Electric Vehicle of the Future. A Reality Today.</div></h2>
+<div class="OverviewHighlights">
+  <div class="HighlightImage"><a href="how-fcx-works.aspx"><img src="/images/2008/fcx-clarity/overview/featurehighlight1.gif" width="156" height="121" /></a></div>
+  <div class="HighlightLinks">
+    <div class="HighlightLinkTitle"><span class="DottedLink"><a href="how-fcx-works.aspx">Electric Power</a></span></div>
+    <div class="HighlightLink">
+      <ul>
+        <li>Zero emissions</li>
+        <li>Domestic fuel</li>
+        <li>Helps slow increase in greenhouse gases</li>
+      </ul>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="OverviewHighlights">
+  <div class="HighlightImage"><a href="performance.aspx"><img src="/images/2008/fcx-clarity/overview/featurehighlight2.gif" width="156" height="121" /></a></div>
+  <div class="HighlightLinks">
+    <div class="HighlightLinkTitle"><span class="DottedLink"><a href="performance.aspx">Performance</a></span></div>
+    <div class="HighlightLink">
+      <ul>
+        <li>Fun to drive</li>
+        <li>Smooth and powerful electric motor</li>
+        <li>Groundbreaking new fuel cell stack</li>
+      </ul>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="OverviewHighlights">
+  <div class="HighlightImage"><a href="safety.aspx"><img src="/images/2008/fcx-clarity/overview/featurehighlight3.gif" width="156" height="121" /></a></div>
+  <div class="HighlightLinks">
+    <div class="HighlightLinkTitle"><span class="DottedLink"><a href="safety.aspx">Safety</a></span></div>
+    <div class="HighlightLink">
+      <ul>
+        <li>Reinforced unit-body structure </li>
+        <li>Vehicle Stability Assist&#153; (VSA<sup>&#174;</sup>)[2]</li>
+        <li>Collision Mitigation Braking System&#153; (CMBS&#153;)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="clr"></div>
+
+</div>
+
+
+                            
+
+<style type="text/css">
+    .AccoladeClear {clear:both;}
+    #Accolades {float:left; margin-left:20px; margin-top:10px; width:569px; height:auto;}
+		#AccoladeTitle {padding-left:30px; padding-top:20px;}
+		#AccoladeTitleImage {float:left; border:0px;}
+		#AccoladeTitleText {font-weight:bold; color:#0066CC; float:left; margin-left:10px; margin-top:5px;}
+		.Accolade {float:left; margin-top:20px; margin-left:20px; margin-bottom:20px; width:140px;}
+		.AccoladeImage {height:auto;}
+		    .AccoladeImage img  {border:0px;}
+		.AccoladeDesc {margin-top:10px; height:auto;}
+		#AccoladeTitleText a,#AccoladeTitleText a:active, #AccoladeTitleText a:visited {color:#0066CC;}
+		#AccoladeTitleText a:hover span {color:#999999; text-decoration:underline;}
+		
+</style>
+
+
+
+<div id="Accolades" class="Accolades">
+    <div id="AccoladeTitle">
+        <div id="AccoladeTitleImage"><img src="/images/_global/icons/icon-accolade.gif" width="22" height="22" /></div>
+        <div id="AccoladeTitleText"><a href="reviews.aspx">Awards, Accolades and Ratings</a></div>
+    </div>
+    <div class="AccoladeClear"></div>
+    <div id="AccoladeContent">
+        
+        <div class="Accolade">
+            
+            <div class="AccoladeImage"><a href="reviews.aspx"><img src="/images/_global/accolades/greenestcar.gif" /></a></div>
+            
+            <div class="AccoladeDesc"><a href="reviews.aspx">Honda named Greenest Automaker.</a></div>
+        </div>  
+            
+        <div class="AccoladeClear"></div>
+    </div>
+ </div>
+ 
+ 
+                            
+                        </div>
+                        <div id="ContentMidRight">
+                            <div id="RightsideNav">
+                                
+      <style type="text/css">
+        .LeaseHeader{font-size: 11px;  color:#0066cc;  font-weight:bold; }
+        .LeaseText{font-size: 11px;  color:#000000;  font-weight:normal;}
+		#RightsideToolsFrameTop {background: url('/images/2008/fcx-clarity/background-toolsframe-top.gif') no-repeat; width:166px; height:12px; overflow:hidden; float:left; background-color:White;}
+		#RightsideToolsFrameMid {background: url('/images/2008/fcx-clarity/background-toolsframe.gif') repeat-y; width:166px; float:left; background-color:White;}
+		#RightsideToolsFrameBottom {background: url('/images/2008/fcx-clarity/background-toolsframe-bottom.gif') no-repeat;width:166px; height:14px; float:left; background-color:White;}
+      </style>
+      <div id="RightsideNavLease" style="padding-top:8px;margin-left:5px;">
+        <div class="LeaseHeader" style="margin-left:10px;margin-right:4px;">About 200 vehicles will be leased over the next three years, primarily in Southern California.</div>
+        <span class="LeaseText">
+          <ul style="margin:25px;margin-right:15px;padding:0px;">
+			<li>Three-year $600/month lease <sup><span class="dottedLink"><a href="#Disclaimers">1</a></span></sup></li>
+			<li>Exterior Color: Star Garnet Metallic</li>
+			<li>Maintenance costs and physical damage collision coverage included in lease.</li>
+          </ul>
+        </span>
+        <div id="LeaseButton"><a href="drive-fcx-clarity.aspx" onmouseover="SwitchImg('btnLease' , '/images/2008/fcx-clarity/btn-lease-on.jpg');" onmouseout="SwitchImg('btnLease' , '/images/2008/fcx-clarity/btn-lease-off.jpg');"><img src="/images/2008/fcx-clarity/btn-lease-off.jpg" id="btnLease" border="0" /></a>
+        </div>
+      </div>
+    
+                            </div>
+                            <div id="RightsideNavBottom">
+                                <img src="/images/trans.gif" width="184" height="25" />
+                            </div>
+                            <div id="RightsideToolsFrameTop">
+                            </div>
+                            <div id="RightsideToolsFrameMid">
+                                
+
+<style type="text/css">
+    #EmailUpdatesModuleEmailField   {font-family:Arial;}
+</style>
+
+<script language="javascript" type="text/javascript">
+    function GetEmailUpdates(){
+        var oField=document.getElementById("EmailUpdatesModuleEmailField");
+        ClearDefaultText(oField);
+        
+        top.location.href="http://automobiles.honda.com/fcx-clarity/e-mail-updates.aspx?email=" + oField.value;
+        
+    }
+</script>
+
+<form id="EmailUpdatesModuleForm" onsubmit="GetEmailUpdates(); return false;">
+    <div id="EmailUpdates">
+        <div class="ToolsTitle">
+            <div class="iconimage"><img src="/images/_global/icons/icon-emailupdates.gif" width="22" height="21" /></div>    
+            <div class="icontext">E-Mail Updates</div>
+        </div>
+        <div class="clr"></div>
+        <div class="ToolsContent">
+       
+       
+           
+          Sign up for e-mail updates to receive more FCX Clarity Fuel Cell Electric Vehicle (FCEV) information as it becomes available.  <br /><br />
+          If you are interested in leasing the FCX Clarity FCEV in the future, sign up here and you’ll be notified as 
+availability expands and more vehicles become available in your area during the coming years. <br /><br />
+              
+         
+            <div id="Emailform">
+                <input type="text" name="Email" id="EmailUpdatesModuleEmailField" class="Email" maxlength="45" value="Your E-mail" title="Your E-mail" onfocus="ClearDefaultText(this)" /><br /><br />
+                <a href="javascript:GetEmailUpdates()"><img src="/images/_global/buttons/btn-signmeup-off.gif" width="88" height="21" id="BtnEmailSignup" onmouseover="SwitchImg('BtnEmailSignup','/images/_global/buttons/btn-signmeup-over.gif')" onmouseout="SwitchImg('BtnEmailSignup','/images/_global/buttons/btn-signmeup-off.gif')" border="0" alt="SIGN ME UP" /></a>
+            </div>                
+        </div>
+    </div>
+</form>
+
+                            </div>
+                            <div id="RightsideToolsFrameBottom">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="PageFooter">
+                
+
+<div id="FooterContainer">
+
+    <div id="FooterLinks">
+        <div id="FooterLinksContainer">
+            <div class="FooterLink"><a href="http://automobiles.honda.com/spanish/" target="_top">En Espa&#241;ol</a></div>
+            <div class="FooterDiv"></div>                    
+            <div class="FooterLink"><a href="http://automobiles.honda.com/information/customer-relations.aspx" target="_top">Customer Service/FAQs</a></div>
+            <div class="FooterDiv"></div>
+            <div class="FooterLink"><a href="http://automobiles.honda.com/information/owner-resources.aspx" target="_top">Owner Resources</a></div>
+            <div class="FooterDiv"></div>
+            <div class="FooterLink"><a href="http://automobiles.honda.com/mobile/" target="_top">Mobile Site</a></div>
+            <div class="FooterDiv"></div>
+            <div class="FooterLink"><a href="http://www.honda.com/" target="_top">All Honda Sites</a></div>
+            <div class="FooterDiv"></div>
+            <div class="FooterLink"><a href="http://automobiles.honda.com/information/consumer-privacy-policy.aspx" target="_top">Privacy Policy</a></div>
+            <div class="FooterDiv"></div>
+            <div class="FooterLink"><a href="http://automobiles.honda.com/information/legal-terms.aspx" target="_top">Terms of Use</a></div>
+            <div class="FooterDiv"></div>
+            <div class="FooterLink"><a href="http://automobiles.honda.com/site-map.aspx" target="_top">Site Map</a></div>
+        </div>
+    </div>
+    <div id="FooterCopyright">
+        &#169;2013 <span class="DottedLink"><b class="FooterCorporateLink"><a href="http://www.honda.com/" target="_top">American Honda Motor Co., Inc</a></b>.  All information contained herein applies to U.S. vehicles only.
+        <a id="HondaWorldwideLink" href="http://world.honda.com/link/" target="_top">Honda Worldwide</a>.</span>
+        <a id="AdChoices" href="http://preferences.truste.com/preference.html?affiliateId=99" target="_blank">AdChoices<img class="AdChoicesLogo" src="/images/_global/logos/AdChoicesLogo.gif" border="0" /></a>    
+
+    </div>
+
+</div>
+
+                
+<div id="DisclaimersContainer">
+    <span name="Disclaimers"></span>
+
+<span name="Disclaimer_fcx_lease">[1]&nbsp;Subject to limited availability, in designated, limited California market regions, to approved lessees by American Honda Finance Corp. Closed end lease for FCX Clarity FCEV, for qualified lessees meeting specific use and operation requirements. Not all applicants will qualify. No purchase option. Zero capitalized cost reduction. Taxes, license, title fees, liability insurance extra. Monthly payments of $600.00 for 36 months. Total monthly payments $21,600.00. No mileage limitation or excess mileage cost. See one of three authorized FCX Clarity FCEV dealers for complete details.</span><br /><br />
+
+<span name="Disclaimer_2010_vsa">[2]&nbsp;VSA is not a substitute for safe driving. It cannot correct the vehicle's course in every situation or compensate for reckless driving. Control of the vehicle always remains with the driver.</span><br /><br />
+
+</div>
+
+            </div>
+        </div>
+        <div id="RightShadow">
+            <img src="/images/_controls/global-header/background-header-right.png" width="20" height="51" />
+        </div>
+    </div>
+    
+<div id="TrackingTags">
+
+<!-- SiteCatalyst code version: H.22.1.
+Copyright 1997-2007 Omniture, Inc. More info available at
+http://www.omniture.com -->
+
+<script language="JavaScript">
+/* Specify the Report Suite ID(s) to track here */
+
+
+var s_account = 'ahmautomobilesprod';
+
+
+
+</script>
+
+<script language="JavaScript" src="/js/tracking/global_code.js"></script>
+<script language="javascript" type="text/javascript">
+
+    /* Custom Functions */
+
+    // Sometimes we want to track links on a page as specific page names.
+    // This function will help accomodate for that.
+    function TrackPageClick(sPageName) {
+
+        var s=s_gi(s_account);
+        s.pageName = sPageName;
+        s.events = '';
+        s.products = '';
+        
+        CallSDotT(s);
+    }
+
+    function TrackLinkClick(sLinkName) {
+
+        var s=s_gi(s_account);
+     
+        s.linkTrackVars = '';
+        s.linkTrackEvents='';
+        
+        CallSDotTL(s , this , sLinkName , "o");
+
+    }
+    
+    function CallSDotT(s) {
+    
+        // Nothing should call s.t() directly. Everything should go through this function.
+
+        s = FormatVars(s);
+
+        var s_code=s.t();if(s_code)document.write(s_code)
+
+    }
+    
+    function CallSDotTL(s , sObject , sLinkName , sLinkType) {
+  
+        // Nothing should call s.t() directly. Everything should go through this function.
+    
+        s = FormatVars(s);
+        
+        s.tl(sObject , sLinkType , sLinkName);
+
+    }
+    
+    function FormatVars(s) {
+        // The purpose of this function is to provide sort of a Vista layer for ensuring
+        //  that data is formatted as desired no matter how it is programmed.
+        
+        s.prop28 = 'English';
+        
+        
+        
+        s.prop12 = 'JS';
+        
+
+        if(s.prop1) s.eVar10 = s.prop1;
+        if(s.prop2) s.eVar11 = s.prop2;
+        if(s.prop3) s.eVar12 = s.prop3;
+        if(s.prop4) s.eVar13 = s.prop4;
+        if(s.prop5) s.eVar14 = s.prop5;
+        if(s.prop6) s.eVar15 = s.prop6;
+        if(s.prop7) s.eVar22 = s.prop7;
+        if(s.prop17) s.eVar17 = s.prop17;
+        if(s.prop18) s.eVar18 = s.prop18;
+        if(s.prop19) s.eVar24 = s.prop19;
+        if(s.prop22) s.eVar25 = s.prop22;
+        if(s.prop26)s.eVar26 = s.prop26;
+        if(s.prop27)s.eVar27 = s.prop27;
+        if(s.prop33)s.eVar16 = s.prop33;
+        if(s.prop34)s.eVar34 = s.prop34;
+        if(s.prop39)s.eVar7 = s.prop39;
+
+        s.prop25 = document.location.pathname.toUpperCase() + '' + window.location.search.toUpperCase();
+
+        // Certain props and eVars have been disabled. Make sure they are always empty.
+        s.prop21 = '';
+        s.prop24 = '';
+
+        s.eVar21 = '';
+        s.eVar23 = '';
+        s.eVar28 = '';
+        s.eVar35 = '';
+
+        s.hier1 = '';
+        s.hier2 = '';
+        
+        // Trim whitespace off the end of values and uppercase values
+        for (var sKey in s) {
+            if ( (sKey.substr(0,4) == 'prop') || (sKey.substr(0,4) == 'eVar') || (sKey.substr(0,8) == 'pageName') || (sKey.substr(0,8) == 'linkName') || (sKey.substr(0,8) == 'channel') ) {
+                if (s[sKey] != '') {
+                    s[sKey] = (s[sKey] + '').replace(/^\s+|\s+$/g, '');
+                    s[sKey] = s[sKey].toUpperCase();
+                }
+            } 
+        }
+        
+
+        return s;
+    }
+    
+    // for s.products
+    function GetModelProductType(sModel) {
+        switch (sModel.toUpperCase()) {
+            case 'ACCORD SEDAN': case 'ACCORD COUPE': case 'CIVIC SEDAN': case 'CIVIC COUPE': case 'CIVIC GX': case 'CIVIC GX NGV': case 'CIVIC GX FLEET': case 'CIVIC HYBRID': case 'CIVIC SI COUPE': case 'CIVIC SI SEDAN': case 'CR-Z': case 'FCX': case 'FIT': case 'INSIGHT': case 'S2000': case 'ACCORD PLUG-IN':
+                return 'CARS'; break;
+            case 'CR-V': case 'ELEMENT': case 'ELEMENT SC': case 'PILOT': case 'ODYSSEY': case 'RIDGELINE': case 'ACCORD CROSSTOUR': case 'CROSSTOUR':
+                return 'TRUCKS'; break;             
+        }
+        return '';
+    }
+    
+   
+
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.linkInternalFilters="javascript:,rpa.com,honda.com,redesign.automobiles.honda.com,automobiles.honda.com"
+s.servers='10.100.71.108';
+
+var CurrentPageName='Honda FCX Clarity Overview';
+if(CurrentPageName=='')CurrentPageName="Honda Automobiles - " + document.location.href;
+var Currentprop21='';
+var Currentprop23='';
+var Currentprop24='';
+var Currentprop25='';
+//ModelName and ModelYear For Model Sections
+s.prop1='FCX CLARITY';s.prop2='2008';
+//PageName, ModelName and ModelYear For HCUC Sections
+if(typeof CurrentModelName !=="undefined")s.prop1=CurrentModelName;
+if(typeof CurrentModelYear !=="undefined")s.prop2=CurrentModelYear;
+
+
+
+
+s.channel="FCX Clarity"
+s.prop26=s.channel+":Overview"
+s.prop28="Models"
+
+
+//Setting s.pageName
+//Special Case pageName For News Article Detail
+if(typeof CurrentNewsTitle!=="undefined") {
+    s.pageName=CurrentPageName+" Detail - "+CurrentNewsTitle;
+}
+//Special Case pageName For FAQ Questions
+else if(typeof CurrentFAQ!=="undefined") {
+    s.pageName=CurrentPageName+" Question "+CurrentFAQ;
+}
+//Special Case pageName For HCUC Section
+else if(typeof CurrentModelName !=="undefined"){
+    var tmpPageName=(s.prop26) ? s.prop26.split(":")[1] : "";
+    s.pageName="Certified Used " + CurrentModelYear+" "+CurrentModelName+" "+tmpPageName;
+    s.prop26 = "Certified Used Model Library";
+    s.prop27 = "Certified Used " + CurrentModelYear+" "+CurrentModelName;
+}
+else {
+    if (!s.pageName) s.pageName=CurrentPageName;
+}
+
+//Setting prop37
+if (!s.prop37) s.prop37=s.channel + ":" + s.prop26 + ":" + s.prop27 + ":" + s.pageName;
+/*
+if (!s.prop37) {
+    if (s.channel) {
+        s.prop37 = s.channel;
+    }    
+    if (s.prop26) {
+        if (s.prop37) { s.prop37 += ':'; }
+        s.prop37 += s.prop26;
+    }
+    if (s.prop27) {
+        if (s.prop37) { s.prop37 += ':'; }
+        s.prop37 += s.prop27;
+    }    
+    if (s.pageName) {
+        if (s.prop37) { s.prop37 += ':'; }
+        s.prop37 += s.pageName;
+    }
+}
+*/
+
+
+
+// Setting Portal Referral prop29 eVar29 if is from honda.com or www.honda.com
+
+
+
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+try {
+    if ( (typeof(DO_NOT_TRACK_ON_LOAD) != 'undefined') && (DO_NOT_TRACK_ON_LOAD) ) {
+    } else {
+        CallSDotT(s);
+    }
+} catch (ex) {
+    // This is here as a just in case since this line of code is so important
+    CallSDotT(s);
+}
+
+//--></script>
+
+
+
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://honda.112.2o7.net/b/ss/ahmautomobilesprod/5/H.22.1--NS/0?pageName=HONDA FCX CLARITY OVERVIEW - NON-JS&c12=NON-JS" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.22.1 -->
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+
+// -------------------------------------
+// Dynamically add tracking code to page
+// -------------------------------------
+var xmlHttp = false;
+
+
+function AddTrackingTagsToPage (url) {
+
+    // Create http object
+    try {
+        xmlHttp=new XMLHttpRequest();
+    } catch (e) {
+        try {
+            xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    }
+
+    if (xmlHttp) {
+        xmlHttp.onreadystatechange = ProcessTrackingTags;
+        xmlHttp.open ('GET', url, true);
+        xmlHttp.send (null);
+    }
+
+}
+
+function ProcessTrackingTags() {
+
+    var sUserTrackingHTML = '';
+
+    if (xmlHttp.readyState == 4) {
+
+        if (xmlHttp.status == 200) {
+
+            var sUserTrackingHTML = xmlHttp.responseText;
+
+	        ParseTrackingHTML(sUserTrackingHTML);
+                    
+        } else {
+                // The request could not be fulfilled.
+        }
+    }
+
+}
+    
+    
+// This function will separate out the HTML and JavaScript from the HTML block.
+// The JavaScript code will be passed into an eval() statement.
+// The HTML code will be added to a new DIV.
+function ParseTrackingHTML(sValue) {
+
+		var sTempValue = sValue;
+
+		var sTempString = sTempValue.toLowerCase();
+		
+        // Pull JavaScript code out of HTML block
+		while (sTempString.indexOf("<scr" + "ipt") > 0) {
+		
+			var iIndex1 = sTempString.indexOf("<scr" + "ip" + "t");
+			var iIndex2 = iIndex1 + sTempString.substr(iIndex1).indexOf(">") + 1;
+			var iIndex3 = sTempString.substr(iIndex1).indexOf("</s" + "cr" + "ipt>");
+			
+			var sJS = sTempValue.substr(iIndex2   , iIndex3 - (iIndex2 - iIndex1));
+
+            // document.write won't work, so we need to replace it with a call to CreateDivAndWriteContent
+            sJS = sJS.replace(/document.write/g , 'CreateDivAndWriteContent');
+            // Get rid of comment tags
+            sJS = sJS.replace("<!--" , "");
+            sJS = sJS.replace("//-->" , "");
+
+            // Execute JS code
+			eval(sJS);
+
+            // Remove this JS block from sTempValue to look for next instance
+			sTempValue = sTempValue.substr(0 , iIndex1) + '' + sTempValue.substr(iIndex1 + iIndex3 + 9);
+
+			var sTempString = sTempValue.toLowerCase();			
+		
+		}
+
+    // What's remaining from sTempValue is just HTML. Write it to a <div>
+    CreateDivAndWriteContent(sTempValue);
+		
+}
+	
+// This function will dynamically create a div, populate it with passed in content, 
+//  and append it to the current document.
+function CreateDivAndWriteContent(sText) {
+
+    var oNewDiv = document.createElement('div');
+    oNewDiv.innerHTML = sText;
+    document.body.appendChild(oNewDiv);
+
+}
+
+
+
+// Create URL for tracking tags page
+// This should use javascript to retrieve the domain and protocol since we don't want to get a security violation by accessing the wrong domain.
+var sTrackingTagsPageURL = location.protocol + '//' + location.host + '/feeds/tracking-data.aspx?PageID=fcx_clarity_overview&ModelName=FCX Clarity&ModelYear=2008&Language=';
+
+if(window.onload){
+    
+    
+    if (window.onload.toString().indexOf('oldonload') >= 0) {
+        window.onload = function() { }        
+    }
+    if(typeof(OnLoadExecute)=="function"){
+        if(window.onload!=OnLoadExecute){
+            var OldWindowOnLoadFunction=window.onload;
+            OnLoadAppend("OldWindowOnLoadFunction()");
+            window.onload=OnLoadExecute;
+        }else{
+        }
+        OnLoadAppend("AddTrackingTagsToPage(sTrackingTagsPageURL)");
+    }else{
+        var OldWindowOnLoadFunction=window.onload;
+        var TrackingOnLoadFunction=new Function("AddTrackingTagsToPage(sTrackingTagsPageURL); OldWindowOnLoadFunction();");
+        window.onload=TrackingOnLoadFunction;
+    }
+
+
+
+
+
+
+
+
+
+}else{
+    var TrackingOnLoadFunction=new Function("AddTrackingTagsToPage(sTrackingTagsPageURL)");
+    window.onload=TrackingOnLoadFunction;
+}
+</SCRIPT>
+
+
+
+        
+        
+         
+
+<!-- OPTIMOST GLOBAL MODULE AND COUNTER CODE -->
+<script type="text/javascript">
+if (typeof(opContentUrls)!='undefined' && typeof(opModulesArray)!='undefined' && opContentUrls.length>0 && opModulesArray.length>0) {
+	for(var i=0;i<opModulesArray.length;i++){
+		optimost.displayModule(opModulesArray[i]);
+	}
+}
+if(typeof opRunCounters=='function'){
+	opRunCounters();
+}
+</script>
+<!-- END OPTIMOST GLOBAL MODULE AND COUNTER CODE -->
+
+
+
+
+
+<!-- Begin Visual IQ Tags -->
+<script type="text/javascript" src="/js/IQ-SEOTag.js"></script>
+<script type="text/javascript">
+
+(function (){
+
+    var CURRENT_URL=document.URL;
+    var REFERRER_URL=document.referrer;
+    var additionalParameters={
+		     CUSTOM_ACCESS_MODES_BY_REFERRER:{
+	        	        	    SOCIAL:["facebook.com","twitter.com","plus.google.com","pinterest.com","instagram.com"]
+	        	        }
+	    }
+
+    var result =new IQSeoTag(REFERRER_URL,CURRENT_URL,null,additionalParameters);
+    var currentParams="false";
+    if(result.current_page_params && result.current_page_params.queryKey){
+
+
+			    for(key in result.current_page_params.queryKey){
+			    currentParams="true";		
+				    if(key.toLowerCase() != key){
+					    result.current_page_params.queryKey[key.toLowerCase()] = result.current_page_params.queryKey[key];
+					    delete result.current_page_params.queryKey[key];
+				    }
+			    }
+		    }
+    		
+    var imageURL;
+
+    if(result.modeOfAccess == "ORGANIC") {
+	    if(result.current_page_params.queryKey["kwid"] || CURRENT_URL.indexOf("kwid")>0 || CURRENT_URL.indexOf("KWID")>0){
+
+	    }else{
+		    imageURL = "http://ad.doubleclick.net/ad/N8821.547841.VISUALIQ.COM/B7809882.2;sz=1x1;u=" + result.source + "-" + result.query + "-" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+	    }
+    	
+    }else if(result.modeOfAccess == "SOCIAL"){
+
+	    if(currentParams == "false"){
+    	
+		    imageURL = "http://ad.doubleclick.net/ad/N8821.547841.VISUALIQ.COM/B7809882;sz=1x1;u=" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+	    }
+    }
+
+
+    if(result.current_page_params.queryKey["sp_mid"]){
+	       imageURL = "http://ad.doubleclick.net/ad/N8821.547841.VISUALIQ.COM/B7809882.4;sz=1x1;u=" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+    }
+
+
+    if(CURRENT_URL.indexOf("kwid")>0 || CURRENT_URL.indexOf("KWID")>0){
+    	
+	    var params=CURRENT_URL.split("?");
+						    imageURL = "http://ad.doubleclick.net/ad/N8821.547841.VISUALIQ.COM/B7809882.3;sz=1x1;u=" + result.source + "-" + result.query + "-" + params[1] + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+    		
+	    }
+
+    if(REFERRER_URL.indexOf("youtube")>0){
+    if(currentParams == "false"){
+    		
+		    imageURL = "http://ad.doubleclick.net/ad/N8821.547841.VISUALIQ.COM/B7809882;sz=1x1;u=" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+	    }
+    }
+    if (imageURL) {
+	    var image = new Image();
+	    image.src = imageURL;
+    }
+    
+}());
+</script>
+<!-- End Visual IQ Tags -->
+
+
+
+</div>
+</body>
+</html>

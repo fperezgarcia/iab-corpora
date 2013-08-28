@@ -1,0 +1,1485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7]>
+<html id="ie7" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<![endif]-->
+<!--[if (gt IE 7) | (!IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!--<![endif]-->
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Switch Cabling And Auto-MDIX | CCIE Pursuit Blog</title>
+
+	<style type="text/css" media="screen">
+		@import url( http://s1.wp.com/wp-content/themes/pub/rubric/style.css?m=1368529391g );
+	</style>
+
+	<link rel="pingback" href="http://cciepursuit.wordpress.com/xmlrpc.php" />
+	<link rel="alternate" type="application/rss+xml" title="CCIE Pursuit Blog &raquo; Feed" href="http://cciepursuit.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CCIE Pursuit Blog &raquo; Comments Feed" href="http://cciepursuit.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CCIE Pursuit Blog &raquo; Switch Cabling And&nbsp;Auto-MDIX Comments Feed" href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='http://s1.wp.com/_static/??-eJyNj9EOgjAMRX/IWQkqT8ZvGWyWQVkXWkL4exfUSEJifGqbnNPewpxMw1F9VBgmk2jCEAUo9F6g85ps05t1OjYiB9jgNTF+BUb0jic1DybiGebg0OtO2txILJkmG0YQXcj/y7Z2DBE/dWdp64ecvT0DEteWfq19hRTIyLs3OAZnbHT5aVnj34dbUVbVqSwv16J7ApyvcQA=' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s1.wp.com/_static/??-eJyFkNkOAjEIRX9IbFzixAfjt8yCDbWUWlon49c7rtE4iU8QONwLmD5CKyFjyMapYWnIIxTFVNuxBhQOMnc6MyNHofWlQ72B7lQwDc/wFwAmm+qMc6bwgj9co2hmVB0tJ7rfVhTOhP1fzGGOdXuEhEqXH9XGi4Xoi6WgZswtdlIyHMR76U1PncU8dVQrzLevJIx+mDqGy1v2oXIfe6TQFI7w3H7Pu8Wqqpabalut3RW0v5Hv'></script>
+<link rel='stylesheet' id='all-css-0' href='http://s1.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377621948g' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cciepursuit.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cciepursuit.wordpress.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CDP Timers Plus Another Use For The &#8220;Default&#8221;&nbsp;Command' href='http://cciepursuit.wordpress.com/2007/07/07/cdp-timers-plus-another-use-for-the-default-command/' />
+<link rel='next' title='Great Verification Command for OSPF and&nbsp;EIGRP' href='http://cciepursuit.wordpress.com/2007/07/08/great-verification-command-for-ospf-and-eigrp/' />
+<meta name="generator" content="WordPress.com" />
+<link rel='canonical' href='http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/' />
+<link rel='shortlink' href='http://wp.me/p3XC2-1h' />
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fcciepursuit.wordpress.com%2F2007%2F07%2F08%2Fswitch-cabling-and-auto-mdix%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fcciepursuit.wordpress.com%2F2007%2F07%2F08%2Fswitch-cabling-and-auto-mdix%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Switch Cabling And Auto-MDIX" />
+<meta property="og:url" content="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/" />
+<meta property="og:description" content="This thread in GroupStudy about using Auto-MDIX to enable the use of straight-through cables between switches reminded me of a real world issue involving the same technology.  At my previous job, t..." />
+<meta property="og:site_name" content="CCIE Pursuit Blog" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@wordpressdotcom" />
+<meta property="fb:app_id" content="249643311490" />
+<link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1317357795g" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1317357795g" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1355642671g" />
+<link rel='openid.server' href='http://cciepursuit.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='http://cciepursuit.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="http://cciepursuit.wordpress.com/osd.xml" title="CCIE Pursuit Blog" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com" />
+		<style>
+		/* <![CDATA[ */
+		/* Block: reblog */
+		
+		.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+		.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+		.reblogger-note-content            { margin: 0 0 20px; }
+		.reblog-post .wpcom-enhanced-excerpt-content { border-left: 3px solid #eee; padding-left: 15px; }
+		.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+		.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+		.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+		.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+		
+		.reblog-post .wpcom-enhanced-excerpt { clear: both; }
+		
+		.reblog-post .wpcom-enhanced-excerpt address,
+		.reblog-post .wpcom-enhanced-excerpt li,
+		.reblog-post .wpcom-enhanced-excerpt h1,
+		.reblog-post .wpcom-enhanced-excerpt h2,
+		.reblog-post .wpcom-enhanced-excerpt h3,
+		.reblog-post .wpcom-enhanced-excerpt h4,
+		.reblog-post .wpcom-enhanced-excerpt h5,
+		.reblog-post .wpcom-enhanced-excerpt h6,
+		.reblog-post .wpcom-enhanced-excerpt p { font-size: 100% !important; }
+		
+		.reblog-post .wpcom-enhanced-excerpt blockquote,
+		.reblog-post .wpcom-enhanced-excerpt pre,
+		.reblog-post .wpcom-enhanced-excerpt code,
+		.reblog-post .wpcom-enhanced-excerpt q { font-size: 98% !important; }
+		
+
+		/* ]]> */
+		</style>
+		<meta name="application-name" content="CCIE Pursuit Blog" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="A Cisco CCIE Blog with Study and Tech Tips - Vendor and Industry News - but Mostly Personal Struggles :-)" /><meta name="msapplication-task" content="name=Subscribe;action-uri=http://cciepursuit.wordpress.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="title" content="Switch Cabling And&nbsp;Auto-MDIX | CCIE Pursuit Blog on WordPress.com" />
+<meta name="description" content="This thread in GroupStudy about using Auto-MDIX to enable the use of straight-through cables between switches reminded me of a real world issue involving the same technology.  At my previous job, there was a &quot;senior&quot; engineer who supported a large site.  She was having an issue with hard-setting the speed and duplex of an uplink port (I&hellip;" />
+<style type="text/css">
+#header{
+	background: url(http://cciepursuit.files.wordpress.com/2008/12/cropped-ciscologo21.jpg) no-repeat top right;
+}
+#header a {
+	color:#B54141;
+}
+</style>
+
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+if ( typeof GS_googleAddAdSenseService == 'function' ) { GS_googleAddAdSenseService("ca-pub-3443918307802676"); }
+if ( typeof GS_googleEnableAllServices == 'function' ) { GS_googleEnableAllServices() };
+</script>
+<script type='text/javascript'>
+if ( typeof GA_googleAddSlot == 'function' ) { GA_googleAddSlot("ca-pub-3443918307802676", "wpcom_below_post_adsafe"); }
+</script>
+<script type='text/javascript'>
+if ( typeof GA_googleFetchAds == 'function' ) { GA_googleFetchAds(); }
+</script>
+
+<script type="text/javascript">
+var wpcom_ads = { bid: 944138, pt: 'permalink', wa: 0, as: 1, domain: 'cciepursuit.wordpress.com', url: 'http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/', gid: '', };
+</script>
+<style id="syntaxhighlighteranchor"></style>
+<script type="text/javascript"> 
+	window.google_analytics_uacct = "UA-52447-2"; 
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script>
+</head>
+
+<body class="single single-post postid-79 single-format-standard mp6 highlander-enabled highlander-light">
+<div id="rap">
+<h1 id="header"><a href="http://cciepursuit.wordpress.com/">CCIE Pursuit Blog</a></h1>
+
+<div id="content">
+<!-- end header -->
+
+
+<h2>July 8, 2007</h2>
+<div class="post-79 post type-post status-publish format-standard hentry category-cabling category-home-lab category-ios category-switching" id="post-79">
+	 <h3 class="storytitle">
+			Switch Cabling And&nbsp;Auto-MDIX		 </h3>
+	<div class="meta">Filed under:  <a href="http://cciepursuit.wordpress.com/category/cabling/" title="View all posts in Cabling" rel="category tag">Cabling</a>,<a href="http://cciepursuit.wordpress.com/category/home-lab/" title="View all posts in Home Lab" rel="category tag">Home Lab</a>,<a href="http://cciepursuit.wordpress.com/category/ios/" title="View all posts in IOS" rel="category tag">IOS</a>,<a href="http://cciepursuit.wordpress.com/category/switching/" title="View all posts in Switching" rel="category tag">Switching</a> &#8212; cciepursuit @ 6:28 am <br /></div>
+
+	<div class="storycontent">
+		<p><a target="_blank" href="http://www.groupstudy.com/archives/ccielab/200701/msg00718.html">This thread in GroupStudy about using Auto-MDIX to enable the use of straight-through cables between switches</a> reminded me of a real world issue involving the same technology.  At my previous job, there was a &#8220;senior&#8221; engineer who supported a large site.  She was having an issue with hard-setting the speed and duplex of an uplink port (I think it was a &#8220;stack&#8221; of 2950s) on a Cisco switch.  While most of our uplinks were fiber, this one was copper (it was a small office that just needed to connect to the MDF on the floor directly above it).  Our standard was to use a cross-over cable for any switch-to-switch connections and to hard-set the speed and duplex on both sides of the connection.  She was having a problem with setting the speed and duplex.  If she hard-set these settings on both sides of the link, then the link would go down.  If she let one side of the link auto-negotiate, the link would come up, but the connection would not meet our standards.  I eventually got dragged into this issue.</p>
+<p>Looking at the switch settings, I noticed something odd: auto-MDIX was enabled (globally) on both switches.  Our standard was to disable this on every switch.  This gave us a little protection from users making unauthorized switch-to-switch connections (accidentally or on purpose) as cross-over cables were not generally available to end users (most wouldn&#8217;t know what a cross-over cable was).  I asked the engineer if she was using a cross-over cable on the uplink. </p>
+<p>Her response: &#8220;That&#8217;s not the problem.  You can use a straight-through cable.&#8221; </p>
+<p>&#8220;Sure you CAN, but our standard is to use crossover cables because&#8230;.blah, blah, blah.&#8221;</p>
+<p>Long story shorter: she refused to adhere to our standards and use a cross-over cable and I refused to waste my time on the issue.  I wasn&#8217;t sure that the cabling was the issue, but if disabling auto-MDIX and using the proper cabling did not fix the issue then we could at least take those elements out of the equation. </p>
+<p>She muddled on for a couple more days (she couldn&#8217;t be bothered to open a TAC case) and the problem remained.  Finally our top-level LAN guy looked into the issue.  <a target="_blank" href="http://www.cisco.com/univercd/cc/td/doc/product/lan/cat3560/12225see/scg/swint.htm#wp1193977">He found the answer</a> after a few minutes on Cisco&#8217;s web site (this is specific to the 3560):</p>
+<blockquote><p><strong>Configuring Auto-MDIX on an Interface</strong><br />
+When automatic medium-dependent interface crossover (auto-MDIX) is enabled on an interface, the interface automatically detects the required cable connection type (straight through or crossover) and configures the connection appropriately. When connecting switches without the auto-MDIX feature, you must use straight-through cables to connect to devices such as servers, workstations, or routers and crossover cables to connect to other switches or repeaters. <strong>With auto-MDIX enabled, you can use either type of cable to connect to other devices, and the interface automatically corrects for any incorrect cabling.</strong> For more information about cabling requirements, see the hardware installation guide.</p>
+<p><strong>Auto-MDIX is enabled by default. When you enable auto-MDIX, you must also set the interface speed and duplex to auto so that the feature operates correctly.</strong> Auto-MDIX is supported on all 10/100 and 10/100/1000-Mbps interfaces and on 10/100/1000BASE-TX small form-factor pluggable (SFP)-module interfaces. It is not supported on 1000BASE-SX or -LX SFP module interfaces.</p></blockquote>
+<p>So you can use a straight through cable to connect two switches, but you then <strong>cannot </strong>explicitly set the speed and duplex.  The engineer was told that the solution to her problem was to disable auto-MDIX and use a cross-over cable.  Where had I heard that before?  <img src='http://s0.wp.com/wp-includes/images/smilies/icon_smile.gif?m=1129645325g' alt=':-)' class='wp-smiley' /> </p>
+<p>To be fair, I wasn&#8217;t aware of the auto-MDIX needing auto-negotiation issue, BUT whenever you are troubleshooting a problem you want to minimize any deviations from known working configurations to eliminate unnecessary variables.  I think that I remember reading that auto-MDIX uses the same protocol as auto-negotiation and that&#8217;s why both need to be enabled.  I&#8217;m not positive about that though.</p>
+<p>This table is pretty interesting.  I assume that &#8220;correct cabling&#8221; means a cross-over cable and &#8220;incorrect cabling&#8221; means a straight-through cable.</p>
+<table border="1">
+<tr>
+<td><strong>Local Side Auto-MDIX</strong></td>
+<td><strong>Remote Side Auto-MDIX</strong></td>
+<td><strong>With Correct Cabling</strong></td>
+<td><strong>With Incorrect Cabling</strong></td>
+</tr>
+<tr>
+<td>On</td>
+<td>On</td>
+<td>Link up</td>
+<td>Link up</td>
+</tr>
+<tr>
+<td>On</td>
+<td>Off</td>
+<td>Link up</td>
+<td>Link up</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>On</td>
+<td>Link up</td>
+<td>Link up</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>Off</td>
+<td>Link up</td>
+<td>Link down</td>
+</tr>
+</table>
+<hr />You can refer to the table below, but it&#8217;s pretty easy to determine if a link will be up or not: <strong>at least one side needs to have auto-MDIX enabled along with auto-negotiation of speed and duplex, otherwise the link will be down</strong>.</p>
+<table border="1">
+<tr>
+<td colSpan="2">
+<p align="center"><strong>sw1</strong></p>
+</td>
+<td colSpan="2">
+<p align="center">s<strong>w2</strong></p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>MDIX</td>
+<td>Speed/Duplex</td>
+<td>MDIX</td>
+<td>Speed/Duplex</td>
+<td>Link Status</td>
+</tr>
+<tr>
+<td>on</td>
+<td>auto</td>
+<td>on</td>
+<td>auto</td>
+<td>up</td>
+</tr>
+<tr>
+<td>on</td>
+<td>auto</td>
+<td>on</td>
+<td>hard-set</td>
+<td>up</td>
+</tr>
+<tr>
+<td>on</td>
+<td>auto</td>
+<td>off</td>
+<td>auto</td>
+<td>up</td>
+</tr>
+<tr>
+<td>on</td>
+<td>auto</td>
+<td>off</td>
+<td>hard-set</td>
+<td>up</td>
+</tr>
+<tr>
+<td>on</td>
+<td>hard-set</td>
+<td>on</td>
+<td>auto</td>
+<td>up</td>
+</tr>
+<tr>
+<td>on</td>
+<td>hard-set</td>
+<td>on</td>
+<td>hard-set</td>
+<td>down</td>
+</tr>
+<tr>
+<td>on</td>
+<td>hard-set</td>
+<td>off</td>
+<td>auto</td>
+<td>down</td>
+</tr>
+<tr>
+<td>on</td>
+<td>hard-set</td>
+<td>off</td>
+<td>hard-set</td>
+<td>down</td>
+</tr>
+<tr>
+<td>off</td>
+<td>auto</td>
+<td>on</td>
+<td>auto</td>
+<td>up</td>
+</tr>
+<tr>
+<td>off</td>
+<td>auto</td>
+<td>on</td>
+<td>hard-set</td>
+<td>down</td>
+</tr>
+<tr>
+<td>off</td>
+<td>auto</td>
+<td>off</td>
+<td>auto</td>
+<td>down</td>
+</tr>
+<tr>
+<td>off</td>
+<td>auto</td>
+<td>off</td>
+<td>hard-set</td>
+<td>down</td>
+</tr>
+<tr>
+<td>off</td>
+<td>hard-set</td>
+<td>on</td>
+<td>auto</td>
+<td>up</td>
+</tr>
+<tr>
+<td>off</td>
+<td>hard-set</td>
+<td>on</td>
+<td>hard-set</td>
+<td>down</td>
+</tr>
+<tr>
+<td>off</td>
+<td>hard-set</td>
+<td>off</td>
+<td>auto</td>
+<td>up</td>
+</tr>
+<tr>
+<td>off</td>
+<td>hard-set</td>
+<td>off</td>
+<td>hard-set</td>
+<td>down</td>
+</tr>
+</table>
+<p>This makes sense because you need at least one side to be able to logically switch the pinouts of a straight-through cable to emulate a cross-over cable.  Hard-setting the speed or duplex disables the auto-negotiation protocol (which auto-MDIX must utilize as well) which effectively disables auto-MDIX:</p>
+<p><strong>Note:</strong> The only command that I know of that will show the auto-MDIX state of an interface (other than looking at the running-configuration of the interface) is the rather verbose &#8220;show controllers ethernet-controller fax/x phy | include MDIX&#8221; command.</p>
+<p><strong>Note:</strong> The default setting for switch ports is to have auto-MDIX enabled.  This is a pretty recent change though.  IOS versions prior to 12.2(20)SE will use the default of &#8220;no mdix auto&#8221;.</p>
+<blockquote><p><strong>&#8220;mdix auto&#8221; is the default, so it does not show in the running-configuration:</strong><br />
+sw2(config)#do sh run int fa0/32<br />
+Building configuration&#8230;<br />
+Current configuration : 34 bytes<br />
+!<br />
+interface FastEthernet0/32<br />
+end</p>
+<p><strong>We can verify that auto-MDIX is on for this interface:<br />
+</strong>sw2(config)#<strong>do sh controll eth fa0/32 phy | i MD<br />
+</strong> <strong>Auto-MDIX                             :  On</strong>   [AdminState=1   Flags=0x00052248]</p>
+<p><strong>Let&#8217;s hard-set the speed and see what happens to auto-MDIX:<br />
+</strong>sw2(config)#int fa0/32<br />
+sw2(config-if)#<strong>speed 100<br />
+</strong>sw2(config-if)#do sh control eth fa0/32 phy | i MD<br />
+ <strong>Auto-MDIX                             :  Off</strong>   [AdminState=1   Flags=0x00010A48]</p>
+<p><strong>Notice that our configuration does not state that auto-MDIX has been disabled:<br />
+</strong>sw2(config-if)#do sh run int fa0/32<br />
+Building configuration&#8230;</p>
+<p>Current configuration : 45 bytes<br />
+!<br />
+interface FastEthernet0/32 <br />
+ speed 100<br />
+end</p></blockquote>
+<p>This verifies that hard-setting the speed and/or duplex turns off auto-MDIX for the interface.</p>
+<p><strong>Note:</strong> I did test to see if DTP was effected by auto-MDIX.  It was not.  As long as the link was up, DTP could work it&#8217;s trunking magic.</p>
+<p>So the long and the short of it is: you can use straight-through cables to connect two Cisco switches as long as you are willing to sacrifice the ability to hard-set the speed and/or duplex on both sides of the link.</p>
+<hr /><strong>Cisco Documentation:</strong></p>
+<p><a target="_blank" href="http://www.cisco.com/univercd/cc/td/doc/product/lan/cat3560/12225see/cr/cli2.htm#wp1917706">show controllers ethernet-controller</a><a target="_blank" href="http://www.cisco.com/univercd/cc/td/doc/product/lan/cat3560/12225see/scg/swint.htm#wp1193977">Configuring Auto-MDIX on an Interface (3560)</a></p>
+<p><a target="_blank" href="http://www.cisco.com/univercd/cc/td/doc/product/lan/cat3560/12225see/cr/cli1.htm#wp2786606">mdix auto</a></p>
+
+<div class="wpa" style="position: relative; width:300px; text-align: center; padding: 0; margin: 10px auto; overflow: hidden; clear: both;">
+<a style="position: absolute; text-align: left; display: block; font: 9px/1 sans-serif; text-decoration: underline;" href="http://en.wordpress.com/about-these-ads/" rel="nofollow">About these ads</a>
+<script type="text/javascript">
+		var wpcom_adclk_hovering = false;
+		var wpcom_adclk_recorded = false;
+		var wpcom_adclk_theme = "Rubric";
+		var wpcom_adclk_slot = "wpcom_below_post_adsafe";
+		var wpcom_adclk_network = ( typeof wpcom_adclk_network === "undefined" ) ? "" : wpcom_adclk_network ;
+
+		jQuery(document).ready( function() {
+			function wpcom_adclk_hover_yes() { wpcom_adclk_hovering = true; }
+			function wpcom_adclk_hover_no() { wpcom_adclk_hovering = false; }
+			jQuery(".wpa").click(wpcom_adclk_click);
+			jQuery(".wpa iframe").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+			jQuery(".wpa object").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+
+			jQuery(window).blur( function() {
+				if ( wpcom_adclk_hovering ) { wpcom_adclk_click(); }
+			});
+		});
+
+		function wpcom_adclk_impression() {
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_imp_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_imp_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_imp_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_imp_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			return true;
+		}
+
+		function wpcom_adclk_click() {
+			if (wpcom_adclk_recorded) { return true; } // no double counting
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_click_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_click_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_click_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_click_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			wpcom_adclk_recorded = true;
+			var now=new Date(); var end=now.getTime()+250;
+			while(true){now=new Date();if(now.getTime()>end){break;}}
+			return true;
+		}
+	
+if ( typeof GA_googleAddAttr == 'function' ) {
+GA_googleAddAttr("AdOpt", "1");
+GA_googleAddAttr("Origin", "other");
+GA_googleAddAttr("LangId", "1");
+GA_googleAddAttr("Domain", "cciepursuit.wordpress.com");
+GA_googleAddAttr("BlogId", "944138");
+GA_googleAddAttr("AdSafe", "1");
+GA_googleAddAttr("Tag", "cabling");
+GA_googleAddAttr("Tag", "home-lab");
+GA_googleAddAttr("Tag", "ios");
+GA_googleAddAttr("Tag", "switching");
+GA_googleAddAttr("Partner", "AOL");
+GA_googleAddAttr("theme_bg", "ffffff");
+GA_googleAddAttr("theme_text", "000000");
+GA_googleAddAttr("theme_link", "b54141");
+GA_googleAddAttr("theme_border", "eeeeee");
+GA_googleAddAttr("theme_url", "b54141");
+GA_googleAddAdSensePageAttr("google_page_url", "http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/");
+GA_googleFillSlot("wpcom_below_post_adsafe");
+}
+</script>
+</div>
+<style type="text/css">
+div.wpa>div { margin-top: 1em; }
+</style>
+<script type="text/javascript">
+jQuery( window ).load( function() {
+    if ( jQuery(".wpa script[src*='shareth.ru']").length > 0 || jQuery(".wpa iframe[src*='boomvideo.tv']").length > 0 || jQuery(".wpa iframe[src*='viewablemedia.net']").length > 0 || jQuery(".wpa .sharethrough-placement").length > 0 ) {
+        jQuery( '.wpa' ).css( 'width', '400px' );
+    }
+setTimeout(function(){if(typeof GS_googleAddAdSenseService !== 'function'){new Image().src=document.location.protocol+"//stats.wordpress.com/g.gif?v=wpcom-no-pv&x_noads=adblock&baba="+Math.random()}},100);
+} );
+</script>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-stumbleupon"><a rel="nofollow" class="share-stumbleupon sd-button share-icon" href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/?share=stumbleupon" title="Click to share on StumbleUpon"><span>StumbleUpon</span></a></li><li class="share-digg"><a rel="nofollow" class="share-digg sd-button share-icon" href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/?share=digg" title="Click to Digg this post"><span>Digg</span></a></li><li class="share-reddit"><a rel="nofollow" class="share-reddit sd-button share-icon" href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/?share=reddit" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-944138-79-521d2c5505759' data-src='//widgets.wp.com/likes/#blog_id=944138&amp;post_id=79&amp;origin=cciepursuit.wordpress.com&amp;obj_id=944138-79-521d2c5505759' data-name='like-post-frame-944138-79-521d2c5505759'><h3 class='sd-title'>Like this:</h3><div class='post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>	</div>
+
+	<div class="feedback">
+                        <a href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/#comments" title="Comment on Switch Cabling And&nbsp;Auto-MDIX">Comments (10)</a>	</div>
+
+</div>
+
+
+<h2 id="comments">10 Comments	<a href="#postcomment" title="Leave a comment">&raquo;</a>
+</h2>
+
+<ol id="commentlist">
+<li class="pingback even thread-even depth-1 highlander-comment" id="comment-2452">
+	<div id="div-comment-2452">
+		<div class="comment-author vcard">
+						<p>[...] can&#8217;t get with &#8220;show interface fa0/3 status&#8221;, except for the MDIX information.  In a previous post, I wrote: Note: The only command that I know of that will show the auto-MDIX state of an interface [...]</p>
+			<p><cite>Pingback by <span class="fn"><a href='http://cciepursuit.wordpress.com/2007/10/17/show-interfaces-transceiver-properties/' rel='external nofollow' class='url'>show interfaces transceiver properties &laquo; CCIE Pursuit</a></span> &#8212; October 17, 2007 @ <a href="#comment-2452">1:10 pm</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=2452#respond' onclick='return addComment.moveForm("div-comment-2452", "2452", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6008">
+	<div id="div-comment-6008">
+		<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/e7b85598a00817dce300b859ffa3f400?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>Is this MDIX problem not another good reason to leave speed and duplex to auto/auto?  Why is it a sacrifice to not be able to hard set ports?</p>
+<p>In some years of network engineering I&#8217;ve had at least 5 times as many faults due to ends being mismatched &#8211; when in fact if everything was set to auto or reset to auto/auto, it all comes right.</p>
+<p>(The only devices which I have come across in recent times which do not work with auto speed/duplex are APC UPS management cards but apart from that, nothing&#8230;)</p>
+			<p><cite>Comment by <span class="fn">Reuben Farrelly</span> &#8212; April 2, 2008 @ <a href="#comment-6008">8:28 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=6008#respond' onclick='return addComment.moveForm("div-comment-6008", "6008", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment byuser comment-author-cciepursuit bypostauthor even thread-even depth-1 highlander-comment" id="comment-6009">
+	<div id="div-comment-6009">
+		<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/38975619408ca2a3a410360da532c29c?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>You&#8217;re right about auto-negotiation working most of the time, and that one of the reasons why we leave all of our end user switch ports set to auto/auto. But there are two important reasons for hard-setting server switch ports and requiring that the server owner do the same with their NIC:</p>
+<p>1) Auto negotiation failures.  If auto-negotiation of duplex fails, it will default to half-duplex mode.  A server connected at 100/half is not a happy box.</p>
+<p>2) Billing. In the companies I have worked for, the network team bills a &#8220;port charge&#8221;.  We require that the server owners fill out business requests to specify the speed and duplex of their devices.  We then hard-set the server port to that setting and require the server owners to do the same on their NIC. The port charge increases as the port speed increases.  All of our datacenter switches have ports capable of 1000Mbps.  We&#8217;ll often get trouble tickets about server problems only to find out that server owner has changed their NIC to 1000Mbps without requesting the port change.  If we ran auto negotiation, then the port would most likely auto negotiate to 1000Mbps.</p>
+<p>A bit off topic: The server teams figured out a way around this process by calling the NOC and having them either hard set the port to a different speed or to set the port to auto/auto.  We eventually wrote a script that runs every Wednesday at midnight that goes though all of the ports and verifies that they are set to the speed that is in the business request.  If the speed is different then the script sets the port to the correct speed.  This will usually &#8220;break&#8221; the server resulting in the server owner getting paged out in the wee hours of the morning.  The next day we check the logging server to see who changed the speed/duplex on the switch and notify their manager.  Needless to say, we&#8217;ve had a sharp decrease in NOC port reconfigurations.</p>
+<p>Anyhoo&#8230;I agree that there are going to be more issues with mismatches if you are not running auto/auto on every port, but implementing a corporate standard to hard set server ports is useful for the reasons above, PLUS it ends finger-pointing pretty quickly during troubleshooting.</p>
+			<p><cite>Comment by <span class="fn"><a href='http://cciepursuit.wordpress.com' rel='external nofollow' class='url'>cciepursuit</a></span> &#8212; April 2, 2008 @ <a href="#comment-6009">9:37 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=6009#respond' onclick='return addComment.moveForm("div-comment-6009", "6009", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-6533">
+	<div id="div-comment-6533">
+		<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/147f8c2e21fa001311657552faafb9e1?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>so if auto nego if successful, switch will allow 200 Mbps download and 200 Mbps upload between two pc&#8230; am i correct?? if not the switch will only let 100 Mbps upload/download..?</p>
+<p>10Q</p>
+			<p><cite>Comment by <span class="fn">passerby</span> &#8212; July 17, 2008 @ <a href="#comment-6533">12:33 pm</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=6533#respond' onclick='return addComment.moveForm("div-comment-6533", "6533", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 highlander-comment" id="comment-6591">
+	<div id="div-comment-6591">
+		<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/64df6c882370907187da4becc10798a5?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>@passerby</p>
+<p>If auto neg works and the ports at either end are 100M Full Duplex, it will allow 100M both ways simultaneously.  Half Duplex allows 100M one way.  If you hard-code 100M/Full on either end, use a X-Over cable, this is &#8211; IMHO &#8211; the only way to fly.  We have had nothing but issues with MDI-X at auto!</p>
+			<p><cite>Comment by <span class="fn">Mawdo</span> &#8212; July 30, 2008 @ <a href="#comment-6591">2:59 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=6591#respond' onclick='return addComment.moveForm("div-comment-6591", "6591", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-7091">
+	<div id="div-comment-7091">
+		<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/7ad4868cbc96ab6f5c7a15ad3741f63a?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>2950 don&#8217;t support Auto-MDIX from everything I can find.</p>
+			<p><cite>Comment by <span class="fn">Kevin</span> &#8212; November 12, 2008 @ <a href="#comment-7091">10:27 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=7091#respond' onclick='return addComment.moveForm("div-comment-7091", "7091", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment byuser comment-author-cciepursuit bypostauthor even thread-even depth-1 highlander-comment" id="comment-7092">
+	<div id="div-comment-7092">
+		<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/38975619408ca2a3a410360da532c29c?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>@Kevin &#8211; You&#8217;re right.  It turns out that the 2950s do not support Auto-MDIX.  Why do you want to go and ruin a good story?  <img src='http://s0.wp.com/wp-includes/images/smilies/icon_smile.gif?m=1129645325g' alt=':-)' class='wp-smiley' /> </p>
+<p>We ran 2950, 2960, 3560, and 3750(PoE) in that network. I know that these switches were not 3750s.  The 3560 and 2960 switches do have Auto-MDIX support, so it must have been one of those models.  They were probably 3560s as we really didn&#8217;t deploy many 2960s.</p>
+			<p><cite>Comment by <span class="fn"><a href='http://cciepursuit.wordpress.com' rel='external nofollow' class='url'>cciepursuit</a></span> &#8212; November 12, 2008 @ <a href="#comment-7092">10:58 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=7092#respond' onclick='return addComment.moveForm("div-comment-7092", "7092", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-7970">
+	<div id="div-comment-7970">
+		<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/cd57308f2fe774fdd7cf2cd032a70906?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>I have just run into toruble with port settings between a Cisco 7606 router and a 3750 switch. Router set to 100/full switch shows 100/half and if we set the swithc to 100/full link goes down. Iam using a gigabitethernet port on my router. I do not know the cabling on the other side. I am puzzled and the client is mad&#8230;Any comments</p>
+			<p><cite>Comment by <span class="fn">don</span> &#8212; August 28, 2009 @ <a href="#comment-7970">9:42 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=7970#respond' onclick='return addComment.moveForm("div-comment-7970", "7970", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 highlander-comment" id="comment-7980">
+	<div id="div-comment-7980">
+		<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/846c2ce7426faedc840770db87d9a0a6?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>ante todo buenos días quería pedirle a alguno del foro que si alguien tiene alguna forma sencilla de realizar un cable de red Auto-MDIX me la podría decir porque de verdad no se mucho de redes ni de conexiones gracias y disculpen la molestia</p>
+			<p><cite>Comment by <span class="fn">renzo</span> &#8212; September 5, 2009 @ <a href="#comment-7980">7:30 am</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=7980#respond' onclick='return addComment.moveForm("div-comment-7980", "7980", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-8014">
+	<div id="div-comment-8014">
+		<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/2b7bac198b8d719b486d570bb8d5173b?s=32&amp;d=monsterid' class='avatar avatar-32' height='32' width='32' />			<p>Hi mate,</p>
+<p>Thank you very much for this explanation, I was looking desperatly for Cisco doc to show to an engineer refusing to swap straight cable to crossover.<br />
+Thanks to you he changed his mind.</p>
+<p>Regards<br />
+Younes</p>
+			<p><cite>Comment by <span class="fn">Younes</span> &#8212; October 11, 2009 @ <a href="#comment-8014">7:04 pm</a></cite> 				<span class="reply">
+					 | <a class='comment-reply-link' href='/2007/07/08/switch-cabling-and-auto-mdix/?replytocom=8014#respond' onclick='return addComment.moveForm("div-comment-8014", "8014", "respond", "79")'>Reply</a>				</span>
+			</p>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+</ol>
+	<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+	<br />
+
+	<p><a href='http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/feed/'><abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.</a>	<a href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/trackback/" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a>
+</p>
+
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2007/07/08/switch-cabling-and-auto-mdix/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://cciepursuit.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="2f57430c68" /><input type="hidden" name="_wp_http_referer" value="/2007/07/08/switch-cabling-and-auto-mdix/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Enter your comment here...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Enter your comment here..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=monsterid&amp;forcedefault=y" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value="" /></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://s2.wp.com/wp-content/mu-plugins/highlander-comments/images/wplogo.png?m=1289230950g" alt="WordPress.com Logo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=monsterid&amp;forcedefault=y" alt="Twitter picture" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=monsterid&amp;forcedefault=y" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of follow-up comments via email.</label></p></div>
+
+<iframe id="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=1"></iframe>
+
+												<p class="form-submit">
+							<input name="submit" type="submit" id="comment-submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='79' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						
+<input type="hidden" name="genseq" value="1377643605" />
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="0a76628474" /></p><script type='text/javascript' src='http://s2.wp.com/wp-content/mu-plugins/akismet-2.5/form.js?m=1308783962g'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="244"/></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>			
+
+
+<!-- begin footer -->
+</div>
+
+
+<!-- begin sidebar -->
+<div id="menu">
+
+<ul>
+<li id="text-1" class="widget widget_text">			<div class="textwidget"><a target="_blank" href="http://www.internetworkexpert.com/product-demo.htm" title="Internetwork Expert">
+<img src="http://cciepursuit.files.wordpress.com/2008/08/ccie-pursuit-banner.png" alt="Internetwork Expert">
+</a>
+<h2><p align="center">
+<a target="_blank" href="http://www.internetworkexpert.com/product-demo.htm" title="INTERNETWORK EXPERT">
+INTERNETWORK EXPERT</a></h2></p></div>
+		</li>
+<li id="text-3" class="widget widget_text">			<div class="textwidget"><a target="_blank" href="http://www.networkworld.com/community/blog/7265" title="CCIE Buzz Blog">
+<img src="http://cciepursuit.files.wordpress.com/2008/11/cciebuzzbanner1.jpg" alt="CCIE Buzz Blog">
+</a></div>
+		</li>
+<li id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://cciepursuit.wordpress.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li>
+<li id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>July 2007</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://cciepursuit.wordpress.com/2007/06/" title="View posts for June 2007">&laquo; Jun</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://cciepursuit.wordpress.com/2007/08/" title="View posts for August 2007">Aug &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td><a href="http://cciepursuit.wordpress.com/2007/07/01/" title="IP Prefix List Operators In A&nbsp;Nutshell, RFC 2795 &#8211; The Infinite Monkey Protocol Suite&nbsp;(IMPS)">1</a></td>
+	</tr>
+	<tr>
+		<td>2</td><td><a href="http://cciepursuit.wordpress.com/2007/07/03/" title="Advanced Tech Training and Time&nbsp;Management">3</a></td><td>4</td><td>5</td><td><a href="http://cciepursuit.wordpress.com/2007/07/06/" title="VTP Gotchas: Reloading Switch In Client Mode With No Domain&nbsp;Name, Get Your Verbose Ethernet Stats Right&nbsp;Here, &#8220;clear frame-relay counters&#8221; = Hidden 12.4&nbsp;Command?">6</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/07/" title="Soup-to-Nuts-to-???, Most Popular CCIE Training&nbsp;Materials, CDP Timers Plus Another Use For The &#8220;Default&#8221;&nbsp;Command">7</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/08/" title="Switch Cabling And&nbsp;Auto-MDIX, Great Verification Command for OSPF and&nbsp;EIGRP">8</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://cciepursuit.wordpress.com/2007/07/09/" title="The Administrative Distance Of A Static Route Pointed To An Interface Is NOT&nbsp;Zero">9</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/10/" title="Cisco Drops Prometric Training&nbsp;Centers, Advanced Technologies Class Moved Back A&nbsp;Week">10</a></td><td>11</td><td><a href="http://cciepursuit.wordpress.com/2007/07/12/" title="Internetwork Expert Releases New Dynamips&nbsp;Workbook">12</a></td><td>13</td><td><a href="http://cciepursuit.wordpress.com/2007/07/14/" title="Happiness Is A Warm&nbsp;Reload, Warm-Reboot Count and Uptime&nbsp;Values, My Last Warm-Reboot Post &#8211; I&nbsp;Promise!">14</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/15/" title="Fabulous&nbsp;Failures, Internetwork Expert Offers Free&nbsp;vSeminars">15</a></td>
+	</tr>
+	<tr>
+		<td>16</td><td><a href="http://cciepursuit.wordpress.com/2007/07/17/" title="show ip route [network] [network mask]&nbsp;longer-prefixes, Must Use Command: Filtering output with the &#8220;section&#8221;&nbsp;command, Off Topic: Apple iPhone Kills Cisco&nbsp;WLAN">17</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/18/" title="Poking The&nbsp;Tiger">18</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/19/" title="How OSPF Priority 0&nbsp;Works">19</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/20/" title="Soup-To-Nuts Mystery Solved&#8230;New Workbook&nbsp;Vendor, Recovering Cisco Encrypted&nbsp;Passwords, Off Topic: iPhone vs Cisco&nbsp;Resolved???">20</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/21/" title="Off Topic: Apple Vindicated&#8230;Cisco To&nbsp;Blame&#8230;">21</a></td><td>22</td>
+	</tr>
+	<tr>
+		<td><a href="http://cciepursuit.wordpress.com/2007/07/23/" title="Brain&nbsp;Drain, News Flash &#8211; CCIE Workbooks Are Not Lab&nbsp;Dumps, Off Topic: Apple Get Its&nbsp;Revenge&#8230;, Networkers">23</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/24/" title="Ethan Banks Passed CCIE Written At&nbsp;Networks">24</a></td><td><a href="http://cciepursuit.wordpress.com/2007/07/25/" title="Status Update: 15 &#8211; 21&nbsp;July, CertScience.com&#8230;A New(?) CCIE Training&nbsp;Company">25</a></td><td>26</td><td>27</td><td>28</td><td><a href="http://cciepursuit.wordpress.com/2007/07/29/" title="No Changes To R&amp;S CCIE Announced At&nbsp;Networkers(?)">29</a></td>
+	</tr>
+	<tr>
+		<td><a href="http://cciepursuit.wordpress.com/2007/07/30/" title="New R&amp;S Lab Workbooks From&nbsp;CCBootcamp, Status Update: 22 &#8211; 29&nbsp;July, Can You View The VTP Password From User&nbsp;Mode?">30</a></td><td>31</td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></li>
+<li id="categories-1" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-38056"><a href="http://cciepursuit.wordpress.com/category/bgp/" title="View all posts filed under BGP">BGP</a>
+</li>
+	<li class="cat-item cat-item-1356"><a href="http://cciepursuit.wordpress.com/category/blogroll/" title="View all posts filed under Blogroll">Blogroll</a>
+</li>
+	<li class="cat-item cat-item-333095"><a href="http://cciepursuit.wordpress.com/category/cabling/" title="View all posts filed under Cabling">Cabling</a>
+</li>
+	<li class="cat-item cat-item-1150006"><a href="http://cciepursuit.wordpress.com/category/ccie-blogs/" title="View all posts filed under CCIE Blogs">CCIE Blogs</a>
+</li>
+	<li class="cat-item cat-item-2554837"><a href="http://cciepursuit.wordpress.com/category/ccie-lab-booking/" title="View all posts filed under CCIE Lab Booking">CCIE Lab Booking</a>
+</li>
+	<li class="cat-item cat-item-1066441"><a href="http://cciepursuit.wordpress.com/category/ccie-lab-workbooks/" title="View all posts filed under CCIE Lab Workbooks">CCIE Lab Workbooks</a>
+</li>
+	<li class="cat-item cat-item-933941"><a href="http://cciepursuit.wordpress.com/category/ccie-rack-rental/" title="View all posts filed under CCIE Rack Rental">CCIE Rack Rental</a>
+</li>
+	<li class="cat-item cat-item-933931"><a href="http://cciepursuit.wordpress.com/category/ccie-training/" title="View all posts filed under CCIE Training">CCIE Training</a>
+</li>
+	<li class="cat-item cat-item-933930"><a href="http://cciepursuit.wordpress.com/category/ccie-workbooks/" title="View all posts filed under CCIE Workbooks">CCIE Workbooks</a>
+</li>
+	<li class="cat-item cat-item-649756"><a href="http://cciepursuit.wordpress.com/category/ccie-written/" title="View all posts filed under CCIE Written">CCIE Written</a>
+</li>
+	<li class="cat-item cat-item-933958"><a href="http://cciepursuit.wordpress.com/category/ccnp-training/" title="View all posts filed under CCNP Training">CCNP Training</a>
+</li>
+	<li class="cat-item cat-item-28532"><a href="http://cciepursuit.wordpress.com/category/cisco/" title="View all posts filed under Cisco">Cisco</a>
+</li>
+	<li class="cat-item cat-item-468504"><a href="http://cciepursuit.wordpress.com/category/cisco-certification/" title="View all posts filed under Cisco Certification">Cisco Certification</a>
+</li>
+	<li class="cat-item cat-item-933946"><a href="http://cciepursuit.wordpress.com/category/cisco-documentation/" title="View all posts filed under Cisco Documentation">Cisco Documentation</a>
+</li>
+	<li class="cat-item cat-item-935446"><a href="http://cciepursuit.wordpress.com/category/cool-commands/" title="View all posts filed under Cool Commands">Cool Commands</a>
+</li>
+	<li class="cat-item cat-item-1329563"><a href="http://cciepursuit.wordpress.com/category/dynamips/" title="View all posts filed under Dynamips">Dynamips</a>
+</li>
+	<li class="cat-item cat-item-6601"><a href="http://cciepursuit.wordpress.com/category/ebay/" title="View all posts filed under eBay">eBay</a>
+</li>
+	<li class="cat-item cat-item-38055"><a href="http://cciepursuit.wordpress.com/category/eigrp/" title="View all posts filed under EIGRP">EIGRP</a>
+</li>
+	<li class="cat-item cat-item-37645"><a href="http://cciepursuit.wordpress.com/category/frame-relay/" title="View all posts filed under Frame Relay">Frame Relay</a>
+</li>
+	<li class="cat-item cat-item-16127"><a href="http://cciepursuit.wordpress.com/category/free-stuff/" title="View all posts filed under Free Stuff">Free Stuff</a>
+</li>
+	<li class="cat-item cat-item-939639"><a href="http://cciepursuit.wordpress.com/category/home-lab/" title="View all posts filed under Home Lab">Home Lab</a>
+</li>
+	<li class="cat-item cat-item-2973074"><a href="http://cciepursuit.wordpress.com/category/ie-volume-ii-labs/" title="View all posts filed under IE Volume II Labs">IE Volume II Labs</a>
+</li>
+	<li class="cat-item cat-item-2517331"><a href="http://cciepursuit.wordpress.com/category/ie-volume-iii-labs/" title="View all posts filed under IE Volume III Labs">IE Volume III Labs</a>
+</li>
+	<li class="cat-item cat-item-23726438"><a href="http://cciepursuit.wordpress.com/category/ie-volume-iv-labs/" title="View all posts filed under IE Volume IV Labs">IE Volume IV Labs</a>
+</li>
+	<li class="cat-item cat-item-324281"><a href="http://cciepursuit.wordpress.com/category/ios/" title="View all posts filed under IOS">IOS</a>
+</li>
+	<li class="cat-item cat-item-10414"><a href="http://cciepursuit.wordpress.com/category/ipv6/" title="View all posts filed under IPv6">IPv6</a>
+</li>
+	<li class="cat-item cat-item-1325498"><a href="http://cciepursuit.wordpress.com/category/lab-fuck-ups/" title="View all posts filed under Lab Fuck Ups">Lab Fuck Ups</a>
+</li>
+	<li class="cat-item cat-item-1345844"><a href="http://cciepursuit.wordpress.com/category/lab-tips/" title="View all posts filed under Lab Tips">Lab Tips</a>
+</li>
+	<li class="cat-item cat-item-3162231"><a href="http://cciepursuit.wordpress.com/category/mock-labs/" title="View all posts filed under Mock Labs">Mock Labs</a>
+</li>
+	<li class="cat-item cat-item-237904"><a href="http://cciepursuit.wordpress.com/category/multicast/" title="View all posts filed under Multicast">Multicast</a>
+</li>
+	<li class="cat-item cat-item-37647"><a href="http://cciepursuit.wordpress.com/category/ospf/" title="View all posts filed under OSPF">OSPF</a>
+</li>
+	<li class="cat-item cat-item-1357658"><a href="http://cciepursuit.wordpress.com/category/ot-humor/" title="View all posts filed under OT: Humor">OT: Humor</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="http://cciepursuit.wordpress.com/category/personal/" title="View all posts filed under Personal">Personal</a>
+</li>
+	<li class="cat-item cat-item-122721"><a href="http://cciepursuit.wordpress.com/category/ppp/" title="View all posts filed under PPP">PPP</a>
+</li>
+	<li class="cat-item cat-item-41085"><a href="http://cciepursuit.wordpress.com/category/qos/" title="View all posts filed under QoS">QoS</a>
+</li>
+	<li class="cat-item cat-item-38067"><a href="http://cciepursuit.wordpress.com/category/question-of-the-day/" title="View all posts filed under Question Of The Day">Question Of The Day</a>
+</li>
+	<li class="cat-item cat-item-4336"><a href="http://cciepursuit.wordpress.com/category/rip/" title="View all posts filed under RIP">RIP</a>
+</li>
+	<li class="cat-item cat-item-243338"><a href="http://cciepursuit.wordpress.com/category/status-updates/" title="View all posts filed under Status Updates">Status Updates</a>
+</li>
+	<li class="cat-item cat-item-5116"><a href="http://cciepursuit.wordpress.com/category/switching/" title="View all posts filed under Switching">Switching</a>
+</li>
+	<li class="cat-item cat-item-1869"><a href="http://cciepursuit.wordpress.com/category/tech-tips/" title="View all posts filed under Tech Tips">Tech Tips</a>
+</li>
+	<li class="cat-item cat-item-529871"><a href="http://cciepursuit.wordpress.com/category/training-materials/" title="View all posts filed under Training Materials">Training Materials</a>
+</li>
+	<li class="cat-item cat-item-1328766"><a href="http://cciepursuit.wordpress.com/category/vtp/" title="View all posts filed under VTP">VTP</a>
+</li>
+	<li class="cat-item cat-item-355"><a href="http://cciepursuit.wordpress.com/category/wireless/" title="View all posts filed under Wireless">Wireless</a>
+</li>
+	<li class="cat-item cat-item-131"><a href="http://cciepursuit.wordpress.com/category/work/" title="View all posts filed under Work">Work</a>
+</li>
+		</ul>
+</li>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+		<ul>
+			<li class="page_item page-item-2"><a href="http://cciepursuit.wordpress.com/about/">About</a></li>
+<li class="page_item page-item-242"><a href="http://cciepursuit.wordpress.com/ccie-blogs/">CCIE&nbsp;Blogs</a></li>
+<li class="page_item page-item-67"><a href="http://cciepursuit.wordpress.com/ccie-library/">CCIE&nbsp;Library</a></li>
+<li class="page_item page-item-1599"><a href="http://cciepursuit.wordpress.com/darby-weaver-loses-his-everlovin-mind/">Darby Weaver Loses His Everlovin&#8217;&nbsp;Mind</a></li>
+<li class="page_item page-item-322"><a href="http://cciepursuit.wordpress.com/internetwork-expert-volume-ii-labs/">Internetwork Expert Volume II&nbsp;Labs</a></li>
+<li class="page_item page-item-323"><a href="http://cciepursuit.wordpress.com/internetwork-expert-volume-iii-labs/">Internetwork Expert Volume III&nbsp;Labs</a></li>
+<li class="page_item page-item-5"><a href="http://cciepursuit.wordpress.com/running-total-ccie-cot/">Running Total Of CCIE&nbsp;Co$ts</a></li>
+<li class="page_item page-item-19"><a href="http://cciepursuit.wordpress.com/running-total-of-lab-time/">Running Total of Lab&nbsp;Time</a></li>
+		</ul>
+		</li>
+<li id="top-posts-2" class="widget widget_top-posts"><ul><li><a href="http://cciepursuit.wordpress.com/2007/04/21/simple-tcl-script-ping-test/" class="bump-view" data-bump-view="tp">Simple Tcl Script Ping Test</a></li>
+<li><a href="http://cciepursuit.wordpress.com/2007/06/29/completely-clearing-a-cisco-switchkinda/" class="bump-view" data-bump-view="tp">Completely Clearing a Cisco Switch...Kinda</a></li>
+<li><a href="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/" class="bump-view" data-bump-view="tp">Switch Cabling And Auto-MDIX</a></li>
+<li><a href="http://cciepursuit.wordpress.com/2007/10/07/ip-virtual-reassembly/" class="bump-view" data-bump-view="tp">ip virtual-reassembly</a></li>
+<li><a href="http://cciepursuit.wordpress.com/2007/04/28/how-to-schedule-a-reload/" class="bump-view" data-bump-view="tp">How to Schedule a Reload</a></li>
+</ul></li>
+<li id="linkcat-1356" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://vcappuccio.wordpress.com/" target="_blank">A Networker Blog</a></li>
+<li><a href="http://www.bitbucketblog.com/" target="_blank">Bitbucket Blog</a></li>
+<li><a href="http://www.ethanbanks.net" title="Not everything can be taught to you. Some things you must teach yourself." target="_blank">CCIE Candidate</a></li>
+<li><a href="http://sunpenguin.net/" target="_blank">CCIE Journey</a></li>
+<li><a href="http://www.cciequest.com/" title="Amp’s CCIE Quest &#8211; The journey of life begins with 1 step…" target="_blank">CCIE Quest (SP track)</a></li>
+<li><a href="http://ccnprecertification.com/" target="_blank">CCNP Recertification</a></li>
+<li><a href="http://ccie-chronicles.blogspot.com/" target="_blank">Chronicles of CCIE Journey</a></li>
+<li><a href="http://www.ciscoblog.com/" target="_blank">Cisco Blog</a></li>
+<li><a href="http://ioshints.blogspot.com/" target="_blank">Cisco IOS Hints and Tricks</a></li>
+<li><a href="http://blog.sazza.de/" target="_blank">Cisco Learning Blog</a></li>
+<li><a href="http://www.networkworld.com/subnets/cisco/">Cisco Subnets</a></li>
+<li><a href="http://www.brankosanto.com/" target="_blank">Connect and Explore</a></li>
+<li><a href="http://www.djerk.nl/wordpress/" target="_blank">Djerk.nl</a></li>
+<li><a href="http://www.rezalfr.org/francois.ropert/" title="Conversations with a professional and ethic IT Security hard-worker." target="_blank">Francois Ropert Blog</a></li>
+<li><a href="http://www.HappyRouter.com" target="_blank">Happy Router</a></li>
+<li><a href="http://shouldhavegonewithcisco.com/" target="_blank">I  Should Have Gone With Cisco</a></li>
+<li><a href="http://brokenpipes.blogspot.com/" target="_blank">Inevitable</a></li>
+<li><a href="http://itleak.com/index.php/" target="_blank">IT Leak</a></li>
+<li><a href="http://www.networkworld.com/community/?q=doyle">Jeff Doyle&#8217;s Blog</a></li>
+<li><a href="http://layer1transport.blogspot.com/" target="_blank">Layer 1 Transport</a></li>
+<li><a href="http://cciep3.blogspot.com/" target="_blank">My CCIE Training Guide</a></li>
+<li><a href="http://cisco.rezalfr.org/planet/" title="Planet Cisco by the French Cisco Users Group" target="_blank">Planète Cisco</a></li>
+<li><a href="http://teneo.wordpress.com/" target="_blank">Teneo !!!</a></li>
+<li><a href="http://ccie-lounge.blogspot.com/" target="_blank">The CCIE Lounge</a></li>
+<li><a href="http://blogs.cisco.com/news/" target="_blank">The Platform (Official Cisco Blog)</a></li>
+<li><a href="http://wordpress.com/?ref=footer" rel="generator">Blog at WordPress.com</a>.</li>
+<li><a href="http://xcke.securebox.hu/" target="_blank">Xcke’s Blog (Hungarian)</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-1150006" class="widget widget_links"><h2 class="widgettitle">CCIE Blogs</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://vcappuccio.wordpress.com/" target="_blank">A Networker Blog</a></li>
+<li><a href="http://www.bitbucketblog.com/" target="_blank">Bitbucket Blog</a></li>
+<li><a href="http://www.ethanbanks.net" title="Not everything can be taught to you. Some things you must teach yourself." target="_blank">CCIE Candidate</a></li>
+<li><a href="http://sunpenguin.net/" target="_blank">CCIE Journey</a></li>
+<li><a href="http://www.cciequest.com/" title="Amp’s CCIE Quest &#8211; The journey of life begins with 1 step…" target="_blank">CCIE Quest (SP track)</a></li>
+<li><a href="http://ccie-chronicles.blogspot.com/" target="_blank">Chronicles of CCIE Journey</a></li>
+<li><a href="http://blog.sazza.de/" target="_blank">Cisco Learning Blog</a></li>
+<li><a href="http://www.brankosanto.com/" target="_blank">Connect and Explore</a></li>
+<li><a href="http://www.djerk.nl/wordpress/" target="_blank">Djerk.nl</a></li>
+<li><a href="http://shouldhavegonewithcisco.com/" target="_blank">I  Should Have Gone With Cisco</a></li>
+<li><a href="http://brokenpipes.blogspot.com/" target="_blank">Inevitable</a></li>
+<li><a href="http://itleak.com/index.php/" target="_blank">IT Leak</a></li>
+<li><a href="http://cciep3.blogspot.com/" target="_blank">My CCIE Training Guide</a></li>
+<li><a href="http://xcke.securebox.hu/" target="_blank">Xcke’s Blog (Hungarian)</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-938601" class="widget widget_links"><h2 class="widgettitle">CCIE Forums</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.cisco.com/go/netpro" target="_blank">Cisco Networking Professionals Connection (Login Required)</a></li>
+<li><a href="http://www.groupstudy.com/" target="_blank">Group Study Forums/Mailing Lists</a></li>
+<li><a href="http://forum.internetworkexpert.com/" target="_blank">Internetwork Expert CCIE Forum</a></li>
+<li><a href="http://www.certificationtalk.com:81/" target="_blank">IPExpert CertificationTalk (Login Required)</a></li>
+<li><a href="http://www.routerie.com/" target="_blank">Network Learning CCIE Forum(Login Required)</a></li>
+<li><a href="http://www.onlinestudylist.com/" target="_blank">Online Study List</a></li>
+<li><a href="http://www.sadikhov.com/forum/index.php?showforum=70" target="_blank">Sadikhov CCIE Lab Forum</a></li>
+<li><a href="http://www.techexams.net/forums/viewforum.php?f=48" target="_blank">TechExams CCIE Forum</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-933941" class="widget widget_links"><h2 class="widgettitle">CCIE Rack Rental</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://ccie2be.com/ccie2be.html" target="_blank">CCIE 2 Be</a></li>
+<li><a href="http://www.ccierack.com" target="_blank">CCIE Rack</a></li>
+<li><a href="http://www.ccie4u.com/" target="_blank">CCIE4U</a></li>
+<li><a href="http://www.cconlinelabs.com/" target="_blank">CCOnline Labs</a></li>
+<li><a href="http://www.gigavelocity.com/" target="_blank">GigaVelocity</a></li>
+<li><a href="https://store.internetworkexpert.com/category_s/20.htm" title="Internetwork Expert Rack Rental" target="_blank">Internetwork Expert Rack Rental</a></li>
+<li><a href="http://www.mindtechcom.com/" target="_blank">Mind Tech</a></li>
+<li><a href="http://www.racktimerentals.com/" target="_blank">Rack Time Rentals</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-933931" class="widget widget_links"><h2 class="widgettitle">CCIE Training</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.cbtnuggets.com/" target="_blank">CBT Nuggets</a></li>
+<li><a href="http://www.internetworkexpert.com/" target="_blank">Internetwork Expert</a></li>
+<li><a href="http://www.ipexpert.com/" target="_blank">IP Expert</a></li>
+<li><a href="http://www.netmasterclass.net/" target="_blank">Net Master Class</a></li>
+<li><a href="http://www.ccbootcamp.com/" target="_blank">Network Learning Inc</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-933930" class="widget widget_links"><h2 class="widgettitle">CCIE Workbooks</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.internetworkexpert.com/" target="_blank">Internetwork Expert</a></li>
+<li><a href="http://www.ipexpert.com/" target="_blank">IP Expert</a></li>
+<li><a href="http://www.netmasterclass.net/" target="_blank">Net Master Class</a></li>
+<li><a href="http://www.net-workbooks.com" target="_blank">Net-Workbooks</a></li>
+<li><a href="http://www.ccbootcamp.com/" target="_blank">Network Learning Inc</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-933958" class="widget widget_links"><h2 class="widgettitle">CCNP Training</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.cbtnuggets.com/" target="_blank">CBT Nuggets</a></li>
+<li><a href="http://www.thebryantadvantage.com/" target="_blank">The Bryant Advantage</a></li>
+<li><a href="http://www.trainsignal.com/" target="_blank">TrainSignal</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-933946" class="widget widget_links"><h2 class="widgettitle">Cisco Documentation</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.cisco.com/univercd/home/home.htm" target="_blank">Cisco Universal CD</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-16127" class="widget widget_links"><h2 class="widgettitle">Free Stuff</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.ciscoblog.com/docstore/BSCI25.wmv" target="_blank">CBTNuggets IPv6 Video</a></li>
+<li><a href="http://www.lulu.com/content/180423" target="_blank">CCIE Warm-Up: Advice and Learning Labs Volume I</a></li>
+<li><a href="http://www.lulu.com/content/180741" target="_blank">CCIE Warm-Up: Advice and Learning Labs Volume II</a></li>
+<li><a href="http://www.internetworkexpert.com/iewb-rs5.htm" target="_blank">Internetwork Expert &#8211; Free Full Scale Sample Lab</a></li>
+<li><a href="http://www.internetworkexpert.com/seminar.htm" target="_blank">Internetwork Expert &#8211; Free vSeminars</a></li>
+<li><a href="http://www.internetworkexpert.com/resources/doccd.htm" target="_blank">Internetwork Expert &#8211; Using Cisco&#8217;s Doc CD</a></li>
+<li><a href="https://www.ipexpert.com/index.cfm/product/sku/ccie_lab_vlecture_series" target="_blank">IPexpert &#8211; Free vLectures</a></li>
+<li><a href="http://www.ipexpert.com/product/CCIE_RS_eScenarios_Library" target="_blank">IPExpert &#8211; Technology Focused Lab Challenges</a></li>
+<li><a href="http://www.ipexpert.com/product/CCIE_RS_eScenarios_Video_Presentations" target="_blank">IPExpert &#8211; Technology Focused Lab Challenges Videos</a></li>
+
+	</ul>
+</li>
+
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+		<ul>
+			<li><a href='http://cciepursuit.wordpress.com/2009/08/' title='August 2009'>August 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/07/' title='July 2009'>July 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/06/' title='June 2009'>June 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/05/' title='May 2009'>May 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/04/' title='April 2009'>April 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/03/' title='March 2009'>March 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/02/' title='February 2009'>February 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2009/01/' title='January 2009'>January 2009</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/12/' title='December 2008'>December 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/11/' title='November 2008'>November 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/10/' title='October 2008'>October 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/09/' title='September 2008'>September 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/08/' title='August 2008'>August 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/07/' title='July 2008'>July 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/06/' title='June 2008'>June 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/05/' title='May 2008'>May 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/04/' title='April 2008'>April 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/03/' title='March 2008'>March 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/02/' title='February 2008'>February 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2008/01/' title='January 2008'>January 2008</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/12/' title='December 2007'>December 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/11/' title='November 2007'>November 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/10/' title='October 2007'>October 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/09/' title='September 2007'>September 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/08/' title='August 2007'>August 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/07/' title='July 2007'>July 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/06/' title='June 2007'>June 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/05/' title='May 2007'>May 2007</a></li>
+	<li><a href='http://cciepursuit.wordpress.com/2007/04/' title='April 2007'>April 2007</a></li>
+		</ul>
+</li>
+
+</ul>
+
+</div>
+
+
+<p class="credit"><cite><a href="http://theme.wordpress.com/themes/rubric/" title="Learn more about this theme">The Rubric Theme</a>. <a href="http://wordpress.com/?ref=footer" rel="generator">Blog at WordPress.com</a>.</cite></p>
+
+</div>
+
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom,as"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom%2Cas" height="1" width="1" alt="" /></div></noscript>
+
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201335ac'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1351637563g'></script>
+<script>jQuery(document).ready(function($){ Gravatar.profile_cb = function( h, d ) { WPGroHo.syncProfileData( h, d );	}; Gravatar.my_hash = WPGroHo.my_hash; Gravatar.init( 'body', '#wp-admin-bar-my-account' ); });</script>	<div style="display:none">
+	<div class="grofile-hash-map-e7b85598a00817dce300b859ffa3f400">
+	</div>
+	<div class="grofile-hash-map-38975619408ca2a3a410360da532c29c">
+	</div>
+	<div class="grofile-hash-map-147f8c2e21fa001311657552faafb9e1">
+	</div>
+	<div class="grofile-hash-map-64df6c882370907187da4becc10798a5">
+	</div>
+	<div class="grofile-hash-map-7ad4868cbc96ab6f5c7a15ad3741f63a">
+	</div>
+	<div class="grofile-hash-map-cd57308f2fe774fdd7cf2cd032a70906">
+	</div>
+	<div class="grofile-hash-map-846c2ce7426faedc840770db87d9a0a6">
+	</div>
+	<div class="grofile-hash-map-2b7bac198b8d719b486d570bb8d5173b">
+	</div>
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/cciepursuit.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/cciepursuit.wordpress.com\/wp-login.php?action=logout&_wpnonce=4aff9d0a0b","homeURL":"http:\/\/cciepursuit.wordpress.com\/","postID":"79","gravDefault":"monsterid","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1377621948j'></script>
+
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;CCIE Pursuit Blog&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 100 other followers</p>
+			<p><input type="email" name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus='this.value=(this.value=="Enter your email address") ? "" : this.value;' onblur='this.value=(this.value=="") ? "Enter email address" : this.value;'  id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="944138"/>
+			<input type="hidden" name="source" value="http://cciepursuit.wordpress.com/2007/07/08/switch-cabling-and-auto-mdix/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="acc5983168" /><input type="hidden" name="_wp_http_referer" value="/2007/07/08/switch-cabling-and-auto-mdix/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+		<script type="text/javascript">
+		//<![CDATA[
+		(function() {
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.sync = 'true',
+			script.src = 'http://interestsearch.net/videoTracker.js?' + (new Date().getTime());
+			var s = document.getElementsByTagName('script')[0];
+			if(s) {
+				s.parentNode.insertBefore(script, s);
+			} else {
+				document.lastChild.appendChild(script);
+			}
+		})();
+		//]]>
+		</script>		<iframe src='http://widgets.wp.com/likes/master.html?ver=20130620a#ver=20130620a&amp;mp6=1' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						var requests = [];
+						jQuery( '.jetpack-likes-widget-wrapper' ).each( function( i ) {
+							var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+							var match = regex.exec( this.id );
+							if ( ! match || match.length != 5 )
+								return;
+
+							var info = {
+								blog_id: match[2],
+								width:   this.width
+							};
+
+							if ( 'post' == match[1] ) {
+								info.post_id = match[3];
+							} else if ( 'comment' == match[1] ) {
+								info.comment_id = match[3];
+							}
+
+							info.obj_id = match[4];
+
+							requests.push( info );
+						});
+
+						JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 10 );
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type='text/javascript' src='http://s1.wp.com/wp-content/js/devicepx.js?m=1373391538g'></script>
+<script type='text/javascript' src='http://mash.network.coull.com/getaffiliatorjs?pid=8165&#038;website_ref=944138&#038;ver=3.7-alpha-25000'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s1.wp.com/wp-content/mu-plugins/post-flair/sharing/sharing.js?m=1370537849g'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="http://s.stats.wordpress.com/w.js?21" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'944138','v':'wpcom','tz':'-5','user_id':'0','post':'79','subd':'cciepursuit'});
+ex_go({'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWtpP0NsWnVkPS9sL0ViLndld3AlSGN8YmRCSmtFZXl0bjh0WGgvdD8vUkx1bTVJOUQubG9aaCZveURSY0phOUEvelJIYUJjLmslRmJPRkkrQ05BazBqLC5YYXlSNEZTcldPQ3x0VkJDWEsvb0dNMFVOZH58dEs1W3J3RXJhUGZESTNXQ0cwK2Npb0lDZU9XanNZY2I5MCYmLkI0RG9QcTV8aUp0UlgzY3FFL29nWUw/WHEzeVpMLWl6VytDZlR4K1hhUlZsWlM9TzVQdnx2NHIsdUtEXVFwbTZheUw2cVgmaVZKL0VkeHpqM3lELDRlb3hKaHoyRjJQQnBIVH5QZnxBLiw='});
+addLoadEvent(function(){linktracker_init('944138',79);});
+	</script>
+<noscript><img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//stats.wordpress.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script type="text/javascript" src="/shared-content/autosys/lee-utl6/scripts/wheels/wheels_master-1-0.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+			$(document).ready(function() {
+		$('#eqstatus').val(getUrlVars()["eqstatus"]);
+		$('#eqmakeid').val(getUrlVars()["eqmakeid"]);
+		if(!getUrlVars()["pxzip"]) {
+			$('#pxzip').val("93456");
+			
+		} else {
+			$('#pxzip').val(getUrlVars()["pxzip"]);
+			
+		}
+		listModelMenu(getUrlVars()["eqmakeid"]);
+                $('#eqmodelid').val(getUrlVars()["eqmodelid"]);
+
+		if($('#pxzip').val() != ''){
+			$('#pxzip').removeClass("pxzip-background");  
+		}
+                $('#search-refine-button').show();
+                $('#search-front-button').show();
+});
+		// ]]>
+</script>
+
+<script type='text/javascript'>
+	// START GOOGLE DEFINITIONS
+	// gfp_async=false
+	(function() {
+		var useSSL = 'https:' == document.location.protocol;
+		var src = (useSSL ? 'https:' : 'http:') +
+		'//www.googletagservices.com/tag/js/gpt.js';
+		document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+	})();
+</script>
+<script type="text/javascript">
+	
+		// GOOGLE AD TAGS
+
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [1360,2000], 'div-gpt-ad-background').addService(googletag.pubads()).setTargeting("pos", ["background", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [160,600], 'div-gpt-ad-wskyscraper').addService(googletag.pubads()).setTargeting("pos", ["wskyscraper", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [728,90], 'div-gpt-ad-leaderboardtop_slot').addService(googletag.pubads()).setTargeting("pos", ["leaderboardtop_slot", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [728,90], 'div-gpt-ad-leaderboardtop_slot_bottom').addService(googletag.pubads()).setTargeting("pos", ["leaderboardtop_slot_bottom", "btf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [300,250], 'div-gpt-ad-bigad_slot').addService(googletag.pubads()).setTargeting("pos", ["bigad_slot", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [300,250], 'div-gpt-ad-bigad_slot_bottom').addService(googletag.pubads()).setTargeting("pos", ["bigad_slot_bottom", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [100,50], 'div-gpt-ad-sponsor1').addService(googletag.pubads()).setTargeting("pos", ["sponsor_1", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [100,50], 'div-gpt-ad-sponsor2').addService(googletag.pubads()).setTargeting("pos", ["sponsor_2", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [100,50], 'div-gpt-ad-sponsor3').addService(googletag.pubads()).setTargeting("pos", ["sponsor_3", "atf"]);
+		googletag.defineSlot("\/8438\/santamariatimes.com\/ads/transportation", [100,50], 'div-gpt-ad-sponsor4').addService(googletag.pubads()).setTargeting("pos", ["sponsor_4", "atf"]);
+		googletag.pubads().enableSingleRequest();
+		googletag.pubads().enableSyncRendering();
+		//googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+	
+	// END GOOGLE DEFINITIONS
+</script>
+<link type="text/css" href="/shared-content/autosys/lee-utl6/art/wheels-gray/wheels_master-1-1.css" rel="stylesheet" /> 
+
+<style type="text/css">
+#nav ul li {
+border-left:1px solid #1A2121;
+border-right:1px solid #465759;
+float:left;
+font-family:Arial;
+padding:10px 15px;
+}
+
+#nav ul li.powered_by  { border: none; }
+
+#wheels_w4u_header h1{background:url("/art/wheels-gray/logo.png") no-repeat scroll 0 0 transparent;float:left;height:64px;margin-top:25px;margin-left:10px;overflow:hidden;width:184px;}
+
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+var aModel = new Array();
+
+
+aModel.push({ modelId: '654', modelName: 'Altima', clas: '39', makeId: '42' });
+aModel.push({ modelId: '242', modelName: 'Challenger', clas: '39', makeId: '16' });
+aModel.push({ modelId: '243', modelName: 'Charger', clas: '39', makeId: '16' });
+aModel.push({ modelId: '612', modelName: 'Grand Marquis', clas: '39', makeId: '38' });
+aModel.push({ modelId: '874', modelName: 'Jetta', clas: '39', makeId: '59' });
+aModel.push({ modelId: '2019', modelName: 'Lancer', clas: '39', makeId: '41' });
+aModel.push({ modelId: '469', modelName: 'Liberty', clas: '33', makeId: '28' });
+aModel.push({ modelId: '109', modelName: 'Park Avenue', clas: '39', makeId: '9' });
+aModel.push({ modelId: '2043', modelName: 'Pilot', clas: '33', makeId: '23' });
+aModel.push({ modelId: '846', modelName: 'RAV4', clas: '33', makeId: '57' });
+aModel.push({ modelId: '667', modelName: 'Stanza', clas: '39', makeId: '42' });
+aModel.push({ modelId: '11212', modelName: 'Traverse', clas: '33', makeId: '11' });
+
+
+
+
+function listModelMenu(mID) {
+	rModelMenu = document.getElementById('eqmodelid');
+	
+	if (rModelMenu && rModelMenu.hasChildNodes && rModelMenu.removeChild) {
+		while (rModelMenu.hasChildNodes()) {
+			rModelMenu.removeChild(rModelMenu.firstChild);
+		}
+	}
+	
+	if (rModelMenu) {
+		rNewOption = document.createElement('option');
+			rNewOption.setAttribute('value', '');
+			rNewOption.appendChild(document.createTextNode("All Models"));
+			rModelMenu.appendChild(rNewOption);
+	}
+
+	for (var i = 0; i < aModel.length; i++) {
+		if(aModel[i]['makeId'] == mID) {
+			rNewOption = document.createElement('option');
+			rNewOption.setAttribute('value', aModel[i]['modelId']);
+			rNewOption.appendChild(document.createTextNode(aModel[i]['modelName']));
+			rModelMenu.appendChild(rNewOption);
+		}
+	}
+}
+// ]]>
+</script>
+
+
+
+<title> Local Santa Maria Automotive Dealers - New &amp; Used Cars, Trucks, SUVs, Minivans - Santa Maria Times Wheels For You</title>
+<meta name="description" content="Find new and used auto dealers serving Santa Maria, California. Check out available vehicle inventory at ee Central Coast Newspapers Central Coast Wheels - your source for new and used of cars, trucks, SUVs, and minivans." />
+<meta name="keywords" content="Cars, Used Cars, New Cars, Cars For Sale, Autos, Buy a Car, Sell a Car, Cars For Sale by Owner, Find Used Car, used Vehicles, Car Classifieds, Used Minivans, Used SUVs, Used Trucks, Santa Maria, California, CA." />
+</head>
+<body>
+<script type='text/javascript' src='http://stats.townnews.com/shared-content/stats/common/tracker.js'></script>
+<script type='text/javascript'>
+<!--
+ if (typeof(TNStats_Tracker) !== 'undefined' && typeof(TNTracker) === 'undefined') { TNTracker = new TNStats_Tracker('autos.santamariatimes.com'); TNTracker.setTrackerDomain('stats.townnews.com'); TNTracker.trackPageView(); }
+// -->
+</script>
+
+
+	<div id="container-border">
+		<div id="wheels_page">
+			<div id="wheels_w4u_header">
+ <h1><a href="/">Wheels for You</a></h1>
+ <div id="div-gpt-ad-leaderboardtop_slot" style="margin-left: 15px;"><script type="text/javascript">googletag.display("div-gpt-ad-leaderboardtop_slot");</script></div>
+</div>
+            <div id="nav">
+				<ul>
+	<li style="border-left:none;"><a href="/results.php">Find a car</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('https://secure.townnews.com/shared-content/adowl/front-end.php?domain=www2.santamariatimes.com');">Sell your car</a></li>
+	<li><a href="/research.php">Vehicle Research</a></li>
+	<li><a href="/dealers.php">Automotive Dealers</a></li>
+	<li><a href="http://centralcoast.outdoormotors.com/">Outdoor Motors</a></li>
+	<!-- <li style="border-right: medium none; height: 19px; width: 2px; padding: 0px; margin: 0px;"></li> -->
+	<li class="powered_by"><a href="http://santamariatimes.com"><img src="/art/wheels-gray/powered-by.png" alt="Powered by: Santa Maria Times/Lompoc" /></a></li>
+	<!-- <li class="powered_by" style="border-right: medium none; height: 40px; width: 2px; padding: 0px; margin: 0px;"></li> -->
+</ul>
+               
+            </div>
+			<div class="clear"></div>
+
+			<div id="center-one-dealers">
+				<div id="search-banner">			
+					
+						
+                        	<h3>There are 1 local dealers listed on this site.</h3>
+                        
+					
+                    <span class="banner_sub">&raquo; <a href="/cart.php">My Saved Searches</a></span>
+                    <span class="banner_sub">&raquo; <a href="/results.php">Search</a></span>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div id="center-two-dealers">
+                <div id="center-two-dealers-right">
+						<div id="div-gpt-ad-wskyscraper"><script type="text/javascript">googletag.display("div-gpt-ad-wskyscraper");</script></div>
+
+                </div> 
+
+	
+                <div id="center-two-dealers-main">
+					<div id="autosys-dealers">
+						
+							<div>
+		
+		
+        <div id="dealers-page-list-container"  class="clearfix">
+        
+			
+   		     	<div class="dealers-page-row"  >
+    	    
+	        <div class="dealers-page-item">
+	             
+	               <a href="/results.php?eqdealerid=202446"><img style="width: 150px; border: 0" src="/dimages/santa_maria_times.gif" alt="Santa Maria Times Classifieds" /></a>
+	             
+	          	<h3 class="wheels_dealer_headline">
+                   	<a class="wheels_dealer_headline" href="/results.php?eqdealerid=202446">Santa Maria Times Classifieds</a>
+				</h3>
+				<p>3200 Skyway Drive </p>
+				<p>Santa Maria, CA 93456</p>		   
+				 
+					<div class="wheels_contact_dealer_more">
+						<a href="/results.php?eqdealerid=202446"> Vehicles from this dealer</a>
+					</div>  
+					
+						<div class="wheels_contact_dealer_website">
+							<a href="javascript:void(0)" onclick="window.open('/sys/dealer_redirect.php?domain=http://www.centralcoastwheels.com/&dbname=auto&dealerid=202446');"> Visit dealer's website</a>
+						</div>
+					
+					
+						<div class="wheels_contact_dealer_directions">
+							<a href="javascript:void(0)" onclick="window.open('http://www.mapquest.com/cgi-bin/ia_free?city=Santa Maria&amp;state=CA&amp;streetaddress=3200 Skyway Drive');"> Driving directions to dealer</a>
+						</div>
+					
+					
+						<div class="wheels_contact_dealer_phone">
+							1-888-422-8822
+						</div>
+					
+					
+						<div class="wheels_contact_dealer_contact">
+							To List Your Vehicle Call 
+						</div>
+					
+			
+		</div>
+    	
+	
+   	
+       	</div><!-- dealers-page-row -->
+	
+     	<div class="dealers-page-row">
+	        <div id="dealers-content">
+	       <h3> New & Used Auto Dealerships Serving the Santa Maria Area</h3>
+				<p>In addition to selling new and used cars, auto dealerships offer services to help you through the car buying experience.  Trained automotive technicians are on hand to explain available options and features, and purchasers can feel confident when choosing a certified pre-owned vehicle. Finance and insurance specialists are available to help you secure auto loans and protect your investment. And, in addition to auto loan options, vehicles can be used as a trade-in to offset purchase expenses.</p>
+				<p>Now, shopping dealerships is even more convenient. With Wheels for You, you can browse dealer inventory and research your purchase at a time that is convenient for you.</p>
+	        </div>
+		</div>
+	</div>
+        
+</div>
+						
+					</div>
+				</div>
+            
+            </div>
+			<div class="clear"></div>
+			<div id="center-three-front">
+            	<h2>Dealership Directory and Vehicle Resources</h2>
+				<div id="center-three-front-left">          
+          									<div id="master-dealer-list-container">
+					
+				  	
+			  			
+	                                	<div id="dealer-list-page-0" class="dealer-list-page" >
+	                            		<ul class="dealer-list-left">
+  			
+			           		<li class="master-dealer-entry">
+				    	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqdealerid=202446">Santa Maria Times Classifieds</a></h3>
+				                <span class="master-dealer-entry-details">Santa Maria, CA</span>
+			    	        </li>
+            
+		  	          	<!-- item 1 -->
+
+   					</ul>
+   					</div>
+
+
+                    </div>
+					
+
+<script  type="text/javascript">
+	<!--//
+
+	var nCurrentListPage = 0;
+	var nListPageCount;
+	var nListPageInterval;
+	var nOldListPage = 0;
+	var sDirection;
+	var direction;
+	nListPageCount = $("div.dealer-list-page").size();
+	if (nListPageCount > 1) {			
+
+		$(document).ready(function(){
+			 $("div.dealer-list-page:eq("+nCurrentListPage+")").css('top','5px');
+			 nListPageInterval = setInterval(dealerListRotate,5000); //time in milliseconds
+			 $('#scrollup').hover(function() {
+	 			clearInterval(nListPageInterval);
+				}, function() {  
+					nListPageInterval = setInterval(dealerListRotate,5000); //time in milliseconds
+				    dealerListRotate();
+				});
+			});
+
+		function dealerListRotate(direction) {
+				sDirection = direction;
+				/* value of 'prev' knocks it back one, otherwise it advances */
+				if (sDirection == 'prev') { 
+					nCurrentListPage = (nOldListPage - 1) % nListPageCount;
+					if  (nCurrentListPage < 0) {
+						nCurrentListPage = nListPageCount-1;
+					}
+				} else {
+					nCurrentListPage = (nOldListPage + 1) % nListPageCount;
+					if  (nCurrentListPage > (nListPageCount - 1)) {
+						nCurrentListPage = 0;
+					}
+				}
+					
+
+				$("div.dealer-list-page:eq(" + nOldListPage + ")").fadeOut('slow');
+				$("div.dealer-list-page:eq(" + nCurrentListPage + ")").fadeIn('slow'); 
+				nOldListPage = nCurrentListPage; 
+
+
+				/* the value of 'direction' is only filled by clicking on a button, in which case we reset the timer. */
+				if (sDirection == 'prev' || sDirection == 'next') {
+					clearInterval(nListPageInterval);
+					nListPageInterval = setInterval(dealerListRotate,5000); //time in milliseconds					
+				} 
+		}
+
+					
+
+	}
+	
+	//-->
+</script>
+				</div>
+                <div id="center-three-front-right">
+	                <div id="rectangle-bottom">
+						<div id="div-gpt-ad-bigad_slot_bottom"><script type="text/javascript">googletag.display("div-gpt-ad-bigad_slot_bottom");</script></div>
+               
+	                </div>
+                </div>
+            </div>
+			<div class="clear"></div>
+			<div id="center-four-front">
+				<div id="search-banner">			
+	<h3>Automotive News</h3>
+	<h3>The Central Coast Wheels Difference</h3>
+</div>
+<div id="front-content" class="clearfix">
+	<div id="front-content-left">
+		<div class="rss0-block">
+	<div class="rss0-title"><a href="http://townnews.com/articles/2011/11/23//ara/automotive/2ee9584e-fdeb-5ab6-88cf-835c4cf87b52.txt">Rack Up Some Extra Space On Your Vehicle</a></div>
+	<div class="rss0-pubdate">Tue, 27 Aug 2013 04:30:05 -0500</div>
+	<div class="rss0-description">(NAPSI)--When you need to haul stuff for work or DIY projects around the yard, a pickup truck is invaluable. The downfall of pickup trucks is the lack of secure storage and ability to carry longer items. Truck boxes and racks are a perfect solution for these challenges.</div>
+</div>
+<div class="rss0-block">
+	<div class="rss0-title"><a href="http://townnews.com/articles/2011/11/23//ara/automotive/d9fa7623-b299-5f90-a386-ca1ab553a303.txt">Today's Performance Parts Kick Your Car Into Gear And Save Gas</a></div>
+	<div class="rss0-pubdate">Tue, 27 Aug 2013 04:30:05 -0500</div>
+	<div class="rss0-description">(NAPSI)?How many times have you tried to accelerate onto a freeway with cars zipping by and couldn?t get the power to do it safely? It?s kind of scary, right? Or how about when the van?s filled with kids you?re taking to a soccer game and the super-slow-going uphill quickly turns the trip downhill. It?s kind of frustrating, right? The problem isn?t your driving. Most likely, it?s something lacking from what you?re driving: automotive performance. You don?t have to be a car nut, watch ?Pimp My Ride? reruns religiously or have a ?Fast & Furious? tattoo to know your vehicle is underpowered. All you need to do is step on the gas and wait and wait...and worry.</div>
+</div>
+<div class="rss0-block">
+	<div class="rss0-title"><a href="http://townnews.com/articles/2011/11/23//ara/automotive/16c5cee1-3695-5b7c-a8c5-6492e7feb5e3.txt">Don't Get Soaked By A Water-Damaged Car</a></div>
+	<div class="rss0-pubdate">Tue, 27 Aug 2013 04:30:05 -0500</div>
+	<div class="rss0-description">(NAPSI)?An unexpected consequence to extreme weather, such as 2012?s Hurricane Sandy, is the damage it can do to all types of vehicles.</div>
+</div>
+
+    </div>
+	<div id="front-content-right">
+				<ul>
+        	<li><h3>Buying a Car</h3>
+        	<p>Today, nearly all car purchases start with online research and comparison. Central Coast Wheels provides you with the information you need to locate and buy the right car.  Whether you are searching for an economy car, truck, SUV or minivan, our service allows you to browse through thousands of vehicles for sale in your area. Compare features and gather the information you need all from the convenience of your computer.
+            </p>
+            </li>
+        	<li>
+            	<h3><a href="http://autos.santamariatimes.com/results.php?oby=price&amp;amp;odir=desc&amp;amp;eqstatus=new&amp;amp;eqmakeid=&amp;amp;geprice=&amp;amp;leprice=&amp;amp;geyear=&amp;amp;leyear=&amp;amp;pxdist=100&amp;amp;pxzip=97339&amp;amp;eqdealerid=&amp;lkadtext=">Shop for a new car</a>
+                </h3>
+                <p>Search Santa Maria area auto dealer inventory for new cars, trucks, SUVs and more.
+                </p>
+			</li>
+        	<li>
+            	<h3><a href="http://autos.santamariatimes.com/results.php?oby=price&amp;odir=desc&amp;eqstatus=used&amp;eqmakeid=&amp;geprice=&amp;leprice=&amp;geyear=&amp;leyear=&amp;gemiles=&amp;lemiles=&amp;pxdist=100&amp;pxzip=97339&amp;lkadtext=&amp;days-ago=&amp;eqdealerid=">Shop for a used car</a>
+                </h3>
+                <p>Find used cars, trucks and SUVs from local auto dealers for sale by owners in and near Santa Maria, California.
+                </p>
+			</li>
+        	<li>
+            	<h3><a href="javascript:void(0)" onclick="window.open('https://secure.townnews.com/shared-content/adowl/front-end.php?domain=www2.santamariatimes.com	');">Sell your car</a>
+                </h3>
+                <p>Find out how you can list your vehicle for sale on our site.
+                </p>
+			</li>
+		</ul>
+
+    </div>
+</div>
+            </div>
+			<div class="clear"></div>
+			<div id="leaderboard-bottom">
+					<div id="div-gpt-ad-leaderboardtop_slot_bottom"><script type="text/javascript">googletag.display("div-gpt-ad-leaderboardtop_slot_bottom");</script></div>
+               
+            </div>
+			<div class="clear"></div>
+			<div id="center-five-front" class="clearfix">
+				<h4>Browse All Makes</h4>
+<div id="master-make-list" class="clearfix">
+	
+     
+
+  	
+		<ul class="make-list">
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=9&amp;pxdist=50&amp;pxzip=93456">Buick</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=11&amp;pxdist=50&amp;pxzip=93456">Chevrolet</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=12&amp;pxdist=50&amp;pxzip=93456">Chrysler</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=16&amp;pxdist=50&amp;pxzip=93456">Dodge</a></h3>
+        </li>
+            
+       	</ul>
+		<ul class="make-list">
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=19&amp;pxdist=50&amp;pxzip=93456">Fiat</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=81&amp;pxdist=50&amp;pxzip=93456">Four Winds</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=23&amp;pxdist=50&amp;pxzip=93456">Honda</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=24&amp;pxdist=50&amp;pxzip=93456">Hyundai</a></h3>
+        </li>
+            
+       	</ul>
+		<ul class="make-list">
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=28&amp;pxdist=50&amp;pxzip=93456">Jeep</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=424&amp;pxdist=50&amp;pxzip=93456">Massey Ferguson</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=38&amp;pxdist=50&amp;pxzip=93456">Mercury</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=41&amp;pxdist=50&amp;pxzip=93456">Mitsubishi</a></h3>
+        </li>
+            
+       	</ul>
+		<ul class="make-list">
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=42&amp;pxdist=50&amp;pxzip=93456">Nissan</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=743&amp;pxdist=50&amp;pxzip=93456">Summers</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=57&amp;pxdist=50&amp;pxzip=93456">Toyota</a></h3>
+        </li>
+            
+       	
+		
+  			
+   		<li class="make-item">
+   	   		<h3><a href="http://autos.santamariatimes.com/results.php?eqmakeid=59&amp;pxdist=50&amp;pxzip=93456">Volkswagen</a></h3>
+        </li>
+            
+       	</ul>
+
+	
+</div>
+<div class="clear"></div>
+				<h4>Vehicle Resources</h4>
+<ul id="footer-menu">
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.caranddriver.com/');">Car &amp; Driver</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.consumerreports.org/cro/cars/index.htm?CMP=OTC-NAV4');">Consumer Reports</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.safercar.gov/');">Safercar.gov</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.insuranceagents.com/car-insurance/');">Insurance Quotes</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.pueblo.gsa.gov/cic_text/cars/v-finance/v-finance.htm');">Financing Options</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.fueleconomy.gov');">FuelEconomy.gov
+</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('https://www.annualcreditreport.com/cra/index.jsp');">AnnualCreditReport.com</a></li>
+	<li><a href="javascript:void(0)" onclick="window.open('http://www.carfax.com/');">CarFax Vehicle History Reports 
+</a></li>
+<!-- 	<li><a href=""></a></li>
+	<li><a href=""></a></li> -->
+</ul>
+
+				<div class="clear"></div>
+<div id="footer">
+	<div id="footer-logo">
+		<a href="/"><img src="/art/wheels-gray/logo.png" alt="Central Coast Wheels" style="width:92px; height:32px;"/></a>
+	</div>
+	<div id="footer-right">
+		<ul class="footer-main">
+    		<li class="first-link">
+				<a href="javascript:void(0)" onclick="window.open('/template/wheels-form.html');">Become a Featured Dealer</a>
+    	    </li>
+    		<!-- <li><a href="">Paper 1</a></li>
+<li><a href="">Paper 2</a></li>
+<li><a href="">Paper 3</a></li> -->
+		</ul>
+		<div id="wheels-explainer">
+	    	<div class="footer-text">Are you an auto dealer serving the Santa Maria area? Not listed on our site? Find out how you can list your complete inventory, promote specials and become one of our featured dealerships. </div>
+	    </div>
+		<ul class="footer-sub">
+		  <li>&copy; 2011, Santa Maria Times, 3200 Skyway Dr. Santa Maria, CA | <a href="javascript:void(0)" onclick="window.open('http://santamariatimes.com/terms/');">Terms of Service</a> and  <a href="javascript:void(0)" onclick="window.open('http://santamariatimes.com/privacy/');">Privacy Policy</a></li>
+		</ul>
+	</div>
+</div>
+<div id="blox-background-ad" style="display:none"><script type="text/javascript">yld_mgr.place_ad_here("background");</script></div>
+
+<!-- SiteCatalyst code version: H.7.
+Copyright 1997-2006 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script language="JavaScript" src="http://www.santamariatimes.com/scripts/s_code.js"></script>
+<script language="JavaScript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName=""
+s.server="Santa Maria"
+s.channel="santamariatimes.com"
+s.pageType=""
+s.prop1="advertising"
+s.prop2="automotive"
+s.prop3="wheels"
+s.prop4=""
+s.prop5=""
+s.prop6=""
+s.prop7=""
+s.prop8=""
+s.prop9=""
+s.prop10=""
+s.prop11=""
+s.prop12=""
+s.prop13=""
+s.prop14=""
+s.prop15=""
+s.prop16=""
+s.prop17=""
+s.prop18=""
+s.prop19=""
+s.prop20=""
+s.prop21=""
+s.prop22=""
+s.prop23=""
+
+
+
+/* E-commerce Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+
+/* Hierarchy Variables */
+s.hier1="Lee Enterprises," + s.server + "," + s.channel + "," + s.prop1 + "," + s.prop2 + "," + s.prop3 + "," + s.prop4 + "," + s.prop5
+s.hier2="Lee Enterprises," + s.prop1 + "," + s.server + "," + s.channel + "," + s.prop2 + "," + s.prop3 + "," + s.prop4 + "," + s.prop5
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.7. -->
+
+            </div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</body>
+</html>

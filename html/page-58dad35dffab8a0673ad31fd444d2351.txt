@@ -1,0 +1,417 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>Off-Road Vehicles</title>
+		<style media="screen" type="text/css"><!--
+.text-normal-L { color: black; font-size: 10px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left; text-indent: 0px }
+.txt light { color: black; font-weight: lighter; font-size: 11px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+.classsubtit { color: black; font-weight: 800; font-size: 12px; line-height: 14px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+.text-hbf-L  { color: white; font-weight: 600; font-size: 12px; line-height: 14px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+.smalltxt { color: black; font-size: 10px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+.smalltit     { color: white; font-variant: normal; font-weight: 600; font-size: 11px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+.smalltit light w { color: white; font-variant: normal; font-size: 11px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+.smalltxt-hbf-bl  { color: black; font-variant: normal; font-weight: 600; font-size: 11px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-indent: 2px }
+.smalltitlight { color: white; font-variant: normal; font-weight: normal; font-size: 11px; line-height: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+--></style>
+		<csactions>
+			<csaction name="CBCDC8081" class="Goto Link" type="onevent" val0="en_history.html" val1="_top">
+			<csaction name="CBCDC8083" class="Goto Link" type="onevent" val0="en_museum.html" val1="_top">
+			<csaction name="CBCDC8085" class="Goto Link" type="onevent" val0="en_contact.html" val1="_top">
+			<csaction name="CBCDC8087" class="Goto Link" type="onevent" val0="en_sprortscars.html" val1="_top">
+			<csaction name="CBFA0E619" class="Goto Link" type="onevent" val0="en_formula.html" val1="_top">
+			<csaction name="CBFA0E8F10" class="Goto Link" type="onevent" val0="en_safari.html" val1="_top">
+			<csaction name="CBFA0EB811" class="Goto Link" type="onevent" val0="en_safari.html" val1="_top">
+			<csaction name="CBFA0ECE12" class="Goto Link" type="onevent" val0="en_safari.html" val1="_top">
+			<csaction name="CC1056563" class="Goto Link" type="onevent" val0="index.html" val1="">
+		</csactions>
+		<csscriptdict>
+			<script><!--
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+
+
+
+
+
+
+
+
+
+CSStopExecution = false;
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if (actArray == null) return false;
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+function CSGotoLink(action) {
+	if (action[2].length) {
+		var hasFrame=false;
+		for(i=0;i<parent.frames.length;i++) { if (parent.frames[i].name==action[2]) { hasFrame=true; break;}}
+		if (hasFrame==true)
+			parent.frames[action[2]].location = action[1];
+		else
+			window.open (action[1],action[2],"");
+	}
+	else location = action[1];
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSAct[/*CMP*/ 'CBCDC8081'] = new Array(CSGotoLink,/*URL*/ 'en_history.html','_top');
+CSAct[/*CMP*/ 'CBCDC8083'] = new Array(CSGotoLink,/*URL*/ 'en_museum.html','_top');
+CSAct[/*CMP*/ 'CBCDC8085'] = new Array(CSGotoLink,/*URL*/ 'en_contact.html','_top');
+CSAct[/*CMP*/ 'CBCDC8087'] = new Array(CSGotoLink,/*URL*/ 'en_sprortscars.html','_top');
+CSAct[/*CMP*/ 'CBFA0E619'] = new Array(CSGotoLink,/*URL*/ 'en_formula.html','_top');
+CSAct[/*CMP*/ 'CBFA0E8F10'] = new Array(CSGotoLink,/*URL*/ 'en_safari.html','_top');
+CSAct[/*CMP*/ 'CBFA0EB811'] = new Array(CSGotoLink,/*URL*/ 'en_safari.html','_top');
+CSAct[/*CMP*/ 'CBFA0ECE12'] = new Array(CSGotoLink,/*URL*/ 'en_safari.html','_top');
+CSAct[/*CMP*/ 'CC1056563'] = new Array(CSGotoLink,/*URL*/ 'index.html','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body bgcolor="#ffffff" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0">
+		<table border="0" cellpadding="0" cellspacing="2" width="100%" height="94%">
+			<tr height="99%">
+				<td valign="top" align="center" width="100%" height="99%">
+					<table border="0" cellpadding="0" cellspacing="0" width="800">
+						<tr height="30">
+							<td height="30" width="460"></td>
+							<td height="30" width="340"></td>
+						</tr>
+						<tr height="130">
+							<td height="130" bgcolor="black" valign="top" align="left" width="460">
+								<table border="0" cellpadding="0" cellspacing="2" width="460">
+									<tr height="12">
+										<td height="12" width="12"></td>
+										<td height="12" width="220"></td>
+										<td height="12" width="220"></td>
+									</tr>
+									<tr height="89">
+										<td width="12" height="89"></td>
+										<td height="89" valign="top" align="left" width="220"><a href="index.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CC1056563'));return CSClickReturn();" csclick="CC1056563"><img src="buttonsmonte/Logo-Museum.jpg" width="220" height="86" border="0"></a></td>
+										<td height="89" valign="top" align="right" width="220">
+											<table border="0" cellpadding="0" cellspacing="0" width="212">
+												<tr height="12">
+													<td width="15" height="12"></td>
+													<td valign="top" align="right" width="200" height="12"><img src="buttonsmonte/redstripe.jpg" width="100%" height="5" border="0"></td>
+												</tr>
+												<tr height="25">
+													<td width="15" height="25"></td>
+													<td height="25" width="200" valign="middle" align="left"><a href="en_history.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBCDC8081'));return CSClickReturn();" csclick="CBCDC8081"><img src="buttonsmonte/en_histrory-w.jpg" width="130" height="15" border="0"></a></td>
+												</tr>
+												<tr height="25">
+													<td width="15" height="25"></td>
+													<td height="25" width="200" valign="middle" align="left"><a href="en_museum.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBCDC8083'));return CSClickReturn();" csclick="CBCDC8083"><img src="buttonsmonte/de_museum-w.jpg" width="90" height="10" border="0"></a></td>
+												</tr>
+												<tr height="25">
+													<td width="15" height="25"></td>
+													<td width="200" height="25" valign="middle" align="left"><a href="en_contact.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBCDC8085'));return CSClickReturn();" csclick="CBCDC8085"><img src="buttonsmonte/en_contact-w.jpg" width="130" height="15" border="0"></a></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td width="220"></td>
+										<td width="220"></td>
+									</tr>
+								</table>
+							</td>
+							<td height="130" valign="top" align="left" width="340">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr height="125">
+										<td valign="top" align="left" width="201" height="125">
+											<table border="0" cellpadding="0" cellspacing="0">
+												<tr height="16">
+													<td valign="middle" align="left" height="16" width="200"></td>
+												</tr>
+												<tr height="14">
+													<td height="14" valign="top" align="left" width="200"><img src="buttonsmonte/redstripe.jpg" width="200" height="6" border="0"></td>
+												</tr>
+												<tr height="25">
+													<td valign="middle" align="right" height="25" width="200">
+														<p class="classsubtit"><a href="en_sprortscars.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBCDC8087'));return CSClickReturn();" csclick="CBCDC8087"><img src="buttonsmonte/en_sportscars-b.jpg" width="80" height="12" border="0"></a></p>
+													</td>
+												</tr>
+												<tr height="25">
+													<td valign="middle" align="right" height="25" width="200">
+														<p class="classsubtit"><img src="buttonsmonte/en_offroad-r.jpg" width="130" height="15" border="0"></p>
+													</td>
+												</tr>
+												<tr height="25">
+													<td height="25" valign="middle" align="right" width="200">
+														<p class="classsubtit"><a href="en_formula.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBFA0E619'));return CSClickReturn();" csclick="CBFA0E619"><img src="buttonsmonte/formula1.jpg" width="74" height="12" border="0"></a></p>
+													</td>
+												</tr>
+												<tr height="15">
+													<td height="15" width="200"></td>
+												</tr>
+											</table>
+										</td>
+										<td valign="top" align="left" height="125" width="120">
+											<table border="0" cellpadding="0" cellspacing="0">
+												<tr height="16">
+													<td height="16" width="12"></td>
+													<td height="16"></td>
+												</tr>
+												<tr height="14">
+													<td height="14" width="12"></td>
+													<td height="14"></td>
+												</tr>
+												<tr height="25">
+													<td height="25" width="12"></td>
+													<td height="25" valign="middle" align="left"></td>
+												</tr>
+												<tr height="25">
+													<td height="25" width="12"></td>
+													<td height="25"><a href="en_safari.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBFA0E8F10'));return CSClickReturn();" csclick="CBFA0E8F10"><img src="buttonsmonte/safari5.6.jpg" width="67" height="15" border="0"></a></td>
+												</tr>
+												<tr height="25">
+													<td height="25" width="12"></td>
+													<td height="25"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr height="301">
+							<td bgcolor="black" align="right" width="460" height="301" background="photosmonte/backs/dr-safari_neg.jpg" valign="bottom">
+								<table border="0" cellpadding="0" cellspacing="0" width="122">
+									<tr height="14">
+										<td height="14"></td>
+										<td height="14"></td>
+									</tr>
+									<tr height="240">
+										<td height="240"></td>
+										<td valign="bottom" align="right" height="240"><img src="photosmonte/4X4Jeeps_l.jpg" width="287" height="240" border="0"></td>
+									</tr>
+									<tr height="12">
+										<td height="12"></td>
+										<td height="12"></td>
+									</tr>
+								</table>
+							</td>
+							<td align="left" width="340" height="301" valign="bottom">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr height="14">
+										<td height="14" width="200"></td>
+										<td height="14"></td>
+									</tr>
+									<tr>
+										<td valign="bottom" align="left" width="200"><img src="photosmonte/4X4Jeeps_r.jpg" width="200" height="240" border="0"></td>
+										<td valign="top" align="right"></td>
+									</tr>
+									<tr height="12">
+										<td height="12" width="200"></td>
+										<td height="12"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr height="140">
+							<td bgcolor="black" valign="top" align="right" width="460" height="140">
+								<table border="0" cellpadding="0" cellspacing="2" width="380">
+									<tr height="14">
+										<td width="12" height="14"></td>
+										<td valign="top" align="left" height="14">
+											<p class="text-hbf-l">
+											</p>
+										</td>
+										<td height="14" width="5"></td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td valign="top" align="left">
+											<p class="smalltit">Off-Road Vehicles</p>
+											<p class="smalltitlight"><span class="smalltitlight">Following the 1973/74 energy crisis Peter Monteverdi decided to completely restructure his production program. <br>
+													In place of the successful &quot;high speed&quot; GT series the well known Basel automobile constructor entered the luxury off-road 4x4 market which was begining to boom at that time. The extreme flexibility of the relatively small MONTEVERDI works enabled him to design, develop and produce the Safari- and later on the Sahara-Series 4x4 off-road vehicles.</span></p>
+										</td>
+										<td valign="top" align="left" width="5">
+											<p class="classsubtit"></p>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="340" valign="top" align="left" height="140">
+								<table border="0" cellpadding="0" cellspacing="0" width="280">
+									<tr height="14">
+										<td height="14" width="20"></td>
+										<td height="14"></td>
+									</tr>
+									<tr>
+										<td width="20"></td>
+										<td valign="top" align="left"><a href="en_safari.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBFA0EB811'));return CSClickReturn();" csclick="CBFA0EB811"><img src="photosmonte/safari-free.jpg" width="250" height="98" border="0"></a></td>
+									</tr>
+									<tr>
+										<td width="20"></td>
+										<td valign="top" align="center"><a href="en_safari.html" target="_top" onclick="CSAction(new Array(/*CMP*/'CBFA0ECE12'));return CSClickReturn();" csclick="CBFA0ECE12"><img src="buttonsmonte/safari5.6.jpg" width="67" height="15" border="0"></a></td>
+									</tr>
+								</table>
+								<p class="text-hbf-l"></p>
+							</td>
+						</tr>
+						<tr height="280">
+							<td width="460" bgcolor="black" valign="top" align="right" background="photosmonte/backs/safari-drfront.jpg" height="280">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr height="12">
+										<td width="12" height="12"></td>
+										<td width="12" height="12"></td>
+										<td valign="middle" align="right" width="180" height="12"></td>
+									</tr>
+									<tr height="120">
+										<td width="12" height="120" valign="top" align="right"><img src="photosmonte/singlecars/saf-1976.jpg" width="180" height="120" border="0"></td>
+										<td width="12" height="120"></td>
+										<td valign="top" align="right" width="180" height="120"><img src="photosmonte/singlecars/saf-7.2.jpg" width="180" height="120" border="0"></td>
+									</tr>
+									<tr height="12">
+										<td width="12" height="12"></td>
+										<td width="12" height="12"></td>
+										<td height="12" width="180"></td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td width="12"></td>
+										<td valign="top" align="right" width="180"><img src="photosmonte/singlecars/saf-milit.jpg" width="180" height="120" border="0"></td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td width="12"></td>
+										<td width="180"></td>
+									</tr>
+								</table>
+							</td>
+							<td align="left" width="340" height="280" background="photosmonte/backs/saf-front.jpg" valign="top">
+								<table border="0" cellpadding="0" cellspacing="0" width="200">
+									<tr height="12">
+										<td height="12" width="12"></td>
+										<td height="12" width="170"></td>
+										<td height="12"></td>
+									</tr>
+									<tr height="73">
+										<td width="12" height="73"></td>
+										<td valign="top" align="left" height="73" width="170">
+											<p class="classsubtit"><span class="classsubtit">MONTEVERDI Safari, 1976</span></p>
+											<p class="smalltxt"><span class="smalltxt">Luxurious high-performance 4x4 SUV powered by either an International Harvester Corporation IHC V8 engine displacing 5653 cc or a 7206 cc Chrysler V8 powerplant.</span></p>
+										</td>
+										<td height="73"></td>
+									</tr>
+									<tr height="47">
+										<td width="12" height="47"></td>
+										<td height="47" width="170"></td>
+										<td height="47"></td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td width="170">
+											<p class="classsubtit"><span class="classsubtit">MONTEVERDI Military Version</span></p>
+											<p class="smalltxt"><span class="smalltxt">Peter Monteverdi built the MONTEVERDI Military Version as a prototype for the Swiss Army during the period of 1978-1979 as well as a civilian version and a cab-over-engine adaptation. </span></p>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td width="170"></td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr height="12">
+							<td width="460" bgcolor="black" valign="top" align="right" height="12"></td>
+							<td align="left" width="340" height="12" valign="top">
+								<table border="0" cellpadding="0" cellspacing="0" width="200">
+									<tr height="73">
+										<td width="12" height="73"></td>
+										<td valign="top" align="left" height="73" width="170">
+											<p class="smalltxt"><span class="smalltxt">These developments were sold to the commercial-vehicle manufacturer Saurer in Arbon where it was planed to produce all three under a license agreement. <br>
+													However, with the closure of the traditional Swiss Saurer works this unique project came to an end.</span></p>
+										</td>
+										<td height="73"></td>
+									</tr>
+									<tr>
+										<td width="12"></td>
+										<td width="170"></td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr height="12">
+							<td width="460" bgcolor="black" valign="middle" align="right" height="12"><img src="buttonsmonte/redstripe.jpg" height="5" border="0" width="220"></td>
+							<td align="left" width="340" valign="middle" height="12"><img src="buttonsmonte/redstripe.jpg" height="5" border="0" width="200"></td>
+						</tr>
+						<tr height="20">
+							<td width="460" bgcolor="black" valign="bottom" align="right" height="20">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="bottom" align="right">
+											<p class="smalltit"><span class="smalltit">MONTEVERDI Car-Museum</span></p>
+										</td>
+										<td width="12"></td>
+									</tr>
+								</table>
+							</td>
+							<td align="left" width="340" height="20" valign="bottom">
+								<p class="smalltxt-hbf-bl"><span class="smalltxt-hbf-bl">Oberwilerstrasse 20, 4102 Binningen/Basel, Switzerland</span></p>
+							</td>
+						</tr>
+						<tr height="12">
+							<td width="460" bgcolor="black" valign="top" align="right" height="12">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="bottom" align="right"></td>
+										<td width="12"></td>
+									</tr>
+								</table>
+							</td>
+							<td align="center" width="340" height="12">
+							</td>
+						</tr>
+					</table>
+					 </td>
+			</tr>
+		</table>
+		<p></p>
+	</body>
+
+</html>

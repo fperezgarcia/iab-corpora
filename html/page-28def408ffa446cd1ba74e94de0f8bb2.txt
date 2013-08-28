@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="Las Vegas Exotic Car Rentals - Vegas Luxury Rides, Lamborghini rental, Ferrari rental, Porsche rental, Mercedes rental and much more. Gauranteed to be the lowest prices!">
+<meta name="keywords" content="las, vegas, rental, car, cars, porsche, lamborghini, lambo, mercedes, ferrari, aston, martin, bmw, luxury, exotic, auto, automobile, hire, red, rock, lake, mead, alternative, convention">
+<META name="expires" content="no">
+<META name="language" content="english, EN">
+<META name="charset" content="ISO-8859-1">
+<META name="robots" content="INDEX,FOLLOW">
+<META name="publisher" content="Vegas Luxury Rides">
+<META name=distribution content="Global">
+<meta name=rating content="general">
+<title>Exotic Car Rentals Las Vegas, Las Vegas Luxury Car Rentals - VLR</title>
+<script type="text/javascript" src="js/mootools.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/videobox.js"></script>
+<link rel="stylesheet" href="css/videobox.css" type="text/css" media="screen" />
+<style type="text/css">
+body {
+	margin:0;
+	padding:0;
+	color: #4E3D4E;
+	font: normal sans-serif, Arial;
+	background-color: #EDEDED;
+	width: 100%;
+}
+h1 {
+	padding-left: 55px;
+	font:bold 14px/1.5em "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+	text-transform:uppercase;
+	letter-spacing:.0.5em;
+}
+a {
+	outline: none;
+}
+</style>
+
+<style type="text/css">
+/* rotator in-page placement */
+    div.rotator {
+	position:relative;
+	height:300px;
+	margin-left: -40px;
+	display: none;
+}
+/* rotator css */
+	div.rotator ul li {
+	float:left;
+	position:absolute;
+	list-style: none;
+}
+/* rotator image style */	
+	div.rotator ul li img {
+	border:0;
+}
+    div.rotator ul li.show {
+	z-index:500;
+}
+</style>
+
+<script type="text/javascript" src="java.js"></script>
+
+<!-- By Dylan Wagstaff, http://www.alohatechsupport.net -->
+<script type="text/javascript">
+
+function theRotator() {
+	//Set the opacity of all images to 0
+	$('div.rotator ul li').css({opacity: 0.0});
+	
+	//Get the first image and display it (gets set to full opacity)
+	$('div.rotator ul li:first').css({opacity: 1.0});
+		
+	//Call the rotator function to run the slideshow, 6000 = change to next image after 6 seconds
+	
+	setInterval('rotate()',6000);
+	
+}
+
+function rotate() {	
+	//Get the first image
+	var current = ($('div.rotator ul li.show')?  $('div.rotator ul li.show') : $('div.rotator ul li:first'));
+
+    if ( current.length == 0 ) current = $('div.rotator ul li:first');
+
+	//Get next image, when it reaches the end, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.rotator ul li:first') :current.next()) : $('div.rotator ul li:first'));
+	
+	//Un-comment the 3 lines below to get the images in random order
+	
+	//var sibs = current.siblings();
+    //var rndNum = Math.floor(Math.random() * sibs.length );
+    //var next = $( sibs[ rndNum ] );
+			
+
+	//Set the fade in effect for the next image, the show class has higher z-index
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+	
+};
+
+
+
+$(document).ready(function() {		
+	//Load the slideshow
+	theRotator();
+	$('div.rotator').fadeIn(1000);
+    $('div.rotator ul li').fadeIn(1000); // tweek for IE
+});
+</script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="styleSheet/main.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<SCRIPT LANGUAGE="JavaScript" SRC="CalendarPopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" ID="js17">
+var now = new Date();
+var cal = new CalendarPopup();
+cal.addDisabledDates(null,"2013-08-26");
+</SCRIPT>
+
+<script>
+var disabled_hours = [];
+<br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/home/content/40/7020940/html/index.php</b> on line <b>157</b><br />
+current_list = [];
+function enableTimes(type)
+{
+	for (i=0; i<document.getElementById(type).options.length; i++)
+	{
+		//pickup_times[i].disabled=false;
+		//document.getElementById(type).options[i].className = "enabled_option";
+		new_option = new Option(document.getElementById(type).options[i].text, document.getElementById(type).options[i].value);
+		new_option.className = "enabled_option";
+		document.getElementById(type).options[i] = new_option;
+	}
+}
+function disableTimes(type, date_to_disable)
+{
+	if(current_list[type] != date_to_disable)
+	{
+		current_list[type] = date_to_disable;
+		enableTimes(type);
+		for(disable_date in disabled_hours) { 
+			if(disable_date == date_to_disable)
+			{
+				for(disable_hour in disabled_hours[disable_date]) { 
+					//document.getElementById(type).options[disable_hour].disabled=true;
+					//document.getElementById(type).options[disable_hour].className = "disabled_option";
+					new_option = new Option(document.getElementById(type).options[disable_hour].text, document.getElementById(type).options[disable_hour].value);
+					new_option.className = "disabled_option";
+					new_option.style.color = "red";
+					new_option.disabled = "true";
+					document.getElementById(type).options[disable_hour] = new_option;
+				}
+			}
+		}
+	}
+}
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+today=new Date();
+jran=today.getTime();
+var number = 6;
+var random_number="";
+var image="";
+ia=9301;
+ic=49297;
+im=233280;
+jran = (jran*ia+ic) % im;
+random_number = Math.ceil( (jran/(im*1.0)) *number);
+// Loads the appropriate image and text color based on random number.
+if (random_number==1) {
+image="images/backgrounds/1.jpg";
+}
+if (random_number==2) {
+image="images/backgrounds/2.jpg";
+}
+if (random_number==3) {
+image="images/backgrounds/3.jpg";
+}
+if (random_number==4) {
+image="images/backgrounds/4.jpg";
+}
+if (random_number==5) {
+image="images/backgrounds/5.jpg";
+}
+if (random_number==6
+) {
+image="images/backgrounds/6.jpg";
+}
+// End -->
+</SCRIPT>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9062255-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onload="MM_preloadImages('images/menu/menu_over_02.jpg','images/menu/menu_over_03.jpg','images/menu/menu_over_04.jpg','images/menu/menu_over_05.jpg','images/menu/menu_over_06.jpg')">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+document.open();
+document.write("<BODY BACKGROUND='"+image+"'>");
+document.write("<CENTER></CENTER>");
+// End -->
+</SCRIPT>
+<div class="mainContainer" id="mainContainer">
+<div class="header" id="header">
+  <table width="954" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="950"><img src="images/menu/men_01.jpg" width="950" height="172" /></td>
+    </tr>
+  </table>
+</div>
+
+<div class="banner" id="banner"><!-- InstanceBeginEditable name="banner" --><div class="rotator">
+  <ul>
+<li class="show"><a href="rentalVehicles.php"><img src="images/banners/fleet_02.jpg" width="950" height="298" alt="pic5" /></a></li><li><a href="rentalVehicles.php"><img src="images/banners/luda.jpg" width="950" height="298" alt="pic5" /></a></li>
+       <li><a href="https://www.vegasluxuryrides.com/details.php?id=60"><img src="images/banners/599-Italia_02.jpg" width="950" height="300" border="0" alt="pic5" /></a></li>
+       <li><a href="https://www.vegasluxuryrides.com/details.php?id=53"><img src="images/banners/599-greenLambo.jpg" width="950" height="300" border="0" alt="pic5" /></a></li>
+    <li><a href="https://www.vegasluxuryrides.com/details.php?id=44"><img src="images/banners/499-ylambo_02.jpg" width="950" height="300"  alt="pic5" border="0" /></a></li>
+    <li><a href="https://www.vegasluxuryrides.com/details.php?id=44"><img src="images/banners/499-Bferrari_02.jpg" width="950" height="300"  alt="pic2" border="0"/></a></li>
+    <li><a href="https://www.vegasluxuryrides.com/details.php?id=29"><img src="images/banners/499-rlambo_02.jpg" width="950" height="300"  alt="pic1" border="0" /></a></li>
+		<li><a href="https://www.vegasluxuryrides.com/details.php?id=61"><img src="images/banners/699-whiteLambo.jpg" width="950" height="300"  alt="pic1" border="0" /></a></li>	
+    <li><a href="join.html"><img src="images/index/rotateNewsRider.jpg" width="950" height="300"  alt="pic4" /></a></li>
+    
+    
+  </ul>
+</div>
+<!-- InstanceEndEditable --></div>
+<div id="menu">
+  <table width="950" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><a href="https://www.vegasluxuryrides.com/rentalVehicles.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/menu/menu_over_02.jpg',1)"><img src="images/menu/men_02.jpg" name="Image3" width="242" height="40" border="0" id="Image3" /></a></td>
+      <td><a href="aboutUs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/menu/menu_over_03.jpg',1)"><img src="images/menu/men_03.jpg" name="Image4" width="170" height="40" border="0" id="Image4" /></a></td>
+      <td><a href="rentalPolicy.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/menu/menu_over_04.jpg',1)"><img src="images/menu/men_04.jpg" name="Image5" width="192" height="40" border="0" id="Image5" /></a></td>
+      <td><a href="vipLounge.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/menu/menu_over_05.jpg',1)"><img src="images/menu/men_05.jpg" name="Image6" width="184" height="40" border="0" id="Image6" /></a></td>
+      <td><a href="contactUs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/menu/menu_over_06.jpg',1)"><img src="images/menu/men_06.jpg" name="Image7" width="162" height="40" border="0" id="Image7" /></a></td>
+    </tr>
+  </table>
+</div>
+<div class="subMenu" id="subMenu">
+<div style="float:left;"> <a href="https://www.vegasluxuryrides.com"><img src="images/universal/home-btn_01.jpg" width="50" height="50" border="0" /></a></div>
+<div class="call-number" style="float:left; padding-left:170px;"><h3>To reserve by phone please call: <span>866-751-8777</span></h3></div>
+<div style="float:right;">
+<img src="images/universal/socials_03.png" width="214" height="50" usemap="#Map" border="0" />
+<map name="Map" id="Map">
+  <area shape="rect" coords="92,9,125,42" href="https://www.myspace.com/vegasluxuryrides" target="_blank" alt="VLR Myspace" />
+  <area shape="rect" coords="134,10,164,40" href="https://twitter.com/vegasluxuryride" target="_blank" alt="VLR Twitter" />
+  <area shape="rect" coords="174,9,206,40" href="https://www.facebook.com/vegasluxuryrides" target="_blank" alt="VLR Facebook" />
+</map>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="mainContent" id="mainContent"><!-- InstanceBeginEditable name="mainContent" -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="2"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><a href="https://www.vegasluxuryrides.com/details.php?id=44"><img src="images/index/3Push_03.jpg" alt="las vegas exotic car rentals - Lamborghini" width="316" height="208" border="0"  title="las vegas exotic car rentals - Lamborghini Gallardo Spyder" /></a></td>
+          <td><a href="https://www.vegasluxuryrides.com/details.php?id=58"><img src="images/index/3Push_04.jpg" alt="las vegas exotic car rentals - ferrari F430 Spider" width="319" height="207" border="0" title="las vegas exotic car rentals - Ferrari F430 Spider" /></a></td>
+          <td><a href="https://www.vegasluxuryrides.com/details.php?id=60"><img src="images/index/3Push_05.jpg" alt="las vegas exotic car rentals - ferrari F430 Spider" width="315" height="207" border="0" title="las vegas exotic car rentals - Ferrari F430 Spider"/></a></td>
+        </tr>
+      </table></td>
+      </tr>
+    <tr>
+      <td width="67%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top"><table width="611" border="0">
+            <tr>
+              <td width="605" valign="top"><p align="justify" class="mainText"><strong class="yellowHeaders2">EXOTIC CAR RENTALS LAS VEGAS</strong><br />
+                <strong>EXPERIENCE AN EXOTIC CAR RENTAL OR LUXURY  CAR RENTAL IN LAS VEGAS</strong><br />
+                <br />
+                Old enough to gamble, then youâre old enough to rent! </p>
+                <p class="mainText">Vegas Luxury Rides does not place advertising on any vehicle in the rental fleet. </p>
+                <p class="mainText">You are the only one that will know it is a rental!</p>
+                <p class="mainText">Licensed, Registered and Insured with the Nevada Department of Motor Vehicles (Dealer), State of Nevada and Clark County<br />
+                </p>
+                <p class="mainText"><em><strong>Ask yourself as a consumer, &quot;Why don't our competitors disclose the actual model years of their rental inventory on their websites?&quot;</strong></em></p>
+                <p class="mainText"><strong><em>Vegas Luxury Rides Rental Fleet is immaculate and all service and maintenance is done by Factory Dealer Service Departments. Wynn Penske Ferrari, Las Vegas Lamborghini, Fletcher Jones Mercedes, Desert BMW and Gaudin Porsche.</em></strong><br />
+                  <br />
+                  <br />
+                </p>
+                <p class="mainText" autoPlay="true"><img src="images/index/videosInAction.png" width="589" height="227" usemap="#Map2" border="0" />
+                  <map name="Map2" id="Map2"><area shape="rect" coords="2,126,134,216" href="http://www.youtube.com/watch?v=9zoTgbBj66k&amp;feature=related" target="_blank" /><area shape="rect" coords="147,126,279,216" href="http://www.youtube.com/watch?v=KVUh-mOf9ic&amp;feature=related" target="_blank" /><area shape="rect" coords="294,126,426,216" href="http://www.youtube.com/watch?v=zrJZc4WxeWk" target="_blank" /><area shape="rect" coords="294,22,426,112" href="http://www.youtube.com/watch?v=PfZwKoHY6rc" target="_blank" /><area shape="rect" coords="147,23,279,113" href="http://www.youtube.com/watch?v=pZD88OOkKFk" target="_blank" />
+                    <area shape="rect" coords="2,23,134,113" href="http://www.youtube.com/watch?v=RHnG4A-mLRo" target="_blank" />
+                  </map>
+            </p>
+                <p align="justify" class="mainText">&nbsp;</p></td>
+            </tr>
+            <tr>
+              <td><p>Licensed with the Nevada Department of Motor Vehicles (Dealer)</p></td>
+            </tr>
+            </table>
+            <br />
+            <a href="eGiftCards.html"></a>            <p class="mainText">&nbsp; </p></td>
+        </tr>
+        </table></td>
+      <td width="33%" valign="top"><table width="314"border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="460" valign="top"><div align="center"></div>
+            <table width="286" height="100" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="286" bgcolor="#000000"><table width="100%" border="0" cellspacing="5">
+                  <tr>
+                    <td height="38"><strong class="rightBlueheader">AFFILIATE PROGRAM</strong><br />
+                      <strong class="mainText">MAKE COMMISSIONS!</strong></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td><table width="289" border="0" cellspacing="5">
+                  <tr>
+                    <td><hr size="1" /></td>
+                  </tr>
+                  <tr>
+                    <td width="277"><div align="justify"><span class="mainText">Our Affiliate Program allows you to add a banner to your personal or business website and for each booking a commission is paid directly to you. You also have the ability to track your own results.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td class="viewInventory"><a href="Affiliates/Affiliates.php">LEARN MORE</a></td>
+              </tr>
+            </table>
+            <br />
+            <table width="290" height="100" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="277" bgcolor="#000000"><table width="100%" border="0" cellspacing="5">
+                  <tr>
+                    <td><strong class="rightBlueheader">VEGAS LOCALS</strong><br />
+                      <strong class="mainText">LEARN ABOUT OUR DISCOUNTS</strong></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="5">
+                  <tr>
+                    <td><hr size="1" /></td>
+                  </tr>
+                  <tr>
+                    <td width="272"><div align="justify"><span class="mainText">Las Vegas hereâs your chance to be rewarded for living in the City of Neon! Vegas is our home and we are proud of it and want to show it by offering localâs great discounts, incentives and packages.&nbsp;&nbsp;</span><br />
+                    </div></td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td class="viewInventory"><a href="vegasLocals.html">LEARN MORE</a></td>
+              </tr>
+            </table>
+            <br />
+            <img src="images/holiday/mayor.jpg" width="287" height="491" /><br /></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+<!-- InstanceEndEditable --></div>
+<div class="footer" id="footer">
+  <div align="center"><a href="https://www.vegasluxuryrides.com/rentalVehicles.php">EXOTIC CAR RENTALS LAS VEGAS</a> | <a href="https://www.vegasluxuryrides.com/aboutUs.html">ABOUT US</a> |<a href="https://www.vegasluxuryrides.com/rentalPolicy.html"> RENTAL POLICY</a> | <a href="https://www.vegasluxuryrides.com/vipLounge.html">VIP LOUNGE</a> | <a href="https://www.vegasluxuryrides.com/contactUs.html">CONTACT US</a></div>
+</div>
+</div>
+<div class="weblex" id="weblex">
+  <div align="center"><br />
+  DESIGN BY: WEBLEX, <a href="http://www.weblex.biz" target="_blank">LOS ANGELES WEB DESIGN</a></div>
+</div>
+<div class="footer-links" style="width:960px;  margin:0 auto; float:none;">
+<p style="text-transform:uppercase; text-align:center; font-family:Arial, Helvetica, sans-serif;"><a href="las-vegas-lamborghini-rentals/index.php">las vegas lamborghini rentals</a> | <a href="las-vegas-ferrari-rentals/index.php">las vegas ferrari rentals</a> | <a href="las-vegas-mercedes-rentals/index.php">las vegas mercedes rentals</a> | <a href="las-vegas-porsche-rentals/index.php">las vegas porsche rentals</a> | <a href="las-vegas-bmw-rentals/index.php">las vegas bmw rentals</a> | <a href="las-vegas-luxury-car-rentals/index.php">las vegas luxury car rentals</a></p></div>
+
+</div>
+</body>
+<!-- InstanceEnd --></html>

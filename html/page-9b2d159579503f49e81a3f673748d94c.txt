@@ -1,0 +1,4187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	
+	
+		<title>Motorcycle & Automotive Collectors' Auction - The Gallery at Knotty Pine</title>	
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+				<meta name="ROBOTS"			content="INDEX,FOLLOW" />
+			
+				<meta name="DESCRIPTION"	content="Bid online, view images and see past prices for Motorcycle & Automotive Collectors' Auction. Artfact is the world's largest marketplace of items at auction, live and online!" />
+			
+			<meta name="KEYWORDS"		content="" />
+			
+	<script type="text/javascript">
+		//<![CDATA[
+		window.onloads = new Array();
+		window.onload = function() { for( var i=0; i<window.onloads.length; i++ ) window.onloads[i](); }
+
+		function openWin( windowURL, windowName, windowFeatures ) { 
+			return window.open( windowURL, windowName, windowFeatures ) ; 
+		} 
+		function getCHP(tokenName)
+			{
+			return window.open('http://www.artfact.com/artfact/viewCH.cfm?tokenName=' + tokenName, 'Help', 'width=620, height=475, left=10, top=10, scrollBars, resizable');
+			}
+		
+		// Opener for demo
+		function openindex() {
+			window.open ("/wwwImages/flash/artfact-demo.html","mywindow","resizable=0,menubar=0,status=0,toolbar=0,resizable=0,height=623,width=800");
+		}
+		
+		//]]> 
+	</script>
+	
+	
+		<link rel="stylesheet" type="text/css" href="/styles/rdHome_4.17_.css" />
+		<link rel="stylesheet" type="text/css" href="/styles/header_4.17_.css" />
+			<!--<link rel="stylesheet" type="text/css" href="/styles/rdHome.min_4.17_.css" />-->
+		<!--[if gte IE 7]>
+			<link rel="stylesheet" type="text/css" href="/styles/ie7_4.17_.css" />
+		<![endif]-->
+		<!--[if lt IE 7]>
+			<link rel="stylesheet" type="text/css" href="/styles/ie6_4.17_.css" />
+		<![endif]-->
+		<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+	
+	<script type="text/javascript" src="/lib/afjs/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript">var J = jQuery.noConflict();</script>
+	
+
+	<script type="text/javascript">
+		var 	isLoggedIn_slider = false;
+	</script>
+	<script type="text/javascript" src="/lib/afjs/custom_4.17_.js"></script>
+	
+
+	
+	
+	<script>
+		_udn = ".artfact.com";
+	</script>
+	
+	<!--[if IE 6]>
+		<script type="text/javascript" src="/lib/afjs/IE6_images_4.17_.js"></script>
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Artfact.com Upcoming Auctions" href="http://www.artfact.com/rss-upcoming-auctions.xml" />
+	<link rel="stylesheet" href="/styles/print_4.17_.css" type="text/css" media="print" />
+	<!--[if IE]>
+		<script src="/lib/afjs/html5shiv_4.17_.js"></script><![endif]-->
+		
+
+		<script src="/lib/afjs/jquery.dotdotdot-1.5.4-packed_4.17_.js" type="text/javascript"></script> 
+		<script type="text/javascript">
+			function flyoutEventBinder() {
+				J("div.lot a.toggleflyout, div.lotDetails a.toggleflyout").click(function(event) {
+					event.stopPropagation();
+					var isVisible = J(this).next(".flyout").is(":visible");
+					
+					J("div.lot div.flyout").hide();
+					J("div.lotDetails div.flyout").hide();
+					J("div.bidstatusBox div.flyout").hide();
+					
+					if (isVisible) {
+						J(this).next(".flyout").hide();
+					} else {
+						J(this).next(".flyout").show();
+					}
+				});
+				J("div.lot a.flyoutclose, div.lotDetails a.flyoutclose").click(function() {
+					J(this).parent().hide();
+				});
+				J("div.lot div.flyout, div.lotDetails div.flyout").click(function(event) {
+					event.stopPropagation();
+				});
+				J(document).click( function(){
+					J("div.lot div.flyout, div.lotDetails div.flyout, div.bidstatusBox div.flyout").hide();
+				});
+			}
+			function overlayEventBinder() {
+				J("div.bidstatusBox a.toggleflyout").click(function(event) {
+					event.stopPropagation();
+					var isVisible = J(this).next(".flyout").is(":visible");
+					
+					J("div.lot div.flyout").hide();
+					J("div.lotDetails div.flyout").hide();
+					J("div.bidstatusBox div.flyout").hide();
+					
+					if (isVisible) {
+						J(this).next(".flyout").hide();
+					} else {
+						J(this).next(".flyout").show();
+					}
+				});
+				J("div.bidstatusBox a.flyoutclose").click(function() {
+					J(this).parent().hide();
+				});
+				J("div.bidstatusBox div.flyout").click(function(event) {
+					event.stopPropagation();
+				});
+			}
+			
+			J(document).ready(function() {
+				flyoutEventBinder();
+				J("input#bidAmt").each(function() {initializeGhostText(J(this));}).focus(ghostTextFocus).blur(ghostTextBlur);
+				
+				J('.lotname.truncate').dotdotdot({height:44});
+				J('p.description.lotdesc').dotdotdot({height:42});
+				J('p.description.condition').dotdotdot({height:28});
+			});
+			jQ(window).load(function() {
+				vertCenterImages('div.photo>img', 98);
+				vertCenterImages('#auctionDesc .auctionImg>img', 158);
+			});
+			
+			function checkBid(formElem) {
+				var bidAmt = jQ('#bidAmt', formElem);
+				if (bidAmt.val() == bidAmt.attr("ghost")) {
+					bidAmt.val('');
+				}
+				return true;
+			}
+		</script>
+	<meta name='google-translate-customization' content='5fa8327513959e0f-54c350b4dbfa37cc-gdf712377b14547dc-f'></meta><link href="/styles/keywords-min_4.17_.css" rel="stylesheet" type="text/css" /><link href="/styles/alertsMod-min_4.17_.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			J(document).ready(function() {
+				J(".toggleContact").click(function(event) {
+					event.preventDefault();
+					J(".sessionContact").toggle();
+					J(".toggleContact").toggle();
+				});
+				J("input#catalogSearchingTXT").each(function() {initializeGhostText(J(this));}).focus(ghostTextFocus).blur(ghostTextBlur);
+			});
+			//<![CDATA[
+			function showHideLot(section)
+				{
+				theText = document.getElementById(section + "Text");
+				theToggle = document.getElementById(section + "Toggle");
+				theDiv = document.getElementById(section + "Div");
+				currentState = theText.innerHTML
+				
+				theText.innerHTML = currentState == "Show" ? "Hide" : "Show";
+				theToggle.src = currentState == "Show" ? "/wwwImages/toggleDLminus.gif" : "/wwwImages/toggleDLplus.gif";
+				theDiv.style.display = currentState == "Show" ? "" : "none";
+				}
+			//]]> 
+		</script>
+		
+				<link rel="next" href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=51">
+			
+	<script type="text/javascript">
+		var isRobot = false // used in incrementImageCounter function
+		var doSetNotify;
+		function openInfo(windowURL)
+			{
+			return window.open(windowURL, 'FAQ', 'width=700, height=425, left=10, top=10, scrollBars, resizable');
+			} 
+
+		function setNotify(){
+			var method = "saveReminderNotification",
+				notification = jQ("input[name='notification']:checked").val(),
+				notificationMinutes = jQ("#notificationMinutes").val(),
+				approvalRef = jQ("input[name='approvalRef']").attr("value");
+
+			notification ? notification = 1 : notification = 0;
+			
+			doWatchLot = jQ.getJSON(
+				'/lib/jQueryObj/jFineArtObj.cfc?wsdl',
+					{ 
+					   method : method,
+					   notification : notification,
+					   notificationMinutes : notificationMinutes,
+					   approvalRef : approvalRef
+					},
+				function()
+				   {
+						closeIt();
+						
+				   }
+        );			
+					
+			return false;
+		}
+
+		jQ(function(){
+			jQ("#mask").fadeIn("slow",function(){
+					jQ("#rfaTYContent").fadeIn("slow");	
+				});
+			//jQ("#rfaTYContent p.close a").live("click",closeIt);
+			jQ("#rfaTYContent input.submit").live("click",setNotify);
+			
+			jQ(".af_moreImages").live("click", function() {
+				
+				var 	splitID = jQ(this).attr("id").split("_"),
+						houseRef = splitID[1],
+						lotRef = splitID[2];
+				
+				getLotPhotos(houseRef, lotRef);
+				
+			});
+		});
+		
+	</script>
+	
+	<script src="/lib/syndicate/colorbox.min.js" type="text/javascript"></script> 
+	<script src="/lib/syndicate/carouFredSel-5.3.0.min.js" type="text/javascript"></script>
+	<script src="/lib/afjs/af_module_ModalGallery_4.17_.js" type="text/javascript"></script>
+	<script src="/lib/afjs/lotDetails_4.17_.js" type="text/javascript"></script>
+	<script src="/lib/afjs/af_module_ModalAlertsRegistration.min_4.17_.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="/styles/searchCatalogs_4.17_.css" />
+	
+	
+	<link rel="stylesheet" href="/styles/lotDetails.min_4.17_.css" type="text/css" media="screen" /> 
+
+	<link href="/styles/translate_4.17_.css" rel="stylesheet" type="text/css" />	
+	<link rel="stylesheet" type="text/css" href="/styles/catalog_4.17_.css" />	
+	
+	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="/styles/IE8_4.17_.css">
+	<![endif]-->
+	</head>
+
+	<body>
+
+<div id="adWrapper">
+	<div id="header-ad">
+	</div>
+</div>
+<div id="container2">
+	
+	<div id="overlayWrapper" style="display:none; z-index:2;" >
+		<div id="sliderOverlay"></div>
+	</div>
+	<div id="sliderEmailCapture">
+		<div class="closeBtn">
+			
+		</div> 
+
+		<p class="sliderEmailHeader">Auctions in your inbox!</p>
+		<p class="secondHeader">Get notified about the latest local and online auctions.</p>
+
+		<fieldset id="sliderEmailForm">
+			<label>enter email address</label>
+			<input id="sliderCapture" class="defaultText email_user" name="Email Address"  type="text"/>
+			<input id="companyRefSlider" type="hidden" name="companyRef" value="1" />
+			<input id="sliderSubmit" src="/wwwImages/GoButton.jpg" class="submitBtn" type="submit" value="" />
+		</fieldset>
+		
+		<div class="emailCapSecContainer" style="display:none"><p class="emailCapSec"></p></div>
+		<div class="clear1"></div>
+		<p id="slidePolicy" class="privacy">We value your privacy! <a TARGET="_blank" href="/agreements/privacy.cfm">Click here</a> to read our policies.</p>
+
+	</div>
+	
+
+	<div id="container-inner" class="clearfix">
+	
+		<header id="headerWrapper">
+			
+			<div id="branding">
+				<div id="logo">
+					<a href="http://www.artfact.com"><span>Artfact: Bid online in live auctions - Antique, Collectible & Estate Auctions</span></a>
+				</div>
+				
+
+					<div id="userLinks">
+						
+							<a href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">Create Account</a>
+							<a class="openpanel login" href="#" rel="nofollow" id="panel_button">Log In</a>
+							<div class="flyout">
+								<div id="panelLogin">
+									<form id="loginInfo" action="https://secure.artfact.com/signin/signIn.a.cfm" method="post">
+										<a href="#" class="close nowhere closer">X</a>
+										<label for="username">Username</label>
+										<input type="text" id="mbrUName" class="" name="mbrUName" value="" />
+										<span class="error">Your username is incorrect, please try again.</span>
+										<label for="password">Password</label>
+										<input type="password" id="password" class="" name="password" value="" />
+										<span class="error">Your password is incorrect, please try again.</span>
+										<a class="forgot nowhere" href="#" id="forgotpassword" alt="Forgot Password">Forgot your username or password?</a>
+										<input type="submit" value="Log In" id="loginbtn" class="greenbutton" />
+										<a class="clear" href="https://secure.artfact.com/services/userInfo.cfm?type=register">Not a member? Create your account today!</a>
+										<input type="hidden" name="goto" value="/catalog/searchLots.cfm?scp=c&catalogRef=6HDKA1KWX2" />
+										<input type="hidden" name="gotoSec" value="false" />
+									</form>			
+								</div>
+								<div id="panelForgotpass">
+									<form id="forgotPassword" action="https://secure.artfact.com/signin/mailpwd.cfm" method="post">	
+										<a href="#" class="close nowhere closer">X</a>	
+										<h4>Forgot your username or password?</h4>
+										<label for="emailForgot">Enter Your Email</label>
+										<input type="text" class="" name="mbrEmail" id="email" value="" />
+										<input class="greenbutton" type="submit" name="sendForgotPwd" id="sendForgotPwd" value="Request Info" /><a class="cancel nowhere" id="cancelForgotPwd" href="#">Cancel</a>	
+										<a class="clear" href="https://secure.artfact.com/services/userInfo.cfm?type=register">Not a member? Create your account today!</a>
+									</form>
+								</div>	
+							</div>						
+						
+							
+					</div>
+				
+			</div>		
+			
+				<nav id="nav">
+					<ul>
+						<a href="http://www.artfact.com" alt="Upcoming Live Auctions" title="Upcoming Live Auctions"><li>Auctions</li></a>
+						<a href="http://www.artfact.com/features/selectHouse.cfm" alt="Auctioneer Directory" title="Auctioneer Directory"><li>Auctioneer Directory</li></a>
+						<a href="http://www.artfact.com/features/selectArtist.cfm" alt="Artist Database" title="Artist Database"><li>Artist Database</li></a>
+						<a href="http://www.artfact.com/catalog/advancedSearch.cfm?srchScope=p" alt="Search the Auction Price Archive" title="Search the Auction Price Archive"><li>Auction Price Archive</li></a>
+						
+							<a href="http://www.artfact.com/features/collectibleGuide.cfm" alt="Browse the Collector's Guide" title="Browse the Collector's Guide"><li>Collector's Guide</li></a>
+						
+					</ul>
+					<a href="http://www.artfact.com/artfact/help.cfm"><div>Help</div></a>
+				</nav>
+				<div id="searchBar">
+					
+						<span class="calltoaction">Bid online in live auctions around the world.</span>
+					
+
+					<div id="searchform">
+						<form method="post" action="http://www.artfact.com/catalog/searchLots.cfm" name="searchFormHead"><div id="formContainer"><div class="selectlist"><select searchfield="headerSearchText" id="headerSearchType" name="srchScope"><option selected ghost="Search from over 100,000 items available at auction now" value="u">Upcoming</option><option ghost="Search over 62 million auction price results" value="p">Archive</option></select></div><input name="withAll" value="Search from over 100,000 items available at auction now" searchtype="headerSearchType" id="headerSearchText" type="text"></div><input alt="Click to Search" value="Search" name="userSubmit" class="search" type="submit"/><input value="1" name="resetPage" type="hidden" /><input value="1" name="alFirst" type="hidden" /><input value="1" name="ns" type="hidden" /></form></div><a href="http://www.artfact.com/catalog/advancedSearch.cfm?srchScope=u" class="header-right">Advanced</a>
+				</div>
+				
+					<div id="breadCrumb" >
+						<ul>
+							
+									<li>
+										<a href="http://www.artfact.com">Auctions</a>
+									</li>
+								
+									<li>
+										<a href="http://www.artfact.com/features/selectHouse.cfm?lu=T&tab=2">Auctioneer Directory</a>
+									</li>
+								
+									<li>
+										<a href="http://www.artfact.com/auction-house/the-gallery-at-knotty-pine-y4ydhaxym6">The Gallery at Knotty Pine</a>
+									</li>
+								
+									<li>
+										Motorcycle & Automotive Collectors' Auction
+									</li>
+								
+						</ul>
+					</div>
+				
+		</header>
+	
+
+<script>
+J(document).ready(function(){
+	J("#grayBox, #close").live("click", function() {
+		J("#grayBox").fadeOut('fast');
+		J("#auctionDescBox").hide();
+		
+		});		
+	});
+	
+function showAuctionDesc(){
+	J("#grayBox").fadeTo('fast', 0.5);
+	J("#auctionDescBox").show();	
+	var titleHeight = J('#overlayBoxHeader').height();	
+	var boxHeight = 342	- titleHeight;
+	J('#auctionDescContent').height(boxHeight);			
+	}
+	
+</script>
+
+<div id="contentContainer" class="catalog">
+	<div id="main" class="header-left">
+
+
+		
+			<!-- google translate include -->
+			
+		<div id="translateContainer" >
+			<div id="translateMenu" >
+				<table width=100%>
+					<tr>
+						<td style="vertical-align:middle;">
+				
+								<div class="disclaimer">Artfact cannot guarantee the accuracy of translations through Google Translate and disclaims any responsibility for inaccurate translations.</div>
+					
+						</td>
+						<td style="vertical-align:middle;">
+								<div id="google_translate_element_cont">
+									<div id="google_translate_element"></div>
+								</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+			<!-- end google translate include -->
+			<script type="text/javascript">
+				var 	isLoggedIn = false,
+						memberID = 0,
+						hasKeywordsAlerts = false,
+						scopeSearchQuery = 'c',
+						withAllSearchQuery = '',
+						isSearchFromNavBar = 0
+			</script>
+				
+
+		<div id="priceVerInfo" class="clearfix tooltip"></div>
+		
+		
+				<div id="errorDiv" class="cssErrorBody" style="display:none;"></div>
+			
+			
+			<div id="catalogInfo" class="clear">
+				<div id="translateToggle" >Show translation options</div>						
+			
+			
+				
+					<!-- Catalog View -->
+				
+								
+						<!-- Catalog Found -->	
+						
+					
+
+						<div id="sessionDetails">
+			
+							<h1 class="sessiontitle header-left">Motorcycle & Automotive Collectors' Auction</h1>
+						
+							<h3 class="clear auctionhouse header-left"><a href="http://www.artfact.com/auction-house/the-gallery-at-knotty-pine-y4ydhaxym6">by The Gallery at Knotty Pine</a></h3>
+							
+							
+								<span class="platinum normal header-right nudgeUp">Platinum House</span>
+									
+						</div>
+						
+							<div class="lots header-left clear tabSubhead">
+								<br>
+								350 lots  | 323 with images
+								
+							</div>							
+						
+
+						<div id="auctionDesc">
+											
+							
+								<div class="auctionImg clear header-left">
+									<img src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-C30838785.jpg?h=59455E44C30430478A89D45F1276C74E&cn=AFTOKEN-PROD" alt="" onload="javascript:vertCenterImage(this, 158);">
+								</div>
+							
+										
+							
+						
+							<div class="auctioninfo header-left ">						
+								<p class="auctiondate">September 29, 2012</p>
+								
+									<span class="auctiontype liveauction normal">Live Auction</span>
+								
+								
+								<div class="social clear header-right">
+								<span id="addThis" class="header-right"> 
+										<div class="addthis_toolbox addthis_default_style"> 
+											<a class="addthis_button_preferred_4"></a> 
+											<a class="addthis_button_preferred_2"></a> 
+											<a class="addthis_button_compact"></a> 
+											<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> 
+										</div> 
+										<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=artfact"></script> 
+									</span>
+								</div>			
+								<div class="auctionaddress clear normal">
+									<div class="sessionContactAddress">
+					<p class="getSaleLocationHTML">Route 10, Box 96</p>
+				
+					<p class="getSaleLocationHTML">
+					West Swanzey, NH, 03469 USA 
+					</p>
+				
+					<p class="getSaleLocationHTML">Phone: (603)-352-2313</p>
+				
+					<p class="getSaleLocationHTML">Fax: 603-352-5019</p>
+				
+					<p class="getSaleLocationHTML">Email: <a href="mailto:kpa@inc-net.com?subject=A question from Artfact.com">kpa@inc-net.com</a></p>
+				</div>	 
+								</div>
+									
+																
+							</div>							
+						</div>	
+						
+	
+							
+						
+						<div id="lotFilters" class="clear header-left">
+							<div id="lotFilter">
+								
+									<span id="lotCount">350 Lots</span>
+								
+								<form action="http://www.artfact.com/catalog/searchLots.cfm" method="post">
+									<input type="hidden" name="resetPage" 	value="1" />
+									<input type="hidden" name="srchScope"	value="c" />
+									<input type="hidden" name="showRows"	value="50" />
+									<input type="hidden" name="catalogRef"	value="6HDKA1KWX2" />
+									<input type="hidden" name="houseRef"	value="" />
+									<input type="hidden" name="houseLetter"	value="A" />
+									<input type="hidden" name="artistRef"	value="" />
+									<input type="hidden" name="areaID"		value="" />
+									<input type="hidden" name="countryID"	value="" />
+									<input type="hidden" name="regionID"	value="" />
+									<input type="hidden" name="stateID"		value="" />
+									<input type="hidden" name="fromDate"	value="0" />								
+									<input type="hidden" name="toDate"		value="0" />
+									<input type="hidden" name="lessThan"	value="0" />
+									<input type="hidden" name="moreThan"	value="0" />				
+									<input type="hidden" name="withAll"		value="" />
+									<input type="hidden" name="withPhrase"	value="" />
+									<input type="hidden" name="withOne"		value="" />
+									<input type="hidden" name="notWith"		value="" />
+									<input type="hidden" name="upcoming"	value="0" />
+									<input type="hidden" name="resultsPosted"	value="" />
+									<input type="hidden" name="hasImage"	value="" />
+									<input type="hidden" name="crossSell"	value="0" />
+																
+									<label for="orderBy" class="normal sortlabel">Sort by:</label>
+									
+									<select name="orderBy" id="orderBy" onchange="this.form.submit();">
+										
+										<option value="1a" selected="selected">Lots: Low to High</option>
+										<option value="1d">Lots: High to Low</option>
+										
+											<option value="3a">Price: Low to High</option>
+											<option value="3d">Price: High to Low</option>
+											<option value="4a">Location: A to Z</option>
+											<option value="4d">Location: Z to A</option>
+											<option value="5a">Auction House: A to Z</option>
+											<option value="5d">Auction House: Z to A</option>
+										
+									</select>	
+									
+									<input id="thisCHX" type="checkbox" name="imagePref" value="1"  onchange="this.form.submit();"><label for="thisCHX" class="normal rightLabel">Lots with images first</label>							
+									
+									
+									
+										<input type="hidden" name="remember" value="0" />
+									
+									
+								</form>
+							
+								
+							</div>
+													
+							
+							
+							
+			<div class="pagination normal clear " style="text-align:right;">			
+				
+						<span class="prev inactive page"></span>
+					
+									<span class="inactive">&nbsp; 1</span>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=51" class="page">2</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=101" class="page">3</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=151" class="page">4</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=201" class="page">5</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=251" class="page">6</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=301" class="page">7</a>
+								
+						<span class="next inactive page"> &nbsp; | &nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=51" class="next page">Next &raquo;</a></span>	
+									
+			</div>
+		
+													
+						</div><!-- close lotFilters -->
+					
+	
+			</div><!-- close catalogInfo -->				
+				
+			
+			
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_05EEC5688C" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837257_th.jpg" class="af_moreImages" border="0" alt="1914 ENAMELED MASSACHUSETTS LICENSE PLATE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/1914-enameled-massachusetts-license-plate-1-c-05eec5688c" >Lot 1: 1914 ENAMELED MASSACHUSETTS LICENSE PLATE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					1914 MA ENAMELED LICENSE PLATE #48488 W/ WHITE BACKGROUND & BLUE LETTERS & NUMERALS-STAMPED ON BACK "ING-RICH MFG. CO. PORCELAIN AUTO TAG-BEAVER FALLS PA" (5 1/2" X 14")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR CHIP LOSS TO ENAMEL
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/1914-enameled-massachusetts-license-plate-1-c-05eec5688c" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_80FC60A7DE" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836687_th.jpg" class="af_moreImages" border="0" alt="PR. 1909 ENAMELED MASSACHUSETTS LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-1909-enameled-massachusetts-license-plates-2-c-80fc60a7de" >Lot 2: PR. 1909 ENAMELED MASSACHUSETTS LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. 1909 MA ENAMEL LICENSE PLATES #12933 W/ BLUE BACKGROUND & WHITE LETTERS & NUMERALS-STAMPED ON BACK BALT. ENAMEL & NOVELTY CO. (5 1/2" X 14")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR CHIPPING & CRAZING TO ENAMEL
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-1909-enameled-massachusetts-license-plates-2-c-80fc60a7de" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_505BF4308E" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836183_th.jpg" class="af_moreImages" border="0" alt="EARLY 20TH CENT. ENAMELED LICENSE PLATE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-20th-cent.-enameled-license-plate-2a-c-505bf4308e" >Lot 2A: EARLY 20TH CENT. ENAMELED LICENSE PLATE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EARLY 20TH CENT. ENAMEL LICENSE PLATE #T-118 W/ WHITE BACKGROUND & BLACK LETTERING & NUMERALS (6" X 12")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						CHIPS & LOSSES TO ENAMEL, OXIDATION
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-20th-cent.-enameled-license-plate-2a-c-505bf4308e" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_AE11F23402" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836186_th.jpg" class="af_moreImages" border="0" alt="PR. MID 20TH CENT. NEW JERSEY LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-mid-20th-cent.-new-jersey-license-plates-2b-c-ae11f23402" >Lot 2B: PR. MID 20TH CENT. NEW JERSEY LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. MID 20TH CENT. NJ LICENSE PLATES #419-BDX W/ BEIGE BACKGROUNDS & RAISED BLACK LETTERING & NUMERALS (6" X 12")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, DENTS & LOSSES TO PAINT
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-mid-20th-cent.-new-jersey-license-plates-2b-c-ae11f23402" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_D24C999FDC" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836187_th.jpg" class="af_moreImages" border="0" alt="(2) MISC. EARLY 20TH CENT. ENAMELED MASSACHUSETTS LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/2-misc.-early-20th-cent.-enameled-massachusetts-2c-c-d24c999fdc" >Lot 2C: (2) MISC. EARLY 20TH CENT. ENAMELED MASSACHUSETTS LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					(2) MISC.  EARLY 20TH CENT. ENAMEL MA LICENSE PLATES: (1) 1915 LICENSE PLATE #10200 W/ BLUE BACKGROUND & WHITE LETTERING & NUMERALS (5 1/2" X 14") & (1) 1910 LICENSE PLATE #4106 W/ WHITE BACKGROUND & BLUE LETTERING & NUMERALS & BALT. ENAMEL & NOVELTY STAMP ON BACK (5 1/2" X 12")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						BOTH W/ ENAMEL LOSSES & CHIPPING, RUST & OXIDATION, WEAR
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/2-misc.-early-20th-cent.-enameled-massachusetts-2c-c-d24c999fdc" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_87EBDAB42E" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836175_th.jpg" class="af_moreImages" border="0" alt="(5) MISC. 1920'S NEW HAMPSHIRE LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/5-misc.-1920-s-new-hampshire-license-plates-2d-c-87ebdab42e" >Lot 2D: (5) MISC. 1920'S NEW HAMPSHIRE LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (5) MISC. 1920'S NH LICENSE PLATES: (1) PR. 1929 LICENSE PLATES #4-387 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS, (1) SINGLE 1929 PLATE #28-292 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS, (1) SINGLE 1923 PLATE #22-995 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS & (1) SINGLE 1928 PLATE #76-673 W/ GREEN BACKGROUND & RAISED WHITE LETTERING & NUMERALS (PAINTED BLACK) (EA. 6" X 13 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						ALL W/ DENTS, OXIDATION & RUST, WEAR
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/5-misc.-1920-s-new-hampshire-license-plates-2d-c-87ebdab42e" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_E0CDAB314B" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836177_th.jpg" class="af_moreImages" border="0" alt="PR. EARLY 20TH CENT. VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-vermont-license-plates-2e-c-e0cdab314b" >Lot 2E: PR. EARLY 20TH CENT. VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. EARLY 20TH CENT. VT LICENSE PLATES #4502 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS-UNDATED (PROBABLY 1910'S-1920'S)(6" X 13 3/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR & OXIDATION & RUST
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-vermont-license-plates-2e-c-e0cdab314b" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_86256F9CEC" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836179_th.jpg" class="af_moreImages" border="0" alt="(3) MISC. MID 20TH CENT. NEW ENGLAND LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/3-misc.-mid-20th-cent.-new-england-license-plat-2f-c-86256f9cec" >Lot 2F: (3) MISC. MID 20TH CENT. NEW ENGLAND LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (3) MISC. MID 20TH CENT. NEW ENGLAND LICENSE PLATES: (1) 1939 MA  LICENSE PLATE #190-617 W / GREEN BACKGROUND & RAISED WHITE LETTERING & NUMERALS (6 1/2" X 13 1/2"), (1) 1940 VT LICENSE PLATE #12-050 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS (5 7/8" X 12 3/8") & (1) LICENSE PLATE #X7-926 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS (5 7/8" X 12 3/8")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						ALL W/ WEAR, OXIDATION & RUST
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/3-misc.-mid-20th-cent.-new-england-license-plat-2f-c-86256f9cec" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_8AD44E80C3" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836181_th.jpg" class="af_moreImages" border="0" alt="PR. UNUSED 1930 VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-unused-1930-vermont-license-plates-2g-c-8ad44e80c3" >Lot 2G: PR. UNUSED 1930 VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. UNUSED 1930 VT LICENSE PLATES #79-237 W/ MUSTARD YELLOW BACKGROUND & RAISED BURGUNDY LETTERING & NUMERALS (6" X 12 1/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR RUST ON EDGES
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-unused-1930-vermont-license-plates-2g-c-8ad44e80c3" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_CE9CF3A59E" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836198_th.jpg" class="af_moreImages" border="0" alt="PR. UNUSED 1930 VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-unused-1930-vermont-license-plates-2h-c-ce9cf3a59e" >Lot 2H: PR. UNUSED 1930 VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. UNUSED 1930 VT LICENSE PLATES #79-238 W/ MUSTARD YELLOW BACKGROUND & RAISED BURGUNDY LETTERING & NUMERALS (6" X 12 1/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR RUST ON EDGES
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-unused-1930-vermont-license-plates-2h-c-ce9cf3a59e" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_E4026EDEBE" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836200_th.jpg" class="af_moreImages" border="0" alt="PR. MID 20TH CENT. CONNECTICUT COMMERCIAL LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-mid-20th-cent.-connecticut-commercial-license-2i-c-e4026edebe" >Lot 2I: PR. MID 20TH CENT. CONNECTICUT COMMERCIAL LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. MID 20TH CENT.  CT COMMERCIAL LICENSE PLATES W/ BLACK BACKGROUND & RAISED SILVER LETTERING & NUMERALS W/ 1957 YEAR TABS (6 3/8" X 11 1/8")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, RUST & OXIDATION & LOSSES ROUND MOUNTING HOLES
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-mid-20th-cent.-connecticut-commercial-license-2i-c-e4026edebe" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_A658B1A5D9" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836202_th.jpg" class="af_moreImages" border="0" alt="(3) MISC. 1920'S VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/3-misc.-1920-s-vermont-license-plates-2j-c-a658b1a5d9" >Lot 2J: (3) MISC. 1920'S VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (3) MISC. 1920'S VT LICENSE PLATES: (2) 1925 LICENSE PLATES W/ GREEN BACKGROUNDS & RAISED YELLOW LETTERING & NUMERALS-(1) #59-272 & (1) #29-406 & (1) 1920 OXIDIZED GREEN PLATE #9-660 W/ RAISED LETTERING & NUMERALS (EA. 4 1/2" X 12")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, DENTS, OXIDATION & RUST
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/3-misc.-1920-s-vermont-license-plates-2j-c-a658b1a5d9" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_17239F162C" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836204_th.jpg" class="af_moreImages" border="0" alt="(2) EARLY 20TH CENT. ENAMELED NEW HAMPSHIRE LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/2-early-20th-cent.-enameled-new-hampshire-licen-2k-c-17239f162c" >Lot 2K: (2) EARLY 20TH CENT. ENAMELED NEW HAMPSHIRE LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					(2) MISC. EARLY 20TH CENT. ENAMEL NH LICENSE PLATES: (1) 1917 PLATE W/ WHITE BACKGROUND & GREEN LETTERING & NUMERALS & (1) 1914 PLATE W/ GREEN BACKGROUND & WHITE LETTERING & NUMERALS W/ BALTIMORE ENAMEL & NOVELTY STAMP ON BACK (BOTH 6" X 13 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						ENAMEL LOSSES, WEAR, OXIDATION & RUST, GREEN PLATE W/ HOLE IN MIDDLE
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/2-early-20th-cent.-enameled-new-hampshire-licen-2k-c-17239f162c" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_5E58751F4D" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836189_th.jpg" class="af_moreImages" border="0" alt="(3) MISC. EARLY 20TH CENT. VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/3-misc.-early-20th-cent.-vermont-license-plates-2l-c-5e58751f4d" >Lot 2L: (3) MISC. EARLY 20TH CENT. VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (3) MISC. EARLY 20TH CENT. VT LICENSE PLATES: (1) 1919 PLATE #9873 W/ WHITE BACKGROUND & RAISED BLUE LETTERING & NUMERALS & (1) PR.  UNDATED PLATES #4502 W/ BLACK BACKGROUND & RAISED LETTERING & NUMERALS (1910'S-1920'S) (EA. 6" X 15 1/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						ALL W/ WEAR, RUST & OXIDATION
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/3-misc.-early-20th-cent.-vermont-license-plates-2l-c-5e58751f4d" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_92E19FC9D8" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836191_th.jpg" class="af_moreImages" border="0" alt="(2) PRS. 1941 VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/2-prs.-1941-vermont-license-plates-2m-c-92e19fc9d8" >Lot 2M: (2) PRS. 1941 VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					(2) PRS. 1941 VT LICENSE PLATES: (1) PR. PLATES #1-192 W/ BLUE BACKGROUNDS & WHITE/SILVER RAISED LETTERING & NUMERALS & (1) SIMILAR PR. PLATES #1-191 W/ BLUE BACKGROUNDS & WHITE/SILVER RAISED LETTERING & NUMERALS (EA. 6" X 12 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, LOSSES TO PAINT, OXIDATION
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/2-prs.-1941-vermont-license-plates-2m-c-92e19fc9d8" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_62590FEE26" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836193_th.jpg" class="af_moreImages" border="0" alt="(3) MISC. MID 20TH CENT. NEW HAMPSHIRE LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/3-misc.-mid-20th-cent.-new-hampshire-license-pl-2n-c-62590fee26" >Lot 2N: (3) MISC. MID 20TH CENT. NEW HAMPSHIRE LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (3) MISC. MID 20TH CENT. NH LICENSE PLATES: (1) 1946 PLATE #3005 W/ WHITE BACKGROUND & RAISED GREEN LETTERING & NUMERALS, (1) 1947 PLATE #1775 W/ GREEN BACKGROUND & WHITE RAISED LETTERING & NUMERALS & (1) 1948 PLATE #5625 W/ WHITE BACKGROUND & GREEN RAISED LETTERING & NUMERALS (EA. 4 1/2&#34; X 10&#34;)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, RUST & OXIDATION, DENTS & LOSSES
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/3-misc.-mid-20th-cent.-new-hampshire-license-pl-2n-c-62590fee26" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_50ED6EC34D" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836332_th.jpg" class="af_moreImages" border="0" alt="PR. EARLY 20TH CENT. ENAMELED LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-enameled-license-plates-3-c-50ed6ec34d" >Lot 3: PR. EARLY 20TH CENT. ENAMELED LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. EARLY 20TH CENT.  ENAMEL LICENSE PLATES #C9837 W/ BLUE BACKGROUND & WHITE LETTERS & NUMERALS (5 1/2" X 17 3/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR ENAMEL CHIPS AROUND MOUNTING HOLES/RIMS, WEAR
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-enameled-license-plates-3-c-50ed6ec34d" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_FFDAB4F47B" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836311_th.jpg" class="af_moreImages" border="0" alt="PR. 1916 ENAMELED CONNECTICUT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-1916-enameled-connecticut-license-plates-3a-c-ffdab4f47b" >Lot 3A: PR. 1916 ENAMELED CONNECTICUT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. 1916 CT ENAMEL LICENSE PLATES #48984 W/ BLACK BACKGROUND & WHITE LETTERS & NUMERALS (5 1/2" X 16 1/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR, ENAMEL CHIPS TO EDGE & OXIDATION TO 1 PLATE
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-1916-enameled-connecticut-license-plates-3a-c-ffdab4f47b" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_C096987AB5" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836309_th.jpg" class="af_moreImages" border="0" alt="1915 ENAMELED VERMONT LICENSE PLATE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/1915-enameled-vermont-license-plate-3b-c-c096987ab5" >Lot 3B: 1915 ENAMELED VERMONT LICENSE PLATE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					1915 ENAMEL VT LICENSE PLATE #4502 W/ WHITE BACKGROUND & BLUE LETTERING & NUMERALS-STAMPED IN CH MFG. CO. PORC. AUTO TAG-BEAVER FALLS PA ON BACK (6" X 15 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, CHIPS & LOSSES TO CENTER, OXIDATION
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/1915-enameled-vermont-license-plate-3b-c-c096987ab5" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_0EADF06E63" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836307_th.jpg" class="af_moreImages" border="0" alt="PR. EARLY 20TH CENT. VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-vermont-license-plates-3c-c-0eadf06e63" >Lot 3C: PR. EARLY 20TH CENT. VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. EARLY 20TH CENT. VT LICENSE PLATES #12045 W/ GREEN BACKGROUND & RAISED LETTERING & NUMERALS (PROBABLY 1910'S-1920'S)(6" X 15 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, OXIDATION & RUST, DENTS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-vermont-license-plates-3c-c-0eadf06e63" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_4C29343BE6" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836320_th.jpg" class="af_moreImages" border="0" alt="1914 ENAMELED VERMONT LICENSE PLATE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/1914-enameled-vermont-license-plate-3d-c-4c29343be6" >Lot 3D: 1914 ENAMELED VERMONT LICENSE PLATE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					1914 ENAMEL VT LICENSE PLATE W/ WHITE BACKGROUND & BLACK LETTERING & NUMERALS (6" X 15 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/1914-enameled-vermont-license-plate-3d-c-4c29343be6" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_BACDBB49E9" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836318_th.jpg" class="af_moreImages" border="0" alt="1917 NEW HAMPSHIRE LICENSE PLATE W/ CUT CORNERS" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/1917-new-hampshire-license-plate-w-cut-corners-3e-c-bacdbb49e9" >Lot 3E: 1917 NEW HAMPSHIRE LICENSE PLATE W/ CUT CORNERS</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					1917 NH LICENSE PLATE #25984 W/ WHITE BACKGROUND, GREEN LETTERING & NUMERALS & CUT CORNERS (6" X 13 1/2")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR, ENAMEL LOSSES & CHIP, OXIDATION
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/1917-new-hampshire-license-plate-w-cut-corners-3e-c-bacdbb49e9" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_82C88F36E3" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30871877_th.jpg" class="af_moreImages" border="0" alt="PR. 1919 VERMONT LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-1919-vermont-license-plates-3f-c-82c88f36e3" >Lot 3F: PR. 1919 VERMONT LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. 1919 VT LICENSE PLATES #9758 W/ WHITE BACKGROUND & BLUE LETTERING & NUMERALS (6&#34; X 15 1/2&#34;)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR, OXIDATION & LOSSES TO PAINT
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-1919-vermont-license-plates-3f-c-82c88f36e3" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_DB30941E16" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836153_th.jpg" class="af_moreImages" border="0" alt="PR. EARLY 20TH CENT. ENAMELED NEW YORK LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-enameled-new-york-license-pl-4-c-db30941e16" >Lot 4: PR. EARLY 20TH CENT. ENAMELED NEW YORK LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					PR. EARLY 20TH CENT. NY ENAMEL LICENSE PLATES #86760 W/ RED BACKGROUND & WHITE LETTERING & NUMERALS-MARKED L & G MFG. CO. ON BACK
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR RIM EDGE CHIPS & LOSSES, SCRATCHES
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/pr.-early-20th-cent.-enameled-new-york-license-pl-4-c-db30941e16" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_9E0D8BCA4B" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837273_th.jpg" class="af_moreImages" border="0" alt="PAINTED ALUMINUM FOREIGN LICENSE PLATE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/painted-aluminum-foreign-license-plate-5-c-9e0d8bca4b" >Lot 5: PAINTED ALUMINUM FOREIGN LICENSE PLATE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					WHITE PAINTED ALUMINUM FOREIGN LICENSE PLATE # OBY276L W/ RIVET APPLIED BLACK LETTERS & NUMERALS & MOLDED RED BORDER (4 1/2" T X 21 3/8" L)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						DENTS, LOSSES TO PAINT, WEAR
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/painted-aluminum-foreign-license-plate-5-c-9e0d8bca4b" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_A88BFAA498" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836708_th.jpg" class="af_moreImages" border="0" alt="(10) MISC. LICENSE PLATES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/10-misc.-license-plates-6-c-a88bfaa498" >Lot 6: (10) MISC. LICENSE PLATES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (10) MISC. LICENSE PLATES: (5) MISC. OVAL GERMAN LICENSE PLATES W/ WHITE BACKGROUNDS & BLACK LETTERS & NUMERALS (2 TRIMMED) & (5) VT LICENSE PLATES: (1) 1955 PLATE, (1) 1956 PLATE, (1) 1961 PLATE & (2) GREEN PLATES (#A95 & #A98) W/ NO YEAR
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, LOSSES, DENTS, ETC.
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/10-misc.-license-plates-6-c-a88bfaa498" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_BF84398B0F" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836336_th.jpg" class="af_moreImages" border="0" alt="EARLY LEATHER NEW YORK LICENSE PLATE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-leather-new-york-license-plate-7-c-bf84398b0f" >Lot 7: EARLY LEATHER NEW YORK LICENSE PLATE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EARLY WHITE PAINTED SEWN LEATHER NY LICENSE PLATE W/ APPLIED MOLDED BLACK NUMERALS #61335 NY W/ RIVETED METAL LOOP & SNAP ATTACHMENTS (6" X 14")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, PAINT LOSSES, MINOR LOSSES TO EDGES, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-leather-new-york-license-plate-7-c-bf84398b0f" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_3177646651" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837529_th.jpg" class="af_moreImages" border="0" alt="(2) MISC. AUTOMOBILE & MOTORCYCLE RELATED CATALOGS" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/2-misc.-automobile-motorcycle-related-catalog-7a-c-3177646651" >Lot 7A: (2) MISC. AUTOMOBILE & MOTORCYCLE RELATED CATALOGS</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					(2) MISC. AUTOMOBILE & MOTORCYCLE RELATED CATALOGS: (1) 1941 29TH INTERNATIONAL INDY 500 OFFICIAL PROGRAM & (1) 1950'S SMITHSONIAN INSTITUTION CATALOG OF AUTOMOBILE & MOTORCYCLE COLLECTION UNITED STATES NATIONAL MUSEUM BULLETIN
+				</p>				
+				
+				<a href="http://www.artfact.com/auction-lot/2-misc.-automobile-motorcycle-related-catalog-7a-c-3177646651" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_50B4F2D348" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837176_th.jpg" class="af_moreImages" border="0" alt="FRAMED EARLY 20TH CENT. READING TIRE ADVERTISING CALENDAR TOP" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/framed-early-20th-cent.-reading-tire-advertising-7b-c-50b4f2d348" >Lot 7B: FRAMED EARLY 20TH CENT. READING TIRE ADVERTISING CALENDAR TOP</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EARLY 20TH CENT. READING TIRE ADVERTISING CALENDAR TOP W/ COLOR LITHO IMAGE OF YOUNG LADY W/ HAT DRIVING A CAR W/ YOUNG GENTLEMAN LOOKING ON-READING AUTO TIRE & VULCANIZING PLANT OPPOSITE B & M STATION READING MA IN A GILT MOLDED WOODEN FRAME W/ BRASS SPANDRELS (11 1/2" X 9 1/2"-SIGHT SIZE)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						CALENDAR TOP ONLY, TACK HOLES, TONING, STAINING, TAPE RESIDUE
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/framed-early-20th-cent.-reading-tire-advertising-7b-c-50b4f2d348" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_AFD0D3B719" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837171_th.jpg" class="af_moreImages" border="0" alt="NATIONAL MOTORIST ASSOCIATION OF ILLINOIS BRASS PLAQUE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/national-motorist-association-of-illinois-brass-p-7c-c-afd0d3b719" >Lot 7C: NATIONAL MOTORIST ASSOCIATION OF ILLINOIS BRASS PLAQUE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					BRASS SHIELD SHAPED NATIONAL MOTORIST ASSOCIATION OF ILLINOIS PLAQUE W/ RED, WHITE & BLUE ENAMEL (4 1/4 "X 3 1/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, ENAMEL LOSSES, DENTS, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/national-motorist-association-of-illinois-brass-p-7c-c-afd0d3b719" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_263E64C19E" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837167_th.jpg" class="af_moreImages" border="0" alt="(2) HALIBRAND ENGINE ADVERTISING PATCHES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/2-halibrand-engine-advertising-patches-7d-c-263e64c19e" >Lot 7D: (2) HALIBRAND ENGINE ADVERTISING PATCHES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					(2) 9 1/2" ROUND HALIBRAND ENGINE CULVER CITY CALIF. EMBROIDERED ADVERTISING PATCHES (PROBABLY 1950'S INDY PIT PATCHES)
+				</p>				
+				
+				<a href="http://www.artfact.com/auction-lot/2-halibrand-engine-advertising-patches-7d-c-263e64c19e" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_4139F791A5" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837162_th.jpg" class="af_moreImages" border="0" alt="(3) MISC. AUTOMOTIVE ADVERTISING PATCHES" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/3-misc.-automotive-advertising-patches-7e-c-4139f791a5" >Lot 7E: (3) MISC. AUTOMOTIVE ADVERTISING PATCHES</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LOT (3) MISC. AUTOMOTIVE ADVERTISING PATCHES: (1) 10&#34; ROUND CROWD CONTROL SPORT CAR CLUB OF AMERICA PRINTED & EMBROIDRED PATCH, (1) 10&#34; OVAL BARTLESVILLE AUTO RACING CLUB PRINTED PATCH & (1) SHIELD SHAPED RED, WHITE & BLUE KURTIS RACE CAR PRINTED & EMBROIDERED PATCH (9&#34; X 7&#34;)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR & LOSSES
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/3-misc.-automotive-advertising-patches-7e-c-4139f791a5" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_4A3A4D313F" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836155_th.jpg" class="af_moreImages" border="0" alt="FRAMED PENNY B. HAVARD EARLY RACE CAR MIXED MEDIA DRAWING" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/framed-penny-b.-havard-early-race-car-mixed-media-8-c-4a3a4d313f" >Lot 8: FRAMED PENNY B. HAVARD EARLY RACE CAR MIXED MEDIA DRAWING</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					MIXED MEDIA ARTWORK W/ WATERCOLOR, PEN/PENCIL & CRAYON OF 1902 BLITZEN BENZ #1 (EARLY GERMAN SPECIAL RACED IN U.S.)-SIGNED PENNY B. HAVARD 1991 ON LOWER RIGHT W/ INFO ON RACE ATTACHED TO BACK, MATTED W/ EMBROIDERED LINER IN A WOODEN FRAME (9&#34; X 11 3/4&#34;-SIGHT SIZE)
+				</p>				
+				
+				<a href="http://www.artfact.com/auction-lot/framed-penny-b.-havard-early-race-car-mixed-media-8-c-4a3a4d313f" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_428489DC78" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30837295_th.jpg" class="af_moreImages" border="0" alt="FRAMED PENNY B. HAVARD EARLY RACE CAR MIXED MEDIA DRAWING" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/framed-penny-b.-havard-early-race-car-mixed-media-9-c-428489dc78" >Lot 9: FRAMED PENNY B. HAVARD EARLY RACE CAR MIXED MEDIA DRAWING</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					MIXED MEDIA ARTWORK W/ WATERCOLOR, PEN/PENCIL & CRAYON OF 1904 PEERLESS GREEN DRAGON #2 (PART OF SERIES-EARLY AMERICAN SPECIALS)-SIGNED PENNY B. HAVARD 1991 ON LOWER RIGHT W/ INFO ON RACE ATTACHED TO BACK, MATTED W/ EMBROIDERED LINER IN A MOLDED WOODEN FRAME (9&#34; X 11 3/4&#34;-SIGHT SIZE)
+				</p>				
+				
+				<a href="http://www.artfact.com/auction-lot/framed-penny-b.-havard-early-race-car-mixed-media-9-c-428489dc78" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_CD9C793790" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836894_th.jpg" class="af_moreImages" border="0" alt="FRAMED D. DESSART LIMITED EDITION COLORED LITHOGRAPH PRINT" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/framed-d.-dessart-limited-edition-colored-lithogr-10-c-cd9c793790" >Lot 10: FRAMED D. DESSART LIMITED EDITION COLORED LITHOGRAPH PRINT</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					LIMITED EDITION COLORED LITHO PRINT OF BUGATTI #328/1000-SIGNED D. DESSART ON LOWER RIGHT IN A BLACK LACQUERED FRAME (28 3/4" X 20 1/4"-SIGHT SIZE)
+				</p>				
+				
+				<a href="http://www.artfact.com/auction-lot/framed-d.-dessart-limited-edition-colored-lithogr-10-c-cd9c793790" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_C2FE779A55" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836885_th.jpg" class="af_moreImages" border="0" alt="EXIDE BATTERIES ENAMEL PAINTED ADVERTISING SIGN" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/exide-batteries-enamel-painted-advertising-sign-11-c-c2fe779a55" >Lot 11: EXIDE BATTERIES ENAMEL PAINTED ADVERTISING SIGN</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EXIDE BATTERIES SERVICE RECHARGING DOUBLE SIDED HANGING ENAMEL PAINTED ADVERTISING SIGN (20" X 26")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR & LOSSES ON EDGES, SCRATCHES & LOSSES ON 1 SIDE
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/exide-batteries-enamel-painted-advertising-sign-11-c-c2fe779a55" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_644F61ADE3" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836909_th.jpg" class="af_moreImages" border="0" alt="RPM MOTOR OILS & LUBRICANTS PAINTED METAL ADVERTISING SIGN" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/rpm-motor-oils-lubricants-painted-metal-adverti-12-c-644f61ade3" >Lot 12: RPM MOTOR OILS & LUBRICANTS PAINTED METAL ADVERTISING SIGN</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					ROUND RPM MOTOR OILS & LUBRICANTS DOUBLE SIDED RED, WHITE & BLUE PAINTED METAL ADVERTISING SIGN W/ DROP CHEVRON (30" X 26")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, SCRATCHES & LOSSES TO PAINT
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/rpm-motor-oils-lubricants-painted-metal-adverti-12-c-644f61ade3" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_71C8BEE0CE" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836903_th.jpg" class="af_moreImages" border="0" alt="20TH CENT. POLY RESIN RED ANTIQUE RACE CAR TOY" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/20th-cent.-poly-resin-red-antique-race-car-toy-13-c-71c8bee0ce" >Lot 13: 20TH CENT. POLY RESIN RED ANTIQUE RACE CAR TOY</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					20TH CENT. MOLDED RESIN RED RACE CAR TOY MODEL-MADE IN CHINA FOR WORLD BAZAAR INC. COMMERCE CA (10&#34; X 22&#34; X 8 1/4&#34;)
+				</p>				
+				
+				<a href="http://www.artfact.com/auction-lot/20th-cent.-poly-resin-red-antique-race-car-toy-13-c-71c8bee0ce" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_B997512AB4" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836210_th.jpg" class="af_moreImages" border="0" alt="EARLY 20TH CENT. WIZARD GASOLINE TONIC ADVERTISING PAMPHLET & SIGN" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-20th-cent.-wizard-gasoline-tonic-advertisin-13a-c-b997512ab4" >Lot 13A: EARLY 20TH CENT. WIZARD GASOLINE TONIC ADVERTISING PAMPHLET & SIGN</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					2 PCS. EARLY 20TH CENT. WIZARD GASOLINE TONIC ADVERTISING: (1) RED & WHITE PAINTED SHEET METAL ADVERTISING SIGN-&#34;POSITIVELY ELIMINATES & PREVENTS CARBON&#34; (9 1/4&#34; X 13 1/4&#34;) & (1) 1918 FOLDED ADVERTISING PAMPHLET DETAILING THE ADVANTAGES OF USING WIZARD GAS TONIC W/ TESTIMONIALS & SCIENTIFIC TESTING
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						GOOD CONDITION
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-20th-cent.-wizard-gasoline-tonic-advertisin-13a-c-b997512ab4" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_487C5D123F" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836208_th.jpg" class="af_moreImages" border="0" alt="VINTAGE KIBRI PAINTED WOODEN CLOWN & JALOPY BAG TOSS GAME" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/vintage-kibri-painted-wooden-clown-jalopy-bag-t-13b-c-487c5d123f" >Lot 13B: VINTAGE KIBRI PAINTED WOODEN CLOWN & JALOPY BAG TOSS GAME</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					VINTAGE KIBRI WOODEN BAG TOSS GAME W/ 6-BOARD PLANK BOARD W/ POLYCHROME PAINTED FUNNY CLOWN DRIVING A RED JALOPY & 6 BACK NETTED HOLES FOR BAG TOSS TARGETS EACH W/ PAINTED POINT SCORES INDICATED (28" X 18")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, CHIPS, PAINT LOSSES, SOILING, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/vintage-kibri-painted-wooden-clown-jalopy-bag-t-13b-c-487c5d123f" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_A2DFA1EF0B" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836206_th.jpg" class="af_moreImages" border="0" alt="EARLY 20TH CENT. THOMAS INSECT SCREENS COUNTER TOP ADVERTISING STORE DISPLAY" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-20th-cent.-thomas-insect-screens-counter-to-13c-c-a2dfa1ef0b" >Lot 13C: EARLY 20TH CENT. THOMAS INSECT SCREENS COUNTER TOP ADVERTISING STORE DISPLAY</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EARLY 20TH CENT. THOMAS MONOGRAMMED INSECT SCREENS PAINTED DIE CUT EASEL BACK ADVERTISING COUNTER TOP DISPLAY SIGN W/ SAMPLE INSECT SCREEN ATTACHED-"CUSTOM TAILORED FOR YOUR CAR - KEEPS BUGS OUT" (21 1/2" X 13 3/4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, BORDER CHIPS & DENTS, SOILING, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-20th-cent.-thomas-insect-screens-counter-to-13c-c-a2dfa1ef0b" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_9DEE2CA89E" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836220_th.jpg" class="af_moreImages" border="0" alt="BRONZE CARLISLE CORPORATION EMPLOYEE AWARD PLAQUE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/bronze-carlisle-corporation-employee-award-plaque-13d-c-9dee2ca89e" >Lot 13D: BRONZE CARLISLE CORPORATION EMPLOYEE AWARD PLAQUE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					SHAPED & MOLDED BRONZE CARLISLE CORPORATION EMPLOYEE QUARTER CENTURY CLUB AWARD PLAQUE PRESENTED TO JOHN M. ORRIS-"FOR 25 YEARS OF SERVICE WITH THE CARLISLE TIRE & RUBBER DIVISION 1923-1954" W/ TIRE ILLUSTRATIONS MOUNTED ON A WOODEN PLANK (MFG. BY THE INTERNATIONAL BRONZE TABLET CO. INC. NY NY)(12" X 9")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, SCUFFS, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/bronze-carlisle-corporation-employee-award-plaque-13d-c-9dee2ca89e" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_3439177CA0" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836217_th.jpg" class="af_moreImages" border="0" alt="18" VINTAGE 20TH CENT. PONTIAC AUTOMOBILE HOOD ORNAMENT" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/18-vintage-20th-cent.-pontiac-automobile-hood-or-13e-c-3439177ca0" >Lot 13E: 18" VINTAGE 20TH CENT. PONTIAC AUTOMOBILE HOOD ORNAMENT</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					18" VINTAGE 20TH CENT. LONG CHROME PONTIAC AUTOMOBILE HOOD ORNAMENT OF AN AMERICAN INDIAN HEAD PROFILE W/ RED HARD PLASTIC CREST-MARKED "MICHIGAN" & #508615 (3" T X 18" L)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, SCUFFS, PITTING TO CHROME PLATE, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/18-vintage-20th-cent.-pontiac-automobile-hood-or-13e-c-3439177ca0" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_0619BE8323" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836214_th.jpg" class="af_moreImages" border="0" alt="4" VINTAGE 20TH CENT. FRANKLIN AUTOMOBILE FIGURAL ORNAMENT" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/4-vintage-20th-cent.-franklin-automobile-figural-13f-c-0619be8323" >Lot 13F: 4" VINTAGE 20TH CENT. FRANKLIN AUTOMOBILE FIGURAL ORNAMENT</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					4" VINTAGE 20TH CENT. FRANKLIN FIGURAL MOLDED WHITE METAL HOOD ORNAMENT OF A LION TORSO W/ 2 WAVING PAWS EMERGING FROM A PLAQUE MARKED "FRANKLIN" W/ LATIN TEXT "AURA VINCIT" IN A BANNER (APPROX. 4")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						WEAR, EVIDENCE OF WORN SILVER GILT, METAL FATIGUE CRACK, SOILING, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/4-vintage-20th-cent.-franklin-automobile-figural-13f-c-0619be8323" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_F2FCFC8504" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836212_th.jpg" class="af_moreImages" border="0" alt="EARLY 20TH CENT. READY CUT VILLAGE BOXED TOY" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-20th-cent.-ready-cut-village-boxed-toy-13g-c-f2fcfc8504" >Lot 13G: EARLY 20TH CENT. READY CUT VILLAGE BOXED TOY</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EARLY 20TH CENT. READY CUT VILLAGE BOXED TOY IN THE ORIGINAL COLOR PAPER LITHO COVERED CARDBOARD BOX W/ 5 COLOR PAPER LITHO DIE CUT BUILDINGS INCLUDING CHURCH, GROCERY & MEAT MARKET & (3) HOUSES, (3) TREES & (3) VINTAGE AUTOMOBILE DIE CUTS (MFG. NOT INDICATED)(5 1/2" X 14 1/2" SIZE BOX)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						INCOMPLETE, WEAR, LOSSES TO BOX, SOILING, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-20th-cent.-ready-cut-village-boxed-toy-13g-c-f2fcfc8504" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_040BAF8B33" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836229_th.jpg" class="af_moreImages" border="0" alt="EARLY 20TH CENT. CALLING ALL CARS BOXED TOY" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-20th-cent.-calling-all-cars-boxed-toy-13h-c-040baf8b33" >Lot 13H: EARLY 20TH CENT. CALLING ALL CARS BOXED TOY</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					EARLY 20TH CENT. PARKER BROS. INC. (SALEM MA) "CALLING ALL CARS" BOXED POLICE CAR BOARD GAME IN ORIGINAL COLOR PAPER LITHO COVERED CARDBOARD BOX W/ COLOR PAPER LITHO FOLDING GAME BOARD, SPINNING INDICATORS & (3) POLICE CAR GAME PCS. (BOX SIZE-8" X 16")
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						INCOMPLETE, WEAR, BOX CRUSHING W/ SEAM BREAKS & TAPE, SOILING, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-20th-cent.-calling-all-cars-boxed-toy-13h-c-040baf8b33" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_B86F4B780D" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836924_th.jpg" class="af_moreImages" border="0" alt="DELTA SUPERIDE SHOCK ABSORBERS COUNTER TOP ADVERTISING DISPLAY" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/delta-superide-shock-absorbers-counter-top-advert-14-c-b86f4b780d" >Lot 14: DELTA SUPERIDE SHOCK ABSORBERS COUNTER TOP ADVERTISING DISPLAY</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					MECHANICAL COUNTER TOP ADVERTISING DISPLAY-&#34;INSTALL DELCO SUPERIDE SHOCK ABSORBERS - WHICH IS YOUR CAR - WORN SHOCKS OR DELCO SHOCKS&#34; W/ M5-183 DELCO SUPERIDE ANIMATED MODEL CAR DISPLAY (14 1/2&#34; T X 22 1/2&#34; L X 9&#34; D)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						CORNERS CUT ON TOP BACK BOARD, WEAR, IMPERFECTIONS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/delta-superide-shock-absorbers-counter-top-advert-14-c-b86f4b780d" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_2323872C2F" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836917_th.jpg" class="af_moreImages" border="0" alt="ALLSTATE TIRE FORM ADVERTISING CLOCK" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/allstate-tire-form-advertising-clock-15-c-2323872c2f" >Lot 15: ALLSTATE TIRE FORM ADVERTISING CLOCK</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					6 1/2&#34; BLACK RUBBER TIRE FORM ELECTRIC CLOCK W/ RAISED LETTERS &#34;CARGO LUG ALLSTATE&#34;, WHITE CLOCK FACE W/ BLACK NUMERALS & SESSIONS CLOCK MOVEMENT
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						MINOR WEAR
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/allstate-tire-form-advertising-clock-15-c-2323872c2f" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_A64779E150" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836945_th.jpg" class="af_moreImages" border="0" alt="(6) 1937 WALTER MOTOR TRUCK CO. BLACK & WHITE PHOTOGRAPHS" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/6-1937-walter-motor-truck-co.-black-white-pho-16-c-a64779e150" >Lot 16: (6) 1937 WALTER MOTOR TRUCK CO. BLACK & WHITE PHOTOGRAPHS</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					SET (6) 1937 WALTER MOTOR TRUCK CO. BLACK & WHITE PHOTOGRAPHS: (5) INTERIOR FACTORY PHOTOS & (1) EXTERIOR OF THE WALTER MOTOR TRUCK CO. RIDGEWOOD QUEENS LONG ISLAND NY ROEGE NY IN MOLDED BLACK WOODEN FRAMES (10 3/4&#34; X 13 3/4&#34;-SIGHT SIZE)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						SOME DAMAGE & STICKING TO GLASS
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/6-1937-walter-motor-truck-co.-black-white-pho-16-c-a64779e150" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+		
+
+		<div class="lot">
+				
+			
+			<div class="photo header-left">
+				
+					<img id="thumbnail_Y4YDHAXYM6_51B5388FB6" src="http://image.artfact.com/housePhotos/knottypine/01/325801/H0053-L30836934_th.jpg" class="af_moreImages" border="0" alt="EARLY 20TH CENT. AUTOMOBILE WEATHERVANE" onload="javascript:vertCenterImage(this, 98);" />
+				
+
+			</div>
+
+			
+			<div class="desc block header-left">
+				<h3>
+					<a class="lotname truncate" href="http://www.artfact.com/auction-lot/early-20th-cent.-automobile-weathervane-17-c-51b5388fb6" >Lot 17: EARLY 20TH CENT. AUTOMOBILE WEATHERVANE</a>
+				</h3>
+				
+				
+				
+					<p class="estimate normal">
+						<span class="strong">Estimated Price:</span>
+						
+							<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+						
+					</p>
+				
+				<p class="description normal lotdesc">
+					<span class="strong">Description:</span>
+					13" HOLLOW BODIED GALVANIZED TIN WEATHERVANE OF AN ANTIQUE ROADSTER W/ GENTLEMANB DRIVER ON A BRASS ROD ATTACHED TO WROUGHT IRON DIRECTIONALS (28 1/4" TO LENGTH)
+				</p>				
+				
+					<p class="description normal condition">
+						<span class="strong">Condition Report:</span>
+						REPAIRS TO BULLET HOLES, DENTS, REATTACHED TO BRASS ROD
+					</p>
+				
+				<a href="http://www.artfact.com/auction-lot/early-20th-cent.-automobile-weathervane-17-c-51b5388fb6" class="normal">View additional info &raquo;</a>
+				
+				
+				
+			
+			
+			</div>
+
+			
+			<div class="bid block header-left">
+				
+					<div class="bid past">
+						<div class="currentbid realized">
+							Realized:<span class="normal">
+							
+								<a class="novisit" href="https://secure.artfact.com/signin/signin.cfm?goto=%2Fcatalog%2FsearchLots%2Ecfm%3Fscp%3Dc%26catalogRef%3D6HDKA1KWX2" rel="nofollow">Log in</a> or <a class="novisit" href="https://secure.artfact.com/services/userInfo.cfm?type=register" rel="nofollow">create account</a> to view price data
+								
+							</span>
+						</div>
+					</div>								
+				
+	 		</div>
+
+		</div>
+
+
+		<!-- this can be deleted eventually... -->
+		<div class="clear"></div>		
+				
+	
+			<div class="pagination normal clear bottom " style="text-align:right;">			
+				
+						<span class="prev inactive page"></span>
+					
+									<span class="inactive">&nbsp; 1</span>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=51" class="page">2</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=101" class="page">3</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=151" class="page">4</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=201" class="page">5</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=251" class="page">6</a>
+								
+									&nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=301" class="page">7</a>
+								
+						<span class="next inactive page"> &nbsp; | &nbsp; <a href="http://www.artfact.com/catalog/searchLots.cfm?scp=c&amp;catalogRef=6HDKA1KWX2&amp;shw=50&amp;ord=0&amp;img=0&amp;olF=1&amp;houseRef=&amp;houseLetter=A&amp;artistRef=&amp;areaID=&amp;countryID=&amp;regionID=&amp;stateID=&amp;fdt=0&amp;tdt=0&amp;fr=0&amp;to=0&amp;wa=&amp;wp=&amp;wo=&amp;nw=&amp;upcoming=0&amp;rp=&amp;hi=&amp;rem=FALSE&amp;cs=0&amp;ns=0&isSC=1&amp;row=51" class="next page">Next &raquo;</a></span>	
+									
+			</div>
+		
+				<div id="artist-ad-container">
+				
+					<div class="artist-ad-200-Container">
+						<div class="adtext-small">Advertisement</div>
+						<div class="artist-ad-200"></div>
+					</div>
+				
+					<div class="artist-ad-200-Container">
+						<div class="adtext-small">Advertisement</div>
+						<div class="artist-ad-200"></div>
+					</div>
+				
+					<div class="artist-ad-200-Container">
+						<div class="adtext-small">Advertisement</div>
+						<div class="artist-ad-200"></div>
+					</div>
+				
+					<div class="artist-ad-200-Container">
+						<div class="adtext-small">Advertisement</div>
+						<div class="artist-ad-200"></div>
+					</div>
+				
+					<div class="artist-ad-200-Container">
+						<div class="adtext-small">Advertisement</div>
+						<div class="artist-ad-200"></div>
+					</div>
+				
+					<div class="artist-ad-200-Container">
+						<div class="adtext-small">Advertisement</div>
+						<div class="artist-ad-200"></div>
+					</div>
+				
+				</div>
+			
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-1626105-1'}, 'google_translate_element');
+				}
+				function checkSearch() {
+					if (jQ('#catalogSearchingTXT').val() == "Search within this auction") {
+						jQ('#catalogSearchingTXT').val('');
+					}
+					return true;
+				}
+			</script>
+			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+		
+	</div>
+
+	
+	<div id="rightCol" class="header-right">
+		<div class="promo">
+			<a href="javascript:openindex();" id="learnToBid"><img src="/wwwImages/btnLearnBid-Artfact.png" alt="Learn how to bid" /></a>
+		</div>
+		
+			<div id="placeholder2" class="ad tall">
+			</div>
+		
+	</div>
+
+	
+</div>
+
+
+
+		<div id="orderConfWrapper">
+			<div id="orderConf">
+				
+				
+			</div>
+		</div>		
+
+		
+
+				<!-- Footer -->
+				<footer id="bottomWrapper">
+					
+						<br><br>
+					
+					<div id="bottomLinks" class="wrapper">
+						<div class="bottom">
+							<div class="linkgroup">
+								<h5>About Artfact</h5>
+								<ul>
+									<li><a href="http://www.artfact.com/artfact/about.cfm">About Us</a></li>
+									<li><a href="http://www.artfact.com/artfact/help.cfm">Help/FAQ</a></li>
+									<li><a href="http://www.artfact.com/artfact/contact.cfm">Contact Us</a></li>
+									
+									<li><a href="http://www.jobscore.com/jobs/artfact/list">Careers</a></li>
+								</ul>
+							</div>
+							<div class="linkgroup">
+								<h5>Resources</h5>
+								<ul>
+									<li><a href="http://www.artfact.com/?filterHouseType=al">Browse Online Auctions</a></li>
+									<li><a href="http://www.artfact.com/features/calendar.cfm">Auction Calendar</a></li>
+									<li><a href="http://www.artfact.com/artfact/subOverview.cfm">Subscriptions</a></li>
+									<li><a href="http://www.artfact.com/artfact/houseServices.cfm">Auction House Services</a></li>
+								</ul>
+							</div>
+							<div class="linkgroup">
+								<h5>Stay Connected</h5>
+								<ul>
+									<li><a href="http://www.facebook.com/pages/Artfact/170692722479" class="fb" alt="Friend Artfact on Facebook" title="Friend Artfact on Facebook" target="_blank" rel="nofollow">Facebook</a></li>
+									<li><a href="http://www.twitter.com/artfactlive" class="twitter" alt="Follow Artfact on Twitter" title="Follow Artfact on Twitter" target="_blank" rel="nofollow">Twitter</a></li>
+									<li><a href="http://www.artfact.com/artfact/rss.cfm" class="rss" alt="Subscribe to the Artfact RSS feed" title="Subscribe to the Artfact RSS feed">RSS Feed</a></li>
+									<li><a href="http://itunes.apple.com/us/app/artfact-live-auctions/id340245009?mt=8" class="app" target="_blank" alt="Click to get the Artfact iPhone App from the Apple Store" title="Click to get the Artfact iPhone App from the Apple Store" rel="nofollow">iPhone App</a></li>
+								</ul>
+							</div>
+								<div id="subscribeWrapper">
+									<h5>Join Our Mailing List</h5>
+									<span class="subtext">Get auction updates and news in your inbox!</span>
+									<input id="companyRef" type="hidden" name="companyRef" value="1" />
+									<input type="text" name="mbrEmailAddress" id="ntSignUp-Email" value="Email Address" maxlength="64"><button class="signup" id="footerSubmit">Sign Up</button>
+									<div class="errormsg error errorBlock"></div>
+								</div>
+						</div>
+					</div>
+					<div id="bottomFooter" class="wrapper">
+						<div class="bottom">
+							<span class="copyright">&copy; 1986-2013 Artfact, LLC. and participating auction houses. All Rights Reserved.</span>
+							<a class="footer" href="http://www.artfact.com/agreements/userTerms.cfm" rel="nofollow">Terms of Use</a>
+							<a class="footer" href="http://www.artfact.com/agreements/subTerms.cfm" rel="nofollow">Subscription Agreement</a>
+							<a class="footer" href="http://www.artfact.com/agreements/privacy.cfm" rel="nofollow">Privacy Policy</a>
+							<a class="footer" href="http://www.artfact.com/agreements/copyright.cfm" rel="nofollow">Copyright & Usage</a>
+						</div>
+					</div>	
+				</footer>
+				
+
+				
+			</div><!-- END container-inner -->
+		</div>
+		
+		<!-- END container -->
+		
+		
+			<script type="text/javascript">
+				_qoptions={
+				qacct:"p-a2K6bNml9qRkk"
+				};
+			</script>
+			<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+			<noscript>
+				<img src="http://pixel.quantserve.com/pixel/p-a2K6bNml9qRkk.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+			</noscript>
+		
+	<script type="text/javascript">
+		function loadAds()
+			{
+
+				//expects auids
+				//transforms an array of auids into a string with the length specified
+				var auidString = function() {
+
+				    return function (numDisplay) {
+
+				        this.splice((numDisplay), (auids.length - num_ads_to_output));
+				        
+						return this.join("_");
+
+					}
+
+				}
+
+				jQ("#header-ad").append("<iframe src='http://www.artfact.com/burst/headTop.cfm?isHomepage=false&br=af' id='adframetop' width='728' height='90' scrolling='no' frameborder='0'></iframe>");
+				
+					
+					availableHeight = jQ('#mainColumn').height() || jQ('#content').height() || jQ('#main').height();
+					
+					var num_ads_to_output;
+					var max_num_ads = parseInt(availableHeight/620); // Each ad is 600 px; 620 gives some buffer room
+					var num_burstnet_ads_available = 5;
+					
+					if (max_num_ads > num_burstnet_ads_available){
+						num_ads_to_output = num_burstnet_ads_available;
+					} else {
+						num_ads_to_output = max_num_ads;
+					}
+
+					var auids = new Array(338647,338649,338650,342105,342110);
+
+						auids = auidString().call(auids, num_ads_to_output);
+
+					jQ("#placeholder2").append("<iframe src='http://www.artfact.com/burst/headRight.cfm?isHomepage=false&br=af&auids=" + auids + "' width='160' height='" + availableHeight + "' scrolling='no' frameborder='0'></iframe>");
+				
+				
+					var auids200 = new Array(338651,338652,338653,338654,338655,338656);
+
+					auids200 = auids200.join("_");
+
+					var adsContainer = "";
+					
+					if (jQ("#artist-ad-container").length > 0) {
+						adsContainer = "#artist-ad-container";
+					}
+					else if (jQ("#galleriesContainer").length > 0) {
+						adsContainer = "#galleriesContainer";
+					}
+
+					var artistAdsNum = jQ(adsContainer +  " .artist-ad-200").length;
+					//the css created in the cfm page is actually a little off, so we have to add height
+					var artistAdHeight = jQ(adsContainer).height() + 10;
+					var artistAdWidth = jQ(adsContainer).width();
+					var artistIframeHTML = "<iframe src='http://www.artfact.com/burst/artist200.cfm?isHomepage=false&br=af&auids=" + auids200 + "&numAds=" + artistAdsNum + "' width='" + artistAdWidth + "' height='" + artistAdHeight +  "' scrolling='no' frameborder='0' id='artist200'></iframe>";
+
+					jQ(adsContainer).empty().html(artistIframeHTML);
+
+				
+			}
+		jQ(function(){
+			if (location.protocol != 'https:') {
+				loadAds();
+			}
+		});
+	</script>
+	
+			<script type="text/javascript">				
+			var thisMemberID = '0';
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-1626105-1']);
+			_gaq.push(['_setDomainName', 'artfact.com']);
+			_gaq.push(['_setCustomVar', 5, 'memberID', thisMemberID, 2]);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+			</script>
+			
+
+<br clear="all"	 />
+
+
+
+
+
+	</body>
+</html> 

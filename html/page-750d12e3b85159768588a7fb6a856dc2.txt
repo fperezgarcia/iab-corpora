@@ -1,0 +1,1590 @@
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Business.com - Advertise with Us</title>
+        <meta name="description" content="B2B performance based advertising. 5 ways to reach business buyers at every stage of the purchasing cycle." />
+        <meta name="keywords" content="" />
+        <link rel="canonical" href="http://www.business.com/info/advertise/" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png?v=2">
+        
+        <meta property="og:title" content="Business.com - Advertise with Us" />
+        <meta property="og:description" content="B2B performance based advertising. 5 ways to reach business buyers at every stage of the purchasing cycle." />
+        <meta property="og:image" content="http://www.business.com/images/main-box-img.jpg" />
+        <meta name="p:domain_verify" content="022a521c99283eb6b9ac2ce1c68d970a"/>
+            
+<link rel="stylesheet" type="text/css" href="/css/refresh/utilities.css?v=380" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/css/refresh/refresh.css?v=380" media="screen, projection" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/ba55db/jquery.yiiactiveform.js"></script>
+<script type="text/javascript" src="/js/jquery.spin.js"></script>
+<script type="text/javascript" src="/js/jquery.expander.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="/js/refresh/modernizr.custom.50491.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+        gaPageTitle = "NEW - Business.com - Advertise with Us";
+
+
+   function onStepSubmitFailure(){
+        // @todo - Does the user need to know that there was an error?
+        jQuery(".submit_spinner").spin(false).removeClass("loading");
+        return true;
+    }
+
+    function beforeValidateContactForm(form) {
+        $(form).find(".submit_spinner").spin("submit-round","white").addClass("loading");
+        return true;
+    }
+
+    function afterValidateContactForm(form, data, hasError) {
+        if (hasError) {
+            $(".submit_spinner").spin(false).removeClass("loading");
+            return false;
+        }
+            $.ajax({'type':'POST','url':form[0].action,'cache':false,'dataType':'json','data':form.serialize()})
+            .done(function(data) {
+                if (data) {
+                        $(".submit_spinner").spin(false).removeClass("loading");
+                        $(form).parents('.contact-form').children('.step1').hide();
+                        $(form).parents('.contact-form').children('.step2').show();
+                } else {
+                    onStepSubmitFailure();
+                }
+                return false;
+            })
+            .error(onStepSubmitFailure);
+        return false;
+    }
+
+    var allowTabHighlights = true;
+    var scrollpos = 200;
+
+    function calcScrollPos(){
+       scrollpos = parseInt($("body > header").css("height")) + parseInt($("section.info header").css("height")) + parseInt($("section.info #tab-content article:first-child").css("margin-top"));
+    }
+
+
+        function newsletterThanks(){
+            $(".newsletter-box .form-step").animate({left:-420},300);
+            $(".newsletter-box .thanks").show();
+            $(".newsletter-box .thanks").animate({left:42},300);
+        }
+        function newsletterError(){
+            $(".newsletter-box .form-step").animate({left:-420},300);
+            $(".newsletter-box .err").show();
+            $(".newsletter-box .err").animate({left:42},300);
+        }
+        function newsletterBackBtn(){
+            $(".newsletter-box .thanks").animate({left:420},300, function(){
+                $(".newsletter-box .thanks").hide();
+            });
+            $(".newsletter-box .err").animate({left:420},300,function(){
+                $(".newsletter-box .err").hide();
+            });
+            $(".newsletter-box .form-step").animate({left:42},300);
+        }
+
+/*]]>*/
+</script>
+
+</head>
+    <body class="info infoAdvertise SEO">
+        <script>
+  dataLayer = [{"env":"production","pageTestVariation":null,"visitorType":"SEO","vertical":"","category":"","utm_source":"","utm_medium":"","utm_content":"","utm_campaign":"","utm_keyword":""}];
+  if(window.gaPageTitle){
+      dataLayer[0].pageTitle = window.gaPageTitle;
+  }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-ZRNQ&amp;env=production&amp;visitorType=SEO&amp;vertical=&amp;category=&amp;utm_source=&amp;utm_medium=&amp;utm_content=&amp;utm_campaign=&amp;utm_keyword="
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ZRNQ');</script>
+<!-- End Google Tag Manager -->
+    <header>
+        <div class="contentwrapper">
+        <a id="bdclogo" class="ir" alt="Business.com: Discover, Compare &amp; Save" href="/">Business.com</a><form id="sitesearch" action="/search/" method="get"><input id="search-input" placeholder="Search" class="" type="text" value="" name="q" /><button name="search-submit" type="submit" class="site-search ir">Search</button></form>        <nav>
+            <ul>
+                <li><a href="/directory/">Business Categories</a></li>
+                <li><a href="/info/advertise/">Advertise With Us</a></li>
+                <li><a id="header_expert" href="/experts/">Are You a Market Expert?</a></li>
+<!--                 <li><a href="/info/about/">About Us</a></li> -->
+            </ul>
+        </nav>
+
+        </div>
+    </header>
+
+        <div id="content">
+                <section id="advertise" class="info page-header">
+    <header>
+        <div class="contentwrapper group">
+            <h1>Advertise with Us</h1>
+        </div>
+    </header>
+
+    <div class="contentwrapper group">
+    <nav id="verticalnav-wrapper">
+    <ul id="verticalnav">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#pay_per_lead">Pay-Per-Lead</a></li>
+                <li><a href="#pay_per_click">Pay-Per-Click</a></li>
+                <li><a href="#whitepapers">Whitepapers</a></li>
+                <li><a href="#display_advertising">Display Advertising</a></li>
+                <li><a href="#directory_listings">Directory Listings</a></li>
+                <li><a href="#audience">Audience</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#industry_insights">Industry Insights</a></li>
+            </ul>
+
+    <a class="call_to_experts" href="/experts/"><img src="/images/refresh/experts-sm.jpg" alt="" /></a>
+    <ul class="social group">
+        <li class="newsletter"><a class="newsletter" title="Newsletter" href="#">Newsletter</a></li>
+        <li class="twitter"><a href="https://twitter.com/b2bonlinemktg" target="_blank">Twitter</a></li>
+        <li class="blog"><a href="http://www.business.com/b2bmarketing/" target="_blank">Blog</a></li>
+    </ul>
+
+</nav>
+
+
+<div id="tab-content">
+    <article id="overview">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw0" action="/contact/general/" method="post"><div class='hidden'><div id="yw0_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_General" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+</div>
+
+    <h2>Accelerate Your <em>Performance Marketing</em></h2>
+
+    <p><strong>Targeted Reach. Qualified Leads. High ROI.</strong></p>
+
+    <p>Over 20 million buyers from small-to-medium enterprises rely on Business.com to discover, compare, and purchase the products and services they need to run and grow their businesses.</p>
+    <p>Business.com drives over half a million purchases a year, generating over $1 billion in sales for our 10,000+ advertisers through our suite of performance marketing products:</p>
+        <ul class="links">
+            <li><a href="#tab_pay_per_lead">Pay-Per-Lead</a></li>
+            <li><a href="#tab_pay_per_click">Pay-Per-Click</a></li>
+            <li><a href="#tab_whitepapers">Whitepapers</a></li>
+            <li><a href="#tab_display_advertising">Display Advertising</a></li>
+            <li><a href="#tab_directory_listings">Directory Listings</a></li>
+            
+        </ul>
+
+
+    <p class="featured_brands">
+        Featured Brands
+    </p>
+
+    <ul class="featured_brands group">
+        <li class="ir blackberry">Blackberry</li>
+        <li class="ir aflac">Aflac</li>
+        <li class="ir toshiba">Toshiba</li>
+        <li class="ir bofa">Bank of America</li>
+        <li class="ir siemens">Siemens</li>
+        <li class="ir comcast">Comcast</li>
+    </ul>
+
+
+    </article>
+    <article id="pay_per_lead">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw1" action="/contact/pplLead/" method="post"><div class='hidden'><div id="yw1_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_PPL_Lead" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+    <div class="self-signup-cta">
+
+        <a class="btn_med" href="https://origin.business.com/info/advertise-ppl/">Get Started</a>        <p>Start a Pay-Per-Lead campaign now.</p>
+    </div>
+</div>
+
+    <h2>Pay-Per-Lead</h2>
+
+    <p>Pay-Per-Lead advertising connects you with active buyers at the final stage of the purchasing  processâwhen buyers are comparing features, pricing, and are ready to talk to sellers.</p>
+    <p>Our unique lead-verification process is a combination of automated prescreening using the latest technology and human  phone verification, ensuring that every lead is promptly contacted by a Business.com analyst.</p>
+
+    <h3>Qualified Leads</h3>
+    <p>The Business.com lead-verification process applies the strictest approval standards in the industry. Every lead is prescreened and verified by our team of analysts, saving you time and money.</p>
+
+    <h3>Real-Time Delivery</h3>
+    <p>Research proves that lead-response times are directly correlated with close rates and ROI. Our rapid-matching system ensures that matched leads are instantly delivered for immediate follow-up.</p>
+
+    <h3>Competitive Intelligence</h3>
+    <p>Benchmark reporting delivers competitive intelligence on how your sales follow-up compares to other sellers. Response-time statistics, sales process review, and best practices are provided. </p>
+
+    </article>
+    <article id="pay_per_click">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw2" action="/contact/ppcLead/" method="post"><div class='hidden'><div id="yw2_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_PPC_Lead" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+    <div class="self-signup-cta">
+        <a class="btn_med" href="https://origin.business.com/purchase/advertisePpc/">Get Started</a>        <p>Start a Pay-Per-Click campaign now.</p>
+    </div>
+</div>
+
+    <h2>Pay-Per-Click</h2>
+
+    <p>Pay-Per-Click advertising, both on Business.com and across our network, is a highly effective way for advertisers to reach and engage active buyers and generate high-quality leads. </p>
+
+    <h3>High Performance</h3>
+    <p>Compare our conversion rates and immediately see why 10,000+ advertisers choose Business.com to reach active buyers. </p>
+
+    <h3>Broad Reach</h3>
+    <p>Access over 65 million buyers from small-to-medium enterprises on Business.com and the Business.com network.</p>
+
+    <h3>Increased Visibility</h3>
+    <p>Receive branding exposure with prominent logo placement alongside your ad on the Business.com site. </p>
+
+    <h3>Expert Account Optimization</h3>
+    <p>Our full-service approach to campaign optimization is designed to help you achieve your campaign goals. </p>
+
+    </article>
+    <article id="whitepapers">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw3" action="/contact/whitepapers/" method="post"><div class='hidden'><div id="yw3_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_Whitepaper_Lead" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+</div>
+
+<h2>Whitepapers</h2>
+
+<p>We connect advertisers with business buyers in the discovery and comparison stages of the purchasing cycle utilizing our unique intention and relevance based targeting capabilities.</p>
+
+<h3>Fill the Sales Funnel</h3>
+<p>Get high quality leads while filling the top of your sales funnel with buyers who have expressed interest in learning more about your industry, products, services, and solutions by registering for your company's whitepaper.</p>
+
+<h3>Establish Thought Leadership</h3>
+<p>Partner with Business.com to deliver your rich, original content to business buyers and establish your brand as a thought leader. </p>
+
+<h3>Build Trust</h3>
+<p>Delivering educational content to prospective clients and continuing to nurture those prospects helps to build respect, affinity and trust. </p>
+    </article>
+    <article id="display_advertising">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw4" action="/contact/displayAdvertising/" method="post"><div class='hidden'><div id="yw4_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_Display_Lead" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+</div>
+
+    <h2>Display Advertising</h2>
+
+    <p>Leverage the impact of integrated demand generation and display programs on Business.com. </p>
+    <p>Display advertising and retargeting gives you access to millions of active buyers visiting specific verticals on Business.com. Drive more leads and increase your conversion rates  by delivering highly targeted ads after buyers have left Business.com. </p>
+
+    <h3>Reach</h3>
+    <p>Take advantage of the breadth of our coverage, with access to over 100 million buyers from small-and-medium enterprises across virtually every industry.</p>
+
+    <h3>Precision</h3>
+    <p>Utilize the Business.com advanced retargeting platform to precisely target prospects. Targeting capabilities include geographic, firmographic, and keyword filters to ensure that youâre reaching your specific audience.</p>
+
+    <h3>Brand Presence</h3>
+    <p>Prominently place your brand in front of the right audience within verticals relevant to your business. Keep your brand top of mind after targeted buyers have left Business.com. </p>
+
+    <h3>Direct Response</h3>
+    <p>Targeted display advertisers on Business.com experience click-through rates that are over 250% of the industry average.<span class="note">*</span></p>
+    <p class="note">*Average Business.com site display advertiser in 2012.</p>
+
+    </article>
+    <article id="directory_listings">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw5" action="/contact/directoryListing/" method="post"><div class='hidden'><div id="yw5_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_DL_Lead" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+    <div class="self-signup-cta">
+         <a class="btn_med" href="https://origin.business.com/purchase/directoryListing/">Get Started</a>         <p>Get your Directory Listing now.</p>
+    </div>
+</div>
+
+    <h2>Directory Listings</h2>
+
+    <p>Business.com directory advertising is a simple, effective, and cost-efficient way to place your company in front of a high-quality audience of active buyers within a category relevant to your business. Unlike other online directories, a Business.com editor reviews every submitted directory listing for accuracy, relevance, and placement. </p>
+
+    <h3>Targeted</h3>
+    <p>Reach millions of active buyers and immediately increase your online visibility.</p>
+
+    <h3>Relevant</h3>
+    <p>List your business in one or more of the thousands of categories on Business.com&mdash;an editor will place your listing in a highly relevant category.</p>
+
+    <h3>Authoritative</h3>
+    <p>Align your brand with expertly written, high-quality content, spanning top business industries.</p>
+
+
+    <h3>Cost Efficient</h3>
+    <p>Take advantage of a low $299 annual fee (less than $25/month) that gets you placement for an entire year. </p>
+
+    </article>
+    <article id="audience">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw6" action="/contact/general/" method="post"><div class='hidden'><div id="yw6_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_General" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+</div>
+
+<h2>A Qualified Audience</h2>
+
+<p>Connecting advertisers with millions of active business buyers every month is easy when your audience is:</p>
+<div class="advertise_audience"></div>
+
+ <ul class="graphs group">
+    <li class="vert">
+            <ul class="bars vert js-render">
+                <li data-size="58" data-multiplier ="3" class="focused"><em>Business.com - 58%</em></li>
+                <li data-size="10" data-multiplier ="3" >Google - 10%</li>
+                <li data-size="13" data-multiplier ="3" >Yahoo - 13%</li>
+            </ul>
+            <p>58% more likely to be a business decision maker<sup>1</sup></p>
+
+    </li>
+
+    <li class="vert">
+            <ul class="bars vert js-render">
+                <li data-size="86"  data-multiplier ="2.5" class="focused"><em>Business.com - 86%</em></li>
+                <li data-size="9" data-multiplier ="2.5" >Google - 9%</li>
+                <li data-size="5" data-multiplier ="2.5" >Yahoo - 5%</li>
+            </ul>
+            <p>86% more likely to be in senior management<sup>1</sup></p>
+
+    </li>
+    <li class="vert">
+            <ul class="bars vert js-render">
+                <li data-size="112"  data-multiplier ="2" class="focused"><em>Business.com - 112%</em></li>
+                <li data-size="12" data-multiplier ="2" >Google - 12%</li>
+                <li data-size="17" data-multiplier ="2" >Yahoo - 17%</li>
+            </ul>
+            <p>112% more likely to have made a purchase in the last 6 months<sup>1</sup></p>
+
+    </li>
+    <li class="horiz break">
+        <p>Business.com attracts more business buyers than other popular business sites</p>
+        <ul class="bars js-render">
+            <li data-size="100"  data-multiplier ="2" class="focused"><em>Business.com - 100M<sup>2</sup></em></li>
+            <li data-size="10" data-multiplier ="2" >Forbes.com - 10M<sup>3</sup></li>
+            <li data-size="7" data-multiplier ="2" >The Wall Street Journal - 7M<sup>3</sup></li>
+            <li data-size="5" data-multiplier ="2" >Bloomberg.com - 5M<sup>3</sup></li>
+            <li data-size="4" data-multiplier ="2" >BusinessWeek.com - 4M<sup>3</sup></li>
+        </ul>
+    </li>
+    <li class="horiz">
+        <p>Indexes off the charts for executives. Business.com vs. General Online pop</p>
+        <ul class="bars js-render">
+            <li data-size="228" data-multiplier ="1"  class="focused"><em>Executive / Owner - 228</em></li>
+            <li data-size="120" data-multiplier =".2" >Executive Vice President / SVP - 120</li>
+            <li data-size="186" data-multiplier =".2" >Senior Management - 186</li>
+            <li data-size="119" data-multiplier =".2" >Middle Management - 119</li>
+        </ul>
+    </li>
+
+    <li class="horiz legend">
+        <ol>
+            <li>Compared to general online pop. Nielsen@plan, rel 2, 2011</li>
+            <li>Source: Internal metrics for Business.com and partner network</li>
+            <li>Source: Compete.com</li>
+        </ol>
+    </li>
+</ul>
+    </article>
+    <article id="testimonials">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw7" action="/contact/testimonials/" method="post"><div class='hidden'><div id="yw7_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_General" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+</div>
+<h2>Testimonials</h2>
+
+<ul class="testimonial">
+
+    <li>
+        <p class="company ir" id="overture"><span>Overture Premiums &amp; Promotions</span></p>
+        <blockquote class="expandable">
+            <p>We're very impressed with Business.com's Pay-Per-Click program, which has greatly improved our client's CPA goals and delivers traffic that converts. Not only that, but the CPA from their campaign came in at half the anticipated cost. Our aim is to target business decision makers for our client, and that's exactly what Business.com does for us. Also, their account-management team is extremely proactive and does a fantastic job with account optimization and support.</p>
+            <p><cite>Tej S.</cite> VP, Marketing &amp; E-Commerce</p>        
+        </blockquote>
+    </li>
+     <li>
+        <p class="company ir" id="vocalocity"><span>Vocalocity</span></p>
+        <blockquote class="expandable">
+            <p>This has been a pivotal part of our lead-generation efforts for years. Month after month, we've gotten high-quality leads that have translated to high conversion rates and more sales. Our Performance Marketing Manager has done a great job optimizing our campaign and increasing conversion rates, and has always been available to answer our questions. We'll take all these leads we can get!</p>
+            <p><cite>Naila Z.</cite> Senior Marketing Manager</p>        
+        </blockquote>
+    </li>
+     <li>
+        <p class="company ir" id="threadpoint"><span>Threadpoint</span></p>
+        <blockquote class="expandable">
+            <p>My experience with Business.com has been stellar! I've realized great volume at a reasonable cost, in fact, my business has grown 125% since I started advertising with them. Also, I've been very impressed by the quality of their data and the responsiveness of their team, who are always helping me find ways to improve my bottom line.</p>
+            <p><cite>Chris H.</cite> </p>        
+        </blockquote>
+    </li>
+     <li>
+        <p class="company ir" id="captain"><span>Captain Marketing</span></p>
+        <blockquote class="expandable">
+            <p>In the past, our sales team had never used online leads before, we relied on telemarketing or warm leads. But now, our sales team fights for the Business.com leads because of their quality and quantity, and the good-size deals they generate. Our pipeline is looking strong as well.</p>
+            <p><cite>Devin S.</cite> </p>        
+        </blockquote>
+    </li>
+     <li>
+        <p class="company ir" id="positive"><span>POSitive Technology</span></p>
+        <blockquote class="expandable">
+            <p>We're so impressed with the top-notch leads that Business.com has generated for us. They've added buyers to our pipeline in a highly effective manner resulting in increased sales and better ROI. We're very happy with the service!</p>
+            <p><cite>Terri R.</cite> Marketing Director</p>        
+        </blockquote>
+    </li>
+ </ul>   
+    
+    
+    </article>
+    <article id="industry_insights">
+        <div class="contact-form-wrapper">
+<div class="contact-form">
+    <div class="step1">
+        <h3>Speak with a marketing consultant.</h3>
+
+        <form id="yw8" action="/contact/general/" method="post"><div class='hidden'><div id="yw8_es_" class="error errorSummary" style="display:none"><p>Please fix the following input errors:</p>
+<ul><li>dummy</li></ul></div></div><input name="ContactForm[src]" id="ContactForm_src" type="hidden" value="Web_General" />            <div class="first-name">
+                <label class="first-name required" for="ContactForm_first_name">First Name <span class="required">*</span></label><input class="first-name" name="ContactForm[first_name]" id="ContactForm_first_name" type="text" /><div class="errorMessage" id="ContactForm_first_name_em_" style="display:none"></div>            </div>
+            <div class="last-name">
+                <label class="last-name required" for="ContactForm_last_name">Last Name <span class="required">*</span></label><input class="last-name" name="ContactForm[last_name]" id="ContactForm_last_name" type="text" /><div class="errorMessage" id="ContactForm_last_name_em_" style="display:none"></div>            </div>
+            <div class="company">
+                <label class="company required" for="ContactForm_company">Company URL <span class="required">*</span></label><input class="company" name="ContactForm[company]" id="ContactForm_company" type="text" /><div class="errorMessage" id="ContactForm_company_em_" style="display:none"></div>            </div>
+            <div class="email">
+                <label class="email required" for="ContactForm_email">Email Address <span class="required">*</span></label><input class="email" name="ContactForm[email]" id="ContactForm_email" type="text" /><div class="errorMessage" id="ContactForm_email_em_" style="display:none"></div>            </div>
+            <div class="phone">
+                <label class="phone" for="ContactForm_phone">Phone Number</label><input class="phone" name="ContactForm[phone]" id="ContactForm_phone" type="text" /><div class="errorMessage" id="ContactForm_phone_em_" style="display:none"></div>            </div>
+            <div class="comments">
+                <label class="comments" for="ContactForm_comments">Questions / Comments</label><textarea class="comments" name="ContactForm[comments]" id="ContactForm_comments"></textarea><div class="errorMessage" id="ContactForm_comments_em_" style="display:none"></div>            </div>
+            <button type="submit" class="contact-submit submit_spinner" name="submit" value="1" >Contact Us</button>
+      </form>    </div>
+
+    <div class="step2">
+        <strong>Thank You!</strong>
+        <p>Your information has been received and you will be contacted shortly.</p>
+    </div>
+</div>
+</div>
+
+    <h2>A Growing Challenge</h2>
+
+    <p>Small-to-medium enterprises&mdash;companies with up to 500 employees&mdash;are the
+       foundation of business. They account for over 65% of the GDP; 99% of
+       jobs; and hire nearly half of all of the high-tech workers, scientists,
+       engineers, and computer programmers in the U.S. These companies are
+       also voracious consumers of products and services and use the internet
+       to make the vast majority of their product-purchasing decisions. This
+       difficult-to-reach audience can prove challenging for marketers and
+       sales organizations to connect with and engage.</p>
+    <p>Over 20 million buyers turn to Business.com to discover, compare, and
+       purchase the products and services they need to run and grow their
+       businesses. These powerful buyers come to Business.com to cut through the
+       clutter of online search results and avoid having to sort out the myriad
+       individual vendor sites.</p>
+    <p>Business.com's performance marketing products are engineered to engage
+       buyers and sellers in natural and powerful ways that drive marketing ROI.
+       Please fill out the form above to learn more about how Business.com's
+       suite of products can accelerate your performance marketing.</p>
+
+    </article>
+</div>
+    </div>
+</section>
+
+
+<div class="overlay">
+    <div class="newsletter-box">
+        <p class="closebox"><a class="closebox">close [X]</a></p>
+        <div class="form-step">
+            <h3>Subscribe To Our Weekly Email Newsletter</h3>
+            <p>Get the latest news, tips and trends to help grow your business.</p>
+            <p class="missing_email">To continue please enter your Email address.</p>
+            <form action="/site/newsletter/" id="newsletter_form" method="POST">
+                <input type="hidden" name="NewsletterSubscribeSrc" value="advertise" />
+                <input type="text"   name="EmailAddress" class="field"  placeholder="Enter Your Email Address">
+                <button type="submit" class="submit">Sign Up</button>
+    Â Â Â Â Â Â Â  </form>
+        </div>
+        <div class="err">
+            <h3>Oops... something went wrong with your request.</h3>
+            <p>Please click Back to try again</p>
+            <button id="newsletter_back_btn">&laquo; Back</button>
+        </div>
+        <div class="thanks">
+            <h3>Thanks<br />for subscribing!</h3>
+            <p>Check Your Email For Your First Issue.</p>
+            <button id="btn_done">Done!</button>
+        </div>
+    </div>
+</div>
+
+        </div><!-- END: Content -->
+
+
+        <footer>
+            <div class="contentwrapper">
+                            <nav class="sitefooter">
+                <ul class="group">
+                    <li><a href="/directory/">Browse Categories</a></li>
+                    <li><a href="/guides/">Guides & Articles</a></li>
+                    <li><a href="/info/advertise/">Advertise with Us</a></li>
+                    <li><a rel="nofollow" href="https://ccm.business.com">Advertiser Login</a></li>
+                </ul>
+                <ul class="group">
+                    <li><a href="/info/about/">About Us</a></li>
+                    <li><a href="/info/about/#contact_us">Contact Us</a></li>
+                    <li><a href="/info/network-partner-program/">Partner with Us</a></li>
+                    <li><a href="/info/about/#press">Press</a></li>
+                    <li><a href="/info/about/#join_the_team">Careers</a></li>
+                    <li><a href="/info/privacy/">Privacy</a></li>
+                    <li><a href="/info/termsofuse/">Terms of Use</a></li>
+                </ul>
+                <ul class="group social">
+                    <li><a class="social rss" href="http://feeds.feedburner.com/BusinesscomBlog">RSS</a></li>
+                    <li><a class="social linkedin" href="http://www.linkedin.com/company/business-com-media-inc">LinkedIn</a></li>
+                    <li><a class="social twitter" href="https://twitter.com/businessdotcom">Twitter</a></li>
+                    <li><a class="social fb" href="http://www.facebook.com/businessdotcom">Facebook</a></li>
+                    <li><a class="social gplus" href="https://plus.google.com/107594910008144461322/">Google+</a></li>
+                    <li><a class="social pinterest" href="http://pinterest.com/businessdotcom">Pinterest</a></li>
+                </ul>
+
+                <p>Have questions? 888-441-4466</p>
+                <p>&copy; 2013 Business.com Media, Inc. All Rights Reserved.</p>
+
+            </nav>
+<!--BDC remarketing pixel start-->
+<!--BDC remarketing pixel finish-->
+
+            </div>
+        </footer>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+        var console_safe = 0 && (window.console && console.log);
+        function trackGA(type, seg1, seg2, seg3, seg4, seg5) {
+            window.gaPageTitle = window.gaPageTitle || '';
+            switch(type) {
+                case 'page'     :
+                    dataLayer.push({
+                        'event'         : 'virtualPage',
+                        'virtualPage'   : seg1,
+                        'pageTitle'     : window.gaPageTitle
+                    });
+                    if (console_safe) {
+                        console.log('Firing pageView');
+                        console.log(type + ': ' + seg1 + ', ' + window.gaPageTitle);
+                    }
+                    break;
+                case 'event'    :
+                    dataLayer.push({
+                        'event'                 : 'gaEvent',
+                        'gaEventCategory'       : seg1,
+                        'gaEventAction'         : seg2,
+                        'gaEventLabel'          : seg3,
+                        'gaEventValue'          : seg4,
+                        'gaEventNoninteraction' : seg5,
+                        'pageTitle'             : window.gaPageTitle
+                    });
+                    if (console_safe) {
+                        console.log('Firing trackEvent');
+                        console.log(type + ': ' + seg1 + ', ' + seg2 + ', ' + seg3 + ', ' + window.gaPageTitle);
+                    }
+                    break;
+                default         :
+                    var toStr = Object.prototype.toString;
+                    if (typeof type === 'string') {
+                        dataLayer.push({
+                            type        : seg1,
+                            'pageTitle' : window.gaPageTitle
+                        });
+                        if (console_safe) {
+                            console.log('Firing ' + type + ' = ' + seg1);
+                            console.log('pageTitle ' + window.gaPageTitle);
+                        }
+                    } else if (toStr.call(type) === '[object Array]') {
+                        var var_list = {};
+                        var_list.pageTitle = window.gaPageTitle;
+                        for (var i = 0; i < type.length; i++) {
+                            var_list[type[i][0]] = type[i][1];
+                        }
+                        dataLayer.push(var_list);
+                        if (console_safe) {
+                            console.log(dataLayer);
+                        }
+                    } else if (toStr.call(type) === '[object Object]') {
+                        type.pageTitle = window.gaPageTitle;
+                        dataLayer.push(type);
+                        if (console_safe) {
+                            console.log(dataLayer);
+                        }
+                    }
+                    break;
+            }
+        }
+
+        $('[data-ga-event]').on('mousedown',function(e){
+            var ga_evt = $(this).attr('data-ga-event').split(',');
+            if (console_safe) {
+                console.log('Firing trackEvent');
+                console.log(ga_evt);
+            }
+            trackGA('event', ga_evt[0], ga_evt[1], ga_evt[2], ga_evt[3]);
+        });
+
+    
+$.app = {"baseUrl":""}
+   $("#verticalnav li a").on("mousedown",function() {
+        trackGA("page", "/advertise-with-us/"+$(this).attr("href").replace('#',''));
+        trackGA("event", "SalesEngage", "Sales-Int-Click", $(this).text()+" tab");
+   });
+
+
+    $("#overview .step1 button").on("click",function(){
+        trackGA("event", "SalesLead", "Sales-Overview-Lead-Submit", "Overview lead form", 1);
+    });
+
+    $("ul.links li a").on("click", function(){
+        $('#verticalnav li a[href="'+$(this).attr('href').replace(/tab_/,'')+'"]').click();
+    });
+
+
+
+   $(".contact-form button[type='submit']").on("click",function(evt){
+        // evt.preventDefault();
+    });
+
+$('#yw0').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw0_es_'});
+
+        $("#pay_per_lead .step1 button").on("click",function(){
+            trackGA("event", "SalesLead", "Sales-PPL-Lead-Submit", "PPL lead form", 1);
+        });
+        $("#pay_per_lead .self-signup-cta a").on("click",function(){
+            trackGA("event", "SalesEngage", "Sales-Int-Click", "PPL get started button");
+        });
+$('#yw1').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw1_es_'});
+
+        $("#pay_per_click .step1 button").on("click",function(){
+            trackGA("event", "SalesLead", "Sales-PPC-Lead-Submit", "PPC lead form", 1);
+        });
+        $("#pay_per_click .self-signup-cta a").on("click",function(){
+            trackGA("event", "SalesEngage", "Sales-Int-Click", "PPC get started button");
+        });
+$('#yw2').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw2_es_'});
+
+        $("#display_advertising .step1 button").on("click",function(){
+            trackGA("event", "SalesLead", "Sales-Testimonials-Lead-Submit", "Testimonials lead form", 1);
+        });
+
+$('#yw3').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw3_es_'});
+$('#yw4').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw4_es_'});
+
+        $("#directory_listings .step1 button").on("click",function(){
+            trackGA("event", "SalesLead", "Sales-DL-Lead-Submit", "DL lead form", 1);
+        });
+        $("#directory_listings .self-signup-cta a").on("click",function(){
+            trackGA("event", "SalesEngage", "Sales-Int-Click", "DL get started button");
+        });
+$('#yw5').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw5_es_'});
+
+
+    $('ul.bars li').prepend('<span></span>');
+
+    function animateGraph(span, options) {
+        var size = ($(span).parent().attr('data-size') * $(span).parent().attr('data-multiplier'))+"px";
+        var attr = {};
+
+        if ($(span).closest('ul').hasClass('vert')) {
+            attr = {'width': size};
+        } else {
+            attr = {'width': size};
+        }
+        $(span).animate(attr, options);
+    }
+
+
+    $("#audience .step1 button").on("click",function(){
+        trackGA("event", "SalesLead", "Sales-AUdience-Lead-Submit", "Audience lead form", 1);
+    });
+
+
+    $(window).scroll(function() {
+        var windowTop    = parseInt($(window).scrollTop());
+        var windowHeight = parseInt($(window).height());
+        $('ul.bars.js-render').each(function() {
+            var topPosition = parseInt($(this).offset().top) - windowTop;
+            var botPosition = parseInt($(this).offset().top) + parseInt($(this).height()) - windowTop;
+            if (topPosition > 0 && topPosition < windowHeight && botPosition > 0 && botPosition < windowHeight) {
+                $(this).find('span').each(function() {
+                    animateGraph(this, {
+                        duration: 2000,
+                        easing: 'swing',
+                        complete: function() { $(this).removeClass('js-render'); }
+                    });
+                });
+            }
+        });
+    });
+
+$('#yw6').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw6_es_'});
+
+        $('blockquote.expandable p').expander({
+            slicePoint:       100, 
+            expandPrefix:     ' ',
+            expandText:       '&hellip; more &raquo;', 
+            userCollapseText: '&laquo; less ',
+            collapseTimer:    10000
+          });
+
+$('#yw7').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw7_es_'});
+
+        $("#industry_insights .step1 button").on("click",function(){
+            trackGA("event", "SalesLead", "Sales-Insights-Lead-Submit", "Insights lead form", 1)
+        });
+
+$('#yw8').yiiactiveform({'validationUrl':'/contact/','validateOnSubmit':true,'errorCssClass':'error','hideErrorMessage':true,'afterValidate':function(form, data, hasError) {
+                            return afterValidateContactForm(form, data, hasError);
+                        },'beforeValidate':function(form) {
+                            return beforeValidateContactForm(form);
+                        },'attributes':[{'id':'ContactForm_first_name','inputID':'ContactForm_first_name','errorID':'ContactForm_first_name_em_','model':'ContactForm','name':'first_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("First Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_last_name','inputID':'ContactForm_last_name','errorID':'ContactForm_last_name_em_','model':'ContactForm','name':'last_name','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Last Name cannot be blank.");
+}
+
+}},{'id':'ContactForm_company','inputID':'ContactForm_company','errorID':'ContactForm_company_em_','model':'ContactForm','name':'company','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Company URL cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/:\/\//)) {
+	value="http"+'://'+value;
+}
+
+if(!value.match(/^(http|https):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)/i)) {
+	messages.push("Company URL is not a valid URL.");
+}
+
+
+}
+
+}},{'id':'ContactForm_email','inputID':'ContactForm_email','errorID':'ContactForm_email_em_','model':'ContactForm','name':'email','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Email Address cannot be blank.");
+}
+
+
+if($.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("Email Address is not a valid email address.");
+}
+
+}},{'id':'ContactForm_phone','inputID':'ContactForm_phone','errorID':'ContactForm_phone_em_','model':'ContactForm','name':'phone','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
+
+if ($.trim(value)!='' && !value.replace(/[^0-9]/g, '').match(/1?([2-9][0-8][0-9])([2-9][0-9]{2})([0-9]{4})/)) {
+        messages.push("Phone Number is not a valid phone number.");
+}
+
+}},{'id':'ContactForm_comments','inputID':'ContactForm_comments','errorID':'ContactForm_comments_em_','model':'ContactForm','name':'comments','enableAjaxValidation':true}],'summaryID':'yw8_es_'});
+
+   window.calcScrollPos();
+
+   $("#verticalnav li a").on("click",function(event){
+        event.preventDefault();
+        window.allowTabHighlights = false;
+
+
+        if(($.browser.msie && ($.browser.version < 9)) || ($(window).height() > 768)){
+            $("html,body").animate({scrollTop: (parseInt($( $(this).attr("href") ).offset().top) - window.scrollpos)},500,"easeOutQuart",function(){
+                window.allowTabHighlights = true;
+            });
+        } else {
+            $("html,body").animate({scrollTop: (parseInt($( $(this).attr("href") ).offset().top)-24)},500,"easeOutQuart",function(){
+                window.allowTabHighlights = true;
+            });
+        }
+
+        activeTab(this,true);
+        return false;
+    });
+
+    // Set the active tab if we aren't scrolling from a click
+    function activeTab(active_tab,force){
+        if (window.allowTabHighlights || force) {
+            $("#verticalnav li").removeClass("active");
+            $(active_tab).parent("li").addClass("active");
+        }
+    }
+
+    // Check once for a location.hash on load
+    if (location.hash) {
+        var tab = location.hash.replace(/tab_/,'');
+        location.hash = tab;
+        $("#verticalnav li a[href='"+tab+"']").click();
+    }
+
+    // Need both waypoints to catch the top element at 0px but allow the others
+    // to appear when scrolling down the page
+    $("article").waypoint(function(direction){
+        activeTab( "a[href='#"+this.id+"']" );
+            location.hash = "#tab_"+this.id;
+        },{
+            offset: "50%",
+            continuous: false
+        });
+    $("article").waypoint(function(direction){
+        activeTab( "a[href='#"+this.id+"']" );
+        location.hash = "#tab_"+this.id;
+    },{
+        offset: 0,
+        continuous: false
+    });
+
+    $("window").on("resize",calcScrollPos());
+
+
+            var verticalNavStartPos = $("#verticalnav-wrapper").css("top");
+            var startOffset = getVerticalNavOffset();
+            var navBottomPadding = 44;
+            function getVerticalNavOffset() {
+                return parseInt($("#verticalnav").offset().top) + parseInt($("#verticalnav").css("height")) + parseInt($("#verticalnav-wrapper .social").css("height")) + parseInt($("#verticalnav-wrapper .social").css("padding-top")) + parseInt($("nav.sitefooter").css("margin-top")) + parseInt($("body > footer").css("padding-top")) + navBottomPadding;
+            }
+            function getVerticalNavPos() {
+                return $("#verticalnav-wrapper").css("position") == "fixed" ? "top" : "bottom";
+            }
+            function setVerticalNavPos(p) {
+                    if (p == "top") {
+                        $("#verticalnav-wrapper").css({"position":"fixed","top":verticalNavStartPos});
+                    } else {
+                        $("#verticalnav-wrapper").css({"position":"absolute","bottom":navBottomPadding+"px","top":"auto"});
+                    }
+            }
+            $(window).scroll(function(event){
+                var navPos = getVerticalNavPos();
+                var toggleOffset = getVerticalNavOffset();
+                if ("top" == navPos) {
+                    if (parseInt($(".sitefooter").offset().top) <= toggleOffset) {
+                        setVerticalNavPos("bottom");
+                    }
+                } else {
+                    if (parseInt($(window).scrollTop()) < parseInt($("div#content").css("height")) - parseInt($("div#content").offset().top) - parseInt($("#verticalnav").css("height")) - parseInt($("body > footer").css("padding-top")) -  parseInt($("#verticalnav-wrapper .social").css("height")) - parseInt($("#verticalnav-wrapper .social").css("padding-top")) - navBottomPadding) {
+                        setVerticalNavPos("top");
+                    }
+                }
+            });
+            
+
+        $("#newsletter_back_btn").on("click",function(){
+            newsletterBackBtn();
+        });
+
+        $("#newsletter_form").on("submit",function(){
+            return false;
+        });
+        $("#newsletter_form button").on("click",function(evt){
+            evt.preventDefault();
+            trackGA("event", "Subscribe-Home", "Newsletter-Subscribe", "Newsletter button");
+            if ($("#newsletter_form input[type='text']").val() == '') {
+                $("#newsletter_form input[type='text']").addClass('missing_email');
+                $("p.missing_email").css('display','block');
+            } else {
+                $.ajax({
+                    type:       "POST",
+                    url:        $("#newsletter_form").attr("action"),
+                    data:       $("#newsletter_form").serialize(),
+                    dataType:   'json',
+                    success:    function(msg){
+                            if(msg.success){
+                                newsletterThanks();
+                            } else {
+                                newsletterError();
+                            }},
+                   error:        function(jqXHR,textStatus){
+                            newsletterError();
+                        }
+                });
+            }
+            //return false;
+        });
+
+
+    $( "a.newsletter" ).click(function(e) {
+        e.preventDefault();
+        $('.overlay').css('display','block');
+        $('.newsletter-box').css({
+              'display':'block',
+              'left': (parseInt($(window).width()/2) - 200) + 'px',
+              'top': (parseInt($(window).height()/2.5) - 150) + 'px'
+        });
+    });
+
+
+    $(".overlay").click(function(e){
+        if(e.target == this){
+            $('.overlay').css('display','none');
+            $('.newsletter-box').css('display','none');
+        }
+    });
+
+    $('a.closebox').click(function(e){
+        e.preventDefault;
+        $('.overlay').css('display','none');
+    });
+
+    $('#btn_done').click(function(e){
+        e.preventDefault;
+        $('.overlay').css('display','none');
+    });
+
+
+            setTimeout(function(){          // Set a timeout so iOS will work
+                window.scrollTo(0, 1);      // hide address bar
+            }, 0);
+setTimeout(function(){ 
+                adroll_adv_id = "2W47LA6OUJE57NKEDHDLQE";
+                adroll_pix_id = "Z7STRXE5DFA35AENPH2NEV";
+                (function(){
+                    __adroll_loaded=true;
+                    var scr = document.createElement("script");
+                    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                    scr.setAttribute("async", "true");
+                    scr.type = "text/javascript";
+                    scr.src = host + "/j/roundtrip.js";
+                    ((document.getElementsByTagName("head") || [null])[0] ||
+                    document.getElementsByTagName("script")[0].parentNode)
+                    .appendChild(scr);
+                }());
+            
+$("#bdclogo").click(function() {
+                    trackGA("event", "Engage-Global", "Int-Click", "home logo");
+                });
+
+    $("nav.sitefooter a.social.rss").click(function(e) {
+        trackGA("event", "Engage-Global", "Blog-Subscribe", "RSS footer");
+    });
+    $("nav.sitefooter a.social.fb").click(function(e) {
+        trackGA("event", "Engage-Global", "Social-Click", "fb footer");
+    });
+    $("nav.sitefooter a.social.gplus").click(function(e) {
+        trackGA("event", "Engage-Global", "Social-Click", "g+ footer");
+    });
+    $("nav.sitefooter a.social.twitter").click(function(e) {
+        trackGA("event", "Engage-Global", "Social-Click", "twitter footer");
+    });
+    $("nav.sitefooter a.social.linkedin").click(function(e) {
+        trackGA("event", "Engage-Global", "Social-Click", "linkedin footer");
+    });
+ }, 1); // end setTimeout()
+/*]]>*/
+</script>
+<img src="//www.business.com/images2/anal.gif?mkt=0&amp;user_type=walkin&amp;referrer=&amp;render_time=0.052862882614136&amp;session_id=9um0tuau06noos5j6fontmc5v2&amp;ip=199.16.172.157&amp;view=advertise%2Finfo" width="1" height="1" alt="" style="position:absolute;"></body></html>

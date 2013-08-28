@@ -1,0 +1,1665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="24-hour roadside assistance, member-only discounts, travel agency services, insurance, automotive solutions and more" />
+<meta name="Keywords" content="AAA, East Central, auto, travel, discounts, join, member, membership, motor club, road service, roadside assistance, towing, auto club" />
+<title>AAA East Central - Travel, Discounts, Insurance, Roadside Assistance and AAA Membership</title>
+<meta name="google-site-verification" content="BxSWp3cRi23QvI9JEeCWysJPdHa9SH-5NClmczHUVIE" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="en" />
+<!-- meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" -->
+<meta HTTP-EQUIV="Expires" content="0" />
+<link rel="stylesheet" href="redesign/css/reset.css" type="text/css" />
+<link rel="stylesheet" href="redesign/css/myCss.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="redesign/css/menu.css" />
+<link rel="stylesheet" href="redesign/css/slideshow.css" type="text/css" media="screen" />
+<!--[if lt IE 9]>
+<link href="css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<!-- MANDATORY LEGACY STATEMENTS -->
+								<script language="Javascript" type="text/javascript" src="http://www.res99.com/cal/calendarv2.js"></script>
+								<script language="Javascript" type="text/javascript" src="http://www.res99.com/cal/calendar.js"></script>
+								<script language="javascript" type="text/javascript" SRC="http://www.res99.com/hotelsrch.js"></script>
+
+
+
+								<script language="javascript" SRC="http://images.wctravel.com/carsrch.js" type="text/javascript"></script>
+								<script language="javascript" type="text/javascript">
+								<!-- Hide from non JS browsers
+									var searchType = "car_fd"
+									var carDoaCal;
+									var carDodCal;
+									var carCalArray = new Array(); // store calendar objects for use to show calendar.
+             
+									function carInitCal() {
+										carDoaCal = new WCT.calendar("carDoa","carCal1Container","calendarBoxArrive",document.forms["CarSearch"].chk_in,"DOA");         carDodCal = new WCT.calendar("carDod","carCal2Container","calendarBoxDepart",document.forms["CarSearch"].chk_out,"doD");
+									    carDoaCal.addLinkedCal(carDodCal);
+									    carDodCal.addLinkedCal(carDoaCal);     
+										carCalArray.push(carDoaCal);
+									    carCalArray.push(carDodCal);
+										carDoaCal.position("relative");
+										carDodCal.position("relative");
+									}
+  
+									function carSplitDate() {
+										carDoaCal.returnSelectedDate("","pu_month","pu_day");
+									    carDodCal.returnSelectedDate("","do_month","do_day");
+									}
+									// to redirect to 4hr car advanced search page
+									function go() {
+									   var destination = document.CarSearch.puwhere.value;
+									   var re = new RegExp('CarRequest');
+									   var m = re.exec(destination);
+									   if (m != null) {
+										   //location.target = "_top";
+										   top.location.href = destination;
+									   } else {
+										   return false;
+									   }
+									}
+								//-->
+								</script>
+<script>
+function findByTagAndClass(tagName,cn1){
+    var list = document.getElementsByTagName(tagName);
+    var list2 = new Array();
+    for(var i in list){
+        if(hasClass(list[i],cn1)){
+            list2.push(list[i]);
+        }
+    }
+    return list2;
+}
+
+function hasClass(element,c){
+    if(element!=null && element.className!=null) {
+        if(element.className==c)return true;
+        var classes = element.className.split(" ");
+        for(var i in classes){
+            if(classes[i]==c)return true;
+        }
+    }
+    return false;
+}
+
+var strHTML = new String();
+strHTML = '<style>#navBtn_HR, .navBtn_HR {height:auto !important;}</style><table><tbody><tr>';
+strHTML = strHTML.concat('<td>');
+strHTML = strHTML.concat('<img src="http://images.wctravel.com/images-bin/10027499/Hertz_logo.gif">');
+strHTML = strHTML.concat('</td>');
+strHTML = strHTML.concat('<td> </td>');
+strHTML = strHTML.concat('<td>');
+strHTML = strHTML.concat('<b>AAA Member Benefits include:</b>   <br>');
+strHTML = strHTML.concat('    - Free use of one child, infant or booster seat <br>');
+strHTML = strHTML.concat('    - No charge for additional drivers who are also AAA members and <br>');
+strHTML = strHTML.concat('      meet standard rental qualifications <br>');
+strHTML = strHTML.concat('    - $6.99 per day rental fee for Hertz NeverLost® in-car navigational system <br>');
+strHTML = strHTML.concat('    - 50% discount off daily fee for SIRIUS Satellite Radio <br><br>    <b><a href="http://www.aaacentral.com">View all Benefits</a></b><br><br>');
+strHTML = strHTML.concat('Benefits are only valid for rentals in the United States and Canada. <br>');
+strHTML = strHTML.concat('</td>');
+strHTML = strHTML.concat('</td></tr></tbody></table>');	
+
+//This function changes the hertz only partner banner at car frontdoor 
+var ourPartnersHTML = findByTagAndClass('DIV','cars_partners');	
+if(ourPartnersHTML[0]+'' != 'undefined')
+{
+	ourPartnersHTML[0].innerHTML = '<h3 class="cars_small_title">AAA Exclusive Partner</h3>' + strHTML;
+}
+
+if(document.location.pathname.match('CarRequest.do'))
+{
+    if(document.getElementById('navBtn_HR'))
+    {
+        document.getElementById('navBtn_HR').innerHTML = strHTML + '<div class="hr"><hr></div>' +document.getElementById('navBtn_HR').innerHTML;
+    }
+}
+
+// This function add the extra policie at the checkout page for MEX
+if(document.location.pathname.match('CheckoutReview.do'))
+{
+	var carCustomPolHTML = findByTagAndClass('DIV','col1');
+	var regexSTRIATAMEXcodes = new RegExp('(ACA)|(AGU)|(BJX)|(CEN)|(CJS)|(CLQ)|(CME)|(CUL)|(CUN)|(CUU)|(CZM)|(DGO)|(GDL)|(GUB)|(GYM)|(HMO)|(HUX)|(LAP)|(LMM)|(LOV)|(LTO)|(LZC)|(MAM)|(MEX)|(MID)|(MLM)|(MTY)|(MXL)|(MZT)|(NLD)|(OAX)|(PAZ)|(PBC)|(PVR)|(PXM)|(QRO)|(REX)|(SJD)|(SLP)|(SLW)|(TAM)|(TAP)|(TGZ)|(TIJ)|(TPQ)|(TRC)|(UPN)|(VER)|(VSA)|(ZCL)|(ZIH)|(ZLO)');
+	var strInnerExtraPolicie = "<ul><li>All car rentals in Mexico require that the customer purchase insurance when picking up the car.</li></ul>";
+	if(carCustomPolHTML[0]+'' != 'undefined')
+	{
+        if(carCustomPolHTML[0].innerHTML.match(regexSTRIATAMEXcodes))
+		{
+			document.getElementById('policies').innerHTML = document.getElementById('policies').innerHTML + strInnerExtraPolicie;
+		}
+	}
+}
+</script>
+<Script language="javascript">
+
+
+//Function setTomorrow();
+{
+var today=new Date();
+var tomorrows=new Date();
+tomorrows.setDate(today.getDate()+1);
+
+
+var TomorrowDay = tomorrows.getDate();
+var TomorrowMonth = tomorrows.getMonth();
+TomorrowMonth = TomorrowMonth + 1;
+var TomorrowYear = tomorrows.getFullYear();
+  
+
+
+
+
+
+
+
+}
+</Script>
+
+
+<script language="javascript">
+function customAdvanceSearch(aForm)
+{	var frm = document.getElementById(aForm);
+	frm.advancedSearch.value = "YES";
+	frm.submit();
+}
+</script>
+
+<Script language="javascript">
+var currentDate = new Date()
+  var day = currentDate.getDate()
+  var month = currentDate.getMonth()
+  month = month +1
+  var year = currentDate.getFullYear()
+</Script>
+
+
+
+<script type="text/javascript" src='https://www.aaa.com/aaa/sem/utils.js'></script>
+<script type="text/javascript" src="http://www.aaacentral.com/redesign/js/dttp.js"></script>
+
+
+<script language=javascript src='http://www.aaa.com/configuration/survey.js'></script>
+<script>
+ setSurvey('/survey/invitationpage.jsp','400','125','2','YES','eastcentral.aaa.com')
+</script>
+
+<script type="text/javascript">
+(function() {
+var h = 'com-directv.netmng.com';
+var a = '241';
+var t = document.createElement('script');
+t.type = 'text/javascript'; t.async = true;
+var p = 'https:'==document.location.protocol?'https://':'http://';
+var m = document.referrer.match(/https?:\/\/([a-z]+\.[a-z\.]+)/i);
+var r = (m && m[1] != document.location.hostname) ? ('&ref=' + escape(document.referrer)) : '';
+t.src = p + h + '/?async=1&aid=' + a + r;
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(t, s);
+})();
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18804432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src='https://www.aaa.com/aaa/sem/utils.js'></script>
+
+<!-- JSQUERY SCRIPTS AND SLIDESHOW -->
+<script src="redesign/js/jquery.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="redesign/js/jquery.cycle.js"></script>
+<script type="text/javascript" src="redesign/js/slideshow.js"></script>
+
+<script type="text/javascript" >
+$(document).ready(function(){
+	if ($('div.tabs').attr('id') =='tab1'){
+		$('h2.accord_header.first').css({'background-position':"bottom"});
+		$('.tabs > div.accord_contents').filter(':not(:first)').hide();
+		$('h2.accord_header').click(function(){
+			$('h2.accord_header').css({'background-position':"top"});
+			
+			var t=$(this).parent().find('div.accord_contents:first').attr("id");
+			
+			var self=$(this).parent().find('div.accord_contents:first').is(':visible');
+			
+			if (self){
+				$(this).parent().find('div.accord_contents:first').slideToggle();
+			}
+			
+			if (!self){
+				$(this).parent().parent().find('div.accord_contents:visible').slideToggle();
+			$(this).parent().find('div.accord_contents:first').slideToggle();	
+			}		
+			if (self){ 
+				$(this).parent().find('h2.accord_header:first').css({'background-position':"top"});
+			}else{
+			$(this).parent().find('h2.accord_header:first').css({'background-position':"bottom"});
+			}
+		});
+	}
+	if ($('div.tabs2').attr('id') =='tab1b'){
+		$('.tabs2 > div.accord_contents2').filter(':not(:first)').hide();
+		$('h2.accord_header2').click(function(){
+			$('h2.accord_header2').css({'background-position':"top"});
+			
+			var self=$(this).parent().find('div.accord_contents2:first').is(':visible');
+			
+			if (self){
+				$(this).parent().find('div.accord_contents2:first').slideToggle();
+			}
+			
+			if (!self){
+				$(this).parent().parent().find('div.accord_contents2:visible').slideToggle();
+			$(this).parent().find('div.accord_contents2:first').slideToggle();	
+			}		
+			if (self){ 
+				$(this).parent().find('h2.accord_header2:first').css({'background-position':"top"});
+			}else{
+			$(this).parent().find('h2.accord_header2:first').css({'background-position':"bottom"});
+			}
+		});
+	}
+})
+</script>
+<script  type="text/javascript" >
+$(document).ready(function(){
+//script to make columns equal in height, but best to also use css and eyeball it first.
+if($('div.equal').attr('id') == 'element1'){       
+var t = Math.max($('#element1').height(),$('#element2').height(),$('#element3').height(), $('#element4').height());
+$('.equal').height(t);
+}
+if($('div.equal2').attr('id') == 'element1b'){
+var t2 = Math.max($('#element1b').height(),$('#element2b').height(),$('#element3b').height(), $('#element4b').height());
+$('.equal2').height(t2);
+}
+});
+</script>
+
+</head>
+
+<body>
+<div id="wrapper_o">
+  <div id="wrapper_i">
+    <div id="content">
+   	  <div id="header">
+<!-- Mandatory include statements -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Optional page functions -->
+
+
+
+
+
+<div id="logo">           		
+ <a href="/index.jsp"><img src="/redesign/images/AAA_Logo.png" width="135" height="120" alt="AAA-Logo" /></a>
+            </div><!--//logo-->
+            <div id="top_nav">
+            	<ul>
+                  <li class="t_nav"><a href="/redirect/redirect_join.jsp">JOIN</a></li>
+               	  <li class="t_nav divider"><a href="/membership/easy_renewal.jsp">RENEW</a></li>
+                  <li class="t_nav divider"><a href="/offices/index.jsp">BRANCH OFFICES</a></li>
+               	  <li class="t_nav divider"><a href="/redirect/redirect_myaccount.jsp">MY AAA</a></li>
+                 <li class="t_nav divider"><a href="/jsp_forms/login.jsp">SIGN IN</a></li>
+               	  <li class="t_nav divider"><a href="/membership/contact.jsp">HELP</a></li>
+				   <li class="t_nav divider"><a href="/index.jsp">HOME</a></li>
+                </ul>
+				<br>
+				<a href="http://eastcentral.aaa.com/e-newsletters/subscribe.jsp"><img src="http://eastcentral.aaa.com/F_3.jpg"  border=0></a>
+            </div><!--//top_nav-->
+        </div><!--//header-->
+		
+		
+		
+        <div id="nav">
+	<ul class="menu"> 
+    	
+		<li id="li_membership" class="z c a"><a href="/membership/index.jsp">Membership<br />
+		<span class="sub">Join AAA</span></a>
+       		 <div class="dropdown_5columns" id="div_membership"> 
+        		 <div id="membership_pic">
+          		  <div class="col_6">  
+                  <div class="col_3a red">
+                		<ul>
+                        	<li><a class="mm_red" href="/membership/index.jsp"><span class="arrow"></span>Becoming a Member</a></li>
+                            <li> <a class="mm_red" href="/membership/joinAAA.jsp"><span class="arrow"></span>Why Join</a></li>
+                            <li> <a class="mm_red" href="/membership/types/comparison.jsp"><span class="arrow"></span>Compare Memberships</a></li>
+                            <li><a class="mm_red" href="/jsp_forms/login.jsp"><span class="arrow"></span>Already a Member</a></li>
+                         
+                            <li><a class="mm_red" href="/membership/benefits/index.jsp"><span class="arrow"></span>Member Handbook</a></li>
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="/membership/easy_renewal.jsp"><span class="barrow"></span>Renew</a></li>
+                            <li><a class="want" href="/redirect/redirect_join.jsp"><span class="barrow"></span>Join</a></li>
+							 <li><a class="want" href="http://eastcentral.aaa.com/e-newsletters/subscribe.jsp"><span class="barrow"></span>Sign up for E-News</a></li>
+                            <li><a class="want" href="/membership/gift/index.jsp"><span class="barrow"></span>Buy a gift membership</a></li>
+                            <li><a class="want" href="/redirect/redirect_myaccount.jsp"><span class="barrow"></span>Upgrade</a></li>
+                            <li><a class="want" href="/redirect/redirect_myaccount.jsp"><span class="barrow"></span>Add a member</a></li>
+                            <li><a class="want" href="/jsp_forms/login.jsp"><span class="barrow"></span>Login to my account</a></li>
+                            <li><a class="want" href="/membership/replacement_card_request.jsp"><span class="barrow"></span>Request a new card</a></li>
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+              </div><!--//membership_pic-->
+           </div><!--//div_membership-->
+    </li><!--//li_membership-->
+       
+    	<li id="li_travel"  class="z c b"><a href="/travel/index.jsp">Travel<br /><span class="sub">Have some fun</span></a>
+        	<div class="dropdown_5columns" id="div_travel">
+        		<div id="travel_pic">
+          		 <div class="col_6">  
+                 	<div class="col_3a red">
+                		<ul>
+                        	<li><a class="mm_red" href="/travel/index.jsp"><span class="arrow"></span>Plan a Trip</a></li>
+                            <li> <a class="mm_red" href="/redirect/redirect_rthome.jsp"><span class="arrow"></span>Road TripTour</a></li>
+                            <li> <a class="mm_red" href="/travel/featuredvacations.jsp"><span class="arrow"></span>AAA Featured Vacations</a></li>
+                            <li><a class="mm_red" href="http://www.aaa.com/cruises"><span class="arrow"></span>Cruises</a></li>
+                            <li><a class="mm_red" href="/travel/disney/index.htm"><span class="arrow"></span>Disney</a></li>
+                            <li><a class="mm_red" href="/travel/international/index.jsp"><span class="arrow"></span>Before You Go</a></li>
+                            <li><a class="mm_red" href="/travel/hot-deals/index.jsp"><span class="arrow"></span>Hot Deals &amp; Specials</a></li>
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="http://www.aaa.com/triptik"><span class="barrow"></span>Get TripTiks, maps & guides</a></li>
+                            <li><a class="want" href="http://www.aaa.com/hotels"><span class="barrow"></span>Find a hotel</a></li>
+                            <li><a class="want" href="/redirect/redirect_AirCriteria.jsp"><span class="barrow"></span>Find a flight</a></li>
+                            <li><a class="want" href="/redirect/redirect_CarCriteria.jsp"><span class="barrow"></span>Rent a car</a></li>
+                            <li><a class="want" href="/community/events/index.jsp"><span class="barrow"></span>View Event Calendar</a></li>
+                            <li><a class="want" href="/travel/international/index.jsp"><span class="barrow"></span>Get a Passport</a></li>
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-800-354-8761 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+              </div><!--//travel_pic-->
+           </div><!--//div_travel-->
+        </li><!--//li_travel-->   
+        
+    	<li id="li_tours"   class="z c b"><a href="/maps/index.jsp">Maps &amp; Tour Books<br /><span class="sub">Keeping you on the go</span></a>
+			<div class="dropdown_5columns" id="div_tours"> 
+        		  <div id="tours_pic">
+					<div class="col_6">  
+         			 <div class="col_3a red">
+					 	
+					 	<h2 class="iWantToPrint">Print at Home:</h2>
+					 
+						
+                		<ul>
+						
+						<li><a class="mm_red" href="http://www.aaa.com/triptik"><span class="arrow"></span>TripTik<sup>&reg;</sup> Travel Planner</a></li>
+						<li><a class="mm_red" href="../redirect/redirect_quickrouterequest.jsp"><span class="arrow"></span>Quick Route</a></li>
+						<li><a class="mm_red" href="../redirect/redirect_AAAMapGallery.jsp"><span class="arrow"></span>Online Maps</a></li>
+						<li><a class="mm_red" href="../redirect/redirect_TourBookBeginSearch.jsp"><span class="arrow"></span>Search TourBook Guides</a></li>
+						<li><a class="mm_red" href="http://www.aaa.com/ebooks"><span class="arrow"></span>eTourBooks</a></li>
+						<li><a class="mm_red" href="http://www.aaa.com/TourBookComments"><span class="arrow"></span>TourBook<sup>&reg;</sup> Comments</a></li>
+				
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">Order By Mail:</h2>
+                         <ul class="wants">
+						 <li><a class="want" href="../redirect/redirect_triptikHome.jsp"><span class="barrow"></span>Order a TripTik</a></li>
+						 <li><a class="want" href="../redirect/redirect_publicationrequest.jsp"><span class="barrow"></span>Order Maps</a></li>
+						 <li><a class="want" href="../redirect/redirect_publicationrequest.jsp"><span class="barrow"></span>Order a TourBook Guide</a></li>
+				
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a></p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+              </div><!--//tours_pic-->
+           </div><!--//div_tours-->
+        </li><!--//tours-->
+        
+		 <li id="li_discounts" class="z c b"><a href="/discounts/index.jsp">Discounts<br /><span class="sub">Find Savings</span></a>
+         <div class="dropdown_5columns" id="div_discounts"> 
+        		<div id="discounts_pic">
+          		  <div class="col_6">  
+                  <div class="col_3a red">
+                		<ul>
+<li><a class="mm_red" href="http://eastcentral.aaa.com/automotive/index.jsp"><span class="arrow"></span>Automotive</a></li>
+<li><a class="mm_red" href="http://discounts.eastcentral.aaa.com"><span class="arrow"></span>AAA Discounts and Rewards</a></li>
+<li><a class="mm_red" href="http://www.aaa.com/travel"><span class="arrow"></span>Hotels &amp; Travel</a></li>
+
+<li><a class="mm_red" href="http://www.aaa.com/specialoffers"><span class="arrow"></span>Special Offers</a></li>
+                            <li> <a class="mm_red" href="/discounts/entertainment/index.jsp"><span class="arrow"></span>Tickets &amp; Attractions</a></li>
+
+
+  
+
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="http://eastcentral.aaa.com/discounts/entertainment/index.jsp"><span class="barrow"></span>Buy movie tickets</a></li>
+                            <li><a class="want" href="http://eastcentral.aaa.com/discounts/entertainment/index.jsp"><span class="barrow"></span>Buy attraction tickets</a></li>
+							<li><a class="want" href="http://www.aaa.com/specialoffers"><span class="barrow"></span>Find Special Offers</a></li>
+							<li><a class="want" href="http://discounts.eastcentral.aaa.com"><span class="barrow"></span>What are AAA Discounts and Rewards?</a></li>
+							<li><a class="want" href="http://discounts.eastcentral.aaa.com"><span class="barrow"></span>View all discounts</a></li>
+
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+               </div><!--//discounts_pic-->
+           </div><!--//div_discounts-->
+         </li><!--//discounts-->
+         
+		<li id="li_auto" class="z c b"><a href="/automotive/index.jsp">Automotive<br /><span class="sub">Caring for your car</span></a>
+        <div class="dropdown_5columns" id="div_auto"> 
+        	<div id="auto_pic">
+          		  <div class="col_6">  
+                  <div class="col_3a red">
+                		<ul>
+
+						   
+                        	<li><a class="mm_red" href="/redirect/redirect_ers.jsp"><span class="arrow"></span>Roadside Assistance</a></li>
+                            <li> <a class="mm_red" href="/automotive/road_service/battery-service.jsp"><span class="arrow"></span>Battery Service</a></li>
+							<li> <a class="mm_red" href="http://www.aaa.com/BatteryTender"><span class="arrow"></span>Battery Tender</a></li>
+                            <li> <a class="mm_red" href="/automotive/repairs.jsp"><span class="arrow"></span>Maintenance &amp; Repairs</a></li>
+							 <li><a class="mm_red" href="http://eastcentral.aaa.com/automotive/autobuying.jsp"><span class="arrow"></span>Auto Buying</a></li>
+                            <li><a class="mm_red" href="/redirect/redirect_fuelfinder.jsp" target="_blank"><span class="arrow"></span>Fuel Prices &amp; Information</a></li>
+                            <li><a class="mm_red" href="/community/safety/index.jsp"><span class="arrow"></span>Driver Training &amp; Education</a></li>
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="/redirect/redirect_ers.jsp"><span class="barrow"></span>Get roadside assistance</a></li>
+                            <li><a class="want" href="/community/safety/index.jsp"><span class="barrow"></span>Register for a driving course</a></li>
+                            <li><a class="want" href="/automotive/repair/aar.jsp"><span class="barrow"></span>Find an AAA approved auto repair shop</a></li>
+                            <li><a class="want" href="/automotive/fuel/index.jsp"><span class="barrow"></span>Find gas information</a></li>
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+              </div> <!--//auto_pic-->
+           </div><!--//div_auto-->
+        </li> <!--//auto-->
+        
+    	<li id="li_insurance" class="z c b"><a href="/insurance/index.jsp">Insurance<br /><span class="sub">Enjoy peace of mind</span></a>
+        <div class="dropdown_5columns" id="div_insurance"> 
+        	<div id="insurance_pic">
+          		  <div class="col_6">  
+                  <div class="col_3a red">
+                		<ul>
+                        	<li><a class="mm_red" href="/insurance/auto.jsp"><span class="arrow"></span>Auto</a></li>
+                            <li> <a class="mm_red" href="/insurance/homeowners.jsp"><span class="arrow"></span>Home</a></li>
+                            <li> <a class="mm_red" href="/insurance/life.jsp"><span class="arrow"></span>Life</a></li>
+                            <li><a class="mm_red" href="/insurance/homeowners.jsp"><span class="arrow"></span>Umbrella</a></li>
+                            <li><a class="mm_red" href="/insurance/index.jsp"><span class="arrow"></span>Renters</a></li>
+                           
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="/insurance/index.jsp"><span class="barrow"></span>Get a quote</a></li>
+                            <li><a class="want" href="/insurance/index.jsp"><span class="barrow"></span>Talk to an agent</a></li>
+                            <li><a class="want" href="/insurance/index.jsp"><span class="barrow"></span>Make a claim</a></li>
+
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+              </div><!--//insurance_pic-->
+           </div><!--//div_insurance-->
+        </li><!--//insurance--> 
+        
+		<li id="li_finance" class="z c b"><a href="/financial/index.jsp">Finance<br /><span class="sub">Manage your funds</span></a>
+      <div class="dropdown_5columns" id="div_finance"> 
+        	 <div id="finance_pic">
+          		  <div class="col_6">  
+                  <div class="col_3a red">
+                		<ul>
+                        	<li><a class="mm_red" href="/financial/memre.jsp" target="_blank"><span class="arrow"></span>AAA Member Rewards</a></li>
+							<li><a class="mm_red" href="http://www.aaa.com/identitytheft" target="_blank"><span class="arrow"></span>ProtectMyID<sup>&reg;</sup></a></li>
+                            <li> <a class="mm_red" href="http://www.aaa.com/deposits" target="_blank"><span class="arrow"></span>Deposits</a></li>
+                            <li> <a class="mm_red" href="http://www.aaa.com/travelmoney"><span class="arrow"></span>Travel Money</a></li>
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="http://eastcentral.aaa.com/redirect/redirect_visa.jsp" target="_blank"><span class="barrow"></span>Apply for a AAA Credit Card</a></li>
+                            <li><a class="want" href="http://www.aaa.com/deposits" target="_blank"><span class="barrow"></span>Save for my retirement</a></li>
+                            <li><a class="want" href="/redirect/redirect_mtw.jsp"><span class="barrow"></span>Get Foreign Currency</a></li>
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+               </div><!--//finance_pic-->
+           </div><!--//div_finance-->  
+        </li><!--//finance-->
+        
+		 <li id="li_community" class="z d b"><a href="/community/index.jsp">Community<br /><span class="sub">We're here for you</span></a>
+         <div class="dropdown_5columns" id="div_community">
+         	<div id="community_pic">
+      			 <div class="col_6">  
+                  <div class="col_3a red">
+                		<ul>
+                        	<li><a class="mm_red" href="/community/press.jsp"><span class="arrow"></span>Public Relations</a></li>
+                            <li> <a class="mm_red" href="/community/public_affairs.jsp"><span class="arrow"></span>Public Affairs</a></li>
+                            <li> <a class="mm_red" href="/redirect/redirect_fuelfinder.jsp"><span class="arrow"></span>Gas Prices</a></li>
+                            <li><a class="mm_red" href="/community/events/index.jsp"><span class="arrow"></span>Events Calendar</a></li>
+                            <li><a class="mm_red" href="/community/safety/index.jsp"><span class="arrow"></span>Driver Programs</a></li>
+                        </ul>   
+                    </div><!--//red-->
+                     <div class="col_3b blue">
+                    	 <h2 class="iWant">I want to:</h2>
+                         <ul class="wants">
+                            <li><a class="want" href="/redirect/redirect_fuelfinder.jsp"><span class="barrow"></span>Find the cheapest gas</a></li>
+                            <li><a class="want" href="/community/events/index.jsp"><span class="barrow"></span>Look up events near me</a></li>
+                            <li><a class="want" href="/community/safety/index.jsp"><span class="barrow"></span>Find a driver program</a></li>
+                            <li><a class="want" href="/community/public_affairs/advocacy.jsp"><span class="barrow"></span>What is AAA Advocacy</a></li>
+                            <li><a class="want" href="/community/media.jsp"><span class="barrow"></span>Read Press Releases</a></li>
+                        </ul>   
+                    </div><!--//blue-->
+                    <div class="col_6b contact">
+                    	<p class="contact_para">Contact Us</p>
+						<p class="contact_para">Have a question? We'll be happy to help!</p>
+						<p class="contact_para">1-(800)-441-5008 or email us by clicking <a class="contactHref" href="/membership/contact.jsp">here</a> </p>
+                    </div><!--//contact-->
+                </div><!--//col6-->
+          	 </div><!--//community_pic-->
+           </div><!--//div_commnunity-->
+         </li><!--//community-->
+
+
+	</ul>
+</div><!--//nav-->
+
+		
+         <div id="slides">
+            <div class="slides">
+                 <ul>
+
+<li id="slide-one">
+<a href="http://www.aaa.com/sweepstakes"><img src="/slideshow/JUL_zooom-to-win-carousel_EC.jpg" width="976" height="403" alt="Turbo" /></a> 
+</li> 
+
+<li id="slide-two">
+
+<a href="http://www.aaa.com/mobile"><img src="/slideshow/FEB_mobile.jpg" width="976" height="403" alt="Mobile" /></a>
+</li>
+ 
+<li id="slide-three">
+<a href="http://www.aaa.com/directv"><img src="/slideshow/aug_directv1.jpg" width="976" height="403" alt="DirectTV" /></a>   
+
+</li>                     
+
+<li id="slide-four">
+<a href="/travel/planner.jsp"><img src="/slideshow/lead.jpg" width="976" height="403" alt="AAA Travel Planner" /></a> 
+</li> 
+      
+<li id="slide-five">
+
+<a href="http://www.aaa.com/identitytheft"><img src="/slideshow/AUG_IdentityTheft.jpg" width="976" height="403" alt="ProtectMyID" /></a> 
+ 
+</li>
+            
+<li id="slide-six">
+<a href="http://www.aaa.com/aaafindme"><img src="/slideshow/findme1.jpg" width="976" height="403" alt="FindMe" /></a>
+</li>  
+ 
+<li id="slide-seven">
+<a href="/travel/featuredvacations.jsp"><img src="/slideshow/JUN_AAAFV.jpg" width="976" height="403" alt="AAA Featured Vacations" /></a> 
+</li>                  
+                </ul>
+            </div><!--//.slides-->
+          <div id="slideNav">
+            <ul class="slideNav">
+
+ 				<li class="sl_nav"><a href="#slide-one">Turbo</a></li>
+                <li class="sl_nav"><a href="#slide-two">Mobile</a></li>
+                <li class="sl_nav"><a href="#slide-three">DirectTV</a></li>
+				<li class="sl_nav"><a href="#slide-four">Planner</a></li>
+				<li class="sl_nav"><a href="#slide-five">Identity Theft</a></li>
+                  <li class="sl_nav"><a href="#slide-six">FindMe</a></li>
+                  <li class="sl_nav"><a href="#slide-seven">Vacations</a></li>
+	
+            </ul>
+           </div><!--//#slideNav-->
+        </div><!--//#slides-->
+        
+        <div class="breadc"></div>
+        <div class="quad first">
+        	<h2 class="newlink"><a href="http://www.aaa.com/travel">Travel</a></h2>
+           	<p class="bookToday">Book today with AAA and save.</p> 
+        
+          <div class="accords">
+                 <div class="tabs" id="tab1">
+                    <h2 class="accord_header first bottom" id="hotels"></h2>
+                    <div class="accord_contents" id="hotels_content">
+                    <form method="get" name="HotelSearch" id="HotelSearch" action="http://www.res99.com/nexres/search/search_results.cgi?src=10027499" style="margin-bottom:0;" target="_top">
+<a href="http://www.aaacentral.com/travel/quickfinder/dynamic_tr_live.jsp" target="_top">
+            <img src="redesign/book.gif" alt="Book Together &amp; Save!" border=0 align="top">            </a><br />
+<p class="check_para">
+
+<label class="text_label">City: </label>
+  <input name="city" type="text" class="formbox" size="15" maxlength="25">
+
+
+
+          
+            <br /> 
+            <br />
+ 
+ <label class="text_label">Check-in: MM/DD/YYYY</label><br>
+
+<select name="doa_mm" id="doa_mm"  class="formbox">
+<Script language="javascript">
+var currentDate = new Date()
+  var day = currentDate.getDate()
+  var month = currentDate.getMonth()
+  month = month +1
+  var year = currentDate.getFullYear()
+  document.write("<option value='"  + month + "'>" + month + "</option>")
+</Script>
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+
+
+<select name="doa_dd" id="doa_dd"  class="formbox">
+<Script language="javascript">
+document.write("<option value='"  + day + "'>" + day + "</option>")
+</Script>
+
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+
+             
+<select name="doa_yy" id="doa_yy"  class="formbox">
+
+
+<option value="2013">2013</option>
+</select>
+
+
+<br /><br />
+<label class="text_label">Check-out: MM/DD/YYYY</label><br>
+<select name="dod_mm" id="dod_mm"  class="formbox">
+<Script language="javascript">
+document.write("<option value='"  + TomorrowMonth + "'>" + TomorrowMonth + "</option>")
+</Script>
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+
+            
+
+<select name="dod_dd" id="dod_dd"  class="formbox">
+<Script language="javascript">
+document.write("<option value='"  + TomorrowDay + "'>" + TomorrowDay + "</option>")
+</Script>
+<option value="01">1</option>
+<option value="02">2</option>
+<option value="03">3</option>
+<option value="04">4</option>
+<option value="05">5</option>
+<option value="06">6</option>
+<option value="07">7</option>
+<option value="08">8</option>
+<option value="09">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+
+  
+<select name="dod_yy" id="dod_yy"  class="formbox">
+<Script language="javascript">
+document.write("<option value='"  + TomorrowYear + "'>" + TomorrowYear + "</option>")
+</Script>
+
+
+
+<option value="2013">2013</option>
+</select>
+
+
+
+<input type=hidden name="src" value="10027499" />
+            <input type=hidden name="tab" value="tab0" />
+            <input type=hidden name="src_aid" value="" />
+            <input type=hidden name="avail" value="Y" />
+            <input type=hidden name='country' id='country' value='' />
+            <input type=hidden name='currency_id' id='currency_id' value='USD' />
+            <br /><br />
+          
+            <label class="text_label">Adults</label>
+           
+              <select name="num_adults" id="num_adults" class="formbox">
+              <option value="1" selected>1</option>
+              <option value="2" >2</option>
+              <option value="3" >3</option>
+              <option value="4" >4</option>
+            </select>
+         
+            <label class="text_label">Children</label>
+        
+  <select name="num_children" id="num_children" class="formbox"
+            onClick="document.getElementById('ChildAges').style.visibility='visible';"
+            >
+    <!-- the function above is onchange and onclick to make it tab nav friendly  -->
+    <option value="0">0</option>
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+  </select>
+            
+            
+          
+
+            
+
+
+<br><br>
+  
+
+
+  <!--input type="submit" name="Submit" value="Search" class="button" -->
+
+ 
+ 
+ <input name="search_hotel" id="search_hotel" class="search" type="image" value="search" src="redesign/images/search.jpg" alt="search" width="116" height="38" hspace="0" vspace="0" border="0" />
+ <br /><br />
+ <center><a href="http://www.aaacentral.com/redirect/redirect_hotel.jsp" target="_top" class="thelink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Options</a></center> 
+ 
+  </p>
+   <br />
+   
+<div name="ChildAges" id="ChildAges" style="visibility:hidden;  ">
+  <label class="text_label">Age at time of travel:</label><br />
+                      
+                              <select name="minorsAge1" id="minorsAge1" class="formbox" >
+                                                <option >-?-</option>
+                                                                        <option >1</option>
+                                                                        <option >2</option>
+                                                                        <option >3</option>
+                                                                        <option >4</option>
+                                                                        <option >5</option>
+                                                                        <option >6</option>
+                                                                        <option >7</option>
+                                                                        <option >8</option>
+                                                                        <option >9</option>
+                                                                        <option >10</option>
+                                                                        <option >11</option>
+                                                                        <option >12</option>
+                                                                        <option >13</option>
+                                                                        <option >14</option>
+                                                                        <option >15</option>
+                                                                        <option >16</option>
+                                                                        <option >17</option>            
+                           </select>
+                        
+                                    <select name="minorsAge2" id="minorsAge2" class="formbox" >
+                                                <option >-?-</option>
+                                                                                <option >1</option>
+                                                                                <option >2</option>
+                                                                                <option >3</option>
+                                                                                <option >4</option>
+                                                                                <option >5</option>
+                                                                                <option >6</option>
+                                                                                <option >7</option>
+                                                                                <option >8</option>
+                                                                                <option >9</option>
+                                                                                <option >10</option>
+                                                                                <option >11</option>
+                                                                                <option >12</option>
+                                                                                <option >13</option>
+                                                                                <option >14</option>
+                                                                                <option >15</option>
+                                                                                <option >16</option>
+                                                                                <option >17</option>    
+                                 </select>
+                           
+                                    <select name="minorsAge3" id="minorsAge3" class="formbox" >
+                                                <option >-?-</option>
+                                                                                <option >1</option>
+                                                                                <option >2</option>
+                                                                                <option >3</option>
+                                                                                <option >4</option>
+                                                                                <option >5</option>
+                                                                                <option >6</option>
+                                                                                <option >7</option>
+                                                                                <option >8</option>
+                                                                                <option >9</option>
+                                                                                <option >10</option>
+                                                                                <option >11</option>
+                                                                                <option >12</option>
+                                                                                <option >13</option>
+                                                                                <option >14</option>
+                                                                                <option >15</option>
+                                                                                <option >16</option>
+                                                                                <option >17</option>
+                                 </select>
+                          
+<select name="minorsAge4" id="minorsAge4" class="formbox">
+                                        <option >-?-</option>
+                                                                                <option >1</option>
+                                                                                <option >2</option>
+                                                                                <option >3</option>
+                                                                                <option >4</option>
+                                                                                <option >5</option>
+                                                                                <option >6</option>
+                                                                                <option >7</option>
+                                                                                <option >8</option>
+                                                                                <option >9</option>
+                                                                                <option >10</option>
+                                                                                <option >11</option>
+                                                                                <option >12</option>
+                                                                                <option >13</option>
+                                                                                <option >14</option>
+                                                                                <option >15</option>
+                                                                                <option >16</option>
+                                                                                <option >17</option>    
+                  </select>
+                          <br />
+</div>
+</p>
+    </form>   
+
+                   </div><!--//accord_contents-->
+                 </div><!--//tab1 HOTELS-->
+                 <div  class="tabs" id="tab2">
+                    <h2 class="accord_header" id="flights"></h2>
+                    <div class="accord_contents" id="flights_content">
+
+<a href="http://www.aaacentral.com/travel/quickfinder/dynamic_tr_live.jsp" target="_top">
+            <img src="redesign/book.gif" alt="Book Together &amp; Save!" border=0 align="top">            </a><br />
+<p class="check_para">
+  <form method="get" name="AirSearch" id="AirSearch" action="http://go.travelpn.com/flights/InitialSearch.do?Service=TPN&affiliateId=10027499" style="margin-bottom:0;" target=_top>
+    
+    
+    
+                <p>
+  <input type="hidden" name="Service" value="TPN" />
+  <input type=hidden name="affiliateId" value="10027499" />
+  <input type=hidden name="subAffiliateId" value="" />
+  <input type="hidden" name="action" value="search"/>
+  <input type="hidden" name="dateTypeSelect" id="dateTypeSelect" value="exactDates"/>
+  <input type="hidden"  name="flightType" value="roundtrip">
+                    
+                    
+                    
+                    
+  <br>
+                    
+                  <label class="text_label">Departing from:</label><br>
+                 
+                <input name="leavingFrom" type="text" id="leavingFrom" size="20" class="formbox"/>
+                </center>        </center>     </center>                             
+                <table align="left">
+               <tr>
+               <td align="left" valign="top"><p>
+               <label class="text_label">Depart:</label>
+               </td>
+               <td align="left"><p>
+               <label class="text_label">Dep. Time:</label>
+               </td>
+               </tr>
+               
+               <tr>
+               <td align="left" valign="top"><p>
+                 <input name="leavingDate" type="text" id="chk_in" value="mm/dd/yyyy" size="13" class="formbox">
+                  
+               </td>
+               <td align="left" valign="top">
+               <select name="dateLeavingTime" id="dateLeavingTime" class="formbox">
+                    <option>12:00am</option>
+                    <option>1:00am</option>
+                    <option>2:00am</option>
+                    <option>3:00am</option>
+                    <option>4:00am</option>
+                    <option>5:00am</option>
+                    <option>6:00am</option>
+                    <option>7:00am</option>
+                    <option>8:00am</option>
+                    <option>9:00am</option>
+                    <option>10:00am</option>
+                    <option>11:00am</option>
+                    <option>12:00pm</option>
+                    <option>1:00pm</option>
+                    <option>2:00pm</option>
+                    <option>3:00pm</option>
+                    <option>4:00pm</option>
+                    <option>5:00pm</option>
+                    <option>6:00pm</option>
+                    <option>7:00pm</option>
+                    <option>8:00pm</option>
+                    <option>9:00pm</option>
+                    <option>10:00pm</option>
+                    <option>11:00pm</option>
+                    <option value="Morning">Morning</option>
+                    <option value="12:00pm">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Anytime" selected="selected">Anytime</option>
+                  </select>          
+               </td>
+               </tr>
+               </table>
+               
+                  <br /><br />
+                
+                  
+                 <p>
+                  <label class="text_label">Going to:</label><br>
+                 
+                  <input name="goingTo" type="text" id="goingTo"  size="20" class="formbox"/><br />
+                 
+                    
+                    <table align="left">
+                    <tr>
+                    <td><p>
+                    <label class="text_label">Return:</label>
+                    </td>
+                    <td><p>
+                    <label class="text_label">Arr. Time:</label>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                         
+                  <input name="returningDate" type="text" id="chk_out"  value="mm/dd/yyyy" size="13" class="formbox"/>
+                  
+                    </td>
+                    <td>
+                    <select name="dateReturningTime" id="dateReturningTime" class="formbox">
+                    <option>12:00am</option>
+                    <option>1:00am</option>
+                    <option>2:00am</option>
+                    <option>3:00am</option>
+                    <option>4:00am</option>
+                    <option>5:00am</option>
+                    <option>6:00am</option>
+                    <option>7:00am</option>
+                    <option>8:00am</option>
+                    <option>9:00am</option>
+                    <option>10:00am</option>
+                    <option>11:00am</option>
+                    <option>12:00pm</option>
+                    <option>1:00pm</option>
+                    <option>2:00pm</option>
+                    <option>3:00pm</option>
+                    <option>4:00pm</option>
+                    <option>5:00pm</option>
+                    <option>6:00pm</option>
+                    <option>7:00pm</option>
+                    <option>8:00pm</option>
+                    <option>9:00pm</option>
+                    <option>10:00pm</option>
+                    <option>11:00pm</option>
+                    <option value="Morning">Morning</option>
+                    <option value="12:00pm">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Anytime" selected="selected">Anytime</option>
+                  </select>
+                    </td>
+                    </tr>
+                    </table>
+             
+                  
+                  <select name="returnDateFlexibility" id="returnDateFlexibility"  style="display:none;" class="formbox">
+                    <option value="1" selected="selected">+/- 1 Day</option>
+                    <option value="2">+/- 2 Days</option>
+                    <option value="3">+/- 3 Days</option>
+                    <option value="0">Exact day</option>
+                  </select>          
+                    
+                   <br /><br />
+              <table cellpadding=5 cellspacing=3>
+                   <tr>
+                   <td><p><label class="text_label">Adults</label><br></td>
+                   <td><p><label class="text_label">Children</label><br></td>
+                   <td><p><label class="text_label">Seniors</label><br></td>
+                   </tr>
+                   
+                    <tr>
+                   <td><span class="num_td">
+                    <select name="adults" id="num_adults" class="formbox">
+                      <option >0</option>
+                      <option SELECTED>1</option>
+                      <option >2</option>
+                      <option >3</option>
+                      <option >4</option>
+                      <option >5</option>
+                      <option >6</option>
+                    </select>
+                    </span></td>
+                   <td>      <span class="num_td">
+                    <select name="children" id="num_children" class="formbox">
+                      <option value="0">0</option>
+                      <option >1</option>
+                      <option >2</option>
+                      <option >3</option>
+                      <option >4</option>
+                    </select>
+                    </span></td>
+                   <td>                    <span class="num_td">
+                    <select name="seniors" id="seniors" class="formbox">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                    </span
+                  
+                  ></p></td>
+                   </tr>
+                </table> 
+                  
+                    
+                    
+                    
+              <br />
+                    
+                    
+<span class="check_para">
+                  <p>
+                  <input name="search_air" id="search_air" class="search" type="image" value="search" src="redesign/images/search.jpg" alt="search" width="116" height="38" hspace="0" vspace="0" border="0" />
+                  </p>
+                    <p>
+                    <center>
+                    <a href="http://www.aaacentral.com/redirect/redirect_hotel.jsp" target="_top" class="thelink">More Options</a>
+                    </center> 
+                    
+                </p></span>
+                  <div align="center">
+                    <!-- input type="submit" name="Submit" value="Search for Flights" class="button" --><br>
+                </div>
+    </form>    
+      
+</p>                  
+                   </div><!--//accord_contents-->
+                 </div><!--//tab2 FLIGHTS-->
+                 <div  class="tabs" id="tab3">
+                    <h2 class="accord_header" id="cars"></h2>
+                    <div class="accord_contents" id="cars_content">
+                    
+                    
+                    
+<p><a href="http://www.aaacentral.com/travel/quickfinder/dynamic_tr_live.jsp" target="_top"><img src="/redesign/book.gif" alt="Book Together &amp; Save!" border=0 align="top">            </a><br />
+
+<FORM NAME="CarSearch" ACTION="http://www.res99.com/nexres/start-pages/gateway.cgi" METHOD="GET" onSubmit="MySubmitter();" target=_top>
+                                
+								<INPUT TYPE="hidden" NAME="src" VALUE="10027499">
+								<INPUT TYPE="hidden" NAME="src_aid" VALUE="">
+								<INPUT TYPE="hidden" NAME="ses" VALUE="">
+								<INPUT TYPE="hidden" NAME="engine" VALUE="car">
+                                <input  type="hidden"  name="carTypeGroup" id="carTypeGroup" value="ACAR">
+<input  type="hidden" id="vendor" name="vendor" value="BV">
+<input  type="hidden" name="trans"  value="A"/>
+<input  type="hidden"  name="aircon" value="R"/>
+<input  type="hidden"   name="companypref" id="companypref" value="n">
+<input type="hidden" id="where" name="puwhere"  style="width:160px;" value="airport">
+<input type="hidden" id="dwhere" name="dowhere" value="doairport"><br />
+<p>
+																	<label class="text_label">Airport code:</label><br />																
+<input ID="pair" NAME="puair" VALUE="" type="text" style="width:70px;" class="formbox" > 
+
+<!-- input ID="pair" NAME="puair" VALUE="" type="text" onFocus="change('pair','focused'); " onBlur="change('pair','UNfocused');" style="width:70px;" class="formbox" --> 
+
+
+
+				<div class="style1"  id="chk_in_td">
+				<br /><p><br />
+                </div>
+																	<p>
+																	  <input type="hidden" name="pu_month" id="pu_month">
+																	  <input type="hidden" name="pu_day" id="pu_day">
+																	  
+  </p>
+																	  
+																	  <br />
+																    <p>Pick-up date<br />
+			    </p>
+				<table border="0">
+																	  <tr>
+																	    <td width="50">
+<input name="chk_in" id="chk_in2" value="mm/dd/yyyy" type="text" style="width:80px;" class="formbox"/>
+																	    </td>
+																	    <td width="81">
+                                                                        <select name="pu_time" id="pu_time" style="width:76px;" class="formbox">
+																		<option value="0">12:00am</option>
+																		<option value="1">1:00am</option>
+																		<option value="2">2:00am</option>
+																		<option value="3">3:00am</option>
+																		<option value="4">4:00am</option>
+																		<option value="5">5:00am</option>
+																		<option value="6">6:00am</option>
+																		<option value="7">7:00am</option>
+																		<option value="8">8:00am</option>
+																		<option value="9">9:00am</option>
+																		<option value="10">10:00am</option>
+																		<option value="11">11:00am</option>
+																		<option value="12" selected="selected">12:00pm</option>
+																		<option value="13">1:00pm</option>
+																		<option value="14">2:00pm</option>
+																		<option value="15">3:00pm</option>
+																		<option value="16">4:00pm</option>
+																		<option value="17">5:00pm</option>
+																		<option value="18">6:00pm</option>
+																		<option value="19">7:00pm</option>
+																		<option value="20">8:00pm</option>
+																		<option value="21">9:00pm</option>
+																		<option value="22">10:00pm</option>
+																		<option value="23">11:00pm</option>
+																	</select>
+                                                                        </td>
+			      </tr>
+			    </table>
+				<p>&nbsp;</p>
+																	<p>
+																	  <label class="text_label">Drop-off date:</label>	<br />
+<input name="chk_out" id="chk_out" value="mm/dd/yyyy" type="text" style="width:80px;" class="formbox"/>
+																	  <select name="do_time" id="do_time" style="width:76px;" class="formbox1">
+																	    <option value="0">12:00am</option>
+																	    <option value="1">1:00am</option>
+																	    <option value="2">2:00am</option>
+																	    <option value="3">3:00am</option>
+																	    <option value="4">4:00am</option>
+																	    <option value="5">5:00am</option>
+																	    <option value="6">6:00am</option>
+																	    <option value="7">7:00am</option>
+																	    <option value="8">8:00am</option>
+																	    <option value="9">9:00am</option>
+																	    <option value="10">10:00am</option>
+																	    <option value="11">11:00am</option>
+																	    <option value="12" selected="selected">12:00pm</option>
+																	    <option value="13">1:00pm</option>
+																	    <option value="14">2:00pm</option>
+																	    <option value="15">3:00pm</option>
+																	    <option value="16">4:00pm</option>
+																	    <option value="17">5:00pm</option>
+																	    <option value="18">6:00pm</option>
+																	    <option value="19">7:00pm</option>
+																	    <option value="20">8:00pm</option>
+																	    <option value="21">9:00pm</option>
+																	    <option value="22">10:00pm</option>
+																	    <option value="23">11:00pm</option>
+																      </select>
+																	  <input type="hidden" name="do_month" id="do_month">
+																	  <input type="hidden" name="do_day" id="do_day">
+																	  <br />
+                                                                      <label class="text_label">Car type:</label>	
+																	  <select name="carcode" id="carcode" style="width:100px;" class="formbox">
+																	    <OPTION VALUE="ACAR">All Cars</OPTION>
+																	    <OPTION VALUE="ACNV">Convertibles</OPTION>
+																	    <OPTION VALUE="AGRN">Green</OPTION>
+																	    <OPTION VALUE="APUP">PickUp</OPTION>
+																	    <OPTION VALUE="ASUV">SUV</OPTION>
+																	    <OPTION VALUE="AVAN">Mini Van</OPTION>
+																	    <OPTION VALUE="AWGN">Wagons</OPTION>
+																	    <OPTION VALUE="CC">Compact</OPTION>
+																	    <OPTION VALUE="EC">Economy</OPTION>
+																	    <OPTION VALUE="FC">Full Size</OPTION>
+																	    <OPTION VALUE="IC">Intermediate</OPTION>
+																	    <OPTION VALUE="LC">Luxury</OPTION>
+																	    <OPTION VALUE="PC">Premium</OPTION>
+																	    <OPTION VALUE="SC">Standard</OPTION>
+																      </select>
+                </p>
+<p>&nbsp;</p>
+																	<p>&nbsp;</p>
+																	<p><span class="check_para">
+																    <input name="search_cars" id="search_cars" class="search" type="image" value="search" src="/redesign/images/search.jpg" alt="search" width="116" height="38" hspace="0" vspace="0" border="0" />
+																	</span></p><br />
+																	<p><a	href="http://www.aaacentral.com/travel/quickfinder/cars_tr.jsp" target="_top" class="style2"><span style="padding-top:5px;">
+																    <!-- input type="submit" value="search" -->
+																    </span></a></p>
+																	<p>&nbsp;</p>
+																	
+                                                                    
+                                <p>                                    <center><a href="http://www.aaacentral.com/redirect/redirect_hotel.jsp" target="_top" class="thelink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Options</a></center> 
+</form>
+</p>
+<br /><br />
+                   
+                   </div><!--//accord_contents-->
+                 </div><!--//tab3 CARS-->
+                 <div  class="no_tabs" id="tab4">
+                    <h2 class="no_accord_header" id="cruises"><a href="http://www.aaa.com/cruises"><img src="redesign/images/cruises.jpg" width="213" height="50" alt="cruises" border="0"/></a></h2>
+                 </div><!--//tab4 CRUISES-->
+                 <div  class="no_tabs" id="tab5">
+                    <h2 class="no_accord_header" id="vacations"><a href="http://www.aaa.com/travel"><img src="redesign/images/vacations.jpg" width="213" height="50" alt="vacations"  border="0"/></a></h2>
+                 </div><!--//tab5 VACATIONS-->
+                 
+ 			<div  class="tabs" id="tab6">
+                    <h2 class="accord_header" id="orlando"></h2>
+                    <div class="accord_contents" id="orlando_content">
+					 <ul>
+                    <li><a href="http://www.aaa.com/disney">Walt Disney World</a></li>
+                    <li><a href="http://www.aaa.com/universal">Universal Studios Orlando</a></li>
+                    </ul>
+      				</div>
+		</div>
+                 
+          </div><!--//accord-->
+            
+            
+            
+      </div><!--//quad first-->
+        <div class="quad mid equal" id="element1">
+        	<h2 class="newlink"><a href="http://www.aaa.com/discounts">Discounts</a></h2><br />
+<center><a href="http://discounts.eastcentral.aaa.com"><img src="clubrewards.jpg" /></a></center>
+           
+<!--
+<form name="DiscountsForm" onsubmit="return false;" class="quadForm">
+
+<p class="selectDiv">
+<label for="discount_selection" class="select_label">Find Savings</label>
+                
+   <p class="zipDiv">
+                <label for ="discount_zip" class="text_label">ZIP CODE</label>
+                
+                              
+			
+		<input type="text" size="15" onclick="javascript:if(this.defaultValue == this.value) this.value='';" class="zips" value="" id="zipcode" name="qf_formfield1">
+        </p>
+       
+        </p>
+        <input name="search_discounts" id="search_discounts" type="image" class="search" value="search" src="/redesign/images/search.jpg" alt="search" width="116" height="38" hspace="0" vspace="0" border="0" onclick="javascript:SearchZipQF();" />
+</form>
+-->
+            <div class="save">
+               <img src="/images/savings.jpg" alt="Summer Savings" width="205" height="206" border="0" usemap="#SummerSavingsMap" />
+<map name="SummerSavingsMap" id="SummerSavingsMap">
+  <area shape="rect" coords="8,34,214,118" href="http://www.aaa.com/disney" />
+  <area shape="rect" coords="-6,124,199,203" href="http://www.aaa.com/universal" />
+</map>
+            </div><!--//save-->
+        </div><!--//quad-->
+        <div class="quad mid equal" id="element2">
+        	<h2 class="newlink"><a href="http://www.aaa.com/insurance">Insurance</a></h2>
+             <form action="#" name="insurance" id="insurance" method="post" class="quadForm">
+            	<p class="selectDiv">
+            	<label for="insurance_selection" class="select_label">Request a Quote</label>
+                <select name="insurance_selection" class="selectable"  onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+<option value="http://eastcentral.aaa.com/insurance/index.jsp" selected="selected">Please Select:</option>
+<option value="http://www.aaacentral.com/insurance/insurance_menu_auto.jsp">AUTO INSURANCE</option>
+<option value="http://www.aaacentral.com/insurance/insurance_menu_home.jsp">HOME INSURANCE</option>
+<option value="http://www.aaacentral.com/insurance/insurance_menu_life.jsp">LIFE INSURANCE</option>
+                </select>
+                </p>
+                <p class="zipDiv">
+                <label for ="insurance_zip" class="text_label">ZIP CODE</label>
+                <input name="insurance_zip" type="text" id="insurance_zip" class="zips"/>
+                </p>
+               <input name="search_insurance" id="search_insurance" class="search" type="image" value="search" src="redesign/images/search.jpg" alt="search" width="116" height="38" hspace="0" vspace="0" border="0" />
+            </form>
+            <div class="insuranceFamily">
+            	<img src="redesign/images/insuranceFamily.jpg" width="139" height="117" alt="insurance family" />
+            </div><!--//insuranceFamily-->
+        </div><!--//quad-->
+        <div class="quad last equal" id="element3">
+        	<h2 class="newlink"><a href="http://www.aaa.com/auto">Automotive</a></h2>
+          <div class="quad_automotive">
+            	<ul>
+                   <li><a href="http://www.aaacentral.com/redirect/redirect_ers.jsp">Road Service</a></li>
+                   <li><a href="http://www.aaacentral.com/automotive/road_service/battery-service.jsp">Battery Service</a></li>
+                   <li><a href="http://www.aaacentral.com//redirect/redirect_ShopLocator.jsp">Approved Auto Repair</a></li>
+                   <li><a href="http://www.aaacentral.com/automotive/repair/index.jsp">Repair Tips &amp; Tools</a></li>
+                   <li><a href="http://www.aaacentral.com/automotive/fuel/index.jsp">Gas Prices</a></li>
+                   <li><a href="http://www.aaacentral.com/cars_redirect.jsp">Auto Buying</a></li>
+                   <li><a href="http://www.aaacentral.com/maps/index.jsp">Maps, TripTiks, TourBooks</a></li>
+                  <li><a href="http://www.aaacentral.com/community/safety/index.jsp">Car and Traffic Safety</a></li>
+                </ul>
+            	
+                <div class="save">
+<form method="post" name="frmGasPrices"  action="javascript:requestGasMap(document.forms['frmGasPrices']);" style="margin:0px;">
+
+  <h2><font color="red">Local Gas Prices</font></h2>
+                
+                
+
+  Zip Code: &nbsp;&nbsp;&nbsp;
+    <input type="text" name="map_zipcode" value="" maxlength="5" size="5" onfocus="select();"/><br />
+<font size=1><i>Not all regions may be available. For a more comprehensive search, click <a href="http://eastcentral.aaa.com/redirect/redirect_fuelpricefinder.htm" target="_blank"><font color="#555555"><u>here</u></font></a></i>.
+    <a href="javascript:requestGasMap(document.forms['frmGasPrices']);">
+    <img src="search.jpg" width="118" height="40" border="0" align="top"/>
+    
+    
+    </a>
+</font>
+</form> 
+<script language="javascript"> 
+	var Club="215";<!--Your club ID-->
+	var Assoc="aaa";<!--Your association-->
+	<!--
+	function zipEntered(frm)
+	{
+		if(frm.map_zipcode.value=='' || !(frm.map_zipcode.value.length == 5))
+		{
+			alert("Please enter a valid zip code.");
+			frm.map_zipcode.focus();
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	function requestGasMap(frm)
+	{
+		if(zipEntered(frm))
+		{
+			var destURL;
+			destURL="http://www.aaa.com/scripts/WebObjects.dll/AAAOnline?association="+Assoc+"&club="+Club+"&page=ITTServices";
+			destURL=destURL+"&subCommand=maploc&hidePin=true&poiKey=256&geoType=city&geoName="+frm.map_zipcode.value+"|%20|%20"
+			window.open(destURL,'TripTik','width=800,height=600,toolbar=no,menubar=no,scrollbars=yes,location=no,directories=no,resizable=yes');
+		}
+	}
+	// -->
+</script>
+</div>
+          </div><!--//quad_automotive-->
+       	</div><!--//quad last-->
+      <div class="underquad">
+        	<div class="join">
+              <div class="joinpic"> <a href="http://www.aaa.com/join"><img id="joincard" src="redesign/images/card.jpg" width="143" height="147" alt="join card" /></a>
+              </div><!--//joinpic-->
+              <h2 id="joinHeader"><a href="http://www.aaa.com/join">Join</a> or <a href="http://www.aaa.com/renew">Renew Today</a><br /><br /><br /></h2>
+              
+              <div class="socialIcons">
+                	<div id="facebook_icon" class="icons" ><a href="http://bit.ly/AAAFacebook" target="_blank"></a></div><!--//facebook_icon-->
+                    <div id="linkedin_icon" class="icons"><a href="http://www.myspace.com/445043370" target="_blank"></a></div><!--//linkedin_icon-->
+                  	<div id="twitter_icon" class="icons"><a href="http://www.aaacentral.com/community/twitter.jsp"></a></div><!--//twitter_icon-->
+                    <div id="youtube_icon" class="icons"><a href="http://www.youtube.com/aaa" target="_blank"></a></div><!--//youtube_icon-->                  
+                    <div id="blog_icon" class="icons"><a href="http://www.aaatravelviews.com" target="_blank"></a></div><!--//blog_icon-->     
+                </div>
+            </div><!--//join-->
+            <div class="road">
+            	<div class="roadAssist">
+                	<div class="roadAssist_ab">
+           	    	<a href="http://www.aaacentral.com/redirect/redirect_ers.jsp"><img src="redesign/images/roadsideAssistance.png" width="415" height="126" alt="assistance" border="0"/></a>
+                    <br /><br />
+                    <a href="http://www.aaa.com/mobile"><img src="mobile.jpg" width="286" height="138" alt="mobile" border="0"/></a>
+                    </div><!--//roadAssist_ab-->
+                </div><!--//roadAssist-->
+                <!--//roadAssist-->
+            </div><!--//road-->
+        </div><!--underquad-->
+        <div id="footer">
+            <div class="footer_copy">
+            	<p>
+                &copy; 2011 <a href="http://www.aaa.com">AAA East Central</a> / Serving parts of
+                <br />
+                <a href="http://eastcentral.aaa.com/offices/kentucky/index.jsp">Kentucky</a>, 
+                <a href="http://eastcentral.aaa.com/offices/new_york/index.jsp">New York</a>, 
+                <a href="http://eastcentral.aaa.com/offices/ohio/index.jsp">Ohio</a>, 
+                <a href="http://eastcentral.aaa.com/offices/pennsylvania/index.jsp">Pennsylvania</a> 
+                &amp; 
+                <a href="http://eastcentral.aaa.com/offices/west_virginia/index.jsp">West Virginia</a>.
+                <a href="http://eastcentral.aaa.com/deletecookie.jsp"><b>Click here for other AAA Clubs</b></a>.
+                </p>
+            </div><!--//footer_i-->
+             <div class="footer_nav">
+             	<ul>
+                  <li class="brd"><a href="http://eastcentral.aaa.com/offices/index.jsp">Branches</a></li>
+                  <li class="brd"><a href="http://eastcentral.aaa.com/membership/contact.jsp">Contact Us</a></li>
+                  <li class="brd"><a href="http://eastcentral.aaa.com/sitemap/index.jsp">Site Map</a></li>
+                  <li class="brd"><a href="http://eastcentral.aaa.com/privacy_policy.jsp">Privacy Policy</a></li>
+                  <li class="brd"><a href="http://eastcentral.aaa.com/community/about_aaa/index.jsp">About AAA</a></li>
+				  <li><a href="http://eastcentral.aaa.com/careers/index.jsp">Careers</a></li>
+                </ul>
+            </div><!--//footer_i-->
+        </div><!--//footer-->
+    </div><!--//content-->
+    </div><!--//wrapper_i-->
+</div><!--//wrapper_o-->
+</body>
+<script language="JavaScript1.1" src="http://www.aaa.com/configuration/dcs_clubtag.js" type="text/javascript"></script>
+<script language="JavaScript1.1" type="text/javascript">
+  setCategory("General");
+  setSubcategory("General");
+  setPageType("General");
+  logPage("215","1S8L");
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18804432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-889627-28");
+pageTracker._trackPageview();
+</script>
+<!-- Crazy Egg Code -->
+<script type="text/javascript" src="http://s3.amazonaws.com/new.cetrk.com/pages/scripts/0010/9557.js"> </script>
+<!--end of Crazy Egg Code -->
+<script type="text/javascript" src='https://www.aaa.com/aaa/sem/utils.js'></script>
+<script type="text/javascript">
+                                    rewriteURLTargets();
+</script>
+</html>

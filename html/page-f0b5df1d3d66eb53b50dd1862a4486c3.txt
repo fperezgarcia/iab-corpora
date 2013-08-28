@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!-- InstanceBegin template="/Templates/Template.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	body {
+	font-family: "Times New Roman", Times, serif;
+	background-color: #333333;
+	}
+	
+	#nav, #nav ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float : left;
+	width : 11em;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #FFFFFF;
+	color: #FFFFFF;
+	height: auto;
+	}
+#left {
+	background-color: #BDBDBD;
+	float: left;
+	width: 11em;
+	height: auto;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin: auto;
+}
+#holder {
+	width: 800px;
+	border: thin solid #000000;
+	background-color: #E2E2E2;
+	margin-right: auto;
+	margin-left: auto;
+}
+#kekelogo {
+	font-size: 100%;
+	background-color: #FFFFFF;
+	clear: none;
+	width: 800px;
+	border: thin none #000000;
+}
+#header {
+	width: 800px;
+	background-color: #FFFFFF;
+	border-bottom-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #FFFFFF;
+}
+	
+	#nav li { /* all list items */
+	position : relative;
+	float : left;
+	line-height : 1.25em;
+	margin-bottom : -1px;
+	width: 11em;
+	background-color: #666666;
+	color: #FFFFFF;
+	}
+	
+	#nav li ul { /* second-level lists */
+	position : absolute;
+	left: -999em;
+	margin-left : 11.05em;
+	margin-top : -1.35em;
+	background-color: #666666;
+	color: #FFFFFF;
+	}
+	
+	#nav li ul ul { /* third-and-above-level lists */
+	left: -999em;
+	color: #666666;
+	background-color: #FFFFFF;
+	}
+	
+	#nav li a {
+		width: 10em;
+		w\idth : 10em;
+		display : block;
+		font-weight : bold;
+		text-decoration : none;
+		background-color: #666666;
+		color: #FFFFFF;
+		border : 1px solid black;
+		padding : 0 0.5em;
+	}
+	
+	#nav li a:hover {
+		color: #666666;
+		background-color: #FFFFFF;
+	}
+	
+	#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li.sfhover ul ul, #nav li.sfhover ul ul ul {
+		left: -999em;
+		background-color: #666666;
+		color: #FFFFFF;
+	}
+	
+	#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul { /* lists nested under hovered list items */
+		left: auto;
+		background-color: #666666;
+		color: #FFFFFF;
+	}
+	
+	#content {
+	margin-left : 12em;
+	width: 375px;
+	font-family: "Times New Roman", Times, serif;
+	}
+    #floatbox {
+	font-size: small;
+	margin: 5px;
+	padding: 1px;
+	float: right;
+	width: 125px;
+	border: thin solid #666666;
+	background-color: #666666;
+	display: block;
+	color: #FFFFFF;
+}
+    #footer {
+	font-size: 80%;
+	text-align: right;
+	clear: none;
+	width: 100%;
+}
+    #Layer1 {
+	position:absolute;
+	width:475px;
+	height:453px;
+	z-index:1;
+	left: 409px;
+	top: 186px;
+}
+    .style1 {color: #E7CA54}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}td img {display: block;}
+    .h2 {
+	font-size: large;
+	font-weight: bolder;
+	text-transform: capitalize;
+	color: 003c79;
+}
+a:link {
+	color: #691841;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #330000;
+}
+a:hover {
+	text-decoration: none;
+	color: #999999;
+}
+a:active {
+	text-decoration: none;
+}
+h2 {
+	font-size: large;
+	color: #691841;
+}
+h5 {
+	color: #003c79;
+}
+h1 {
+	font-size: x-large;
+	color: #691841;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: Arial, Helvetica, sans-serif;
+}td img {display: block;}
+</style>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfHover = function() {
+	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]></script>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Vintage Auto Appraisers</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --><!-- InstanceParam name="navbarsontop" type="boolean" value="true" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /></head>
+<body>
+<div id="holder"><img src="Images/topbanner.gif" width="800" height="183" border="0" id="topbanner" usemap="#m_topbanner" alt="" />
+<map name="m_topbanner" id="m_topbanner">
+  <area shape="rect" coords="0,129,730,183" href="index.html" alt="" />
+</map>
+
+<map name="m_topbanner" id="m_topbanner">
+  <area shape="rect" coords="0,129,730,183" href="index.html" alt="" />
+</map>
+<div id="left">
+ <ul id="nav">
+	<li><a href="contactus.html">Contact Us</a></li>
+	<li><a href="aboutthecompany.html">About the Company</a></li>
+	<li><a href="#">Appraisal Services </a>
+		<ul>
+				<li><a href="#">Insurance Value</a></li>
+				<li><a href="#">Property Settlement</a></li>
+				<li><a href="#">Resale Value</a></li>
+				<li><a href="#">Expert Witness</a></li>
+				<li><a href="#">Charitable Donation</a></li>
+				<li><a href="#">Bank Loan Value</a></li>
+	</ul></li>
+		<li><a href="whatwedo.html">What We Do</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="specialtycarinsurance.html">Specialty Car Insurance </a></li>
+		<li><a href="qualificationcurriculum.html">Qualification Curriculum</a></li>
+		<li><a href="#">Client's Cars for Sale</a>
+		<ul>
+				<li><a href="#">Classics</a></li>
+				<li><a href="#">Muscle Cars</a></li>
+					<ul>
+					<li><a href="carsforsale/fordcobrajet.html">1969 Ford Cobra Jet</a></li>
+					<li><a href="carsforsale/chargerrt.html">1969 Dodge Charger R/T</a></li>
+					</ul></li>
+				<li><a href="#">Streetrods</a></li>
+				<li><a href="#">Racecars</a></li>
+					<ul>
+					<li><a href="carsforsale/midget4cylinder.html">Midget 4 cylinder</a></li>
+					<li><a href="carsforsale/spitfire.html">Sprint car-Spitfire</a></li>
+					</ul></li>
+				<li><a href="#">Exotic Europeans</a></li>
+				<li><a href="#">Antique</a></li>
+				<li><a href="#">Prostreet</a></li>
+				<li><a href="#">Custom/ Modified</a></li>
+				<li><a href="#">Vintage Motorcycles</a></li>
+				<li><a href="#">Vintage Boats</a></li>
+				</ul></li>
+		<li><a href="#">Parts for Sale</a></li>
+		<li><a href="#">Photo Album </a></li>
+</ul>
+  </div>
+<div id="content">
+ <table width="555" border="0" cellpadding="0">
+  <tr>
+  <td bgcolor="#FFFFFF"><!-- InstanceBeginEditable name="content" -->
+    <p>We appraise specialty vehicles of all sorts. Dragsters to Duesenburg's,   Packard's to Porsche, Classics to Customs, prostreet to Antique,..Street rods,   Muscle Cars, Race Cars, Vintage &amp; Custom Motorcycles. </p>
+    <p>If it has wheels we can professionally appraise it properly. We have   appraised over 60 million dollars worth of specialty vehicles in the last fifteen years, for every  reason you can imagine. One of our specialties is expert witness and testimony. We  also represent every specialty car insurance company in the   world to custom tailor your exact needs to their parameters for exacting fits   for all vehicles and types, <span id="lw_1207141948_0">specialty car insurance   brokerage services</span> nationally and internationally.</p>
+    <p>We are a &quot;Full Service&quot;   company to help in every facet of specialty vehicle service, sell, appraisal,   insure, ship, and many referral organizations of every stature for work on your   vehicle can be provided as well. A historian authorizing detailed paperwork on   some of the rarest vehicles and one-of-ones, with other integral leading   authorities. </p>
+    <h2>Reasons for appraisals:</h2>
+    <ul>
+      <li>Pre purchase arrangements</li>
+      <li>Insurance replacement costs</li>
+      <li>Prior to selling</li>
+      <li>Charitable donation</li>
+      <li>Estate settlement, planning, and inheritance</li>
+      <li>Diminutive return, after wreckage</li>
+      <li>Prior to selling a vehicle</li>
+      <li>Depreciation amortization</li>
+      <li>Appreciation articulation</li>
+    </ul>
+    <div align="center">
+      <h3>Professional, Accurate, Detailed, Confidential</h3>
+    </div>
+    <p>&nbsp;</p>
+        <!-- InstanceEndEditable --></td>
+   </tr>
+ </table>
+</body>
+<!-- InstanceEnd --></html>

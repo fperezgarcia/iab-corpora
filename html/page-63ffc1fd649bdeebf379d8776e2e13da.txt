@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC
+"-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<META NAME="description" CONTENT="Muscle Car Restorations, Inc. Award winning full & partial classic car restorations, kit car building, NHRA approved chassis fab, custom composites, chassis dyno tuning. Highly experienced staff dedicated to perfection and customer service">
+	<META NAME="keywords" CONTENT="car restorations,classic car restorations,muscle car,muscle car restorations,automobile restorations,automobile restorers, antique car restorations,mopar muscle car restorations,chippewa falls,wisconsin,carbon fiber,composites,mopar,chrysler,dodge,plymouth,ford,mercury,lincoln,GM,chevy,pontiac,cadillac,oldsmobile,packard,chevrolet,corvette">
+	<META NAME="robots" CONTENT="index, follow">
+	<META NAME="GOOGLEBOT" CONTENT="INDEX, FOLLOW">
+	<title>Muscle Car Restorations, Inc. - Classic Car Restoration Specialists</title>
+	<link rel="stylesheet" href="/css/main2.css" type="text/css">
+	<link rel="stylesheet" href="/css/print.css" type="text/css" media="print">
+	
+		<script type="text/javascript" src="/js/swfobject.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery.collapser-audio.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery.jplayer.min.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery.cycle.min.js"></script>
+		<script type="text/javascript" src="/js/head.min.js"></script>
+	
+
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+	var so = new SWFObject('/flash/flvPlayer.swf?imagePath=/images/videotour/frame.jpg&videoPath=/flash/mcr_video_tour_320x213_high.flv&autoStart=false&volAudio=60&newWidth=320&newHeight=238&disableMiddleButton=false&playSounds=true&soundBarColor=0x0066FF&barColor=0x0066FF&barShadowColor=0x91BBFB&subbarColor=0xffffff', 'sotester', '320', '238', '9', '#efefef');
+	so.addParam('allowFullScreen', 'true');
+	so.write('flashcontent');
+
+	var so2 = new SWFObject('slideshow.swf?xmlPath=slideshow.xml', 'sotester', '420', '300', '9', '#efefef');	
+	so2.write('slideShow');
+	
+	var jpPlayInfo = $('#play-info');
+
+	$('#jquery_jplayer').jPlayer({
+		ended: function () {
+			$(nexti).click();
+		}
+		
+	});
+
+	var audio = 1;
+	$('#no-audio').click(function() {
+		if( audio == 1 ) {
+			$('#jquery_jplayer').jPlayer('stop');
+			$('#no-audio').html('Enable Audio');
+			audio = 0;
+		} else {
+			$('#no-audio').html('Disable Audio');
+			audio = 1;
+		}
+	});
+
+	var soDel = 0;
+	$('#track7').click(function() {
+		soDel = 1;
+		so.write('facility-flash');
+	});
+
+	$('#slideShow').cycle({
+		fx: 'fade', 
+		speed:   1000, 
+		timeout: 3000, 
+		random: 1
+	});
+
+	$('.col-list ul').hide();
+	$('.col').collapser({
+		target: 'next',
+		effect: 'fade',
+		changeText: 0,
+		expandClass: 'expArrow',
+		collapseClass:'collArrow'
+	}, beforeCallback, afterCallback);
+
+function beforeCallback(){
+	if( soDel == 1 ) {
+		$('facility-flash').html('');
+	}
+	$('.col').removeClass('collArrow');
+	$('.col').addClass('expArrow');
+	$('.col-list ul').hide();
+	if( audio == 0 ) { return; }
+	if( this.state == 1 ) {
+		$('#jquery_jplayer').jPlayer('setMedia', {
+			mp3: getMP3(this.html())
+		}).jPlayer('play');
+	} else {
+		$('#jquery_jplayer').jPlayer('stop');
+	}
+}
+
+var mp3s = new Array();
+var next = new Array();
+var nexti = '';
+mp3s['Quality'] = '/mp3/Quality.mp3';
+next['Quality'] = '#track2';
+mp3s['Any Year, Make, Or Model'] = '/mp3/AnyYear.mp3';
+next['Any Year, Make, Or Model'] = '#track3';
+mp3s['Cost &amp; Value'] = '/mp3/CostValue.mp3';
+next['Cost &amp; Value'] = '#track4';
+mp3s['Flexability'] = '/mp3/Flexability.mp3';
+next['Flexability'] = '#track5';
+mp3s['Personal Connection'] = '/mp3/PersConn.mp3';
+next['Personal Connection'] = '#track6';
+
+mp3s['Our history'] = '/mp3/History.mp3';
+next['Our history'] = '#track7';
+mp3s['Our facility'] = '/mp3/Facility.mp3';
+mp3s['Our staff'] = '/mp3/Staff.mp3';
+next['Our staff'] = '#track9';
+mp3s['Our location'] = '/mp3/Location.mp3';
+next['Our location'] = '#track10';
+mp3s['Procurement'] = '/mp3/Procurement.mp3';
+
+function getMP3(h) {
+	nexti = next[h];
+	return mp3s[h];
+}
+
+function afterCallback(){
+}
+
+
+});
+
+</script>
+
+<style type="text/css">
+
+
+.col-list h1 {
+    color: #004878;  
+}
+
+.col-list h2 {
+	color: #0071BC;
+}
+
+.col-list {
+	vertical-align: top;
+	margin-left: 20px;
+}
+.col {
+	cursor: pointer;
+}
+.expArrow{
+	padding-left: 20px;
+	background: url(images/js/arrow-down.png) no-repeat 0px 4px;
+}
+.collArrow{
+	padding-left: 20px;
+	background: url(images/js/arrow-up.png) no-repeat 0px 4px;
+}
+
+#slideShow {  
+    float: right;
+    padding: 0;  
+    margin:  0;  
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+    border:  15px solid #FFF; 
+	background-color: #FFF;
+} 
+
+#contentTop {
+	width: 100%;
+	align: center;
+}
+#contentBottom {
+	width: 100%;
+}
+
+
+</style>
+
+</head>
+<body><!-- Header -->
+<table cellpadding="0" cellspacing="0" border="0" summary="layout" style="height:100%; width:100%">
+<tr>
+<td valign="top">
+<table id="main" cellpadding="0" cellspacing="0" border="0" summary="layout">
+	<tr class="no-print">
+		<td height="4" align="right"><img src="/images/design/border_tl_corn.gif" width="4" height="4" alt=""></td>
+		<td height="4" width="100%" colspan="2" class="bord-t"></td>
+		<td height="4" align="left"><img src="/images/design/border_tr_corn.gif" width="4" height="4" alt=""></td>
+	<tr>
+		<td class="bord-l" width="42"></td>
+		<td valign="top" width="100%" height="136" colspan="2">
+				<table width="100%" bgcolor="#F0F0F0" cellpadding="0" cellspacing="0" border="0" summary="layout">
+				<tr>
+					<td height="97" colspan="3" width="100%" valign="middle">
+						<table width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" summary="layout">
+							<tr>
+								<td align="left"><a href="http://www.musclecarrestorations.com/"><img src="/images/design/mcr-logo.gif" alt="Muscle Car Restorations (MCR)" width="196" height="97" border="0"></a></td>
+								<td width="100%">
+									<!--<div style="float:right; margin:1px 1px 1px 1px;">
+										<a href="/openhouse2013.html"><img src="/images/design/2013-open-house.jpg" border="0" width="667" height="97" alt=""></a>
+									</div>-->
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr class="no-print">
+					<td height="18" width="1"><img src="/images/color/F0F0F0.gif" width="1" height="18" border="0" alt=""></td>
+					<td class="hband" height="18" width="100%" bgcolor="#004878" style="text-align:left;"><span>&nbsp;established 1988</span>&nbsp;</td>
+					<td height="18" width="1"><img src="/images/color/F0F0F0.gif" width="1" height="18" border="0" alt=""></td>
+				</tr>
+				<tr class="no-print">
+					<td height="3" bgcolor="#F0F0F0" style="line-height:3px" colspan="3">&nbsp;</td>
+				</tr>
+				<tr class="no-print">
+					<td height="18" width="1"><img src="/images/color/F0F0F0.gif" width="1" height="18" border="0" alt=""></td>
+					<td class="hband" height="18" width="100%" bgcolor="#0071BC" style="text-align:center;"><span>&quot;Quality and craftsmanship is long remembered after the price is forgotten&quot;</span></td>
+					<td height="18" width="1"><img src="/images/color/F0F0F0.gif" width="1" height="18" border="0" alt=""></td>
+				</tr>
+			</table></td>
+		<td class="bord-r" width="4" height="136"></td>
+	</tr>
+	<tr>
+		<td class="bord-l" valign="top" width="42"></td>
+		<td class="checker-bg" valign="top" nowrap><p><a href="/index.html" title="Home page">Home</a></p>
+			<p><a href="/history.html" title="About MCR">About MCR</a></p>
+			<p><a href="/cars.php" title="Click here for the photographs!">See the cars!</a></p>
+			<p><a href="/awards.html">Awards</a></p>
+			<p><a href="/magazines.html" title="Magazine appearances">Magazines</a></p>
+			<p><a href="/testimonials.html" title="See what some of our past customers have to say about MCR">Testimonials</a></p>
+			<hr>
+
+			<p><a href="/services.html" title="We offer a wide range of restoration services.">Services</a></p>
+			<p>&nbsp;&gt;&nbsp;<a href="/moparrestorations.html" title="Mopar Restorations">Mopar</a></p>
+			<p>&nbsp;&gt;&nbsp;<a href="/gmrestorations.html" title="GM Restorations">GM</a></p>
+			<p>&nbsp;&gt;&nbsp;<a href="/fordrestorations.html" title="Ford Restorations">Ford</a></p>
+			<p>&nbsp;&gt;&nbsp;<a href="/procurement.html" title="We can help you find that perfect car to restore!">Procurement</a></p>
+			<hr>
+			
+			<p><a href="/blog" title="What's happening?">News &amp; Events</a></p>
+
+			<p><a href="/articles/restoration-articles.html" title="Restoration Articles!">Articles</a></p><!-- - <span style="color:red">NEW</span></p>-->
+			<!--<p><a href="/store.html" title="You can't go wrong with MCR merchandise!">MCR Store</a></p>-->
+			<p><a href="/employment.html" title="Do you have what it takes?">Employment</a></p>
+			<p><a href="/suppliers.html">Suppliers</a></p>
+			<hr>
+			
+			<p style="padding-bottom:0px; margin-bottom:0px;">&nbsp;&nbsp;&nbsp;<a href="/contact.html" title="Give us a call today! (715) 834-2223"><img src="/images/design/phone.gif" alt="Contact" border="0" width="30" height="21"></a></p>
+			<p style="padding-top:0px; margin-top:0px;"><a href="/contact.html" title="Give us a call today! (715) 834-2223">Contact</a></p>
+			<br>
+			
+			<!--<p><a href="/2008moparsatthestrip.html"><img src="/images/events/moparsatthestrip2008/leftlogo.png" border="0" alt="2008 Mopars At The Strip!" title="2008 Mopars At The Strip!" width="103" height="58"></a></p>-->
+			<!--<p><a href="/openhouse2008.html"><img src="/images/events/openhouse2008/open_house_left.png" border="0" alt="2008 MCR Open House" title="2008 MCR Open House" width="70" height="71"></a></p>-->
+			<!--
+			<p><a href="/carcraftsummernationals2007.html"><img src="/images/events/carcraft2007/carcraftsidebar.jpg" border="0" alt="2007 Car Craft Summer Nationals"></a></p>
+			<p><a href="/nats_2006.html"><img src="/images/events/nats2006/sidebar.gif" border="0" title="2006 Mopar Nationals"></a></p>
+			<br>
+			<p><a href="/openhouse2007.html"><img src="/images/events/openhouse2007/sidebar.png" title="MCR Open House" border="0" alt="2007 MCR Open House" width="122" height="52"></a></p>
+			<br>
+			
+			<p><a href="/events.html#mats2007"><img src="/images/events/mats2007/sidebar.gif" title="MCR at the 2007 Mopars At The Strip" border="0" alt="2007 Mopars At The Strip" width="122" height="52"></a></p>
+			<br>			
+			
+			<p><a href="/events.html#wow2007"><img src="/images/events/wow2007/sidebar.gif" title="MCR at the 2007 World Of Wheels" border="0" alt="2007 World Of Wheels" width="122" height="97"></a></p>
+			<br>
+			
+			<p><a href="/news.html#gtxhotrodcover"><img src="/images/magazines/06-Aug-HR-Dinky.jpg" title="MCR on August 2006 HOT ROD Cover!" border="0" alt="2006 Hot Rod Magazine Cover" width="79" height="104"></a></p>
+			
+			<p><a href="/carcraft2006.html"><img src="/images/events/carcraft2006/logo.gif" width="80" height="62" border="0" title="2006 Car Craft Summer Nationals"></a></p>
+			<p><a href="/powertour2006.html"><img src="/images/events/powertour2006/logo.gif" width="80" height="62" border="0" title="2006 Hot Rod Power Tour"></a></p>
+			<p><a href="/news.html#goodguys"><img src="/images/events/goodguys2006/goodguys_small.gif" border="0" title="Good Guys 15th Heartland Nationals"></a></p>
+			-->
+			
+		  </td>
+			<td id="main-content" bgcolor="#F0F0F0" width="100%" valign="top">
+<!-- / Header -->
+<div id="jquery_jplayer"></div>
+
+<h1 style="padding-bottom:10px" title="Welcome to MCR's website!">Welcome to Muscle Car Restorations, Inc.</h1>
+
+	<div id="contentTop" align="center">
+	<span id="flashcontent">
+		<a href="/feature/68hemiroadrunner.html"><img src="/images/cars/duiker_rr_mosaic.jpg" border="0" width="500" height="250" alt="1968 Hemi Roadrunner"></a>
+	</span>
+	<a href="/awards.html#mcc"><img src="/images/awards/MCC-Feature.jpg" border="0" width="320" height="238" alt="MCC Feature"></a>
+</div>
+
+	<div id="contentBottom">
+
+	<div id="slideShow"></div>
+
+	<div class="col-list">
+	<a id="no-audio" href="#">Disable Audio</a>
+
+	<h1>Why Restore?</h1>
+	<h2 class="col" id="track1">Quality</h2>
+	<ul>
+		<li>A large majority of the 'restored' collector cars available for purchase were built specifically to be sold for a profit. Rarely are these cars done with the care, quality, or to the depth that they deserved. We have seen a number of 'ground up' restorations that have had to be completely re-restored in order to get them to the quality level the owner expected when they purchased the car. Low quality products and cutting corners to increase profit is why a lot of these cars have rather serious overall quality problems.</li>
+		<li>A restoration controlled by the owner allows quality to be determined not by how much the car will resale for but from those exact specifications from the owner himself. You control the quality start to finish and decide where to focus those labor hours and when to cut corners. We have found even our driver level restorations are at a quality level far and above many cars up for sale as 'complete - ground up' restorations.</li>
+	</ul>
+	<h2 class="col" id="track2">Any Year, Make, Or Model</h2>
+	<ul>
+		<li>You may be hard pressed to find that exact year, make, or model of car you want already restored, especially one restored to the level you desire. If that car isn't extremely rare the restoration may be even poorer than you might expect once you start to really look at it.</li>
+	</ul>
+	<h2 class="col" id="track3">Cost & Value</h2>
+	<ul>
+		<li>A well documented restoration performed by a renowned shop will always hold more value than one that's undocumented or completed by an unknown shop or individuals. The quality of products used, the skill of the restorer, the process documentation can all affect value.</li>
+		<li>The cost of a restoration is flexible depending on your specific goals and expectations for the completed restoration. We provide a large number of paths to fit every budget.</li>
+		<li>It is important to remember that it takes roughly the same amount of time to restore <em>any car</em>. We strongly believe that the true value of a car is relative to the owner and not to the market price.</li>
+	</ul>
+	<h2 class="col" id="track4">Flexibility</h2>
+	<ul>
+		<li>If you are already enjoying a collector vehicle, but those years are starting to show. You may want to upgrade components, refinish the interior, the exterior, restore the trim, or have some other work you need done. Finding a company that has experience and a history with classic cars is very important when you are deciding to have work done. Restoration companies should be at the top of your list when deciding where to send your car. We have heard a lot of horror stories from owners who had a vehicle in for relatively simple upgrades.</li>
+		<li>When you are in control of the build start to finish you are free to make changes to the car. Everything from addition of creature comforts, to modernizations and customizations will all be made available to you.</li>
+	</ul>
+	<h2 class="col" id="track5">Personal Connection</h2>
+	<ul>
+		<li>The personal connection to a car you receive from actually taking part in a ground up restoration start to finish is something unique. We have been part of some pretty emotional deliveries here including everything up to tears of joy from grown men. We strongly believe that you will find your overall enjoyment and satisfaction with ownership greatly increased.</li>
+	</ul>
+
+	<h1>Why MCR?</h1>
+	<h2 class="col" id="track6">Our history</h2>
+	<ul>
+		<li>Established in 1988 MCR has restored hundreds of vehicles.</li>
+		<li>Customer cars only. Your place in line for any restoration service will never be interrupted for collision repair work or any classic car being flipped.</li>
+		<li>The quality and accuracy of our restorations have won them top honors at numerous car shows across the country and have allowed them to be seen on the covers of almost all the major automotive publications.</li>
+		<li>All makes, models, and years have been restored.</li>
+		<li>Numerous customers have taken the time to share their experiences.</li>
+	</ul>
+	<h2 class="col" id="track7">Our facility</h2>
+	<ul>
+		<li>The 30,000+ square foot MCR <em>owned</em> facility is equipped with the most state-of-the-art equipment available.</li>
+		<li>Be sure to watch our video tour today for a complete over-view of what makes our facility truly unique!</li>
+		<li><div id="facility-flash"></div></li>
+		<li>Our doors are always open and we encourage you to call and arrange for a personal tour as well.</li>
+	</ul>
+	<h2 class="col" id="track8">Our staff</h2>
+	<ul>
+		<li>Our staff are all specialists in specific areas of restoration. We have dedicated staff in parts, metal, bodywork, paint, assembly, and customer communication.</li>
+		<li>We employ only the most qualified, well trained, and experienced craftsman.</li>
+	</ul>
+	<h2 class="col" id="track9">Our location</h2>
+	<ul>
+		<li>We readily accept new customers from around the country. To customers who cannot visit on a regular basis we provide weekly photo and video updates. We take our project documentation and customer communication very seriously. (Be sure to visit our 60,000+ restoration photo gallery - all of these photos are from direct updates to customers over the years)</li>
+		<li>We are located close to international and regional airports.</li>
+	</ul>
+	<h2 class="col" id="track10">Procurement</h2>
+	<ul>
+		<li>From start to finish we can help you locate the car of your dreams and restore it to your exact specifications.</li>
+	</ul>
+	</div>
+
+<br>
+<br>
+
+	</div>
+
+
+<!-- Footer -->
+			</td>
+		<td class="bord-r">&nbsp;</td>
+	</tr>
+	<tr class="no-print">
+		<td height="4" align="right"><img src="/images/design/border_bl_corn.gif" width="4" height="4" alt=""></td>
+		<td height="4" width="702" colspan="2" class="bord-b"></td>
+		<td height="4" align="left"><img src="/images/design/border_br_corn.gif" width="4" height="4" alt=""></td>
+	</tr>
+</table>
+</td>
+<!--
+<td class="bord-r" id="starring" bgcolor="#FFFFFF" valign="top" align="center" rowspan="2" style="padding:0px 0px 0px 5px; background-color:#FFFFFF">
+	<a href="/suppliers.html"><span style="font-size:small; font-family:Arial, Helvetica, sans-serif; font-weight:bold;">Preferred Suppliers:</span></a><br>
+	<hr>
+	<a href="/suppliers.html#s_yearone"><img src="/images/starring/yearone.gif" border="0"  alt="Year One" width="68" height="30"></a><br>
+	<a href="/suppliers.html#s_ppg"><img src="/images/starring/ppg.gif" border="0"  alt="PPG" width="68" height="33"></a><br>
+	<a href="/suppliers.html#s_keisler"><img src="/images/starring/keisler.gif" border="0"  alt="Keisler" width="68" height="20"></a><br>
+	<a href="/suppliers.html#s_mmm"><img src="/images/starring/mmm.gif" border="0" alt="Mopar Muscle Magazine" width="68" height="22"></a><br>
+	<a href="/suppliers.html#s_autovision"><img src="/images/starring/autovision.gif" border="0"  alt="Autovision" width="68" height="13"></a><br>
+	<a href="/suppliers.html#s_phoenix"><img src="/images/starring/phoenixgraphix.jpg" border="0" alt="Phoenix Graphix" width="68" height="83"></a><br>
+	<a href="/suppliers.html#s_autometer"><img src="/images/starring/autometer.gif" border="0"  alt="AutoMeter" width="68" height="13"></a><br>
+	<a href="/suppliers.html#s_tti"><img src="/images/starring/tti.gif" border="0"  alt="Tube Technologies, Inc" width="68" height="42"></a><br>
+	<a href="/suppliers.html#s_becool"><img src="/images/starring/becool.gif" border="0"  alt="BeCool" width="68" height="21"></a><br>
+	<a href="/suppliers.html#s_zbag"><img src="/images/starring/zumbrota.jpg" border="0" alt="Zumbrota Bearing and Gear Inc." width="68" height="45"></a><br>
+	<a href="/suppliers.html#s_qa1"><img src="/images/starring/qa1.gif" border="0"  alt="QA1 Motorsports" width="68" height="34"></a><br>
+	<a href="/suppliers.html#s_ssbc"><img src="/images/starring/ssbc.gif" border="0" alt="SSBC" width="68" height="15"></a><br>
+	<a href="/suppliers.html#s_blair"><img src="/images/starring/blair.gif" border="0"  alt="Blair Equipment" width="68" height="30"></a><br>
+	<a href="/suppliers.html#s_f5racing"><img src="/images/starring/factory_five.gif" border="0"  alt="Factory Five" width="68" height="37"></a><br>
+	<a href="/suppliers.html#s_finelines"><img src="/images/starring/finelines.gif" border="0"  alt="Fine Lines" width="68" height="23"></a><br>
+	<a href="/suppliers.html#s_hpc"><img src="/images/starring/hpc.gif" border="0"  alt="HPC Coatings" width="68" height="26"></a><br>
+	<a href="/suppliers.html#s_justdashes"><img src="/images/starring/just_dashes.gif" border="0"  alt="Just Dashes" width="68" height="27"></a><br>
+	<a href="/suppliers.html#s_3m"><img src="/images/starring/3m.gif" border="0"  alt="3M" width="68" height="23"></a><br>
+	<a href="/suppliers.html#s_por15"><img src="/images/starring/mdyne.gif" border="0"  alt="Mustang Dyno" width="68" height="27"></a><br>
+	<a href="/starring/pauls_chrome.html"><img src="/images/starring/pauls_chrome.gif" border="0"  alt="Pauls Chrome" width="68" height="34"></a><br>
+	<a href="/suppliers.html#s_por15"><img src="/images/starring/por15.gif" border="0"  alt="POR 15" width="68" height="33"></a><br>
+	<a href="/suppliers.html#s_sw"><img src="/images/starring/stainless_works.gif" border="0" alt="Stainless Works" width="68" height="42"></a><br>
+	<a href="/starring/wheeler.html"><img src="/images/starring/wheeler.gif" border="0"  alt="Wheeler Racing Engines" width="68" height="29"></a><br>
+</td>
+-->
+</tr>
+
+<tr>
+		<td width="100%" style="color:#FFFFFF; padding:0px 0px 0px 10px;" valign="top">
+			<div class="no-print" style="padding: 5px 10px 0px 0px; float: right;">
+				<img src="/images/design/flag.gif" alt="Made in the USA">
+			</div>
+
+			<p class="bottom" id="contact">
+				<a href="/contact.html"><b>Contact us</b></a><br>
+				<b>Email:</b>&nbsp;<a href="mailto:info2@musclecarrestorations.com">info2@musclecarrestorations.com</a><br>
+				<b>Phone:</b>&nbsp;(715) 834-2223&nbsp;&nbsp;&nbsp;<b>Fax:</b> (715) 834-5994<br>
+				<b>Hours:</b>&nbsp;<i>Monday - Thursday: 8:00 AM - 5:30 PM, Friday: 8:00 AM - 12:00 PM</i><br>
+				<br>
+			</p>
+
+			<center>
+				<p class="bottom">&copy; 2012 Muscle Car Restorations - All rights reserved</p>
+			</center>
+		</td>
+</tr>
+</table>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-710329-1";
+urchinTracker();
+</script>
+
+<!-- / Footer --></body>
+</html>

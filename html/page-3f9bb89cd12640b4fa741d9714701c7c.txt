@@ -1,0 +1,1042 @@
+<!doctype html>
+<!--[if lte IE 7]> <html dir="ltr" lang="en-us" class="generic no-js cm-institutional ie ie7 lte-ie9 lte-ie8 lte-ie7"> <![endif]-->
+<!--[if IE 8]> <html dir="ltr" lang="en-us" class="generic no-js cm-institutional ie ie8 lte-ie9 lte-ie8"> <![endif]-->
+<!--[if IE 9]> <html dir="ltr" lang="en-us" class="generic no-js cm-institutional ie ie9 lte-ie9"> <![endif]-->
+<!--[if !IE]><!--> <html dir="ltr" lang="en-us" class="generic no-js cm-institutional"> <!--<![endif]-->
+
+
+<head>
+<meta charset="utf-8">
+<title>Roadside Assistance | Car Insurance Benefits | Ameriprise Auto & Home Insurance</title>
+<meta name="title" content="Roadside Assistance | Car Insurance Benefits | Ameriprise Auto & Home Insurance">
+<meta name="keywords" content="Roadside Assistance">
+<meta name="description" content="Whether you have a flat tire or a dead battery, roadside assistance can come in handy. Learn more about Ameriprise Auto & Home Insuranceâs roadside assistance. ">
+<meta name="omni_title" content="">
+<meta name="omni_description" content="">
+<meta name="omni_category" content="">
+
+<!--[if IE]>
+<meta http-equiv="Page-Enter" content="blendTrans(duration=0)">
+<meta http-equiv="Page-Exit" content="blendTrans(duration=0)">
+<![endif]-->
+
+<link href="/auto-home-insurance/global/images/favicon.ico" rel="shortcut icon">
+
+<link rel="stylesheet" href="/auto-home-insurance/global/css/normalize.css">
+
+<!-- jQuery specific-files -->
+<link rel="stylesheet" href="/auto-home-insurance/global/css/jquery.ui.core.css">
+<link rel="stylesheet" href="/auto-home-insurance/global/css/jquery.ui.accordian.css">
+
+<script src="/auto-home-insurance/global/scripts/jquery-1.7.1.min.js"></script>
+<script src="/auto-home-insurance/global/scripts/jquery.ui.core.min.js"></script>
+<script src="/auto-home-insurance/global/scripts/jquery.ui.widget.min.js"></script>
+<script src="/auto-home-insurance/global/scripts/jquery.ui.accordion.min.js"></script>
+<script src="/auto-home-insurance/global/scripts/jplaceholder.js"></script>
+<script src="/auto-home-insurance/global/scripts/jquery.colorbox-min.js"></script>
+<script src="/global/scripts/jquery.cookie.js"></script>
+<script src="/global/scripts/sharethis.js"></script>
+<link rel="stylesheet" href="/auto-home-insurance/global/css/colorbox.css" >
+
+
+<script type="text/javascript" src="/auto-home-insurance/foresee/foresee-trigger.js"></script>
+<script>
+function goToUrl() {
+	var formNameID = "getQuote";
+	var radioNameID = "auto-home-insurance-radio";
+	var autoHomeHiddenInput = "autoHomeValue";
+	var selectMenuId = "auto-home-select";
+	var stateMenuId = "select-state-box";
+	
+	var autoHomeForm = document.forms[formNameID];
+	var autoHomeRadioList = autoHomeForm[radioNameID];
+	var autoHomeHidden = autoHomeForm[autoHomeHiddenInput];
+	var autoHomeSelectMenu = autoHomeForm[selectMenuId];
+	var autoHomeStateMenu = autoHomeForm[stateMenuId];
+	var autoHomeValue = "auto";
+	
+	// determine if it is auto or home from input: radio button or select or hidden
+	if (autoHomeRadioList != null) {
+		autoHomeValue = getRadioButtonValue(autoHomeRadioList);
+	} else if (autoHomeSelectMenu != null) {
+		autoHomeValue = autoHomeSelectMenu.options[autoHomeSelectMenu.selectedIndex].value;
+	} else if (autoHomeHidden != null) {
+		autoHomeValue = autoHomeHidden.value;
+	}
+	var autoHomeUrl = getAHUrl(autoHomeValue, autoHomeStateMenu);
+	
+	autoHomeForm.action = autoHomeUrl;
+	autoHomeForm.submit();
+}
+
+// second function to compensate for two forms on the same page
+function goToUrlInline() {
+	var formNameID = "getQuote2";
+	var radioNameID = "auto-home-insurance-radio";
+	var autoHomeHiddenInput = "autoHomeValue";
+	var selectMenuId = "auto-home-select";
+	var stateMenuId = "select-state-box";
+	
+	var autoHomeForm = document.forms[formNameID];
+	var autoHomeRadioList = autoHomeForm[radioNameID];
+	var autoHomeHidden = autoHomeForm[autoHomeHiddenInput];
+	var autoHomeSelectMenu = autoHomeForm[selectMenuId];
+	var autoHomeStateMenu = autoHomeForm[stateMenuId];
+	var autoHomeValue = "auto";
+	
+	// determine if it is auto or home from input: radio button or select or hidden
+	if (autoHomeRadioList != null) {
+		autoHomeValue = getRadioButtonValue(autoHomeRadioList);
+	} else if (autoHomeSelectMenu != null) {
+		autoHomeValue = autoHomeSelectMenu.options[autoHomeSelectMenu.selectedIndex].value;
+	} else if (autoHomeHidden != null) {
+		autoHomeValue = autoHomeHidden.value;
+	}
+	var autoHomeUrl = getAHUrl(autoHomeValue, autoHomeStateMenu);
+	
+	autoHomeForm.action = autoHomeUrl;
+	autoHomeForm.submit();
+}
+
+
+function getAHUrl(autoHomeValue, autoHomeStateMenu) {
+	var autoValue = "auto";
+	var homeValue = "home";
+	
+	var autoHomeSelectedIndex = autoHomeStateMenu.selectedIndex;
+	var autoHomeState = autoHomeStateMenu.options[autoHomeSelectedIndex].value;
+	var url = "";
+	
+	// get url based on form: auto or home
+	if (autoHomeValue === autoValue) {
+		url = getAutoURL(autoHomeState);
+	} else if (autoHomeValue === homeValue) {
+		url = getHomeURL(autoHomeState);
+	} else {
+		url = getAutoURL(autoHomeState);
+	}
+	
+	return url;
+
+}
+
+function getAutoURL(state) {
+	var autoURL = "";
+	
+	var autoPolicyHolderStates = new Array();
+	autoPolicyHolderStates.push("AZ");
+	autoPolicyHolderStates.push("CA");
+	autoPolicyHolderStates.push("CO");
+	autoPolicyHolderStates.push("CT");
+	autoPolicyHolderStates.push("DC");
+	autoPolicyHolderStates.push("GA");
+	autoPolicyHolderStates.push("IL");
+	autoPolicyHolderStates.push("IN");
+	autoPolicyHolderStates.push("KY");
+	autoPolicyHolderStates.push("MD");
+	autoPolicyHolderStates.push("MA");
+	autoPolicyHolderStates.push("MI");
+	autoPolicyHolderStates.push("MN");
+	autoPolicyHolderStates.push("MT");
+	autoPolicyHolderStates.push("NV");
+	autoPolicyHolderStates.push("NH");
+	autoPolicyHolderStates.push("NJ");
+	autoPolicyHolderStates.push("NY");
+	autoPolicyHolderStates.push("NC");
+	autoPolicyHolderStates.push("OH");
+	autoPolicyHolderStates.push("OR");
+	autoPolicyHolderStates.push("PA");
+	autoPolicyHolderStates.push("SC");
+	autoPolicyHolderStates.push("TX");
+	autoPolicyHolderStates.push("UT");
+	autoPolicyHolderStates.push("VA");
+	autoPolicyHolderStates.push("VT");
+	autoPolicyHolderStates.push("WA");
+	autoPolicyHolderStates.push("WI");
+	
+	var autoNoInsuranceStates = new Array();
+	autoNoInsuranceStates.push("AK");
+	autoNoInsuranceStates.push("LA");
+	autoNoInsuranceStates.push("ME");
+	autoNoInsuranceStates.push("ND");
+	autoNoInsuranceStates.push("RI");
+	autoNoInsuranceStates.push("WV");
+	autoNoInsuranceStates.push("WY");
+
+	var autoNonInteractiveStates = new Array();
+  autoNonInteractiveStates.push("AL");
+  autoNonInteractiveStates.push("AR");
+  autoNonInteractiveStates.push("DE");
+  autoNonInteractiveStates.push("HI");
+  autoNonInteractiveStates.push("ID");
+  autoNonInteractiveStates.push("IA");
+  autoNonInteractiveStates.push("KS");
+  autoNonInteractiveStates.push("MS");
+  autoNonInteractiveStates.push("MO");
+  autoNonInteractiveStates.push("NE");
+  autoNonInteractiveStates.push("NM");
+  autoNonInteractiveStates.push("OK");
+  autoNonInteractiveStates.push("SD");
+  autoNonInteractiveStates.push("TN");
+	
+	var autoMiscStates = new Array();
+	autoMiscStates.push("FL");
+
+  
+	var varPartnerID = getPartnerID();
+  var varRefID = getRefID();
+	var varEmailID = getEmailID();
+
+	// determine auto url based on what state user picks
+  if (isValueInArray(state, autoPolicyHolderStates)) {
+		autoURL = "https://autoinsurance.ameriprise.com/web/auto/auto"+"?PartnerID="+varPartnerID+"&stateID="+state+"&RefID="+varRefID+"&EmailID="+varEmailID+"#PolicyholderDetails";
+	} else if (isValueInArray(state, autoNoInsuranceStates)) {
+		autoURL = "https://autoinsurance.ameriprise.com/web/auto/auto"+"?PartnerID="+varPartnerID+"&RefID="+varRefID+"&EmailID="+varEmailID+"#noInsuranceOffered";
+	} else if (isValueInArray(state, autoNonInteractiveStates)) {
+		autoURL = "https://autoinsurance.ameriprise.com/web/auto/auto"+"?PartnerID="+varPartnerID+"&RefID="+varRefID+"&EmailID="+varEmailID+"#nonInteractive";
+	} else if (isValueInArray(state, autoMiscStates)) {
+		autoURL = "https://www14.ameriprise.com/AutoQuoteWebInter/AQFrontServlet?request_type=un_auth_welcome&actionName=StartYourEngine&loginState=FL"+"&"+getPartnerRefEmailIDs();
+	} else {
+		autoURL = "https://autoinsurance.ameriprise.com/web/auto/auto"+"?"+getPartnerRefEmailIDs();
+	}
+
+	return autoURL;
+}
+
+function getHomeURL(state) {
+	var homeURL = "";
+	
+	var homeInteractiveStates = new Array();
+	homeInteractiveStates.push("AL");
+	homeInteractiveStates.push("AZ");
+	homeInteractiveStates.push("CA");
+	homeInteractiveStates.push("CO");
+	homeInteractiveStates.push("CT");
+	homeInteractiveStates.push("GA");
+	homeInteractiveStates.push("IL");
+	homeInteractiveStates.push("IN");
+	homeInteractiveStates.push("MI");
+	homeInteractiveStates.push("MD");
+	homeInteractiveStates.push("MA");
+	homeInteractiveStates.push("MN");
+	homeInteractiveStates.push("MO");
+	homeInteractiveStates.push("NC");
+	homeInteractiveStates.push("NV");
+	homeInteractiveStates.push("NJ");
+	homeInteractiveStates.push("NY");
+	homeInteractiveStates.push("OH");
+	homeInteractiveStates.push("OR");
+	homeInteractiveStates.push("PA");
+	homeInteractiveStates.push("TN");
+	homeInteractiveStates.push("TX");
+	homeInteractiveStates.push("VA");
+	homeInteractiveStates.push("WA");
+	homeInteractiveStates.push("WI");
+
+	var homeNonInteractiveOneStates = new Array();
+	homeNonInteractiveOneStates.push("AK");
+	homeNonInteractiveOneStates.push("FL");
+	homeNonInteractiveOneStates.push("LA");
+	homeNonInteractiveOneStates.push("ME");
+	homeNonInteractiveOneStates.push("ND");
+	homeNonInteractiveOneStates.push("RI");
+	homeNonInteractiveOneStates.push("WV");
+	homeNonInteractiveOneStates.push("WY");
+
+	var homeNonInteractiveFordCOSTCOStates = new Array();
+	homeNonInteractiveFordCOSTCOStates.push("AK");
+	homeNonInteractiveFordCOSTCOStates.push("LA");
+	homeNonInteractiveFordCOSTCOStates.push("ME");
+	homeNonInteractiveFordCOSTCOStates.push("ND");
+	homeNonInteractiveFordCOSTCOStates.push("RI");
+	homeNonInteractiveFordCOSTCOStates.push("WV");
+	homeNonInteractiveFordCOSTCOStates.push("WY");
+	
+	var homeNonInteractiveCOSTCOMiscStates = new Array();
+	homeNonInteractiveCOSTCOMiscStates.push("FL");
+
+	var homeNonInteractiveTwoStates = new Array();
+
+  homeNonInteractiveTwoStates.push("AR");
+  homeNonInteractiveTwoStates.push("DC");
+  homeNonInteractiveTwoStates.push("DE");
+  homeNonInteractiveTwoStates.push("HI");
+  homeNonInteractiveTwoStates.push("ID");
+  homeNonInteractiveTwoStates.push("IA");
+  homeNonInteractiveTwoStates.push("KS");
+  homeNonInteractiveTwoStates.push("KY");
+  homeNonInteractiveTwoStates.push("MS");
+  homeNonInteractiveTwoStates.push("MT");
+  homeNonInteractiveTwoStates.push("NE");
+  homeNonInteractiveTwoStates.push("NH");
+  homeNonInteractiveTwoStates.push("NM");
+  homeNonInteractiveTwoStates.push("OK");
+  homeNonInteractiveTwoStates.push("SC");
+  homeNonInteractiveTwoStates.push("SD");
+  homeNonInteractiveTwoStates.push("UT");
+  homeNonInteractiveTwoStates.push("VT");
+
+	var varPartnerID = getPartnerID();
+  var varRefID = getRefID();
+	var varEmailID = getEmailID();
+	var explicitPartnerID = "";
+
+	// determine home url based on what state user picks  
+	if ( (explicitPartnerID === "COSTCO" ) && isValueInArray(state, homeNonInteractiveFordCOSTCOStates)) { // hack for costco special case
+		homeURL = "https://www14.ameriprise.com/NonInteractiveQuote/NIFrontServlet?request_type=un_auth_homeRequest"+"&loginState="+state+"&"+getPartnerRefEmailIDs(); //partner id should be costco, otherwise parter id is being set to non-costco on costco page
+	} else if ( (explicitPartnerID === "COSTCO" ) && isValueInArray(state, homeNonInteractiveCOSTCOMiscStates)) { // hack for costco special case
+		homeURL = "https://www14.ameriprise.com/AutoQuoteWebInter/AQFrontServlet?request_type=un_auth_welcome&actionName=StartYourEngine&loginState=FL"+"&"+getPartnerRefEmailIDs(); //partner id should be costco, otherwise parter id is being set to non-costco on costco page
+	} else if ( (varPartnerID === "COSTCO" || varPartnerID === "Ford") && isValueInArray(state, homeNonInteractiveFordCOSTCOStates)) {
+		homeURL = "https://www14.ameriprise.com/NonInteractiveQuote/NIFrontServlet?request_type=un_auth_homeRequest"+"&loginState="+state+"&"+getPartnerRefEmailIDs();
+	} else if (isValueInArray(state, homeInteractiveStates)) {
+		homeURL = "https://homeinsurance.ameriprise.com/web/aah/residenceaddress"+"?PartnerID="+varPartnerID+"&loginState="+state+"&RefID="+varRefID+"&EmailID="+varEmailID;
+	} else if (isValueInArray(state, homeNonInteractiveOneStates)) {
+		homeURL = "https://autoinsurance.ameriprise.com/web/auto/auto"+"?PartnerID="+varPartnerID+"&RefID="+varRefID+"&EmailID="+varEmailID+"#noInsuranceOffered";
+	} else if (isValueInArray(state, homeNonInteractiveTwoStates)) {
+		homeURL = "https://www14.ameriprise.com/NonInteractiveQuote/NIFrontServlet"+"?request_type=un_auth_homeRequest&PartnerID="+varPartnerID+"&loginState="+state+"&RefID="+varRefID+"&EmailID="+varEmailID;
+	} else {
+		homeURL = "https://homeinsurance.ameriprise.com/web/aah/residenceaddress"+"?"+getPartnerRefEmailIDs();
+	}
+
+	return homeURL;
+}
+
+function getAllIDs() {
+	var cookiePName = 'ahPartnerID';
+	var queryPString = 'PartnerID';
+	var queryPStringValue = gup(queryPString);
+	var explicitPartnerID = "";
+
+	var cookieRName = 'ahRefID';
+	var queryRString = 'RefID';
+	var queryRStringValue = gup(queryRString);
+
+	var cookieEName = 'ahEmailID';
+	var queryEString = 'EmailID';
+	var queryEStringValue = gup(queryEString);
+	
+	var allIDs = "";
+
+	if (explicitPartnerID != "") {
+			$.cookie(cookiePName,explicitPartnerID,{ path: '/', domain: 'ameriprise.com'  });
+	}
+
+	if (queryPStringValue != "" || queryRStringValue != "" || queryEStringValue != "") {
+		
+		if (queryPStringValue != "") { 
+			$.cookie(cookiePName,queryPStringValue,{ path: '/', domain: 'ameriprise.com' });
+		}
+		
+		if (queryRStringValue != "") {
+			$.cookie(cookieRName,queryRStringValue,{ path: '/', domain: 'ameriprise.com' });
+		} else {
+			$.cookie(cookieRName,'',{ path: '/', domain: 'ameriprise.com' });
+		}
+		
+		if (queryEStringValue != "") {
+			$.cookie(cookieEName,queryEStringValue,{ path: '/', domain: 'ameriprise.com' });
+		} else {
+			$.cookie(cookieEName,'',{ path: '/', domain: 'ameriprise.com' });
+		}
+				
+	}
+	
+	allIDs = getPartnerRefEmailIDs();
+
+	return allIDs;
+
+}
+
+/*function getPartnerID() {
+	var cookieName = 'ahPartnerID';
+	
+	var ahPartnerID = "";
+	if ($.cookie(cookieName)) 
+		ahPartnerID = $.cookie(cookieName)
+		
+	return ahPartnerID;
+}*/
+
+function getPartnerID() { 
+	var cookieName = "ahPartnerID"; 
+	var ahPartnerID = ""; 
+	var tempURL = window.location.href.toLowerCase();
+	if ($.cookie(cookieName)) {
+		ahPartnerID = $.cookie(cookieName);
+	    } else if (tempURL.indexOf("costco") > -1) {
+	                ahPartnerID = "COSTCO";
+	    } else if (tempURL.indexOf("ford") > -1) {
+	                ahPartnerID = "Ford";
+	    }
+		return ahPartnerID; 
+}
+
+function getRefID() {
+	var cookieName = 'ahRefID';
+	
+	var ahRefID = "";
+	if ($.cookie(cookieName)) 
+		ahRefID = $.cookie(cookieName)
+		
+	return ahRefID;
+}
+
+function getEmailID() {
+	var cookieName = 'ahEmailID';
+	
+	var ahEmailID = "";
+	if ($.cookie(cookieName)) 
+		ahEmailID = $.cookie(cookieName)
+	
+	
+	return ahEmailID;
+}
+
+function getPartnerRefEmailIDs() {
+	var varPartnerID = getPartnerID();
+  var varRefID = getRefID();
+	var varEmailID = getEmailID();
+	
+	var partnerRefEmailIDs = "PartnerID="+varPartnerID+"&RefID="+varRefID+"&EmailID="+varEmailID;
+	
+	return partnerRefEmailIDs;
+}
+
+function getRegistrationUrl() {
+	var registrationUrl = "https://serviceonline.ameriprise.com/web/serviceonline/landing/Registration";
+	
+	return registrationUrl;
+}
+
+function getRetrieveAutoUrl() {
+	var retrieveAutoUrl = "https://www14.ameriprise.com/AutoQuoteWebInter/AQFrontServlet?request_type=un_auth_PreSSOWelcome";
+
+	return retrieveAutoUrl;
+}
+
+function getRetrieveHomeUrl() {
+	var retrieveHomeUrl = "https://homeinsurance.ameriprise.com/web/aah/retrieveyourquote";
+
+	return retrieveHomeUrl;
+}
+
+function getForgotPasswordUrl() {
+	var forgotPasswordUrl = "https://ssoeextra.ameriprise.com/SSO/pub/forgotPwdForm.do?ssobrand=AAHONLINE&TARGET=https://serviceonline.ameriprise.com/web/serviceonline/secure/ssonav";
+
+	return forgotPasswordUrl;
+}
+
+function isPartnerEqualTo(partnerName) {
+	var isPartnerEqualTo = false;
+	
+	if (getPartnerID() === partnerName || gup('PartnerID') === partnerName) {
+		isPartnerEqualTo = true;
+	}
+	
+	return isPartnerEqualTo;
+}
+
+
+function isValueInArray(value, array) {
+	var isValueInArray = false;
+	
+	for (var i=0 ; i < array.length; i++) {
+		if (value === array[i]) {
+			isValueInArray = true;
+		}
+	}
+	
+	return isValueInArray;
+}
+
+function getRadioButtonValue(radioButtonList) {
+	var radioButtonValue = "";
+	
+	for (var i = 0; i < radioButtonList.length; i++) {
+		if (radioButtonList[i].checked) {
+			radioButtonValue = radioButtonList[i].value;
+		}
+	}
+	
+	return radioButtonValue;
+}
+
+function gup( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+
+$(document).ready(function() {
+	var allIDs = getAllIDs();
+	$("#regNowLink").attr("href", getRegistrationUrl());
+	$("#forgotPasswordLink").attr("href", getForgotPasswordUrl());
+	$(".retrieveAutoLink").attr("href", getRetrieveAutoUrl());
+	$(".retrieveHomeLink").attr("href", getRetrieveHomeUrl());
+	
+	// appending partner/ref/email IDs to href links
+	$('a').each(function(){
+    var thisHref = $(this).attr('href');
+		var hrefConnector = "&" + allIDs;
+		if (thisHref.indexOf('()') != -1 || thisHref.indexOf('mailto') != -1 || thisHref.indexOf('#') != -1) {
+			hrefConnector = "";
+		} else if (thisHref.indexOf('?') == -1) {
+			hrefConnector = "?" + allIDs;
+		}
+		
+    var newHref = thisHref + hrefConnector;
+    
+    $(this).attr('href', newHref);
+	});
+	
+	if (isPartnerEqualTo("COSTCO")) {
+		$("html").addClass("costco");
+	}
+	if (isPartnerEqualTo("Ford")) {
+		$("html").addClass("ford");
+	}
+});
+
+</script>
+
+<!-- start CONTENT TAB CSS AND SCRIPTS -->
+<link href="/auto-home-insurance/global/css/jquery.ui.tabs.css" rel="stylesheet">	
+<link href="/auto-home-insurance/global/css/ampf-contenttabs.css" rel="stylesheet">	
+<script src="/auto-home-insurance/global/scripts/jquery.ui.tabs.min.js"></script>
+<!-- end CONTENT TAB CSS AND SCRIPTS -->
+
+<!-- start MAIN NAVIGATION CSS and SCRIPTS -->
+<link href="/auto-home-insurance/global/css/ampf-navtabs.css" rel="stylesheet">
+<script src="/auto-home-insurance/global/scripts/jquery.ba-dotimeout.min.js"></script>
+<script src="/auto-home-insurance/global/scripts/ampf-navtabs.js"></script>
+<!-- end MAIN NAVIGATION CSS and SCRIPTS -->
+
+<!-- start SLIDER EXPAND DETECT SCRIPT -->
+<script src="/auto-home-insurance/global/scripts/ampf-slider.js"></script>
+<!-- end SLIDER EXPAND DETECT SCRIPT -->
+
+<link rel="stylesheet" href="/auto-home-insurance/global/css/style.css" >
+<link rel="stylesheet" href="/auto-home-insurance/global/css/images.css" >
+<link rel="stylesheet" href="/auto-home-insurance/global/print.css" media="print"  >
+
+<script src="http://ameriprise.com/global/scripts/sharethis.js?version=07012009"></script>
+
+<script>
+jQuery(document).ready(function($) {	
+	//detect for IE10
+	if ($.browser.msie && parseInt($.browser.version) > 9) {
+		$("html").addClass("ie gte-ie10");
+	}
+	// render navigation 
+	ampfnav();
+	// set placeholder text on forms
+	$("form").jplaceholder({ 
+ 		showOnFocus:true  
+	});
+
+	//retrieve a quote functionality
+	 $('#content .form-1 a.retrieve').click(function() {
+        $('#content .form-1 .quotebox').show();
+    });
+    $('#content .form-1 .quotebox .hdr').click(function() {
+        $('#content .form-1 .quotebox').hide();
+    });
+    $('.module.getquote.form-2 a.retrieve').click(function() {
+        $('.form-2 .quotebox.module').show();
+    });
+    $('#content .form-2 .quotebox .hdr').click(function() {
+        $('#content .form-2 .quotebox').hide();
+    });  
+    $('#right-sidebar .retrieve').click(function() {
+        $('#right-sidebar .quotebox').show();
+    });
+    $('#right-sidebar .quotebox .hdr').click(function() {
+        $('#right-sidebar .quotebox').hide();
+    });
+
+    $('#right-sidebar #accessYourAccount h2').click(function() {
+        $('#soLoginForm').slideToggle('fast');
+        $('#accessYourAccount').toggleClass('collapsed');
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="article-e14" class="wrapper three-column">
+  <div class="header">
+    <a href="/auto-home-insurance/default.asp">
+<div class="logo">
+	&nbsp;
+</div><!-- .logo -->
+</a>
+<div class="global">
+	<ul class="nav">
+    	<li><a href="/auto-home-insurance/about-us.asp">About Us</a></li>
+        <li><a href="/auto-home-insurance/careers/default.asp">Careers</a>
+		<li><a href="/auto-home-insurance/contact-us.asp">Contact Us</a></li>		
+		<li><a class="loginModal" href="/auto-home-insurance/log-in.asp">Log In</a></li>
+	</ul>
+
+	<div class="phone">888.239.9953</div>
+</div><!-- .global -->
+ 
+  </div>
+  <!-- header -->
+  <div id="navigation">
+  	<div id="tab-active" class="learning-center"></div>
+  	<div id="tab-selected" class="tips-drivers"></div>
+    <!-- start MAIN NAVIGATION -->
+<ul class="main-nav main-nav-horizontal">
+  <li class="main-nav home">
+  	<a href="/auto-home-insurance/"><span>Home</span></a>
+    <ul>
+    	<li>&nbsp;</li>
+    </ul>
+  </li>
+  <li class="main-nav insurance-choices">
+    <a href="/auto-home-insurance/insurance-choices"><span>Insurance Choices</span></a>
+    <ul>
+      <li><a href="/auto-home-insurance/insurance-choices/auto" class="auto-insurance"><span>Auto Insurance</span></a></li>
+      <li><a href="/auto-home-insurance/insurance-choices/home-condo" class="home-condo-insurance"><span>Home &amp; Condo Insurance</span></a></li>
+      <li><a href="/auto-home-insurance/insurance-choices/renters" class="renters-insurance"><span>Renters Insurance</span></a></li>
+      <li><a href="/auto-home-insurance/insurance-choices/umbrella" class="umbrella-insurance"><span>Umbrella Insurance</span></a></li>
+      <li><a href="/auto-home-insurance/insurance-choices/specialty" class="specialty-insurance"><span>Specialty Insurance</span></a></li>
+    </ul>
+  </li>
+  <li class="main-nav manage-my-policy">
+    <a href="/auto-home-insurance/manage-insurance-policy"><span>Manage My Policy</span></a>
+    <ul>
+      <li>&nbsp;</li>
+    </ul>
+  </li>
+  <li class="main-nav claims">
+    <a href="/auto-home-insurance/claims"><span>Claims</span></a>
+    <ul>
+    	<li><a href="/auto-home-insurance/claims/report-insurance-claim" class="report-a-claim"><span>Report a Claim</span></a></li>
+        <li><a href="/auto-home-insurance/claims/claims-process" class="claims-process"><span>Claims Process</span></a></li>
+        <li><a href="/auto-home-insurance/claims/common-claims" class="common-claims"><span>Common Claims</span></a></li>
+    </ul>
+  </li>
+  <li class="main-nav learning-center">
+  	<a href="/auto-home-insurance/learning-center"><span>Learning Center</span></a>
+    <ul>
+      <li><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/" class="tips-drivers"><span>Tips for Drivers</span></a></li>
+      <li><a href="/auto-home-insurance/learning-center/insurance-tips-for-homeowners/" class="tips-homeowners"><span>Tips for Homeowners</span></a></li>
+      <li><a href="/auto-home-insurance/learning-center/insurance-tips-for-renters/" class="tips-renters"><span>Tips for Renters</span></a></li>
+      <li><a href="/auto-home-insurance/learning-center/understanding-insurance/" class="understanding-insurance"><span>Understanding Insurance</span></a></li>
+      <li><a href="/auto-home-insurance/learning-center/disaster-preparedness/" class="disaster-preparedness"><span>Outdoor and Disaster Safety</span></a></li>
+      
+    </ul>
+</ul>
+<!-- end MAIN NAVIGATION -->
+ 
+  </div>
+  <!-- #setnav -->
+  <div id="left-sidebar">
+    <span id="articlenum" class="e14"></span>
+
+    <div class="article-subnav">
+    <script>
+jQuery(document).ready(function($) {	
+//sets current article for article subnavigation
+	var currentarticle = $('#articlenum').attr('class'); 	
+ 	if (currentarticle != "") {
+		$('ul.articles li.' + currentarticle).addClass('current');   
+	}
+});
+</script>
+
+<h2><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/">Tips for Drivers</a></h2>
+<h4><em><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/safe-driving-tips/">Safe Driving</a></em></h4>
+
+<h4><em><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/bumper-to-bumper-car-care-tips/">Bumper-to-Bumper</a></em></h4>
+
+<h4><em><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/guide-to-owning-a-car/">Vehicle Ownership</a></em></h4>
+
+<h4><em><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/auto-insurance-coverage-made-simple/">Auto Insurance Coverages Made Simple</a></em></h4>
+
+<h4><em><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/insurance-discounts-and-benefits/">Insurance Discounts and Benefits</a></em></h4>
+
+<h4><em><a href="/auto-home-insurance/learning-center/insurance-tips-for-drivers/additional-auto-insurance-coverage/">Related Insurance Products and Services</a></em></h4>
+ 
+    </div>
+  </div>
+  <!-- #left-sidebar -->
+  <div id="content">
+    <div id="tools">
+    <ul>
+    	<li id="share">Share:</li>
+        <li><a href="javascript:openFacebook();" type="button_count" name="fb_share" title="Share on Facebook"><img src="/auto-home-insurance/global/images/ico-facebook-sm.png" alt="Facebook" width="16" height="16" border="0"></a></li>
+        <li><a href="javascript:openTwitter();" title="Share on Twitter"><img src="/auto-home-insurance/global/images/ico-twitter-sm.png" alt="Twitter" width="16" height="16" border="0"></a></li>
+        <li><a href="javascript:openLinkedIn();" title="Share on Linkedin"><img src="/auto-home-insurance/global/images/ico-linkedin-sm.png" alt="LinkedIn" width="16" height="16" border="0"></a></li>
+    </ul>
+</div><!-- #tools -->
+  <h1>A Drive-By Look at Ameriprise Auto &amp; Home Roadside Assistance</h1>
+  <h2>Help When You Need It</h2>
+
+  <p>Flat tires, stalled engines, or simply a case of âWho didnât fill up the tank?!â could leave you stranded on the side of the road and in less than positive spirits. Luckily, for some Ameriprise Auto Insurance customers, we offer towing coverage that can be added to many policies.</p>
+
+  <h3>Auto Insurance Towing Coverage</h3>
+  <p>When you add towing coverage to your insured vehicle, you may receive assistance if you:</p>
+  <ul>
+    <li>Have a flat tire</li>
+    <li>Have a dead battery</li>
+    <li>Get locked out of your car</li>
+    <li>Get stuck in the mud or snow</li>
+    <li>Run out of gas</li>
+  </ul>
+
+  <h3>Peace of Mind</h3>
+  <p>Add some peace of mind to your travels this year by adding Roadside Assistance to your auto insurance policy.  You'll be sure a flat tire, dead battery or empty tank won't ruin your travels.</p>    
+  </div>
+  <!-- #content -->
+  <div id="right-sidebar"> 
+    <div class="getquote sidebar module darkbg rounded"> 
+	<h2>Get a Free Insurance Quote</h2> 
+	<form id="getQuote" name="getQuote" method="post">
+  	<input type="hidden" name="autoHomeValue" id="autoHomeValue" value="">
+    <div class="row"><label for="auto-home-select">Type of Insurance</label>
+        <select id="auto-home-select" name="type" size="1">
+        	<option value="">Select...</option>
+        	<option value="auto" selected>Auto</option>
+          <option value="home">Home, Condo or Renters</option>
+         </select>
+	</div>
+    <div class="row"><label for="select-state-box">Your State</label>
+    	<select id="select-state-box" name="select-state-box">
+            <option value="default" selected="selected">Select...</option>
+            <option value="AK">AK </option>
+            <option value="AL">AL </option>
+            <option value="AR">AR </option>
+            <option value="AZ">AZ </option>
+            <option value="CA">CA </option>
+            <option value="CO">CO </option>
+            <option value="CT">CT </option>
+            <option value="DC">DC </option>
+            <option value="DE">DE </option>
+            <option value="FL">FL </option>
+            <option value="GA">GA </option>
+            <option value="HI">HI </option>
+            <option value="IA">IA </option>
+            <option value="ID">ID </option>
+            <option value="IL">IL </option>
+            <option value="IN">IN </option>
+            <option value="KS">KS </option>
+            <option value="KY">KY </option>
+            <option value="LA">LA </option>
+            <option value="MA">MA </option>
+            <option value="MD">MD </option>
+            <option value="ME">ME </option>
+            <option value="MI">MI </option>
+            <option value="MN">MN </option>
+            <option value="MO">MO </option>
+            <option value="MS">MS </option>
+            <option value="MT">MT </option>
+            <option value="NC">NC </option>
+            <option value="ND">ND </option>
+            <option value="NE">NE </option>
+            <option value="NH">NH </option>
+            <option value="NJ">NJ </option>
+            <option value="NM">NM </option>
+            <option value="NV">NV </option>
+            <option value="NY">NY </option>
+            <option value="OH">OH </option>
+            <option value="OK">OK </option>
+            <option value="OR">OR </option>
+            <option value="PA">PA </option>
+            <option value="RI">RI </option>
+            <option value="SC">SC </option>
+            <option value="SD">SD </option>
+            <option value="TN">TN </option>
+            <option value="TX">TX </option>
+            <option value="UT">UT </option>
+            <option value="VA">VA </option>
+            <option value="VT">VT </option>
+            <option value="WA">WA </option>
+            <option value="WI">WI </option>
+            <option value="WV">WV </option>
+            <option value="WY">WY </option>
+        </select>
+    </div>
+    <div class="row">
+    	 <input type="submit" class="button" onclick="goToUrl()" href="#" id="getquote" value="Get quote">
+    </div>
+    <div class="row">
+    	<a class="retrieve" href="javascript:void(0);">Retrieve a quote</a>
+   	</div>  
+	</form>     
+    <div class="quotebox module qbshow">
+	<div class="hdr">
+	    <span class="closebox"></span>
+	    Retrieve a Quote
+	</div>
+	<a href="https://www14.ameriprise.com/AutoQuoteWebInter/AQFrontServlet?request_type=un_auth_PreSSOWelcome&PartnerID=" class="retrieveAutoLink" id="retrieveauto">Auto</a>
+	<a href="https://homeinsurance.ameriprise.com/web/aah/retrieveyourquote?PartnerID=" class="retrieveHomeLink" id="retrievehome">Home/Renters</a>
+</div>
+</div><!-- .getQuoteSidebar --><div id="accessYourAccount" class="login module rounded lightbg slider collapsed">
+  <h2>Access My Policy</h2>
+
+	
+<script language="JavaScript" type="text/javascript">
+
+/* <![CDATA[ */
+
+/* need it for SSO login*/
+var intdays = 366;
+var now = new Date();
+now.setTime(now.getTime() + intdays * 24 * 60 * 60 * 1000);
+var cookie_path = "/"; //"/" as root
+var cookie_domain = document.domain; //"www.ameriprise.com"
+
+function getCookie(name) {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+}
+
+function setCookie(name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((domain) ? "; domain=" + domain : "") + ((path) ? "; path=" + path : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+var encryptedxmlhttp;
+var postbackurl;
+var selindexval;
+
+function setencryptedcokkie()
+
+{
+	/*
+  url = "/global/common/return-encrypted-userid.asp?userid="+window.document.soLoginForm.Userid.value
+  encryptedxmlhttp=null;
+
+  if (window.XMLHttpRequest){
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+      encryptedxmlhttp=new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+      encryptedxmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+  encryptedxmlhttp.onreadystatechange=onstatechange;
+  encryptedxmlhttp.open("POST",url,true);
+  encryptedxmlhttp.send(null);
+	*/
+	var userid;
+	userid = window.document.soLoginForm.Userid.value;
+	createCookie("AHcookieAMP",userid,365);
+	
+	loginNow();
+
+}
+
+function onstatechange()
+{
+
+  if (encryptedxmlhttp.readyState==4) {
+    // 4 = "loaded"
+      if (encryptedxmlhttp.status==200) {
+      // 200 = "OK"
+      loginNow();
+    } else {
+  
+      loginNow();
+    }
+    }
+}
+
+function unsetencryptedcokkie() {
+  createCookie("AHcookieAMP","",-1);
+  loginNow();
+}
+
+function createCookie(name,value,days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  }
+  else var expires = "";
+  document.cookie = name+"="+value+expires+"; path=/";
+}
+/* ]]> */   
+      //login script for home page
+      function validateform(){
+        var uid;
+        var pwd;
+        var remuid;
+      
+        uid = window.document.soLoginForm.Userid.value;
+        pwd = window.document.soLoginForm.Pword.value;
+        remuid = window.document.soLoginForm.rememberuid.checked;
+      
+        if (uid =="" && pwd==""){
+          alert('To Log In successfully, please fill in both the "User ID" and "Password" fields and select an account.');
+        }
+        else if (uid =="" &&  pwd==""){
+          alert('Please fill in both the "User ID" and "Password" fields to Log In to your account successfully.');
+        } 
+        else if (uid ==""){
+          alert('Please fill in the "User ID" field to Log In to your account successfully.');
+        }
+        else if (pwd==""){
+          alert('Please fill in the "Password" field to Log In to your account successfully.');
+        } 
+        else if (remuid == true){
+          setencryptedcokkie();
+        }
+        else{   
+          unsetencryptedcokkie();
+          loginNow();
+        }
+      }     
+    
+      function loginNow(){
+    //submit values
+    var dc=window.document.soLoginForm; 
+    dc.USERID.value = dc.Userid.value;
+    dc.UserID.value = dc.Userid.value;
+    dc.USER.value = dc.Userid.value;
+    dc.PWD.value = dc.Pword.value;
+    dc.Password.value = dc.Pword.value;
+    dc.brandname.value = "AAHONLINE";
+    dc.SMAGENTNAME.value = "uss1uws006amprb_apache_uc01c_so_webagent";
+    dc.TARGET.value = "https://serviceonline.ameriprise.com/homePage_AAH/SSOBRANDAAHONLINE" + "?" + getPartnerRefEmailIDs();
+    dc.action = "https://ssoeextra.ameriprise.com/siteminderagent/forms/login.fcc";
+    dc.submit();
+  }
+	function retrieveID(){
+		var environ = "e3";
+		var UIDrst_SSOurl;
+		if(environ=="e1"){
+			UIDrst_SSOurl = "https://ssoeintradev.ampf.com/SelfServE1/pub/FUIDFormAction.do?ssobrand=AAHONLINE&TARGET=https://serviceonline-01.qa.ameriprise.com/homePage_AAH/";
+		}
+		else if(environ=="e2"){
+			UIDrst_SSOurl = "https://ssoeextraqa.ameriprise.com/SelfServE2/pub/FUIDFormAction.do?ssobrand=AAHONLINE&TARGET=https://serviceonline-01.qa.ameriprise.com/homePage_AAH/";
+		}
+		else if(environ=="e3"){
+			UIDrst_SSOurl = "https://ssoeextra.ameriprise.com/SSO/pub/FUIDFormAction.do?ssobrand=AAHONLINE&TARGET=https://serviceonline-new.ameriprise.com/homePage_AAH/";
+		} else {
+      UIDrst_SSOurl = "https://ssoeextra.ameriprise.com/SSO/pub/FUIDFormAction.do?ssobrand=AAHONLINE&TARGET=https://serviceonline-new.ameriprise.com/homePage_AAH/";
+    }
+		var url = UIDrst_SSOurl;
+		window.location.href = url;
+	}
+	function retrievePWD(){
+		var environ = "e3";
+		var usrId;
+		usrId = window.document.soLoginForm.Userid.value;
+		var PWDrst_SSOurl;
+		if(environ=="e1"){
+			PWDrst_SSOurl = "https://ssoeintradev.ampf.com/SelfServE1/pub/forgotPwdForm.do?ssobrand=AAHONLINE&userid=" + usrId + "&TARGET=https://serviceonline-01.qa.ameriprise.com/homePage_AAH/";
+		}
+		else if(environ=="e2"){
+			PWDrst_SSOurl = "https://ssoeextraqa.ameriprise.com/SelfServE2/pub/forgotPwdForm.do?ssobrand=AAHONLINE&userid=" + usrId + "&TARGET=https://serviceonline-new.ameriprise.com/web/serviceonline/secure/ssonavAH/";
+		}
+		else if(environ=="e3"){
+			PWDrst_SSOurl = "https://ssoeextra.ameriprise.com/SSO/pub/forgotPwdForm.do?ssobrand=AAHONLINE&userid=" + usrId + "&TARGET=https://serviceonline-new.ameriprise.com/web/serviceonline/secure/ssonav";
+		}
+		var url = PWDrst_SSOurl;
+		window.location.href = url;
+	}
+</script>
+
+  <form name="soLoginForm" id="soLoginForm" method="post" autocomplete="off">
+      <input type="hidden" name="userid" />
+      <input type="hidden" name="password" />
+      <input type="hidden" name="DestPage" />
+      <input type="hidden" name="UserID" />
+      <input type="hidden" name="USER" />
+      <input type="hidden" name="Face" value="en_US" />
+      <input type="hidden" name="Password" />
+      <input type="hidden" name="PWD" />
+      <input type="hidden" name="brandname" />
+      <input type="hidden" name="TARGET" />
+      <input type="hidden" name="USERID" />
+      <input type="hidden" name="SMAGENTNAME" />
+      <input type="hidden" value="IntlLogLogonHandler" name="request_type" />
+      <input type="hidden" value="Continue..." name="Logon" />
+    <div class="row">
+      <input type="text" value="" name="Userid" id="Userid" title="User ID" jplaceholder="User ID" />
+    </div>
+    <div class="row">
+      <input type="password" name="Pword" id="Pword" title="Password" jplaceholder="Password">
+      <a href="#" id="security"><img src="/auto-home-insurance/global/images/ico-security.png" width="11" height="14" alt="Security" /></a> </div>
+    <div class="row remember-me-row"> 
+      <input type="submit" id="login-btn" value="Log in" class="button" />
+      <span class="rememberMe">
+      <input type="checkbox" value="on" name="rememberuid" id="rememberuid" >
+      <label for="remember-me">Remember user ID</label>
+      </span> </div>
+    <p class="forgotPW"> <a href="javascript:retrieveID()">Forgot your ID</a> or <a href="javascript:retrievePWD()" id="forgotPasswordLink">Password?</a> </p>
+    <p class="registerNow"> <a href="https://serviceonline.ameriprise.com/web/serviceonline/landing/Registration" id="regNowLink">Register now</a> </p>
+    <span id="mandateLogin">&nbsp;</span>
+  </form>
+
+<script src="/global/scripts/jplaceholder.js" ></script> 
+<script>
+  $("#soLoginForm").submit(validateform).jplaceholder({force:true});
+</script> 
+
+</div>
+<!-- #login -->
+
+    <!-- .client-quote --> 
+  </div>
+  <!-- #right-sidebar -->
+  <div id="pg-footer"> 
+    <div class="connect">
+    <p>Connect with us:</p>
+    	<a href="http://www.facebook.com/AmeripriseAutoHome" title="Facebook" target="_blank"><img src="/auto-home-insurance/global/images/ico-facebook-lg.png" alt="Facebook" width="32" height="32" border="0"></a>
+    	<a href="http://www.twitter.com/AmeripriseAH" title="Twitter" target="_blank"><img src="/auto-home-insurance/global/images/ico-twitter-lg.png" alt="Twitter" width="32" height="32" border="0"></a>
+        <a href="http://www.youtube.com/AmeripriseAutoHome" title="YouTube" target="_blank"><img src="/auto-home-insurance/global/images/ico-youtube-lg.png" alt="YouTube" width="32" height="32" border="0"></a>
+        <a href="http://www.linkedin.com/company/ameriprise-auto-and-home-insurance/products" title="LinkedIn" target="_blank"><img src="/auto-home-insurance/global/images/ico-linkedin-lg.png" alt="LinkedIn" width="32" height="32" border="0"></a>
+</div>
+<h5>Ameriprise Auto &amp; Home Insurance  is rated "A" (excellent) by A.M. Best for financial strength, stability, and soundness of operating performance.</h5>
+
+ 
+  </div>
+  <!-- #pg-footer -->
+  <div class="footer"> 
+    <p><a href="/legal/disclosures.asp">View Corporate Entities and Important Disclosures</a>, <a href="/legal/website-rules.asp">Web Site Rules and Regulations</a>, <a href="/customer-service/privacy-security/default.asp">Privacy Statement</a> and <a href="/legal/email-fraud.asp">About E-mail Fraud</a>.</p>
+
+<p>&copy; 2013 Ameriprise Financial, Inc. All rights reserved. Users of this site agree to be bound by the terms of the Ameriprise Financial Website Rules and Regulations</p>
+
+
+<div class="disclosure">
+	All insurance is underwritten by the following wholly owned subsidiaries of Ameriprise Financial, Inc.: <a href="/auto-home-insurance/ids-property-casualty.asp">IDS Property Casualty Insurance Company</a>, or in certain states, <a href="/auto-home-insurance/ameriprise-insurance-company.asp">Ameriprise Insurance Company</a>, De Pere, WI, or other insurance companies for whom Ameriprise Auto &amp; Home Insurance Agency is an agent. IDS Property Casualty Insurance Company's California license number is 3726-7. Insurance availability varies by <a href="/auto-home-insurance/state-list.asp">state</a>.  The eligibility criteria for coverage and discounts may vary by state.  Certain limitations and exclusions may apply.
+</div> 
+  </div>
+  <!-- footer --> 
+</div>
+<!-- #wrapper -->
+<script>
+jQuery(document).ready(function($) { 
+	/* by default, "Auto" is selected for all Quote modules, but if the pages contain any of the following strings in their URL, the option is defaulted to "Home" */
+	if (window.location.href.indexOf("home-condo") > -1 || 
+		window.location.href.indexOf("renters") > -1 ||
+		window.location.href.indexOf("insurance-tips-for-homeowners") > -1 ||
+		window.location.href.indexOf("insurance-tips-for-renters") > -1 ||
+		window.location.href.indexOf("disaster-preparedness") > -1 ) {
+  			$("#auto-home-select option[value='home']").attr("selected",true);  
+  	}
+});
+</script>
+
+<script src="/global/scripts/omniture/s_code.js"></script>
+<script src="/global/scripts/omniture/ameriprise.js"></script>
+<script> 
+s_om.pageName="" 
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/ 
+var s_code=s_om.t();if(s_code)document.write(s_code)//-->
+</script>    
+</body>
+</html>

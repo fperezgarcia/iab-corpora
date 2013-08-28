@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!-- TemplateVersion="1302r" -->
+
+<html class="no-js" lang="en">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+<script src="/inc/public/js/jquery/v1.9.1/jquery-1.9.1.min.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width" />
+
+<title>Santa Barbara - Business</title>
+
+
+
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+
+
+<!-- CSS (DEBUG) -->
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+<link rel="stylesheet" href="/inc/public/css/foundation/foundation.css" />
+<link rel="stylesheet" href="/inc/public/js/civica/slideshows/nivo-slider/nivo-slider.css" />
+<link rel="stylesheet" href="/inc/public/js/civica/slideshows/nivo-slider/themes/default/default.css" />
+<link rel="stylesheet" href="/inc/public/js/galleria/themes/classic/galleria.classic.css" />
+<link rel="stylesheet" href="/inc/public/js/superfish/themes/superfish.css" />
+<link rel="stylesheet" href="/navdata/menu00.css" />
+<link rel="stylesheet" href="/inc/public/css/global.css" />
+<link rel="stylesheet" href="https://fast.fonts.com/cssapi/7de3d3b2-5b91-4c56-a915-18d20e0e0052.css" />
+<link rel="stylesheet" href="/inc/00/widgets.css" />
+<link rel="stylesheet" href="/inc/00/base.css" />
+<link rel="stylesheet" href="/inc/00/modules.css" />
+<link rel="stylesheet" href="/inc/00/megaMenus.css" />
+<link rel="stylesheet" href="/inc/00/768up.css" />
+<link rel="stylesheet" href="/inc/00/1030up.css" />
+<link rel="stylesheet" href="/inc/00/1280up.css" />
+<link rel="stylesheet" href="/inc/00/spooky.css" />
+
+
+<!-- JS (DEBUG) -->
+<script src="/inc/public/js/modernizr/custom.modernizr.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+var iCurrFolderID = 953;
+var iNavFolderID = 953;
+</SCRIPT>
+
+
+</head>
+<body>
+
+<!-- start: Page Wrap -->
+<div id="page-wrap">
+
+<a href="#" id="charm-toggle"><span>&larr;</span>MySB</a><div id="charm-bar"><a href="#" id="close-charms">Close Panel</a><div class="weather-cont"><a class="forcast-link" href="http://forecast.weather.gov/MapClick.php?textField1=34.45&amp;textField2=-119.63" target="_blank"><img src="/custom/0000/img/wx/nsct.png" border="0" title="Click for more information"></a><span class="temperature">72Â°F
+      </span></div>
+<!-- start: Charms -->
+<div id="dynamic-charms" class="cf"></div>
+<!-- end: Charms -->
+</div>
+
+    <!-- start: Header -->
+    <header id="page-header">
+
+
+        <div id="header-row" class="row">
+
+            <div id="header-left" class="large-7 columns">
+                <!-- start: Logo -->
+                <a id="header-logo" class="tip-right" href="/default.asp" title="Return to Home">
+                    <img src="/img/00/sbb_logo.png" />
+                </a>
+                <!-- end: Logo -->
+            </div>
+
+            <div id="header-right" class="large-5 columns">
+                
+                <div class="row collapse">
+
+                    <!-- start: Low Graphics Version -->
+                    <div class="large-12 columns">
+                        <ul class="head-links cf">
+                            <li>
+                              <div class="fontsize">
+                                <span id="fontsize0" class="head-link" ><a id="size0" class="head-link" href="#">A</a> </span><span id="fontsize1" class="head-link" ><a id="size1" class="selected head-link" href="#">A</a> </span><span id="fontsize2" class="head-link" ><a id="size2" class="head-link" href="#">A</a> </span>
+                                </div>
+                            </li>
+                            
+                            <li><a class="head-link" href="/gov/accessibility/default.asp">Accessibility</a></li>
+                            
+                            <li class="has-arrs link-content"><span></span><a class="head-link scrollTo" href="#page-content">Content</a></li>
+                            
+                            <li class="has-arrs link-footer"><span></span><a class="head-link scrollTo" href="#page-footer">Footer</a></li>
+                            <li class="last">
+                                <!-- start: Google Translate -->
+                                <div id="google_translate_element"></div>
+                                <!-- end: Google Translate -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end: Low Graphics Version -->
+
+                </div>
+                <div class="row collapse">
+
+                    <!-- start: Site Search -->
+                    <div class="small-9 columns">
+                        <form autocomplete="off" name="frmSearch" id="frmSearch" action="/search/default.asp" method="get" target="_self" onsubmit="return frmSearchSubmit();">
+                            <input id="site-search" name="q" type="search" maxlength="50" placeholder="Search the City..." />
+                        </form>
+                    </div>
+                    <div class="small-3 columns">
+                        <a href="javascript:frmSearchGo();" id="site-search-btn" class="button expand postfix">Go</a>
+                    </div>
+                    <!-- end: Site Search -->
+
+                </div>
+                <div class="row collapse">
+
+                    <!-- start: City Notifications -->
+                    <div class="large-12 columns">
+                        <span id="header-notify-txt"></span>
+                        
+                        
+                    </div>
+                    <!-- end: City Notifications -->
+
+                </div>
+                
+            </div>
+        
+        </div>
+
+        <!-- start: Dynamic Logo -->
+        <div id="dynamic-head-logo" class="hide-for-medium-down"></div>
+        
+        <!-- end: Dynamic Logo -->
+
+    </header>
+    <!-- end: Header -->
+    
+
+    
+    <!-- start: Navigation -->
+    <section id="top-nav">
+
+        <div class="row nav-row">
+
+            <div class="large-12 columns nav-inner">
+
+                <div id="dynamic-top-nav"></div>
+
+            </div>
+
+        </div>
+   
+    </section>
+    <!-- end: Navigation -->
+
+  
+
+<!-- start: Page Body -->
+<div id="page-body"><div id="big-bg-image"><div id="dynamic-bg"></div></div><div id="sidebar-blu"></div><div id="content-row" class="content-row row"><div id="sidenav-col" class="large-3 columns">
+<!-- start: Side Navigation -->
+<div class="side-nav-wrap cf"><h3 class="page-nav-heading">Explore</h3><nav id="side-nav"><div id="dynamic-side-nav"></div></nav></div>
+<!-- start: Side Buttons -->
+<div id="dynamic-side-btns"></div>
+<!-- end: Side Buttons -->
+
+<!-- end: Side Navigation -->
+</div><div class="large-9 columns">
+<!-- start: Page Content -->
+<section id="page-content"><div class="pgtitle"><h1 class="content-title">Business</h1></div><div class="title-radial-grad"></div>
+
+    <!-- start: Breadcrumbs -->
+    <section id="bcrumbs">
+
+        <div class="row collapse">
+
+            <div class="large-9 columns">
+
+                <!-- start: Breadcrumbs List --><ul class="bcrumb-list"><li class="home"><a href="http://www.santabarbaraca.gov/default.asp">Home</a></li><li class="arr">&raquo;</li><li class="current">Business</li></ul><!-- end: Breadcrumbs List -->
+
+            </div>
+
+            <div class="large-3 columns system-btns-col">
+
+                <!-- start: System Buttons -->
+                <ul class="system-btns-list">
+                    <li><a href="javascript:void(0);" id="btn-email" class="small radius button system-button"><span>Email</span></a><ul class="system-menu"><li class="contact-us"><a class="link-contact-us" href="javascript:Civica_Modal.showModal('modal-contact-us', '/custom/overlay/contact-us.asp?m=1&u=http://www.santabarbaraca.gov/Business/Default.asp&i=953&t=tt', 'medium');">Contact Us</a></li></ul></li>
+                </ul>
+                <!-- end: System Buttons -->
+
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_pill_combo_style">
+                  <a class="addthis_counter addthis_pill_style"></a>
+                </div>
+                <script type="text/javascript">
+                  var addthis_config = {  "data_track_addressbar": true,
+                                          "services_compact": "facebook, twitter, google,google_plusone_share"
+                                        };
+                </script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50f442d104be207a"></script>
+                <!-- AddThis Button END -->
+
+            </div>
+
+        </div>
+
+        
+
+    </section>
+    <!-- end: Breadcrumbs -->
+
+<div class="edtdiv"><p><img style="border-bottom: #fff 7px solid; border-left: #fff 7px solid; border-top: #fff 7px solid; border-right: #fff 7px solid; box-shadow: 0px 5px 8px 2px #666" class="right_image" alt="Business at and with the City" src="/images/TopLevel/BusPage.png" />Santa Barbara is host to a myriad of diverse businesses. The City of Santa Barbara is dedicated to developing and maintaining excellent relationships with all of the businesses in our community. Strong businesses build a strong community. </p><p>In this section you will find information about permits, inspections, transportation, recycling, and information about how to do business with the City and how the City can help your business. </p><p>If you are entertaining the idea of starting a business in Santa Barbara, you will find demographic information, building, zoning, inspections, and safety information vital to nurturing a new or growing business. </p></div><div id="page-last-updated">Last Updated: Jul&nbsp;22,&nbsp;2013</div></section>
+<!-- end: Page Content -->
+</div></div></div>
+<!-- end: Page Body -->
+
+
+<!-- start: Footer -->
+<footer id="page-footer">
+
+    <div class="row">
+
+        <div class="large-4 columns foot-logo-address hide-for-small">
+
+            <!-- start: Footer Logo & Address -->
+			
+            <img class="footer-logo" src="/img/00/sbb_logo_footer.png" />
+			<div class="city-seal-foot"></div>
+			<div class="photo"><img href="/civica/dynacon/inc/blobfetch.asp?BlobID=34617">735 Anacapa Street<br>Santa Barbara, CA 93101<br>(805) 963-0611<br> (805) 564-5475 (Fax)<span class="mailing-address">Mailing Address:<BR />City of Santa Barbara<BR />P.O. Box 1990<BR />Santa Barbara, CA 93102-1990</span></div>
+            <!-- end: Footer Logo & Address -->
+            
+        </div>
+
+        <div class="foot-nav-wrap large-4">
+
+            <div class="foot-nav-col">
+
+                <!-- start: Footer Nav - Col 1 -->
+                <nav class="foot-nav">
+                    <ul class="az-list"><li><a href="/visiting/default.asp" target="_self">Visiting</a></li><li><a href="/services/default.asp" target="_self">Services</a></li><li><a href="/gov/default.asp" target="_self">Government</a></li><li><a href="/business/default.asp" target="_self">Business</a></li><li><a href="/howdoi/default.asp" target="_self">How Do I</a></li><li><a href="/contact/default.asp" target="_self">Contact Us</a></li></ul>
+                </nav>
+                <!-- end: Footer Nav - Col 1 -->
+
+            </div>
+
+            <div class="foot-nav-col">
+
+                <!-- start: Footer Nav - Col 2 -->
+                <nav class="foot-nav">
+                    <ul class="az-list"><li><a href="/faqs/default.asp" target="_self">FAQs</a></li><li><a href="/sitemap.asp" target="_self">Sitemap</a></li><li><a href="/gov/news/default.asp" target="_self">News</a></li><li><a href="/howdoi/get/webhelp/webhelp.asp" target="_self">Email Webmaster</a></li><li><a href="/howdoi/get/webhelp/policy.asp" target="_self">Site Policy</a></li></ul>
+                </nav>
+                <!-- end: Footer Nav - Col 2 -->
+
+            </div>
+
+        </div>
+
+        <!-- For mobile only -->
+        <div class="large-4 columns foot-logo-address hide-for-medium-up">
+
+            <!-- start: Footer Logo & Address -->
+            <img class="footer-logo" src="/img/00/sbb_logo_footer.png" />
+            <div class="city-seal-foot"></div>
+            <div class="photo"><img href="/civica/dynacon/inc/blobfetch.asp?BlobID=34617">735 Anacapa Street<br>Santa Barbara, CA 93101<br>(805) 963-0611<br> (805) 564-5475 (Fax)<span class="mailing-address">Mailing Address:<BR />City of Santa Barbara<BR />P.O. Box 1990<BR />Santa Barbara, CA 93102-1990</span></div>
+            <!-- end: Footer Logo & Address -->
+            
+        </div>
+
+        <div class="large-4 columns sm-civica-logo">
+
+            <!-- start: Social Media Center Button -->
+            <div id="social-media-center"></div>
+            <!-- end: Social Media Center Button -->
+
+            <!-- start: Powered by Civica -->
+            <div class="powered-by-cont">
+                <span class="powered-by-civica">Powered by</span>
+                <a id="civica-foot-logo" href="http://www.civicasoft.com/" target="_blank"><img src="/img/00/civica_logo.png" title="Powered by Civica Software" alt="Civica Software" /></a>
+                <!-- end: Powered by Civica -->
+            </div>
+            
+        </div>
+
+    </div>
+
+</footer>
+<!-- end: Footer -->
+
+<form class="hidden" name="frmPrintable" id="frmPrintable" action="/Business/Default.asp" method="post" target="_blank"><input type="hidden" name="prnt" value="y" /></form><form class="hidden" name="frmGrpxVer" id="frmGrpxVer" action="/Business/Default.asp" method="post"><input type="hidden" name="grpxver" value="lo" /></form><form class="hidden" name="wfpost" method=post target="_new" action=""></form>
+
+<div id="modal-pollution"></div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-4535532-1']);
+	_gaq.push(['_setDomainName', 'santabarbaraca.gov']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+
+</div>
+<!-- end: Page Wrap -->
+
+
+
+<!-- JS (DEBUG) -->
+<script type="text/javascript"><!--function cvfb_DisplayWarning( blobID ){if( confirm('FYI: This file is from an External Source. Are you sure you want to view it?') ){civicapopupwin('/civicax/filebank/blobdload.aspx?BlobID='+blobID,'fbdisplay','');}}// --></script>
+<script src="/inc/public/js/civica/iconliscroll/iconliscroll.js"></script>
+<script src="/inc/public/js/civica/clock/jquery.clock.js"></script>
+<script src="/inc/public/js/civica/widgets/display.js"></script>
+<script>var responsive_viewport = $(window).width();
+$(window).resize(function () { responsive_viewport = $(window).width(); });</script>
+<script src="/inc/public/js/foundation/foundation_all.js"></script>
+<script>$(document).foundation('tooltips', { 'disable-for-touch': true });</script>
+<script src="/inc/public/js/jquery/jquery.tools.min.js"></script>
+<script src="/inc/public/js/jquery/jquery.scrollTo-min.js"></script>
+<script src="/inc/public/js/moment/moment.js"></script>
+<script src="/inc/public/js/formval/FormVal.js"></script>
+<script src="/inc/public/js/jquery/jquery.marquee.min.js"></script>
+<script src="/inc/public/js/jquery/jquery.nospam.js"></script>
+<script src="/inc/public/js/superfish/superfish.js"></script>
+<script src="/inc/public/js/jquery/jquery.nivo.slider.min.js"></script>
+<script src="/inc/public/js/galleria/galleria-1.2.9.min.js"></script>
+<script src="/inc/public/js/jquery/jquery.hoverIntent.min.js"></script>
+<script src="/inc/js/jquery/1.4.2/jquery.cvcalendar3.js"></script>
+<script src="/inc/js/jquery/1.4.2/jquery.cvcalendar3b.js"></script>
+<script src="/civica/calendar/inc/calendar-3.js"></script>
+<script src="/inc/public/js/civica/dynamic.js"></script>
+<script src="https://www.santabarbaraca.gov/inc/public/js/civica/civica.js"></script>
+<script src="/navdata/mainnav.js"></script>
+<script src="/navdata/953json.js"></script>
+<script type="text/javascript">
+var cvPageID = 953;
+var ciLastButton = 9;
+var sLayoutPath = '/img/00';
+var iLayoutStyle = '00 ';
+var grpxver = 'hi';
+var cvMediaFQD = 'https://www.santabarbaraca.gov';
+</script>
+<script src="https://www.santabarbaraca.gov/custom/extranet/extranetAllPages.js"></script>
+<script src="/inc/public/js/civica/calendar/cvwidgetcalendar.js"></script>
+<script src="/inc/public/js/civica/navigation/Civica_NavigationFactory.js"></script>
+<script src="/inc/public/js/civica/slideshows/orbit/Civica_Orbit.js"></script>
+<script src="/inc/public/js/civica/slideshows/nivo-slider/Civica_NivoSlider.js"></script>
+<script src="/inc/public/js/civica/slideshows/galleria/Civica_Galleria.js"></script>
+<script src="/inc/public/js/civica/media/button/Civica_MediaButtonGen.js"></script>
+<script src="/inc/public/js/civica/modal/Civica_Modal.js"></script>
+<script src="/inc/public/js/responsive-tables.js"></script>
+<script src="/inc/public/js/site.js"></script>
+<script type="text/javascript">
+if (typeof addthis_config !== "undefined") {
+addthis_config.data_track_addressbar = false
+} else {
+var addthis_config = {
+data_track_addressbar: false
+};
+}
+</script>
+<script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en',layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');}</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function()
+{
+Civica_MediaButtonGen.init({ mmID: 162, mediaDispType: 'img', count: 8 }).create('#dynamic-charms');
+TextSizeToggle();
+displayCityFirdayText();
+Civica_MediaButtonGen.init({ mmID: 99, showText: 0 }).create('#dynamic-head-logo');
+$.get('/civica/DynaCon/sb/inc/refreshmenus.asp?t=-3155776969', function(data){if(data!=''){alert(data);}});
+Civica_MediaButtonGen.init({ mmID: 98, showText: 0, mediaDispType: 'img' }).create('#dynamic-bg');
+Civica_NavigationFactory.init(cvSideNav).create('#dynamic-side-nav', 'side-left');
+Civica_MediaButtonGen.init({ mmID: 13, mediaDispType: 'img' }).create('#dynamic-side-btns');
+$('a.email_replace').nospam({replaceText: false, filterLevel: 'normal'});
+$('a.email_replace').nospam({replaceText: false, filterLevel: 'normal'});
+});
+</script>
+<form style="display:inline; margin:0px;" class="calendar3b_form" action='/cals/' method=POST><input type="hidden" name=calDate value='8/27/2013'><input type="hidden" name=ViewBy value='0'></form>
+</body>
+</html>

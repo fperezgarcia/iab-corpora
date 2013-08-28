@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>
+	Roadside Assistance  | C & M Auto Service
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&amp;sensor=false"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.6.2.min.js"></script><script type="text/javascript" src="App_Themes/RedBlack/js/Theme.js"></script><script type="text/javascript" src="App_Themes/RedBlack/js/FooterMap.js"></script><script type="text/javascript" src="App_Themes/RedBlack/js/PhotoCredit.js"></script>
+<script type="text/javascript">    var _gaq = _gaq || [];   _gaq.push(['_setAccount', 'UA-31096510-1']);   _gaq.push(['_trackPageview']);    (function() {     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })();  </script><link href="App_Themes/RedBlack/additional.css" type="text/css" rel="stylesheet" /><link href="App_Themes/RedBlack/jquery-ui-1.8.16.custom.css" type="text/css" rel="stylesheet" /><link href="App_Themes/RedBlack/Site.css" type="text/css" rel="stylesheet" /></head>
+<body itemscope itemtype="http://www.schema.org/AutoRepair">
+	<meta itemprop="name" content='C&M Auto Service' />
+	<meta itemprop="image" content='http://www.cmautoservice.com/Files/Images/cm-60x60.jpg' />
+
+    <form method="post" action="roadside-assistance?id=roadside-assistance" id="ctl01" class="mainform">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU1MTkwNjMzMA9kFgJmD2QWAgIBD2QWHAIBDw8WAh4ISW1hZ2VVcmwFHy9GaWxlcy9JbWFnZXMvQ01Mb2dvV2Vic2l0ZS5wbmdkZAICDxYCHgtfIUl0ZW1Db3VudAIBFgJmD2QWAgIBDw8WBB4EVGV4dAUXQ2FsbCBVcyEgKDQwOCkgMzg0LTg5NDUeC05hdmlnYXRlVXJsBRJ0ZWw6KDQwOCkgMzg0LTg5NDVkZAIEDw8WAh8CBQsxNTEgUmV2aWV3c2RkAgcPZBYCAgEPFgIeCWlubmVyaHRtbAUTUm9hZHNpZGUgQXNzaXN0YW5jZWQCCA9kFgICAQ8WAh8CBYQaPGRpdiBpZD0ibWFpbiI+DQoJPGgxPg0KCQlUbyBZb3VyIFJlc2N1ZTwvaDE+DQoJPHA+DQoJCTxzdHJvbmcgc3R5bGU9ImZvbnQtc2l6ZToxLjdlbTsiPk5ldmVyLCBldmVyIGJlIHN0cmFuZGVkIGFnYWluITwvc3Ryb25nPjwvcD4NCgk8cD4NCgkJV2UndmUgbWFkZSBpdCBlYXN5IGZvciB5b3UgdG8gcmVjZWl2ZSBoZWxwIGFueXRpbWUsIGRheSBvciBuaWdodCwgd2l0aCBmbGF0LCBsb3N0IGtleXMsIGVtcHR5IHRhbmtzLCBhbmQgYSBkZWFkIGJhdHRlcnkgb3IgbmVlZCBmb3IgYSB0b3cuIFRoZSBUb1lvdXJSZXNjdWXihKIgUm9hZHNpZGUgQXNzaXN0YW5jZSBQcm9ncmFtIGZyb20gVEVDSC1ORVQgUFJPRkVTU0lPTkFMIEFVVE8gU0VSVklDRcKuIGNlbnRlcnMgb2ZmZXIgMzY1IGRheXMgb2YgMjQvNyByb2Fkc2lkZSBhc3Npc3RhbmNlIGFuZCBpcyBjb21wbGltZW50YXJ5IHdpdGggeW91ciBxdWFsaWZ5aW5nIHNlcnZpY2UuPC9wPg0KCTxociBzdHlsZT0iYm9yZGVyLWJvdHRvbToxcHggZGFzaGVkICNjY2M7IG1hcmdpbjoxNXB4IDA7IGhlaWdodDoxcHg7IGJvcmRlci1sZWZ0Om5vbmU7IGJvcmRlci1yaWdodDpub25lOyBib3JkZXItdG9wOm5vbmU7IiAvPg0KCTxwPg0KCQk8c3Ryb25nPkl0J3MgU2ltcGxlICYgU3RyYWlnaHRmb3J3YXJkPC9zdHJvbmc+PGJyIC8+DQoJCVdoZW4geW91IHB1cmNoYXNlICQyNSBvciBtb3JlIGluIHNlcnZpY2UgZnJvbSBhIFRFQ0gtTkVUIFBST0ZFU1NJT05BTCBBVVRPIFNFUlZJQ0XCriBjZW50ZXIsIHlvdSdyZSBjb3ZlcmVkIGZvciAzNjUgZGF5cyB3aGVuIHlvdSBuZWVkIGEgdG93LXRvLXNhZmV0eSwgbG9jay1vdXQgYWlkLCBiYXR0ZXJ5IGp1bXAgc3RhcnQsIGVtZXJnZW5jeSBmdWVsIGRlbGl2ZXJ5LCBvciBmbGF0IHRpcmUgY2hhbmdpbmcgYXNzaXN0YW5jZS48L3A+DQoJPGhyIHN0eWxlPSJib3JkZXItYm90dG9tOjFweCBkYXNoZWQgI2NjYzsgbWFyZ2luOjE1cHggMDsgaGVpZ2h0OjFweDsgYm9yZGVyLWxlZnQ6bm9uZTsgYm9yZGVyLXJpZ2h0Om5vbmU7IGJvcmRlci10b3A6bm9uZTsiIC8+DQoJPHA+DQoJCTxzdHJvbmc+QmVuZWZpdCBMaW1pdDwvc3Ryb25nPjxiciAvPg0KCQlUaGUgUHJvZ3JhbSBiZW5lZml0IGlzIGxpbWl0ZWQgdG8gdGhlIHJlaW1idXJzZW1lbnQgb2YgdHdvICgyKSByb2Fkc2lkZSBhc3Npc3RhbmNlIGluY2lkZW50cyBmb3IgYW55IGNvdmVyZWQgc2VydmljZXMgcGVyIENvdmVyYWdlIFBlcmlvZCBwZXIgQ292ZXJlZCBWZWhpY2xlLCB1cCB0byBhIG1heGltdW0gZWxpZ2libGUgcmVpbWJ1cnNlbWVudCBhbW91bnQgb2Ygc2V2ZW50eS1maXZlICgkNzUuMDAgVVNEKSBkb2xsYXJzIHBlciBkaXNhYmxlbWVudCAodGhlICJCZW5lZml0IExpbWl0IikuPC9wPg0KCTxociBzdHlsZT0iYm9yZGVyLWJvdHRvbToxcHggZGFzaGVkICNjY2M7IG1hcmdpbjoxNXB4IDA7IGhlaWdodDoxcHg7IGJvcmRlci1sZWZ0Om5vbmU7IGJvcmRlci1yaWdodDpub25lOyBib3JkZXItdG9wOm5vbmU7IiAvPg0KCTxwPg0KCQk8c3Ryb25nPkhvdyB0byBSZWNlaXZlIFJvYWRzaWRlIEFzc2lzdGFuY2UgU2VydmljZXMgPC9zdHJvbmc+PGJyIC8+DQoJCUlmIHlvdSBhcmUgaW4gbmVlZCBvZiByb2Fkc2lkZSBhc3Npc3RhbmNlLCBjYWxsIHRoZSAyNC1Ib3VyIFRvWW91clJlc2N1ZeKEoiAzNjUgUm9hZHNpZGUgQXNzaXN0YW5jZSBwcm9ncmFtIHRvbGwtZnJlZSBudW1iZXIgYXQgMS04NjYtNTg4LTA3MjggKG9wdGlvbiAyKS4gVGhlIHJvYWRzaWRlIGFzc2lzdGFuY2UgYWRtaW5pc3RyYXRpb24gd2lsbCBzY2hlZHVsZSB0aGUgZGlzcGF0Y2guIFRoZSBzZXJ2aWNlIHByb3ZpZGVyICh0aGUgIlNlcnZpY2UgUHJvdmlkZXIiKSByZXF1aXJlcyB1c2Ugb2YgYSBjcmVkaXQgY2FyZCB0byBhcnJhbmdlIGZvciBkaXNwYXRjaC4gWW91IHdpbGwgYmUgcmVpbWJ1cnNlZCBmb3IgY292ZXJlZCBzZXJ2aWNlcyB1cCB0byB0aGUgQmVuZWZpdCBMaW1pdCB1cG9uIG91ciByZWNlaXB0IG9mIHlvdXIgY29tcGxldGUgcmVxdWVzdCBmb3IgcmVpbWJ1cnNlbWVudC48L3A+DQoJPGhyIHN0eWxlPSJib3JkZXItYm90dG9tOjFweCBkYXNoZWQgI2NjYzsgbWFyZ2luOjE1cHggMDsgaGVpZ2h0OjFweDsgYm9yZGVyLWxlZnQ6bm9uZTsgYm9yZGVyLXJpZ2h0Om5vbmU7IGJvcmRlci10b3A6bm9uZTsiIC8+DQoJPHA+DQoJCTxzdHJvbmc+SG93IHRvIFJlY2VpdmUgUmVpbWJ1cnNlbWVudCBmb3IgU2VydmljZXM8L3N0cm9uZz48YnIgLz4NCgkJRG9jdW1lbnRzIGFuZCBjbGFpbSBmb3JtIChyZWNlaXB0IG9mIHJvYWRzaWRlIGFzc2lzdGFuY2Ugc2VydmljZXMgYW5kIG9yaWdpbmFsIHJlcGFpciBpbnZvaWNlKSBtYXkgYmUgc2VudCBieSBmYXggdG8gODY2LTQ0OS03MzAxLCBieSBlbWFpbCB0byBtZWNoY2xhaW1zQHNvbnNpby5jb20sIG9yIGJ5IHBvc3RhbCBtYWlsIHRvIFRFQ0gtTkVUIEN1c3RvbWVyIENhcmUsIFAuTy4gQm94IDE3NjU5LCBHb2xkZW4sIENPIDgwNDAyLjwvcD4NCgk8cD4NCgkJSWYgc2VydmljZSBwcm92aWRlciBkb2VzIG5vdCBwcm92aWRlIGEgc2VydmljZSByZWNlaXB0LCBjbGljayBoZXJlIHRvIGRvd25sb2FkLCBwcmludCwgYW5kIGNvbXBsZXRlIGEgcmVpbWJ1cnNlbWVudCBjbGFpbSBmb3JtIGFuZCBzdWJtaXQgaW4gc3Vic3RpdHV0aW9uIG9mIGludm9pY2UuPC9wPg0KCTxwPg0KCQlEb24ndCBmb3JnZXQgdG8gaW5jbHVkZSBvdXIgdG9sbC1mcmVlIFJvYWRzaWRlIEFzc2lzdGFuY2UgcGhvbmUgbnVtYmVyICg4NjYtNTg4LTA3MjgpIGluIHlvdXIgY2VsbCBwaG9uZSB0byBhY2Nlc3MgdGhlIFRvWW91clJlc2N1ZeKEoiBSb2Fkc2lkZSBBc3Npc3RhbmNlIHByb2dyYW0gZGlzcGF0Y2ggYW55dGltZSBkYXkgb3IgbmlnaHQgMjQvNy48L3A+DQoJPGhyIHN0eWxlPSJib3JkZXItYm90dG9tOjFweCBkYXNoZWQgI2NjYzsgbWFyZ2luOjE1cHggMDsgaGVpZ2h0OjFweDsgYm9yZGVyLWxlZnQ6bm9uZTsgYm9yZGVyLXJpZ2h0Om5vbmU7IGJvcmRlci10b3A6bm9uZTsiIC8+DQoJPHA+DQoJCTxzdHJvbmc+VGVybXMgYW5kIENvbmRpdGlvbnM8L3N0cm9uZz48YnIgLz4NCgkJRG93bmxvYWQgdGhlIGZ1bGwgdGVybXMgYW5kIGNvbmRpdGlvbnMgb2YgdGhlIFRvWW91clJlc2N1ZeKEoiBSb2Fkc2lkZSBBc3Npc3RhbmNlIFByb2dyYW0uPGJyIC8+DQoJCTxhIGhyZWY9Imh0dHA6Ly93d3cudGVjaGF1dG8uY29tL1JvYWRzaWRlX0Fzc2lzdGFuY2VfJTIwVGVybXNfZmluYWwtdXMucGRmIiByZWw9Im5vZm9sbG93IiB0YXJnZXQ9Il9ibGFuayI+RW5nbGlzaCB2ZXJzaW9uPC9hPjwvcD4NCjwvZGl2Pg0KPHA+DQoJwqA8L3A+DQpkAgkPFgIfAQIGFgxmD2QWAgIBDw8WAh8ABR8vRmlsZXMvSW1hZ2VzL3ByZWZvb3Rlci9BQUEucG5nZGQCAQ9kFgICAQ8PFgIfAAUgL0ZpbGVzL0ltYWdlcy9wcmVmb290ZXIvaWF0bi5wbmdkZAICD2QWAgIBDw8WAh8ABR8vRmlsZXMvSW1hZ2VzL3ByZWZvb3Rlci9hc2UucG5nZGQCAw9kFgICAQ8PFgIfAAUpL0ZpbGVzL0ltYWdlcy9wcmVmb290ZXIvdGVjaC1uZXQtbG9nby5wbmdkZAIED2QWAgIBDw8WAh8ABS0vRmlsZXMvSW1hZ2VzL3ByZWZvb3Rlci9iZS1jYXItY2FyZS1hd2FyZS5wbmdkZAIFD2QWAgIBDw8WAh8ABSkvRmlsZXMvSW1hZ2VzL3ByZWZvb3Rlci9TdGFyQ2VydGlmaWVkLnBuZ2RkAgsPFgIfAQIBFgJmD2QWCAIBDw8WAh8CBRBDJk0gQXV0byBTZXJ2aWNlZGQCAw8PFgIfAgUrMTYxNjkgQ2FwdXRvIERyLjxiciAvPk1vcmdhbiBIaWxsLCBDQSA5NTAzN2RkAgUPDxYEHwIFDig0MDgpIDM4NC04OTQ1HwMFEnRlbDooNDA4KSAzODQtODk0NWRkAgcPDxYCHwIFNE1vbiAtIEZyaTogNzozMCBBTSAtIDU6MzAgUE0sIFNhdDogODowMCBBTSAtIDU6MDAgUE1kZAISDzwrAAkBAA8WBB4IRGF0YUtleXMWAB8BAiRkFkhmD2QWAgIBDw8WBh8DBQsvT2lsQ2hhbmdlcx4GVGFyZ2V0BQVfc2VsZh8CBQtPaWwgQ2hhbmdlc2RkAgEPZBYCAgEPDxYGHwMFFy9ibXctcmVwYWlyLWFuZC1zZXJ2aWVzHwYFBV9zZWxmHwIFE0JNVyBSZXBhaXIgU2VydmljZXNkZAICD2QWAgIBDw8WBh8DBRsvRW5naW5lUmVwYWlyYW5kUmVwbGFjZW1lbnQfBgUFX3NlbGYfAgUdRW5naW5lIFJlcGFpciBhbmQgUmVwbGFjZW1lbnRkZAIDD2QWAgIBDw8WBh8DBQgvVHVuZVVwcx8GBQVfc2VsZh8CBQhUdW5lIFVwc2RkAgQPZBYCAgEPDxYGHwMFFy9mb3JkLXNlcnZpY2VzLWFuZC1hdXRvHwYFBV9zZWxmHwIFFEZvcmQgUmVwYWlyIFNlcnZpY2VzZGQCBQ9kFgICAQ8PFgYfAwUYL01haW50ZW5hbmNlLTMway02MGstOTBrHwYFBV9zZWxmHwIFGU1haW50ZW5hbmNlICgzMGsvNjBrLzkwaylkZAIGD2QWAgIBDw8WBh8DBREvc2VydmljZS0zMGstbWlsZR8GBQVfc2VsZh8CBREzMGsgTWlsZSBTZXJ2aWNlc2RkAgcPZBYCAgEPDxYGHwMFGi9kb2RnZS1zZXJ2aWNlcy1hbmQtcmVwYWlyHwYFBV9zZWxmHwIFFURvZGdlIFJlcGFpciBTZXJ2aWNlc2RkAggPZBYCAgEPDxYGHwMFHS9jaGV2cm9sZXQtcmVwYWlyLWFuZC1zZXJ2aWVzHwYFBV9zZWxmHwIFGUNoZXZyb2xldCBSZXBhaXIgU2VydmljZXNkZAIJD2QWAgIBDw8WBh8DBREvc2VydmljZS02MGstbWlsZR8GBQVfc2VsZh8CBRE2MGsgTWlsZSBTZXJ2aWNlc2RkAgoPZBYCAgEPDxYGHwMFES9qZWVwLWF1dG8tcmVwYWlyHwYFBV9zZWxmHwIFFEplZXAgUmVwYWlyIFNlcnZpY2VzZGQCCw9kFgICAQ8PFgYfAwUgL3ZvbGtzd2FnZW4tYXV0by1yZXBhaXItc2VydmljZXMfBgUFX3NlbGYfAgUaVm9sa3N3YWdlbiBSZXBhaXIgU2VydmljZXNkZAIMD2QWAgIBDw8WBh8DBREvc2VydmljZS05MGstbWlsZR8GBQVfc2VsZh8CBRE5MGsgTWlsZSBTZXJ2aWNlc2RkAg0PZBYCAgEPDxYGHwMFEi9sZXh1cy1hdXRvLXJlcGFpch8GBQVfc2VsZh8CBRVMZXh1cyBSZXBhaXIgU2VydmljZXNkZAIOD2QWAgIBDw8WBh8DBRMvbmlzc2FuLWF1dG8tcmVwYWlyHwYFBV9zZWxmHwIFFk5pc3NhbiBSZXBhaXIgU2VydmljZXNkZAIPD2QWAgIBDw8WBh8DBQsvc21vZy1jaGVjax8GBQVfc2VsZh8CBQpTbW9nIENoZWNrZGQCEA9kFgICAQ8PFgYfAwUSL2hvbmRhLWF1dG8tcmVwYWlyHwYFBV9zZWxmHwIFFUhvbmRhIFJlcGFpciBTZXJ2aWNlc2RkAhEPZBYCAgEPDxYGHwMFEy90b3lvdGEtYXV0by1yZXBhaXIfBgUFX3NlbGYfAgUWVG95b3RhIFJlcGFpciBTZXJ2aWNlc2RkAhIPZBYCAgEPDxYGHwNlHwYFBV9zZWxmHwIFBkJyYWtlc2RkAhMPZBYCAgEPDxYGHwNlHwYFBV9zZWxmHwIFE0NvbXB1dGVyIERpYWdub3N0aWNkZAIUD2QWAgIBDw8WBh8DBRQvVHJhbnNtaXNzaW9uU2VydmljZR8GBQVfc2VsZh8CBRRUcmFuc21pc3Npb24gU2VydmljZWRkAhUPZBYCAgEPDxYGHwNlHwYFBV9zZWxmHwIFEEFpciBDb25kaXRpb25pbmdkZAIWD2QWAgIBDw8WBh8DZR8GBQVfc2VsZh8CBRJFbGVjdHJpY2FsIFN5c3RlbXNkZAIXD2QWAgIBDw8WBh8DZR8GBQVfc2VsZh8CBQ1UaXJlIE1vdW50aW5nZGQCGA9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgULRmxhdCBSZXBhaXJkZAIZD2QWAgIBDw8WBh8DZR8GBQVfc2VsZh8CBQpBbGlnbm1lbnRzZGQCGg9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgUKU3VzcGVuc2lvbmRkAhsPZBYCAgEPDxYGHwNlHwYFBV9zZWxmHwIFDlRpcmUgYmFsYW5jaW5nZGQCHA9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgUPU3RlZXJpbmcgUmVwYWlyZGQCHQ9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgUXTWFpbnRlbmFuY2UgSW5zcGVjdGlvbnNkZAIeD2QWAgIBDw8WBh8DZR8GBQVfc2VsZh8CBRRQdXJjaGFzZSBpbnNwZWN0aW9uc2RkAh8PZBYCAgEPDxYGHwNlHwYFBV9zZWxmHwIFDkNvb2xpbmcgU3lzdGVtZGQCIA9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgUMNFg0IFNlcnZpY2VzZGQCIQ9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgUSUmVhciBFbmQgT3ZlcmhhdWxzZGQCIg9kFgICAQ8PFgYfA2UfBgUFX3NlbGYfAgURU2hvY2tzIGFuZCBTdHJ1dHNkZAIjD2QWAgIBDw8WBh8DZR8GBQVfc2VsZh8CBRpNdWZmbGVyIFNlcnZpY2UgYW5kIFJlcGFpcmRkAhMPZBYCAgIPPCsACQEADxYEHwUWAB8BAgVkFgpmD2QWAgIBDw8WAh8CBRBBbWVyaWNhbiBleHByZXNzZGQCAQ9kFgICAQ8PFgIfAgUEQ2FzaGRkAgIPZBYCAgEPDxYCHwIFCERpc2NvdmVyZGQCAw9kFgICAQ8PFgIfAgUKTWFzdGVyY2FyZGRkAgQPZBYCAgEPDxYCHwIFBFZpc2FkZAIVDw8WAh4HVmlzaWJsZWdkZAIWDw8WBB8DBRBodHRwOi8va3VrdWkuY29tHgdUb29sVGlwBQpQb3dlcmVkIGJ5ZGQCFw8PFgQfAwUZaHR0cDovL3d3dy5pem1vc3RvY2suY29tLx8CBRNQb3dlcmVkIGJ5IGl6bW9jYXJzZGQCGA8PFgIfAgUfwqkgSG9tZXN0YXIgU3lzdGVtcywgSW5jLiwgMjAxMmRkAhkPDxYCHwIFrQQKICAgICAgICAgICAgICAgIEF1dG9tb3RpdmUgSW1hZ2VzLCBDb3B5cmlnaHQgWzIwMDAg4oCTIDIwMTJdIEhvbWVzdGFyIFN5c3RlbXMsIEluYy4gQWxsIFJpZ2h0cwogICAgICAgICAgICAgICAgUmVzZXJ2ZWQuIFRoZSBhdXRvbW90aXZlIGltYWdlcyBjb250YWluZWQgaGVyZWluIGFyZSBvd25lZCBieSBIb21lc3RhciBTeXN0ZW1zLCBJbmMuCiAgICAgICAgICAgICAgICBhbmQgYXJlIHByb3RlY3RlZCB1bmRlciBVbml0ZWQgU3RhdGVzIGFuZCBpbnRlcm5hdGlvbmFsIGNvcHlyaWdodCBsYXcuIEFjY2VzcyB0byBhbmQKICAgICAgICAgICAgICAgIHVzZSBvZiB0aGVzZSBpbWFnZXMgaXMgcmVzdHJpY3RlZCBieSB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiBhIHNlcGFyYXRlIGxpY2Vuc2UKICAgICAgICAgICAgICAgIGFncmVlbWVudC4gQW55IHVuYXV0aG9yaXplZCB1c2UsIHJlcHJvZHVjdGlvbiwgZGlzdHJpYnV0aW9uLCByZWNvcmRpbmcgb3IgbW9kaWZpY2F0aW9uCiAgICAgICAgICAgICAgICBvZiB0aGVzZSBpbWFnZXMgaXMgc3RyaWN0bHkgcHJvaGliaXRlZC4KICAgIGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQ5jdGwwMCRpbWdCTG9nb+eJUkrWujc8kvPVedw5zJvH/Jm4Jz+tO2hwX5qnRzcf" />
+
+
+<script src="/ScriptResource.axd?d=J8ZvlH5TYcMf-yZs2p5B8-FuB4ZkFpAG9-sCIe_4dbzA7EO9nxhz2qQRZYuqzpyxFneGpeiemM9HufO5qejAK0AXNcFrDex8q0JA5U9wP7PXk6gFjm9pXGHNgJunEvGh2pysMaWjJm8o_fymK7IM5A2&amp;t=ffffffffec2379c7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ubDSdyvDO08tg6g6w2gAzbGEQ4nkyUuE7LDnoU5TQ5oPgVhoagfXbIOxfG-1AnuGYzu6PxbkFW7IeWKtQy1osE3ljcmJJQ5cKTEFw8usapvyhEZbmwj7HjvkKrkv1IFNKxVZ5jJEbnyO4MGSpzYeX8Ax80as6gNSlMkFJpP-_VrsPREPGm02OQEOzN7pSlc60&amp;t=6119e399" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="XBq_XzeQHghiLA5TtxrzCqJQspnKojzk1RDn-Ao-tr_STmTcRfenbU1y_oDlWVLGUchtxk1UU51CbxDJY2_N2Axc2B19ThVtDKxa8_KLO301" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAVJkq+PG609Pcp6AYnpOUg2U1rAj/QYAzhzExNvkd5zO9cZ/6sNJYdTVHacCeMEBvRErSB9A9GP7InGUwCAJSX7J/SklyjY+1KMwNDL5JH+JzK/C2UFVc8AH2xSTtT7qEFYZQ2Xez53zl6nSuPYEx1S" />
+    
+        <div class="wrapper">
+            <div class="header-wrapper">
+                <div class="header">
+                    <div class="header-top">
+                       <input type="image" name="ctl00$imgBLogo" id="imgBLogo" class="logo" src="/Files/Images/CMLogoWebsite.png" alt="company logo" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$imgBLogo&quot;, &quot;&quot;, false, &quot;&quot;, &quot;/&quot;, false, false))" />
+                       
+                       <div class="phone-and-information">
+                           
+                                    
+                                        <a id="rptLocationsHeader_hlinkPhoneNumber1_0" class="phone-number" href="tel:(408)%20384-8945">Call Us! (408) 384-8945</a>
+                                    
+                                
+                           
+                       </div>
+                       <div class="stars">
+                            <div class="theReviews">
+                                <img src="/App_Themes/RedBlack/images/home-rating-yellow.png" alt="Website Customer Rating 5 Stars" />
+                                
+                                
+                            </div>
+                           <span class="reviewTitle">Morgan Hill Auto Repair</span>
+                        </div>
+                       <!--<a id="lblReviewsCount" class="header-reviews-count" href="Testimonials/">151 Reviews</a>-->
+                    </div>
+                    <div class="mainMenucontainer">
+                        <a href="#NavigationMenu_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=egvX9iyxDcATXIVJx9OVwv21HXDp4GgfCUKvOqk-sfvK3tLgYEoRk7VitdbeF6nfGZ-LmWinlNjYVqBTDrI17OZMDiUq4LC3vovoFe-wPDg1&amp;t=634897147304959576" width="0" height="0" border="0" /></a><div class="menu" id="NavigationMenu">
+	<ul class="level1">
+		<li><a title="Morgan Hill Auto Repair " class="level1" href="/" target="_self">Home</a></li><li><a title="About Us" class="level1" href="/About-Us" target="_self">About Us</a></li><li><a title="Coupons" class="level1" href="/Coupons" target="_self">Coupons</a></li><li><a title="Services" class="level1" href="/Services" target="_self">Services</a></li><li><a title="Resources" class="level1" href="/Resources" target="_self">Resources</a></li><li><a title="Reviews" class="level1" href="/Reviews" target="_self">Reviews</a></li><li><a title="Appointments" class="level1" href="/Appointments" target="_self">Appointments</a></li><li><a title="Directions" class="level1" href="/Directions" target="_self">Directions</a></li><li><a title="Email Referral" class="level1" href="/referral" target="_self">Referral</a></li>
+	</ul>
+</div><a id="NavigationMenu_SkipLink"></a>
+                        
+                    </div>
+                </div><!--.header -->
+            </div><!-- .header-wrapper -->
+        <div class="main">
+        
+        <div class="breadcrumb-shadow">
+            <h1 id="Breadcrumb_breadcrumbC">Roadside Assistance</h1>
+        </div>
+        
+            
+    <div class="page-content">
+        <div class="pgcont-center">
+            <div class="entry-content top-padding entryContent" >
+                <div id="main">
+	<h1>
+		To Your Rescue</h1>
+	<p>
+		<strong style="font-size:1.7em;">Never, ever be stranded again!</strong></p>
+	<p>
+		We've made it easy for you to receive help anytime, day or night, with flat, lost keys, empty tanks, and a dead battery or need for a tow. The ToYourRescue™ Roadside Assistance Program from TECH-NET PROFESSIONAL AUTO SERVICE® centers offer 365 days of 24/7 roadside assistance and is complimentary with your qualifying service.</p>
+	<hr style="border-bottom:1px dashed #ccc; margin:15px 0; height:1px; border-left:none; border-right:none; border-top:none;" />
+	<p>
+		<strong>It's Simple & Straightforward</strong><br />
+		When you purchase $25 or more in service from a TECH-NET PROFESSIONAL AUTO SERVICE® center, you're covered for 365 days when you need a tow-to-safety, lock-out aid, battery jump start, emergency fuel delivery, or flat tire changing assistance.</p>
+	<hr style="border-bottom:1px dashed #ccc; margin:15px 0; height:1px; border-left:none; border-right:none; border-top:none;" />
+	<p>
+		<strong>Benefit Limit</strong><br />
+		The Program benefit is limited to the reimbursement of two (2) roadside assistance incidents for any covered services per Coverage Period per Covered Vehicle, up to a maximum eligible reimbursement amount of seventy-five ($75.00 USD) dollars per disablement (the "Benefit Limit").</p>
+	<hr style="border-bottom:1px dashed #ccc; margin:15px 0; height:1px; border-left:none; border-right:none; border-top:none;" />
+	<p>
+		<strong>How to Receive Roadside Assistance Services </strong><br />
+		If you are in need of roadside assistance, call the 24-Hour ToYourRescue™ 365 Roadside Assistance program toll-free number at 1-866-588-0728 (option 2). The roadside assistance administration will schedule the dispatch. The service provider (the "Service Provider") requires use of a credit card to arrange for dispatch. You will be reimbursed for covered services up to the Benefit Limit upon our receipt of your complete request for reimbursement.</p>
+	<hr style="border-bottom:1px dashed #ccc; margin:15px 0; height:1px; border-left:none; border-right:none; border-top:none;" />
+	<p>
+		<strong>How to Receive Reimbursement for Services</strong><br />
+		Documents and claim form (receipt of roadside assistance services and original repair invoice) may be sent by fax to 866-449-7301, by email to mechclaims@sonsio.com, or by postal mail to TECH-NET Customer Care, P.O. Box 17659, Golden, CO 80402.</p>
+	<p>
+		If service provider does not provide a service receipt, click here to download, print, and complete a reimbursement claim form and submit in substitution of invoice.</p>
+	<p>
+		Don't forget to include our toll-free Roadside Assistance phone number (866-588-0728) in your cell phone to access the ToYourRescue™ Roadside Assistance program dispatch anytime day or night 24/7.</p>
+	<hr style="border-bottom:1px dashed #ccc; margin:15px 0; height:1px; border-left:none; border-right:none; border-top:none;" />
+	<p>
+		<strong>Terms and Conditions</strong><br />
+		Download the full terms and conditions of the ToYourRescue™ Roadside Assistance Program.<br />
+		<a href="http://www.techauto.com/Roadside_Assistance_%20Terms_final-us.pdf" rel="nofollow" target="_blank">English version</a></p>
+</div>
+<p>
+	 </p>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="clear color">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerPreContent">
+            
+                    <img id="rptPreFooter_Image1_0" src="/Files/Images/prefooter/AAA.png" />
+                
+                    <img id="rptPreFooter_Image1_1" src="/Files/Images/prefooter/iatn.png" />
+                
+                    <img id="rptPreFooter_Image1_2" src="/Files/Images/prefooter/ase.png" />
+                
+                    <img id="rptPreFooter_Image1_3" src="/Files/Images/prefooter/tech-net-logo.png" />
+                
+                    <img id="rptPreFooter_Image1_4" src="/Files/Images/prefooter/be-car-care-aware.png" />
+                
+                    <img id="rptPreFooter_Image1_5" src="/Files/Images/prefooter/StarCertified.png" />
+                
+            
+        </div>
+
+       <div class="footer-information">
+            <div class="fci-holder">
+                <div class="footer-company-info">
+                    
+                            <span id="rptLocationsFooter_lblFCompanyName_0" class="ft-info-header">C&M Auto Service</span>
+                            <span id="rptLocationsFooter_lblFCompanyAddress_0" class="ft-company-info bottom-padding">16169 Caputo Dr.<br />Morgan Hill, CA 95037</span>
+                            <span class="ft-info-header">Phone</span>
+                            <a id="rptLocationsFooter_hlinkFPhoneNumber_0" class="ft-company-info" href="tel:(408)%20384-8945">(408) 384-8945</a>
+                            <span class="ft-info-header">Hours</span>
+                            <span id="rptLocationsFooter_lblFWorkingHours_0" class="ft-company-info bottom-padding">Mon - Fri: 7:30 AM - 5:30 PM, Sat: 8:00 AM - 5:00 PM</span>
+                       
+                
+                    <span id="lblFGetDirections" class="ft-info-header">Get Directions:</span>
+                    <input name="ctl00$txtFGetDirections" type="text" value="Enter your starting address" id="txtFGetDirections" class="ft-direction-input" onblur="javascript:footFormDefault()" onclick="javascript:footFormClick()" />
+                    <input type="submit" name="ctl00$btnFGetDirection" value="GO" id="btnFGetDirection" class="ft-get-directionsbtn" />
+                </div>
+
+                <div class="footer-company-map">
+                    <span id="lblFCompanyName" class="ft-info-header">Our Location</span>
+                    <input type="hidden" name="ctl00$hdnFooterMap" id="hdnFooterMap" value="16169 Caputo Dr. Morgan Hill, CA 95037" />
+                    <div  class="footer-map">
+                        <div id="footer-google-map" class="footer-map-inside"></div>
+                    </div>
+
+                   
+                </div>
+           </div>
+            <div class="footer-company-services">
+                <span id="lblServicesInformation" class="ft-info-header">Services:</span>
+                <table id="dltServices" class="footer-list-services" cellspacing="0">
+	<tr>
+		<td>
+                            <a id="dltServices_lblServices_0" href="/OilChanges" target="_self">Oil Changes</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_1" href="/bmw-repair-and-servies" target="_self">BMW Repair Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_2" href="/EngineRepairandReplacement" target="_self">Engine Repair and Replacement</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_3" href="/TuneUps" target="_self">Tune Ups</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_4" href="/ford-services-and-auto" target="_self">Ford Repair Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_5" href="/Maintenance-30k-60k-90k" target="_self">Maintenance (30k/60k/90k)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_6" href="/service-30k-mile" target="_self">30k Mile Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_7" href="/dodge-services-and-repair" target="_self">Dodge Repair Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_8" href="/chevrolet-repair-and-servies" target="_self">Chevrolet Repair Services</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_9" href="/service-60k-mile" target="_self">60k Mile Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_10" href="/jeep-auto-repair" target="_self">Jeep Repair Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_11" href="/volkswagen-auto-repair-services" target="_self">Volkswagen Repair Services</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_12" href="/service-90k-mile" target="_self">90k Mile Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_13" href="/lexus-auto-repair" target="_self">Lexus Repair Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_14" href="/nissan-auto-repair" target="_self">Nissan Repair Services</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_15" href="/smog-check" target="_self">Smog Check</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_16" href="/honda-auto-repair" target="_self">Honda Repair Services</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_17" href="/toyota-auto-repair" target="_self">Toyota Repair Services</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_18" target="_self">Brakes</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_19" target="_self">Computer Diagnostic</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_20" href="/TransmissionService" target="_self">Transmission Service</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_21" target="_self">Air Conditioning</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_22" target="_self">Electrical Systems</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_23" target="_self">Tire Mounting</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_24" target="_self">Flat Repair</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_25" target="_self">Alignments</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_26" target="_self">Suspension</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_27" target="_self">Tire balancing</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_28" target="_self">Steering Repair</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_29" target="_self">Maintenance Inspections</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_30" target="_self">Purchase inspections</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_31" target="_self">Cooling System</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_32" target="_self">4X4 Services</a>
+                    </td>
+	</tr><tr>
+		<td>
+                            <a id="dltServices_lblServices_33" target="_self">Rear End Overhauls</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_34" target="_self">Shocks and Struts</a>
+                    </td><td>
+                            <a id="dltServices_lblServices_35" target="_self">Muffler Service and Repair</a>
+                    </td>
+	</tr>
+</table> 
+
+                <span id="PaymentAcceptedMain_lblPaymentInformation" class="ft-info-header margin-top">Payments:</span>
+
+<table id="PaymentAcceptedMain_dltPaymentMethods" class="footer-list-services" cellspacing="0">
+	<tr>
+		<td>
+        <span id="PaymentAcceptedMain_dltPaymentMethods_lblPayments_0">American express</span>
+    </td><td>
+        <span id="PaymentAcceptedMain_dltPaymentMethods_lblPayments_1">Cash</span>
+    </td><td>
+        <span id="PaymentAcceptedMain_dltPaymentMethods_lblPayments_2">Discover</span>
+    </td>
+	</tr><tr>
+		<td>
+        <span id="PaymentAcceptedMain_dltPaymentMethods_lblPayments_3">Mastercard</span>
+    </td><td>
+        <span id="PaymentAcceptedMain_dltPaymentMethods_lblPayments_4">Visa</span>
+    </td><td></td>
+	</tr>
+</table>
+
+
+
+                <img id="imgPaymentMethods" class="home-payment-img" src="App_Themes/RedBlack/images/payment-methods.png" alt="payments accepted" style="float: right; position: relative; margin-top: -35px" />
+
+            </div>
+            <div class="clear footertext"> .</div>
+			<a id="hplPrivacyPolicy" title="Privacy Policy" class="privacyPolicy" rel="nofollow" href="/privacy-policy">Privacy Policy</a>
+       </div>
+       <div class="footer-menu">
+            <div class="footer-menu-centred">
+                <div class="microreview" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <a href="/Reviews" itemprop="url" title="See all Reviews">
+                        <span itemprop="ratingValue">4.7</span> Star Rating Based on <span itemprop="reviewCount">220</span> Reviews
+                    </a>
+                </div>
+                    <a id="hLinkKukui" title="Powered by" class="kukuiFooterLogo" title="" rel="nofollow" href="http://kukui.com" target="_blank">Website by Kukui</a>
+                <!-- CREDIT CONTAINER START-->
+                    <div class="creditContainer">
+                        <p class="photoCredit">
+                            Automotive images: 
+			                 <a id="hlPhotoCreditWebstie" title="Visit Website" rel="nofollow" href="http://www.izmostock.com/" target="_blank">Powered by izmocars</a>
+                            <a id="hlPhotoCreditRights" title="All Photo Rights Reserved" class="pcshow" href="javascript:void(0);">© Homestar Systems, Inc., 2012</a>                         
+                        </p> 
+                        <div id="creditPopup" class="pchide">
+                                <p><a href="javascript:void(0)" class="pchide"></a>
+                                        <span id="lblCreditText">
+                Automotive Images, Copyright [2000 – 2012] Homestar Systems, Inc. All Rights
+                Reserved. The automotive images contained herein are owned by Homestar Systems, Inc.
+                and are protected under United States and international copyright law. Access to and
+                use of these images is restricted by terms and conditions of a separate license
+                agreement. Any unauthorized use, reproduction, distribution, recording or modification
+                of these images is strictly prohibited.
+    </span></p>
+
+                        </div>
+                    </div>
+
+                <!-- CREDIT CONTAINER END-->
+                 <div class="footer-links">
+                   
+                   
+               </div>
+            </div>
+       </div>
+    </div>
+    
+<script type='text/javascript'>new Sys.WebForms.Menu({ element: 'NavigationMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
+    <p>
+        &nbsp;</p>
+</body>
+</html>

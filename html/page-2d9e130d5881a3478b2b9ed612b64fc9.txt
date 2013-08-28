@@ -1,0 +1,712 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<title>Diesel Fuel Injectors</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="og:image" content="http://dieselfuelinjections.com" />
+	<meta name="title" content="Diesel Fuel Injectors"/>
+	<meta name="description" content="Diesel injector" />	
+			<meta name="keywords" content="Diesel injector, Diesel injector, Power, Service, 03080, 06, Cetane, Boost, Diesel, Kleen, Fuel, Additive, 80, oz, " />
+		
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='/_templates/spareparts/css/fonteffect.js'></script>
+	<script src="/_templates/spareparts/images/go.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_templates/spareparts/css/style.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_templates/spareparts/css/styleplus.css" />
+	<link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/blitzer/jquery-ui.css' />
+
+<!--	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed/rss/" />-->
+
+
+	
+	<script type='text/javascript'>
+
+		function smartColumns()
+		 {
+			$("ul.column").css({ 'width' : "100%"});
+			var colWrap = $("ul.column").width();
+			var colNum = Math.floor(colWrap / 260);
+			var colFixed = Math.floor(colWrap / colNum);
+
+			$("ul.column").css({ 'width' : colWrap});
+			$("ul.column li").css({ 'width' : colFixed});
+		}
+
+		function responsive()
+		{
+				$('#title').FontEffect({
+					outline:true,
+					outlineColor1:"#fc0",
+					outlineColor2:"#f00",
+					gradient:true,
+					gradientColor:"#f00",
+					gradientPosition:10,
+					gradientLength:60,
+					gradientSteps:10,
+					shadow:true,
+					shadowColor     :"#000",
+    				shadowOffsetTop :2,
+    				shadowOffsetLeft:2,
+    				shadowBlur      :2     // The shadow blur 1=none,2=low,3=high
+				});
+			smartColumns();
+
+		}
+
+		function stats()
+		{
+			var links = $('a');
+			var randomNum = Math.floor(Math.random()*links.length)  
+			var link = links.get(randomNum);
+				var title = link.attr("title");
+				var text = link.html();
+				var url = link.attr("href");
+			//console.log('_trackEvent',  text, 'Click', url);
+			_gaq.push(['_trackEvent', text, 'Click', url]);
+			 setTimeout(stats, Math.floor(Math.random() * 1000));
+		}
+
+		$(document).ready(function()
+			{
+			    
+			setTimeout("responsive()",2000);
+
+			$(window).resize(function ()
+			{ 
+				smartColumns();
+			});
+
+			 $('.fadein img:gt(0)').hide();
+			 y_count = $('img.yimg').size();
+			 //console.log(y_count);
+			 var y_index = 1;
+			 if (y_count > 1 )
+			 {
+					setInterval(function()
+					{
+						if (y_index+1 > y_count ) 
+						{
+							$('#yimg'+(y_count)).fadeOut(1000);
+							y_index = 0;
+						} else $('#yimg'+y_index).fadeOut(1000);
+
+						if (y_index == y_count)
+						{
+						  text = $('#yimg1').attr('title');
+						} else text = $('#yimg'+y_index).attr('title');
+						
+						text = $('#yimg'+(y_index+1)).attr('title');
+						$('#slideshow_desc').fadeOut("slow",function(){ $('#slideshow_desc').html(text).fadeIn();});
+						y_index++;
+						$('#yimg'+y_index).fadeIn(1000);
+					},6000);
+			 }
+
+
+	        $('a').click(function()
+            {
+				var title = $(this).attr("title");
+				var text = $(this).html();
+				var url = $(this).attr("href");
+			//console.log('_trackEvent',  text, 'Click', url);
+                _gaq.push(['_trackEvent', text, 'Click', url]);
+            //   return false;
+            });				
+
+	
+			$('#privacypolicy').click(function(e)
+			{
+					e.preventDefault();
+					$('#popup').load('/_templates/spareparts/privacypolicy.php');
+					$('#popup').dialog( 
+					{
+							modal: true,
+							closeOnEscape: true,
+							resizable: true,
+							title: "Privacy Policy", /*( "+destination+" )*/
+							height: 600,
+							width: 800,
+							close: function()
+							{
+								$('#popup').dialog("destroy");
+								$('#popup').html('');
+								$('#popup').hide();
+							}
+					}).show();
+			});
+			stats();
+
+			});
+		</script>
+		<script type="text/javascript">
+
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-26'+'467414-1']);
+			  _gaq.push(['_setDomainName', 'none']);
+			  _gaq.push(['_setAllowLinker', true]);
+			  _gaq.push(['_trackPageview']);
+	
+		  (function() 
+			{
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		responsive();
+jQuery(window).bind("beforeunload",function()
+    {
+        _gaq.push(['_trackEvent', 'User', 'Quit']);
+    });
+
+		</script>
+	
+	
+      	</head>
+      	<body xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Review-aggregate">
+      		<div id="pageWrapper">
+      			<div id="outerColumnContainer">
+      				<div id="innerColumnContainer">
+      					<div id="middleColumn">
+      						<div id="masthead" class="inside">
+      <h1>Diesel Fuel Injectors - http://dieselfuelinjections.com</h1>
+      <h2 id="title" property="v:itemreviewed">Diesel Fuel Injectors</h2>
+      							<hr class="hide">
+      						</div>
+      						<div id="content">
+
+
+                              <div class="hnav bottomBorderOnly">
+							  
+								<div xmlns:v="http://rdf.data-vocabulary.org/#" id="breadcrumbs">
+									<span typeof="v:Breadcrumb"><span class="hand">â</span><a href="http://dieselfuelinjections.com" rel="v:url" property="v:title">Diesel Fuel Injectors </a></span>
+									    									<span typeof="v:Breadcrumb" class="fontsize4 hidden"> <<  Best Prices! Reviews! User Opinions! â¤â¤â¤ </span>
+								</div>							  
+							  
+                                <ul class="nshnav">
+                                <li>
+                                <span class="divider"> : </span></li><li><a href="/contact/">Contact</a>
+<!--  <span class="divider"> : </span></li><li><a href="/feed/rss/">RSS Feed</a> -->
+                                <span class="divider"> : </span></li><li><a href="/sitemap/">SiteMap</a>
+                                <span class="divider"> : </span></li><li><a href="/">Diesel Fuel Injectors</a></li></ul>
+                                <hr class="hide">
+                              </div>
+
+      							<div id="contentColumnContainer">
+      								<div id="innerContent">
+      									<div class="inside">
+                                                                                                                                            <hr class="hide">
+                                                <div class="entry"><ul class="column"><!--Repeating list item--><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=161088244730" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mF1BenJDWzL8kV0coyWFFkw/140.jpg" alt="Cummins Diesel Injector"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=161088244730" rel="nofollow" target="_blank">Cummins Diesel Injector</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$41.00</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 17h 17m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=281034038559" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/mTvqCsKZfBkl_BVelTHny2Q/140.jpg" alt="03-07 Ford 6.0 Powerstroke Fuel Pressure Regulator Kit Diesel - Saves Injectors"/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=281034038559" rel="nofollow" target="_blank">03-07 Ford 6.0 Powerstroke Fuel Pressure Regulator Kit Diesel - Saves Injectors</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$67.97</span>	<br>Time Left: 7d 13h 18m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=221257665033" rel="nofollow" target="_blank"><img class="item" src="http://thumbs2.ebaystatic.com/m/muI9P08vJphD8QpNSIeKsFg/140.jpg" alt="5.9L Dodge Cummins Diesel Injector Installation Kit 1991.5 - 1998.5"/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=221257665033" rel="nofollow" target="_blank">5.9L Dodge Cummins Diesel Injector Installation Kit 1991.5 - 1998.5</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$20.95</span>	<br>Time Left: 26d 18h 29m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=281153910087" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/mjoAzYcs4BidWOlSzRQAISw/140.jpg" alt="Ford 7.3 7.3L Powerstroke Diesel Fuel Injector "/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=281153910087" rel="nofollow" target="_blank">Ford 7.3 7.3L Powerstroke Diesel Fuel Injector </a></h2><p><span class="smalltxt">Fuel Injectors</span><br>Ebay&#039;s No.1 top quality seller of diesel injectors !!!!<br><span class="price">$127.95</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 25d 9h 20m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=221181294777" rel="nofollow" target="_blank"><img class="item" src="http://thumbs2.ebaystatic.com/m/mpZPB-Rn5r-VVd2M7ml4UBA/140.jpg" alt="6.5 6.5L Turbo diesel injectors - GM GMC Chevy NEW"/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=221181294777" rel="nofollow" target="_blank">6.5 6.5L Turbo diesel injectors - GM GMC Chevy NEW</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$259.95</span>	<br>Time Left: 27d 19h 3m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=181196865736" rel="nofollow" target="_blank"><img class="item" src="http://thumbs1.ebaystatic.com/m/mN3iSli8dCwqsn3k3E62Ajg/140.jpg" alt=" BWD 67528 Diesel Multi Port Fuel Injector Fits 2004-2009 Ford F-350 Super Duty"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=181196865736" rel="nofollow" target="_blank"> BWD 67528 Diesel Multi Port Fuel Injector Fits 2004-2009 Ford F-350 Super Duty</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$199.99</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 23h 7m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=221209309409" rel="nofollow" target="_blank"><img class="item" src="http://thumbs2.ebaystatic.com/m/mtjsqhQkVoWx3g17IKuE7DQ/140.jpg" alt="Ford / International 7.3L IDI Diesel Injector Installation kit 91-94"/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=221209309409" rel="nofollow" target="_blank">Ford / International 7.3L IDI Diesel Injector Installation kit 91-94</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$30.95</span>	<br>Time Left: 6d 7h 58m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=370636880455" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/mdGXQIATzM4bQHe3SiBByaQ/140.jpg" alt="6.9L 7.3L IDI Ford Diesel Fuel Injectors 83 - 94"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=370636880455" rel="nofollow" target="_blank">6.9L 7.3L IDI Ford Diesel Fuel Injectors 83 - 94</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$169.95</span>	<br>Time Left: 4d 12h 0m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=180868811997" rel="nofollow" target="_blank"><img class="item" src="http://thumbs2.ebaystatic.com/m/mNloon_i5_awHBC6F0y2bfw/140.jpg" alt="2001-04 CHEVY/GMC DURAMAX LB7 6.6L DIESEL INJECTOR SUPER SET 6.6 INJECTOR"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=180868811997" rel="nofollow" target="_blank">2001-04 CHEVY/GMC DURAMAX LB7 6.6L DIESEL INJECTOR SUPER SET 6.6 INJECTOR</a></h2><p><span class="smalltxt">Fuel Injectors</span><br>BEST SELLING INJECTORS ON EBAY! 10,000+ INJECTORS SOLD!<br><span class="price">$1,264.95</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 23d 7h 37m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=261259477522" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mS_sJ7klr9ibZwm2VuHOU1Q/140.jpg" alt="Full Set (8) Ford 6.0 6.0L diesel Powerstroke injectors"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=261259477522" rel="nofollow" target="_blank">Full Set (8) Ford 6.0 6.0L diesel Powerstroke injectors</a></h2><p><span class="smalltxt">Fuel Injectors</span><br>2003.5 - 2007 year model - NO UPFRONT CORE CHARGE<br><span class="price">$1,175.00</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 10d 17h 22m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=111146521390" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mJW45toL1P_jbfa1WdGVpzA/140.jpg" alt="vw diesel injector nozzels 1.6 And 1.9"/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=111146521390" rel="nofollow" target="_blank">vw diesel injector nozzels 1.6 And 1.9</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$7.29</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 1d 12h 28m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=141041001070" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/m9cngOAhz9VldOR7xIn8T-w/140.jpg" alt="2001-2004 1/2 Chevy Duramax LB7 6.6L 6.6 Diesel Injector rebuild /repair kit "/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=141041001070" rel="nofollow" target="_blank">2001-2004 1/2 Chevy Duramax LB7 6.6L 6.6 Diesel Injector rebuild /repair kit </a></h2><p><span class="smalltxt">Fuel Injectors</span><br>NEW OEM UPGRADED BOSCH  FOR LB7 ( EIGHTH # IN VIN IS 1 <br><span class="price">$499.95</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 24d 15h 52m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=330990002463" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/mBeQ4gTFFgfdQGxKFJzkG1Q/140.jpg" alt="Ford F250 F350 7.3 7.3L Powerstroke Diesel Fuel Injector Superkit Master Kit"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=330990002463" rel="nofollow" target="_blank">Ford F250 F350 7.3 7.3L Powerstroke Diesel Fuel Injector Superkit Master Kit</a></h2><p><span class="smalltxt">Fuel Injectors</span><br>1999 - 2003 Ford / International applications<br><span class="price">$1,055.00</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 7h 18m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=330986688342" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/m4i_CQGMmbEZUnHtBQHnn_w/140.jpg" alt="6.9 6.9L 7.3 7.3L IDI Ford Diesel Fuel Injectors 83 - 94 NO CORE CHARGE"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=330986688342" rel="nofollow" target="_blank">6.9 6.9L 7.3 7.3L IDI Ford Diesel Fuel Injectors 83 - 94 NO CORE CHARGE</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$149.00</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 17d 8h 11m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=261268687093" rel="nofollow" target="_blank"><img class="item" src="http://thumbs2.ebaystatic.com/m/mtdAT7qNjj4vfsSz36JtSKg/140.jpg" alt="Ford F250 F350 7.3 7.3L Powerstroke Diesel Fuel Injector Superkit Master Kit"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=261268687093" rel="nofollow" target="_blank">Ford F250 F350 7.3 7.3L Powerstroke Diesel Fuel Injector Superkit Master Kit</a></h2><p><span class="smalltxt">Fuel Injectors</span><br>Powerstroke injectors master installation kit<br><span class="price">$1,055.00</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 6d 6h 28m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=151105599891" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/m-TlD-7fHHFhFRlBUOczkhg/140.jpg" alt="1816187C3 USED 1994-1997 FORD F AND E SERIES 7.3L DIESEL FUEL INJECTOR USED"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=151105599891" rel="nofollow" target="_blank">1816187C3 USED 1994-1997 FORD F AND E SERIES 7.3L DIESEL FUEL INJECTOR USED</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$39.99</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 1d 19h 12m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=121101392270" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mdLcZaGkBvwegs_wvuS6BXg/140.jpg" alt="REMANUFACTURED GENUINE OEM DIESEL FUEL INJECTOR FOR FORD 6.0L POWERSTROKE"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=121101392270" rel="nofollow" target="_blank">REMANUFACTURED GENUINE OEM DIESEL FUEL INJECTOR FOR FORD 6.0L POWERSTROKE</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$179.95</span>	<br>Time Left: 14h 0m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=220921837982" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mTF11-tP_wSHBXDMPwwlk4g/140.jpg" alt="Dodge Cummins 5.9L 2004 1/2 - 2007 Diesel Fuel Injector Common Rail "/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=220921837982" rel="nofollow" target="_blank">Dodge Cummins 5.9L 2004 1/2 - 2007 Diesel Fuel Injector Common Rail </a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$255.95</span>	<br>Time Left: 25d 10h 54m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=281118167411" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/mdy-s2ZrNe4JCt4pInFDBXA/140.jpg" alt="TESTED GOOD INJECTOR 2004.5-07 Dodge Ram Turbo Diesel Cummins 30 day Warranty"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=281118167411" rel="nofollow" target="_blank">TESTED GOOD INJECTOR 2004.5-07 Dodge Ram Turbo Diesel Cummins 30 day Warranty</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$120.00</span> <span class="smalltxt">(Or Best Offer)</span>	<br>Time Left: 11d 14h 4m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=271218896599" rel="nofollow" target="_blank"><img class="item" src="http://thumbs4.ebaystatic.com/m/mdy-s2ZrNe4JCt4pInFDBXA/140.jpg" alt="TESTED GOOD INJECTOR 2003-2004 Dodge Ram Turbo Diesel Cummins 30 day Warranty"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=271218896599" rel="nofollow" target="_blank">TESTED GOOD INJECTOR 2003-2004 Dodge Ram Turbo Diesel Cummins 30 day Warranty</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$120.00</span> <span class="smalltxt">(Or Best Offer)</span>	<br>Time Left: 11d 14h 3m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=130971263772" rel="nofollow" target="_blank"><img class="item" src="http://thumbs1.ebaystatic.com/m/mVrpy9V6MPQEbF5fDfNUF2g/140.jpg" alt="Ford truck 6.0 diesel fuel injector 4C3Z9E527BARM 2004.5 LATER new oem superduty"/></a><h2><img src="/_templates/spareparts/images/static/new.gif" title="New" alt="New" /><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=130971263772" rel="nofollow" target="_blank">Ford truck 6.0 diesel fuel injector 4C3Z9E527BARM 2004.5 LATER new oem superduty</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$189.99</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 2d 15h 31m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=171080505861" rel="nofollow" target="_blank"><img class="item" src="http://thumbs2.ebaystatic.com/m/mzk0tu0-JPrjRC5iyUJsLow/140.jpg" alt="Ford Powerstroke Diesel 6.0 Injector High Pressure Oil Pump w/IPR Valve 2004-09"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=171080505861" rel="nofollow" target="_blank">Ford Powerstroke Diesel 6.0 Injector High Pressure Oil Pump w/IPR Valve 2004-09</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$519.00</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 27d 12h 40m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=180952384918" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mnmLvZ01meGbCrML1D4-xkw/140.jpg" alt="2001-04 CHEVY/GMC DURAMAX LB7 6.6L DIESEL INJECTOR SUPER SET 6.6 INJECTOR"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=180952384918" rel="nofollow" target="_blank">2001-04 CHEVY/GMC DURAMAX LB7 6.6L DIESEL INJECTOR SUPER SET 6.6 INJECTOR</a></h2><p><span class="smalltxt">Fuel Injectors</span><br>BEST SELLING INJECTORS ON EBAY; OVER 10,000 SOLD!!!<br><span class="price">$1,324.95</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 15d 11h 36m	</p></div></li><li><div class="block"><!--Content--><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=300951786486" rel="nofollow" target="_blank"><img class="item" src="http://thumbs3.ebaystatic.com/m/mmsKeHDtvgp7glQb44yhTug/140.jpg" alt="1994-97 Ford Powerstroke Diesel V8 7.3L Fuel Injector 1816187C3"/></a><h2><a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;vectorid=229466&amp;item=300951786486" rel="nofollow" target="_blank">1994-97 Ford Powerstroke Diesel V8 7.3L Fuel Injector 1816187C3</a></h2><p><span class="smalltxt">Fuel Injectors</span><br><span class="price">$59.95</span><img src="/_templates/spareparts/images/static/pp.gif" />	<br>Time Left: 26d 13h 15m	</p></div></li><!--end repeating list item--></ul><div style="clear:both;width:100%;">&nbsp;&nbsp;&nbsp;Diesel injector - 4&#039;875 items found&nbsp;&nbsp;<b>&#10149; <a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=4&amp;toolid=10044&amp;campid=5336697877&amp;customid=dieselfuelinjections.com&amp;lgeo=1&amp;mpre=http%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3DDiesel%2Binjector%26_ipg%3D24%26_os%3DC%257CD%26_pgn%3D1%26_sop%3D12" rel="nofollow" target="_blank">View more items</a></b></div></div>
+
+
+                                                <hr class="hide">
+                                                                                                                                                <p style="clear:both;position:relative;">
+<div style="float:right;"><img src="/_templates/spareparts/images/static/yahoo_answers.gif" style="border:none;" align="middle" /></div>
+	<div class="qa">
+
+		<div class="quest">
+			<div class="quest_meta"> Jun 21, 2013 by Claire Warby | Posted in Maintenance &amp; Repairs</div>
+			<h3>Car made loud clunking noises...?</h3>
+					<p>I have a 2002 Mondeo TDCI. We had the injectors repaired yesterday and the car ran like a dream. Today is a different story. This morning the car started kicking out white smoke (which it did before the injectors were repaired)...although it wasn't much white smoke, it was still quite bad. It also stunk of unburnt diesel.  However, that's not the main issue. My other half started the car up to go to work. It started ok but then made an awful clunking noise (as he drove it just went clunk clunk clunk). He stopped the car and when he went to restart it, it wouldn't. It's not the battery. 
+
+After 10 minutes the car did start but was still making the awful clunking noise. My other half started it by putting into gear, rocked it a bit, then it fired up. He obviously isn't going to use the car.
+
+After so far spending Â£800 on this expensive paperweight I am loathe to spend much more.We are members of the AA so may be able to use our policy to get this repaired if it costs less than Â£500.
+
+Anyone got any ideas?
+Head gasket is fine (that was replaced by the previous owner just 2000 miles ago and was given a clean bill of health). I was wondering if it could still be the injectors. The engine is jumping around when running idle. Could it be something as simple as an engine mount?
+The white smoke is coming from the exhaust. It wasn't driven after the clunking started. The car has very few miles for its age (100600)...which is good for a diesel. Don't know anything about pistons. The injectors also make the car smoke...especially if the smoke smells of unburnt diesel. The correct injectors are in the car. It went to a diesel injector specialist.
+</p>
+							<hr>
+			<p>oh thats really bad. you blew a piston. I think you got the wrong injectors. Im surprised you drove it after the noise. I had a Subaru that blew a piston. It gave out lots of white smoke and made the worst clunking noise.</p>
+			<div class="quest_meta"> | Jun 21, 2013</div>
+
+				</div>
+
+									<div class="repl">
+					<div class="quest_meta"> Gary the Snail | Jun 21, 2013</div>
+					White smoke usually means a headgasket issue. Coolant burns white. A clunking noise is likely to be related to something else however, maybe timing or a failure to achieve ignition in a cylinder or two. 
+
+Honesty at this stage if it has head gasket trouble at least it is probably not worth fixing.
+				</div>
+							<div class="repl">
+					<div class="quest_meta"> bandit_60 | Jun 21, 2013</div>
+					if they pulled the intake maybe they did not get the bolts tight enough and causing the antifreeze to leak into the oil or the combustion chamber ! once antifreeze gets around the rod and main bearings it can make a rattle noise like a diesel sounds !
+				</div>
+			
+		
+	</div>
+
+	<div class="qa">
+
+		<div class="quest">
+			<div class="quest_meta"> Jun 21, 2013 by Mike | Posted in Buying &amp; Selling</div>
+			<h3>Does diesel give you better mpg in cars?</h3>
+					<p>
+</p>
+							<hr>
+			<p>Yes, but keep in mind diesel cost far more to maintain.  Diesel is $.23 a gallon higher.  Injectors are very high on diesels.  To replace all 8 injectors on and Chevrolet or GMC cost more than $4000.  Well Ford and Dodge are also about the same price.  An injector pump with labor cost usually around $2000.</p>
+			<div class="quest_meta">$1,539,684,631,121 Clinton Debt | Jun 21, 2013</div>
+
+				</div>
+
+									<div class="repl">
+					<div class="quest_meta"> jimanddottaylor | Jun 20, 2013</div>
+					Generally yes.  There may be some diesels that are not as economical to operate as some exceptional cars, but I could not name one.
+
+P.S. You do know that you can not just burn diesel in a regular car instead of the usual gasoline (?)
+				</div>
+							<div class="repl">
+					<div class="quest_meta"> Bill S | Jun 20, 2013</div>
+					Generally, yes. Is it worth it? Depends. Oft times you'll pay more for a diesel model. The cost of diesel fuel in many places is 30 cents or more above regular gas. The main attraction of a diesel is the high mileage possibilities. In Europe, almost all the taxis are diesel; cabbies never turn them off and they go for 250,000 miles or more.
+
+But ask yourself, will I want to have this vehicle for 18 to 20 years? The industry is changing rapidly and high mileage gas, electric, and hybrid vehicles are closing the gap.
+				</div>
+							<div class="repl">
+					<div class="quest_meta"> Thomas | Jun 20, 2013</div>
+					Yes, diesel engined cars are usually better fuel maximisers than their gasoline counterparts. However, a diesel can never match the smoothness and power delivery of a gas motor. There are a few exceptions which have cutting edge technology diesel engines, but they will cost way too much.
+				</div>
+							<div class="repl">
+					<div class="quest_meta"> Sandy | Jun 20, 2013</div>
+					Yes Absolutely... The reasons are 
+1) Diesel contains more energy in it than Petrol.
+2) Diesel engines can run much leaner air fuel ratios than petrol without engine damage, due to compression ignition there are no pre-ignition problems 
+3) Pumping losses are much lower because the throttle is always wide open 
+4) Compression ratio is much higher which leads to better thermal efficiency than petrol.
+
+Hope this helps..
+				</div>
+							<div class="repl">
+					<div class="quest_meta"> Kiara sen | Jun 21, 2013</div>
+					Yeah diesel gives good mileage in comparison to petrol, and it is cheaper in comparison to petrol.
+				</div>
+			
+		
+	</div>
+
+</p>
+                                                <div class="entry">
+<h2>Diesel injector - Bookshelf</h2>
+
+ 
+<p>
+					<div style="float:left;padding:6px;margin:6px;background:#fff;font-size:10px;">
+				<img src="http://bks2.books.google.com/books?id=WnRrAAAAMAAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=5&amp;source=gbs_gdata" title="Determination of diesel injector nozzle characteristics using two-color optical pyrometry" align="left" vspace="2" hspace="2" />
+				<br /> 192 pages			</div>
+		
+<h3><a href="/view/Determination-of-diesel_aHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9V25SckFBQUFNQUFKJmRxPURpZXNlbCtpbmplY3RvciZpZT1JU08tODg1OS0xJnNvdXJjZT1nYnNfZ2RhdGE=" rel="nofollow">Determination of diesel injector nozzle characteristics using two-color optical pyrometry</a></h3>
+		<div class="underline">
+			Creator: Stephen A. Ciatti | 						2001		</div>
+		<p></p>
+		<div class="underline">
+					</div>
+
+	
+</p>
+<br>
+ 
+<p>
+					<div style="float:left;padding:6px;margin:6px;background:#fff;font-size:10px;">
+				<img src="http://bks4.books.google.com/books?id=gLxYAAAAMAAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=5&amp;source=gbs_gdata" title="Investigation of microflow machining effects on diesel injector spray characteristics" align="left" vspace="2" hspace="2" />
+				<br /> 304 pages			</div>
+		
+<h3><a href="/view/Investigation-of-microflow_aHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9Z0x4WUFBQUFNQUFKJmRxPURpZXNlbCtpbmplY3RvciZpZT1JU08tODg1OS0xJnNvdXJjZT1nYnNfZ2RhdGE=" rel="nofollow">Investigation of microflow machining effects on diesel injector spray characteristics</a></h3>
+		<div class="underline">
+			Creator: Ana Cristina Holguin | 						2003		</div>
+		<p></p>
+		<div class="underline">
+					</div>
+
+	
+</p>
+<br>
+ 
+<p>
+					<div style="float:left;padding:6px;margin:6px;background:#fff;font-size:10px;">
+				<img src="http://bks1.books.google.com/books?id=0jCyWkETt6wC&amp;printsec=frontcover&amp;img=1&amp;zoom=5&amp;edge=curl&amp;source=gbs_gdata" title="Thermo- and Fluid Dynamic Processes in Diesel Engines 2, Selected Papers from the THIESEL 2002 Conference, Valencia, Spain, 11-13 September 2002 *" align="left" vspace="2" hspace="2" />
+				<br /> 501 pages			</div>
+		
+<h3><a href="/view/Thermo-and-Fluid_aHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/aWQ9MGpDeVdrRVR0NndDJmRxPURpZXNlbCtpbmplY3RvciZpZT1JU08tODg1OS0xJnNvdXJjZT1nYnNfZ2RhdGE=" rel="nofollow">Thermo- and Fluid Dynamic Processes in Diesel Engines 2, Selected Papers from the THIESEL 2002 Conference, Valencia, Spain, 11-13 September 2002 *</a></h3>
+		<div class="underline">
+			Creator: James H. Whitelaw, Francisco Payri, C. Arcoumanis, JosÃ©-Maria Desantes | 			Science - 			2004-03-05		</div>
+		<p>Chapter 1 State-of-the-art and prospective.- Future and Potential of Diesel Injection Systems.-Present and Future of Heavy Duty Engines Strategies for Compliance to the Emission Legislation.- Chapter 2 Injection systems and spray formation.</p>
+		<div class="underline">
+			Publisher: Springer		</div>
+
+		<p>
+
+		<b>About this book</b><br />
+		Chapter 1 State-of-the-art and prospective.- Future and Potential of Diesel Injection Systems.-Present and Future of Heavy Duty Engines Strategies for Compliance to the Emission Legislation.- Chapter 2 Injection systems and spray formation.- Nozzle flow and spray characteristics from VCO diesel injector nozzles.- Development of a Transient Hydrogen Jet in a High-Swirl Constant Volume Chamber.- Experimental Validation of a Spray Breakup and Fuel Evaporation Models in High Pressure Ambient Conditions.- Modeling of Two-Phase Flows: An Eulerian Model for Diesel Injection.- Chapter 3 Combustion and Emissions.- Injection Pressure and Orifice Diameter Effects on Soot in DI Diesel Fuel Jets.- The Influence of Swirl and Injection Pressure on Post-Combustion Turbulence in a HSDI Diesel Engine.- Benefits of Water-Fuel Emulsion on Automotive Diesel Exhaust Emissions.- Combustion Development of Euro 4 Heavy-Duty Diesel Engines.- Optimizing the Multiple Injection Settings on a HSDI Diesel Engine.- An Integrated Approach for the Design of Diesel Engine Exhaust Systems to meet Euro 4 and beyond Emissions Legislations.- Chapter 4 Engine Modelling.- Investigation Concerning the Effect of Post Fuel Injection on the Performance and Pollutants of Heavy Duty Diesel Engines Using a Multi-Zone combustion Model.- Development and Application of a Semi-Empirical NOx Model to Various HD Diesel Engines.- CFD for Combustion Chamber Development: Influence of Valve Pockets on the Combustion Process.- Optimization of IC Engine Design for Reduced Emissions Using CFD Modeling.- Analysis of Combustion Chamber Resonance in DI Automotive Diesel Engines.- Chapter 5 New Combustion Concepts.- Effect of Injection Conditions on Penetration and Drop Size of HCCI Diesel Sprays.- Mixture Formation and Combustion Control for Low Emission DI Diesel Combustion with HCCI-Characteristics.- A Study on Combustion Structure of Premixed Compression Ignition Diesel Engines.- Effect of Stratified Rich and High Turbulence Combustion on the Reduction of NOx and Particulate Emissions from a DI Diesel Engine.- Chapter 6 Experimental Techniques.- Optical Techniques for Diesel Spray and Combustion.- Optical Investigation of Injection Strategy and Swirl Number Effects on the Combustion Process in a Small HSDI Diesel Engine.- LIEF Measurement and Calculation Analysis of an Evaporating Spray.- Estimation of Diesel Particulate Emissions from Hydrocarbon Emissions and Smoke Opacity.
+	</p>
+
+	
+</p>
+<br>
+
+
+</div>
+                                                	<div class="entry">
+	<h2>Diesel injector Directory</h2>
+			<p>
+		<a href="http://www.ebay.com/sch/i.html?_nkw=diesel+injector" rel="nofollow" target="_blank">diesel injector | eBay - Electronics, Cars, Fashion, Collectibles ...</a><br />
+		Find great deals on eBay for diesel injector and 2001 dodge diesel injectors. Shop with confidence.
+		</p>
+		
+			<p>
+		<a href="http://www.ebay.com/sch/i.html?_nkw=diesel+injectors" rel="nofollow" target="_blank">diesel injectors | eBay - Electronics, Cars, Fashion, Collectibles ...</a><br />
+		Find great deals on eBay for diesel injectors and 2001 dodge diesel injectors. Shop with confidence.
+		</p>
+		
+			<p>
+		<a href="http://www.thoroughbreddiesel.com/injectors.htm" rel="nofollow" target="_blank">Diesel Fuel Injectors and Nozzles - Dodge Cummins, Duramax, Ford ...</a><br />
+		Thoroughbred Diesel is an experienced diesel company that offers fuel injector nozzles.
+		</p>
+		
+			<p>
+		<a href="http://www.injectorwarehouse.com/diesel/" rel="nofollow" target="_blank">Diesel Injection - Injector Warehouse.com</a><br />
+		Complete Catalog of Diesel Fuel Injectors, Diesel Injection Pumps, Ciesel CP3 Pumps, Diesel Sensors, Diesel Gaskets and More.
+		</p>
+		
+			<p>
+		<a href="http://www.amazon.com/s?ie=UTF8&amp;page=1&amp;rh=i%3Aaps%2Ck%3ADiesel%20Injector%20Cleaning" rel="nofollow" target="_blank">Amazon.com: Diesel Injector Cleaning</a><br />
+		Drive traffic from Amazon.com to your website. Get $75 in free clicks! Amazon Product Ads is a highly targeted pay-per-click advertising program that puts your ...
+		</p>
+		
+		</div>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                            
+
+                                                                                        
+                                            
+                                            
+                                            
+                                            
+                                                  									</div>
+      									<hr class="hide">
+      								</div>
+      								<div id="rightColumn">
+                                          <div class="inside">
+                                              <div id="searchwidget">
+                                                  <span> ADVANCED PRODUCT FINDER</span><br/><br/>
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;Don&#039;t see what you&#039;re looking for?
+                                                 <form method="get" action="/s" id="searchform">
+                                                 
+                                                    <input type="text" value="Just type a word here and press Enter" onfocus="if (this.value == 'Just type a word here and press Enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Just type a word here and press Enter';}" size="30" maxlength="50" name="search" id="search" />
+                                                 
+                                                </form>
+                                              </div>
+
+                                          </div>
+      								      									<div class="inside">
+                                                                                <h4 style="color:#009;">Editor&#039;s picks</h4>
+<ul class="rightside"><li> <div class="right_block"><span id="am1" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B001JT1FJ6.jpg" alt="Power Service" title="Power Service 03080-06 +Cetane Boost Diesel Kleen Fuel Additive - 80 oz."/></span></b><h2><span id="am1" class="al">Power Service 03080-06 +Cetane Boost Diesel Kleen Fuel Additive - 80 oz.</span></h2><p><span class="underline">Automotive Parts and Accessories (Power Service)</span><br><div class="rating" onclick="$('#infopopup1').dialog({ closeOnEscape: true, width: 900,modal: true,show: 'slide',title:'{$smarty.capture.amazon_popup_title}' });">Rating (<span property="v:count">4</span> reviews): <div class="ratings"><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div></div>(<span property="v:average">5.0</span>/<span property="v:best">5</span>)</div><div class="infopopup" id="infopopup1"><img class="item" src="/_cache/557683587/__main/img/amazon_B001JT1FJ6.jpg" alt="Power Service" title="Power Service 03080-06 +Cetane Boost Diesel Kleen Fuel Additive - 80 oz." align="left" hspace=10 vspace="10"><h4>It works</h4>I have been using diesel kleen in an 02 Jetta TDI since I bought it in 2003. Use @ 4oz in each full-up of @ 12 gallons. TDI is now at 290K miles and still going strong. Have run TDI with and without DK. Fuel savings with DK added cover about 90% of the cost of the additive. DK is not the whole reason I have gotten such longevity - doing the scheduled maintenance helps a lot - but it certainly helps. <span class="underline"> 5/5  Roderick P. Macgillivray (Williamsburg, Va United States)  - See all my reviews, February 19, 2012</span><hr noshade><h4>Helps burn old diesel</h4>Bought old boat with 400 gals of fuel in tanks that was 7 years old. My surveyor recommended to use 1 gal in each 200 gal tank. We motored down from Savannah to Jekyll Island (110 miles)and beyond on the old fuel with no problems. Now on next fill up I will add more. <span class="underline"> 5/5  Sonny Reeves &quot;Sailorman&quot; (Jekyll Island, Ga. USA)  - See all my reviews, May 27, 2013</span><hr noshade><h4>good price, good product.</h4>6 oz. per 20 gal fill up. I'm using diesel additive in an effort to preserve my 2004 injectors.  Ted Nugent endorses this product, and the price is right (was using Stan a dyne, but it's spendy and the research I read says Power Service does a better job with the fuel). <span class="underline"> 5/5  B. Glenn (Fort Collins, CO, USA)  - See all my reviews, August 15, 2013</span><hr noshade></div>			<div class="prod_line">Effective in all diesel fuels, including ultra low sulfur diesel, biodiesel and biodiesel blends</div><div class="prod_line">Cleans dirty injectors and prevents injector sticking in all engines, including High Pressure Common Rail systems</div><div class="prod_line">Improves fuel economy up to 8 percent; fuel savings exceed cost of additive</div><div class="prod_line">Contains Slick diesel lubricator for maximum fuel lubrication; protects pumps and injectors from accelerated wear</div><div class="prod_line">Boosts cetane up to 6 numbers; engines run smoother with less power lag and faster cold starts and boosts power; reduces need for downshifting during high-load conditions</div></p></div></li><hr><li> <div class="right_block"><span id="am2" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B000008F22.jpg" alt="EMI Australia" title="Johnny Diesel &amp; The Injectors"/></span></b><h2><span id="am2" class="al">Johnny Diesel &amp; The Injectors</span></h2><p><span class="underline">Music (EMI Australia)</span><br><div class="rating" onclick="$('#infopopup2').dialog({ closeOnEscape: true, width: 900,modal: true,show: 'slide',title:'{$smarty.capture.amazon_popup_title}' });">Rating (<span property="v:count">2</span> reviews): <div class="ratings"><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div></div>(<span property="v:average">4.0</span>/<span property="v:best">5</span>)</div><div class="infopopup" id="infopopup2"><img class="item" src="/_cache/557683587/__main/img/amazon_B000008F22.jpg" alt="EMI Australia" title="Johnny Diesel &amp; The Injectors" align="left" hspace=10 vspace="10"><h4>Australian Rock when it rocked!</h4>I was at high school when this album came out and it was my favourite from day one of release and for years after that. My only major disappointment with Johnny Diesel & the Injectors is that there was never any follow up album, I mean this debut album from Johnny Diesel & the Injectors went to number one with a bullet in Australia and stayed there for ages... plus all of the singles hit the top 10, isn't that enough enthusiasm from the public to at least get one more album for the Injectors? But... no, Diesel set out on his own, even after the constant interviews of telling all of Australia... "We are a band, I'm not a solo artist with a backing band!" Anyway... I love this album, every track has a "Aussie Pub" taste to it. You can smell n taste the cigarette smoke and beer, hehehe. No wonder Barnesy wanted to drag him (Johnny Diesel) around with him on tour etc... he made him sound even better and more Australian than he already was.A brilliant guitarist and song writer, a... <span class="underline"> 4/5  albear  - See all my reviews
+      
+      
+        This review is from: Johnny Diesel &amp; The Injectors (Audio CD)
+      
+
+I was at high school when this album came out and it was my favourite from day one of release and for years after that. My only major disappointment with Johnny Diesel &amp; the Injectors is that there was never any follow up album, I mean this debut album from Johnny Diesel &amp; the Injectors went to number one with a bullet in Australia and stayed there for ages... plus all of the singles hit the top 10, isn&#039;t that enough enthusiasm from the public to at least get one more album for the Injectors? But... no, Diesel set out on his own, even after the constant interviews of telling all of Australia... &quot;We are a band, I&#039;m not a solo artist with a backing band!&quot; Anyway... I love this album, every track has a &quot;Aussie Pub&quot; taste to it. You can smell n taste the cigarette smoke and beer, hehehe. No wonder Barnesy wanted to drag him (Johnny Diesel) around with him on tour etc... he made him sound even better and more Australian than he already was.A brilliant guitarist and song writer, a...
+
+
+
+
+Read more
+      
+
+        Help other customers find the most helpful reviews&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ Was this review helpful to you?&amp;nbsp;, January 2, 2009</span><hr noshade><h4>Have the Cassette, NEEDED the CD</h4>A friend gave me the cassette of this album years ago and I totally wore it out.  Really liked the sound combination these guys put together.  Always love a sax in a rock band and a raspy singer. <span class="underline"> 4/5  L.A. Bud &quot;the future!&quot; (Downers Grove, IL USA)  - See all my reviews
+      
+      
+        Amazon Verified Purchase(What&#039;s this?)
+      
+      
+        This review is from: Johnny Diesel &amp; The Injectors (Audio CD)
+      
+
+A friend gave me the cassette of this album years ago and I totally wore it out.  Really liked the sound combination these guys put together.  Always love a sax in a rock band and a raspy singer.
+      
+
+        Help other customers find the most helpful reviews&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ Was this review helpful to you?&amp;nbsp;, November 20, 2012</span><hr noshade></div>			<span class="underline">List Price: </span>$12.98<br></p></div></li><hr><li> <div class="right_block"><span id="am3" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B002Y0B7AQ.jpg" alt="OTC" title="OTC 5060 Detroit Diesel Injector Socket"/></span></b><h2><span id="am3" class="al">OTC 5060 Detroit Diesel Injector Socket</span></h2><p><span class="underline">Automotive Parts and Accessories (OTC)</span><br><div class="rating" onclick="$('#infopopup3').dialog({ closeOnEscape: true, width: 900,modal: true,show: 'slide',title:'{$smarty.capture.amazon_popup_title}' });">Rating (<span property="v:count">2</span> reviews): <div class="ratings"><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div></div>(<span property="v:average">5.0</span>/<span property="v:best">5</span>)</div><div class="infopopup" id="infopopup3"><img class="item" src="/_cache/557683587/__main/img/amazon_B002Y0B7AQ.jpg" alt="OTC" title="OTC 5060 Detroit Diesel Injector Socket" align="left" hspace=10 vspace="10"><h4>Worked like a charm!</h4>85 Jimmy 6.2LAt first I was just going to use a 30mm fwd socket.  That was a no go. The return line tips could have broken off and if that happens you can not send the nozzle back as a core. Also the fwd socket is too long to fit on the nozzle with the AC box being in the way and too thick because there's a bolt head right next to each nozzle.  Overall this is a perfect tool for the job. <span class="underline"> 5/5  Svtlightning  - See all my reviews
+      
+      
+        Amazon Verified Purchase(What&#039;s this?)
+      
+      
+        This review is from: OTC 5060 Detroit Diesel Injector Socket (Automotive)
+      
+
+85 Jimmy 6.2LAt first I was just going to use a 30mm fwd socket.  That was a no go. The return line tips could have broken off and if that happens you can not send the nozzle back as a core. Also the fwd socket is too long to fit on the nozzle with the AC box being in the way and too thick because there&#039;s a bolt head right next to each nozzle.  Overall this is a perfect tool for the job.
+      
+
+        Help other customers find the most helpful reviews&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ Was this review helpful to you?&amp;nbsp;, September 22, 2012</span><hr noshade><h4>great tool good shipping</h4>If you plan on removing your injectors you must have this tool. Also great if your glow plugs swell remove injector insert cloth break plug and fish it out.  Very duable socket as well great material no chance of stripping anything with this. <span class="underline"> 5/5  Michael  - See all my reviews
+      
+      
+        Amazon Verified Purchase(What&#039;s this?)
+      
+
+If you plan on removing your injectors you must have this tool. Also great if your glow plugs swell remove injector insert cloth break plug and fish it out.  Very duable socket as well great material no chance of stripping anything with this.
+      
+
+        Help other customers find the most helpful reviews&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ Was this review helpful to you?&amp;nbsp;, December 26, 2010</span><hr noshade></div>			<span class="underline">List Price: </span><span class="price striked red">$70.95</span><br><span class="underline">Price: </span><span class="price green">$38.68</span><br><span class="underline blue">You Save: <b>$32.27 (45%)</b></span><div class="prod_line">Used on GM 62L and 65L engines</div><div class="prod_line">3/8" square drive and 7/8" hex permit easy access in tight quarters</div><div class="prod_line">Prevents damage to nozzle and related components</div><div class="prod_line">Lifetime limited warranty</div><div class="prod_line">30 mm socket ensures proper fit during nozzle removal and installation</div></p></div></li><hr><li> <div class="right_block"><span id="am4" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_156392188X.jpg" alt="Cengage Learning" title="Diesel Engine Repair Manual (Haynes Repair Manual)"/></span></b><h2><span id="am4" class="al">Diesel Engine Repair Manual (Haynes Repair Manual)</span></h2><p><span class="underline">Book (Cengage Learning)</span><br><div class="rating" onclick="$('#infopopup4').dialog({ closeOnEscape: true, width: 900,modal: true,show: 'slide',title:'{$smarty.capture.amazon_popup_title}' });">Rating (<span property="v:count">7</span> reviews): <div class="ratings"><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div><div class="ui-state-default star" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></div></div>(<span property="v:average">3.3</span>/<span property="v:best">5</span>)</div><div class="infopopup" id="infopopup4"><img class="item" src="/_cache/557683587/__main/img/amazon_156392188X.jpg" alt="Cengage Learning" title="Diesel Engine Repair Manual (Haynes Repair Manual)" align="left" hspace=10 vspace="10"><h4>Haynes diesel engine repair manual</h4>This manual only covers very basic, simple repair, mostly common sense stuff. Seems like every time I get to a section where I really need a manual,  I run into the phrase &quot;this service is best left to a professional diesel mechanic&quot;, instead of any constructive information. <span class="underline"> 2/5  GSHADEL (Central Ohio)  - See all my reviews
+      
+      
+        This review is from: Diesel Engine Repair Manual (Haynes Repair Manual) (Paperback)
+      
+
+This manual only covers very basic, simple repair, mostly common sense stuff. Seems like every time I get to a section where I really need a manual,  I run into the phrase &amp;quot;this service is best left to a professional diesel mechanic&amp;quot;, instead of any constructive information.
+      
+
+        Help other customers find the most helpful reviews&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ Was this review helpful to you?&amp;nbsp;, July 19, 2004</span><hr noshade><h4>Nothing of Value to be Found in Here...</h4>After buying a GM 6.5L Diesel on a whim from an auction, I made this techbook my first purchase. I mean, I expected a Haynes manual titled "Diesel Engine Repair Manual" and covering the GM 6.5L Diesel engine to have some measure of information specific to the diesel engine. Boy, was I sorely disappointed.Take, for example, the subject of the pump mounted driver. This is the solenoid pack that governs the electronic fuel injection pump and it has a notoriously high fail rate (as I discovered through both personal experience and the many, many vehicle forums dedicated to the issue). Does the Haynes manual cover the repair or replacement of the PMD? Nope. Does the Haynes manual give you a diagram of the PMD or label it on a diagram of the injection pump? Nope. But wait, you say, surely the manual references it? Nope. Not even a note in the index. As far as the Haynes manual is concerned, the PMD doesn't exist.How about routine maintenance? This manual is sorely... <span class="underline"> 1/5  Dog Tired  - See all my reviews
+      
+      
+        Amazon Verified Purchase(What&#039;s this?)
+      
+      
+        This review is from: Diesel Engine Repair Manual (Haynes Repair Manual) (Paperback)
+      
+
+After buying a GM 6.5L Diesel on a whim from an auction, I made this techbook my first purchase. I mean, I expected a Haynes manual titled &quot;Diesel Engine Repair Manual&quot; and covering the GM 6.5L Diesel engine to have some measure of information specific to the diesel engine. Boy, was I sorely disappointed.Take, for example, the subject of the pump mounted driver. This is the solenoid pack that governs the electronic fuel injection pump and it has a notoriously high fail rate (as I discovered through both personal experience and the many, many vehicle forums dedicated to the issue). Does the Haynes manual cover the repair or replacement of the PMD? Nope. Does the Haynes manual give you a diagram of the PMD or label it on a diagram of the injection pump? Nope. But wait, you say, surely the manual references it? Nope. Not even a note in the index. As far as the Haynes manual is concerned, the PMD doesn&#039;t exist.How about routine maintenance? This manual is sorely...
+
+
+
+
+Read more
+      
+
+        Help other customers find the most helpful reviews&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ Was this review helpful to you?&amp;nbsp;, February 17, 2011</span><hr noshade><h4>Helpful for the price</h4>While this is a Haynes manual, not an in in-depth repair manual it is inexpensive and a time saver, especially if this is your first run at one of the featured engines. It lets you know what your getting into before you start...you can estimate your time. It includes many wiring diagrams and identifies many parts and things that you could figure out on your own, but it might take you a while. Although it is not an in-depth injection pump repair manual-"refer to a professional repair shop" there are many quirky tips like the factory tools for setting things up. Once you see the drawings, you can rig up your own. So the book is cheap, it will save you some time and is worth having on your shelf. <span class="underline"> 4/5  Stephen D. Chastain  - See all my reviews, October 22, 2009</span><hr noshade></div>			<span class="underline">List Price: </span>$26.95<br><div class="prod_line">in</div><div class="prod_line">7 liter, 379 cu</div><div class="prod_line">in</div><div class="prod_line">Haynes Techbook Diesel Engine Repair Manual Provides service, repair and maintenance information for General Motors and Ford light trucks, vans, and passenger cars including GM 350 cu</div><div class="prod_line">5</div></p></div></li><hr><li> <div class="right_block"><span id="am5" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B00BGSSP1Q.jpg" alt="KTCAUTOTOOLS" title="DIESEL INJECTOR TEST AND CALIBRATING HAND PUMP"/></span></b><h2><span id="am5" class="al">DIESEL INJECTOR TEST AND CALIBRATING HAND PUMP</span></h2><p><span class="underline">Single Detail Page Misc (KTCAUTOTOOLS)</span><br>			</p></div></li><hr><li> <div class="right_block"><span id="am6" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B003E371D4.jpg" alt="BETA UTENSILI S.P.A." title="Beta 960I Bosh Fiat Common Rail Diesel Electrical Injector Puller"/></span></b><h2><span id="am6" class="al">Beta 960I Bosh Fiat Common Rail Diesel Electrical Injector Puller</span></h2><p><span class="underline">BISS (BETA UTENSILI S.P.A.)</span><br>			<span class="underline">List Price: </span><span class="price striked red">$309.80</span><br><span class="underline">Price: </span><span class="price green">$64.19</span><br><span class="underline blue">You Save: <b>$245.61 (79%)</b></span><div class="prod_line">For use in vehicle repair</div><div class="prod_line">For work on engines</div></p></div></li><hr><li> <div class="right_block"><span id="am7" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B0009PCPSQ.jpg" alt="STP" title="STP Diesel Fuel Treatment &amp; Injector Cleaner 1.25 pt (20 fl oz) 591 ml"/></span></b><h2><span id="am7" class="al">STP Diesel Fuel Treatment &amp; Injector Cleaner 1.25 pt (20 fl oz) 591 ml</span></h2><p><span class="underline">Health and Beauty (STP)</span><br>			<span class="underline">List Price: </span><span class="price striked red">$6.99</span><br><span class="underline">Price: </span><span class="price green">$4.64</span><br><span class="underline blue">You Save: <b>$2.35 (34%)</b></span><div class="prod_line">Helps maintain diesel engine performance by keeping fuel injectors clean and improving lubricity of diesel fuel</div><div class="prod_line">Helps fight fuel line freeze and wax gel formation</div><div class="prod_line">Formulated to help prevent deposit build-up in diesel engines</div><div class="prod_line">Helps maintain performance by preventing deposit build-up, corrosion and rust</div></p></div></li><hr><li> <div class="right_block"><span id="am8" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B009VFRP2Q.jpg" alt="Laser" title="Laser - 3297 Diesel Injector Socket/Window 1/2&quot;D 22mm"/></span></b><h2><span id="am8" class="al">Laser - 3297 Diesel Injector Socket/Window 1/2&quot;D 22mm</span></h2><p><span class="underline">Home Improvement (Laser)</span><br>			<div class="prod_line">With window</div><div class="prod_line">For use on Nissan and Volkswagen</div><div class="prod_line">Outside diameter 32mm</div><div class="prod_line">Manufactured from Chrome Vanadium</div><div class="prod_line">Bi-Hex format</div></p></div></li><hr><li> <div class="right_block"><span id="am9" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B009XPXAPK.jpg" alt="OSA-WERKZEUG" title="7PC VAG TDI INJECTOR PULLER SET FOR VW AUDI DIESEL ENGINES AUTO REPAIR TOOLS SET"/></span></b><h2><span id="am9" class="al">7PC VAG TDI INJECTOR PULLER SET FOR VW AUDI DIESEL ENGINES AUTO REPAIR TOOLS SET</span></h2><p><span class="underline">Home Improvement (OSA-WERKZEUG)</span><br>			</p></div></li><hr><li> <div class="right_block"><span id="am10" class="al"  ><img class="item" src="/_cache/557683587/__main/img/amazon_B00CIOD0QW.jpg" alt="connect" title="CONNECT - 34999 ASSTD COMMON RAIL DIESEL INJECTORS WASHERS QTY 150"/></span></b><h2><span id="am10" class="al">CONNECT - 34999 ASSTD COMMON RAIL DIESEL INJECTORS WASHERS QTY 150</span></h2><p><span class="underline">Home Improvement (connect)</span><br>			<div class="prod_line">10 of each size</div><div class="prod_line">Available individually</div><div class="prod_line">Comprehensive kit of washers</div></p></div></li><hr></ul>
+
+ 
+<script type="text/javascript">
+	am_url1 = '/view/Power-Service-03080_aHR0cDovL3d3dy5hbWF6b24uY29tL1Bvd2VyLVNlcnZpY2UtMDMwODAtMDYtQ2V0YW5lLUFkZGl0aXZlL2RwL0IwMDFKVDFGSjYlM0ZTdWJzY3JpcHRpb25JZCUzRDE4OEE0UllCOEFLN1ZUM1cxOTgyJTI2dGFnJTNEbW9iZXJvLTIwJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMTY1OTUzJTI2Y3JlYXRpdmVBU0lOJTNEQjAwMUpUMUZKNg==';
+	document.getElementById('am1').onclick=function(){go(am_url1)}
+	am_url2 = '/view/Johnny-Diesel-The_aHR0cDovL3d3dy5hbWF6b24uY29tL0pvaG5ueS1EaWVzZWwtVGhlLUluamVjdG9ycy9kcC9CMDAwMDA4RjIyJTNGU3Vic2NyaXB0aW9uSWQlM0QxODhBNFJZQjhBSzdWVDNXMTk4MiUyNnRhZyUzRG1vYmVyby0yMCUyNmxpbmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDE2NTk1MyUyNmNyZWF0aXZlQVNJTiUzREIwMDAwMDhGMjI=';
+	document.getElementById('am2').onclick=function(){go(am_url2)}
+	am_url3 = '/view/OTC-5060-Detroit_aHR0cDovL3d3dy5hbWF6b24uY29tL09UQy01MDYwLURldHJvaXQtRGllc2VsLUluamVjdG9yL2RwL0IwMDJZMEI3QVElM0ZTdWJzY3JpcHRpb25JZCUzRDE4OEE0UllCOEFLN1ZUM1cxOTgyJTI2dGFnJTNEbW9iZXJvLTIwJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMTY1OTUzJTI2Y3JlYXRpdmVBU0lOJTNEQjAwMlkwQjdBUQ==';
+	document.getElementById('am3').onclick=function(){go(am_url3)}
+	am_url4 = '/view/Diesel-Engine-Repair_aHR0cDovL3d3dy5hbWF6b24uY29tL0RpZXNlbC1FbmdpbmUtUmVwYWlyLU1hbnVhbC1IYXluZXMvZHAvMTU2MzkyMTg4WCUzRlN1YnNjcmlwdGlvbklkJTNEMTg4QTRSWUI4QUs3VlQzVzE5ODIlMjZ0YWclM0Rtb2Jlcm8tMjAlMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRpdmUlM0QxNjU5NTMlMjZjcmVhdGl2ZUFTSU4lM0QxNTYzOTIxODhY';
+	document.getElementById('am4').onclick=function(){go(am_url4)}
+	am_url5 = '/view/DIESEL-INJECTOR-TEST_aHR0cDovL3d3dy5hbWF6b24uY29tL0RJRVNFTC1JTkpFQ1RPUi1URVNULUNBTElCUkFUSU5HLUhBTkQvZHAvQjAwQkdTU1AxUSUzRlN1YnNjcmlwdGlvbklkJTNEMTg4QTRSWUI4QUs3VlQzVzE5ODIlMjZ0YWclM0Rtb2Jlcm8tMjAlMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRpdmUlM0QxNjU5NTMlMjZjcmVhdGl2ZUFTSU4lM0RCMDBCR1NTUDFR';
+	document.getElementById('am5').onclick=function(){go(am_url5)}
+	am_url6 = '/view/Beta-960I-Bosh_aHR0cDovL3d3dy5hbWF6b24uY29tL0JldGEtQ29tbW9uLURpZXNlbC1FbGVjdHJpY2FsLUluamVjdG9yL2RwL0IwMDNFMzcxRDQlM0ZTdWJzY3JpcHRpb25JZCUzRDE4OEE0UllCOEFLN1ZUM1cxOTgyJTI2dGFnJTNEbW9iZXJvLTIwJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMTY1OTUzJTI2Y3JlYXRpdmVBU0lOJTNEQjAwM0UzNzFENA==';
+	document.getElementById('am6').onclick=function(){go(am_url6)}
+	am_url7 = '/view/STP-Diesel-Fuel_aHR0cDovL3d3dy5hbWF6b24uY29tL1NUUC1EaWVzZWwtVHJlYXRtZW50LUluamVjdG9yLUNsZWFuZXIvZHAvQjAwMDlQQ1BTUSUzRlN1YnNjcmlwdGlvbklkJTNEMTg4QTRSWUI4QUs3VlQzVzE5ODIlMjZ0YWclM0Rtb2Jlcm8tMjAlMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRpdmUlM0QxNjU5NTMlMjZjcmVhdGl2ZUFTSU4lM0RCMDAwOVBDUFNR';
+	document.getElementById('am7').onclick=function(){go(am_url7)}
+	am_url8 = '/view/Laser-3297-Diesel_aHR0cDovL3d3dy5hbWF6b24uY29tL0xhc2VyLURpZXNlbC1JbmplY3Rvci1Tb2NrZXQtV2luZG93L2RwL0IwMDlWRlJQMlElM0ZTdWJzY3JpcHRpb25JZCUzRDE4OEE0UllCOEFLN1ZUM1cxOTgyJTI2dGFnJTNEbW9iZXJvLTIwJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMTY1OTUzJTI2Y3JlYXRpdmVBU0lOJTNEQjAwOVZGUlAyUQ==';
+	document.getElementById('am8').onclick=function(){go(am_url8)}
+	am_url9 = '/view/7PC-VAG-TDI_aHR0cDovL3d3dy5hbWF6b24uY29tL0lOSkVDVE9SLVBVTExFUi1ESUVTRUwtRU5HSU5FUy1SRVBBSVIvZHAvQjAwOVhQWEFQSyUzRlN1YnNjcmlwdGlvbklkJTNEMTg4QTRSWUI4QUs3VlQzVzE5ODIlMjZ0YWclM0Rtb2Jlcm8tMjAlMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRpdmUlM0QxNjU5NTMlMjZjcmVhdGl2ZUFTSU4lM0RCMDA5WFBYQVBL';
+	document.getElementById('am9').onclick=function(){go(am_url9)}
+	am_url10 = '/view/CONNECT-34999-ASSTD_aHR0cDovL3d3dy5hbWF6b24uY29tL0NPTk5FQ1QtQ09NTU9OLURJRVNFTC1JTkpFQ1RPUlMtV0FTSEVSUy9kcC9CMDBDSU9EMFFXJTNGU3Vic2NyaXB0aW9uSWQlM0QxODhBNFJZQjhBSzdWVDNXMTk4MiUyNnRhZyUzRG1vYmVyby0yMCUyNmxpbmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDE2NTk1MyUyNmNyZWF0aXZlQVNJTiUzREIwMENJT0QwUVc=';
+	document.getElementById('am10').onclick=function(){go(am_url10)}
+</script>
+
+                                                                    
+      									</div>
+      									<hr class="hide">
+      								</div>
+      								<div class="clear"></div>
+
+      							</div>
+      						</div>
+      					</div>
+      					<div id="leftColumn">
+      						<div class="inside">
+
+                                  <div id="cornerLogo">
+                                    <div class="placeHolder">
+                                        <div class="fadein">
+                                            	                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div id="mainMenu" class="leftBlock">
+                                    <div class="vnav">
+                                        <ul><li id="slideshow_desc"></li></ul>
+                                    </div>
+                                  </div>
+
+                                    
+	      <div class="leftBlock">
+      	<h3>Diesel Fuel Injectors</h3>
+      	<div class="vnav">
+      		<ul>
+											<li><a href="/Diesel-Fuel-Injectors/HDI-Injectors/">HDI Injectors</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/DCI-Injectors/">DCI Injectors</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/TDI-Injectors/">TDI Injectors</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/Diesel-Injector-Cleaner/">Diesel Injector Cleaner</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/Diesel-Fuel-Injectors/">Diesel Fuel Injectors</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/Diesel-Injectors/">Diesel Injectors</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/Diesel-Injector-Pump/">Diesel Injector Pump</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/Diesel-Injector-Tester/">Diesel Injector Tester</a></li>
+											<li><a href="/Diesel-Fuel-Injectors/Dodge-Diesel-Injectors/">Dodge Diesel Injectors</a></li>
+					      		<li><a href="/Diesel-Fuel-Injectors/Dodge-Diesel-Injectors/"> >> more >> </a></li>
+      		</ul>
+      	</div>
+      </div>
+            <div class="leftBlock">
+      	<h3>Fuel Inject. Controls and Parts</h3>
+      	<div class="vnav">
+      		<ul>
+											<li><a href="/fuel-inject-controls-and-parts/cummins-12-valve-1996-dodge-harmonic-balancer/">Cummins 12 Valve 1996 Dodge Harmonic Balancer</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/hilborn-injection-stacks-mopar-ford-chevy-rat-rod-performance-nostalgia/">Hilborn Injection Stacks Mopar Ford Chevy Rat Rod Performance Nostalgia</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/dipaco-aftermarket-gm-chevy-65-65l-turbo-diesel-pmd/">Dipaco Aftermarket Gm Chevy 6.5 6.5l Turbo Diesel Pmd</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/universal-jdm-red-adjustable-fpr-fuel-pressure-regulator-psi-gauge-gas-hose-kit/">Universal Jdm Red Adjustable Fpr Fuel Pressure Regulator Psi Gauge Gas Hose Kit</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/ford-60-powerstroke-diesel-fuel-injector-control-module-ficm-f250550-or-van/">Ford 6.0 Powerstroke Diesel Fuel Injector Control Module Ficm F250550 Or Van</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/kia-sportage-idle-control-valve/">Kia Sportage Idle Control Valve</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/73l-73-ford-powerstroke-injector-sleeve-cup-removal-tool-and-install-kit/">7.3l 7.3 Ford Powerstroke Injector Sleeve Cup Removal Tool And Install Kit</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/aem-302130150-150-psig-sensor-kit-pressure-sensor-kit/">Aem 302130150. 150 Psig Sensor Kit. Pressure Sensor Kit</a></li>
+											<li><a href="/fuel-inject-controls-and-parts/farymann-fuel-filter-18w-43f-oil-filter-18w-lot/">Farymann Fuel Filter 18w 43f Oil Filter 18w Lot</a></li>
+					      		<li><a href="/fuel-inject-controls-and-parts/farymann-fuel-filter-18w-43f-oil-filter-18w-lot/"> >> more >> </a></li>
+      		</ul>
+      	</div>
+      </div>
+            <div class="leftBlock">
+      	<h3>Fuel Injectors</h3>
+      	<div class="vnav">
+      		<ul>
+											<li><a href="/fuel-injectors/30lb-fuel-injectors-4-holes-mustang/">30lb Fuel Injectors 4 Holes Mustang</a></li>
+											<li><a href="/fuel-injectors/reliabilt-r5228900-n65-fuel-injector-for-detroit-diesel-engine/">Reliabilt R5228900 N65 Fuel Injector For Detroit Diesel Engine</a></li>
+											<li><a href="/fuel-injectors/detroit-series-60-electronic-injector-#-5575-used-no-core/">Detroit Series 60 Electronic Injector # 5575 Used no Core</a></li>
+											<li><a href="/fuel-injectors/ls6-ls1-fuel-rails-and-ford-svo-30-red-injectors/">Ls6 Ls1 Fuel Rails And Ford Svo 30 Red Injectors</a></li>
+											<li><a href="/fuel-injectors/seimens-deka-107962-high-performance-injectors-set-of-6/">Seimens Deka 107962 High Performance Injectors Set Of 6</a></li>
+											<li><a href="/fuel-injectors/2003-stock-fuel-injectors-track-model/">2003 Stock Fuel Injectors Track Model</a></li>
+											<li><a href="/fuel-injectors/subaru-legacy-impreza-wrx-sti-engine/">Subaru Legacy Impreza Wrx Sti Engine</a></li>
+											<li><a href="/fuel-injectors/cummins-4bt-9mm-injectorsqty-4/">Cummins 4bt 9mm Injectorsqty 4</a></li>
+											<li><a href="/fuel-injectors/04-subaru-wrx-injectors/">04 Subaru Wrx Injectors</a></li>
+					      		<li><a href="/fuel-injectors/04-subaru-wrx-injectors/"> >> more >> </a></li>
+      		</ul>
+      	</div>
+      </div>
+            <div class="leftBlock">
+      	<h3>Fuel Pumps</h3>
+      	<div class="vnav">
+      		<ul>
+											<li><a href="/fuel-pumps/holley-electric-fuel-pump-hly128011/">Holley Electric Fuel Pump Hly128011</a></li>
+											<li><a href="/fuel-pumps/new-premium-high-performance-fuel-pump-module-fuel-level-sensor-e3542m/">New Premium High Performance Fuel Pump Module Fuel Level Sensor E3542m</a></li>
+											<li><a href="/fuel-pumps/1979-mgb-fuel-pump/">1979 Mgb Fuel Pump</a></li>
+											<li><a href="/fuel-pumps/bosch-mw-injection-pump-dt466-cummins-83/">Bosch Mw Injection Pump Dt466 Cummins 8.3</a></li>
+											<li><a href="/fuel-pumps/roosamaster-stanadyne-oem-diesel-fuel-pump/">Roosamaster Stanadyne Oem Diesel Fuel Pump</a></li>
+											<li><a href="/fuel-pumps/new-oem-replacement-fuel-pump-strainer-kit-toyota-vehicles/">New Oem Replacement Fuel Pump Strainer Kit Toyota Vehicles</a></li>
+											<li><a href="/fuel-pumps/man-a-fre-fuel-log/">Man A Fre Fuel Log</a></li>
+											<li><a href="/fuel-pumps/honda-acura-replacement-electric-fuel-pump-install-kit-one-year-warranty/">Honda Acura Replacement Electric Fuel Pump Install Kit One Year Warranty</a></li>
+											<li><a href="/fuel-pumps/airtex-e7094m-fuel-pump-module-assembly/">Airtex E7094m Fuel Pump Module Assembly</a></li>
+					      		<li><a href="/fuel-pumps/airtex-e7094m-fuel-pump-module-assembly/"> >> more >> </a></li>
+      		</ul>
+      	</div>
+      </div>
+      
+
+
+		
+
+
+
+
+                                  <div class="leftBlock leftTextBlock">
+                                    <p>
+                                        <img src="/_templates/spareparts/images/certificates.png" alt="Certificates">
+                                    </p>
+                                  </div>
+
+
+      							<hr class="hide">
+
+      						</div>
+      					</div>
+      					<div id="footer">
+
+      <p>
+      	&copy; <a href="/" style="text-decoration:none;color:#fff;">Diesel Fuel Injectors - Diesel Fuel Injectors</a> at <a href="http://dieselfuelinjections.com" style="text-decoration:none;color:#fff;">Dieselfuelinjections</a> :: 
+      	Last Updated: 24:08:2013 ::  <a id="privacypolicy" href="/_templates/spareparts/privacypolicy.php" target=_blank>Privacy Policy</a>
+      </p>
+
+      						<hr class="hide">
+      					</div>
+      					<div class="clear"></div>
+      				</div>
+      			</div>
+      		</div>
+			<div id="popup"></div>
+
+</body>
+</html>
+

@@ -1,0 +1,1883 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta name="google-site-verification" content="cc97zTRc-Gx3ihwj-utZA3h5yYIjEWUUzq-d2wahc28" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>
+			Buffalo's Source For Local Business News | Business | The Buffalo News
+	</title>
+	<meta name="description" content="
+		Buffalo News Business brings you local business news first; reporting on local development, banks, the economy, manufacturers, small business, and stock market reports from Wall Street.
+	">
+	<!-- Facebook Twitter open graph sharing-->
+	<meta property="og:type" content="website">
+    <meta property="og:title" content="The Buffalo News">
+	<meta property="og:url" content="http://www.buffalonews.com">
+	<meta property="og:description" content="
+		Buffalo News Business brings you local business news first; reporting on local development, banks, the economy, manufacturers, small business, and stock market reports from Wall Street.
+	">
+    <meta property="og:image" content="http://www.buffalonews.com/images/BNSocialShareLG.jpg">
+	<meta property="og:site_name" content="BuffaloNews.com" />
+	<meta property="fb:admins" content="205970762766893" />
+	<meta property="fb:app_id" content="">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@TheBuffaloNews">
+	<!-- <meta name="viewport" content="width=device-width"> -->
+	<link rel="canonical" href="http://www.buffalonews.com/business"/>
+	<link href="https://plus.google.com/117334753013097675960" rel="publisher" />
+	<link rel="apple-touch-icon" href="http://www.buffalonews.com/images/bookmark-114.png">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.buffalonews.com/images/favicon.ico">
+	<!-- common css-->
+	<link rel="stylesheet" href="/css/style.min.css?v11"> 
+	<!--<link rel="stylesheet" href="/css/style.css">-->
+	<link rel="stylesheet" type="text/css" href="/css/tooltipster.css" />
+	<!-- alerts reg css -->
+	<link rel="stylesheet" href="/css/alerts-reg.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css?v01">
+	<!-- common JS -->
+	<script type="text/javascript" src="/js/common_01.min.js?v01"></script>
+	<!-- mobile redirect -->
+	<script>var isArticle = 0</script>
+	<script type="text/javascript" src="/js/browser.js"></script>
+<script type="text/javascript" src="/js/cookie.js"></script>
+<script>
+	var window_location = window.location.href.toLowerCase();
+	if(window_location.indexOf('/classifieds/') < 0 && window_location.indexOf('/life/celebrations/') < 0  && window_location.indexOf('LIFE07') < 0)
+	{
+		var tbn_mbl_cookieName = "stopMobileRedirect";
+		if(jQuery.browser.mobile) // mobile browsers
+		{
+			//check the URL parameter
+			if(getURLParameter(tbn_mbl_cookieName) == 1)
+			{
+				// set the cookie
+				setCookie(tbn_mbl_cookieName,1, 1);
+			}
+			else
+			{
+				if(!getCookie(tbn_mbl_cookieName))
+				{
+					articleParam = isArticle ? '?articleRedirect=1' : '';
+					window.location = navigator.userAgent.toLowerCase().indexOf("android") > -1 || navigator.userAgent.match(/iPhone/i) ?
+					'http://mobile.buffalonews.com'+articleParam : 'http://m.buffalonews.com';
+				}
+			}
+		}
+		function getURLParameter(name)
+		{
+			return decodeURI(
+				(RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+			);
+		}
+	}
+</script>
+	<script type="text/javascript" src="/js/cookie.js"></script>
+	<!-- Syncronex -->
+	<!--<script type="text/javascript" src="http://util.buffalo.com/saxotech/js/syncronex.js"></script>-->
+	<script type="text/javascript" src="/js/syncronex_OLD.js"></script>
+	<script>
+		/* set return url and replace nocache */
+		var sync_getUrl = (window.location.href).replace(/nocache/g, 'ddd');
+		var sync_returnUrl = encodeURIComponent(sync_getUrl);
+		$(document).ready(function ()
+		{
+			if(sync_isLoggedIn())
+			{
+				$('#divLoginRegister').html("<p style='margin:0;'><ul class=\"listHoriz listHorizLines left\"><li><span style='color:#999999;display:inline;'>Welcome,</span> <a href='https://www.syncaccess.net/bh/bn/Account/SubscriberHome' target='_blank' style='text-transform:uppercase; font-weight:bold;display:inline;'><i class='icon-user'></i> <span id=\"divLoginRegister_1_displayName\">" + sync_getDisplayName() + "&nbsp;</span></a> | </li><li class=\"rounded\" style=\"background:#283f7a; margin-left:.3em;\"><a style=\"color:#ffffff;\" href='javascript:;' onClick='sync_logout()'>logout</a></li></ul></p>");
+				//$('#divLoginRegister').html("<p style='margin:0;'><span style='color:#999999;'>Welcome,</span> <a href='https://www.syncaccess.net/bh/bn/Account/SubscriberHome' target='_blank' style='text-transform:uppercase; font-weight:bold;'><i class='icon-user'></i> " + sync_getDisplayName() + "</a> | <a href='javascript:;' onClick='sync_logout()'>logout</a></p>");
+				//$('#divLoginRegister').html("<p style='margin:0;'><a href='javascript:;' onClick='sync_logout()'>logout</a></p>");
+			}
+			else
+			{
+				$('#divLoginRegister').html('<ul class="listHoriz listHorizLines left"><li class="rounded" style="background:#283f7a;"><a style="color:#ffffff;" href="https://www.syncaccess.net/bh/bn/Account/Logon?returnUrl='+ sync_returnUrl +'&cancelUrl=http://www.buffalonews.com"><i class="icon-user icon-white"></i> Login</a></li>													<li class="rounded" style="background:#9e0700; margin-left:.3em;"><a style="color:#ffffff;" href="https://services.buffalonews.com/cgi/cgiip.wsc/custservice/web/registration.html" target="_blank">Activate</a></li></ul>');
+			}
+		});
+	</script> 
+	<!-- get the yahoo APT for the given section -->
+	<script>
+		var glb_tbn_section = "Business";
+		var boolSpillPage =  ( window.location.href.indexOf("template=articleListing") >= 0 ? true : false );
+		if(glb_tbn_section == "" && !boolSpillPage)
+		{
+			glb_tbn_section = "FRONTPAGE";
+		}
+		var glb_tbn_subsection = "Business";
+		var glb_tbn_saxoCache_debug = "20130827191452,http://www.buffalonews.com,/apps/pbcs.dll/section?Category=BUSINESS,BUSINESS,BUSINESS,1005,,";
+		var glb_apt_section = "";
+		if(glb_tbn_section.toLowerCase() == "frontpage" && !boolSpillPage)
+		{
+			glb_apt_section = "Homepage";
+		}
+		else if(glb_tbn_subsection.toLowerCase() == "city & region" || glb_tbn_subsection.toLowerCase() == "sports" || glb_tbn_subsection.toLowerCase() == "business" || glb_tbn_subsection.toLowerCase() == "opinion" || glb_tbn_subsection.toLowerCase() == "life & arts" || glb_tbn_subsection.toLowerCase() == "gusto" || glb_tbn_subsection.toLowerCase() == "weather")
+		{
+			glb_apt_section = "Primary Front";
+		}
+		else
+		{
+			glb_apt_section = "Secondary Front";
+		}
+	</script>
+	<!--
+	< p b s:macro name="yahooAPT/getAPTID" mainSection="Business" section="Business">
+	-->
+	<script> 
+	var glb_tbn_profileID = '1005';
+	var bln_tbn_categoryID = 'business';
+	var glb_tbn_yahooAPTID = '20201501';
+	var glb_apt_reportingTag = 'Business||';
+	var glb_apt_custom_section = '';
+</script>
+    <!-- APT advertising slots -->
+ 	<script type="text/javascript">
+	//<![CDATA[
+	TBN.apt = {};
+	if( window.location.href.indexOf("search?") >= 0 )
+	{
+	glb_apt_reportingTag = "Online|Search";
+	glb_apt_section = "Primary Front";
+	}
+	if (window.location.href.indexOf("testads") >= 0) {
+	glb_tbn_yahooAPTID = "20418501";
+	}
+	TBN.apt.topic_id = glb_tbn_yahooAPTID;
+	TBN.apt.reporting_tag = glb_apt_reportingTag;
+	TBN.apt.sctn = glb_apt_section;
+	yld_mgr = {};
+	yld_mgr.pub_id="21065751319";
+	yld_mgr.site_name="BuffaloNews.com";
+	yld_mgr.request_type="ac";
+	yld_mgr.container_type="js";
+	yld_mgr.content_lang="en-us";
+	if(glb_apt_custom_section != "")
+	{
+		yld_mgr.cstm_sctn_list=[glb_apt_custom_section];
+	}
+	else
+	{
+		yld_mgr.cstm_sctn_list=[glb_apt_section];
+	}
+	yld_mgr.content_topic_id_list=[TBN.apt.topic_id];
+	// Special handling for inserting extra topic ids via McClatchy Page Elements
+	var topicAdd = "";
+	var topicOverride = "";
+	if (topicOverride.length > 0)
+	{
+	yld_mgr.content_topic_id_list=[topicOverride];
+	}
+	yld_mgr.slots = {};
+	yld_mgr.slots.redirect = {};
+	yld_mgr.slots.redirect.ad_size_list=["18x18"];
+	yld_mgr.slots.redirect.ad_delivery_mode="ipatf";
+	yld_mgr.slots.redirect.content_type_list=["fn_news"];
+	yld_mgr.slots.redirect.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.top_leaderboard = {};
+	if(glb_tbn_section.toLowerCase() == "frontpage")
+	{
+		yld_mgr.slots.top_leaderboard.ad_size_list=["980x90"];
+	}
+	else {
+		yld_mgr.slots.top_leaderboard.ad_size_list=["728x90"];
+	}
+	//yld_mgr.slots.top_leaderboard.ad_size_list=["980x90"];
+	yld_mgr.slots.top_leaderboard.ad_delivery_mode="ipatf";
+	yld_mgr.slots.top_leaderboard.content_type_list=["fn_news"];
+	yld_mgr.slots.top_leaderboard.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.pencil = {};
+	yld_mgr.slots.pencil.ad_size_list=["950x30"];
+	yld_mgr.slots.pencil.ad_delivery_mode="ipatf";
+	yld_mgr.slots.pencil.content_type_list=["fn_news"];
+	yld_mgr.slots.pencil.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.floatover = {};
+	yld_mgr.slots.floatover.ad_size_list=["1x1"];
+	yld_mgr.slots.floatover.ad_delivery_mode="ipatf";
+	yld_mgr.slots.floatover.content_type_list=["fn_news"];
+	yld_mgr.slots.floatover.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.sponsor_badge = {};
+	yld_mgr.slots.sponsor_badge.ad_size_list=["120x60"];
+	yld_mgr.slots.sponsor_badge.ad_delivery_mode="ipatf";
+	yld_mgr.slots.sponsor_badge.content_type_list=["fn_news"];
+	yld_mgr.slots.sponsor_badge.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.medium_box_1 = {};
+	yld_mgr.slots.medium_box_1.ad_size_list=["300x250"];
+	yld_mgr.slots.medium_box_1.ad_delivery_mode="ipatf";
+	yld_mgr.slots.medium_box_1.content_type_list=["fn_news"];
+	yld_mgr.slots.medium_box_1.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.medium_box_2 = {};
+	yld_mgr.slots.medium_box_2.ad_size_list=["300x250"];
+	yld_mgr.slots.medium_box_2.ad_delivery_mode="ipbtf";
+	yld_mgr.slots.medium_box_2.content_type_list=["fn_news"];
+	yld_mgr.slots.medium_box_2.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.medium_box_3 = {};
+	yld_mgr.slots.medium_box_3.ad_size_list=["300x250"];
+	yld_mgr.slots.medium_box_3.ad_delivery_mode="ipbtf";
+	yld_mgr.slots.medium_box_3.content_type_list=["fn_news"];
+	yld_mgr.slots.medium_box_3.reporting_tag_list=[TBN.apt.reporting_tag];
+	yld_mgr.slots.bottom_leaderboard = {};
+	yld_mgr.slots.bottom_leaderboard.ad_size_list=["728x90"];
+	yld_mgr.slots.bottom_leaderboard.ad_delivery_mode="ipbtf";
+	yld_mgr.slots.bottom_leaderboard.content_type_list=["fn_news"];
+	yld_mgr.slots.bottom_leaderboard.reporting_tag_list=[TBN.apt.reporting_tag];
+	if (topicAdd.length > 0)
+	{
+	yld_mgr.slots.top_leaderboard.cstm_content_cat_list=[topicAdd];
+	yld_mgr.slots.medium_box_1.cstm_content_cat_list=[topicAdd];
+	yld_mgr.slots.medium_box_2.cstm_content_cat_list=[topicAdd];
+	yld_mgr.slots.bottom_leaderboard.cstm_content_cat_list=[topicAdd];
+	}
+	//]]>
+	</script>
+	<script type="text/javascript" src="http://e.yieldmanager.net/script.js"></script>
+    <!-- Google Analytics -->    
+    <script type="text/javascript">
+	//<![CDATA[
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-5339712-1']);
+		_gaq.push(['_setDomainName', '.buffalonews.com']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+		// _gaq.push(['t2._setAccount', 'UA-5339712-16']);
+		// _gaq.push(['t2._trackPageview',window.location.host]);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+		})();
+	//]]>
+	</script>
+	<!-- js for chart beat real time analytics -->
+	<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+	<!-- <script src="/js/libs/jquery.bxSlider.min.js?v01" type="text/javascript"></script> -->
+	<!-- AP JS -->
+	<script src="http://hosted2.ap.org/scripts/CustomNews.js"></script>
+	<!--<script type="text/javascript" src="/js/libs/jquery.datePicker.js"></script>-->
+	<!--<script type="text/javascript" src="/js/jquery-ui-1.8.13.js"></script>-->
+	<!--<script type="text/javascript" src="/js/jquery_base.js"></script>-->
+	<!--<script type="text/javascript" src="/js/libs/jquery.min.js"></script>-->
+	<!--<script type="text/javascript" src="/js/libs/jquery.all.js"></script>-->
+</head>
+
+<body>
+	<div class="visuallyhidden">
+		<script type="text/javascript">
+		//<![CDATA[
+		yld_mgr.place_ad_here("redirect");
+		//]]>
+		</script>
+	</div>
+	<!-- Facebook --> 
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+	<!-- Facebook --> 
+	<!-- Chartbeat --> 
+	<script type='text/javascript'>
+		var _sf_async_config={};
+		/** CONFIGURATION START **/
+		_sf_async_config.uid = 40376;
+		_sf_async_config.domain = 'buffalonews.com';
+		_sf_async_config.sections = 'BUSINESS';  //CHANGE THIS
+		_sf_async_config.authors = 'BUSINESS';    //CHANGE THIS
+		/** CONFIGURATION END **/
+		(function(){
+		  function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			   (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+			   'js/chartbeat.js');
+			document.body.appendChild(e);
+		  }
+		  var oldonload = window.onload;
+		  window.onload = (typeof window.onload != 'function') ?
+			 loadChartbeat : function() { oldonload(); loadChartbeat(); };
+		})();
+	</script>
+	<!-- Chartbeat --> 
+	<!-- ADTPIX Retargeting Script-->
+	<div class="visuallyhidden">
+		<script type="text/javascript" src="http://a.adtpix.com/px/?id=12782"></script>
+	</div>
+	<!-- DoubleClick -->
+		<!-- Doubleclick Code for Retargeting tag -->
+		<!-- Retargeting tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 993747714;
+		var google_conversion_label = "_REmCLbFzAMQgsbt2QM";
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+		</script>
+		<div class="visuallyhidden">
+			<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+			</script>
+		</div>
+		<noscript>
+		<div class="visuallyhidden">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/993747714/?value=0&amp;label=_REmCLbFzAMQgsbt2QM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+	<!-- DoubleClick -->
+	<div class="wrapper">
+    	<a name="top"></a>
+        <a href="#navPrimary" class="visuallyhidden">Skip to primary navigation</a>
+        <a href="#main" class="visuallyhidden">Skip to main content</a>
+        <!--<div class="ad floatover">
+        </div>-->
+		<script type="text/javascript">
+		//<![CDATA[
+		yld_mgr.place_ad_here("floatover");
+		//]]>
+		</script>
+        <div class="barTopWrap clearfix">
+			<div class="barTop">
+				<div class="navTopSecondaryWrap">
+                    <div class="navTopSecondary clearfix">
+                      <ul class="listHorizBtn left">
+                        <li><a href="http://www.buffalo.com/" target="_blank">Buffalo.com</a></li>
+                        <li><a href="http://www.shopbuffalo.com/" target="_blank">ShopBuffalo</a></li>
+                        <li><a href="http://shopping.buffalonews.com/SS/Tiles.aspx?ex=menus" target="_blank">Marketplace</a></li>
+                        <li><a href="http://buffalojobfinder.com/" target="_blank">Jobs</a></li>
+                        <li><a href="http://www.buffalocars.com/" target="_blank">Cars</a></li>
+                        <li><a href="http://realestate.buffalonews.com/" target="_blank">Real Estate</a></li>
+                        <li><a href="http://realestate.buffalonews.com/buffalo-real-estate/for-rent/" target="_blank">Rentals</a></li>
+                        <li><a href="/classifieds" target="_blank">Classifieds</a></li>
+                        <li><a href="http://www.gadzoo.com/buffalonews/pets.aspx" target="_blank">Pets</a></li>
+                        <li><a href="http://www.vipseats.com/?a=2A6B444D-3B8C-44BE-BF4A-0D249084F7C1" onclick="_gaq.push(['_trackEvent', 'Tickets', 'Click', ' Tickets Top Nav']);" target="_blank">Tickets</a></li>
+                        <li><a href="http://bflomagazine.com/" target="_blank">Bflo Magazine</a></li>
+                        <li><a href="http://www.buffalobrides.com/" target="_blank">Brides</a></li>
+                      </ul>
+                    </div><!-- .navTopSecondary -->
+                </div>
+			</div><!-- .barTop -->
+        </div>
+        <div class="adLeaderboardTop centerInner" align="center">
+        	<div>
+			<script type="text/javascript">
+			//<![CDATA[
+            yld_mgr.place_ad_here("top_leaderboard");
+			//]]>
+            </script>
+            </div>
+        </div>	
+        <div class="page centerOuter clearfix">
+            <header id="header" class="clearfix">
+            		<div class="headerTop clearfix">
+						<div id="divLoginRegister" class="left">
+							<!--
+							< p b s:macro name="users/loginForm">
+							-->
+						</div>
+                    	<span class="headerDate right">Tuesday, August 27, 2013</span>
+                    </div><!-- .headerTop -->
+                   <h3 id="logoSection" class="Left"><a href="/" title="TheBuffaloNews.com">TheBuffaloNews.com</a></h3>
+                    <div class="sectionHeaderWrap"><h1 id="sectionHeader"><a href="/section/BUSINESS">Business</a></h1></div>
+                    <div class="adBadge centerInner">
+						<script type="text/javascript">
+                        //<![CDATA[
+                        yld_mgr.place_ad_here("sponsor_badge");
+                        //]]>
+                        </script>
+                	</div>
+			</header>
+
+            <nav id="nav" class="clearfix">
+                <ul id="navPrimary" class"clearfix left">
+                    <li class="navItem"><a href="/city-region" class="navLink">City &amp; Region</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                                <ul class="listHorizBtn left">
+                                    <li><a href="/city-region/communities">Communities</a></li>
+                                    <li><a href="/city-region/education">Education</a></li>
+                                    <li><a href="/city-region/police-courts">Police &amp; Courts</a></li>
+                                    <li><a href="/city-region/politics">Politics</a></li>
+                                    <li><a href="/city-region/people">People</a></li>
+                                    <li><a href="/city-region/obituaries">Obituaries</a></li> 
+                                    <li><a href="/city-region/column">Columns</a></li>
+                                </ul>
+                            </div>               
+                            <div class="navSubSecondary clearfix">
+                                <div class="box col25 left marginR">
+                                    <h3>Blogs:</h3>
+                                    <ul class="listVert listVertLines">
+                                        <li><a href="http://blogs.buffalonews.com/amherst-first/">Amherst First</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/the-brink/">The Brink</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/politics_now/">Politics Now</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/school_zone/">School Zone</a></li>
+                                    </ul>
+                                </div>
+                            <div class="box col50 left marginR">
+                                <h3 class="red">Latest Headlines:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/city-region/downtown-waterfront/seneca-buffalo-creek-casino-wows-at-grand-opening-20130827">
+		Seneca Buffalo Creek Casino wows at grand opening 
+</a></li><li><a href="/city-region/buffalo/mayoral-candidates-exchange-sharp-attacks-20130827">
+		Mayoral candidates exchange sharp attacks 
+</a></li><li><a href="/city-region/schools/fredonia-school-board-examines-goals-weighs-boces-help-20130827">
+		Fredonia School Board examines goals, weighs BOCES help 
+</a></li><li><a href="/city-region/olean/solar-panels-installed-at-olean-recreation-center-20130827">
+		Solar panels installed at Olean recreation center 
+</a></li><li><a href="/city-region/chautauqua-county/forestville-to-let-voters-decide-when-to-hold-village-elections-20130827">
+		Forestville to let voters decide when to hold village elections 
+</a></li> 
+                                    <li><a href="/city-region" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+                             <!-- < p b s:newslist Fields="Webhed,Websum" Taxonomywords="176,178,177,180,179,181" Kwor=1 count=1 Datesort=1 Leadin=150 Useobjects=1 Objectclass=10>-->
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/city-region/erie-county/former-sheriff-tom-higgins-tries-sky-diving-at-age-83-20130826">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130826/CITYANDREGION/130829187/AR/0/AR-130829187.jpg&exactW=90&maxH=90&AlignV=top" /></span>
+   	Ex-sheriff reaches new heights
+    </a>
+</h2>
+<p>	South Buffalo resident says he had wanted to take plunge for years.
+</p>
+<a href="/city-region/erie-county/former-sheriff-tom-higgins-tries-sky-diving-at-age-83-20130826" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div><!-- .navSubPrimary -->
+                        </div><!-- .navSub -->
+                    </li>
+                    <li class="navItem"><a href="/sports" class="navLink">Sports</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                                <ul class="listHorizBtn left">
+                                    <li><a href="/sports/bills-nfl">Bills &amp; NFL</a></li>
+                                    <li><a href="/sports/sabres-nhl">Sabres &amp; NHL</a></li>
+                                    <li><a href="/sports/bisons-baseball">Bisons &amp; Baseball</a></li>
+                                    <li><a href="/sports/colleges">Colleges</a></li>
+                                    <li><a href="/sports/high-school">High Schools</a></li>
+                                </ul>
+                            </div>               
+                            <div class="navSubSecondary clearfix ">
+                                <div class="box col25 left marginR">
+                                    <h3>Blogs:</h3>
+                                    <ul class="listVert listVertLines">
+                                        <li><a href="http://blogs.buffalonews.com/sabres/">Sabres Edge</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/press-coverage/">Press Coverage</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/preptalk/">Prep Talk</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/sully_on_sports/">Sully on Sports</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/insidepitch/">Inside Pitch</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/campus/">Campus Watch</a></li>
+                                    </ul>
+                                    <!--<a href="/">More sports blogs &raquo;</a>-->
+                                </div>
+                              <div class="box col50 left marginR">
+                                <h3 class="red">Latest Headlines:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/sports/yanks-turn-in-clunker-with-jeter-and-a-rod-20130827">
+		Yanks turn in clunker with Jeter and A-Rod 
+</a></li><li><a href="/article/20130827/LIFE/130829154/1004">
+	Injuries make Bills relevant on ESPN
+</a></li><li><a href="/sports/day-of-upheaval-for-the-bills-20130827">
+		Day of upheaval for the Bills 
+</a></li><li><a href="/sports/high-schools/countdown-to-friday-night-lights-c-south-20130826">
+		Countdown to Friday Night Lights: C South 
+</a></li><li><a href="/sports/bisons-baseball/split-costs-herd-in-wild-card-race-20130826">
+		Split costs Herd  in wild-card race
+</a></li> 
+                                    <li><a href="/sports" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+                              <!--< p b s:newslist Fields="Webhed,Websum" Taxonomywords="211,213,217,215,212,214,216" Kwor=1 count=1 Datesort=1 Leadin=150 Useobjects=1 Objectclass=10>-->
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/sports/day-of-upheaval-for-the-bills-20130827">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130827/SPORTS/130829158/AR/0/AR-130829158.jpg&exactW=90&maxH=90&AlignV=top" /></span>
+   		Day of upheaval for the Bills 
+    </a>
+</h2>
+<p>	It&#x2019;s clear that the relationship between Pro Bowl safety Jairus Byrd and the Buffalo Bills needs some serious couples counseling.Byrd had not b...
+</p>
+<a href="/sports/day-of-upheaval-for-the-bills-20130827" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div><!-- .navSubPrimary -->
+                        </div><!-- .navSub -->
+                    </li>
+                    <li class="navItem"><a href="/business" class="navLink">Business</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                               <ul class="listHorizBtn left marginR">
+                                    <li><a href="/business/money-smart">MoneySmart</a></li>
+                                    <li><a href="/business/on-the-record">On The Record </a></li>
+                                    <li><a href="/business/real-estate-transactions">Real Estate Transactions</a></li>
+                                </ul>
+                            </div>               
+                            <div class="navSubSecondary clearfix">
+                                <div class="box col25 left marginR">
+                                    <h3>Blogs:</h3>
+                                    <ul class="listVert listVertLines">
+                                        <li><a href="http://blogs.buffalonews.com/strictlybusiness/">Strictly Business</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/moneysmart/">MoneySmart</a></li>
+                                    </ul>
+                                </div>
+                              <div class="box col50 left marginR">
+                                <h3 class="red">Latest Headlines:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/city-region/downtown-waterfront/seneca-buffalo-creek-casino-wows-at-grand-opening-20130827">
+		Seneca Buffalo Creek Casino wows at grand opening 
+</a></li><li><a href="/associated-press/ap-national-news/syrian-electronic-army-hacks-new-york-times-website-20130827">
+		&#x2018;Syrian Electronic Army&#x2019; hacks New York Times website 
+</a></li><li><a href="/business/fast-plant-is-a-boost-to-underdog-automaker-mazda-20130827">
+		Fast plant is a boost to underdog automaker Mazda 
+</a></li><li><a href="/business/us-home-prices-rise-by-121-in-june-20130827">
+		U.S. home prices rise by 12.1% in June 
+</a></li><li><a href="/business/sonoma-grille-to-serve-last-meal-20130827">
+		Sonoma Grille to serve last meal
+</a></li> 
+                                    <li><a href="/business" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+                              <!--< p b s:newslist Fields="Webhed,Websum" Taxonomywords="172,174,173" Kwor=1 count=1 Leadin=150 Datesort=1 Useobjects=1 Objectclass=10>-->
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/business/for-food-companies-recipes-are-sacred-20130826">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130826/BUSINESS/130829213/AR/0/AR-130829213.jpg&exactW=90&maxH=90&AlignV=top" /></span>
+   		For food companies, recipes are sacred 
+    </a>
+</h2>
+<p>	ATLANTA &#x2013; Coca-Cola keeps the recipe for its 127-year-old soda inside an imposing steel vault that&#x2019;s bathed in red security lights. Seve...
+</p>
+<a href="/business/for-food-companies-recipes-are-sacred-20130826" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div><!-- .navSubPrimary -->
+                        </div><!-- .navSub -->
+                    </li>
+                    <li class="navItem"><a href="/opinion" class="navLink">Opinion</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                                <ul class="listHorizBtn left">
+                                    <li><a href="/opinion/editorials">Editorials</a></li>
+                                    <li><a href="/opinion/viewpoints">Viewpoints</a></li>
+                                    <li><a href="/opinion/another-voice">Another Voice</a></li>
+                                    <li><a href="/opinion/my-view">My View</a></li>
+                                    <li><a href="/opinion/letters-to-the-editor">Letters to the Editor</a></li>
+                                </ul>
+                            </div>               
+                            <div class="navSubSecondary clearfix">
+                                <div class="box col25 left marginR">
+                                    <h3>Blogs:</h3>
+                                    <ul class="listVert listVertLines">
+                                        <li><a href="http://blogs.buffalonews.com/adam-zyglis/">Adam Zyglis</a></li>
+                                    </ul>
+                                </div>
+                                <!--< p b s:newslist Fields="Webhed,Websum" Categories="OPINION01" count=7 Datesort=1 Useobjects=1 Objectclass=9>-->
+                              <div class="box col50 left marginR">
+                                <h3 class="red">Latest Headlines:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/opinion/another-voice/another-voice-ratings-system-launches-a-new-era-for-universities-20130827">
+		Another Voice: Ratings system launches a new era for universities 
+</a></li><li><a href="/opinion/buffalo-news-editorials/it-took-hand-holding-by-the-state-but-turnaround-plans-finally-won-ok-20130827">
+		It took hand-holding by the state, but turnaround plans finally won OK 
+</a></li><li><a href="/opinion/buffalo-news-editorials/days-before-classes-start-is-too-late-for-the-state-to-close-pinnacle-charter-20130827">
+		Days before classes start is too late for the state to close Pinnacle Charter 
+</a></li><li><a href="/opinion/letter-strangers-generosity-made-day-more-special-20130827">
+		Letter: Stranger&#x2019;s generosity made day more special 
+</a></li><li><a href="/opinion/letter-candidates-have-a-duty-to-participate-in-debates-20130827">
+		Letter: Candidates have a duty to participate in debates 
+</a></li> 
+                                    <li><a href="/opinion" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+                              <!--< p b s:newslist Fields="Webhed,Websum" Taxonomywords="208,209" Kwor=1 count=1 Datesort=1 Leadin=150 Useobjects=1 Objectclass=10>-->
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/opinion/buffalo-news-editorials/it-took-hand-holding-by-the-state-but-turnaround-plans-finally-won-ok-20130827">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130827/OPINION/130829164/AR/0/AR-130829164.jpg&exactW=90&maxH=90&AlignV=top" /></span>
+   		It took hand-holding by the state, but turnaround plans finally won OK 
+    </a>
+</h2>
+<p>	There are a couple of ways to look at last week&#x2019;s humiliating trip to Albany by Buffalo school officials, who had been ordered there by State E...
+</p>
+<a href="/opinion/buffalo-news-editorials/it-took-hand-holding-by-the-state-but-turnaround-plans-finally-won-ok-20130827" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div><!-- .navSubPrimary -->
+                        </div><!-- .navSub -->
+                    </li>
+                    <li class="navItem"><a href="/life-arts" class="navLink">Life &amp; Arts</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                                <ul class="listHorizBtn left">
+                                    <li><a href="/life-arts/books-poetry">Books &amp; Poetry</a></li>
+                                    <li><a href="/life-arts/refresh">Refresh</a></li>
+                                    <li><a href="/life-arts/home-gardening">Home &amp; gardening</a></li>
+                                    <li><a href="/life-arts/next">NeXt</a></li>
+                                    <li><a href="/life-arts/taste">Taste</a></li>
+                                    <li><a href="/life-arts/travel">Travel</a></li>
+                                    <li><a href="/life-arts/celebrations">Celebrations</a></li>
+                                    <li><a href="/life-arts/weddings">Weddings</a></li>
+                                </ul>
+                            </div>               
+                            <div class="navSubSecondary clearfix">
+                                <div class="box col25 left marginR">
+                                    <h3>Blogs:</h3>
+                                    <ul class="listVert listVertLines">
+                                        <li><a href="http://blogs.buffalonews.com/buzz-blog/">The Buzz Blog</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/hungryformore/">Hungry for More</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/refresh/">The Refresh Buffalo Blog</a></li>
+                                        <li><a href="http://blogs.buffalonews.com/talkintv/">Talkin&#8217; TV</a></li>
+                                    </ul>
+                                </div>
+                            <div class="box col50 left marginR">
+                                <h3 class="red">Latest Headlines:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/life-arts/daily-dish/the-daily-dish-20130827">
+		The Daily Dish 
+</a></li><li><a href="/article/20130827/LIFE/130829154/1057">
+	Injuries make Bills relevant on ESPN
+</a></li><li><a href="/life-arts/jennifer-coolidge-is-right-at-home-in-austenland-20130827">
+		Jennifer Coolidge is right at home in &#x2018;Austenland&#x2019; 
+</a></li><li><a href="/gusto/television/the-highs-and-lows-of-the-video-music-awards-20130827">
+		The highs and lows of the Video Music Awards 
+</a></li><li><a href="/city-region/elmwood-allentown/street-artists-paint-first-of-several-planned-allentown-murals-20130827">
+	Mural initiative arrives in Allentown
+</a></li> 
+                                    <li><a href="/life-arts" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+                              <!--
+                              <p b s:newslist Fields="Webhed,Websum" Taxonomywords="187,188,196,189,190,191,192,194,195,197,205,193,198,199,201,202,203,204,206,200" Kwor=1 count=1 Leadin=150 Datesort=1 Useobjects=1 Objectclass=10>
+                              < p b s:newslist Fields="Webhed,Websum" Taxonomywords="267" Kwor=1 count=1 Leadin=150 Datesort=1 Useobjects=1 Objectclass=10> -->
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/life-arts/affleck-as-batman-arouses-publics-ire-20130826">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130826/LIFE/130829165/AR/0/AR-130829165.jpg&exactW=90&maxH=90&AlignV=top" /></span>
+   		Affleck as Batman arouses public&#x2019;s ire 
+    </a>
+</h2>
+<p>	Why, is that a dagger we see before us?Indeed, and one most passionately forged by the actor Richard Dreyfuss. And looking closer, the engraving on it...
+</p>
+<a href="/life-arts/affleck-as-batman-arouses-publics-ire-20130826" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div><!-- .navSubPrimary -->
+                        </div><!-- .navSub -->
+                    </li>
+                    <li class="navItem"><a href="/gusto" class="navLink">Gusto</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                                <ul class="listHorizBtn left">
+                                    <li><a href="/gusto/art">Art</a></li>
+                                    <li><a href="/gusto/movies">Movies</a></li>
+                                    <li><a href="/gusto/music">Music</a></li>
+                                    <li><a href="/gusto/restaurants">Restaurants</a></li>
+                                    <li><a href="/gusto/theater">Theater</a></li>
+                                </ul>
+                            </div>               
+                            <div class="navSubSecondary clearfix">
+                                <div class="box col25 left marginR">
+                                    <h3>Blogs:</h3>
+                                    <ul class="listVert listVertLines">
+                                        <li><a href="http://blogs.buffalonews.com/gusto/">The Gusto Blog</a></li>
+                                    </ul>
+                                </div>
+                              <div class="box col50 left marginR">
+                                <h3 class="red">Latest Headlines:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/article/20130827/LIFE/130829154/1031">
+	Injuries make Bills relevant on ESPN
+</a></li><li><a href="/life-arts/jennifer-coolidge-is-right-at-home-in-austenland-20130827">
+		Jennifer Coolidge is right at home in &#x2018;Austenland&#x2019; 
+</a></li><li><a href="/gusto/television/the-highs-and-lows-of-the-video-music-awards-20130827">
+		The highs and lows of the Video Music Awards 
+</a></li><li><a href="/columns/buzz/buzz-from-the-finnish-to-the-start-20130827">
+		Buzz: From the Finnish to the start 
+</a></li><li><a href="/city-region/elmwood-allentown/street-artists-paint-first-of-several-planned-allentown-murals-20130827">
+	Mural initiative arrives in Allentown
+</a></li> 
+                                    <li><a href="/gusto" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+                              <!--
+                              <p b s:newslist Fields="Webhed,Websum" Taxonomywords="183,184,185,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,256,257,258,259,260,261,262,263,264,265" Kwor=1 count=1 Leadin=150 Datesort=1 Useobjects=1 Objectclass=10>
+                               < p b s:newslist Fields="Webhed,Websum" Taxonomywords="219" Kwor=1 count=1 Leadin=150 Datesort=1 Useobjects=1 Objectclass=10> -->
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/city-region/genesee-county/the-goo-goo-dolls-come-home-x2013-or-close-to-it-x2013-for-a-special-evening-at-darien-lake-20130825">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130825/CITYANDREGION/130829376/AR/0/AR-130829376.jpg&exactW=90&maxH=90&AlignV=top" /></span>
+   		The Goo Goo Dolls come home &#x2013; or close to it &#x2013; for a special evening at Darien Lake 
+    </a>
+</h2>
+<p>	DARIEN &#x2013; These homecoming gigs are always special. When our own Goo Goo Dolls come back to Buffalo &#x2013; well, almost Buffalo, Darien Lake b...
+</p>
+<a href="/city-region/genesee-county/the-goo-goo-dolls-come-home-x2013-or-close-to-it-x2013-for-a-special-evening-at-darien-lake-20130825" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div><!-- .navSubPrimary -->
+                        </div><!-- .navSub -->
+                    </li>
+                    <li class="navItem"><a href="http://www.legacy.com/obituaries/buffalonews/" target="_blank" class="navLink" rel="nofollow">Deaths</a>
+                        <div class="navSub">
+                            <div class="navSubPrimary clearfix">
+                                <ul class="listHorizBtn left">
+                                    <li><a href="/city-region/obituaries">Obituaries</a></li>
+                                    <li><a href="http://www.legacy.com/obituaries/buffalonews/" target="_blank" rel="nofollow">Today's Notices &amp; Books</a></li>
+                                    <li><a href="http://www.legacy.com/buffalonews/DeathNotices.asp?Page=GBGateway" target="_blank"rel="nofollow">Guest Books</a></li>
+                                    <li><a href="http://submit-obituary.buffalonews.com" rel="nofollow">Submit Obituary</a></li>
+                                    <li><a href="http://www.legacy.com/obituaries/buffalonews/obituary-browse.aspx?recent%20date=0&type=9" target="_blank" rel="nofollow">Memoriam</a></li>
+                                    <li><a href="/city-region/charity">Donate to Charity</a></li>
+                                </ul>
+                            </div>
+                            <div class="navSubSecondary clearfix">
+                                <!-- < p b s:newslist Fields="Webhed,Websum" Profile="1341" count=5 Datesort=1 Useobjects=1 Objectclass=25 days=8 Refant=0 Showref=0 ParagraphCount=1 Alltext=1 ExternalLinks=0 Extrapictures=0 Image=0 InternalLinks=0 KeywordLinks=0 Leadin=0 Multimedia=0 ProfileHeader=0 Source=0 Teaser=0 ThemeLinks=0>
+                                < p b s:newslist Fields="Webhed,Websum"  Profile="1341" count=1 Leadin=150 Datesort=1 Useobjects=1 Objectclass=26 days=8 Refant=0 Showref=0 ParagraphCount=1 Alltext=1 ExternalLinks=0 Extrapictures=0 Image=1 InternalLinks=0 KeywordLinks=0 Multimedia=0 ProfileHeader=0 Source=0 Teaser=0 ThemeLinks=0>-->
+                            <div class="box col50 left marginR">
+                                <h3 class="red">Latest Obituaries:</h3>
+                                <ul class="listVert listVertLines">
+                                     <li><a href="/city-region/obituaries/michael-w-vincent-business-executive-navy-veteran-20130827">
+		Michael W. Vincent, business executive, Navy veteran 
+</a></li><li><a href="/city-region/obituaries/vincent-illos-prominent-in-piano-restoration-20130827">
+		Vincent Illos, prominent in piano restoration 
+</a></li><li><a href="/city-region/obituaries/william-p-keane-state-trooper-navy-veteran-20130826">
+		William P. Keane, state trooper, Navy veteran 
+</a></li><li><a href="/city-region/obituaries/pasquale-tarquini-pizzeria-owner-realty-agent-20130826">
+		Pasquale Tarquini, pizzeria owner, realty agent 
+</a></li><li><a href="/city-region/obituaries/dr-john-d-malfa-practiced-internal-medicine-20130826">
+		Dr. John D. Malfa, practiced internal medicine 
+</a></li> 
+                                    <li><a href="/city-region/obituaries" class="rmred">View more &raquo;</a></li>
+                                </ul>
+                            </div>
+<div class="box col40 left">
+    <div class="story">
+<h2 class="storyHeadline">
+    <a href="/city-region/obituaries/florence-m-poley-92-first-teachers-aide-in-city-schools-20130826">
+    <span class="iconWrap marginR marginB"><img src="http://www.buffalonews.com/storyimage/BN/20130826/CITYANDREGION/130829224/AR/0/AR-130829224.jpg&exactW=90&maxH=180&AlignV=top" /></span>
+    		Florence M. Poley, 92, first teacher&#x2019;s aide in city schools 
+    </a>
+</h2>
+<p>	Aug. 20, 1921 &#x2013; Aug. 24, 2013Florence M. Poley died Saturday at her Amherst home, four days after her 92nd birthday.Born in Forestville, she wa...
+</p>
+<a href="/city-region/obituaries/florence-m-poley-92-first-teachers-aide-in-city-schools-20130826" class="rmred">Read more &raquo;</a>
+    </div>
+</div><!-- .navSubSecondary -->
+                            </div>             
+                        </div><!-- .navSub -->
+                    </li>    
+                </ul><!-- .navPrimary -->
+                <form id="searchSite" class="right" name="searchbox">
+                    <div class="search">
+                        <input id="globalSearchInput" class="inp search_input" name="crit" value="SEARCH" type="text" onFocus="blankDefault(this, 'SEARCH', true)" onBlur="blankDefault(this, 'SEARCH', false)" disabled>
+                        <button id="searchBtn" class="searchBtn" type="submit" disabled>
+                            <i class="icon-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <script>
+                    $(document).ready(function(){
+                        var $form = $('#searchSite');
+                        $form.find('#globalSearchInput').removeAttr('disabled').end().find('#searchBtn').removeAttr('disabled');
+                        $form.submit(function(e){
+                            e.preventDefault();
+                            var url = window.location.href;
+                            url = url.replace("http://", "");   
+                            var urlExplode = url.split("/");  
+                            var serverName = urlExplode[0]; 
+                            url = 'http://'+serverName+'/apps/pbcs.dll/search#'+encodeURIComponent($(this).find('#globalSearchInput').val());
+                            window.location = url;
+                        });
+                    });
+                </script>
+            </nav>
+
+
+<div id="content">
+	<div id="main" class="clearfix">
+
+		<div class="adPencil">
+			<script type="text/javascript">
+			//<![CDATA[
+			yld_mgr.place_ad_here("pencil");
+			//]]>
+			</script>
+		</div>         
+
+		<!-- <p b s:!macro cachetime=5 name="sectionMiddlecontent_001"  CacheQualifiers="Category,profileID"> -->
+
+		
+		<div class="mainFlex clearfix">
+	<!-- start breaking news -->
+	<!-- end breaking news -->
+	<!-- start live widget -->
+		<!--
+<div name="scheduledEventContatinerSub" style="display:;">
+	< p b s:macro name="live/templateChat_001" title="Live chat: UB & college football with Bob DiCesare" description="Discuss UB's opener at Ohio State, the Bulls' outlook in the Mid-American Conference and more with The News' Bob DiCesare." blogListCSV="" coverItLiveID="63484a5e29" boolStartScheduledContentOpen="boolStartScheduledContentOpen" saxoID="31308" widget1Name="widgets/blogs" widget1Parameters="limit=[5] filterList=[24]" widget2Name="" widget2Parameters="" widget3Name="" widget3Parameters="" widget4Name="" widget4Parameters="" widget5Name="" widget5Parameters="" widget6Name="" widget6Parameters="">
+</div>
+-->
+<!--
+<div name="scheduledEventContatinerSub" style="display:;">
+	< p b s:macro name="live/templateChatAndVideo_001" title="Live video & blog: Third mayoral debate" description="Immediately following tonight's hourlong mayoral debate, get video analysis at 9 p.m. from The News' Brian Meyer and debate panelist Bob McCarthy." blogListCSV="" coverItLiveID="883e02cfa9" boolStartScheduledContentOpen="boolStartScheduledContentOpen" saxoID="31309" widget1Name="widgets/blogs" widget1Parameters="limit=[5] filterList=[7,1,8]" widget2Name="" widget2Parameters="" widget3Name="" widget3Parameters="" widget4Name="" widget4Parameters="" widget5Name="" widget5Parameters="" widget6Name="" widget6Parameters="">
+</div>
+-->
+	<!-- end live widget -->
+	<ul id="breadcrumbs" class="listHoriz">
+		<li><a href="/apps/pbcs.dll/frontpage"><img src="/images/home.gif"> </a></li><li><a href="/section/BUSINESS" class="breadcrumbsCurrent">Business</a></li>
+	</ul>
+</div><!-- .mainFlex -->
+<div class="mainPrimary clearfix">
+	<div class="clearfix">
+							<!-- Top stories start -->
+							<div class="clearfix left">
+							<div>
+			<div class="clr"></div>
+			</div> 
+<!-- all section fronts and bills, sabres, taste, and HSS use prio = 1 -->
+	<div class="container sliderSectionTopWrap skinDarkGray">  
+	<h3 class="containerLabel skinRed">FEATURED STORY</h3> 
+	   <!-- root element for the items -->
+	   <ul id="sliderSection">
+	       <!-- 1-15 -->
+	<li class="">
+		<div style="padding:0 6px;">
+     	<h1 class="storyHeadline" >
+    	<a href="/business/for-food-companies-recipes-are-sacred-20130826">
+        		For food companies, recipes are sacred 
+        </a>
+		</h1>
+        <div class="storyTopMedia left" style="margin-bottom:.6em;"><!-- This container will contain the video, image or slideshow for the top story -->
+            <a href="/business/for-food-companies-recipes-are-sacred-20130826" style="text-decoration:none !important;"><span class="imgWrap">
+                <img src="http://www.buffalonews.com/storyimage/BN/20130826/BUSINESS/130829213/AR/0/AR-130829213.jpg&exactW=405&maxH=550&AlignV=top" /></span>
+                <div class="caption" style="width:405px;"></div>
+            </a>
+        </div>
+        <div class="storyTopText left" style=" margin:0 0 0 1em;">  
+            <p >
+            <p>	Coca-Cola keeps the recipe for its 127-year-old soda inside an imposing steel vault that&#x2019;s bathed in red security lights. Several cameras monitor the area to make sure the fizzy formula stays a secret.
+</p>
+            </p>
+            <a href="/business/for-food-companies-recipes-are-sacred-20130826" class="right">Read more &raquo;</a>
+            <!--<ul class="listRelated listBullet">
+                <li><a href="/">Related article</a></li>
+            </ul>-->
+        </div>
+		</div>
+	</li>
+	   </ul>
+	</div>
+	<!-- old slider -->
+	<!-- <script type="text/javascript"> 
+		//create slider for section
+	  $(document).ready(function(){
+		$('#sliderSection').bxSlider({
+			wrapperClass: 'sliderSectionTop',
+			nextImage: '/images/bxSlider/bx_styles/gray_next.png',
+			prevImage: '/images/bxSlider/bx_styles/gray_prev.png',											
+			autoHover: true,
+			auto: 'true',
+			autoDelay: 10000,
+			pause: 10000,
+			pager: true,
+			pagerType: 'short',
+			pagerLocation: 'bottom'
+			//autoControls: true,
+			//startText: 'play',
+			//stopText: 'pause',
+		});
+	  });
+	 </script> -->
+	</div>
+	<!-- #Top storeis end -->
+		<div class="container clearfix left skinLines">
+			<!-- conditional for the Golden Anniversaries Label -->
+			<h3 class="containerLabel">latest headlines</h3>
+			<div class="content clearfix">
+				<header>
+				</header>
+<!-- Section fronts only -->
+	<div class="box col40 left">
+		<div class="story">
+			<h2 class="storyHeadline"><a href="/business/production-rises-sharply-in-area-plants-20130826">
+	Production rises sharply in area plants 
+			<p b s:macro name="setWebhed" webhed="" title="Production rises sharply in area plants" kicker="">
+			</a>
+			</h2>
+			 <p>
+<p b s:macro name="setWebsum" websum="Factories&#x2019; growth hits highest level in a year." firstpara="Local manufacturers say their business heated up during July, fueled by a spike in production and a strong uptick in the flow of new orders.A new survey of local purchasing managers found that growth at the region&#x2019;s factories picked up markedly last month, pushing growth at the Buffalo Niagara region&#x2019;s factories to its highest level in a year. Production figures from local factories were the highest in nine years.The solid growth during July extended the spurt at local factories into its fifth month, despite a slowdown in the pace of hiring by Western New York manufacturers and the continued sting from higher prices.&#x201c;We&#x2019;ve tied together a few months of positive results locally,&#x201d; said Jay K. Walker, the Niagara University economist who compiles the report that offers one of the earliest glimpses at how a key part of the local economy is faring. &#x201c;We&#x2019;ll see how it trends coming into the cooler weather.&#x201d;The National Association of Purchasing Management &#x2013; Buffalo said its index of business activity at local factories show growth rose sharply during July to its highest level since July 2012, extending a growth streak that begin in March.The group&#x2019;s index strengthened to 61.4 last month, up from 53.2 in June, as production at local factories surged, and the flow of new orders to the region&#x2019;s manufacturers grew for the first time in three months. That more than offset a slowdown in the pace of hiring by manufacturers. An index reading of more than 50 signals growth.Much of the improvement during July came from a surge in production that saw half of the firms surveyed report an increase in output at their factories, up from a third during June. That pushed the group&#x2019;s production index into growth territory for the first time since December &#x2013; at 73.4. It was the highest reading for the production benchmark for any month since July 2004.The strong July production is a sign of continued expansion &#x201c;and possibly a bit of strength moving into late summer,&#x201d; Walker said.The recovery in production was accompanied by a rebound in the flow of new orders, which reversed a two-month decline to begin growing again during July. The group&#x2019;s new order index rose to a three-month high of 59.9 during July, as half of the managers surveyed reported an increase in orders at their firms, up from 44 percent during June.Local factories added to their workforces for the second straight month during July, although the pace of hiring, which grew for the first time in 11 months during June, slowed last month. The number of firms adding workers dropped to 20 percent during July, down from a third during June, although the percentage of firms maintaining their workforce at the same size held relatively steady at 70 percent. Inventories, which jumped to their highest levels since last summer in May, grew robustly again during July, extending the streak of expanding stockpiles to five months. Commodity prices rose at a faster pace, reversing the slowdown in inflationary pressure that the purchasing managers noted in June. email: drobinson@buffnews.com"></p>
+			 <a href="/business/production-rises-sharply-in-area-plants-20130826">Read more &raquo;</a>
+		</div>
+	</div>
+	<div class="box col66 right">
+    <ul class="listVertMega listVertLines ">
+		<li><a href="/city-region/downtown-waterfront/seneca-buffalo-creek-casino-wows-at-grand-opening-20130827"> 
+	Seneca Buffalo Creek Casino wows at grand opening 
+<!-- p b s:macro name="setWebhed" webhed="" title="Seneca Buffalo Creek Casino wows at grand opening" kicker="<p>Having survived lawsuits, an economic downturn and a revision of the original plan, the downtown entertainment venue&#x2019;s grand opening is greeted by appreciative crowds</p>" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829087" multiMediaItems="" storyGUID="{6F3CEDD6-7557-4463-BE0C-16E6E8423CFF}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/associated-press/ap-national-news/syrian-electronic-army-hacks-new-york-times-website-20130827"> 
+	&#x2018;Syrian Electronic Army&#x2019; hacks New York Times website 
+<!-- p b s:macro name="setWebhed" webhed="" title="&#x2018;Syrian Electronic Army&#x2019; hacks New York Times website" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829095" multiMediaItems="" storyGUID="{1C9AD267-91FD-490B-BADF-9469F7A40FC4}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/fast-plant-is-a-boost-to-underdog-automaker-mazda-20130827"> 
+	Fast plant is a boost to underdog automaker Mazda 
+<!-- p b s:macro name="setWebhed" webhed="" title="Fast plant is a boost to underdog automaker Mazda" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829111" multiMediaItems="" storyGUID="{62485CE5-65A6-4549-ADD2-6EC1585389A1}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/us-home-prices-rise-by-121-in-june-20130827"> 
+	U.S. home prices rise by 12.1% in June 
+<!-- p b s:macro name="setWebhed" webhed="" title="U.S. home prices rise by 12.1% in June" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829112" multiMediaItems="" storyGUID="{C5F42401-C494-4411-8D27-ADFA756288F1}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/sonoma-grille-to-serve-last-meal-20130827"> 
+	Sonoma Grille to serve last meal
+<!-- p b s:macro name="setWebhed" webhed="" title="Sonoma Grille to serve last meal
+" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829115" multiMediaItems="" storyGUID="{5DD0A944-3694-4CFD-86CA-10F3D2F7F6E2}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/fast-food-wars-have-burger-king-offering-french-fry-burger-for-1-20130827"> 
+	Fast-food wars have Burger King offering &#x2018;French Fry Burger&#x2019; for $1 
+<!-- p b s:macro name="setWebhed" webhed="" title="Fast-food wars have Burger King offering &#x2018;French Fry Burger&#x2019; for $1" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829116" multiMediaItems="" storyGUID="{E7CC1626-68C6-424A-B4C4-FB03DBCFE1D6}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/tensions-over-syria-hammer-us-stocks-20130827"> 
+	Tensions over Syria hammer U.S. stocks 
+<!-- p b s:macro name="setWebhed" webhed="" title="Tensions over Syria hammer U.S. stocks" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829117" multiMediaItems="" storyGUID="{1AECCF5A-867D-464A-9198-6ED39298F024}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/consumer-confidence-rises-over-optimism-on-hiring-wages-20130827"> 
+	Consumer confidence rises over optimism on hiring, wages 
+<!-- p b s:macro name="setWebhed" webhed="" title="Consumer confidence rises over optimism on hiring, wages" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829119" multiMediaItems="" storyGUID="{FD50C583-EAD8-4F26-8C16-3459FA9588C5}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/sealing-devices-adding-to-solar-energy-capacity-at-lancaster-facility-20130827"> 
+	Sealing Devices adding to solar energy capacity at Lancaster facility 
+<!-- p b s:macro name="setWebhed" webhed="" title="Sealing Devices adding to solar energy capacity at Lancaster facility" kicker="" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829121" multiMediaItems="" storyGUID="{F3FEF59F-9A2B-4DE1-A7FD-C0982235BB77}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li><li><a href="/business/in-focus-christopher-johnston-world-trade-center-buffalo-niagara-president-20130827"> 
+	In Focus: Christopher Johnston, World Trade Center Buffalo Niagara president 
+<!-- p b s:macro name="setWebhed" webhed="" title="In Focus: Christopher Johnston, World Trade Center Buffalo Niagara president" kicker="<p>In Focus  / Christopher Johnston, World Trade Center Buffalo Niagara president</p>" -->
+ <!-- < % MultiMediaItem % > < % InternalLinks % > --> <!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829124" multiMediaItems="" storyGUID="{AD09D18C-BE19-4D3D-BCE2-6E8714E51B8F}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="2625392048001" galleryLinks="">
+-->
+</a></li>
+	</ul>  
+	<a href="/section/BUSINESS&profile=1005&template=articleListing" >View more &raquo;</a> 
+</div>
+							<footer>
+							</footer>
+						</div><!-- .content -->
+					</div>
+				</div>
+
+			<div class="container containerWidthReset clearfix skinLines">
+		<h3 class="containerLabel">Videos</h3>
+		   <div class="content">
+			 <header> 
+			 </header>
+				<div class="content">
+					<ul class="listHoriz"><li style="width:184px;"><a href="http://video.buffalonews.com/?video=2602645498001" style="position:relative;"><span class="imgWrap">
+				 <img src="http://brightcove.vo.llnwd.net/d21/unsecured/media/1336131382001/1336131382001_2602614114001_video-still-for-video-2602645498001.jpg?pubId=1336131382001" width="180px" height="109px"></span>
+				 <span style="background:#333333; padding:6px; height:14px; width:14px; position:absolute; top:83px;"><i class="icon-facetime-video icon-white"></i></span>
+				 In Focus: Karl Frizlen, Horsefeathers Market & Residences
+				 </a></li><li style="width:184px;"><a href="http://video.buffalonews.com/?video=2562233563001" style="position:relative;"><span class="imgWrap">
+				 <img src="http://brightcove.vo.llnwd.net/e1/pd/1336131382001/1336131382001_2562183985001_video-still-for-video-2562233563001.jpg?pubId=1336131382001" width="180px" height="109px"></span>
+				 <span style="background:#333333; padding:6px; height:14px; width:14px; position:absolute; top:83px;"><i class="icon-facetime-video icon-white"></i></span>
+				 In Focus: Warren E. Clark, Better Business Bureau
+				 </a></li><li style="width:184px;"><a href="http://video.buffalonews.com/?video=2555873917001" style="position:relative;"><span class="imgWrap">
+				 <img src="http://brightcove.vo.llnwd.net/e1/pd/1336131382001/1336131382001_2555924073001_vs-51ea296ce4b029d6d35e0104-806787295001.jpg?pubId=1336131382001" width="180px" height="109px"></span>
+				 <span style="background:#333333; padding:6px; height:14px; width:14px; position:absolute; top:83px;"><i class="icon-facetime-video icon-white"></i></span>
+				 Native American Woodcarver Robert D'Alimonte
+				 </a></li></ul>
+				</div>
+				<footer>
+					<a href="http://util.buffalo.com/video" class="linkUix right">More videos &raquo;</a>
+				</footer>
+			</div><!-- .content -->
+		</div>
+	<div class="container containerWidthReset clearfix skinLines">
+		<h3 class="containerLabel">Photos</h3>
+			<!-- City & Region -->
+<!-- Sports -->
+<!-- Bills & NFL -->
+<!-- Sabres & NHL -->
+<!-- High Schools -->
+<!-- Business -->
+<div class="box col70 left">
+    <a href="/apps/pbcs.dll/gallery?Site=BN&Date=20130823&Category=PHOTOGALLERIES&ArtNo=821009997&Ref=PH" style="font-weight:bold;"><span class="imgWrap"><img src="http://www.buffalonews.com/apps/pbcsi.dll/bilde?Site=BN&Date=20130823&Category=PHOTOGALLERIES&ArtNo=821009997&Ref=PH&Item=1&NewTbl=1&exactW=389&MaxH=252&AlignV=top" /></span>
+    National Buffalo Wing Festival
+    </a>
+    <!--<a href="/apps/pbcs.dll/gallery?Site=BN&Date=20130823&Category=PHOTOGALLERIES&ArtNo=821009997&Ref=PH">View more &raquo;</a>-->
+    <footer></footer>	
+</div>
+<div class="box col33 right">
+    <header>
+    </header>
+    <ul class="listVert">
+       <li><a href="/apps/pbcs.dll/gallery?Site=BN&Date=20121202&Category=PHOTOGALLERIES&ArtNo=120209999&Ref=PH" style="position:relative; display:block;"><span class="imgWrap"><img src="http://www.buffalonews.com/apps/pbcsi.dll/bilde?Site=BN&Date=20121202&Category=PHOTOGALLERIES&ArtNo=120209999&Ref=PH&Item=1&NewTbl=1&exactW=165&exactH=107&AlignV=top" /></span>
+        <span style="background:#333333; padding:6px; height:14px; width:14px; position:absolute; top:81px;"><i class="icon-camera icon-white"></i></span>
+        Inside Buffalo's General Mills</a></li>
+       <li><a href="/apps/pbcs.dll/gallery?Site=BN&Date=20121009&Category=PHOTOGALLERIES&ArtNo=100909998&Ref=PH" style="position:relative; display:block;"><span class="imgWrap"><img src="http://www.buffalonews.com/apps/pbcsi.dll/bilde?Site=BN&Date=20121009&Category=PHOTOGALLERIES&ArtNo=100909998&Ref=PH&Item=1&NewTbl=1&exactW=165&exactH=107&AlignV=top" /></span>
+        <span style="background:#333333; padding:6px; height:14px; width:14px; position:absolute; top:81px;"><i class="icon-camera icon-white"></i></span>
+        New vision for river property</a></li>
+</ul>
+    <footer>
+		<a href="http://buffalonews.mycapture.com/mycapture/index.asp" class="linkUix right" target="_blank">Buy News photos &raquo;</a>
+    </footer>
+</div>
+<!-- Opinion -->
+<!-- Life & Arts -->
+<!-- Taste -->
+<!-- Gusto -->
+	</div>
+	<div class="container containerWidthReset clearfix skinLines">
+	<h3 class="containerLabel">Latest columns</h3>
+	<div>
+		<!-- user for Blogs block -->
+	<!--
+	<div class="Blogueros">
+	-->
+	<div>
+		<ul class="listHoriz" id="columnistSlider">
+<!--Blogger: 1<br>
+Staff ID: 59<br>
+First Name: Samantha<br>
+Last Name: Maziarz Christmann<br>
+1
+Link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.buffalonews.com/business/tips-for-shopping-for-school-supplies-20130825<br>
+Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tips for shopping for school supplies<br>
+-------------------<br>-->
+<li style="width:75px;padding:0 1.1em 0 0;line-height:16px;">
+<script language="javascript" type="text/javascript">
+	var blgrimglink_130829334 = "/apps/pbcsi.dll/persbilde?Avis=IM&ID=59&border=0&MaxH=63&exactW=63'";
+var blgrstff_130829334 = '59';
+var blgrbyline_130829334 = 'Samantha Maziarz Christmann' ;
+var blgrId_130829334="59"
+</script>
+<!--
+<div class="BlogsBox">
+        <div class="BlogsImgBox">
+        <img id="BLOG_130829334" src="" alt="Tips for shopping for school supplies" width="63" height="63" />
+        </div>
+        <div class="BlogsContent">
+          <div class="BlogsHeader"><a id="blgrlinkBLOG_130829334" href="#">Tips for shopping for school supplies</a></div>
+          <div id="blg_130829334"></div>          
+		</div>
+        <div class="spacer"></div>
+</div>
+-->
+<script language="javascript" type="text/javascript">
+<!--	
+	$("#BLOG_130829334").attr("src",blgrimglink_130829334);
+	if(blgrstff_130829334!='') { 
+		$("#blgrlinkBLOG_130829334").attr("href", "/section/BLOGS/&bstart=1&by=blgrstff&tags="+blgrstff_130829334); 
+	}
+	else if(blgrbyline_130829334!='') { 
+		$("#blgrlinkBLOG_130829334").attr("href", "/section/BLOGS/&bstart=1&tags="+blgrId_130829334); 
+	}
+	else { 
+		$("#blgrlinkBLOG_130829334").attr("href", "/section/BLOGS/&bstart=1"); 
+	}	
+	if(blgrbyline_130829334!="")	$("#blg_130829334").html("Por : <span id='byline_txt_130829334'>"+blgrbyline_130829334+"</span>");
+	$("#blgrtabcntr").text(1);
+//-->
+</script>
+<!--
+-->
+<span class="imgWrap">
+	<!-- <img src="/apps/pbcsi.dll/persbilde?ID=10&border=0&MaxH=63&exactW=63"> -->
+	<img src="/apps/pbcsi.dll/persbilde?ID=59&border=0&MaxH=75&exactW=75" alt="Samantha Maziarz Christmann" height="63px" width="63px">
+</span>
+<a href="http://www.buffalonews.com/business/tips-for-shopping-for-school-supplies-20130825" style="">
+	<span class="name" style="font-weight:bold;font-size:0.85em;display:block;">Samantha<br /> Maziarz Christmann</span>
+	<span style="font-size:0.95em;"><em>Tips for shopping for school supplies</em></span>
+</a>
+</li>
+		</ul>
+	</div>
+<!--
+	<script type="text/javascript">
+	  $(document).ready(function(){
+		$('#columnistSlider').bxSlider({
+			'infiniteLoop':false,
+			'speed':800,
+			'displaySlideQty':7,
+			'moveSlideQty':1
+		});
+	  });
+	</script> 
+-->
+	<!--
+		<div class="spacer"></div>			  
+	</div>
+	-->
+	</div>
+</div>
+		<div class="container containerWidthReset clearfix skinLines">
+		<h3 class="containerLabel">Blogs</h3>
+		<div>
+			<!-- City & Region -->
+<!-- Sports -->
+<!-- Bills & NFL -->
+<!-- Sabres & NHL -->
+<!-- High Schools -->
+<!-- Business -->
+	<ul class="listVert" style="float:none !important;"><li style="border-bottom:1px #ccc solid;padding: .6em 0;line-height:16px;"><a href="http://blogs.buffalonews.com/strictlybusiness/2013/08/hospice-buffalo-restructuring-expands-pediatric-program.html"><img style="float:left;width:35px;padding-right:15px;" src="/images/blogs/Strictly Business.jpg?v3" /><span style="font-weight:bold;font-size: 1.30em;font-family: MillerHeadline,Georgia,Times">Strictly Business: </span><em>Hospice Buffalo restructuring expands pediatric program</em></a>
+	</li><li style="border-bottom:1px #ccc solid;padding: .6em 0;line-height:16px;"><a href="http://blogs.buffalonews.com/strictlybusiness/2013/08/busy-factories-for-now.html"><img style="float:left;width:35px;padding-right:15px;" src="/images/blogs/Strictly Business.jpg?v3" /><span style="font-weight:bold;font-size: 1.30em;font-family: MillerHeadline,Georgia,Times">Strictly Business: </span><em>Busy factories, for now</em></a>
+	</li><li style="border-bottom:1px #ccc solid;padding: .6em 0;line-height:16px;"><a href="http://blogs.buffalonews.com/strictlybusiness/2013/08/two-niagara-county-hospitals-cited-for-low-surgery-costs.html"><img style="float:left;width:35px;padding-right:15px;" src="/images/blogs/Strictly Business.jpg?v3" /><span style="font-weight:bold;font-size: 1.30em;font-family: MillerHeadline,Georgia,Times">Strictly Business: </span><em>Two area hospitals cited for low hip, knee replacement surgery costs</em></a>
+	</li><li style="border-bottom:1px #ccc solid;padding: .6em 0;line-height:16px;"><a href="http://blogs.buffalonews.com/strictlybusiness/2013/08/weekend-business.html"><img style="float:left;width:35px;padding-right:15px;" src="/images/blogs/Strictly Business.jpg?v3" /><span style="font-weight:bold;font-size: 1.30em;font-family: MillerHeadline,Georgia,Times">Strictly Business: </span><em>Weekend business...</em></a>
+	</li><li style="border-bottom:1px #ccc solid;padding: .6em 0;line-height:16px;"><a href="http://blogs.buffalonews.com/strictlybusiness/2013/08/ub-engineer-honored-by-peers-in-local-chemical-organization.html"><img style="float:left;width:35px;padding-right:15px;" src="/images/blogs/Strictly Business.jpg?v3" /><span style="font-weight:bold;font-size: 1.30em;font-family: MillerHeadline,Georgia,Times">Strictly Business: </span><em>UB engineer honored by peers in local chemical organization</em></a>
+	</li><a href="http://blogs.buffalonews.com">More &raquo;</a></ul>
+<!-- Opinion -->
+<!-- Life & Arts -->
+<!-- Taste -->
+<!-- Gusto -->
+		</div>
+	</div>
+	<!-- subsection blocks -->
+	<!-- City & Region -->
+<!-- Sports -->
+<!-- Business -->
+	<div class="container containerWidthReset clearfix skinLines sub-section">
+		<h3 class="containerLabel"><a href="/business/money-smart">Money Smart</a></h3>
+		<div class="content clearfix">
+        <div class="box col40 left">
+            <div class="story">
+                <h2 class="storyHeadline"><a href="/business/money-smart/email-phishing-attacks-by-hackers-are-growing-in-number-intensity-20130826"> 
+                		Email &#x2018;phishing&#x2019; attacks by hackers are growing in number, intensity 
+</a>
+                </h2>
+                 <p>	At least 2 million people received the email May 16 notifying them that an order they had just made on &#x201c;Wallmart&#x2019;s&#x201d; website was b...
+</p>
+                 <a href="/business/money-smart/email-phishing-attacks-by-hackers-are-growing-in-number-intensity-20130826">Read more &raquo;</a>
+            </div>
+        </div>
+<div class="box col66 right">
+    <ul class="listVertMega listVertLines ">
+<li><a href="/business/money-smart/direct-mail-offers-for-credit-cards-are-on-the-rise-20130826">
+		Direct mail offers for credit cards are on the rise 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829273" multiMediaItems="" storyGUID="{83C62343-E6DE-4356-8B2F-FE7A2B89BB32}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/money-smart/does-using-prescription-coupon-card-lead-to-loss-of-privacy-20130826">
+		Does using prescription coupon card lead to loss of privacy? 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829274" multiMediaItems="" storyGUID="{9233FFC4-495D-4AF1-88A9-8F2BE4546DDD}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/money-smart/woman-has-been-familys-financial-rock-20130826">
+		Woman has been family&#x2019;s financial rock 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829275" multiMediaItems="" storyGUID="{52DE70C0-661C-48A8-B3EA-229E003C853A}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/money-smart/volunteering-ups-odds-for-landing-a-job-20130826">
+		Volunteering ups odds for landing a job 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829276" multiMediaItems="" storyGUID="{CD86BA89-9E72-4AD2-AC6E-889E6F5C001A}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/money-smart/know-your-rights-if-youre-bumped-from-a-flight-20130826">
+		Know your rights if you&#x2019;re bumped from a flight 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829277" multiMediaItems="" storyGUID="{7AA0D125-6323-4FDA-BAC6-1CA2F9F7C8E1}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+    </ul>
+			<a href="/business/money-smart" >View more &raquo;</a> </div>
+		</div>
+	</div>
+	<div class="container containerWidthReset clearfix skinLines sub-section">
+		<h3 class="containerLabel"><a href="/business/on-the-record">On The Record</a></h3>
+		<div class="content clearfix">
+        <div class="box col40 left">
+            <div class="story">
+                <h2 class="storyHeadline"><a href="/business/on-the-record/on-the-record-aug-27-2013-20130826"> 
+                		On the Record / Aug. 27, 2013 
+</a>
+                </h2>
+                 <p>	The Ross Eye Institute added Dr. Matthew Pihlblad to its team of ophthalmologists. Pihlblad will practice in his subspecialty of pediatric ophthalmolo...
+</p>
+                 <a href="/business/on-the-record/on-the-record-aug-27-2013-20130826">Read more &raquo;</a>
+            </div>
+        </div>
+<div class="box col66 right">
+    <ul class="listVertMega listVertLines ">
+<li><a href="/business/business-people/business-people-michael-j-pohl-named-vice-president-susan-v-martin-appointed-director-and-more-20130824">
+		Business people / Michael J. Pohl named vice president, Susan V. Martin appointed director and more 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829381" multiMediaItems="" storyGUID="{C8FB3CE6-A875-4434-8EF5-973078968628}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/on-the-record/on-the-record-aug-23-2013-20130822">
+		On the Record / Aug. 23, 2013 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829662" multiMediaItems="" storyGUID="{95CA984A-44AE-475A-B576-21C036EFE951}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/on-the-record/on-the-record-aug-22-2013-20130821">
+		On the Record / Aug. 22, 2013 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829803" multiMediaItems="" storyGUID="{F72A0D1D-F10A-475D-AEE3-DB87A927C600}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/on-the-record/on-the-record-aug-21-2013-20130820">
+		On the Record / Aug. 21, 2013 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829947" multiMediaItems="" storyGUID="{F9AEB967-B699-4DAE-897F-2C0185856EF5}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/on-the-record/on-the-record-aug-20-2013-20130819">
+		On the Record / Aug. 20, 2013 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130819027" multiMediaItems="" storyGUID="{CC1A37DF-788E-4137-8686-CCBEF8B06D49}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+    </ul>
+			<a href="/business/on-the-record" >View more &raquo;</a> </div>
+		</div>
+	</div>
+	<div class="container containerWidthReset clearfix skinLines sub-section">
+		<h3 class="containerLabel"><a href="/business/real-estate-transactions">Real Estate Transcations</a></h3>
+		<div class="content clearfix">
+        <div class="box col40 left">
+            <div class="story">
+                <h2 class="storyHeadline"><a href="/business/niagara-county-transactions/niagara-county-real-estate-transactions-20130824"> 
+                		Niagara County Real Estate transactions 
+</a>
+                </h2>
+                 <p>	CAMBRIA&#x2022; Lower Mountain Road, Dieter Fallgatter; Diane L. Fallgatter to Kristen Trabert; Kenneth B. Trabert, $200,000.HARTLAND&#x2022; Hosmer R...
+</p>
+                 <a href="/business/niagara-county-transactions/niagara-county-real-estate-transactions-20130824">Read more &raquo;</a>
+            </div>
+        </div>
+<div class="box col66 right">
+    <ul class="listVertMega listVertLines ">
+<li><a href="/business/erie-county-transactions/erie-county-real-estate-transactions-20130824">
+		Erie County Real Estate Transactions 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829385" multiMediaItems="" storyGUID="{00FBB2B1-2E90-48C4-9055-1AE002FB9EB6}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/feed/paladino-buys-former-holy-angels-academy-20130824">
+		Paladino buys former Holy Angels Academy 
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130829430" multiMediaItems="" storyGUID="{4C12C362-7CA2-4773-BEA4-1C1807F06CD6}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/erie-county-transactions/erie-county-real-estate-transactions-20130819">
+		Erie County Real Estate Transactions
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130819050" multiMediaItems="" storyGUID="{BAFBC960-9571-4D2B-84E7-8844A9AB6D75}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/niagara-county-transactions/niagara-county-real-estate-transactions-20130819">
+		Niagara County Real Estate Transactions
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130819051" multiMediaItems="" storyGUID="{17033AE3-B3E9-43AB-A4C8-C30518FA23C3}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+<li><a href="/business/niagara-county-transactions/niagara-county-real-estate-transactions-20130811">
+		Niagara County Real Estate Transactions
+<!--
+< p b s:macro name="article/getAssetIndicator" articleID="130819851" multiMediaItems="" storyGUID="{0F693AD9-B3E2-480B-9ED1-477EB239C48E}">
+< p b s:macro name="article/displayAssetIndicator" bcVideo="" galleryLinks="">
+-->
+</a></li>
+    </ul>
+			<a href="/business/real-estate-transactions" >View more &raquo;</a> </div>
+		</div>
+	</div>
+<!-- Opinion -->
+<!-- Life & Arts -->
+<!-- Gusto -->
+<!-- Taste -->
+	<!--
+	<div class="container clearfix skinLines">
+		<h3 class="containerLabel">Business Columnists</h3>
+		<p b s:macro name="columns/getLatestColumns">
+		<footer>
+		</footer>
+	</div>
+	-->
+	<div class="container clearfix skinBox">
+	<h3 class="containerLabel">TBN Community</h3>
+		<!--  tabs begins-->
+		<div class="tab-box"> 
+			<a href="javascript:;" class="tabLinkMain activeLinkMain" id="contmain-1">Facebook</a> 
+			| <a href="javascript:;" class="tabLinkMain " id="contmain-2">Twitter</a>
+			| <a href="javascript:;" class="tabLinkMain " id="contmain-3">Most commented</a>	
+		</div>    
+		<!--  <a href="/" class="linkUix right">More &raquo;</a> -->
+		<div class="tabcontentmain paddingAll" id="contmain-1-1" style="height:400px;"> 
+		<!-- TBN Community (Facebook) --> 			
+		<div class="fb-recommendations" data-site="http://www.buffalonews.com" data-width="595" data-height="325" data-header="false" data-border-color="#ffffff" data-font="lucida grande"></div>
+		</div> <!-- end tabcontentmain for facebook -->
+		<!-- TBN Community (Twitter) -->
+		<div class="tabcontentmain paddingAll hide" id="contmain-2-1" > 
+			<a class="twitter-timeline"  href="https://twitter.com/TheBuffaloNews"  data-widget-id="253230625824313344">Tweets by @TheBuffaloNews</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div> 
+		<!-- end tabcontentmain for twitter -->	
+		<div class="tabcontentmain paddingAll hide" id="contmain-3-1"> 
+			<ul class="listVert listVertLine"><li><a href="http://www.buffalonews.com/city-region/buffalo-public-schools/on-eve-of-mediators-report-buffalo-teachers-say-theyre-underpaid-20130820" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">194</span>On eve of mediator's report, Buffalo teachers say they're underpaid </a></li><li><a href="http://www.buffalonews.com/city-region/erie-county/obama-trip-to-buffalo-emphasizes-ambitious-plan-to-control-college-costs-20130822" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">154</span> Obama trip to Buffalo emphasizes 'ambitious' plan to control college costs </a></li><li><a href="http://www.buffalonews.com/columns/dr-zobra-paster/zorba-paster-20130824" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">146</span>Zorba Paster: Autism-immunization link is a myth </a></li><li><a href="http://www.buffalonews.com/city-region/medical/birthing-center-to-open-in-buffalo-in-the-fall-20130824" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">79</span> Birthing center to open in Buffalo in the fall </a></li><li><a href="http://www.buffalonews.com/city-region/gop-chairmen-say-obama-trip-wont-accomplish-much-20130821" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">62</span> GOP chairmen say Obama trip won't accomplish much </a></li></ul>
+		</div> 
+		<!-- tabs ends -->
+	<footer>
+	</footer>
+</div>
+		<div class="container clearfix skinBox">
+			<h3 class="containerLabel">Business</h3>
+			<p style="padding:10px 15px 0">The Buffalo News Business section gives you local business news first, with depth and context, keeping you up on the Buffalo business landscape. Stories deal with local development, banks and financial institutions, the economy, manufacturers, retail outlets and small business, in addition to stock market reports from Wall Street. The business section is your source for all Western New York and Buffalo business news.</p>
+		</div>
+</div><!-- .mainPrimary -->
+
+					<!-- <p b s:macro name="sectionRightrail"> -->
+			<!-- City & Region -->
+<!-- Sports -->
+<!-- Bills & NFL profileID=1082 -->
+<!-- Sabres & NHL profileID=1104 -->
+<!-- High Schools profileID=1101 -->
+<!-- Business -->
+	<div class="mainSecondary "> 
+	<div class="adMediumBox centerInner">	
+		<script type="text/javascript">
+		//<![CDATA[		
+        yld_mgr.place_ad_here("medium_box_1");
+		//]]>
+        </script>
+    </div>
+    <div class="container containerWidthReset clearfix skinLines" style="padding-bottom:0;">
+	<style type="text/css">
+	a.secondaryBtn {font-size:.85em; display:inline-block; padding:.3em .6em; font-weight:bold;/*font-size:1em;*/ background:#9e0700; color:#ffffff; border-radius:3px; }
+	a.secondaryBtn:hover { background:#bd0800;}
+	</style>
+	<h3 class="containerLabel">Stay Informed</h3>
+	<ul class="listVert listVertLines">
+		<li style="padding:.6em 0;">
+			<h2><a href="" data-reveal-id="alertsModal" data-animation="fade" onclick="_gaq.push(['_trackEvent', 'Signup Rightrail', 'Click', 'Alerts Signup']);">
+				<span class="iconWrap" style="width:46px; height:46px; margin:0 15px 46px 0; background:url('http://buffalonews-resources.s3.amazonaws.com/img/sprite-v2.png') no-repeat -321px -309px;"></span> 
+				Alerts
+			</a></h2>
+			<p style="margin-bottom:.3em;">Text message notifications of news happening now.</p>
+			<a href="" class="secondaryBtn" data-reveal-id="alertsModal" data-animation="fade"
+			onclick="_gaq.push(['_trackEvent', 'Signup Rightrail', 'Click', 'Alerts Signup']);">Sign up</a>
+		</li>
+		<li style="padding:.6em 0;"><h2>
+			<a href="" data-reveal-id="newslettersModal" data-animation="fade" onclick="_gaq.push(['_trackEvent', 'Signup Rightrail', 'Click', 'Newsletters Signup']);">
+				<span class="iconWrap marginR" style="width:46px; height:60px; margin:0 15px 46px 0; background:url('http://buffalonews-resources.s3.amazonaws.com/img/sprite-v2.png') no-repeat -456px -309px;"></span>
+				Newsletters
+			</a></h2>
+			<p style="margin-bottom:.3em;">The top stories from your favorite sections delivered to your inbox.</p>
+			<a href="" class="secondaryBtn" data-reveal-id="newslettersModal" data-animation="fade" onclick="_gaq.push(['_trackEvent', 'Signup Rightrail', 'Click', 'Newsletters Signup']);">Sign up</a>
+		</li>
+	</ul>
+</div>
+    <style>
+	a.specialCoverage:link {display:block;}
+	a.specialCoverage:hover p, a.specialCoverage:hover h2 {color: #9E0700;text-decoration:none;}
+</style>
+<div class="container containerWidthReset clearfix skinLines" style="padding-bottom:0;">
+	<h3 class="containerLabel">Business Wire</h3>
+	<a class="specialCoverage" href="http://www.businesswire.com/portal/site/buffalonews/" rel="nofollow">
+		<img src="http://www.buffalonews.com/images/business-wire.jpg" style="width:35px; height:35px; float: left; margin:0 15px 46px 0;" />
+		<h2 class="storyHeadline" style="font-size:1.4em">Business Wire</h2>
+		<p><em>Press releases from Business Wire.</em></p>
+	</a>
+</div>
+	<!-- stocks widget -->  
+	<div class="widgetWrap">
+		<script type="text/javascript" src="http://markets.buffalonews.com/buffnews?Module=watchlist&Ticker=GE+IBM+AAPL+PG+GOOG&Output=JS"></script>
+<a href="http://markets.buffalonews.com/buffnews/markets" class="marketButton" rel="nofollow">Markets</a>
+<div style="clear:both;"></div>
+<style type="text/css">
+.marketButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #45a845;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #45a845;
+	box-shadow:inset 0px 1px 0px 0px #45a845;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #34c234), color-stop(1, #009900) );
+	background:-moz-linear-gradient( center top, #34c234 5%, #009900 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#34c234', endColorstr='#009900');
+	background-color:#34c234;
+	border:1px solid #118011;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:10px;
+	font-weight:bold;
+	padding:4px 15px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #2f732f;
+	float:right;
+}.marketButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #009900), color-stop(1, #34c234) );
+	background:-moz-linear-gradient( center top, #009900 5%, #34c234 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#009900', endColorstr='#34c234');
+	background-color:#009900;
+	color:#ffffff;
+}.marketButton:active {
+	position:relative;
+	top:1px;
+}
+/* This imageless css button was generated by CSSButtonGenerator.com */
+</style>
+	</div>
+    <!-- trending stories widget -->
+	<div class="container clearfix skinLines">
+	<h3 class="containerLabel">Trending Stories</h3>
+	 <div class="tab-box"> 
+			 <a href="javascript:;" class="tabLink activeLink" id="cont-1">Today</a> |
+			 <a href="javascript:;" class="tabLink " id="cont-2">This week</a>  
+			</div>           
+	 <!--  <a href="/" class="linkUix right">More &raquo;</a>-->
+		<!-- Todays -->
+		<div class="tabcontent paddingAll" id="cont-1-1"> 
+			<!--<p bs:mostread Fields="Webhed,Websum" profile="" count=5 Days=1 Useobjects=1 Objectclass=1 Noduplicates=1 datesort=1>-->
+	<ol class="listVertMega listVertLines listOrdered">
+<li><a href="/business/money-smart/email-phishing-attacks-by-hackers-are-growing-in-number-intensity-20130826">
+		Email &#x2018;phishing&#x2019; attacks by hackers are growing in number, intensity 
+</a>
+</li>
+<li><a href="/business/money-smart/credit-score-not-as-simple-as-a-3-digit-number-20130826">
+		A credit score is not as simple as a three-digit number 
+</a>
+</li>
+<li><a href="/business/money-smart/woman-has-been-familys-financial-rock-20130826">
+		Woman has been family&#x2019;s financial rock 
+</a>
+</li>
+<li><a href="/business/money-smart/direct-mail-offers-for-credit-cards-are-on-the-rise-20130826">
+		Direct mail offers for credit cards are on the rise 
+</a>
+</li>
+<li><a href="/business/money-smart/volunteering-ups-odds-for-landing-a-job-20130826">
+		Volunteering ups odds for landing a job 
+</a>
+</li>
+	</ol>
+		</div>
+		<!-- This Week -->
+		<div class="tabcontent paddingAll hide" id="cont-2-1"> 
+			<!--<p bs:mostread Fields="Webhed,Websum" profile="" count=5 Days=7 Useobjects=1 Objectclass=1 Noduplicates=1 datesort=1>-->
+	<ol class="listVertMega listVertLines listOrdered">
+<li><a href="/city-region/environment/could-ohios-lake-erie-windmills-renew-effort-here-20130825">
+		Ohio project revives local debate on Lake Erie wind turbines 
+</a>
+</li>
+<li><a href="/business/money-smart/protect-your-childs-identity-during-back-to-school-season-20130825">
+		Protect your child&#x2019;s identity during back-to-school season 
+</a>
+</li>
+<li><a href="/feed/paladino-buys-former-holy-angels-academy-20130824">
+		Paladino buys former Holy Angels Academy 
+</a>
+</li>
+<li><a href="/business/erie-county-transactions/erie-county-real-estate-transactions-20130824">
+		Erie County Real Estate Transactions 
+</a>
+</li>
+<li><a href="/business/money-smart/email-phishing-attacks-by-hackers-are-growing-in-number-intensity-20130826">
+		Email &#x2018;phishing&#x2019; attacks by hackers are growing in number, intensity 
+</a>
+</li>
+	</ol>
+		</div>                     
+	<footer>
+	</footer>
+</div>
+	<!-- Most Commented Widget -->
+		<div class="container clearfix skinLines">
+		<h3 class="containerLabel">Most Commented</h3>
+		<ul class="listVert listVertLine"><li><a href="http://www.buffalonews.com/city-region/buffalo-public-schools/on-eve-of-mediators-report-buffalo-teachers-say-theyre-underpaid-20130820" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">194</span>On eve of mediator's report, Buffalo teachers say they're underpaid </a></li><li><a href="http://www.buffalonews.com/city-region/erie-county/obama-trip-to-buffalo-emphasizes-ambitious-plan-to-control-college-costs-20130822" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">154</span> Obama trip to Buffalo emphasizes 'ambitious' plan to control college costs </a></li><li><a href="http://www.buffalonews.com/columns/dr-zobra-paster/zorba-paster-20130824" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">146</span>Zorba Paster: Autism-immunization link is a myth </a></li><li><a href="http://www.buffalonews.com/city-region/medical/birthing-center-to-open-in-buffalo-in-the-fall-20130824" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">79</span> Birthing center to open in Buffalo in the fall </a></li><li><a href="http://www.buffalonews.com/city-region/gop-chairmen-say-obama-trip-wont-accomplish-much-20130821" ><span style="font-weight: bold;background: #EEE;padding: 6px;display: block;float: left;margin-right: 1em;">62</span> GOP chairmen say Obama trip won't accomplish much </a></li></ul>	</div>
+	<!-- NDN business video widget -->  
+	<div class="widgetWrap">
+		<div id="ndn_launcher_14667">
+			<script type="text/javascript" src="http://embed.newsinc.com/thumbnail/embed.js?wid=14667&parent=ndn_launcher_14667"></script>
+		</div>
+	</div>
+    <div class="widgetWrap">
+		<!-- start classifieds widget v3 -->
+<!--** In iframe src, the following params can be used 
+	** tab= (cars or homes) otherwise random
+	** view= (grid or list) otherwise random
+	** limit= (number)
+	** v= this is for caching
+	** -->
+<iframe src="http://api.buffalo.com/classifieds/iframe/index-v3.html?limit=6&v=3" style="width:300px; height:442px;" width="300" height="442" scrolling="no" marginheight="0" marginwidth="0" vspace="0" hspace="0" frameborder="0"></iframe>
+<!-- end classifieds widget v3 -->
+	</div>
+     <div class="adMediumBox centerInner">	
+         <script type="text/javascript">
+		//<![CDATA[		
+        yld_mgr.place_ad_here("medium_box_2");
+		//]]>
+        </script>
+     </div>
+    <div class="widgetWrap">
+    	<!-- <iframe src="http://util.buffalo.com/sweetfind/rightRailWidget.php" style="height:800px;width:320px;overflow:hidden;border:0px;" frameborder="0" scrolling="no"></iframe> -->
+    </div>
+</div><!-- .mainSecondary -->
+<!-- Opinion -->
+<!-- Life & Arts -->
+<!-- Taste profileID=1070 -->
+<!-- Gusto -->
+<!-- Weddings -->
+			<div class="adYahooText centerInner" align="center">		 
+			<!-- textad -->
+			<div class="quigo">
+			<p class="advertisement-text">advertisement</p>
+			   <script type="text/JavaScript">
+			<!--
+				// Initialize the Yahoo Ad Box
+				//REQUIRED PARAMETERS
+				ctxt_ad_config = 1599903154; // publisher id
+				ctxt_ad_interface = 'http://cm.npc-buffalonews.overture.com/js_1_0/';
+				ctxt_ad_width = 420;
+				ctxt_ad_height = 150;
+				//Starter values
+				ctxt_ad_id = 'news';
+				ctxt_ad_type = 'news';
+				var type_override = '';
+				if (type_override) {
+					ctxt_ad_id = type_override;
+					ctxt_ad_type = type_override;
+				}
+				ctxt_ad_source = 'npc_buffalonews_buffalonews_t2_ctxt'; // publisher tag
+				var tier1test = '';
+				if (tier1test.length > 0) {
+					ctxt_ad_source = 'npc_buffalonews_buffalonews_t1_ctxt';
+					ctxt_ad_id = tier1test;
+					ctxt_ad_type = tier1test;
+				}
+				//Context Parameters
+				ctxt_ad_url = window.location.href;
+				var pgsection = 'Latest_Local_News';
+				ctxt_ad_section = pgsection;
+				var keywords = '';
+				if (keywords.length > 0) {
+					ctxt_ad_keywords = keywords; // OPTIONAL: keywords (URL-safe vals only)
+				}
+				//OPTIONAL PARAMETERS
+				ctxt_ad_oe = 'utf8'; //latin1 or utf8
+			ctxt_ad_css = 'http://static.buffalo.com/vendors-2010/css/text-ads.css';
+				var adcss = '';
+				if (adcss.length > 0) {
+					ctxt_ad_css = adcss;
+				}
+				ctxt_ad_newwin = 1; // new window for results
+			//-->
+			</script>
+			<div style="text-align: center;">
+			<script type="text/JavaScript" src="http://cm.npc-buffalonews.overture.com/partner/js/ypn.js"></script>
+			</div>
+			</div>
+			<!-- textad -->
+		</div>					
+		<div class="adLeaderboardBottom centerInner">
+			<div>
+				<script type="text/javascript">
+				//<![CDATA[
+				yld_mgr.place_ad_here("bottom_leaderboard");
+				//]]>
+				</script>
+			</div>
+		</div>
+
+		
+
+	</div> <!-- #main -->
+</div>
+		
+<style type="text/css">
+#footer ul { list-style-type:none !important}
+#footer .footerPrimary .col40 .listVert { padding-left: 0px !important; list-style-type:none !important}
+#footer .footerPrimary .listVert li {padding:.1em 0em !important;}
+.footerPrimary .listVert li a { font-weight: normal !important; font-size:12px !important}
+.footerPrimary div h3 {text-transform: none;color: white; font-weight:normal !important; font-size:1.4em !important; height:26px; border-bottom:1px solid #605f5f}
+.footerSecondary p { margin: 0px !important; padding-top:6px;}
+.footerConnect .container .box {padding-right: 1.44em !important}
+.footerProducts {background-position: -463px -200px !important;}
+/*.footerAlerts:hover, .footerAlerts:active  {background-position:-552px -200px !important;cursor:default !important}
+.footerRss:hover, .footerRss:active {background-position:-552px -200px !important;cursor:default !important}
+.footerNewsletter:hover, .footerNewsletter:active {background-position:-552px -200px !important;cursor:default !important}*/
+.footerProducts:hover {cursor:pointer !important;} 
+</style>           
+            <footer id="footer" class="clearfix">
+                <div class="footerConnect clearfix row"> 
+                	<div class="container clearfix skinBox">
+                    	<h3 class="containerLabel">Connect with us</h3>
+                        <header></header> 
+                            <div class="box col20 centerInner left"><a href="https://www.facebook.com/TheBuffaloNews" onclick="return popitup('https://www.facebook.com/TheBuffaloNews',768,1024)" target="_blank" class="centerOuter footerFacebook">Facebook</a></div>
+                            <div class="box col20 centerInner left"><a href="http://twitter.com/intent/user?screen_name=TheBuffaloNews" target="_blank" class="footerTwitter">Twitter</a></div>
+                            <div class="box col20 centerInner left"><a href="" data-reveal-id="alertsModal" data-animation="fade" class="footerAlerts">Alerts</a></div>
+                            <div class="box col20 centerInner left"><a href="http://buffalonews.com/rss" class="footerRss">RSS</a></div>
+                            <div class="box col20 centerInner left"><a href="" data-reveal-id="newslettersModal" data-animation="fade" class="footerNewsletter">Newsletters</a></div>
+                            <div class="box col20 centerInner left"><a href="/help/faq" class="footerProducts">Products</a></div>
+                        <footer>
+                        </footer> 
+                	</div>
+                </div><!-- .footerConnect -->
+                <div class="footerPrimary clearfix skinDarkGray">
+					<span class="cornerBottomL"></span>
+					<span class="cornerBottomR"></span>
+                    <div class="col40 left" style=" width:32% !important">
+                        <h3>Quick Links</h3>
+                        <ul class="listVert col60">
+                            <li><a href="https://services.buffalonews.com/cgi/cgiip.wsc/custservice/web/login.htm" target="_blank">Manage subscription</a></li>
+                            <li><a href="http://corp.buffalonews.com/services/subscriber/subscribe.asp" target="_blank">Subscribe</a></li>
+                            <li><a href="/help">General help</a></li>
+                            <li><a href="/help/contact">Contact us</a></li>
+                            <li><a href="/help/faq">FAQ</a></li>
+                            <li><a href="/sitemap">Sitemap</a></li>
+                        </ul>
+                        <ul class="listVert col50">
+                            <li><a href="http://corp.buffalonews.com/services/buffalo/advertise.asp" target="_blank">Online advertising</a></li>
+                            <li><a href="http://corp.buffalonews.com/services/advertiser/default.asp" target="_blank">Print advertising</a></li>
+                            <li><a href="/help/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="/help/terms-and-conditions">Terms &amp; Conditions</a></li>
+                            <li><a href="/help/copyright">Copyright Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col70 right" >
+                        <h3>Our Websites</h3>
+                        <ul class="listVert col30 left">
+                        	<li><a href="http://edition.pagesuite-professional.co.uk/digitaleditions.aspx?tab=0&pid=d7fed0ff-b69c-4f68-bdc0-722adb334473" target="_blank">E-edition</a></li>
+                            <li><a href="http://www.buffalo.com/" target="_blank">Buffalo.com</a></li>
+                            <li><a href="http://www.shopbuffalo.com/" target="_blank">ShopBuffalo</a></li>
+                            <li><a href="http://bflomagazine.com/" target="_blank">Buffalo Magazine</a></li>
+                        </ul>
+                        <ul class="listVert col30 left">
+                       		<li><a href="http://bninsider.buffalonews.com/" target="_blank">[BN]insider</a></li>
+                       		<li><a href="http://buffalonewsstore.com/" target="_blank">Buffalo News Store</li>
+                        	<li><a href="http://shopping.buffalonews.com/SS/Tiles.aspx?ex=menus" target="_blank">Marketplace</a></li>
+                            <li><a href="http://shopping.buffalonews.com/SS/Tiles.aspx?type=buffalosavers&sstarg=buffalosavers" target="_blank">Buffalo Savers</a></li>
+                        </ul>
+                        <ul class="listVert col30 left">
+                        	<li><a href="http://www.buffalonews.com/classifieds" target="_blank">Classifieds</a></li> 
+                            <li><a href="http://www.buffalocars.com/" target="_blank">BuffaloCars</a></li>
+                            <li><a href="http://www.homefinderextra.com/" target="_blank">HomeFinderExtra</a></li>
+                            <li><a href="http://www.homefinderextra.com/rentals/" target="_blank">ApartmentFinderExtra</a></li>
+                        </ul>
+                        <ul class="listVert col30 left">
+                        	<li><a href="http://buffalojobfinder.com/" target="_blank">BuffaloJobFinder</a></li>
+                        	<li><a href="http://www.sweetfind.com" target="_blank">Sweetfind</a></li>
+                            <li><a href="http://www.buffalobrides.com/" target="_blank">Buffalo Brides</a></li>
+                            <li><a href="http://www.gadzoo.com/buffalonews/pets.aspx" target="_blank">Pet Place</a></li>
+                        </ul>
+                    </div>
+                </div><!-- .footerPrimary -->
+                <div class="footerSecondary clearfix skinDark">
+                    <!--<div class="box left">
+                        <ul class="listHoriz">
+                            <li><a href="/">Sitemap</a></li>
+                            <li><a href="http://corp.buffalonews.com/">TBN Media</a></li>
+                            <li><a href="/">Company History</a></li>
+                            <li><a href="http://corp.buffalonews.com/services/community/default.asp">Community Programs </a></li>   
+                        </ul>
+                    </div>-->
+                    <div class="box left">
+                    	<a href="http://www.buffalonews.com"><img border="0" class="left marginR" src="/images/logo-BN-bracketFooter.png" width="43" height="30" alt="[BN]" /></a>
+                        <p class="left">Copyright 1999 - 2013 - The Buffalo News copyright-protected material.</p>
+                    </div>
+                </div><!-- .footerSecondary -->
+            </footer>
+        </div><!-- .page -->
+    </div><!-- .wrapper -->
+<!-- newsletters' & alerts' modals -->
+<section id="newslettersModal" class="reveal-modal">
+    <header>
+        <h1 class="logo">Newsletters</h1>
+        <p class="error-message unexpected-error">Sorry, an unexpected error occurred. Please try again later.</p>
+    </header>
+    <form id="tbn-nl-form" action="index.php" method="post">
+        <input type="email" name="email" class="email" placeholder="Email" />
+        <p class="error-message email-error">Please enter a valid email address</p>
+        <ul class="dropdown">
+            <li>
+                <input type="checkbox" checked name="select-all" class="select-all" value="select-all"> 
+                <label for="select-all"> All Newsletters</label>
+                <a href="#" class="dropdown-link"><div class="dropdown-icon"></div></a>
+            </li>
+            <div class="selections">
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="1">
+                    <label class="tooltip" title="When major stories break, the news will come straight to your inbox." for="breaking-news"> Breaking News</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="2">
+                    <label class="tooltip" title="The biggest stories from around Western New York are delivered early so you can get a quick jump on the day's news." for="top-stories-am"> Top Stories (morning)</label> 
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="13"> 
+                    <label class="tooltip" title="Catch up with the biggest stories from around Western New York as the day's news unfolds." for="top-stories-pm"> Top Stories (afternoon)</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="3"> 
+                    <label class="tooltip" title="Daily news, stats and opinions from the top sports desk in the region delivered each morning." for="sports"> Sports</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="4"> 
+                    <label class="tooltip" title="An overview of important business headlines from WNY and the world delivered before you reach your desk." for="business"> Business</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="5"> 
+                    <label class="tooltip" title="Every Thursday, we send you news and info about the hottest restaurants, movies, concerts and events for the week ahead." for="gusto"> Gusto</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="14"> 
+                    <label class="tooltip" title="The biggest stories from Niagara County are delivered early so you can get a quick jump on the day's news." for="niagara county"> Niagara County</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="6"> 
+                    <label class="tooltip" title="A colorful, offbeat look at what's creating serious buzz in Buffalo." for="buffalo-dot-com"> Buffalo.com</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="7"> 
+                    <label class="tooltip" title="Special promotions from your friends at shopbuffalo.com." for="shop-buffalo"> Shop Buffalo</label> 
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="8"> 
+                    <label class="tooltip" title="Deep discounts on some of the coolest stores, products and events around WNY." for="sweetfind"> Sweetfind</label> 
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-nls" class="selection" value="9">
+                    <label class="tooltip" title="If one of our advertising partners has a special just for our newsletter subscribers, you'll be the first to know." for="local-deals"> Local Deals</label> 
+                </li>
+            </div>
+        </ul>
+        <p class="error-message" class="dropdown-error" style="bottom:105px; left:30px;">Please select newsletter(s)</p>
+        <section class="subscriber-check">
+            <input type="checkbox" name="tbn-subscriber" class="tbn-subscriber" value="tbn-subscriber">
+            <label for="tbn-subscriber">Already a Buffalo News subscriber?</label> 
+        </section>
+        <input type="submit" name="submit" class="submit" value="Sign up" /> 
+        <p class="success-message">Thank you for subscribing!</p> 
+        <span class="ajax-spinner"></span>
+    </form>
+    <a class="close-reveal-modal">&#215;</a>
+</section>
+<section id="alertsModal" class="reveal-modal">
+    <header>
+        <h1 class="logo">Text Message Alerts</h1>
+        <p class="error-message unexpected-error">Sorry, an unexpected error occurred. Please try again later.</p>
+    </header>
+    <form id="tbn-alerts-form" action="index.php" method="post">
+        <input type="email" name="email" class="email" placeholder="Email" />
+        <p class="error-message email-error">Please enter a valid email address</p>
+        <input type="tel" name="phone" class="phone" placeholder="Mobile Number" />
+        <p class="error-message phone-error">Please enter a valid 10 digit phone number</p>
+        <ul class="dropdown">
+            <li>
+                <input type="checkbox" checked name="select-all" class="select-all" value="select-all"> 
+                <label for="select-all"> All Text Alerts</label>
+                <a class="dropdown-link" href="#"><div class="dropdown-icon"></div></a>
+            </li>
+            <div class="selections">
+                <li>
+                    <input type="checkbox" checked name="tbn-alerts" class="selection" value="1">
+                    <label class="tooltip" title="When major stories break, the news will come straight to your inbox." for="breaking-news"> Breaking News</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-alerts" class="selection" value="2">
+                    <label class="tooltip" title="Breaking sports news from your local teams." for="sports"> Sports</label> 
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-alerts" class="selection" value="3"> 
+                    <label class="tooltip" title="Up to the minute weather &amp; traffic alerts." for="weather-traffic"> Weather &amp; Traffic</label>
+                </li>
+                <li>
+                    <input type="checkbox" checked name="tbn-alerts" class="selection" value="4"> 
+                    <label class="tooltip" title="What's going on in WNY." for="concerts-events"> Concerts &amp; Events</label>
+                </li>
+            </div>
+        </ul>
+        <p class="error-message" class="dropdown-error" style="bottom:105px; left:30px;">Please select text message alert(s)</p>
+        <section class="subscriber-check">
+            <input type="checkbox" name="tbn-subscriber" class="tbn-subscriber" value="tbn-subscriber">
+            <label for="tbn-subscriber">Already a Buffalo News subscriber?</label> 
+        </section>
+        <input type="submit" name="submit" class="submit" value="Sign up" /> 
+        <p class="success-message">Thank you for subscribing!</p> 
+        <span class="ajax-spinner"></span>
+    </form>
+    <a class="close-reveal-modal">&#215;</a>
+</section>
+<script src="/js/jquery.reveal.min.js"></script>
+<script src="/js/alerts-reg.min.js"></script>
+<script src="/js/spin.js"></script>
+<script src="/js/ie-placeholders.min.js"></script>
+<script src="/js/jquery.tooltipster.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.tooltip').tooltipster();
+    });
+</script>
+<script>
+/**
+ * Opens a URL centered in a popup window
+ * @param  {string} url    The URL to open
+ * @param  {int}    height height of the popup
+ * @param  {int}    width  width of the popup
+ * @return {bool}        prevent default action
+ */
+function popitup(url,height,width) {
+    var left = (screen.width/2)-(width/2);
+    var top = (screen.height/2)-(height/2);
+    newwindow=window.open(url,'name','height='+height+',width='+width+',left='+left+',top='+top);
+    if (window.focus) {newwindow.focus()}
+    return false;
+}
+</script>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+</body>
+</html>
+

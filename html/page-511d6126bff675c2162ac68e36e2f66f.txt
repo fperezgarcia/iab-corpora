@@ -1,0 +1,2938 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<!-- fi:/csp/mediapool/sites/PuebloChieftain/assets/csp/VariableDefs.csp -->
+
+
+
+<!--/fi:/csp/mediapool/sites/PuebloChieftain/assets/csp/VariableDefs.csp, e:.000162 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!--This includes all of the content of the head and body tags.-->
+	
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/allIndex.csp -->
+
+
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/detectMobileDevice.csp -->
+
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/detectMobileDevice.csp, e:.000089 -->
+
+<!--<csp:if condition=((mobileDeviceExists=0)!(%request.GetCookie("ClearFromMobileFlag")="1")!(%request.GetCookie("ClearFromMobileFlag")=1))>-->
+<!--'-->
+	
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/fAllIndex.csp -->
+<head>
+	
+<!-- fi:/csp/mediapool/sites/PuebloChieftain/assets/csp/headfiles/head.csp -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>
+
+The Pueblo Chieftain |
+
+	
+		Business
+	
+	
+	
+
+</title>
+<meta name="description" content="Southern Colorado local news, sports, business, entertainment, opinion and weather"/>
+
+<link rel="stylesheet" href="/csp/mediapool/sites/PuebloChieftain/assets/css/style.css">
+<link rel="stylesheet" href="/csp/mediapool/sites/Shared/assets/css/orbit-1.2.3.css">
+<link rel="stylesheet" href="/csp/mediapool/sites/Shared/assets/css/calendar.css">
+<link rel="stylesheet" href="/csp/mediapool/sites/Shared/modules/dtiEventCalendar/css/eventcalendar.css" media="screen"/>
+
+
+<!--<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>-->
+
+<!-- jQuery Scripts -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
+<script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.orbit-1.2.4.js"></script>
+<script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.ticker-1.0.js"></script>
+<script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.simpleWeather-2.0.1.min.js"></script>
+<script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.rsswidget.js"></script>
+
+<script type="text/javascript">
+	var nocontrol = 0;
+	$(window).load(function() {
+		$('#carousel').orbit({orbitWidth:'630', orbitHeight:'300', animation: 'horizontal-push'});
+	});
+	$(document).ready( function() {
+		//Function variables: main container id, class for sliding elements, sliding element width, timing, number of items visible (defaults to 2)
+		ticker('featured', 'featured-story', 480, 5000);
+		
+		//Temp functionality for pencil ad.  Will not be necessary once the real code has been added.
+		$("#expandable-large").slideToggle();
+		var t=setTimeout(function(){$("#expandable-large").slideToggle()},5000)
+		
+		$("#expandable-small a").click( function() {
+			$("#expandable-large").slideToggle();
+			return false;
+		});
+		
+		//Populate Weather
+		$.simpleWeather({
+			zipcode: '81005',
+			unit: 'f',
+			success: function(weather) {
+				$("#weatherDeg").html(weather.temp+'&deg;');
+				$("#weatherCond").html(weather.currently);
+			},
+			error: function(error) {
+				$("#weatherDeg").html("Error");
+			}
+		});
+		var curLink = "Business";
+		console.log(curLink);
+		if (curLink) {
+			$("#nav li").removeClass("active");
+			if(curLink.match("-")) {
+				var pLink = curLink.split("-");
+				console.log(pLink[0]);
+				$("#"+pLink[0]).addClass("active");
+			}
+			$("#"+curLink).addClass("active");
+		}
+	});
+</script>
+
+<!--Interstitial ad files -->
+	<link rel="stylesheet" type="text/css" href="/csp/mediapool/sites/Shared/assets/images/advertising/interstitial/interstitial.css"/>
+	<script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/images/advertising/interstitial/interstitial.js">
+	
+<!--/***********************************************
+* Interstitial Content Box- Â© Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/-->
+</script>
+
+<!-- Global TNCMS Ad Manager javascript files -->
+	<script type="text/javascript" src="http://www.chiefads.com/content/tncms/ads/tncms-ad-limits.js"></script>
+	<script type="text/javascript" src="http://www.chiefads.com/shared-content/art/tncms-ad-manager/ads.js"></script>
+	<script type="text/javascript" src="http://www.chiefads.com/shared-content/art/tncms-ad-manager/swfobject/swfobject.js"></script>
+<!-- End Global TNCMS Ad Manager javascript files -->
+
+<!-- Begin Apple Touch homescreen icons -->
+	<link rel="apple-touch-icon" href="/csp/mediapool/sites/shared/assets/images/apple-touch-icon.png">
+	<link rel="stylesheet" href="/csp/mediapool/sites/shared/assets/images/add2home/style/add2home.css">
+	<script type="application/javascript" src="/csp/mediapool/sites/shared/assets/images/add2home/add2home.js"></script>
+	<meta name="apple-mobile-web-app-title" content="Chieftain.com"/>
+<!-- End Apple Touch homescreen icons -->
+
+<!--Favicon-->
+<link rel="icon" type="image/png" href="/csp/mediapool/sites/shared/assets/images/apple-touch-icon.png">
+<!--End favicon-->
+
+<!--Google Analytics tracking code-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27527741-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--End Google Analytics tracking code-->
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<!--Google DFP Ad code TEST-->
+	<script type='text/javascript'>
+	googletag.cmd.push(function() {
+	googletag.defineSlot('/37447419/PC_ROS_Top_Right_200x90', [200, 90], 'div-gpt-ad-1376600361969-1').addService(googletag.pubads());
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices();
+	});
+	</script>
+<!--End Google DFP Ad code TEST-->
+<!--/fi:/csp/mediapool/sites/PuebloChieftain/assets/csp/headfiles/head.csp, e:.000185 -->
+
+	
+	<!-- Google Site Verification -->
+	<meta name="google-site-verification" content="9vxSDFrZrnubMKQnThpCdVeug8kNry3ONugHPo-qpcw"/>
+	<!-- Bing Webmaster Tools? -->
+	<meta name="msvalidate.01" content="D89E637D044DD326B5C2FDC67A2B157A"/>
+	<!-- Pinterest Verification -->
+	<meta name="p:domain_verify" content="748e3315862bd049e6c685ab833666a9"/>
+	
+	
+	
+	<!-- Begin AP CustomNews -->
+	<script src="http://hosted2.ap.org/scripts/CustomNews.js"></script>
+	<!-- End AP CustomNews -->
+	
+	<!-- Begin Responsive Video GAllery HTML5 Youtube Vimeo files -->
+	    <link rel="stylesheet" type="text/css" href="/csp/mediapool/sites/Shared/assets/css/jquery.jscrollpane.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="/csp/mediapool/sites/Shared/assets/css/videoGallery_playlist_h_bottom.css"/>
+        <!--[if lte IE 8 ]><link rel="stylesheet" type="text/css" href="css/ie_below_9.css" /><![endif]-->
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/swfobject.js"></script>
+		<!--<script type="text/javascript" src="#(sharedPath)#/assets/js/jquery-1.8.1.min.js"></script>-->
+        <!--<script type="text/javascript">jQuery.noConflict();</script>-->
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.dotdotdot-1.5.1.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.address-1.5.min.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/froogaloop.js"></script>
+        <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.apPlaylistManager.min.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.apYoutubePlayer.min.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.apVimeoPlayer.min.js"></script>
+        <script type="text/javascript" src="/csp/mediapool/sites/Shared/assets/js/jquery.videoGalleryMod.js"></script>
+		<script type="text/javascript">
+		
+			// FLASH EMBED PART
+			var playPrev = 0;
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+			attributes.id = "flashPreview";
+			params.quality = "high";
+			params.scale = "noscale";
+			params.salign = "tl";
+			params.wmode = "transparent";
+			params.bgcolor = "#111";
+			params.devicefont = "false";
+			params.allowfullscreen = "true";
+			params.allowscriptaccess = "always";
+			swfobject.embedSWF("/csp/mediapool/sites/Shared/assets/media/preview.swf", "flashPreview", "100%", "100%", "9.0.0", "/csp/mediapool/sites/Shared/assets/media/expressInstall.swf", flashvars, params, attributes);
+			
+			//functions called from flash
+			var jsReady = false;//for flash/js communication
+			function flashVideoEnd() {jQuery.fn.videoGallery.flashVideoEnd();}
+			function flashVideoStart() {jQuery.fn.videoGallery.flashVideoStart();}
+			function dataUpdateFlash(bl,bt,t,d) {jQuery.fn.videoGallery.dataUpdateFlash(bl,bt,t,d);}
+			function flashVideoPause() {jQuery.fn.videoGallery.flashVideoPause();}
+			function flashVideoResume() {jQuery.fn.videoGallery.flashVideoResume();}
+			function flashMainPreviewOff() {jQuery.fn.videoGallery.flashMainPreviewOff();}
+			function flashResizeControls() {jQuery.fn.videoGallery.flashResizeControls();}
+			function isReady() {return jsReady;}
+			
+			jQuery(document).ready(function() {
+				jsReady = true;
+			    //init component
+			    jQuery('#componentWrapper').videoGallery({	
+					
+					/* REQUIRED */
+					
+					/* DEEPLINKING SETTINGS */
+				    /* useDeeplink: true, false */
+					useDeeplink:false,
+					/* startUrl: deeplink start url, enter 'ul' data-address/'li' data-address (two levels). Or just 'ul' data-address (single level). */
+					startUrl: 'mix1/local1',
+					
+					/* NO DEEPLINKING SETTINGS */
+					/*activePlaylist: enter element 'id' attributte */
+					activePlaylist:'mix1',
+					/*activeItem: video number to start with (-1 = none, 0 = first, 1 = second, 2 = third ...etc) */
+					activeItem:0,
+					
+					/* GENERAL */
+					/*thumbOrientation: horizontal, vertical (for scrolling) */
+					thumbOrientation: 'horizontal',
+					/*playlistPosition: bottom / right */
+					playlistPosition: 'bottom',
+					/*fullSize: true/false (dont forget to edit the css as well) */
+					fullSize: false,
+					/*flashHolder: id of the flash movie */
+					flashHolder:'#flashPreview',
+					
+					/* DEFAULTS */
+					
+					/*defaultVolume: 0-1 */
+					defaultVolume:0.5,
+					/*autoPlay: true/false */
+					autoPlay:false,
+					/* loopingOn: loop playlist on end (last item in playlist), true/false */
+					loopingOn:true,
+					/* randomPlay: random play in playlist, true/false */
+					randomPlay:false,
+					/*autoAdvanceToNextVideo: true/false */
+					autoAdvanceToNextVideo:true,
+					/*autoMakePlaylistThumb: true/false (valid only for youtube and vimeo, auto make thumb for each video) */
+					autoMakePlaylistThumb:true,
+					/*autoMakePlaylistInfo: true/false (valid only for youtube and vimeo, auto make title and description for each video) */
+					autoMakePlaylistInfo:true,
+					/* outputPlaylistData: console.log out playlist data */
+					outputPlaylistData:false,
+					
+					videoGallerySetupDone:function() {
+						//console.log('videoGallerySetupDone');
+					}
+				});		
+    	    });
+		
+        </script>
+	<!-- End Responsive Video Gallery HTML5 Youtube Vimeo files -->
+
+
+
+</head>
+
+<body style="background-color: white;">
+	
+		
+			
+		
+	
+	
+	<div id="container" class="container-full">
+		<div id="wrapper" class="container-12">
+			
+<!-- fi:/csp/mediapool/sites/Shared/templates/sections/SiteSection.csp -->
+<!-- section template -->
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/includes/sectionVariables.csp -->
+
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/includes/sectionVariables.csp, e:.001751 -->
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/includes/siteHeader.csp -->
+
+	
+		
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=1068896&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12TESTHeader.csp -->
+
+
+<!-- Header -->
+<div id="header">
+	<div id="topAds">
+		<div id="leaderboard-top" class="leaderboard-ad left">
+			<div class="leaderboard-top-new">
+				<!-- Code for leader board ad -->
+				<!-- Global TNCMS Ad Manager javascript files -->
+				
+				<!-- Ad Manager javascript code for position leaderboard-middle1 -->
+				<script type="text/javascript" src="http://chiefads.com/content/tncms/ads/leaderboard-middle/leaderboard-middle1.js"></script>
+				
+				<!-- Ad Manager call to display ads for position leaderboard-middle1 -->
+				<script type="text/javascript">oTNCMS_Ad.show('ros');</script>
+				
+				<!--		<img width="728" height="90" border="0" alt="Leaderboard Top" src="#(sharedPath)#/assets/images/leaderboardTopExample.jpg">
+				-->		<!-- End Code for leader board ad -->
+				</div>
+		</div>
+	
+		
+		<div id="rightButtonAd">
+			<!-- PC_ROS_Top_Right_200x90 -->
+			<div id='div-gpt-ad-1376600361969-1' style='width:200px; height:90px;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1376600361969-1'); });
+				</script>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+			<div>
+				<a href="http://www.chieftain.com/home/" ><img src="/csp/mediapool/sites/shared/assets/images/pclogo2013.png" id="PCNamePlate" alt="The Pueblo Chieftan"/></a>
+			</div>
+
+<!-- End Header -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12TESTHeader.csp, e:.000588 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=1068896&fid=119, e:.000866 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635922&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12TopMenu.csp -->
+<!-- Top Menu -->
+<div id="top-menu">
+	<dl id="help-menu" class="left help-menu">
+		<dt>WELCOME:</dt>
+		<dd>
+			<a href="http://www.chieftain.com/home/" >Home</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/site/digital/" >Register / Log in</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/site/contact/" >Contact</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/search/" >Search</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/site/digital/" >Digital Edition</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/mobile/" >Mobile</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/site/subscribe/" >Subscribe</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/site/advertise/" >Advertise</a>
+		</dd>
+		<dd>
+			<a href="http://www.chieftain.com/site/faq/" >FAQ</a>
+		</dd>
+	</dl>
+	<div class="right date">August 27, 2013</div>
+	<div class="center weather-bug">
+		<!--<script type="text/javascript" src="http://cdn.widgetserver.com/syndication/subscriber/InsertWidget.js"></script><script type="text/javascript">if (WIDGETBOX) WIDGETBOX.renderWidget('55e63674-24e8-42fd-997e-6bedc667c9c7');</script>
+<noscript>Get the <a href="http://www.widgetbox.com/widget/weather2">Weather Widget</a> widget and many other <a href="http://www.widgetbox.com/">great free widgets</a> at <a href="http://www.widgetbox.com">Widgetbox</a>! Not seeing a widget? (<a href="http://support.widgetbox.com/">More info</a>)</noscript>-->
+		<div class="temp">
+			<a id="weatherDeg" title="Detailed Forecast" href="/news/weather?zipcode=81002"><!--42&deg;--></a>
+		</div>
+		<div class="conditions">
+			<a id="weatherCond" title="Detailed Forecast" href="/news/weather?zipcode=81002"><!--Clear--></a>
+		</div>
+	</div>
+</div>
+<!-- End Top Menu -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12TopMenu.csp, cache(300), e:.000892 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635922&fid=119, e:.00116 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635924&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12Navigation.csp -->
+<!-- Nave Bar -->
+<div id="nav-container">
+<ul id="nav">
+	<li id="News">
+		<a href="http://www.chieftain.com/news/" >News</a>
+		<ul>
+			<li id="News-Pueblo">
+				<a href="http://www.chieftain.com/news/pueblo/" >Pueblo</a>
+			</li>
+			<li id="News-Region">
+				<a href="http://www.chieftain.com/news/region/" >Region</a>
+			</li>
+			<li id="News-Crime">
+				<a href="http://www.chieftain.com/news/crime/" >Crime</a>
+			</li>
+			<li id="News-Education">
+				<a href="http://www.chieftain.com/news/education/" >Education</a>
+			</li>
+			<li id="News-Politics">
+				<a href="http://www.chieftain.com/news/politics/" >Politics</a>
+			</li>
+			<li id="News-Nation">
+				<a href="http://www.chieftain.com/news/nation/" >Nation</a>
+			</li>
+			<li id="News-World">
+				<a href="http://www.chieftain.com/news/world/" >World</a>
+			</li>
+			<li id="News-Special">
+				<a href="http://www.chieftain.com/special/" >Special reports</a>
+			</li>
+			<li id="News-Recall">
+				<a href="http://www.chieftain.com/special/recall/" >Recall</a>
+			</li>
+			<li id="News-Water">
+				<a href="http://www.chieftain.com/special/water/" >Water</a>
+			</li>
+			<li id="News-Marijuana">
+				<a href="http://www.chieftain.com/special/marijuana/" >Marijuana</a>
+			</li>
+			<!-- <li>
+				<dti:section:link name="KRDO">KRDO</dti:section:link>
+			</li> -->
+		</ul>
+	</li>
+	<li id="Sports">
+		<a href="http://www.chieftain.com/sports/" >Sports</a>
+		<ul>
+			<li>
+				<a href="http://www.chieftain.com/prep/" >High school</a>
+			</li>
+			<li id="Sports-College">
+				<a href="http://www.chieftain.com/sports/college/" >College</a>
+			</li>
+			<li id="Sports-Pro">
+				<a href="http://www.chieftain.com/sports/pro/" >Pro</a>
+			</li>
+			<li id="Sports-Outdoors">
+				<a href="http://www.chieftain.com/sports/outdoors/" >Outdoors</a>
+			</li>
+			<li>
+				<a href="http://racing.ap.org/chieftain">Racing</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Prep">
+		<a href="http://www.chieftain.com/prep/" >Prep Rally</a>
+		<ul>
+			<li id="Prep-Centennial">
+				<a href="http://www.chieftain.com/prep/centennial/" >Centennial</a>
+			</li>
+			<li id="Prep-Central">
+				<a href="http://www.chieftain.com/prep/central/" >Central</a>
+			</li>
+			<li id="Prep-County">
+				<a href="http://www.chieftain.com/prep/county/" >County</a>
+			</li>
+			<li id="Prep-DHPH">
+				<a href="http://www.chieftain.com/prep/dhph/" >Dolores Huerta</a>
+			</li>
+			<li id="Prep-East">
+				<a href="http://www.chieftain.com/prep/east/" >East</a>
+			</li>
+			<li id="Prep-South">
+				<a href="http://www.chieftain.com/prep/south/" >South</a>
+			</li>
+			<li id="Prep-West">
+				<a href="http://www.chieftain.com/prep/west/" >Pueblo West</a>
+			</li>
+			<li id="Prep-Canon">
+				<a href="http://www.chieftain.com/prep/canon/" >Canon City</a>
+			</li>
+			<li id="Prep-Florence">
+				<a href="http://www.chieftain.com/prep/florence/" >Florence</a>
+			</li>
+			<li id="Prep-Rye">
+				<a href="http://www.chieftain.com/prep/rye/" >Rye</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Business">
+		<a href="http://www.chieftain.com/business/" >Business</a>
+		<ul>
+			<li id="Business-LocalBusiness">
+				<a href="http://www.chieftain.com/business/localbusiness/" >Local</a>
+			</li>
+			<li id="Business-Tech">
+				<a href="http://www.chieftain.com/business/tech/" >Tech</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/business/money/" >Money & Markets</a>
+			</li>
+			<li id="Business-RealEstate">
+				<a href="http://www.chieftain.com/business/realestate/" >Real Estate</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://shoplocal.chieftain.com/">Directory</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/site/smartbuys/" >Smartbuys</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://www.bestofpueblo.com/">Best of Pueblo</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/site/advertise/directory/" >Advertisers</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Life">
+		<a href="http://www.chieftain.com/life/" >Life</a>
+		<ul>
+			<li id="Life-Health">
+				<a href="http://www.chieftain.com/life/health/" >Health & Fitness</a>
+			</li>
+			<li id="Life-Food">
+				<a href="http://www.chieftain.com/life/food/" >Food</a>
+			</li>
+			<li id="Life-Religion">
+				<a href="http://www.chieftain.com/life/religion/" >Faith & Religion</a>
+			</li>
+			<li id="Life-Family">
+				<a href="http://www.chieftain.com/life/family/" >Family & Parenting</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://pets.chieftain.com/">Pets</a>
+			</li>
+			<li id="Life-Community">
+				<a href="http://www.chieftain.com/life/community/" >Community Corner</a>
+			</li>
+			<li id="Life-Travel">
+				<a href="http://www.chieftain.com/life/travel/" >Travel</a>
+			</li>
+			<li>
+				<a href="http://forms.chieftain.com/celebrations/">Celebrations</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li id="Entertainment">
+		<a href="http://www.chieftain.com/entertainment/" >Entertainment</a>
+		<ul>
+			<li id="Entertainment-Calendar">
+				<a href="http://www.chieftain.com/calendar/" >Calendar</a>
+			</li>
+			<li>
+				<a href="http://beyondthefold.chieftain.com">Beyond The Fold</a>
+			</li>
+			<li id="Entertainment-Movies">
+				<a href="http://www.chieftain.com/entertainment/movies/" >Movies</a>
+			</li>
+			<li id="Entertainment-TV">
+				<a href="http://www.chieftain.com/entertainment/tv/listings/" >TV</a>
+			</li>
+			<li id="Entertainment-Music">
+				<a href="http://www.chieftain.com/entertainment/music/" >Music</a>
+			</li>
+			<li id="Entertainment-Books">
+				<a href="http://www.chieftain.com/entertainment/books/" >Books</a>
+			</li>
+			<li id="Entertainment-Comics">
+				<a href="http://www.chieftain.com/entertainment/comics/" >Comics</a>
+			</li>
+			<li id="Entertainment-Games">
+				<a href="http://www.chieftain.com/entertainment/games/" >Games</a>
+			</li>
+			<li id="Entertainment-Horoscopes">
+				<a href="http://www.chieftain.com/entertainment/horoscopes/" >Horoscopes</a>
+			</li>
+			<li id="Entertainment-Celebs">
+				<a href="http://www.chieftain.com/entertainment/celebs/" >Celebs</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Multimedia">
+		<a href="http://www.chieftain.com/multimedia/" >Multimedia</a>
+		<ul>
+			<li id="Multimedia-Photos">
+				<a href="http://www.chieftain.com/multimedia/photos/" >Photos</a>
+			</li>
+			<li>
+				<a href="http://pueblochieftain.mycapture.com/mycapture/index.asp" target="_blank">Reprints</a>
+			</li>
+			<li>
+				<a href="http://imagesatchieftain.com/" target="_blank">Slideshows</a>
+			</li>
+			<li id="Multimedia-Video">
+				<a href="http://www.chieftain.com/multimedia/videos/" >Video</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Opinion">
+		<a href="http://www.chieftain.com/opinion/" >Opinion</a>
+		<ul>
+			<li id="Opinion-Editorials">
+				<a href="http://www.chieftain.com/opinion/editorials/" >Editorials</a>
+			</li>
+			<li id="Opinion-Ideas">
+				<a href="http://www.chieftain.com/opinion/ideas/" >Ideas</a>
+			</li>
+			<li id="Opinion-Letters">
+				<a href="http://www.chieftain.com/opinion/letters/" >Letters</a>
+			</li>
+			<li id="Forms-Letters">
+				<a href="http://www.chieftain.com/forms/letters/">Submit a letter</a>
+			</li>
+			<li id="Columns">
+				<a href="http://www.chieftain.com/columns/" >Columns</a>
+			</li>
+			<li id="Site-Blogs">
+				<a href="http://www.chieftain.com/site/blogs/" >Blogs</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Obituaries">
+		<a href="http://www.chieftain.com/news/obituaries/" >Obituaries</a>
+		<ul><li><a>&nbsp;</a></li></ul>
+		 <ul>
+			<li>
+				<a href="http://www.chieftain.com/news/obituaries/memoriam/" >In Memoriam</a>
+			</li>
+		</ul> 
+	</li>
+	<li id="Classifieds">
+		<a href="http://www.chieftain.com/classifieds/" >Classifieds</a>
+		<ul>
+			<li>
+				<a href="/classifieds#Announcements">Announcements</a>
+			</li>
+			<li>
+				<a href="/classifieds#Automotive">Automotive</a>
+			</li>
+			<li>
+				<a href="/classifieds#Employment">Employment</a>
+			</li>
+			<li>
+				<a href="/classifieds#FarmRanch">Farm & Ranch</a>
+			</li>
+			<!-- <li>
+				<a href="/classifieds/service/legal/">Legal</a>
+			</li> -->
+			<li>
+				<a href="/classifieds#Merchandise">Merchandise</a>
+			</li>
+			<li>
+				<a href="/classifieds#RealEstate">Real Estate</a>
+			</li>
+			<li>
+				<a onClick="window.open('https://secure.townnews.com/shared-content/adowl/front-end.php?domain=www2.chieftain.com&instance=adowl&ui=peekaboo','popform','width=930,height=600,scrollbars=1,toolbar=1');" href="javascript:void(0)">Place an Ad</a>
+			</li>
+		</ul>
+	</li>
+	<li id="Weather">
+		<a href="http://www.chieftain.com/news/weather/" >Weather</a>
+		<ul><li><a>&nbsp;</a></li></ul>
+	</li>
+	<!--<li id="Autos">
+		<a class="dir" href="http://www.chieftain.com/autos/">Autos</dti:section:link>
+		<ul>
+			<li>
+				<a href="http://www.chieftain.com/online_features/automotive/">Features</dti:section:link>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/online_features/automotive_front/gas_prices/">Gas prices</dti:section:link>
+			</li>
+		</ul>
+	</li>-->
+</ul>
+</div>
+<!-- End Nave Bar -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12Navigation.csp, e:.028084 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635924&fid=119, e:.028347 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635926&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12FeaturedMenu.csp -->
+<!-- Featured Menu -->
+	<div class="horizontal">
+		<span class="quick-nav-title">FEATURED:</span>
+		<ul>
+			<li>
+				<a href="http://www.chieftain.com/site/popular/" >Popular</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/special/recall/" >Recall election</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/special/fair/" >State Fair</a>
+			</li>
+			<li>
+				<a href="http://pro32.ap.org/chieftain">NFL</a>
+			</li>
+			<li>
+				<a href="http://pueblochieftain.co.newsmemory.com/?date=20130822&goTo=K1">Kickoff</a>
+			</li>
+			<li>
+				<a href="http://collegefootball.ap.org/chieftain/">College football</a>
+			</li> 
+<!--			<li>
+				<a href="http://www.bestofpueblo.com" target="_blank">Best of Pueblo</a>
+			</li>-->
+			<li>
+				<a href="http://pets.chieftain.com" target="_blank">Pets</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/site/smartbuys/" >Smartbuys</a>
+			</li>
+<!--			<li>
+				<a href="http://pueblochieftain.co.newsmemory.com/special.php?date=20130331">Guidebook</a>
+			</li>-->
+<!--			<li>
+				<li><a href="http://pueblochieftain.co.newsmemory.com/special.php?date=20130520">Seasons</a></li>
+			</li>-->
+			<li class="quick-nav-last">
+				<a href="http://deals.chieftain.com/" target="_blank">Deals</a>
+			</li>
+<!--			<li>
+				<a href="http://pueblochieftain.mycapture.com/mycapture/index.asp" target="_blank">Buy photos</a>
+			</li>-->
+<!--			<li>
+				<a href="http://www.niechieftain.com" target="_blank">NIE</a>
+			</li>-->
+<!--			<li class="quick-nav-last">
+				<a href="http://racing.ap.org/chieftain">Racing</a>
+			</li> -->
+<!--			<li class="quick-nav-last">
+				<dti:section:link name="Links">Links</dti:section:link>
+			</li>-->
+		</ul>
+	</div>
+<!-- End Featured Menu -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12FeaturedMenu.csp, e:.001543 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635926&fid=119, e:.001807 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635927&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12AppsMenu.csp -->
+<!-- Apps Menu -->
+
+	<div class="horizontal">
+		<span class="quick-nav-title">FREE CHIEFTAIN APPS:</span>
+		<ul>
+			<li>
+				<a href="http://itunes.apple.com/us/app/pueblo-chieftain-for-ipad/id518409583?mt=8" target="_blank">iPad</a>
+			</li>
+			<li>
+				<a href="http://www.amazon.com/gp/product/B00845TMI4/ref=mas_pm_Pueblo-Chieftain-Kindle-Fire-Edition" target="_blank">Kindle Fire</a>
+			</li>
+			<li>
+				<a href="https://play.google.com/store/apps/details?id=com.pueblochieftain.android.prod" target="_blank">Android tablet</a>
+			</li>
+			<li>
+				<a href="http://itunes.apple.com/us/app/the-pueblo-chieftain/id534560986?mt=8" target="_blank">iPhone</a>
+			</li>
+			<li>
+				<a href="https://play.google.com/store/apps/details?id=com.spreedinc.providers.starjournalpublishing.pueblochieftain" target="_blank">Android phone</a>
+			</li>
+			<li>
+				<a href="http://www.chieftain.com/mobile/mhome/" >Universal</a>
+			</li>
+			<li class="quick-nav-last">
+				<a href="http://www.chieftain.com/site/apps/" >All apps</a>
+			</li>
+		</ul>
+	</div>
+
+<!-- End Apps Menu -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12AppsMenu.csp, e:.001029 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=635927&fid=119, e:.001292 -->
+
+	
+
+
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/includes/siteHeader.csp, e:.037729 -->
+
+<div id="content">
+
+	<!-- Main Content -->
+	<div id="right-col" class="content-8">
+		<!--'-->
+		<style>
+			.breadcrumb {
+				background-clip: padding-box;
+				background-color: #000;
+				border: 1px solid #fff;
+				border-radius: 5px 5px 5px 5px;
+				display: inline-block;
+				float: left;
+				font-size: 12px;
+				height: 31px;
+				line-height: 32px;
+				margin: 10px 0;
+				overflow: hidden;
+				padding: 0 10px;
+				color: #fff;
+			}
+			.breadcrumb li {
+				display: block;
+				float: left;
+				padding: 0 10px 0 5px;
+			}
+			.breadcrumb li a,
+			.breadcrumb li a:link,
+			.breadcrumb li a:visited {
+				color: #fff;
+			}
+			.breadcrumb li a:hover,
+			.breadcrumb li a:active {
+				color: #4da6ff;
+			}
+			.breadcrumb li.divider {
+				background: url("/csp/mediapool/sites/Shared/assets/images/breadcrumbDivider1.png") no-repeat scroll 0 0 transparent;
+				height: 31px;
+				margin-right: 10px;
+				padding: 0;
+				width: 15px;
+			}	
+		</style>
+		
+		<div>
+			
+			<div id='tmglCrumbtrail'>
+				<ul class="breadcrumb"> 
+					<li class="step-active"><a href="http://www.chieftain.com/home/">Home</a><li class="divider"></li></li>Business
+				</ul>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+	
+		
+<!-- fi:/csp/mediapool/sites/Shared/templates/grids/ContentGrid.csp -->
+
+
+
+<div class="grid8">
+	
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid8StoryContent.csp -->
+
+<script type="text/javascript">
+	$(document).ready( function() {
+		$(".PagingLink").click( function() {
+			window.scrollTo(0, 0);
+			$(".PagingLink").click( function() {
+				window.scrollTo(0, 0);
+			});
+		});
+	});
+</script>
+<ul class="content">
+	
+		
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid8StoryTop.csp -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftListSummary.csp?sid=307&cid=1789003&fid=120 -->
+<!-- PhotoLeftList summary story template - Top headline of section content pages -->
+
+
+<li class="photo-leftlist">
+	<a href="http://www.chieftain.com/business/1789003-120/club-grand-junction-lawsuit" >
+		
+		<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Strippers sue Grand Junction club for back wages
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000427 -->
+</div>
+		<p>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getTextParagraphLimit.csp -->
+
+
+
+
+	<p class="Body Text Plain">GRAND JUNCTION, Colo. — Strippers who say they were paid only in tips and had to pay to work at a Grand Junction club have filed a class action lawsuit against the club and its owner. </p>
+
+ 
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getTextParagraphLimit.csp, e:.000309 -->
+</p>
+	</a>
+	
+</li>
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftListSummary.csp?sid=307&cid=1789003&fid=120, e:.001765 -->
+
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid8StoryTop.csp, e:.003044 -->
+
+	
+	<script type="text/javascript">
+		function changeViewedPage(areaname, num, total)
+		{
+			var SelectedAreaClass = "PagingCurrent";
+			var UnselectedAreaClass = "PagingLink";
+			for (i=1; i<=total; i++) {
+				if (i == num) {
+					// Show this one.
+					document.getElementById(areaname + "Areas" + i).style.display = "block";
+					document.getElementById(areaname + "BottomLinks" + i).setAttribute("class", SelectedAreaClass);
+					document.getElementById(areaname + "BottomLinks" + i).innerHTML = "[" + i + "]";
+					document.getElementById(areaname + "BottomLinks" + i).removeAttribute("onclick");
+				} else {
+					// Hide these.
+					document.getElementById(areaname + "Areas" + i).style.display = "none";
+					document.getElementById(areaname + "BottomLinks" + i).setAttribute("class", UnselectedAreaClass);
+					document.getElementById(areaname + "BottomLinks" + i).innerHTML = i;
+					document.getElementById(areaname + "BottomLinks" + i).setAttribute("onclick", "changeViewedPage('"+areaname+"',"+i+","+total+")");
+				}
+			}
+		}
+</script>
+
+<div id="StoryContent11Areas1">
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788941&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1788941-120/economy-percent-confidence-rate" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=MN2HArerhIGWhy8qsQwYb8$daE2N3K4ZzOUsqbU5sYuzLiCP7L86TkdMQEEG5TFwWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		U.S. consumer confidence rises in August
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.00038 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788941&fid=120, e:.002275 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788934&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1788934-120/fell-oil-percent-crude" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=h4u7MjA33sDIQYT_GC6u9c$daE2N3K4ZzOUsqbU5sYuhwLih6QqhY56CjQK4xE6OWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Stocks slide, oil up as Syria tensions escalate
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000407 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788934&fid=120, e:.002349 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788936&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1788936-120/airlines-merger-trial-airline" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		U.S. seeks to delay airline-merger trial until March
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000399 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788936&fid=120, e:.00147 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788938&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1788938-120/domestic-workers-mart-partners" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Wal-Mart expands benefits to domestic partners
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000398 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1788938&fid=120, e:.001425 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1784011&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1784011-120/fair-manhattan-colorado-pizza" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=KNh$fXpNLsVLdfcyA5uEds$daE2N3K4ZzOUsqbU5sYuk9wbaaWqHLg21BBr7Lcp$WCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Familiar fare
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000398 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1784011&fid=120, e:.002589 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785467&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1785467-120/colorado-percent-sales-store" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	Business Briefs: Bass Pro hiring for Nov. 14 opening
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000304 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785467&fid=120, e:.001389 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785937&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1785937-120/story.html" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Anadarko sells part of stake off Africa for $2.6B
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000474 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785937&fid=120, e:.001645 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785927&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1785927-120/coca-cola-ingredients-recipe" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=q$h0oqNsBCtnPKrXWYK9i8$daE2N3K4ZzOUsqbU5sYuLblyT75dQ9ZduhLs5TdFxWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Secret recipes’ key ingredient: hype
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000385 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785927&fid=120, e:.007824 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1786192&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1786192-120/percent-slipped-industrial-market" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=$a4Zu57NQvGi4L0NsxVySc$daE2N3K4ZzOUsqbU5sYtbtXbqdACMRxle1$HueiGFWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Syria adds to unease
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000448 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1786192&fid=120, e:.002046 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785941&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1785941-120/marijuana-colorado-court-medical" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Another pot firing
+upheld
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000451 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785941&fid=120, e:.001594 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785180&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1785180-120/trump-attorney-general-accusations" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=b4mU$8O6JqF7ltnvdArVO8$daE2N3K4ZzOUsqbU5sYsk9q_bPyjIrIuDIHMzGYo2WCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		NY attorney general: Trump making wild accusations
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000372 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785180&fid=120, e:.002038 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785169&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1785169-120/orders-percent-july-months" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=LCunvnmoHBwDpzC1iNaXSM$daE2N3K4ZzOUsqbU5sYsQAm_fyi8Q6irRjIP8FFeYWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Orders for long-lasting factory goods plunge
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000412 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1785169&fid=120, e:.001948 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778560&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778560-120/pipeline-local-rainey-colorado" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Pipeline could help Valley economies
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000402 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778560&fid=120, e:.002799 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772914&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1772914-120/center-pueblo-csu-farmers" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	Business calendar
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000314 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772914&fid=120, e:.001428 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772921&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1772921-120/agent-july-month-chorak" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=6dQb4sSIOE0ubV8grhSDt8$daE2N3K4ZzOUsqbU5sYuYNe4PGxx6UYyk3DzMTFNaWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	Agent honors
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000279 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772921&fid=120, e:.001926 -->
+
+</div>
+<div id="StoryContent11Areas2" style="display:none;">
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1782419&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1782419-120/trump-schneiderman-university-attorney" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=yN11Hm56saeF6bOcut10oc$daE2N3K4ZzOUsqbU5sYsER_XKfBjfio91HALXJXmAWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		NY AG sues Trump, ‘Trump University,’ claims fraud
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000418 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1782419&fid=120, e:.002155 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772808&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1772808-120/sales-rates-mortgage-july" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=eoKiYju70dTfBWOv$nQ5cs$daE2N3K4ZzOUsqbU5sYsXUMvyAnHbWuImKJ36YYVhWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		July U.S. home sales hit 5.4M
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.0004 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772808&fid=120, e:.002021 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772101&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1772101-120/aircraft-plane-welch-bomber" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=UHErMBTCQs$uEVtnFNjtws$daE2N3K4ZzOUsqbU5sYtImN6Gp6VJ9QQkuDYoYGmdWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Upgrades point B-52 to the horizon
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000394 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1772101&fid=120, e:.002222 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774667&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774667-120/wedding-percent-age-couples" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=jBd5IVAIUCd07weJPxBo2c$daE2N3K4ZzOUsqbU5sYvNbnvzf2IK1JJIbMYhuZawWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Older brides with fancy gowns, garter belts, DJs
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000398 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774667&fid=120, e:.001927 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778473&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778473-120/pueblo-lte-data-company" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Second company to offer 4G LTE in Pueblo
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000662 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778473&fid=120, e:.001772 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778773&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778773-120/nasdaq-trading-exchange-cox" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=a7Vcisa65QvfYEAHHhqtjs$daE2N3K4ZzOUsqbU5sYtdWnPxsWEf__WNQ_ptbhEkWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Nasdaq breakdown pressures crisis work
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.0004 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778773&fid=120, e:.002256 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778794&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778794-120/stocks-company-dow-microsoft" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=vGo_8p19enKcpmMh1qM6vc$daE2N3K4ZzOUsqbU5sYvF_upiqEuS_sZ24IVUTFf4WCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Stock close higher
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000404 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778794&fid=120, e:.002146 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778801&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778801-120/apple-injunction-proposal-publishers" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Apple up for shorter injunction
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000463 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778801&fid=120, e:.001585 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778411&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778411-120/microsoft-ballmer-company-ceo" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=$hGLaH_P3_Djkb0Q0bBkRc$daE2N3K4ZzOUsqbU5sYuDZYqPjiR8W0W2DCaiH43UWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Microsoft says CEO Ballmer to retire
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.0004 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778411&fid=120, e:.001976 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778994&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778994-120/homes-bank-million-pueblo" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	Business briefs: Parade of homes winners
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000278 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778994&fid=120, e:.00144 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778365&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778365-120/rates-mortgage-homes-sales" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=UAgYeqhKxO2fPYGY1yItJM$daE2N3K4ZzOUsqbU5sYs2WxSXuZE1VrZ9giAmMumFWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Jump in mortgage rates hurts sales of new homes
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000396 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778365&fid=120, e:.0019 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1777973&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1777973-120/percent-sales-market-stock" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=wQZ7AZlUOKN6FTKO0qGVI8$daE2N3K4ZzOUsqbU5sYv3NKVB$6JR4h7t8D3U2$hZWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Stock market waffles after big drop in home sales
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000401 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1777973&fid=120, e:.00194 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778364&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1778364-120/europe-percent-investors-says" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=XBl6Yexxdh_6LsLEOUyfNc$daE2N3K4ZzOUsqbU5sYsqGajRLYUSEFZeoC1DDcByWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Why it’s time to revisit European stocks
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000442 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1778364&fid=120, e:.002283 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1777994&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1777994-120/denver-preparing-airline-airlines" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		DIA preparing for airline cutbacks
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000446 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1777994&fid=120, e:.001612 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774836&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774836-120/company-vestas-blade-brighton" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=UCjqAEjYNAOQSe9WlgNJ6M$daE2N3K4ZzOUsqbU5sYsUFTMYbJiC7_YiM6Hx8vcKWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Vestas increasing business in Colorado
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000375 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774836&fid=120, e:.002117 -->
+
+</div>
+<div id="StoryContent11Areas3" style="display:none;">
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1777925&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1777925-120/marijuana-denver-medical-claim" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Judge dismisses claim over company pot policy
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000422 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1777925&fid=120, e:.001546 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775171&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1775171-120/colorado-state-pueblo-agriculture" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=FIJHlc$G4zUq$i1TF4L0ps$daE2N3K4ZzOUsqbU5sYtbgb4WQy8DJz_o5ciTLJK6WCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		A growing industry
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000385 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775171&fid=120, e:.001992 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774897&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774897-120/nasdaq-market-trading-economic" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=_XKwToBm7dlyLGo$PyLC48$daE2N3K4ZzOUsqbU5sYs3OXK_ovgJH1nE02Qa9ghyWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Nasdaq halts on technical glitch
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000419 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774897&fid=120, e:.002024 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775531&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1775531-120/fed-chairman-battle-midler" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Fed choice becoming a rare political battle
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000442 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775531&fid=120, e:.001561 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1768775&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1768775-120/carolina-south-agriculture-damage" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=gAnKdvt_O_YpuHsiZ_TcO8$daE2N3K4ZzOUsqbU5sYtLk85i4byZLb_LCIReZx2hWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Heavy rains a disaster for S. Carolina agriculture
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000989 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1768775&fid=120, e:.003539 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775754&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1775754-120/growth-economic-index-percent" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=wQZ7AZlUOKN6FTKO0qGVI8$daE2N3K4ZzOUsqbU5sYv3NKVB$6JR4h7t8D3U2$hZWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Economic measures show jump for July
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000514 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775754&fid=120, e:.002342 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775387&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1775387-120/percent-week-applications-average" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=uYQwpTkGSQSsN_sf5FVLJs$daE2N3K4ZzOUsqbU5sYtsGSGJfQjg8GkiPKaGlcDpWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Unemployment applications rise to 336,000
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000378 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775387&fid=120, e:.002018 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775484&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1775484-120/ceo-walmart-immelt-manufacturing" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/ap100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Walmart pushes ‘made in America’
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.00038 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775484&fid=120, e:.001497 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774588&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774588-120/buyers-market-multiple-stockwell" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Home buyers battle in bidding wars
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000381 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774588&fid=120, e:.00149 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774593&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774593-120/property-deposit-area-deal" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Vacation home brings some buyer’s remorse
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000401 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774593&fid=120, e:.001449 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774601&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774601-120/levinrad-flippers-pages-pageset" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=Dy5k1d1UH9G3un8hJaaaes$daE2N3K4ZzOUsqbU5sYuuqci0BsmDvKmrWyr6os2JWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Three lessons learned from home flippers
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000442 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774601&fid=120, e:.002047 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774648&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774648-120/smoke-walls-brick-smell" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Smelling smoke from rowhouse next door
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000625 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774648&fid=120, e:.001762 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774711&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774711-120/percent-rates-mortgage-average" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=98TK63T8nLLQCieX7naBts$daE2N3K4ZzOUsqbU5sYtWjhOWQBlMg6MSPr4lOR1FWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Rate on 30-year mortgage at 4.58 pct.
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000433 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774711&fid=120, e:.002411 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774955&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1774955-120/alarms-plants-fire-invasive" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+					<img alt="photo" src="/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=ZEK1eIWIDP9FAZF0vdkMts$daE2N3K4ZzOUsqbU5sYvEkQ_sp_9TAgQhKQla2lZ9WCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&amp;CONTENTTYPE=image/jpeg">
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Plant invaders; stylish fire alarms
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000381 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1774955&fid=120, e:.002049 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775036&fid=120 -->
+<!-- PhotoLeftHeadline summary story template - additional headlines on section content pages -->
+
+
+
+
+
+<div class="photo-leftheadline">
+		<a href="http://www.chieftain.com/business/1775036-120/gray-design-mitchell-homes" >
+			<div class="left thumb-photo-back">
+				
+				
+				
+						
+						<img src="/csp/mediapool/sites/Shared/assets/images/pc100x80.png"/>
+						
+				
+				
+				
+			</div>
+			<div>
+<!-- fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp -->
+
+
+	
+		Interior designers work with color, design trends
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/modules/dtiIncludes/csp/getHeadline.csp, e:.000378 -->
+</div>
+		</a>
+		
+</div>
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/PhotoLeftHeadlineSummary.csp?sid=307&cid=1775036&fid=120, e:.001596 -->
+
+</div>
+<div class="PagingStyle" align="center">
+	<span>Page:</span>
+<span id="StoryContent11BottomLinks1" class="PagingCurrent">[1]</span>
+<span id="StoryContent11BottomLinks2" class="PagingLink" onclick="changeViewedPage('StoryContent11',2, 3)">2</span>
+<span id="StoryContent11BottomLinks3" class="PagingLink" onclick="changeViewedPage('StoryContent11',3, 3)">3</span>
+</div>
+</ul>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid8StoryContent.csp, e:.126724 -->
+
+</div>
+<div class="grid4Container">
+	<div class="grid4">
+		
+	</div>
+	<div class="grid4">
+		
+	</div>
+</div>
+<div class="grid8">
+	
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/templates/grids/ContentGrid.csp, e:.131718 -->
+
+	</div>
+	<!-- End Main Content -->
+	
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/includes/siteRail.csp -->
+	<!-- Right Rail -->
+	<div id="right-col" class="content-4">
+		
+			
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=710871&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp -->
+<div>
+<!-- BLOX Ad Manager javascript code --> <script type="text/javascript" src="http://chiefads.com/content/tncms/ads/rail-top/rail-top1.js"></script>
+
+<!-- BLOX Ad Manager call to display ads --> <script type="text/javascript">oTNCMS_Ad.show('ros');</script>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp, refresh(), e:.00127 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=710871&fid=120, e:.001585 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=691126&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid4DealOfTheDay.csp -->
+<div>
+<iframe id="widget-iframe" src="http://admin.analoganalytics.com/sample-widgets/chieftain-widget.html" width="310" height="294" scrolling="no" frameBorder="0"> <p>Your browser does not support iframes.</p> </iframe>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid4DealOfTheDay.csp, cache(60), e:.000245 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=691126&fid=120, e:.000534 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=1066234&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp -->
+<div>
+<!-- BLOX Ad Manager javascript code --> <script type="text/javascript" src="http://chiefads.com/content/tncms/ads/rail-top/rail-top2.js"></script>
+
+<!-- BLOX Ad Manager call to display ads --> <script type="text/javascript">oTNCMS_Ad.show('ros');</script>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp, refresh(), e:.000994 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=1066234&fid=120, e:.001301 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=1053490&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp -->
+<div>
+<!-- BLOX Ad Manager javascript code --> <script type="text/javascript" src="http://chiefads.com/content/tncms/ads/center-right-top/center-right-top1.js"></script>
+
+<!-- BLOX Ad Manager call to display ads --> <script type="text/javascript">oTNCMS_Ad.show('business');</script>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp, refresh(), e:.001001 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=1053490&fid=120, e:.001271 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=779241&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid4NDNbusiness.csp -->
+<!-- biz videos --><div>
+<iframe src="http://embed.newsinc.com/Thumbnail/iframe.html?wid=8619&cid=504&freewheel=90724&sitesection=chieftain_biz_non_fro&parent=ndn_sliding_launcher_1&type=slider" height="250" width="300" frameborder="no" scrolling="no" noresize marginwidth="0px" marginheight="0px"></iframe>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid4NDNbusiness.csp, cache(120), e:.000263 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=779241&fid=120, e:.000533 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=710872&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp -->
+<div>
+<!-- BLOX Ad Manager javascript code --> <script type="text/javascript" src="http://chiefads.com/content/tncms/ads/rail-middle/rail-middle1.js"></script>
+
+<!-- BLOX Ad Manager call to display ads --> <script type="text/javascript">oTNCMS_Ad.show('ros');</script>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp, refresh(), e:.001052 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=710872&fid=120, e:.001354 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=722243&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid4ShopLocal.csp -->
+<div class="yellowpages">
+<TABLE CELLPADDING=0 CELLSPACING=0><TR><TD><div class="sectionHead-noRule"><a href="http://shoplocal.chieftain.com/pueblo+co.z.html" target="_blank">Shop Local</a></div><FORM STYLE='margin:0;' TARGET=_top METHOD=GET ACTION="http://shoplocal.chieftain.com/search.pg">
+
+
+Find Pueblo businesses:</TD></TR><TR>
+<INPUT NAME=z TYPE=HIDDEN VALUE='Pueblo, CO'>
+<TD>
+<INPUT NAME=q STYLE='width:150px;border-width:2;' TYPE=TEXT MAXLENGTH=50 VALUE=''></TD><TD> <INPUT TYPE=SUBMIT STYLE='font-size:8pt;' VALUE=Search></TD></TR>
+</TR><TR><TD>
+<SPAN STYLE="font-size:7pt;color:gray;"><a onclick="el = document.getElementById('pgmenu2'); el.style.display = (el.style.display == 'block' ? 'none' : 'block'); return false;" href="http://shoplocal.chieftain.com">Popular Searches</a><div style='display:none;font-size:8pt;' id=pgmenu2> <a href="http://shoplocal.chieftain.com/pueblo+co/apartments.zq.html">Apartments in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/attorneys.zq.html">Attorneys in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/auto+dealers.zq.html">Auto Dealers in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/auto+parts.zq.html">Auto Parts in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/auto+repair.zq.html">Auto Repair in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/beauty+salons.zq.html">Beauty Salons in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/car+rental.zq.html">Car Rental in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/dentists.zq.html">Dentists in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/doctors.zq.html">Doctors in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/flowers.zq.html">Flowers in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/hotels.zq.html">Hotels in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/insurance.zq.html">Insurance in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/loans.zq.html">Loans in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/mortgages.zq.html">Mortgages in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/movers.zq.html">Movers in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/pizza.zq.html">Pizza in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/realtors.zq.html">Realtors in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/restaurants.zq.html">Restaurants in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/storage.zq.html">Storage in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/tax+preparation.zq.html">Tax Preparation in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co/travel.zq.html">Travel in Pueblo</a><br> <a href="http://shoplocal.chieftain.com/allads.q.html">Featured</a><br> <a href="http://shoplocal.chieftain.com/pueblo+co.z.html">More...</a></div><br>Powered by <a style='text-decoration:none;' href="http://www.local.com/city/co/pueblo.aspx">Local.com</a></SPAN></TD></TR>
+</TABLE>
+</FORM>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid4ShopLocal.csp, cache(10), e:.000322 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=722243&fid=120, e:.001072 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=710873&fid=120 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp -->
+<div>
+<!-- BLOX Ad Manager javascript code --> <script type="text/javascript" src="http://chiefads.com/content/tncms/ads/rail-bottom/rail-bottom1.js"></script>
+
+<!-- BLOX Ad Manager call to display ads --> <script type="text/javascript">oTNCMS_Ad.show('ros');</script>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp, refresh(), e:.001093 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=307&cid=710873&fid=120, e:.001385 -->
+
+		
+	</div>
+	<!-- End Right Rail -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/includes/siteRail.csp, e:.01606 -->
+
+</div>
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/includes/siteFooter.csp -->
+
+
+	
+		
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=669953&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp -->
+<div>
+<!-- BLOX Ad Manager javascript code --> <script type="text/javascript" src="http://chiefads.com/content/tncms/ads/leaderboard-bottom/leaderboard-bottom1.js"></script>
+
+<!-- BLOX Ad Manager call to display ads --> <script type="text/javascript">oTNCMS_Ad.show('ros');</script>
+</div>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGridAllAd.csp, refresh(), e:.001143 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=669953&fid=119, e:.001525 -->
+
+<!-- fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=669955&fid=119 -->
+
+
+
+<!-- fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12Footer.csp -->
+<!-- Footer -->
+<div class="footer-container">
+	<div class="site-map-container">
+		<span class="footer-title">SITE MAP:</span>
+		<ul class="footer-nav">
+			<li><a href="http://www.chieftain.com/home/" >Home</a></li>
+			<li><a href="http://www.chieftain.com/news/" >News</a></li>
+			<li><a href="http://www.chieftain.com/sports/" >Sports</a></li>
+			<li><a href="http://www.chieftain.com/prep/" >Prep Rally</a></li>
+			<li><a href="http://www.chieftain.com/business/" >Business</a></li>
+			<li><a href="http://www.chieftain.com/life/" >Life</a></li>
+			<li><a href="http://www.chieftain.com/entertainment/" >Entertainment</a></li>
+			<li><a href="http://www.chieftain.com/multimedia/" >Multimedia</a></li>
+			<li><a href="http://www.chieftain.com/opinion/" >Opinion</a></li>
+			<li><a href="http://www.chieftain.com/news/obituaries/" >Obituaries</a></li>
+			<li><a href="http://www.chieftain.com/classifieds/" >Classifieds</a></li>
+			<li><a href="http://www.chieftain.com/news/weather/" >Weather</a></li>
+			<!-- <li><a class="dir" href="http://www.zoomautos.net/">Autos</a></li> -->
+		</ul>
+	</div>
+	<div class="footer-body">
+		<div class="footer-links-container">
+			<div class="footer-list-container">
+				<span class="footer-title">CONTACT / HELP</span>
+				<ul class="footer-list">
+					<li><a href="http://www.chieftain.com/site/contact/" >Staff List</a></li>
+					<li><a href="http://www.chieftain.com/site/faq/" >FAQ</a></li>
+					<li><a href="http://forms.chieftain.com/news-tips">Send Us a News Tip</a></li>
+					<li><a href="http://www.chieftain.com/forms/letters/">Letter to the Editor</a></li>
+					<li><a href="http://www.chieftain.com/calendar/" >Submit Calendar Event</a></li>
+					<li><a href="http://forms.chieftain.com/corrections">Request Correction</a></li>
+				</ul>
+			</div>
+			<div class="footer-list-container">
+				<span class="footer-title">CONNECT</span>
+				<ul class="footer-list">
+					<li><a href="https://www.facebook.com/ThePuebloChieftain" target="_blank">Facebook</a></li>
+					<li><a href="https://twitter.com/ChieftainNews/the-pueblo-chieftain/members" target="_blank">Twitter</a></li>
+					<li><a href="http://www.chieftain.com/mobile/" >Mobile Site</a></li>
+					<li><a href="http://www.chieftain.com/site/apps/" >Mobile Apps</a></li>
+					<li><a href="http://www.chieftain.com/site/newsletter/" >Newsletters</a></li>
+					<li><a href="http://www.chieftain.com/site/rss/" >RSS feeds</a></li>
+					<!-- <li><a href="">Today's News Index</a></li> -->
+				</ul>
+			</div>
+			<div class="footer-list-container">
+				<span class="footer-title">ADVERTISING</span>
+				<ul class="footer-list">
+					<li><a href="http://www.chieftain.com/site/advertise/" >Advertise With Us</a></li>
+					<li><a href="http://www.chieftain.com/classifieds/" >Classifieds</a></li>
+					<li><a href="/classifieds#Employment">Job Listings</a></li>
+					<li><a href="/classifieds#Automotive">Auto Listings</a></li>
+					<li><a href="/classifieds#RealEstate">Real Estate/Rental Listings</a></li>
+					<!--<li><a href="/classifieds#Announcements">Announcements/Notices</a></li>-->
+					<li><a href="http://shoplocal.chieftain.com/pueblo+co.z.html" target="_blank">Shop Local</a></li>
+					<li><a href="http://www.chieftain.com/site/advertise/directory/" >Advertiser Directory</a></li>
+				</ul>
+			</div>
+			<div class="footer-list-container">
+				<span class="footer-title">COMPANY</span>
+				<ul class="footer-list">
+					<li><a href="http://www.chieftain.com/site/about/" >About the Chieftan</a></li>
+					<li><a href="http://www.chieftain.com/site/terms/" >Terms of Use</a></li>
+					<li><a href="http://www.chieftain.com/site/privacy/" >Privacy Policy</a></li>
+					<li><a href="http://www.chieftain.com/site/comments/" >Commenting Policy</a></li>
+					<li><a href="http://www.chieftain.com/site/contact/" >Contact Us</a></li>
+					<li><a href="http://niechieftain.com/" target="_blank">Newspapers in Education</a></li>
+				</ul>
+			</div>
+			<div class="footer-list-container">
+				<span class="footer-title">SUBSCRIPTION</span>
+				<ul class="footer-list">
+					<li><a href="http://www.chieftain.com/site/subscribe/" >Subscribe to the Chieftain</a></li>
+					<li><a href="https://iservicespbc.dticloud.com/cgi-bin/cmo_cmo.sh/custservice/web/login.html" target="_blank">Manage Your Account</a></li>
+					<li><a href="http://pueblochieftain.co.newsmemory.com/" target="_blank">Digital Edition Login</a></li>
+					<li><a href="http://www.chieftain.com/site/digital/" >Sample Digital Edition</a></li>
+					<li><a href="http://www.chieftain.com/site/faq/" >Frequently Asked Questions</a></li>
+				</ul>
+			</div>
+			<div class="footer-logo">
+				<a href="http://www.chieftain.com"><img src="/csp/mediapool/sites/Shared/assets/images/PBCfooterLogo.jpg" alt="Pueblo Chieftan"/></a>
+			</div>
+			<div id="quick-nav" class="horizontal">
+				<div>
+					<span class="quick-nav-title">Our other publications:</span>
+					<ul>
+						<!-- <li>
+							<a href="http://www.chieftain.com">The Pueblo Chieftan</a>
+						</li> -->
+						<li>
+							<a href="http://www.pueblowestview.com">The Pueblo West View</a>
+						</li>
+						<li>
+							<a href="http://beyondthefold.chieftain.com">Beyond the Fold</a>
+						</li>
+						<li>
+							<a href="http://pueblochieftain.co.newsmemory.com/special.php?pSetup=pueblochieftain_activeyears" target="_blank">Active Years</a>
+						</li>
+						<li>
+							<a href="http://www.bestofpueblo.com" target="_blank">Best of Pueblo</a>
+						</li>
+						<li class="quick-nav-last">
+							<a href="http://pueblochieftain.co.newsmemory.com/special.php?date=20130331" target="_blank">Guidebook</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="quick-nav" class="horizontal">
+				<div>
+					<span class="quick-nav-title">&copy; 2013 The Pueblo Chieftan &amp; Star Journal Publishing Corp:</span>
+					<ul>
+						<li>
+							<a href="http://www.chieftain.com/site/advertise/" >Advertise With Us</a>
+						</li>
+						<li>
+							<a href="http://www.chieftain.com/site/privacy/" >Privacy Statement</a>
+						</li>
+						<li class="quick-nav-last">
+							<a href="http://www.chieftain.com/site/terms/" >Terms of Use</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<!--		<div class="footer-image-container">
+			<img alt="Digital Edition" src="#(sharedPath)#/assets/images/chieftaindigital.png">
+		</div>-->
+	</div>
+</div>
+
+<!-- End NDN Perfect Pixel video script-->
+<script type="text/javascript" src=" 
+
+http://dmeserv.newsinc.com/repub/PuebloChieftain/dynamicWidgets.js"></script> 
+ <script type="text/javascript"> 
+NDNDynVideoWidgets(); 
+</script>
+<!-- End NDN Perfect Pixel video script-->
+
+<!-- End Footer -->
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/widgets/widgetGrid12Footer.csp, e:.013846 -->
+
+
+
+<!--/fi:/csp/mediapool/sites/Shared/templates/stories/summary/WidgetPullingSummary.csp?sid=304&cid=669955&fid=119, e:.014092 -->
+
+	
+
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/includes/siteFooter.csp, e:.018134 -->
+
+<!-- End section template -->
+<!--/fi:/csp/mediapool/sites/Shared/templates/sections/SiteSection.csp, e:.206881 -->
+
+		</div>
+	</div>
+	
+	<!-- Begin NDN Perfect Pixel code -->
+		<script type="text/javascript" src=" 
+		
+		http://dmeserv.newsinc.com/repub/PuebloChieftain/dynamicWidgets.js"></script> 
+		 <script type="text/javascript"> 
+		NDNDynVideoWidgets(); 
+		</script>
+	<!-- End NDN Perfect Pixel code -->
+	
+	<!-- Quantcast Tag -->
+		<script type="text/javascript">
+		var _qevents = _qevents || [];
+		
+		(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+		})();
+		
+		_qevents.push({
+		qacct:"p-36CTqkraKC8c6"
+		});
+		</script>
+		
+		<noscript>
+		<div style="display:none;">
+		<img src="//pixel.quantserve.com/pixel/p-36CTqkraKC8c6.gif" border="0" height="1" width="1" alt="Quantcast"/>
+		</div>
+		</noscript>
+<!-- End Quantcast tag -->
+
+</body>
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/fAllIndex.csp, e:.233468 -->
+
+
+<!--/fi:/csp/mediapool/sites/Shared/assets/csp/allIndex.csp, e:.233806 -->
+
+</html><!--
+Elapsed:.239329
+Globals:31639
+Lines:517038
+-->

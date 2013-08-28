@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html dir="ltr" lang="en-US"><head><title>Roadside Service Plans &amp; 24/7 Roadside Assistance | Allstate Motor Club</title><meta name="generator" content="Apache MyFaces Trinidad"><link rel="stylesheet" charset="UTF-8" type="text/css" href="/amcc/adf/styles/cache/minimal-desktop-pjob6-en-ltr.css"><meta name="description" content="Allstate's Roadside service plans provide reliable roadside assistance & protection. Become a member & discover the benefits of roadside coverage today"/><meta name="keywords" content="Roadside assistance, Roadside service plans"/>
+   <link rel="stylesheet" href="/amcc/css/minimal-desktop-override.css" media="all"/>
+   <link rel="stylesheet" href="/amcc/css/main.css" media="all"/>
+   
+   <!-- Important - Please don't change the order to CSS. It is mandatory for different browser support  -->
+   <!-- Start - CSS -->
+   
+   <link rel="stylesheet" href="/amcc/css/amc.css" media="all"/>
+   <link rel="stylesheet" href="/amcc/js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
+   <link rel="stylesheet" href="/amcc/css/home.css" media="all"/>
+   <link rel="stylesheet" href="/amcc/css/faqs.css" media="all"/>
+   
+   <!-- Generic Version & Mozilla V3.x -->
+   <link rel="stylesheet" href="/amcc/css/layout.css" media="all"/>
+   
+   <!--Detect Mozilla V2.z / IE / Safari-->
+   <script type="text/javascript">
+      if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) { //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
+         var ffversion = new Number(RegExp.$1);
+         // capture x.x portion and store as a number
+         if (ffversion < 3) {
+            document.write('<link rel="stylesheet" href="/amcc/css/layout-ff2.css" media="all"/>');
+         }
+      } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) { //test for MSIE x.x;
+         var ieversion = new Number(RegExp.$1); // capture x.x portion and store as a number
+         if (ieversion >= 7) {
+            document.write('<link rel="stylesheet" href="/amcc/css/layout-ie7.css" media="all" />');
+         } else if (ieversion >= 6) {
+            document.write('<link rel="stylesheet" href="/amcc/css/layout-ie6.css" media="all" />');
+         }
+      } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+         var sfversion = new Number(RegExp.$1);
+         var userBrowser = navigator.userAgent.toLowerCase();
+         var idx = userBrowser.indexOf("version/");
+         var brversion;
+         if (idx != -1) {
+            brversion = userBrowser.substring(idx + 8, idx + 9);
+         }
+         if (brversion >= 4) {
+            document.write('<link rel="stylesheet" href="/amcc/css/layout-sf4.css" media="all" />');
+         } else {
+            document.write('<link rel="stylesheet" href="/amcc/css/layout-sf3.css" media="all" />');
+         }
+      }
+   </script>
+
+   <script type="text/javascript" src="/amcc/js/jquery.min.js"></script>
+   <script type="text/javascript" src="/amcc/js/droppy.js"></script>
+
+   <script type="text/javascript" src="/amcc/js/fancybox/jquery.fancybox-1.2.1.js"></script>
+
+   <!--[if IE]>
+   <script type="text/javascript" src="/amcc/js/unitpngfix.js"></script>
+   <![endif]-->
+
+   <script type="text/javascript">
+      $(function() {
+         $('#nav').droppy({speed: 250});
+      });
+
+      var myVarWindow;
+   </script>
+
+
+
+
+   <meta name="robots" content="index, follow"/>
+   <meta name="googlebot" content="index, follow"/>
+
+
+   <link rel="stylesheet" type="text/css" href="../css/custom-theme/ui.all.css" />
+   <script type="text/javascript" src="../js/jquery-ui-1.6.custom.min.js"></script>
+   <script type="text/javascript" src="../js/fancybox/jquery.fancybox-iframe-1.2.1.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function() {
+         $("a.iframe").fancybox({
+            'overlayShow': true,
+            'overlayOpacity': .5,
+            'centerOnScroll': false,
+            'frameWidth': 800,
+            'frameHeight': 500,
+            'padding': 0,
+            'hideOnContentClick': true
+         });
+         $("a.faq.iframe").fancybox({
+            'overlayShow': true,
+            'overlayOpacity': .5,
+            'centerOnScroll': false,
+            'frameWidth': 640,
+            'frameHeight': 425,
+            'padding': 0,
+            'hideOnContentClick': true,
+            'disclaimer': false
+         });
+         $("a.errbox").fancybox({
+            'overlayShow': true,
+            'overlayOpacity': .5,
+            'centerOnScroll': false,
+            'frameWidth': 300,
+            'frameHeight': 100,
+            'padding': 0,
+            'hideOnContentClick': true,
+            'disclaimer': false
+         });
+
+         $("a.carfax.iframe").fancybox({
+            'overlayShow': true,
+            'overlayOpacity': .5,
+            'centerOnScroll': false,
+            'frameWidth': 325,
+            'frameHeight': 180,
+            'padding': 0,
+            'hideOnContentClick': true,
+            'disclaimer': false
+         });
+         $("a.nodisclaimer.iframe").fancybox({
+            'overlayShow': true,
+            'overlayOpacity': .5,
+            'centerOnScroll': false,
+            'frameWidth': 645,
+            'frameHeight': 500,
+            'padding': 0,
+            'hideOnContentClick': true,
+            'disclaimer': false,
+            'showCancelButton': true
+         });
+         $("a.tripplandisclaimer.iframe").fancybox({
+            'overlayShow': true,
+            'overlayOpacity': .5,
+            'centerOnScroll': false,
+            'frameWidth': 410,
+            'frameHeight': 200,
+            'padding': 0,
+            'hideOnContentClick': true,
+            'disclaimer': false
+         });
+
+      });
+
+      function callback(eventObject) {
+         this;
+         // dom element
+      }
+
+      $(document).ready(function() {
+         $("#amcpassport").click();
+      });
+
+      $(document).ready(function() {
+         $("#onclickIframe1").click();
+      });
+
+      $(document).ready(function() {
+         $("#onclickIframe2").click();
+      });
+
+      $(document).ready(function() {
+         $("#onclickIframe3").click();
+      });
+
+      $(document).ready(function() {
+         $("#onclickIframe4").click();
+      });
+
+      /* This Method will be used to invoke Onclick event after page refresh to display Error Message in Inframe */
+      $(document).ready(function() {
+         $("#dispErrMsg").click();
+      });
+
+    $(document).ready(function() {
+            $(".date .af_inputText_content").datepicker({
+                    buttonImage: '../images/btn-calendar.gif',
+                    buttonImageOnly: true,
+                    showAnim: 'slideDown',
+                    showOn: 'button',
+                    yearRange: '-100:0'
+            });
+    });
+
+   </script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30283724-1']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ </script>
+</head><body onload="_checkLoadNoPPR()" class="AMCBody"><script type="text/javascript">var _AdfWindowOpenError='A popup window blocker has been detected in your browser. Popup blockers interfere with the operation of this application. Please disable your popup blocker or allow popups from this site.';</script><script type="text/javascript" src="/amcc/adf/jsLibs/Locale1_2_12_3_3.js"></script><script type="text/javascript" src="/amcc/adf/jsLibs/Common1_2_12_3_3.js"></script><a name="top"></a><noscript>This page uses JavaScript and requires a JavaScript enabled browser.Your browser is not JavaScript enabled.</noscript><form id="j_id_id9" name="j_id_id9" style="margin:0px" method="POST" onkeypress="return _submitOnEnter(event,'j_id_id9');" action="/amcc/member_services/roadsideassistance.faces?_adf.ctrl-state=q4ukfrekl_4"><table align="center" cellpadding="0" cellspacing="0" border="0" width="980" summary=""><tr><td>
+   <script language="JavaScript" src="/amcc/js/newwindow.js"></script>
+   <table class="amcappbrand" cellpadding="0" cellspacing="0" border="0" width="960" summary=""><tr><td align="left" width="50%"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><a class="OraLink" href="../login/AMCWelcome.faces"><img title="Allstate Motor Club" alt="Allstate Motor Club" style="border: 0; vertical-align: top" src="/amcc/images/Allstate-Motor-Club-Logo.gif"></a></td></tr></table></div></td><td class="rightsideheadermargin" align="right" valign="top"><table cellpadding="0" cellspacing="0" border="0" summary="" class="af_panelGroupLayout"><tr><td><a class="headerBluelink OraLink" href="../login/AMCWelcome.faces">Home</a></td><td><span class="headertextpipemargin">|</span></td><td><a class="headerBluelink OraLink" href="../about/contact.faces">Contact Us</a></td><td><span class="headertextpipemargin">|</span></td><td><a class="headerBluelink OraLink" href="../sitemap/sitemap.faces">Site Map</a></td><td><span class="headertextpipemargin">|</span></td><td><a id="allstateLink1" name="allstateLink1" class="headerBluelink OraLink" href="http://www.allstate.com" target="_blank">Allstate.com</a></td></tr></table><table cellpadding="0" cellspacing="0" border="0" summary="" class="af_panelGroupLayout"><tr><td><span class="af_panelGroupLayout"><a class="headerBluelink OraLink" href="../plans/plans.faces">Join Now</a><span class="headertextpipemargin">|</span><a class="headerBluelink OraLink" href="../register/login.faces">Sign In</a></span></td></tr></table></td></tr><tr><td><div style="margin-top:15px"></div></td></tr><tr><td class="menuheadertopmargin" colspan="2">
+           
+
+         <div>
+            <ul id="nav">
+
+               <li><a href="http://www.allstatemotorclub.com:80/amcc/about/index.faces">About AMC</a>
+                     <ul>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/about/history.faces">History</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/about/faq.faces">FAQ&rsquo;s</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/about/contact.faces">Contact Us</a></li>
+                     </ul>
+               </li>
+               <li><a href="http://www.allstatemotorclub.com:80/amcc/member_services/index.faces">Member Services</a>
+                     <ul>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/member_services/roadsideassistance.faces">Roadside Assistance</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/member_services/membershipplans.faces">Membership Plans</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/member_services/memberbenefits.faces">Member Benefits</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/plans/plans.faces">Join Now</a></li>
+                     </ul>
+               </li>
+               <li><a href="http://www.allstatemotorclub.com:80/amcc/travel/index.faces">Travel</a>
+                     <ul>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/travel/flights.faces">Flights</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/travel/carrentals.faces">Car Rentals</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/travel/hotels.faces">Hotels &amp; Accommodations</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/travel/traveldeals.faces">Special Deals</a></li>
+                     </ul>
+               </li>
+               <li><a href="http://www.allstatemotorclub.com:80/amcc/discounts/index.faces">Shopping Discounts</a>
+                     <ul>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/discounts/retailandentertainment.faces">Retail &amp; Entertainment</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/discounts/saveonline.faces">Save Online</a></li>
+                          <li><a href="http://www.allstatemotorclub.com:80/amcc/members/access.faces">Access to Savings</a></li>
+                     </ul>
+               </li>
+               <li><a href="http://www.allstatemotorclub.com:80/amcc/resources/index.faces">Driver Resources</a>
+                     <ul>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/resources/traveltips.faces">Road Trip Tips</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/carfax/carfax.faces">Buying a Car?</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/resources/carsafety.faces">Car Safety</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/resources/mobileapp.faces">Mobile App</a></li>
+                     </ul>
+               </li>
+               <li class="last"><a href="http://www.allstatemotorclub.com:80/amcc/products/index.faces">Allstate Products</a>
+                     <ul>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/products/financial.faces">Financial</a></li>
+                        <li><a href="http://www.allstatemotorclub.com:80/amcc/products/insurance.faces">Insurance</a></li>
+
+                        <li><a href="#"
+                               onclick="return openSmallWindow('http://www.allstateagencies.com',1010,600);"
+                               >Find an Agent</a></li>
+                     </ul>
+               </li>
+            </ul>
+         </div>
+      </td></tr></table>
+</td></tr><tr><td><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td valign="top"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td valign="top"><img src="/amcc/images/bg-content.gif"></td></tr><tr><td style=" background-color:rgb(255,255,255);" valign="top"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><table class="pagecontent generalmaincontentpadding" cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><h1 align="left"><a href="../member_services/index.faces" target="_parent" style="text-decoration: none">Member Services</a><img align="right" src="../images/reinventing_roadside2.gif" alt=""/></h1><h2>
+                                          Roadside Assistance
+                                        </h2></td></tr><tr><td><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td class="generalsubcontentpaddingrdside"><span style=" color: #006699;   font-size: 12px;   font-weight: bold;   text-decoration: none;padding-bottom:15px;padding-top:15px;">Locked Out? Need a Tow?</span></td></tr><tr><td style="padding-top:2px;"><span class="road-header">Receive Exceptional Emergency Roadside Assistance with Allstate Motor Club's Roadside Service Plans.</span></td></tr><tr><td style="padding-top:15px;" width="730">Allstate Motor Club's Emergency Roadside Assistance is the perfect way to keep you moving. As a club member, our roadside service plans provide 24/7 protection on the road. From the little slip-ups that make you wish you had a spare key to bigger troubles, such as needing a tow truck, Allstate Motor Club is committed to getting you back on the road...fast. With over 35,000 roadside service plan providers across the nation, help is always just a phone call away.</td></tr><tr><td style="padding-top:15px;">No one can anticipate the unexpected. Allstate Motor Club members are always prepared with our comprehensive roadside assistance.</td></tr><tr><td style="padding-top:15px;"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span style="padding-right:3px">Not an auto club member?</span></td><td><a class="normal-commandlink OraLink" href="../plans/plans.faces">Join now!</a></td></tr></table></td></tr><tr><td style="padding-top:15px;">When you'll need Allstate Motor Club's Emergency Roadside Assistance most:</td></tr></table></td></tr></table></td></tr><tr><td><table style="padding-left:20px;" cellpadding="0" cellspacing="0" border="0" width="760" summary=""><tr><td class="roadsidecellmargin" valign="top"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img title="Roadside Assistance Car Unlocking Services" alt="Roadside Assistance Car Unlocking Services" class="logo" src="/amcc/images/roadside-assistance-keys-in-ignition.PNG"></td></tr></table></td><td class="roadsidecelltopmargin" valign="top"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-bottom:5px;"><tr><td><span class="road-blue-bolds-Header">Locked Out?</span></td></tr></table><div></div>You did it again! You throw your car in park, grab most of your belongings, and slam the door. Oh no! Where are my keys!? Now, you're standing outside your locked car while your keys are dangling from the ignition, staring back at you.<div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span style="padding-right:3px;">Simply </span></td><td><a class="normal-commandlink OraLink" href="../about/contact.faces"> call Allstate Motor Club's toll free number</a></td><td> , and our roadside assistance will get you back on</td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td> the road...fast.</td></tr></table></div></td></tr><tr><td class="roadsidecellmargin"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img class="logo" src="/amcc/images/img-tow-truck.jpg"></td></tr></table></td><td class="roadsidecelltopmargin" valign="top"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-bottom:5px;"><tr><td><span class="road-blue-bolds-Header">Need a Tow?</span></td></tr></table><div></div>Your hectic commute just took a turn for the worse. You hear it - that "clink-clickety-clunk" sound that is far from music to your ears. You pull your car over to the side of the road, but now you're stuck, miles from home.<div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span style="padding-right:3px;">Simply </span></td><td><a class="normal-commandlink OraLink" href="../about/contact.faces"> call Allstate Motor Club's toll free number</a></td><td> , and our roadside assistance will get you back on</td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td> the road...fast.</td></tr></table></div></td></tr><tr><td class="roadsidecellmargin"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img class="logo" src="/amcc/images/img-flat-tire.jpg"></td></tr></table></td><td class="roadsidecelltopmargin" valign="top"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-bottom:5px;"><tr><td><span class="road-blue-bolds-Header">Air been let out of your plans?</span></td></tr></table><div></div>It's inevitable. The minute you get on the road for your well-planned road trip, you drive over a nail, and boom! Your tire blows and you don't have a spare!<div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span style="padding-right:3px;">Simply </span></td><td><a class="normal-commandlink OraLink" href="../about/contact.faces"> call Allstate Motor Club's toll free number</a></td><td> , and our roadside assistance will get you back on</td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td> the road...fast.</td></tr></table></div></td></tr><tr><td class="roadsidecellmargin"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img class="logo" src="/amcc/images/img-empty-tank.jpg"></td></tr></table></td><td class="roadsidecelltopmargin" valign="top"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-bottom:5px;"><tr><td><span class="road-blue-bolds-Header">Out of Gas?</span></td></tr></table><div></div>You're running late. You nervously glance down at your gas tank...almost on on 'E.' But you can't stop, you won't make it to your appointment on time. You risk it and get there with 1 minute to spare. But on the way home, you can't find a gas station and your car slowly stops...at a green light!<div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span style="padding-right:3px;">Simply </span></td><td><a class="normal-commandlink OraLink" href="../about/contact.faces"> call Allstate Motor Club's toll free number</a></td><td> , and our roadside assistance will get you back on</td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td> the road...fast.</td></tr></table></div></td></tr><tr><td class="roadsidecellmargin"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img class="logo" src="/amcc/images/img-jumper-cables.jpg"></td></tr></table></td><td class="roadsidecelltopmargin" valign="top"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-bottom:5px;"><tr><td><span class="road-blue-bolds-Header">Need a Jump Start?</span></td></tr></table><div></div>You're walking to your car at 8 a.m., ready to begin the work week to discover that you left your headlights on all night.You turn the key and nothing.  Your battery is dead!<div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span style="padding-right:3px;">Simply </span></td><td><a class="normal-commandlink OraLink" href="../about/contact.faces"> call Allstate Motor Club's toll free number</a></td><td> , and our roadside assistance get you back on</td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td> the road...fast.</td></tr></table></div></td></tr><tr><td class="roadsidecellmargin"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img class="logo" src="/amcc/images/img-girl-with-phone.jpg"></td></tr></table></td><td class="roadsidecelltopmargin" valign="top"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-bottom:5px;"><tr><td><span class="road-blue-bolds-Header">Stuck Far From Home?</span></td></tr></table><div></div>You're on a trip far from home when all of a sudden, you're involved in a collision. If you're more than 100 miles from home, you may be eligible for certain meal, lodging and transportation expenses to help you get back on the road...fast.<div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td>Check out our  </td><td><img src="/amcc/adf/images/t.gif" alt="" width="3"></td><td><a class="normal-commandlink OraLink" href="../member_services/membershipplans.faces">Roadside Service Membership Plans</a></td><td><img src="/amcc/adf/images/t.gif" alt="" width="3"></td><td> for specific benefit details.</td></tr></table></div></td></tr></table></td></tr><tr><td style="padding-top:10px;"><table style="padding-left:20px;" cellpadding="0" cellspacing="0" border="0" width="760" summary=""><tr><td valign="top"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><span class="road-blue-bolds-Header">Allstate Motor Club also offers the following benefits:</span></td></tr></table><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-left:20px;"><tr><td><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img style="padding-right:10px" src="/amcc/images/img-bullet.gif"></td><td><span style="padding-right:3px">Custom</span></td><td><a class="normal-commandlink OraLink" href="/amcc/tripplan/tripplans.faces">TRIP-PLANs</a></td><td><span style="padding-left:3px;">with detailed maps and other useful information</span></td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-top:5px"><tr><td><img style="padding-right:10px" src="/amcc/images/img-bullet.gif"></td><td><a title="Frequently Asked Questions" class="iframe faq normal-commandlink OraLink" style="padding-right:3px" href="../about/bond_certificate.faces">Arrest Bond Certificate</a></td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-top:5px"><tr><td><img style="padding-right:10px" src="/amcc/images/img-bullet.gif"></td><td><a title="Frequently Asked Questions" class="iframe faq normal-commandlink OraLink" style="padding-right:3px" href="../about/defense_benefit.faces">Moving Violation Legal Defense Reimbursement</a></td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-top:5px"><tr><td><img style="padding-right:10px" src="/amcc/images/img-bullet.gif"></td><td><a title="Frequently Asked Questions" class="iframe faq normal-commandlink OraLink" style="padding-right:3px" href="../about/theft_reward.faces">Vehicle Theft Witness Rewards</a></td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary="" style="padding-top:5px"><tr><td><img style="padding-right:10px" src="/amcc/images/img-bullet.gif"></td><td><a title="Frequently Asked Questions" class="iframe faq normal-commandlink OraLink" style="padding-right:3px" href="../about/hit_reward.faces">Hit-and-Run Witness Reward</a></td></tr></table></div></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table align="center" cellpadding="0" cellspacing="0" border="0" summary=""><tr><td class="pagecontent" valign="top" width="80%"></td></tr></table></td></tr><tr><td valign="top"><img src="/amcc/images/bg-content-inner.gif"></td></tr></table></td><td valign="top"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><img src="/amcc/adf/images/t.gif" alt="" width="5" height="6"></td><td><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td valign="top" width="198" height="188">
+         <div id="sidebar">
+            <div class="sideAd">
+
+               <a href="../travel/index.faces">
+                  <img src="../images/sideads/Discount-Travel.jpg"
+                       alt="Hotel Discounts" style=" border: 0"/>
+               </a>
+               <p>
+                  <a href="../travel/index.faces">Enjoy club discounts when
+                                                        you plan your next vacation.</a>
+               </p>
+            </div>
+         </div>
+      </td></tr><tr><td valign="top" width="198" height="188">
+            <div id="sidebar">
+               <div class="sideAd">
+                 <a href="../member_services/roadsideassistance.faces" >
+                                                <img src="../images/sideads/Allstate-Motor-Club-Anniversary.jpg" style="border: 0" alt="Roadside Assistance"/>
+                                              </a>
+               </div>
+            </div>
+         </td></tr><tr><td valign="top" width="198" height="188">
+         <div id="sidebar">
+            <div class="sideAd">
+
+               <a href="../discounts/retailandentertainment.faces">
+                  <img src="../images/sideads/Member-Discounts.jpg"
+                        alt="Dining and Shopping Discounts" style=" border: 0"/>
+               </a>
+            </div>
+         </div>
+      </td></tr></table></td></tr></table></td></tr></table><div class="af_panelGroupLayout">
+   <script language="JavaScript" src="/amcc/js/newwindow.js"></script>
+   <table class="footerWhitehline footertextbottommargin" cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="footertexttopmargin" align="left" width="50%"><div class="af_panelGroupLayout"><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><a class="footerwhitelink OraLink" href="../login/AMCWelcome.faces" target="_parent">Home</a></td><td><span class="footertextpipemargin">|</span></td><td><a class="footerwhitelink OraLink" href="../about/contact.faces" target="_parent">Contact Us</a></td><td><span class="footertextpipemargin">|</span></td><td><a class="footerwhitelink OraLink" href="../sitemap.faces" target="_parent">Site Map</a></td><td><span class="footertextpipemargin">|</span></td><td><a class="footerwhitelink OraLink" href="http://www.allstate.com" target="_blank">Allstate.com</a></td></tr></table><div></div><table cellpadding="0" cellspacing="0" border="0" summary=""><tr><td><a onclick="return openSmallWindow('http://www.allstate.com/about/priv_AIC.asp',1010,600);" class="footerwhitelink OraLink" href="#">Privacy Statement</a></td><td><span class="footertextpipemargin">|</span></td><td><a onclick="return openSmallWindow('http://www.allstate.com/About/PageRender.asp',1010,600);" class="footerwhitelink OraLink" href="#">Terms of Use</a></td></tr></table></div></td><td class="footertexttopmargin" align="right" valign="top"><table cellpadding="0" cellspacing="0" border="0" summary="" class="af_panelGroupLayout"><tr><td><span class="footercopyright">Copyright &copy; 2013 Allstate Insurance Company. All rights reserved.</span></td></tr></table></td></tr></table>
+</div></td></tr></table><input type="hidden" name="org.apache.myfaces.trinidad.faces.FORM" value="j_id_id9"><input type="hidden" name="_noJavaScript" value="false"><input type="hidden" name="javax.faces.ViewState" value="!3z1370d8w"><script type="text/javascript">function _j_id_id9Validator(f,s){return _validateInline(f,s);}var j_id_id9_SF={};</script><script type="text/javascript">_submitFormCheck();</script></form><script src="/amcc/js/s_code_amc.js" language="javascript" type="text/javascript">
+                var ge_o;
+            </script><script language="JavaScript">
+            s.pageName = "RoadSideAssistance";
+            s.prop4="RoadSide Assistance";
+ </script><script language="JavaScript" type="text/javascript">
+          <!-- /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/-->
+           var s_code=s.t();
+           if(s_code)document.write(s_code);
+    </script></body><!--Created by Apache Trinidad (Apache MyFaces Trinidad API - 1.2.12.6.0-SNAPSHOT/Apache MyFaces Trinidad Impl - 1.2.12.6.0-SNAPSHOT), skin:minimal.desktop (minimal)-->
+<script type="text/javascript">
+   var randomString = Math.floor(Math.random() * 10000) + new Date().getTime().toString();
+   if (window.location.protocol == 'https:') {
+      document.write('<img src="https://secure.fastclick.net/w/tre?ad_id=22748;evt=15488;cat1=18430;cat2=18431;rand=' + randomString +
+                     '" width="1" height="1" border="0"></img>');
+   } else {
+      document.write('<img src="http://media.fastclick.net/w/tre?ad_id=22748;evt=15488;cat1=18430;cat2=18431;rand=' + randomString +
+                     '" width="1" height="1" border="0"></img>');
+   }
+</script>
+</html>

@@ -1,0 +1,2455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- $Revision: 1.47.2.2 $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" lang="en" xml:lang="en">
+  <head>
+    <script>
+      cdcPageTimers={
+        topOfHead: new Date()
+      };
+    </script>
+    <title>
+Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation - Cisco Systems
+</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta name="concept" content="Ethernet"/>
+    <meta name="accessLevel" content="Guest"/>
+    <meta name="country" content="US"/>
+    <meta name="primaryObjectId" content="ccmigration:09186a0080094781"/>
+    <meta name="docType" content="TSD Technologies Tech Note"/>
+    <meta name="language" content="en"/>
+    <meta name="contentType" content="cisco.com#US#postSales"/>
+    <meta name="iaPath" content="cisco.com#Technologies#LAN Switching#Ethernet"/>
+    <meta name="ioProblemType" content="Configuration, Troubleshoot"/>
+    <meta name="ioContentSource" content="PAWS"/>
+    <meta name="description" content="This document provides basic guidelines to isolate and resolve many common Ethernet auto-negotiation issues. This document provides a general description of auto-negotiation, and explains the procedure to configure and verify auto-negotiation on Catalyst switches that run the Catalyst OS (CatOS) system software. "/>
+    <meta name="locale" content="US"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2900 XL Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst G-L3 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 8500 Series Campus Switch Routers"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 4900 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2960 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst Express 500 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2955 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3750-E Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3560-E Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 4500 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 5500 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 6500 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3500 XL Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2940 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2970 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3750 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3560 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3750 Metro Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2900 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 4000 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 5000 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 6000 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 2950 Series Switches"/>
+    <meta name="secondaryConcept" content="Cisco Catalyst 3550 Series Switches"/>
+    <meta name="date" content="Wed Oct 28 00:00:00 PDT 2009"/>
+    <meta name="docRequest" content="/en/US/tech/tk389/tk214/technologies_tech_note09186a0080094781.shtml"/>
+    <link rel="canonical" href="http://www.cisco.com/en/US/tech/tk389/tk214/technologies_tech_note09186a0080094781.shtml"/>
+    <meta name="title" content="Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation"/>
+    <meta property="og:site_name" content="Cisco" />
+    <meta property="og:image" content="http://www.cisco.com/web/fw/i/logo-open-graph.gif" />
+    <meta property="og:title" content="Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation" />
+    <meta property="fb:app_id" content="156494687694418" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This document provides basic guidelines to isolate and resolve many common Ethernet auto-negotiation issues. This document provides a general description of auto-negotiation, and explains the procedure to configure and verify auto-negotiation on Catalyst switches that run the Catalyst OS (CatOS) system software. " />
+    <meta property="og:url" content="http://www.cisco.com/en/US/tech/tk389/tk214/technologies_tech_note09186a0080094781.shtml" />
+    
+    
+    <script type="text/javascript" src="/web/fw/j/masterbrand.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/web/fw/c/masterbrand.min.css" />
+    <link rel="stylesheet" type="text/css" href="/web/fw/w/cl/cl.min.css" />
+    
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="Search Cisco.com" href="http://www.cisco.com/web/tsweb/searchplugins/cdc_search.xml" />
+    <script type="text/javascript">cdc.util.useBackpack=true;</script>
+  </head>
+
+  <body id="w1x" class="cdc-fw"><!--googleoff: index--><!--googleoff: snippet -->
+    <script>cdcPageTimers.topOfBody = new Date();</script>
+    <!--[if gte IE 9]><div id="gte-ie9" class="ie"><![endif]-->
+    <!--[if IE 8]><div id="ie8" class="ie"><![endif]-->
+    <!--[if IE 7]><div id="ie7" class="ie ie67"><![endif]-->
+    <!--[if lte IE 6]><div id="ie6" class="ie ie67"><![endif]--> 
+
+    
+
+    <div id="fw-mb">
+      <div id="fw-mb-w1">
+        
+    
+<div id="fw-banner">
+<div id="fw-banner-w1"><!-- skiplinks -->
+<div id="fw-mbsk">
+<p><a href="/" tabindex="3">Home</a> <a href="#content">Skip to content</a> <a href="#hinav">Skip to navigation</a> <a href="#pagefooter">Skip to footer</a></p>
+</div>
+
+<!-- logo -->
+<div id="fw-mbl">
+<p><a href="/en/US/hmpgs/index.html">Cisco.com Worldwide Home</a></p>
+</div>
+
+<!-- megamenus -->
+<div id="fw-mm">
+<table class="mm-items" cellspacing="0" summary="">
+<tr>
+<td class="mm-item" id="products-mm-item"><a href="http://www.cisco.com/en/US/products/index.html" class="mm-link">Products &amp; Services</a> <a href="http://www.cisco.com/web/fw/co/menu-content.html#products-mm-menu" class="mm-reflink">(menu)</a> </td>
+<td class="mm-item" id="support-mm-item"><a href="http://www.cisco.com/cisco/web/support/index.html" class="mm-link">Support</a> <a href="http://www.cisco.com/web/fw/co/menu-content.html#support-mm-menu" class="mm-reflink">(menu)</a> </td>
+<td class="mm-item" id="ordering-mm-item"><a href="http://www.cisco.com/web/ordering/root/index.html" class="mm-link">How to Buy</a> <a href="http://www.cisco.com/web/fw/co/menu-content.html#ordering-mm-menu" class="mm-reflink">(menu)</a> </td>
+<td class="mm-item" id="training-mm-item"><a href="http://www.cisco.com/en/US/learning/index.html" class="mm-link">Training &amp; Events</a> <a href="http://www.cisco.com/web/fw/co/menu-content.html#training-mm-menu" class="mm-reflink">(menu)</a> </td>
+<td class="mm-item" id="partner-mm-item"><a href="http://www.cisco.com/en/US/partners/index.html" class="mm-link">Partners</a> <a href="http://www.cisco.com/web/fw/co/menu-content.html#partner-mm-menu" class="mm-reflink">(menu)</a> </td>
+</tr>
+</table>
+</div>
+
+<!-- end #fw-mm -->
+<!-- search -->
+<span class="search-entitlement">Guest</span> 
+
+<div id="fw-mbs">
+<form name="sitewidesearch" action="http://tools.cisco.com/search/JSP/search-results.get" method="get" id="sitewidesearch"><label for="searchPhrase" name="search" id="search">Search</label> 
+
+<p class="field-button"><input type="text" tabindex="1" name="strQueryText" class="field-button-field" id="searchPhrase" value="" autocomplete="off"> <input type="submit" tabindex="2" value="Search" class="field-button-button" id="go"></p>
+
+<input type="hidden" value="cisco.com" name="Search All cisco.com"> <input type="hidden" value="en" name="language"> <input type="hidden" value="US" name="country"> <input type="hidden" value="f" name="thissection"> <input type="hidden" value="Guest" name="accessLevel"></form>
+</div>
+
+<!-- end #fw-mbs -->
+<script type="text/javascript">
+          if ((typeof cdc.search) == "undefined"){
+             cdc.search = new Object();
+          }
+          cdc.search.country = "US";
+          cdc.search.language = "en";
+        
+</script>
+
+ <!-- toolbar -->
+ 
+
+<div id="fw-ft-basic">
+<div class="ft-toolbar">
+<div class="ft-group ft-country-lang-group">
+<div class="ft-sect ft-country"><a href="http://cisco.com/en/US/swassets/sw274/sitewide_country_language_selector.html" class="ft-label"><span class="ft-country-name">Worldwide</span> <span class="ft-country-change">[change]</span></a></div>
+</div>
+
+<div class="ft-group ft-guest-group">
+<div class="ft-sect ft-login"><a href="/cgi-bin/login" class="ft-label">Log In</a></div>
+
+<div class="ft-sect ft-account"><a href="http://www.cisco.com/web/siteassets/account/index.html" class="ft-label">Account</a></div>
+
+<div class="ft-sect ft-register"><a href="http://tools.cisco.com/RPF/register/register.do" class="ft-label">Register</a></div>
+
+<div class="ft-sect"><a href="http://www.cisco.com/cisco/psn/web/workspace" class="ft-label">My Cisco</a></div>
+</div>
+</div>
+
+<!-- end #ft-toolbar -->
+</div>
+
+<!-- end #fw-ft-basic -->
+</div>
+
+<!-- end #fw-banner-w1 -->
+</div>
+
+<!-- end #fw-banner -->
+<!-- END MasterBrand Banner SSI (guest) -->
+
+  
+
+        
+        <div id="mb-title-nav-bar" class="clearfix">
+          <div id="framework-content-titles"><!--googleon: index--><!--googleon: snippet-->
+            <h1 class="title-section">Ethernet</h1>
+            <h2 class="title-page">Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation</h2><!--googleoff: index--><!--googleoff: snippet-->
+          </div>
+          
+          
+          
+        </div> <!-- end #mb-title-nav-bar -->
+        
+        
+
+        <table id="framework-base-main" cellspacing="0" cellpadding="0" border="0" summary="">
+          <tr>
+            <td id="framework-column-left" valign="top"><a name="hinav"></a>
+              <div class="hinav"><h3>Hierarchical Navigation</h3><ul class="outer"><li><a href="/en/US/hmpgs/index.html" class="parent">HOME</a><ul><li><a href="/en/US/support/index.html" class="parent">SUPPORT</a><ul><li><a href="/cisco/web/psa/design.html?mode=tech" class="parent">TECHNOLOGY SUPPORT</a><ul><li><a href="/cisco/web/psa/design.html?mode=tech&amp;level0=268435696" class="parent">LAN SWITCHING</a><ul><li><a href="/en/US/tech/tk389/tk214/tsd_technology_support_protocol_home.html" class="parent">ETHERNET</a><ul><li><a href="/en/US/tech/tk389/tk214/tsd_technology_support_design.html" class="parent">DESIGN</a><ul><li><a href="/en/US/tech/tk389/tk214/tech_tech_notes_list.html" class="parent">DESIGN TECHNOTES</a><ul><li><strong><a href="/en/US/tech/tk389/tk214/technologies_tech_note09186a0080094781.shtml" class="selected">Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation</a></strong></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </td> <!-- end #framework-column-left -->
+
+            <td id="framework-column-center">
+              <!-- temporary place for c1 and c2 -->
+              
+              
+
+              <table cellspacing="0" id="framework-base-content">
+                <tr>
+                  <td id="framework-column-main"><a name="content"></a><!--googleon: index--><!--googleon: snippet-->
+                    <div id="framework-content-main">
+                      <!-- Start of the actual text content -->
+
+                      <table id="content-right-top" align="right" border="0" cellspacing="0" cellpadding="0" summary="">
+                        <tr><td valign="top" align="right"></td></tr>
+                        <tr><td valign="top" align="right"></td></tr>
+                        <tr><td valign="top" align="right"></td></tr>
+                        <tr><td valign="top" align="right"></td></tr>
+                      </table>
+
+                      <?xml version="1.0" encoding="UTF-8"?>
+<div class="contentMargins"><span class="content">
+<!-- META NAME="audience" CONTENT="support" -->
+<!-- META NAME="contributors" CONTENT="sshant, bhutchin" -->
+<!-- META NAME="coverage" CONTENT="US" -->
+<!-- META NAME="creator" CONTENT="rwright" -->
+<!-- META NAME="date.created" CONTENT="11-29-2001" -->
+<!-- META NAME="date.modified" CONTENT="10-28-2009" -->
+<!-- META NAME="identifier" CONTENT="/en/US/tech/tk389/tk214/technologies_tech_note09186a0080094781.shtml" -->
+<!-- META NAME="language" CONTENT="US_eng" -->
+<!-- META NAME="maintainers" CONTENT="CCO-Techtips" -->
+<!-- META NAME="reviewers" CONTENT="tsanthan, visethur, pchiguru, abkhan, karnatar, vmoother, sshant, anmohamm, bhutchin, mhorner" -->
+<!-- META NAME="publishers" CONTENT="jgoodfel, cmicheel, jaowens, delynch, jefwagne, mischwar, trmorris, jvaglia, jmalit, trawilli, kabartel, maray" -->
+<!-- META NAME="security" CONTENT="External" -->
+<!-- META NAME="size" CONTENT="57983" -->
+<!-- META NAME="Description" CONTENT="This document provides basic guidelines to isolate and resolve many common Ethernet auto-negotiation issues. This document provides a general description of auto-negotiation, and explains the procedure to configure and verify auto-negotiation on Catalyst switches that run the Catalyst OS (CatOS) system software. " -->
+<!-- META NAME="subject.primary" CONTENT="Technologies:LAN Switching:Ethernet" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2900 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2900 XL Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2940 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2950 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2955 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2960 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 2970 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 3500 XL Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 3550 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 3560 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 3560-E Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 3750 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 3750-E Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 4000 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 4500 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 5000 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 5500 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 6000 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst 8500 Series Campus Switch Routers" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Access:Cisco Catalyst G-L3 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Core and Distribution:Cisco Catalyst 4900 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Campus LAN Switches - Core and Distribution:Cisco Catalyst 6500 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:LAN Switches - Small Business:Cisco Catalyst Express 500 Series Switches" -->
+<!-- META NAME="subject.secondary" CONTENT="Products:Cisco Products:Switches:Service Provider Switches - Ethernet Access:Cisco Catalyst 3750 Metro Series Switches" -->
+<!-- META NAME="title" CONTENT="Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation" -->
+<!-- META NAME="type.information" CONTENT="Technology Tech Note" -->
+<!-- META NAME="type.problem" CONTENT="Configuration, Troubleshoot" -->
+<!-- META NAME="roadMap" CONTENT="LAN switching" -->
+<!-- META NAME="document.id" CONTENT="10561" --><link rel="stylesheet" type="text/css" href="/web/tsweb/css/support-docs.css">
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://www.cisco.com/web/tsweb/css/ie7.css">
+<![endif]-->
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://www.cisco.com/web/tsweb/css/ie8.css">
+<![endif]-->
+<!--googleoff: all-->
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript" src="http://www.cisco.com/image/gif/paws/101/parseXml.json"></script>
+<SCRIPT LANGUAGE="JavaScript"> loadjscssfile('/web/tsweb/css/support-docs.css','css');</SCRIPT>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<div id="right-rail">
+  <style type="text/css">
+	@media print {.noPrint { position:absolute; display: none; }}
+  </style>
+  <div class="noPrint" >
+    
+    <p class="docinfo"><strong>Document ID</strong>: 10561</p><PEM-BR-TAG>
+    <p class="docinfo"><strong>Updated</strong>: Oct 28, 2009</p>
+    
+<div id="tg-dl-print">
+<div class="pdf-print">
+	<div class="pdf"><a href="http://www.cisco.com/image/gif/paws/10561/3.pdf" target="_blank"><img src="http://www.cisco.com/web/tsweb/images/pdficon_small.png"></a>&nbsp;&nbsp;&nbsp;<a href="http://www.cisco.com/image/gif/paws/10561/3.pdf" target="_blank">Download PDF</a></div>
+	<div class="print"><a href="javascript:window.print()"><img src="http://www.cisco.com/web/tsweb/images/print.png"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:window.print()">Print</a></div>
+</div>
+</div>
+<div style="clear:both;"></div>
+
+<div id="tg-share">
+<div class="social-media"><PEM-BR-TAG>
+    <script type="text/javascript" >function toggle(obj) {  var el = document.getElementById(obj); el.style.display = (el.style.display != 'none' ? 'none' : '' ); }  </script>
+    <p class="media-icons addthis_toolbox addthis_default_style"><a class="addthis_button_email" title="Email"></a><a class="addthis_button_favorites" title="Save to Favorites"></a><a class="addthis_button_google"></a><a class="addthis_button_twitter"></a><a class="addthis_button_facebook"></a></p>
+    <div class="feedback-link">
+	<a href="javascript: void(0)" onclick="window.open('https://secure.opinionlab.com/ccc01/o.asp?id=smGvSVee&referer='+document.URL+'&resize=false', 'feedback', 'width=550, height=460, scrollbars=1, menubar=1, resizable=1'); return false;">
+	<img id="feedback_img" border="0" style="cursor: pointer;" title="Feedback" src="http://www.cisco.com/web/fw/i/sm_0000EE_oo1.gif">
+&nbsp;
+	</a>
+	<a href="javascript: void(0)" onclick="window.open('https://secure.opinionlab.com/ccc01/o.asp?id=smGvSVee&referer='+document.URL+'&resize=false', 'feedback', 'width=550, height=460, scrollbars=1, menubar=1, resizable=1'); return false;">Feedback</a></div>
+</div>
+</div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?username=ciscosupport"></script>
+	<!-- AddThis Button END --><!--googleon: all--><!--StartReplaceDivFrame--><!--PAWS:StartOFRelatedDocumentsSection--><!--googleoff: all--><link href="http://www.cisco.com/web/fw/c/painted_libra.css" rel="stylesheet" type="text/css"  ></link>  <style type="text/css">@media print {.noPrint { position:absolute; display: none; }}</style><script language="JavaScript">function toggle(obj) {  var el = document.getElementById(obj); el.style.display = (el.style.display != 'none' ? 'none' : '' ); }  </script> <div id="tg-related-docs"><h3 class="main-header">Related Documents</h3><div id="firstFiveDcosRelDocs"><UL id="relatedDocumentsDefaultUL"><script type="text/javascript" src="http://www.cisco.com/image/gif/paws/101/parseXml.json"></script> <SCRIPT LANGUAGE="JavaScript"> doSearch('3','21','Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation'); </SCRIPT><li><a target="_blank" href="http://www.cisco.com/en/US/tech/tk389/tk214/technologies_tech_note09186a0080094781.shtml?referring_site=smartnavRD"><key>Configuring</key> and <key>Troubleshooting</key> <key>Ethernet</key> <key>10</key>/<key>100</key>/<key>1000Mb</key> <key>Half</key>/<key>Full</key> <key>Duplex</key> <key>Auto</key>-<key>Negotiation</key> </a></li><li><a target="_blank" href="http://www.cisco.com/en/US/tech/tk648/tk362/technologies_tech_note09186a0080094afd.shtml?referring_site=smartnavRD">Understanding and <key>Troubleshooting</key> HSRP Problems in Catalyst Switch Networks </a></li><li><a target="_blank" href="http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a008015bfd6.shtml?referring_site=smartnavRD"><key>Troubleshooting</key> Switch Port and Interface Problems </a></li><li><a target="_blank" href="http://www.cisco.com/en/US/tech/tk389/tk214/tsd_technology_support_troubleshooting_technotes_list.html?referring_site=smartnavRD"><key>Ethernet</key> <key>Troubleshooting</key> TechNotes </a></li><li><a target="_blank" href="http://www.cisco.com/en/US/products/hw/switches/ps679/products_tech_note09186a008009495b.shtml?referring_site=smartnavRD">Hardware <key>Troubleshooting</key> for Catalyst 5500/5000/2926G/2926 Series Switches </a></li></UL> </div></div> <div id="tg-related-docs"><a class="noPrint"  href="http://tools.cisco.com/search/JSP/search-results.get?strQueryText=Configuring and Troubleshooting Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation">More...</a></div><div id="tg-related-prod"><h3 class="main-header">Related Products</h3><ul><li><a href=" http://www.cisco.com/cisco/web/psa/troubleshoot.html?mode=prod">Search...</a></li></ul></div></div><div id="tg-dgen"><div id="mbox-seot"><!-- Javascript for Support Demand Gen 2.0 Offer --><migrate><script type="text/javascript" src="http://www.cisco.com/web/fw/tools/mbox/mbox.js"></script><script type="text/javascript" src="http://www.cisco.com/web/fw/tools/mbox/seot-mbox.js"></script></migrate><div id="dg-seot-container" ><!-- DIV for Support Demand Gen 2.0 Offer --><div class="mboxDefault"></div><script type="text/javascript">mboxCreate("us_support_small", "seg=switches");</script></div></div></div></div><!--googleon: all--><!--PAWS:EndOFRelatedDocumentsSection-->
+
+<div id="tg-body"><div id="support-toc">
+<h2>Contents</h2>
+<div class="toc-h2">
+<a href="#intro">Introduction</a>
+</div>
+<div class="toc-h2">
+<a href="#prereq">Prerequisites</a>
+</div>
+<div class="toc-h3">
+<a href="#requirements">Requirements</a>
+</div>
+<div class="toc-h3">
+<a href="#hw">Components Used</a>
+</div>
+<div class="toc-h3">
+<a href="#conv">Conventions</a>
+</div>
+<div class="toc-h2">
+<a href="#difference">Difference Between CatOS and Cisco IOS System Software</a>
+</div>
+<div class="toc-h2">
+<a href="#when">When to Use Ethernet 10/100 Mb Auto-Negotiation</a>
+</div>
+<div class="toc-h2">
+<a href="#gb">When to Use Ethernet 1000 Mb Auto-Negotiation</a>
+</div>
+<div class="toc-h2">
+<a href="#cfg_ts">Configure and Troubleshoot Ethernet 10/100Mb Auto-Negotiation on CatOS Switches</a>
+</div>
+<div class="toc-h2">
+<a href="#auto_neg">Auto-Negotiation on Catalyst Switches that Run Cisco IOS Software</a>
+</div>
+<div class="toc-h2">
+<a href="#appa">Appendix A: Catalyst Switch Modules</a>
+</div>
+<div class="toc-h2">
+<a href="#appb">Appendix B: Ethernet Crossover Cables</a>
+</div>
+<div class="toc-h2">
+<a href="#appc">Appendix C: Explanation of Auto-MDIX and Supported Switch Platforms</a>
+</div>
+<div class="toc-h2">
+<a href="#appd">Appendix D: Explanation of Fields in the show port {mod_num/port_num} Command</a>
+</div>
+<div class="toc-h3">
+<a href="#fields">show port Command Output Fields</a>
+</div>
+<div class="toc-h2">
+<a href="#appe">Appendix E: Frequently Asked Questions</a>
+</div>
+<div class="toc-h2">
+<a href="#related">Related Information</a></div><div class="toc-h2"><a href="#comm-anc">Related Cisco Support Community Discussions</a>
+</div>
+</div>
+    
+<h2>
+<a name="intro">Introduction</a>
+</h2> 
+ 
+  <p>This document provides basic guidelines to isolate and resolve many
+	 common Ethernet auto-negotiation issues. This document provides a general
+	 description of auto-negotiation, and explains the procedure to configure and
+	 verify auto-negotiation on Catalyst switches that run the Catalyst OS (CatOS)
+	 system software. </p> 
+  <p>This document also shows an example of why the most common
+	 duplex-mismatch error occurs, and describes how to configure and verify
+	 auto-negotiation on Catalyst switches that run Cisco
+	 IOS<sup>Â®</sup> System Software.</p> 
+   
+	 <p>
+<b>Note:&nbsp;</b>The new Catalyst switches/modules, such as the Catalyst 6500/6000,
+		4500/4000, 3550, and 2950, support 10/100/1000 Mbps negotiated Ethernet
+		interfaces or ports. These ports work on 10 Mbps, 100 Mbps, or 1000 Mbps speed
+		based on their connection to the other end. These 10/100/1000 Mbps ports can be
+		configured for speed and duplex negotiation similar to 10/100 Mbps ports on
+		CatOS or Cisco IOS Software-based switches. Therefore, the configurations
+		described in this document for 10/100 Mbps port negotiation apply to
+		10/100/1000 Mbps ports as well.</p> 
+   
+  <h2>
+<a name="prereq">Prerequisites</a>
+</h2> 
+<h3>
+<a name="requirements">Requirements</a>
+</h3> 
+  <p>Cisco recommends that you have knowledge of these topics:</p> 
+  <ul> 
+  <li> 
+	 <p>Troubleshooting issues with 10/100 Network Interface Cards (NICs)
+		</p>
+</li> 
+  <li> 
+	 <p>Gigabit negotiation </p>
+</li> 
+  <li> 
+	 <p>Operational issues on specific Cisco platforms </p>
+</li> 
+  <li> 
+	 <p>Operational issues with specific NICs</p>
+</li> 
+  <li> 
+	 <p>Table that shows all possible settings and results of speed and
+		duplex between a NIC and a switch </p>
+</li> 
+  <li> 
+	 <p>Discussion of the auto-negotiation protocol itself (including
+		FLP)</p>
+</li> </ul> 
+   
+	 <p>
+<b>Note:&nbsp;</b>Refer to
+		<a href="http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00800a7af0.shtml">Troubleshooting
+		Cisco Catalyst Switches to NIC Compatibility Issues</a> for more information
+		on auto-negotiation.</p> 
+   
+ 
+<h3>
+<a name="hw">Components Used</a>
+</h3> 
+  <p>The information in this document is based on these software and
+	 hardware versions:</p> <ul> 
+  <li> 
+	 <p>CatOS system software</p>
+</li> 
+  <li> 
+	 <p>Cisco IOS System Software</p>
+</li>
+</ul> 
+  <p>This equipment was used to create the examples in this document:
+	 </p>
+<ul> 
+  <li> 
+	 <p>A terminal</p>
+</li> 
+  <li> 
+	 <p>A console cable suitable for the Supervisor Engine in the switch.
+		Refer to
+		<a href="http://www.cisco.com/en/US/products/hw/switches/ps700/products_tech_note09186a008010ff7a.shtml">Connecting
+		a Terminal to the Console Port on Catalyst Switches</a> for more
+		information.</p>
+</li> 
+  <li> 
+	 <p>Two Catalyst 5500 switches in a lab environment with cleared
+		configurations</p>
+</li> 
+  <li> 
+	 <p>Two 10/100 Mb TX half- and full-duplex capable
+		interfaces</p>
+</li> 
+  <li> 
+	 <p>An Ethernet crossover cable</p>
+</li>
+</ul> 
+  <p>This document was written in an isolated lab environment. Make certain
+	 that you understand the potential impact of any command on your network before
+	 you use it. </p> 
+   
+	 <p>
+<b>Note:&nbsp;</b>The <b>clear configuration all</b> command was
+		issued on each switch to ensure that they have default configurations.</p> 
+   
+ 
+<h3>
+<a name="conv">Conventions</a>
+</h3> 
+  <p>Refer to
+	 <a href="http://www.cisco.com/en/US/tech/tk801/tk36/technologies_tech_note09186a0080121ac5.shtml">Cisco
+	 Technical Tips Conventions</a> for more information on document
+	 conventions.</p> 
+ 
+<h2>
+<a name="difference">Difference Between CatOS and Cisco IOS System Software</a>
+</h2> 
+ 
+  <p>
+<b>CatOS on the Supervisor Engine and Cisco IOS Software on the
+	 Multilayer Switch Feature Card (MSFC)</b> (Hybrid): a CatOS image can be
+	 used as the system software to run the Supervisor Engine on Catalyst 6500/6000
+	 switches. If the optional MSFC is installed, a separate Cisco IOS Software
+	 image is used to run the MSFC. </p> 
+  <p>
+<b>Cisco IOS Software on both the Supervisor Engine and
+	 MSFC</b> (Native): a single Cisco IOS Software image can be used as the
+	 system software to run both the Supervisor Engine and MSFC on Catalyst
+	 6500/6000 switches.</p> 
+   
+	 <p>
+<b>Note:&nbsp;</b> Refer to
+		<a href="http://www.cisco.com/en/US/prod/collateral/switches/ps5718/ps708/prod_white_paper09186a00800c8441.html ">Comparison
+		of the Cisco Catalyst and Cisco IOS Operating Systems for the Cisco Catalyst
+		6500 Series Switch</a> for more information. </p> 
+   
+ 
+<h2>
+<a name="when">When to Use Ethernet 10/100 Mb Auto-Negotiation</a>
+</h2> 
+ 
+  <p>Auto-negotiation is an optional function of the IEEE 802.3u Fast
+	 Ethernet standard that enables devices to automatically exchange information
+	 over a link about speed and duplex abilities. </p> 
+  <p>Auto-negotiation is targeted at ports. These ports are allocated to
+	 areas where transient users or devices connect to a network. For example, many
+	 companies provide shared offices or cubes for Account Managers and System
+	 Engineers to use when they are in the office. Each office or cube has an
+	 Ethernet port permanently connected to the office network. Because it might not
+	 be possible to ensure that every user has either a 10 Mb, a 100 Mb Ethernet, or
+	 a 10/100 Mb card in their laptop, the switch ports that handle these
+	 connections must be able to negotiate their speed and duplex mode. The
+	 alternative is to provide both a 10 Mb and a 100 Mb port in each office, or
+	 cube and label them accordingly. </p> 
+  <p>One of the most common causes of performance issues on 10/100 Mb
+	 Ethernet links occurs when one port on the link operates at half-duplex while
+	 the other port operates at full-duplex. This occurs when one or both ports on a
+	 link are reset and the auto-negotiation process does not result in both link
+	 partners having the same configuration. It also can occur when users
+	 reconfigure one side of a link and forget to reconfigure the other side. Both
+	 sides of a link should have auto-negotiation on, or both sides should have it
+	 off. Cisco recommends to leave auto-negotiation on for those devices compliant
+	 with 802.3u. </p> 
+  <p>Many performance-related support calls are avoided if you correctly
+	 configure auto-negotiation. Many Catalyst Ethernet switching modules support
+	 10/100 Mb and half-duplex or full-duplex. Exceptions include the Ethernet Group
+	 switch modules. The <b>show port capabilities
+	 {<span style="font-weight:normal; font-style:italic">mod_num</span>} |
+	 {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>}</b> command shows if the
+	 module you are working on supports 10/100 Mb and half-duplex or full-duplex.
+	 This document uses two WS-X5530 Supervisor Engine IIIs, each with two optional
+	 uplink 10/100 BaseTX Ethernet ports installed. </p> 
+   
+	 <p>
+<b>Note:&nbsp;</b>When the WS-6748-GE-TX module is connected to a network tap device,
+		automatic negotiation does not work. In order to resolve this issue, you must
+		configure auto-negotiation manually. Go to the interface mode and execute this
+		command:</p> 
+	 <blockquote>
+<pre>Cat6K-IOS(config-if)#<b>speed auto</b>
+</pre>
+</blockquote> 
+  
+  
+<h2>
+<a name="gb">When to Use Ethernet 1000 Mb Auto-Negotiation</a>
+</h2>
+ 
+  <p>Basically auto-negotiation in GigabitEthernet covers these
+	 items:</p> <ul> 
+  <li> 
+	 <p> Duplex settings&#8212;While Cisco devices only support full-duplex, the
+		IEEE 802.3z standard does have support for half-duplex GigabitEthernet. Because
+		of this, duplex is negotiated between GigabitEthernet
+		devices.</p>
+</li> 
+  <li> 
+	 <p>Flow Control&#8212;Becuase of the amount of traffic that can be generated
+		by GigabitEthernet, there is a PAUSE functionality built into GigabitEthernet.
+		The PAUSE frame is a packet that tells the far-end device to stop the
+		transmition of packets until the sender is able to handle all the traffic and
+		clear its buffers. The PAUSE frame has a timer included, which tells the
+		far-end device when to start to send packets again. If that timer expires
+		without getting another PAUSE frame, the far-end device can then send packets
+		again. Flow-Control is an optional item and must be negotiated. Devices can be
+		capable of sending or responding to a PAUSE frame, and they possibly do not
+		agree to the flow-control request of the far-end neighbor.</p>
+</li> 
+  <li> 
+	 <p> Negotiation&#8212;Usually built-in Gigabit Ethernet ports are capable of
+		negotiation, but in cases like modular SFP or GBIC types, they do not
+		negotiate. Line protocol will be down for a Gigabit Ethernet port when
+		connected to a Fast Ethernet port. This can be verified via the
+		<b>show inter gig4/3 capabilities</b> command: </p> 
+	 <blockquote>
+<pre>Switch-A#<b>show interface Gig4/3 capabilities</b>
+GigabitEthernet4/3
+Model                    WS-X4516-10GE-Gbic
+Type                     1000BaseT
+<b>Speed                    1000
+Duplex                   full
+</b>
+</pre>
+</blockquote>
+</li>
+</ul> 
+  <p>Assume that there are two devices, A and B. Assume that each device can
+	 have Autonegotiation enabled, or disabled. The correct behaviour of link status
+	 with autonegotiation in accordance to the IEEE Std 802.3z-1998 should be like
+	 this:</p>
+<ul> 
+  <li> 
+	 <p>If A is enabled and B is enabled, then link status should be reported
+		on both devices as link up.</p>
+</li> 
+  <li> 
+	 <p>If A is disabled and B is enabled, then A should report link up and B
+		should report link down.</p>
+</li> 
+  <li> 
+	 <p>If A is enabled and B is disabled, then A should report link down and
+		B should report link up.</p>
+</li>
+</ul> 
+  <p>By default, all devices are supposed to perform autonegotiation. 802.3z
+	 does not specifically define a way to turn Autonegotiation off, for both
+	 1GigabitEthernet and 10GigabitEthernet.</p>
+
+<h2>
+<a name="cfg_ts">Configure and Troubleshoot Ethernet 10/100Mb Auto-Negotiation on CatOS Switches</a>
+</h2> 
+ 
+  <p>This section of the document explains how to examine the behavior of an
+	 10/100 Mb Ethernet port that supports auto-negotiation. This procedure shows
+	 how to make changes to its default behavior and how to restore it to the
+	 default behavior. Complete these steps:</p>
+<ol type="1"> 
+  <li> 
+		<p>Connect the two switches together. </p> 
+	  
+		<p>Ethernet port 1/1 on switch A is connected to Ethernet port 1/1 on
+		  switch B using an Ethernet crossover cable. See <a href="#appb">Appendix
+		  B</a> for more information on crossover cables.</p> 
+		 
+		  <p>
+<b>Note:&nbsp;</b>Your actual <i>mod_num/port_num</i> numbers might
+			 be different.</p> 
+		 
+	  
+  </li> 
+  <li> 
+		<p>Examine the capabilities of the ports. </p> 
+	  
+		<p>The <b>show port capabilities 1/1</b> command
+		  displays the capabilities of an Ethernet 10/100 BaseTX 1/1 port on switch A.
+		  </p> 
+		<p>Issue this command for both of the ports you are troubleshooting.
+		  Both ports must support the speed and duplex capabilities if they are supposed
+		  to use auto-negotiation. </p> 
+		<p>The bold text in this output shows where the information on the
+		  speed and duplex mode capabilities are found. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>show port capabilities 1/1</b>
+Model                    WS-X5530
+Port                     1/1
+Type                     10/100BaseTX
+<b>Speed                    auto,10,100
+Duplex                   half,full
+</b>
+</pre>
+</blockquote> 
+	  
+  </li> 
+  <li> 
+		<p>Configure auto-negotiation for port 1/1 on both switches.
+		  </p> 
+	  
+		<p>Issue the <b>set port speed 1/1 auto</b>
+		  command to configure auto-negotiation for both speed and duplex mode on port
+		  1/1 of both switches. Auto is the default for ports that support
+		  auto-negotiation. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>set port speed 1/1 auto</b>
+Port(s) 1/1 speed set to auto detect.
+Switch-A (enable)</pre>
+</blockquote> 
+		 
+		  <p>
+<b>Note:&nbsp;</b>The <b>set port speed
+			 {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} auto</b> command also sets
+			 the duplex mode to auto. There is no <b>set port duplex
+			 {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} auto</b> command. </p> 
+		 
+		<p>Also, this command is redundant because the configurations of the
+		  switches had been cleared to their defaults before starting this procedure. The
+		  default behavior for Ethernet 10/100 BaseTX ports is auto-negotiation. </p> 
+	  
+  </li> 
+  <li> 
+		<p>Determine if the speed and duplex mode are set to auto-negotiate.
+		  </p> 
+	  
+		<p>Issue the <b>show port 1/1</b> command to
+		  display the status of ports 1/1 on switches A and B. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal  <b>a</b>-full <b>a</b>-100 10/100BaseTX
+
+
+Switch-B&gt; (enable) <b>show port 1/1</b>  
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- -----------
+ 1/1                     connected  1          normal <b>a</b>-full  <b>a</b>-100 10/100BaseTX</pre>
+</blockquote> 
+		<p>The bold text in the preceding output shows where the information
+		  on the current status of a port can be found. Most of the normal output from
+		  the <b>show port
+		  {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>}</b> command is omitted. See
+		  <a href="#appc">Appendix C</a> for further explanation of the fields
+		  in the output of this command. </p> 
+		<p>The <b>a</b> prefixes on the full and 100 indicate that
+		  this port is not hard coded (configured) for a specific duplex mode or speed.
+		  Therefore, it auto-negotiates the duplex mode and speed if the device it is
+		  connected to also auto-negotiates duplex mode and speed. </p> 
+		<p>The status is connected on both ports, which means that a link
+		  pulse is detected from the other port. The status can be connected even if
+		  duplex is incorrectly negotiated or incorrectly configured. </p> 
+	  
+  </li> 
+  <li> 
+		<p>Change the speed on port 1/1 in switch A to 10 Mb.
+		  </p> 
+	  
+		<p>In order to demonstrate what occurs when one link partner
+		  auto-negotiates and the other link partner does not, the speed on port 1/1 in
+		  switch A must be set to 10 Mb. Issue the <b>set port speed 1/1
+		  10</b> command to set this speed.</p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>set port speed 1/1 10</b>
+Port(s) 1/1 speed set to 10Mbps.
+Switch-A&gt; (enable)</pre>
+</blockquote> 
+		 
+		  <p>
+<b>Note:&nbsp;</b>Hard coding the speed on a port disables all auto-negotiation
+			 functionality on the port for speed and duplex. </p> 
+		 
+		<p>When a port is configured for a speed, the duplex mode is
+		  automatically configured for the mode it previously negotiated. In this case,
+		  the mode is full-duplex. Therefore, the <b>set port speed 1/1
+		  10</b> command causes the duplex mode on port 1/1 to be configured as
+		  if the command <b>set port duplex 1/1 full</b> is also
+		  issued. This is explained in step 6. </p> 
+	  
+  </li> 
+  <li> 
+		<p>Understand the meaning of the <b>a</b> prefix on the
+		  duplex and speed status fields. </p> 
+	  
+		<p>The absence of the <b>a</b> prefix in the status fields
+		  of the output from the <b>show port 1/1</b> command on
+		  switch A shows that the duplex mode is configured for full and the speed is
+		  configured for 10. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal  full  10    10/100BaseTX</pre>
+</blockquote> 
+	  
+  </li> 
+  <li> 
+		<p>View the duplex status of port 1/1 on switch B.
+		  </p> 
+	  
+		<p>The <b>show port 1/1 </b> command on switch B
+		  indicates that the port operates at half-duplex and 10 Mb. </p> 
+		<blockquote>
+<pre>Switch-B&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal a-half a-10  10/100BaseTX</pre>
+</blockquote> 
+		<p>This step shows that it is possible for a link partner to detect
+		  the speed at which the other link partner operates, even though the other link
+		  partner is not configured for auto-negotiation. In order to detect the speed,
+		  the link partner senses the type of electrical signal that arrives and sees if
+		  it is 10 Mb or 100 Mb. This is how switch B determines that port 1/1 operates
+		  at 10 Mb. </p> 
+		<p>It is not possible to detect the correct duplex mode in the same
+		  method that the correct speed can be detected. In this case, where the 1/1 port
+		  of switch B is configured for auto-negotiation and the 1/1 port of switch A is
+		  not, the 1/1 port of switch B is forced to select the default duplex mode. On
+		  Catalyst Ethernet ports, the default mode is auto-negotiate. If
+		  auto-negotiation fails, the default mode is half-duplex. </p> 
+		<p>This example also shows that a link can be successfully connected
+		  when there is a mismatch in the duplex modes. Port 1/1 on switch A is
+		  configured for full-duplex while port 1/1 on switch B is defaulted to
+		  half-duplex. Configure both link partners to avoid this. </p> 
+		<p>The <b>a</b> prefix on the Duplex and Speed status fields
+		  does not always mean that the current behavior is negotiated. Sometimes it can
+		  mean that the port is not configured for a speed or duplex mode. </p> 
+		<p>The previous output from switch B shows duplex as a-half and speed
+		  as a-10. This indicates that the port operates at 10 Mb in half-duplex mode. In
+		  this example, however, the link partner on this port (port 1/1 on switch A) is
+		  configured for full and 10 Mb. Therefore, it is not possible for port 1/1 on
+		  switch B to auto-negotiate current behavior. This proves that the
+		  <b>a</b> prefix only indicates a willingness to perform
+		  auto-negotiation, and not that auto-negotiation actually took place. </p> 
+	  
+  </li> 
+  <li> 
+		<p>Understand the duplex mismatch error. </p> 
+	  
+		<p>This message about a duplex mode mismatch is displayed on switch A
+		  after the speed on port 1/1 is changed to 10 Mb. This mismatch occurs because
+		  the 1/1 port of switch B defaults to half-duplex when it senses its link
+		  partner no longer performs auto-negotiation. </p> 
+		<blockquote>
+<pre>%CDP-4-DUPLEXMISMATCH:Full/half-duplex mismatch detected o1</pre>
+</blockquote> 
+		<p>It is important to note that this message is created by the Cisco
+		  Discovery Protocol (CDP), not the 802.3 auto-negotiation protocol. CDP can
+		  report problems it discovers, but it typically does not automatically fix them.
+		  </p> 
+		<p>A duplex mismatch might or might not result in an error message.
+		  Another indication of a duplex mismatch is the rapid increase of FCS and
+		  alignment errors on the half-duplex side, and runts on the full-duplex port.
+		  This can be seen in a <b>show port
+		  {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>}</b> command. </p> 
+	  
+  </li> 
+  <li> 
+		<p>Understand the spanning tree error messages. </p> 
+	  
+		<p>In addition to the duplex mismatch error message in step 8, you
+		  might also see these spanning tree messages when you change the speed on a
+		  link. </p> 
+		<blockquote>
+<pre>%PAGP-5-PORTFROMSTP:Port 1/1 left bridge port 1/1
+%PAGP-5-PORTTOSTP:Port 1/1 joined bridge port 1/1</pre>
+</blockquote> 
+		 
+		  <p>
+<b>Note:&nbsp;</b>Refer to
+			 <a href="http://www.cisco.com/en/US/tech/tk389/tk621/technologies_configuration_example09186a008009467c.shtml">Understanding
+			 and Configuring Spanning Tree Protocol (STP) on Catalyst Switches</a> for
+			 more information on spanning tree.</p> 
+		 
+	  
+  </li> 
+  <li> 
+		<p>Change the duplex mode to half on port 1/1 on switch A.
+		  </p> 
+	  
+		<p> Issue the <b>set port duplex 1/1 half</b>
+		  command to set the mode on port 1/1 in switch A to half. This demonstrates what
+		  occurs when the duplex mode is configured.</p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>set port duplex 1/1 half</b>
+Port(s) 1/1 set to half-duplex.
+Switch-A&gt; (enable)</pre>
+</blockquote> 
+		<p>The <b>show port 1/1</b> command displays the
+		  change in the duplex mode on this port. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal   half    10 10/100BaseTX</pre>
+</blockquote> 
+		<p>At this point, ports 1/1 on both switches operate at half-duplex.
+		  Port 1/1 on switch B, however, is still configured to auto-negotiate, as
+		  displayed in this output of the <b>show port 1/1</b>
+		  command. </p> 
+		<blockquote>
+<pre>Switch-B&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal a-half a-10  10/100BaseTX</pre>
+</blockquote> 
+		<p>Step 11 shows how to configure the duplex mode on port 1/1 in
+		  switch B to half. This is the recommended policy of always configuring both
+		  link partners in the same way. </p> 
+	  
+  </li> 
+  <li> 
+		<p>Set the duplex mode and speed of port 1/1 on switch B.
+		  </p> 
+	  
+		<p>This step sets the duplex mode to half and speed to 10 on port 1/1
+		  in switch. This implements the policy of always configuring both link partners
+		  for the same behavior.</p> 
+		<p>This is the output when you issue the <b>set port duplex
+		  1/1 half</b> command on switch B. </p> 
+		<blockquote>
+<pre>Switch-B&gt; (enable) <b>set port duplex 1/1 half</b>
+Port 1/1 is in auto-sensing mode.
+Switch-B&gt; (enable)</pre>
+</blockquote> 
+		<p>The <b>set port duplex 1/1 half</b> command
+		  fails because this command does not work if auto-negotiation is enabled. This
+		  also means that this command does not disable auto-negotiation.
+		  Auto-negotiation can only be disabled when you issue the <b>set port
+		  speed {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span> {10 | 100}}</b>
+		  command. </p> 
+		<p>This is the output when you issue the<b> set port speed
+		  1/1 10</b> command on switch B. </p> 
+		<blockquote>
+<pre>Switch-B&gt; (enable) <b>set port speed 1/1 10</b>
+Port(s) 1/1 speed set to 10Mbps.
+Switch-B&gt; (enable)</pre>
+</blockquote> 
+		<p>Now the <b>set port duplex 1/1 half</b> command
+		  on switch B works. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>set port duplex 1/1 half</b>
+Port(s) 1/1 set to half-duplex.
+Switch-A&gt; (enable)</pre>
+</blockquote> 
+		<p>The<b> show port 1/1</b> command on switch B
+		  shows that the ports is configured for half-duplex and 10 Mb. </p> 
+		<blockquote>
+<pre>Switch-B&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal   half    10 10/100BaseTX</pre>
+</blockquote> 
+		 
+		  <p>
+<b>Note:&nbsp;</b>The <b>set port duplex
+			 {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span> {half | full }}</b> command
+			 is dependent on the <b>set port speed
+			 {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span> {10 | 100 }}</b> command. In
+			 other words, you must set the speed before you can set the duplex mode.</p> 
+		 
+	  
+  </li> 
+  <li> 
+		<p>Restore the default duplex mode and speed to <b>ports
+		  1/1</b> on both switches. </p> 
+	  
+		<p>Issue the <b>set port speed 1/1 auto</b>
+		  command to configure ports 1/1 on both switches to
+		  <b>auto-negotiate</b>. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>set port speed 1/1 auto</b>
+Port(s) 1/1 speed set to auto detect.
+Switch-A&gt; (enable)</pre>
+</blockquote> 
+		 
+		  <p>
+<b>Note:&nbsp;</b>Once the duplex mode of a port is configured to something other
+			 than <b>auto</b>, the only method to configure the port to
+			 auto-sense the duplex mode is to issue the <b>set port speed
+			 {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} auto</b> command. There is
+			 no <b>set port duplex {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>}
+			 auto</b> command. In other words, issuing the<b> set port
+			 speed {<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} auto</b> command has
+			 the effect of resetting both port speed sensing and duplex mode sensing to
+			 <b>auto</b>.</p> 
+		 
+	  
+  </li> 
+  <li> 
+		<p>View the changes of the port status on both switches.
+		  </p> 
+	  
+		<p>Issue the <b>show port 1/1</b> command to
+		  examine the status of ports 1/1 on both switches. </p> 
+		<blockquote>
+<pre>Switch-A&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------ 
+ 1/1                     connected  1          normal a-full a-100 10/100BaseTX
+
+
+Switch-B&gt; (enable) <b>show port 1/1</b>
+Port  Name               Status     Vlan       Level  Duplex Speed Type
+----- ------------------ ---------- ---------- ------ ------ ----- ------------
+ 1/1                     connected  1          normal a-full a-100 10/100BaseTX</pre>
+</blockquote> 
+		<p>Both ports are now set to their default behavior of
+		  auto-negotiation. Both ports negotiate full-duplex and 100 Mb. </p> 
+	  
+  </li>
+</ol> 
+ 
+<h2>
+<a name="auto_neg">Auto-Negotiation on Catalyst Switches that Run Cisco IOS Software</a>
+</h2> 
+ 
+  <p>The commands described in this section apply to these types of switch
+	 products: Catalyst 2900XL, 3500XL, 2950, 3550, 2948G-L3, 4908G-L3, Catalyst
+	 4500/4000 that runs Cisco IOS System Software (Supervisor Engine III), and the
+	 Catalyst 6500/6000 that runs Cisco IOS System Software. </p> 
+  <p>The switches that run Cisco IOS Software (as opposed to CatOS) default
+	 to auto-negotiation for speed and are set to on for the duplex. Issue the
+	 <b>show interface <span style="font-weight:normal; font-style:italic">slot/port</span> status
+	 </b> command to verify this. </p> 
+  <p>This output is taken from a Catalyst 6500/6000 that runs Cisco IOS
+	 Software Release 12.1(6)E. It shows a connected port that auto-negotiates a
+	 link to 100 Mbps and half-duplex. The configuration that runs for this switch
+	 has no duplex or speed commands underneath interface FastEthernet 3/1 because
+	 auto-negotiation is the default. Issue the <b>show interface
+	 <span style="font-weight:normal; font-style:italic">slot/port</span>
+</b> command (without the
+	 <b>status</b> keyword) to see the port speed and duplex.
+	 </p> 
+  <blockquote>
+<pre>NativeIOS#<b>show interfaces fastethernet 3/1 status</b>
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa3/1                      connected    routed     a-half a-100 10/100BaseTX
+
+NativeIOS#<b>show run</b>
+...
+!
+interface FastEthernet3/1
+ip address 172.16.84.110 255.255.255.0
+<i>
+<font color="#0000ff">!--- Notice there is no speed or duplex commands under this interface because
+!--- it is in the default configuration of auto-negotiate speed and duplex.</font>
+</i>
+
+NativeIOS#<b>show interfaces fastethernet 3/1</b>
+FastEthernet3/1 is up, line protocol is up 
+ Hardware is C6k 100Mb 802.3, address is 0002.7ef1.36e0 (bia 0002.7ef1.36e0)
+ Internet address is 172.16.84.110/24
+ MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec, 
+    reliability 255/255, txload 1/255, rxload 1/255
+ Encapsulation ARPA, loopback not set
+ Keepalive set (10 sec)
+ <b>Half-duplex, 100Mb/s</b>
+ ...</pre>
+</blockquote> 
+  <p>If you want to hard code the speed and duplex on a switch that runs
+	 Cisco IOS Software (turn off auto-negotiation), issue the speed and duplex
+	 commands underneath the specific interface. Duplex is subservient to speed in
+	 the sense that if speed is set to auto, then the duplex cannot be manually set.
+	 You might see cyclic redundancy check (CRC) error messages when both the speed
+	 and duplex settings are hardcoded on the two devices. This might be because any
+	 one of the devices runs an earlier version of Cisco IOS. You can upgrade the
+	 Cisco IOS or set the speed and duplex to auto on both devices in order to
+	 resolve this.</p> 
+  <blockquote>
+<pre>NativeIOS#<b>show run</b>
+...
+interface FastEthernet3/2
+no ip address
+!         
+NativeIOS#<b>configure terminal</b>
+Enter configuration commands, one per line.  End with CNTL/Z.
+NativeIOS(config)#<b>interface fastethernet3/2</b>
+NativeIOS(config-if)#<b>duplex full</b>
+Duplex will not be set until speed is set to non-auto value
+<i>
+<font color="#0000ff">!--- Error: On this platform, you must set the speed before the duplex.
+!--- Not all switch platforms have this command ordering requirement.</font>
+</i>
+NativeIOS(config-if)#<b>speed 100</b>
+NativeIOS(config-if)#<b>duplex full</b>
+NativeIOS(config-if)#<b>^Z</b>
+NativeIOS#<b>show interfaces fastethernet 3/2 status</b>
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa3/2                      notconnect   routed       <b>full</b>   100 10/100BaseTX
+
+NativeIOS#NativeIOS#<b>show run</b>
+...
+interface FastEthernet3/2
+no ip address
+duplex full
+speed 100
+<i>
+<font color="#0000ff">!--- Notice that the speed and duplex commands appear in the configuration
+!--- now because they have been manually set to a non-default behavior.</font>
+</i>
+</pre>
+</blockquote> 
+<h2>
+<a name="appa">Appendix A: Catalyst Switch Modules</a>
+</h2>
+
+ 
+  <p> This document contains information on how to install Catalyst modules
+	 and the functionality of each module. It also contains explanations of the LEDs
+	 on each module. In general, the LEDs indicate the status of the module as well
+	 as which ports are active. Refer to these selected platforms for more
+	 information: </p>
+<ul> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/univercd/cc/td/doc/product/lan/cat6000/mod_icn/index.htm">Catalyst
+		6500 Series Module Installation and Configuration
+		Documentation</a>
+</p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/products/hw/switches/ps679/products_module_installation_guide_book09186a008007f4b3.html">Catalyst
+		5000 Series Module Installation Guide</a>
+</p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/univercd/cc/td/doc/product/lan/cat4000/inst_gd/index.htm">Catalyst
+		4000 Module Installation Guide</a>
+</p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/products/hw/switches/ps5023/prod_installation_guides_list.html">Catalyst
+		3750 Series Switches</a> </p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/products/hw/switches/ps646/tsd_products_support_install_and_upgrade.html">Catalyst
+		3550 Series Switches</a> </p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/products/hw/tsd_products_support_end-of-sale_and_end-of-life_products_list.html">Catalyst
+		2970 Series Switches</a> </p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/products/hw/switches/ps628/prod_installation_guides_list.html">Catalyst
+		2950 Series Switches</a> </p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/univercd/cc/td/doc/product/lan/c2900xl/index.htm">Catalyst
+		2900 Series XL and Catalyst 3500 Series XL
+		Switches</a>
+</p>
+</li>
+</ul> 
+  <p>Also, refer to
+	 <a href="http://www.cisco.com/univercd/cc/td/doc/product/lan/index.htm">Multilayer
+	 LAN Switches</a> for more information.</p> 
+ 
+<h2>
+<a name="appb">Appendix B: Ethernet Crossover Cables</a>
+</h2> 
+ 
+  <p>Ethernet ports on Catalyst switches have built-in (on-board) Ethernet
+	 transceivers. Devices that connect to Ethernet ports might have on-board
+	 Ethernet transceivers or use external transceivers. </p> 
+  <p>Use a straight-through patch cable, such as a CAT5 10/100BaseT
+	 unshielded twisted pair (UTP) patch cable, when you connect a PC, server,
+	 printer, or other end-user devices (such as a router) to a switch.
+	 Straight-through means that pin 1 on one end of the cable is connected to pin 1
+	 on the other end, pin 2 on one end of the cable is connected to pin 2 on the
+	 other end, and so forth. </p> 
+  <p>Use a crossover cable, such as a CAT5 10/100BaseT UTP crossover patch
+	 cable,when you connect another switch port, or other Layer 2 port to an
+	 Ethernet port on a switch. In this case, the pins are connected (see
+	 <a href="#f1">Figure 1</a> and <a href="#f2">Figure 2</a>).
+	 </p> 
+  <p>A convenient rule of thumb is to use a crossover cable when the two
+	 ports that are connected are in the same layer of the OSI model. If you cross
+	 OSI layers, use a straight-through cable. Treat PCs as Layer 3 ports, hubs and
+	 most Layer 3 switches as Layer 2 ports. Some devices, especially common on
+	 hubs, have a button that can toggle between accepting a straight-through or
+	 crossover cable. Therefore, this rule of thumb does not always apply. </p> 
+   
+	 <p>
+<b>Note:&nbsp;</b>Use a crossover cable when you connect two ports in the same layer of
+		the OSI model, such as router to router (Layer 3) or switch to switch (Layer
+		2). Use a straight-through cable if the two ports are in different layers, such
+		as router to switch (Layer 3 to 2) or PC to switch (Layer 3 to 2). For this
+		rule, treat a PC as a Layer 3 device. </p> 
+  <a name="f1" ></a>
+<p>
+<img alt="3a.gif" border="0" src="http://www.cisco.com/image/gif/paws/10561/3a.gif" usemap="" />
+</p>
+<a name="f2" ></a>
+<p>
+<img alt="3b.gif" border="0" src="http://www.cisco.com/image/gif/paws/10561/3b.gif" usemap="" />
+</p>
+  
+  <p>CAT5 10/100BaseT UTP crossover patch cables are available from most
+	 computer stores. </p> 
+   
+	 <p>
+<b>Note:&nbsp;</b>Some Ethernet network devices (10/100BaseT hubs) have what is
+		referred to as a media dependent interface (MDI) port. Activate an internal
+		crossover function and this type of port allows the device to connect to an
+		Ethernet port on a switch that uses a straight-through patch cable. Turn the
+		MDI switch on to perform this. When the MDI switch is in the out position, the
+		port expects to be connected to an end-user device. </p> 
+   
+  <p>
+<b>Four Twisted-Pair Crossover Cable Schematics for 10/100/1000
+	 and 1000BASE-T GBIC Module Ports</b>
+</p>
+<p>
+<img alt="3a.gif" border="0" src="http://www.cisco.com/image/gif/paws/10561/3a.gif" usemap="" />
+</p> 
+  <p />
+<p>
+<img alt="3c.gif" border="0" src="http://www.cisco.com/image/gif/paws/10561/3c.gif" usemap="" />
+</p>
+  
+  <p>CAT 5, 5e or 6Â UTP crossover patch cables are available from most
+	 computer stores. </p> 
+  <p>
+<b>Fiber Cable Connection Guidelines</b>
+</p> 
+  <p>If you use an Ethernet port on the switch with a fiber interface to
+	 connect to another switch port, a router port, or other Layer 2 device, you
+	 need to reverse the connection on one of the devices. Rotate the connector one
+	 half turn or cross over the individual fiber connectors to reverse the
+	 connection. Think about each fiber as either fiber A or fiber B. If a
+	 straight-through connection is A-to-A and B-to-B, a crossover connection is
+	 A-to-B and B-to-A. </p> 
+ 
+<h2>
+<a name="appc">Appendix C: Explanation of Auto-MDIX and Supported Switch Platforms</a>
+</h2> 
+ 
+  <p>Automatic medium-dependent interface crossover (Auto-MDIX) is a feature
+	 that allows the switch interface to detect the required cable connection type
+	 (straight-through or crossover) and automatically configure the connection
+	 appropriately. With Auto-MDIX enabled, you can use either a straight-through or
+	 crossover type cable to connect to the other device, and the interface
+	 automatically corrects for any incorrect cabling. Refer to these links for more
+	 information and platforms that support this feature: </p> <ul> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/docs/switches/lan/catalyst2940/software/release/12.1_19_ea1/configuration/guide/swint.html#1152230">2940
+		Series Switches</a>
+</p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/docs/switches/lan/catalyst2970/software/release/12.1_19_ea1/configuration/guide/swint.html#1193977">2970
+		Series Switches</a>
+</p>
+</li> 
+  <li> 
+	 <p>
+<a href="http://www.cisco.com/en/US/docs/switches/lan/catalyst3750/software/release/12.1_19_ea1/configuration/guide/swint.html#1193977">3750
+		Series Switches</a>
+</p>
+</li>
+</ul> 
+ 
+<h2>
+<a name="appd">Appendix D: Explanation of Fields in the show port {mod_num/port_num} Command</a>
+</h2> 
+<h3>
+<a name="fields">show port Command Output Fields</a>
+</h3> 
+  <table bgcolor="#FFFFFF" cellpadding="3" cellspacing="1" border="1" width="60%"> 
+		<tr>
+<th height="" width="" bgcolor="#CCCCFF" colspan="1" rowspan="1"> 
+			 Field</th>
+<th height="" width="" bgcolor="#CCCCFF" colspan="1" rowspan="1"> 
+			 Description</th> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Port</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Module and port number. </td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Name</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Name (if configured) of the port. </td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Status</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Status of the port. For the Catalyst 5500 and 2926G series
+				switches, possible displays are connected, notconnect, connecting, standby,
+				faulty, inactive, shutdown, disabled, or monitor; for the Catalyst 4500/4000
+				and 2948G series switches, possible displays are connected, notconnected,
+				faulty, remfault, disable, remdisable, configerr, remcfgerr, and disagree.
+				</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Vlan</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 VLANs to which the port belongs. </td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Duplex</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Duplex setting for the port (auto, full, fdx, half, hdx,
+				a-half, a-hdx, a-full, or a-fdx). </td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Speed </td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Speed setting for the port (auto, 10, 100, 155, a-10, a-100, 4,
+				16, a-14,or a-16). </td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Type</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Port type, for example, 100BaseFX MM, 100BaseFX SM,
+				10/100BaseTX, or RSM.  
+			  
+				<p>
+<b>Note:&nbsp;</b>This varies depending on the modules installed in your
+				  switch. </p> 
+			 </td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Security</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Status of whether port security is enabled or
+				disabled.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Secure-Src-Addr</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Secure MAC address for the security enabled port.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Last-Src-Addr</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Source MAC address of the last packet received by the
+				port.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Shutdown</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Status of whether the port was shut down because of
+				security.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Trap</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Status of whether port trap is enabled or disabled.</td>
+		  
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 IfIndex</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of the ifIndex.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Broadcast-Limit</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Broadcast threshold configured for the port.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Broadcast-Drop</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of broadcast/multicast packets dropped because the
+				broadcast limit for the port was exceeded.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Send admin</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Flow-control administration. Possible settings:  
+			 <ul> 
+			 <li> 
+				<b>On</b> indicates the local port sends flow
+				  control to the far end.</li> 
+			 <li> 
+				<b>Off</b> indicates the local port does not send
+				  flow control to the far end.</li> 
+			 <li> 
+				<b>Desired</b> indicates the local end sends flow
+				  control to the far end if the far end supports
+				  it.</li>
+</ul>
+</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 FlowControl oper</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Flow-control operation. Possible setting:
+				<b>disagree</b> indicates the two ports could not agree on a link
+				protocol.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Receive admin</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Flow-control administration. Possible settings:  
+			 <ul> 
+			 <li> 
+				<b>On</b> indicates the local port requires the far
+				  end to send flow control.</li> 
+			 <li> 
+				<b>Off</b> indicates the local port does not allow
+				  the far end to send flow control.</li> 
+			 <li> 
+				<b>Desired</b> indicates the local end allows the
+				  far end to send flow control.</li>
+</ul>
+</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 FlowControl oper</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Flow-control operation. Possible setting:
+				<b>disagree</b> indicates the two ports could not agree on a link
+				protocol.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 RxPause</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of Pause frames received.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 TxPause</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of Pause frames transmitted.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Unsupported Opcodes</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of unsupported operating codes.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Align-Err</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of frames with alignment errors (frames that do not end
+				with an even number of octets and have a bad CRC) received on the
+				port.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 FCS-Err</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 The number of valid size frames with FCS error but no framing
+				errors.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Xmit-Err</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of transmit errors that occurred on the port (indicates
+				that the internal transmit buffer is full).</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Rcv-Err</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of receive errors that occurred on the port (indicates
+				that the internal receive buffer is full).</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 UnderSize</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of received frames less than 64 octets long (but are
+				otherwise well-formed).</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Single-Coll</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of times one collision occurred before the port
+				transmitted a frame to the media successfully.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Multi-Coll</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of times multiple collisions occurred before the port
+				transmitted a frame to the media successfully.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Late-Coll</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of late collisions (collisions outside the collision
+				domain).</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Excess-Col</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of excessive collisions that occurred on the port
+				(indicates that a frame encountered 16 collisions and was
+				discarded).</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Carri-Sen</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of times the port sensed a carrier (to determine whether
+				the cable is currently being used).</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Runts</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of received runt frames (frames that are smaller than
+				the minimum IEEE 802.3 frame size) on the port.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Giants</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Number of received giant frames (frames that exceed the maximum
+				IEEE 802.3 frame size) on the port.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Last-Time-Cleared</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Last time the port counters were cleared.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Auto-Part</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 The number of times the port entered the auto-partition state
+				due to excessive consecutive collisions.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Data-rate mismatch</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 The number of valid size frames experienced overrun or
+				underrun.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Src-addr change</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 The number of times the last source address
+				changed.</td> 
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Good-bytes</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 The total number of octets in frames with no error.</td>
+		  
+		</tr> 
+		<tr>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 Short-event</td>
+<td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 
+			 The number of times activity with a duration less than the
+				ShortEventMax Time (74-82 bit times) is detected.</td> 
+		</tr> 
+  </table>
+<p /> 
+ 
+<h2>
+<a name="appe">Appendix E: Frequently Asked Questions</a>
+</h2> 
+<ol type="1"> 
+  <li> 
+	 <p>When should you use auto-negotiation? </p> 
+	 <p>Cisco recommends that auto-negotiation be used when the devices
+		involved are compliant with the 802.3u standard. Refer to
+		<a href="http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00800a7af0.shtml">Troubleshooting
+		Cisco Catalyst Switches to NIC Compatibility Issues</a> for more information
+		on specific products. Auto-negotiation is very useful for ports where devices
+		with different capabilities are connected and disconnected on a regular basis.
+		A good example is offices that are used by visiting employees who bring their
+		own laptops. </p>
+</li> 
+  <li> 
+	 <p>How can you configure a port for auto-negotiation? </p> 
+	 <p>Issue the <b>set port speed
+		{<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} auto</b> command. This
+		resets both the speed and duplex mode to auto-negotiate. On a Catalyst Cisco
+		IOS Software platform, issue the interface command <b>speed
+		auto</b>. </p>
+</li> 
+  <li> 
+	 <p>How can you tell how your port is configured? </p> 
+	 <p>Issue the <b>show port
+		{<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>}</b> command. Look for the
+		<b>a</b> prefix in the status fields. This indicates the port is
+		configured for auto-negotiation. Examples are a-full and a-100. If the
+		<b>a</b> prefix is not present, the port is manually configured for
+		the parameters shown. Examples are full and 100. Issue the <b>show
+		configuration [<span style="font-weight:normal; font-style:italic">mod_num</span>]</b> command to view
+		the configuration of the switch. On a Catalyst Cisco IOS Software platform,
+		issue the command<b> show interfaces
+		{<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} status</b>.
+		</p>
+</li> 
+  <li> 
+	 <p>How can you tell what your port is capable of? </p> 
+	 <p>Issue the <b>show port capabilities
+		{<span style="font-weight:normal; font-style:italic">mod_num</span>}|{<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>}</b>
+		command. For Catalyst Cisco IOS Software, there is not an equivalent command,
+		but you can issue the<b> show interfaces
+		{<span style="font-weight:normal; font-style:italic">mod_num/port_num</span>} status</b> command to view
+		the speed/duplex settings. </p>
+</li> 
+  <li> 
+	 <p>Why do you receive the error message "Port 1/1 is in auto-sensing
+		mode" when you attempt to set the duplex mode?</p> 
+	 <p>You receive this error because you need to manually configure the
+		speed on a port before you can manually configure the duplex mode.
+		</p>
+</li> 
+  <li> 
+	 <p>Why does a port not detect the correct duplex mode when the link
+		partner is not configured for auto-negotiation? </p> 
+	 <p>The port does not detect it because there is no method available to
+		perform this. </p>
+</li> 
+  <li> 
+	 <p>Why is it possible to have link show connected when the two ports
+		have different duplex modes configured? </p> 
+	 <p>It is possible because the electrical signals the ports use to
+		determine if they are connected do not track the status of the duplex modes.
+		</p>
+</li> 
+  <li> 
+	 <p>Does the <b>a</b> prefix on the duplex and speed status
+		fields always mean the port has auto-negotiated behavior? </p> 
+	 <p>No, it means that the port is capable of performing auto-negotiation.
+		</p>
+</li> 
+  <li> 
+	 <p>What does the <tt>%CDP-4-DUPLEXMISMATCH:Full/half-duplex
+		mismatch detected</tt> message mean? </p> 
+	 <p>This means the CDP determines, via a configuration comparison
+		dialogue, that a mismatch exists. CDP does not attempt to resolve the mismatch.
+		</p>
+</li>
+</ol> 
+ 
+<h2>
+<a name="related">Related Information</a>
+</h2>
+<ul> 
+  <li>
+<b> 
+	 <a href="http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00800a7af0.shtml?referring_site=bodynav">Troubleshooting
+		Cisco Catalyst Switches to NIC Compatibility Issues</a> 
+  </b>
+</li> 
+  <li>
+<b> 
+	 <a href="http://www.cisco.com/cisco/web/psa/default.html?mode=prod&amp;level0=268438038&amp;referring_site=bodynav">LAN
+		Product Support</a> 
+  </b>
+</li> 
+  <li>
+<b> 
+	 <a href="http://www.cisco.com/cisco/web/psa/default.html?mode=tech&amp;level0=268435696&amp;referring_site=bodynav">LAN
+		Switching Technology Support</a> 
+  </b>
+</li> 
+  <li>
+<b> 
+	 <a href="http://www.cisco.com/cisco/web/support/index.html?referring_site=bodynav">Technical Support &amp;
+		Documentation - Cisco Systems</a> 
+  </b>
+</li> 
+</ul> <p xmlns:cal="xalan://java.util.GregorianCalendar" />
+
+<p xmlns:cal="xalan://java.util.GregorianCalendar" />
+
+<p xmlns:cal="xalan://java.util.GregorianCalendar" />
+<font xmlns:cal="xalan://java.util.GregorianCalendar" size="-1">
+
+</font>
+</div><script type="text/javascript">
+function showfeedback(divid){
+   document.getElementById(divid).style.visibility="visible";
+   document.getElementById(divid).className = "show";
+}function hidefeedback(divid){
+   document.getElementById(divid).style.visibility="hidden";
+   document.getElementById(divid).className = "hide";
+}</script>
+<script type="text/javascript" src="/image/gif/paws/101/parseXml.json"></script>
+<SCRIPT LANGUAGE="JavaScript"> loadjscssfile('/web/tsweb/css/support-docs.css','css');</SCRIPT>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<div class="feedback-community">
+<div id="helpful">
+	<div id="tg-rating">
+		<div id="helpful-feedback" class="show">
+		  <p>Was this document helpful? <span class="helpful-btns"> <a href="#" onclick="hidefeedback('helpful-feedback');showfeedback('thankyou');return false;" class="btn-gray poly">Yes</a>&nbsp;<a href="#" onclick="hidefeedback('helpful-feedback');showfeedback('thankyou');return false;" class="btn-gray poly">No</a> </span></p>
+		</div>
+		<div id="thankyou" class="hide">
+		  <p>Thank you for your feedback.</p>
+		</div>
+	</div>
+	<div id="tg-open-case">
+		<div id="open-case">
+		  <p> <a href="http://tools.cisco.com/ServiceRequestTool/create/launch.do?referring_site=supportdocs">Open a Support Case</a> <img alt="Login Required" title="Login Required" src="http://www.cisco.com/web/fw/ltc/tools/shp/images/lockblue.gif"> <span>(Requires a <a href="http://www.cisco.com/web/services/order-services/service-contracts/index.html?referring_site=supportdocs">Cisco Service Contract</a>.)</span> </p>
+		</div>
+	</div>
+</div>
+<div id="tg-community">
+<div id="community">
+  <h2><a name="comm-anc"></A>Related Cisco Support Community Discussions</h2>
+  <iframe frameborder="0" border="0" src="http://tools.cisco.com/swtg/pyout2/widgets/search/v1/communitySearch/index.app?custId=paws.gen#!searchTerm=Ethernet" name="discussions"> </iframe>
+  <p>The <a href="https://supportforums.cisco.com/index.jspa?referring_site=cdcsupportdocs&channel=pkwidgets">Cisco Support Community</a> is a forum for you to ask and answer questions, share suggestions, and
+    collaborate with your peers.</p>
+</div>
+</div>
+<p>Refer to <a href="http://www.cisco.com/en/US/tech/tk801/tk36/technologies_tech_note09186a0080121ac5.shtml">Cisco Technical Tips Conventions</a> for information on conventions used in this document.</p>
+</div><!-- PIDLMD --><div id="docinfo"><div class="dateupdated">Updated: Oct 28, 2009</div><div class="docid">Document ID: 10561</div></div><!-- PIDLMD -->
+<script type="text/javascript" src="http://preview.cisco.com/image/gif/paws/101/dest_pg_metricsrule.js"></script><script type="text/javascript">NTPT_PGEXTRA = 'status=Anonymous';cdc.util.checkLogin(function(val) {if ( val === "valid") {NTPT_PGEXTRA = 'status=LoggedIn';}});</script></span></div>
+
+                      <table id="content-right-bottom" align="right" border="0" cellspacing="0" cellpadding="0" summary="">
+                        <tr><td valign="top" align="right"></td></tr>
+                        <tr><td valign="top" align="right"></td></tr>
+                        <tr><td valign="top" align="right"></td></tr>
+                        <tr><td valign="top" align="right"></td></tr>
+                      </table>
+
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+
+                      <!-- End of the actual text content --><!--googleoff: index--><!--googleoff: snippet-->
+                    </div> <!-- end #framework-content-main -->
+                  </td> <!-- end #framework-column-main -->
+
+                  <td id="framework-column-right">
+                    <div id="framework-content-right">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </div> <!-- end #framework-content-right -->
+                  </td> <!-- end #framework-column-right -->
+                </tr>
+              </table> <!-- end #framework-base-content -->
+            </td> <!-- end #framework-column-center -->
+          </tr>
+        </table> <!-- end #framework-base-main -->
+
+        
+        
+    
+<div id="ff">
+<div class="ffoot clearfix">
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/index.html">Information For</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/cisco/web/solutions/small_business/index.html">Small Business</a></li>
+
+<li><a href="http://www.cisco.com/web/midsize/index.html">Midsize Business</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns341/networking_solutions_service_provider_home.html">Service Provider</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1168/index.html">Executives</a></li>
+
+<li><a href="http://home.cisco.com">Home (Linksys)</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<div class="ffoot-menu">
+<h3><a href="http://www.cisco.com/web/strategy/index.html">Industries</a></h3>
+
+<div class="ffoot-menucontainer">
+<div class="ffoot-menucontent" id="industriesmenu">
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/cpg/index.html">Consumer Packaged Goods</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/education/index.html">Education</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/energy/index.html">Energy</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/financial/index.html">Financial Services</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/government/index.html">Government</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/healthcare/index.html">Healthcare</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/manufacturing/index.html">Manufacturing</a></li>
+</ul>
+
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/public_sector/index.html">Public Sector</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/trec/index.html">Real Estate</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/retail/index.html">Retail</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/smart_connected_communities.html">Smart+Connected Communities</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/sports/index.html">Sports and Entertainment</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/transportation/index.html">Transportation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="/cisco/web/siteassets/contacts/index.html">Contacts</a></h3>
+
+<ul>
+<li><a href="/cisco/web/siteassets/contacts/index.html">Contact Cisco</a></li>
+
+<li><a href="http://tools.cisco.com/WWChannels/LOCATR/openBasicSearch.do">Find a Partner</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://newsroom.cisco.com/">News &amp; Alerts</a></h3>
+
+<ul>
+<li><a href="http://newsroom.cisco.com/">Newsroom</a></li>
+
+<li><a href="http://blogs.cisco.com/">Blogs</a></li>
+
+<!-- li><a href="http://www.cisco.com/offer/subctr/nl/190612_1">Newsletters</a></li -->
+<li><a href="http://www.cisco.com/en/US/support/tsd_products_field_notice_summary.html">Field Notices</a></li>
+
+<li><a href="http://www.cisco.com/en/US/products/products_security_advisories_listing.html">Security Advisories</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/web/solutions/tech_trends.html">Technology Trends</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/web/solutions/trends/cloud/index.html">Cloud</a></li>
+
+<li><a href="http://www.cisco.com/web/solutions/trends/ipv6/index.html">IPv6</a></li>
+
+<li><a href="http://www.cisco.com/web/solutions/trends/open_network_environment/index.html">Open Network Environment</a></li>
+
+<li><a href="http://www.cisco.com/web/solutions/trends/trustworthy_systems/index.html">Trustworthy Systems</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/support/index.html">Support</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/cisco/software/navigator.html?i=!ch">Downloads</a></li>
+
+<li><a href="http://www.cisco.com/cisco/web/psa/default.html">Documentation</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/web/communities/index.html">Communities</a></h3>
+
+<ul>
+<li><a href="http://developer.cisco.com/">Developer Network</a></li>
+
+<li><a href="https://learningnetwork.cisco.com/index.jspa?ciscoHome=true">Learning Network</a></li>
+
+<li><a href="https://supportforums.cisco.com/index.jspa">Support Community</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<div class="ffoot-menu">
+<h3><a href="http://video.cisco.com" target="_blank">Video Portal</a></h3>
+
+<div class="ffoot-menucontainer">
+<div class="ffoot-menucontent" id="videomenu">
+<ul>
+<li><a href="http://video.cisco.com/video/Products/categoryTags/Products/CategoryTags/" target="_blank">Products</a></li>
+
+<li><a href="http://video.cisco.com/video/Services/categoryTags/Services/CategoryTags/" target="_blank">Services</a></li>
+
+<li><a href="http://video.cisco.com/video/Certifications/categoryTags/Certifications/CategoryTags/" target="_blank">Certifications</a></li>
+
+<li><a href="http://video.cisco.com/video/Events/categoryTags/Events/CategoryTags/" target="_blank">Event</a></li>
+
+<li><a href="http://video.cisco.com/video/Industries/categoryTags/Industries/CategoryTags/" target="_blank">Industries</a></li>
+</ul>
+
+<ul>
+<li><a href="http://video.cisco.com/video/TechWiseTV/categoryTags/TechWiseTV/CategoryTags/" target="_blank">TechWiseTV</a></li>
+
+<li><a href="http://video.cisco.com/video/InsideCisco/categoryTags/InsideCisco/CategoryTags/" target="_blank">Inside Cisco</a></li>
+
+<li><a href="http://video.cisco.com/video/TechnologyTrends/categoryTags/TechnologyTrends/CategoryTags/" target="_blank">Technology Trends</a></li>
+
+<li><a href="http://video.cisco.com/">All Videos</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col last-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/about/index.html">About Cisco</a></h3>
+
+<ul>
+<li><a href="http://investor.cisco.com/">Investor Relations</a></li>
+
+<li><a href="http://csr.cisco.com/" target="_blank">Corporate Social Responsibility</a></li>
+
+<li><a href="http://csr.cisco.com/pages/environment" target="_blank">Environmental Sustainability</a></li>
+
+<li><a href="http://www.cisco.com/web/tomorrow-starts-here/index.html?CAMPAIGN=tomorrowstartshere&amp;COUNTRY_SITE=us&amp;POSITION=link&amp;REFERRING_SITE=Cisco.com+homepage&amp;CREATIVE=homepage+fat+footer">Tomorrow Starts Here</a></li>
+
+<li><a href="http://www.cisco.com/web/about/ac40/about_cisco_careers_home.html">Career Opportunities</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3>Programs</h3>
+
+<ul>
+<li><a href="/web/solutions/trends/cisco-powered/index.html">Cisco Powered</a></li>
+
+<li><a href="http://www.cisco.com/web/ordering/ciscocapital/index.html">Financing Options</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col .last-col -->
+</div>
+
+<!-- end .ffoot -->
+</div>
+
+<!-- end #ff -->
+<div id="ff-hidden" style="display:none;">
+<div id="ff-collaboration">
+<div class="ffoot clearfix">
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/ns1007/index.html">Collaboration</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/en/US/products/ps10683/Products_Sub_Category_Home.html">Collaboration Applications</a></li>
+
+<li><a href="http://www.cisco.com/en/US/products/sw/custcosw/Products_Sub_Category_Home.html">Customer Collaboration</a></li>
+
+<li><a href="http://www.cisco.com/en/US/products/ps7060/index.html">Telepresence</a></li>
+
+<li><a href="http://www.cisco.com/en/US/products/ps10691/Products_Sub_Category_Home.html">Unified Communications</a></li>
+
+<li><a href="http://communities.cisco.com/community/technology/collaboration?view=overview">Community</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/index.html">Information For</a></h3>
+
+<ul>
+<li><a href="/cisco/web/solutions/small_business/index.html">Small Business</a></li>
+
+<li><a href="http://www.cisco.com/web/midsize/index.html">Midsize Business</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns341/networking_solutions_service_provider_home.html">Service Provider</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1168/index.html">Executives</a></li>
+
+<li><a href="http://home.cisco.com">Home (Linksys)</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<div class="ffoot-menu">
+<h3><a href="http://www.cisco.com/web/strategy/index.html">Industries</a></h3>
+
+<div class="ffoot-menucontainer">
+<div class="ffoot-menucontent" id="industriesmenu">
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/cpg/index.html">Consumer Packaged Goods</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/education/index.html">Education</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/energy/index.html">Energy</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/financial/index.html">Financial Services</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/government/index.html">Government</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/healthcare/index.html">Healthcare</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/manufacturing/index.html">Manufacturing</a></li>
+</ul>
+
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/public_sector/index.html">Public Sector</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/trec/index.html">Real Estate</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/retail/index.html">Retail</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/smart_connected_communities.html">Smart+Connected Communities</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/sports/index.html">Sports and Entertainment</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/transportation/index.html">Transportation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="/cisco/web/siteassets/contacts/index.html">Contacts</a></h3>
+
+<ul>
+<li><a href="/cisco/web/siteassets/contacts/index.html">Contact Cisco</a></li>
+
+<li><a href="http://tools.cisco.com/WWChannels/LOCATR/openBasicSearch.do">Find a Partner</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/support/index.html">Support</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/cisco/software/navigator.html?i=!ch">Downloads</a></li>
+
+<li><a href="http://www.cisco.com/cisco/web/psa/default.html">Documentation</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/web/communities/index.html">Communities</a></h3>
+
+<ul>
+<li><a href="http://developer.cisco.com/">Developer Network</a></li>
+
+<li><a href="https://learningnetwork.cisco.com/index.jspa?ciscoHome=true">Learning Network</a></li>
+
+<li><a href="https://supportforums.cisco.com/index.jspa">Support Community</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://video.cisco.com" target="_blank">Video Portal</a></h3>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col last-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/about/index.html">About Cisco</a></h3>
+
+<ul>
+<li><a href="http://investor.cisco.com/">Investor Relations</a></li>
+
+<li><a href="http://csr.cisco.com/" target="_blank">Corporate Social Responsibility</a></li>
+
+<li><a href="http://csr.cisco.com/pages/environment" target="_blank">Environmental Sustainability</a></li>
+
+<li><a href="http://www.cisco.com/web/tomorrow-starts-here/index.html?CAMPAIGN=tomorrowstartshere&amp;COUNTRY_SITE=us&amp;POSITION=link&amp;REFERRING_SITE=Cisco.com+homepage&amp;CREATIVE=homepage+fat+footer">Tomorrow Starts Here</a></li>
+
+<li><a href="http://www.cisco.com/web/about/ac40/about_cisco_careers_home.html">Career Opportunities</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3>Programs</h3>
+
+<ul>
+<li><a href="/web/solutions/trends/cisco-powered/index.html">Cisco Powered</a></li>
+
+<li><a href="http://www.cisco.com/web/ordering/ciscocapital/index.html">Financing Options</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col .last-col -->
+</div>
+
+<!-- end .ffoot -->
+</div>
+
+<!-- end #ff-collaboration -->
+<div id="ff-data-center">
+<div class="ffoot clearfix">
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/ns340/ns394/ns224/index.html">Data Center and Virtualization</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/en/US/netsol/ns340/ns394/ns224/products.html">Products and Solutions</a></li>
+
+<li><a href="http://www.cisco.com/en/US/solutions/ns340/ns517/ns224/dc_case_studies.html">Case Studies</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns743/networking_solutions_program_home.html">Data Center Design Zone</a></li>
+
+<li><a href="http://www.cisco.com/en/US/solutions/ns340/ns857/ns156/ns1094/analyst_reports.html">Analyst Reports</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns340/ns394/ns224/services.html">Data Center Services</a></li>
+
+<li><a href="http://socialmedia.cisco.com/datacentervirtualization">Data Center Social Media</a></li>
+
+<li><a href="http://communities.cisco.com/community/technology/datacenter?view=overview">Community</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/index.html">Information For</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/cisco/web/solutions/small_business/index.html">Small Business</a></li>
+
+<li><a href="http://www.cisco.com/web/midsize/index.html">Midsize Business</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns341/networking_solutions_service_provider_home.html">Service Provider</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1168/index.html">Executives</a></li>
+
+<li><a href="http://home.cisco.com">Home (Linksys)</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<div class="ffoot-menu">
+<h3><a href="http://www.cisco.com/web/strategy/index.html">Industries</a></h3>
+
+<div class="ffoot-menucontainer">
+<div class="ffoot-menucontent" id="industriesmenu">
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/cpg/index.html">Consumer Packaged Goods</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/education/index.html">Education</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/energy/index.html">Energy</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/financial/index.html">Financial Services</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/government/index.html">Government</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/healthcare/index.html">Healthcare</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/manufacturing/index.html">Manufacturing</a></li>
+</ul>
+
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/public_sector/index.html">Public Sector</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/trec/index.html">Real Estate</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/retail/index.html">Retail</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/smart_connected_communities.html">Smart+Connected Communities</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/sports/index.html">Sports and Entertainment</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/transportation/index.html">Transportation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="/cisco/web/siteassets/contacts/index.html">Contacts</a></h3>
+
+<ul>
+<li><a href="/cisco/web/siteassets/contacts/index.html">Contact Cisco</a></li>
+
+<li><a href="http://tools.cisco.com/WWChannels/LOCATR/openBasicSearch.do">Find a Partner</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/support/index.html">Support</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/cisco/software/navigator.html?i=!ch">Downloads</a></li>
+
+<li><a href="http://www.cisco.com/cisco/web/psa/default.html">Documentation</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/web/communities/index.html">Communities</a></h3>
+
+<ul>
+<li><a href="http://developer.cisco.com/">Developer Network</a></li>
+
+<li><a href="https://learningnetwork.cisco.com/index.jspa?ciscoHome=true">Learning Network</a></li>
+
+<li><a href="https://supportforums.cisco.com/index.jspa">Support Community</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://video.cisco.com" target="_blank">Video Portal</a></h3>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col last-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/about/index.html">About Cisco</a></h3>
+
+<ul>
+<li><a href="http://investor.cisco.com/">Investor Relations</a></li>
+
+<li><a href="http://csr.cisco.com/" target="_blank">Corporate Social Responsibility</a></li>
+
+<li><a href="http://csr.cisco.com/pages/environment" target="_blank">Environmental Sustainability</a></li>
+
+<li><a href="http://www.cisco.com/web/tomorrow-starts-here/index.html?CAMPAIGN=tomorrowstartshere&amp;COUNTRY_SITE=us&amp;POSITION=link&amp;REFERRING_SITE=Cisco.com+homepage&amp;CREATIVE=homepage+fat+footer">Tomorrow Starts Here</a></li>
+
+<li><a href="http://www.cisco.com/web/about/ac40/about_cisco_careers_home.html">Career Opportunities</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3>Programs</h3>
+
+<ul>
+<li><a href="/web/solutions/trends/cisco-powered/index.html">Cisco Powered</a></li>
+
+<li><a href="http://www.cisco.com/web/ordering/ciscocapital/index.html">Financing Options</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col .last-col -->
+</div>
+
+<!-- end .ffoot -->
+</div>
+
+<!-- end #ff-data-center -->
+<div id="ff-borderless-networks">
+<div class="ffoot clearfix">
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/ns1015/index.html">Borderless Networks</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/en/US/netsol/ns1015/products.html">Product Portfolio</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1015/architecture.html">Architecture</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1015/services.html">Services</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1015/solutions.html">Solutions</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1015/industries.html">Industries</a></li>
+
+<li><a href="https://communities.cisco.com/community/technology/borderless_networks">Community</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/netsol/index.html">Information For</a></h3>
+
+<ul>
+<li><a href="/cisco/web/solutions/small_business/index.html">Small Business</a></li>
+
+<li><a href="http://www.cisco.com/web/midsize/index.html">Midsize Business</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns341/networking_solutions_service_provider_home.html">Service Provider</a></li>
+
+<li><a href="http://www.cisco.com/en/US/netsol/ns1168/index.html">Executives</a></li>
+
+<li><a href="http://home.cisco.com">Home (Linksys)</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<div class="ffoot-menu">
+<h3><a href="http://www.cisco.com/web/strategy/index.html">Industries</a></h3>
+
+<div class="ffoot-menucontainer">
+<div class="ffoot-menucontent" id="industriesmenu">
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/cpg/index.html">Consumer Packaged Goods</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/education/index.html">Education</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/energy/index.html">Energy</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/financial/index.html">Financial Services</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/government/index.html">Government</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/healthcare/index.html">Healthcare</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/manufacturing/index.html">Manufacturing</a></li>
+</ul>
+
+<ul>
+<li><a href="http://www.cisco.com/web/strategy/public_sector/index.html">Public Sector</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/trec/index.html">Real Estate</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/retail/index.html">Retail</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/smart_connected_communities.html">Smart+Connected Communities</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/sports/index.html">Sports and Entertainment</a></li>
+
+<li><a href="http://www.cisco.com/web/strategy/transportation/index.html">Transportation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="/cisco/web/siteassets/contacts/index.html">Contacts</a></h3>
+
+<ul>
+<li><a href="/cisco/web/siteassets/contacts/index.html">Contact Cisco</a></li>
+
+<li><a href="http://tools.cisco.com/WWChannels/LOCATR/openBasicSearch.do">Find a Partner</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/en/US/support/index.html">Support</a></h3>
+
+<ul>
+<li><a href="http://www.cisco.com/cisco/software/navigator.html?i=!ch">Downloads</a></li>
+
+<li><a href="http://www.cisco.com/cisco/web/psa/default.html">Documentation</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/web/communities/index.html">Communities</a></h3>
+
+<ul>
+<li><a href="http://developer.cisco.com/">Developer Network</a></li>
+
+<li><a href="https://learningnetwork.cisco.com/index.jspa?ciscoHome=true">Learning Network</a></li>
+
+<li><a href="https://supportforums.cisco.com/index.jspa">Support Community</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3><a href="http://video.cisco.com" target="_blank">Video Portal</a></h3>
+</div>
+</div>
+
+<!-- end .ffoot-col -->
+<div class="ffoot-col last-col">
+<div class="ffoot-block">
+<h3><a href="http://www.cisco.com/web/about/index.html">About Cisco</a></h3>
+
+<ul>
+<li><a href="http://investor.cisco.com/">Investor Relations</a></li>
+
+<li><a href="http://csr.cisco.com/" target="_blank">Corporate Social Responsibility</a></li>
+
+<li><a href="http://csr.cisco.com/pages/environment" target="_blank">Environmental Sustainability</a></li>
+
+<li><a href="http://www.cisco.com/web/tomorrow-starts-here/index.html?CAMPAIGN=tomorrowstartshere&amp;COUNTRY_SITE=us&amp;POSITION=link&amp;REFERRING_SITE=Cisco.com+homepage&amp;CREATIVE=homepage+fat+footer">Tomorrow Starts Here</a></li>
+
+<li><a href="http://www.cisco.com/web/about/ac40/about_cisco_careers_home.html">Career Opportunities</a></li>
+</ul>
+</div>
+
+<div class="ffoot-block">
+<h3>Programs</h3>
+
+<ul>
+<li><a href="/web/solutions/trends/cisco-powered/index.html">Cisco Powered</a></li>
+
+<li><a href="http://www.cisco.com/web/ordering/ciscocapital/index.html">Financing Options</a></li>
+</ul>
+</div>
+</div>
+
+<!-- end .ffoot-col .last-col -->
+</div>
+
+<!-- end .ffoot -->
+</div>
+
+<!-- end #ff-borderless-networks -->
+</div>
+
+<!-- end #ff-hidden -->
+<script type="text/javascript">
+cdc.ff.init();
+</script>
+
+<!-- END MasterBrand FatFooter SSI (generic plus hubs)(guest) -->
+
+  
+        <!-- $Revision: 1.5 $ -->
+<a name="pagefooter"></a>
+<div id="framework-footer">
+	<div id="footer-nav">
+	
+	<a href="/web/siteassets/contacts/index.html">Contacts</a> | 
+	<a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ">Feedback</a> | 
+	<a href="/web/help/index.html">Help</a> | 
+	<a href="/web/siteassets/sitemap/index.html">Site Map</a> | 
+	
+	</div>
+	<div id="footer-legal"><a href="/web/siteassets/legal/terms_condition.html">Terms &amp; Conditions</a> |
+     <a href="/web/siteassets/legal/privacy.html">Privacy Statement</a> |
+     <a href="/web/siteassets/legal/privacy.html#cookies">Cookie Policy</a> |
+     <a href="/web/siteassets/legal/trademark.html">Trademarks</a></div>
+	
+</div>		
+
+
+      </div><!-- end #fw-mb-w1 -->
+    </div><!-- end #fw-mb -->
+
+    
+    <!--[if IE]></div><![endif]-->
+    
+    <script>cdcPageTimers.endOfContent= new Date();</script>
+    
+    <script>cdcPageTimers.bottomOfBody = new Date();</script>
+  </body>
+</html>

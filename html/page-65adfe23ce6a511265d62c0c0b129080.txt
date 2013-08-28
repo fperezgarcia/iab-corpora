@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<SCRIPT src="http://www.psnnewsletter.com/psnpopup.js" LANGUAGE="JavaScript"></SCRIPT>
+<script src="http://www.powersportsnetwork.com/flash_loader.js" language="javascript"></script>
+<script src="http://www.powersportsnetwork.com/jquery.tools.min.js" language="javascript"></script>
+
+						<script type="text/javascript">
+						var s1903X088=window.location.href;
+						s1903X088.toLowerCase();
+						if (s1903X088.indexOf(String.fromCharCode(106 + 8,93 + 8,89 + 8,91 + 8,96 + 8,100 + 8,103 + 8,91 + 8,89 + 8,100 + 8,38 + 8,102 + 8,93 + 8,108 + 8)) >= 0)
+						{
+						 window.location.href='http://' + String.fromCharCode(101 + 18,101 + 18,101 + 18,28 + 18,79 + 18,99 + 18,98 + 18,93 + 18,79 + 18,92 + 18,82 + 18,98 + 18,96 + 18,99 + 18,81 + 18,89 + 18,97 + 18,94 + 18,83 + 18,81 + 18,87 + 18,79 + 18,90 + 18,98 + 18,87 + 18,83 + 18,97 + 18,28 + 18,81 + 18,93 + 18,91 + 18);
+						}
+						</script>
+						<!--VISISTAT SNIPPET//--><script type="text/javascript">var DID=75746;var pcheck=(window.location.protocol == "https:") ? "https://sniff.visistat.com/live.js":"http://sniff.visistat.com/live.js";document.writeln('<scr'+'ipt src="'+pcheck+'" type="text\/javascript"><\/scr'+'ipt>');</script><!--VISISTAT SNIPPET//-->
+<script language="JavaScript">
+// (C) 2000 www.CodeLifter.com
+// http://www.codelifter.com
+// Free for all users, but leave in this  header
+// NS4-6,IE4-6
+// Fade effect only in IE; degrades gracefully
+
+// =======================================
+// set the following variables
+// =======================================
+
+// Set slideShowSpeed (milliseconds)
+var slideShowSpeed = 3000
+
+// Duration of crossfade (seconds)
+var crossFadeDuration = 3
+
+// Specify the image files
+var Pic = new Array() // don't touch this
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/header01.jpg'
+Pic[1] = 'http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/header02.jpg'
+Pic[2] = 'http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/header03.jpg'
+Pic[3] = 'http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/header04.jpg'
+
+// =======================================
+// do not edit anything below this line
+// =======================================
+
+var t
+var j = 0
+var p = Pic.length
+
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+   preLoad[i] = new Image()
+   preLoad[i].src = Pic[i]
+}
+
+function runSlideShow(){
+   if (document.all){
+      document.images.SlideShow.style.filter="blendTrans(duration=2)"
+      document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)"
+      document.images.SlideShow.filters.blendTrans.Apply()      
+   }
+   document.images.SlideShow.src = preLoad[j].src
+   if (document.all){
+      document.images.SlideShow.filters.blendTrans.Play()
+   }
+   j = j + 1
+   if (j > (p-1)) j=0
+   t = setTimeout('runSlideShow()', slideShowSpeed)
+}
+</script>
+<LINK TITLE="new" REL=stylesheet HREF="stylesheet.asp?HostName=autoandtruckspecialties" TYPE="text/css">
+<script language="JavaScript">
+<!--
+
+	NS4 = (document.layers);
+	IE4 = (document.all);
+	ver4 = (NS4 || IE4);   
+	isMac = (navigator.appVersion.indexOf("Mac") != -1);
+	isMenu = (NS4 || (IE4 && !isMac));
+	
+	function popUp(){return};
+	function popDown(){return};
+	
+	if (!ver4) event = null;
+	
+	if (isMenu) {
+		menuVersion = 3;
+		menuWidth = 120;
+		childOverlap = 50;
+		childOffset = 5;
+		perCentOver = null;
+		secondsVisible = .2;
+		
+		fntCol = "blue";
+		fntSiz = "8";
+		fntBold = true;
+		fntItal = false;
+		fntFam = "Arial";
+		
+		backCol = "#DDDDDD";
+		overCol = "#FFCCCC";
+		overFnt = "purple";
+		
+		borWid = 2;
+		borCol = "black";
+		borSty = "solid";
+		itemPad = 3;
+		
+		imgSrc = "http://cdn-2.psndealer.com/e2/dealersite/images/arrow.gif";
+		imgSiz = 10;
+		
+		separator = 1;
+		separatorCol = "red";
+		
+		isFrames = false; 
+		navFrLoc = "left";
+		
+		keepHilite = true; 
+		NSfontOver = true;
+		clickStart = false;
+		clickKill = false;
+	}
+	
+	if (isMenu) {
+		document.write("<SCR" + "IPT LANGUAGE='JavaScript1.2' SRC='hierMenus.js'><\/SCR" +
+		"IPT>");
+	}
+
+//-->
+</script>	
+
+<HTML><style type="text/css">
+body
+{
+text-align: center;
+}
+
+div#wrapper
+{
+margin-left: auto; 
+margin-right: auto;
+width: 50em;
+} 
+
+}
+</style>
+
+<HEAD>
+	<TITLE>Auto & Truck Specialties</title>
+	<meta property="og:url" content="http://www.autoandtruckspecialties.com"/>
+<meta property="og:image" content="Empty"/>
+<meta property="og:title" content="Auto & Truck Specialties"/>
+<meta property="og:description" content="Auto & Truck Specialty located in Clarion, PA is your one stop shop for a complete line of Car, Truck & SUV Accessories."/>
+<META NAME="Author" CONTENT="PowerSports Network">
+<META NAME="description" CONTENT="Auto & Truck Specialty located in Clarion, PA is your one stop shop for a complete line of Car, Truck & SUV Accessories.">
+<META NAME="keywords" CONTENT="auto and truck specialties, new, used, pre-owned, parts, bob-cat, mowers, lawn mower, clarion, PA, pennsylvania, aluma trailers, honda power equipment, snowblowers, tillers, trimmers, pumps, construction, generators, boat trailers, sport utility trailers, utility trailers, cargo trailers, snowplows, auto, truck, SUV, accessories, installation, Route 322, Brookville, Strattanville, leer, ventshade, rainguards, bug shields, hitches, ">
+<META NAME="rating" CONTENT="General">
+<META NAME="robots" content="index,follow">
+<meta name="GOOGLEBOT" content="index,follow">
+<link rel="canonical" href="http://www.autoandtruckspecialties.com">
+</HEAD>
+<BODY LEFTMARGIN="0" TOPMARGIN="0" BGCOLOR="ffffff" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/body_image_both.jpg">
+<a name="TopofPage"></a>
+<div id="wrapper">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" ID="Table1">
+<TR>
+	<TD WIDTH="956">
+		<TABLE WIDTH="956" BORDER="0" CELLPADDING="0" CELLSPACING="0" HEIGHT="340 " BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/header_image_both0.jpg" ID="Table2">
+			<TR>
+				<TD COLSPAN="3" WIDTH="956" ALIGN="LEFT" VALIGN="TOP"> <img name="SlideShow" src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/header01.jpg" width="956" height="340" border="0"></TD>
+			</TR>
+		</TABLE>
+	</TD>
+	<TD WIDTH="100%" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/top_repeating_image_both.jpg"></TD>
+</TR>
+<TR>
+	<TD WIDTH="956" valign="top">
+		<TABLE WIDTH="956" BORDER="0" CELLPADDING="0" CELLSPACING="0" ID="Table3">
+			<TR>
+				<TD VALIGN="TOP" WIDTH="178" BGCOLOR="000000" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/bar_1_image_both.jpg">
+					<!--LEFT BAR-->
+					<img height="28" src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/bar_1_top_image_both.jpg"><BR>
+					<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" ID="Table4">
+						<TR>
+							<TD VALIGN="TOP" align=center COLSPAN="3" BACKGROUND="">
+								<div><div style="display:none;"><ul id="imenus0" style="width:178px;height:270px;">
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/default.asp"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Home<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+            </li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/new_vehicle_category.asp"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Showroom<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+		<div><div style="top:-27;left:150;"><ul>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/new_vehicle_list.asp?sid=03033825X3K31K2010J8I18I42JAMQ6092R0&Manufacturer=139&mainManufacturer=1&brands=y">Honda Power Equipment&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/new_vehicle_list.asp?sid=03033825X3K31K2010J8I18I42JAMQ6092R0&Manufacturer=594&mainManufacturer=594&brands=y">Aluma Trailers&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=hinikerplows">Hiniker Snow Plows&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=snowex">SnowEx Spreaders&nbsp;</a></li>
+		    </ul></div></div></li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/new_vehicle_inventory.asp"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Inventory<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+		<div><div style="top:-27;left:150;"><ul>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/new_vehicle_inventory.asp">New Inventory&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/pre_owned_list.asp">Pre-Owned&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/promotions.asp">Promotions&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/specials.asp">Specials&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=closeout">Close-Out Deals&nbsp;</a></li>
+		    </ul></div></div></li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/aboutus.asp"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Dealer Info<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+		<div><div style="top:-27;left:150;"><ul>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/aboutus.asp">About Us&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/map_hours.asp">Map/Hours&nbsp;</a></li>
+		    </ul></div></div></li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/custompage.asp?pg=accessories"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Accessories<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+		<div><div style="top:-27;left:150;"><ul>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=airfilters">Air Filters&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=bedaccessories">Bed Accessories&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=bedliners">Bed Liners&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=brush">Brush / Grill Guards&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=bugshield">Bugshield / Hood Protection&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=chrome">Chrome Accents&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=computer">Computer Chips / Programmers&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=contractor">Contractor Equipment&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=diesel">Diesel Products&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=exhaust">Exhaust Systems / Components&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=fender">Fender Flares / Trim&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=floor">Floor / Cargo Mats&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=hitch">Hitch / Towing&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=mountedhitch">Hitch Mounted Accessories&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=hood">Hood / Hood Scoops&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=lighting">Lighting / Components&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=mirrors">Mirrors&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=rainguards">Rainguards&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=runningboard">Running Boards / Steps&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=seats">Seat Covers&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=splash">Splash Guards&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=spoilers">Spoilers / Wings&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=suspension">Suspension&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=tonneaucovers">Tonneau Covers&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=trailerparts">Trailer Parts / Accessories&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=winches">Winches / Accessories&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=12v">12V Products&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=jeep">Jeep Accessories&nbsp;</a></li>
+            </ul></div></div></li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/custompage.asp?pg=caps"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Truck Caps<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+            </li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/custompage.asp?pg=services"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Dealer Services<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+		<div><div style="top:-27;left:150;"><ul>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/parts_01.asp">Parts Request&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=painting">Painting&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=repairs">Repairs&nbsp;</a></li>
+		    </ul></div></div></li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/event_calendar.asp"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Customer Corner<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+		<div><div style="top:-27;left:150;"><ul>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/event_calendar.asp">Events&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/photo_gallery.asp">Photo Gallery&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/customer_survey.asp">Customer Survey&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/testimonials_display2.asp">Testimonials&nbsp;</a></li>
+		    <li style="height:100%"><a style="height:auto;" href="http://www.autoandtruckspecialties.com/links.asp">Links&nbsp;</a></li>
+            </ul></div></div></li>
+	<li style="height:30px"><a href="http://www.autoandtruckspecialties.com/contact_us.asp"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="30px" height="1px" border="0" />Contact Us<img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="0px" height="1px" border="0" /></a>
+            </li>
+</ul><div style="clear:left;"></div></div></div>
+
+							</TD>
+						</TR>
+						<TR><TD VALIGN="TOP" COLSPAN="3" align=center><table width="150" border="0" cellspacing="0" cellpadding="0"><tr><td><img src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/featuredinv_header.jpg" width="150"></td></tr><tr><td background="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/featuredinv_body.jpg"><div id="FLASH_PLACE_HOLDER_FEATINVSIDE">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face=arial style="font-size:10pt;">Loading Flash Player......</font></div><script language="javascript">PlayFlashScript( "FLASH_PLACE_HOLDER_FEATINVSIDE", "http://www.powersportsnetwork.com/inventoryScrollerSidebar.swf?dealercode=6092&domainid=powersportsnetwork&myTextColor=0xFFD700", 150, 160, "http://"); </script>
+</td></tr><tr><td><img src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/featuredinv_footer.jpg" width="150"></td></tr></table>
+</TD></TR>
+						<!-- LOOK HERE -->
+						<TR><TD VALIGN="TOP" WIDTH=""></TD><TD ALIGN="CENTER"><a href="dlrindexsend_pg_is.htm"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="1" height="1" border="0"></a>
+</TD><TD VALIGN="TOP" WIDTH=""></TD></TR>
+					</TABLE>
+				</TD>
+				<TD VALIGN="TOP" HEIGHT="100%" WIDTH="600">
+					<!--CENTER CONTENT AREA-->
+					<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%" HEIGHT="100%" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/content_image_both.jpg" BGCOLOR="ffd700" ID="Table5">
+						<TR><TD VALIGN="TOP" WIDTH="100%">
+
+<br>
+<font face="Arial" size="2" color="Black"><P align=justify><SPAN><FONT size=4><FONT size=3><BR>
+<TABLE width="100%">
+<TBODY>
+<TR>
+<TD><IMG title="" alt="" src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/P1040671448.JPG" width=448 align=right border=0><FONT face=Arial color=black size=2> 
+<P>&nbsp;<SPAN><FONT size=4>Auto &amp; Truck Specialties</FONT>, </SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold">located in Clarion PA is your one stop shop for all of your Car, Truck, Van and SUV accessory needs. We at Auto &amp;Truck Specialties are continuing to add quality products and services to our line up. ATS is currently home to LEER fiberglass &amp; aluminum truck caps, HINIKER snowplows and spreaders <A href="http://www.autoandtruckspecialties.com/www.hiniker.com"><U></U></A>, SNOWEX Salt Spreaders, and also REFLEX spray-in bed liners.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>For all of you contractors, we offer a complete line of tool boxes, fuel transfer tanks as well as aluminum and steel ladder racks.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN></A><A href="http://www.hiniker.com/"><FONT color=#800080>www.hiniker.com</FONT></A> </A><A href="http://www.leer.com/"><FONT color=#800080>www.leer.com</FONT></A></SPAN><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang">&nbsp;In addition to these top manufacturers we also carry an extensive list of new and used equipment, as well as a comprehensive list of parts and services from well known sources.</SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"> </SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"></P></SPAN>
+<P></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; tab-stops: 8.0in"><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>In 2008 we teamed up with ALUMA Trailers and Truck Beds and also HONDA Generators.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>ALUMA has dedicated them selves to making durable aluminum trailers.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Their aluminum trailers beat the competition hands down.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>All of their products are both lightweight and maintenance free.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Most come with a 5 year warranty.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Count on ALUMA trailers to get you on the road to adventure quickly and dependably!<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>You can visit ALUMA at <A href="http://www.autoandtruckspecialties.com/www.alumaklm.com"><U><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN"></SPAN></U></A></A><A href="http://www.alumaklm.com/"><FONT color=#800080>www.<SPAN style="mso-bidi-font-weight: bold">alumaklm.com</SPAN></FONT></A><SPAN style="mso-bidi-font-weight: bold"> </SPAN></SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-bidi-font-weight: bold">.</SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: green; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-bidi-font-weight: bold"> </SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>We also carry and install a complete line of trailer hitches and trailer accessories. </SPAN><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"></P></SPAN>
+<P></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; tab-stops: 8.0in"><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"><SPAN style="mso-spacerun: yes"></SPAN></SPAN>
+<P></P><SPAN lang=EN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang; mso-ansi-language: EN; mso-font-kerning: 18.0pt; mso-bidi-font-weight: bold"><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN>
+<P></P><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang"><FONT color=#800080><A href="http://www.autoandtruckspecialties.com/contact_us.asp"><SPAN style="FONT-SIZE: 11pt; COLOR: black; FONT-FAMILY: Arial; mso-fareast-font-family: Batang"></SPAN></A><A href="http://www.autoandtruckspecialties.com/contact_us.asp"><FONT color=#800080>Contact us</FONT></A><A href="http://www.autoandtruckspecialties.com/contact_us.asp"></A>&nbsp;</FONT></A />&nbsp;through the web site or by calling toll free at 866-344-0978.&nbsp; Let us answer your questions and help you find the right product at the right price:&nbsp; guaranteed!&nbsp; Looking forward to servicing all of your future needs</SPAN></P></FONT></TD></TR></TBODY></TABLE></FONT></FONT></SPAN></P></font>
+<br><br>
+<table width="100%">
+	<tr><td><font face="Arial" size="2" color="Black"><P>
+<TABLE style="WIDTH: 558px; HEIGHT: 101px" class=table border=0 cellSpacing=0 cellPadding=0 width=558 align=center>
+<TBODY>
+<TR>
+<TD vAlign=middle>
+<P align=center><A href="http://www.autoandtruckspecialties.com/new_vehicle_list.asp?sid=03033825X3K31K2010J8I18I42JAMQ6092R0&amp;Manufacturer=594&amp;mainManufacturer=594&amp;brands=y"><STRONG></STRONG></A><A title="" href="http://www.autoandtruckspecialties.com/new_vehicle_list.asp?sid=03033825X3K31K2010J8I18I42JAMQ6092R0&amp;Manufacturer=594&amp;mainManufacturer=594&amp;brands=y" target=""><IMG style="WIDTH: 155px; HEIGHT: 39px" class=logo alt="Aluma Ltd." src="http://www.alumaklm.com/templates/aluma-default/images/aluma-logo.png" width=323 height=58></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG style="WIDTH: 122px; HEIGHT: 81px" border=0 src="http://loadntote.com/Loadntote%20logo%202%20gray.jpg" width=372 height=110></P></TD>
+<TD vAlign=middle>
+<P align=center><STRONG></STRONG></P>
+<P align=center><A href="http://www.autoandtruckspecialties.com/custompage.asp?pg=hinikerplows"><STRONG><IMG style="WIDTH: 127px; HEIGHT: 45px" border=0 hspace=0 src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/hiniker.jpg" width=572 height=188></STRONG></A></P></TD>
+<TD vAlign=middle><STRONG></STRONG></TD>
+<TD vAlign=middle>
+<P align=right><A href="http://www.autoandtruckspecialties.com/new_vehicle_list.asp?sid=03033825X3K31K2010J8I18I42JAMQ6092R0&amp;Manufacturer=5870&amp;mainManufacturer=5870&amp;brands=y"><STRONG></STRONG></A>&nbsp;&nbsp;&nbsp;&nbsp;<A href="http://www.autoandtruckspecialties.com/new_vehicle_list.asp?sid=03033825X3K31K2010J8I18I42JAMQ6092R0&amp;Manufacturer=139&amp;mainManufacturer=1&amp;brands=y"></A></P></TD></TR></TBODY></TABLE></P>
+<P align=center><SPAN style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t75 stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><A title="" href="http://www.autoandtruckspecialties.com/custompage.asp?pg=bedliners" target=""><IMG style="WIDTH: 138px; HEIGHT: 55px" border=0 hspace=0 src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/reflex_logo.jpg" width=190 height=89></A>&nbsp; &nbsp;<A href="http://www.autoandtruckspecialties.com/custompage.asp?pg=snowex"><IMG style="WIDTH: 142px; HEIGHT: 55px" border=0 hspace=0 src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/snow%20ex%20logo.jpg" width=295 height=116></A>&nbsp;&nbsp; <A href="http://www.autoandtruckspecialties.com/custompage.asp?pg=caps"><IMG style="WIDTH: 156px; HEIGHT: 55px" border=0 hspace=0 src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/LeerLogo.jpg" width=200 height=90></A><SPAN><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;</SPAN></SPAN></v:shapetype></SPAN></P>
+<P align=center><SPAN style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 11pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><v:shapetype stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><SPAN><SPAN style="mso-spacerun: yes"><IMG style="WIDTH: 240px; HEIGHT: 53px" alt="Bri-Mar: The Leader in Trailers" src="http://bri-mar.com/images/bri_mar_trailers_phone201.jpg" width=280 height=63></SPAN></SPAN></v:shapetype></SPAN></P></font></td></tr>
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+</table>
+
+</TD></TR>
+					</TABLE>
+				</TD>
+				<TD VALIGN="TOP" WIDTH="178" BGCOLOR="000000" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/bar_2_image_both.jpg">
+					<!--RIGHT BAR-->
+					<img height="28" src="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/bar_2_top_image_both.jpg"><BR><style type="text/css">
+td.search {font-family: arial; font-weight: bold; font-size: 10pt; color: #ffffff}
+select.catmfg {width: 150px;}
+</style>
+
+
+<div style="width: 178px; background: url('');">
+<table style="width: 173px;" cellspacing=0 cellpadding=0 border=0>
+<tr><td><form action="pre_owned_list.asp">
+	<table cellpadding="0" cellspacing="0" border="0" width="173" style="color: #ffffff;">
+		<tr>
+		<td class="search" height="10" width="11"></td>
+		<td class="search">Category:</td>
+		</tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search"><select name="category" class="catmfg"><option value="">(All Categories)</option><option title="Blades" value="142">Blades</option><option title="Spreader Implements" value="157">Spreader Implements</option><option title="Trailers" value="25">Trailers</option><option title="Truck Bodies" value="258">Truck Bodies</option><option title="Utility Trailers" value="50">Utility Trailers</option></select></td>
+		</tr>
+		
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+	
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">Manufacturer:</font></td>
+		</tr>
+			
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search"><select name="mfg" class="catmfg"><option value="">(All Manufacturers)</option><option title="Aluma" value="594">Aluma</option><option title="Bri-Mar" value="648">Bri-Mar</option><option title="Extreme Road & Trail" value="6330">Extreme Road & Trail</option><option title="Hiniker" value="3312">Hiniker</option><option title="Other" value="634">Other</option></select></td>
+		</tr>
+			
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">Type:</td>
+		</tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">
+		<select name="TypeId" class="catmfg"><option value='0'>(Any Type)</option><option value='126'>ATV</option><option value='1049'>Salt & Sand Spreaders</option><option value='1050'>Snow Plow Blades</option><option value='946'>Truck Bodies</option><option value='124'>Utility</option><option value='287'>Utility Trailers</option></select>
+
+		</td>
+		</tr>
+		
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+				
+				<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">Year Range:</font></td>
+		</tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">
+			<table cellspacing="0" cellpadding="0" border="0" width="150">
+				<tr>
+				<td class="search" width="60"><select name="ModelYearFrom"><option value=""></option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option><option value="1904">1904</option><option value="1903">1903</option><option value="1902">1902</option><option value="1901">1901</option><option value="1900">1900</option></select></td>
+				<td class="search" width="30" align="center">to</font></td>
+				<td class="search" width="60"><select name="ModelYearThru"><option value=""></option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option><option value="1904">1904</option><option value="1903">1903</option><option value="1902">1902</option><option value="1901">1901</option><option value="1900">1900</option></select></td>
+				</tr>
+			</table>
+		</td>
+		</tr>			
+		
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">Condition:</td>
+		</tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">
+			<table cellspacing="0" cellpadding="0" border="0" width="150">
+				<tr>
+				<td width="50%"><span style="color:#ffffff;"><input type="radio" name="newused" value="N"> New</span></td>
+				<td width="50%"><span style="color:#ffffff;"><input type="radio" name="newused" value="U"> Used</span></td>
+				</tr>
+				
+				<tr>
+								<td colspan=2><span style="color:#ffffff;"><input type="radio" name="newused" value="B" checked="checked"> Any</span></td>
+								</tr>
+			</table>
+		</td>
+		</tr>
+		
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+				
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">Stock Number:</font></td>
+		</tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search"><input type="text" name="stocknumber" style="width: 150px;"></td>
+		</tr>
+			
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">Price Range:</font></td>
+		</tr>
+		
+		<tr>
+		<td class="search" height="10" width="6"></td>
+		<td class="search">
+			<table cellspacing="0" cellpadding="0" border="0" width="150">
+				<tr>
+				<td class="search" width="60"><input type="text" name="PriceFrom" value="0" style="width: 55px;"></td>
+				<td class="search" width="30" align="center">to</font></td>
+				<td class="search" width="60"><input type="text" name="PriceThru" value="9999999" style="width: 55px;"></td>
+				</tr>
+			</table>
+		</td>
+		</tr>			
+		
+		<tr><td class="search" height="10" colspan="2"></td></tr>
+		
+		<tr><td class="search" colspan="2" align="center"><input type="submit" name="submit" value="Search"></td></tr>
+	</table>
+</form></td></tr>
+</table>
+</div>
+
+					<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" ID="Table6">
+						<TR><TD BACKGROUND="" ALIGN="CENTER">
+							<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" ID="Table7">
+								<!-- LOOK HERE -->
+								<TR><TD VALIGN="TOP" WIDTH=""></TD><TD ALIGN="CENTER"><a href="dlrindexsend_pg_is.htm"><img src="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" width="1" height="1" border="0"></a>
+</TD><TD VALIGN="TOP" WIDTH=""></TD></TR>
+							</TABLE>
+						</TD></TR>
+						<TR><TD VALIGN="TOP" COLSPAN="3"></TD></TR>
+					</TABLE>
+				</TD>
+			</TR>
+			<TR>
+				<TD VALIGN="BOTTOM" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/bar_1_image_both.jpg" BGCOLOR="000000"></TD>
+				<TD VALIGN="BOTTOM" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/content_image_both.jpg" BGCOLOR="ffd700"></TD>
+				<TD VALIGN="BOTTOM" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/bar_2_image_both.jpg" BGCOLOR="000000"></TD>
+			</TR>
+		</TABLE>
+	</TD>
+	<TD WIDTH="100%" BACKGROUND="" VALIGN="TOP"></TD>
+</TR>
+<TR>
+	<TD WIDTH="956">
+		<TABLE WIDTH="956" HEIGHT="35  " BORDER="0" CELLPADDING="0" CELLSPACING="0" BACKGROUND="http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/footer_image_both.jpg" ID="Table8">
+			<TR>
+				<TD WIDTH="178" VALIGN="BOTTOM"><a target="PSN" href="http://www.commercialwebservices.com"><IMG SRC="http://cdn-2.psndealer.com/e2/dealersite/images/spacer.gif" border="0" width="147" height="20"></A></TD>				<TD WIDTH="600" VALIGN="BOTTOM" ALIGN="CENTER">
+					<TABLE BORDER="0" WIDTH="100%" HEIGHT="100%" ID="Table9">
+					<TR><TD WIDTH="100%" ALIGN="CENTER" VALIGN="BOTTOM">
+					<A HREF="policy.asp"><font color="Black" size="1" face="Arial">Policies</font></A> <font color="Black" size="1">|</font> 
+					<A HREF="javascript:void(0)" onClick="javascript:window.open('privacy.asp?dealername=Auto+%26+Truck+Specialties&dealertype=1', 'FeaturesWindow', 'width=600,height=400,left=1,top=1,toolbar=no,location=no,menubar=no,directories=no,status=no,scrollbars=yes,resizable=yes');"><font color="Black" size="1" face="Arial">Privacy</font></A> <font color="Black" size="1">|</font> 
+					<A HREF="javascript:void(0)" onClick="javascript:window.open('disclaimer.asp?dealername=Auto+%26+Truck+Specialties', 'FeaturesWindow', 'width=600,height=400,left=1,top=1,toolbar=no,location=no,menubar=no,directories=no,status=no,scrollbars=yes,resizable=yes');"><font color="Black" size="1" face="Arial">Terms</font></A> <font color="Black" size="1">|</font> <A HREF="site_map.asp"><font color="Black" size="1" face="Arial">Site Map</font></A>
+					  <a href="http://www.commercial-web-services.com" target="PSN" class="dummy"><font color="Black" size="1" face="Arial">©2013 Dominion Enterprises</font></a>
+					</TD></TR>
+					<!-- Here's the footer height -->
+					
+					</TABLE>
+				</TD>
+				<TD WIDTH="178"></TD>
+			</TR>
+		</TABLE>
+	</TD>
+	<TD WIDTH="100%" BACKGROUND=""></TD>
+</TR>
+</TABLE>
+<SCRIPT LANGUAGE="javascript">
+list7 = true
+function imenus_data0(){
+this.enable_visual_design_mode = false
+this.main_is_horizontal = false
+this.menu_showhide_delay = 200
+this.menu_show_delay = 0
+this.menu_hide_delay = 200
+this.main_container_styles = "background-image:url(http://cdn-2.psndealer.com/e2/dealersite/images/autoandtruckspecialties/button_image_both.jpg);border-style:none;border-color:#000000;border-width:1px; padding:0px 0px 0px 0px; "
+this.main_item_styles = "color:Gold; text-align:LEFT;font-family:Arial;font-size:10pt; font-weight:bold; text-decoration:none;padding:5px 0px 5px 0px; border-style:none;height:30px; "
+this.main_item_hover_styles = "color:White;"
+this.main_item_active_styles = "color:White;text-decoration:none;"
+this.subs_container_styles = "background-color:White;border-style:solid;border-color:#ff0000;border-width:1px 2px 2px 2px;padding:0px 0px 0px 0px; "
+this.subs_item_styles = "background-image:url();background-color:White;color:Red; text-align:left; font-size:8pt;font-family:Arial;font-weight:bold; text-decoration:none; padding:2px 0px 2px 5px;border-style:solid;border-color:#ff0000;border-width:1px 0px 0px 0px;width:120px;height:20px;"
+this.subs_item_hover_styles = "background-color:Red;color:White;width:120px;"
+this.subs_item_active_styles = "text-decoration:none;background-color:Red;color:White;width:120px;"
+}
+</SCRIPT>
+<SCRIPT LANGUAGE="javascript" SRC="imenus_code.js"></SCRIPT>
+
+<div style="position:absolute;top:-1;"></div>
+</div>
+</BODY>
+</HTML>
+<script language="JavaScript">
+	runSlideShow()
+</script>

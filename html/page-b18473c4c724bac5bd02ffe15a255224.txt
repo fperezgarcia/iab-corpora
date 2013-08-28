@@ -1,0 +1,1023 @@
+
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mechanic Jobs in US</title>
+<META NAME="description" CONTENT="1,255 Mechanic Jobs in US. Online Mechanic job search.">
+<META NAME="keywords" CONTENT="diesel mechanic jobs, auto mechanic jobs, auto technician jobs">
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<style>
+	#cityd {
+		position:absolute;
+		top:0px;
+		left:0px;
+		border:1px solid #CCC;
+		width:182px;
+		overflow:hidden;
+		z-index:99999999999;
+		display:none;
+		padding:0px;
+		background:#FFF;
+	}
+	
+	#cityd ul, li {
+		padding:0; margin:0;
+	}
+	#cityd a:visited, #cityd a:link {
+		display:block;
+		color:#000080;
+		background-color:#FFF;
+		text-decoration:none;
+		padding:2px;
+		width:182px;
+	}
+	#cityd a:hover {
+		display:block;
+		background-color:#DFDFDF;
+		text-decoration:none;
+	}
+	
+	#cityd a.itemhover {
+		display:block;
+		background-color:#DFDFDF;
+		text-decoration:none;
+		padding:2px;
+	}
+	
+</style>
+<script language="javascript" type="text/javascript" src="/js/topPic.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+
+var currentSelection = 0;
+var currentUrl = ''; 
+
+var country = "US";
+
+function searchJ()
+{
+   var co = $("#country option:selected").val().replace(/\//gi,"_");
+   var cat = $("#category option:selected").text().replace(/\//gi,"_");
+   var type = $("#title option:selected").text().replace(/\//gi,"_");
+   var state = $("#state option:selected").text().replace(/\//gi,"_");
+   var city = $("#city").val().replace(/\//gi,"_");
+   if(city=="All Cities" || city=="") city="_";
+   if(type=="All Job Types" || type=="") type="_";
+   if(state=="All States" || state=="All Provinces" || state == "") state = "_";
+   if(cat=="All Job Categories" || cat =="") cat = "_";
+	
+	
+   window.location="/jobs/"+encodeURI(co)+"/"+encodeURI(state)+"/"+encodeURI(city)+"/"+encodeURI(cat)+"/"+encodeURI(type)+"/0";
+   
+   return false;
+}
+  
+function login_chk()
+{
+  if (document.frm_login.m_user.value=='')
+  {
+  alert ("Please enter username.");
+  return false;
+  }
+  else if (document.frm_login.m_pass.value=='')
+  {
+  alert ("Please enter password.");
+  return false;
+  }
+  else
+  {
+   return true;
+  }
+}
+
+function getTitle()
+{
+	var val = $("#category").val();
+	$.get('/seeker_ajx.php?c='+ val, function(data) {
+		$("select#title").html(data);	
+	});
+}
+
+
+$(document).ready( function() {
+
+	/*$('.banner').fadeTo(0,1).mouseover(function() {
+		$(this).fadeTo(400, 1);
+	}).mouseout(function() {
+		$(this).fadeTo(400, 1);
+	});*/
+	$("#jobs").height($(".content").height());
+
+});
+
+function selectC(text) {
+	$('#cityd').hide(300); 
+	$('#city').val(text);
+	return false;
+}
+
+
+function okCity() {     
+	//if(country!="US") return;
+	document.getElementById('city').disabled=false;
+	document.getElementById('city').value='All Cities';
+	$("#cityd").hide(500);
+	var state = $("#state option:selected").text().replace(/\//gi,"_");
+	if(state=="All States" || state=="All Provinces")
+		document.getElementById('city').disabled=true;
+
+}
+
+function getCity() {     
+	$.ajax({
+		url: '/ajx_city.php',
+		type: 'GET',
+		data: 'state=' + $("#state").val()+'&city=' + $("#city").val(),
+		success: function(data) {
+		   $("#cityd").html("<ul>"+data+"</ul>");
+		   $("#cityd").show();
+		      
+			for(var i = 0; i < $("#cityd ul li a").size(); i++) {
+			   $("#cityd ul li a").eq(i).data("number", i);
+			}
+			currentUrl = $("#cityd ul li a").eq(0).attr("city");
+		   if(data=="")  $("#cityd").hide();
+		}
+	});
+	return false;
+}
+
+$("#cityd ul li a").hover(
+   function () {
+      currentSelection = $(this).data("number");
+      setSelected(currentSelection);
+   }, function() {
+      $("#cityd ul li a").removeClass("itemhover");
+      currentUrl = '';
+   }
+);
+ 
+ function setSelected(menuitem) {
+   $("#cityd ul li a").removeClass("itemhover");
+   $("#cityd ul li a").eq(menuitem).addClass("itemhover");
+   currentUrl = $("#cityd ul li a").eq(menuitem).attr("city");
+}
+
+ function navigate(direction) {
+   // Check if any of the menu items is selected
+   if($("#cityd ul li .itemhover").size() == 0) {
+      currentSelection = -1;
+   }
+   
+   if(direction == 'up' && currentSelection != -1) {
+      if(currentSelection != 0) {
+         currentSelection--;
+      }
+   } else if (direction == 'down') {
+      if(currentSelection != $("#cityd ul li").size() -1) {
+         currentSelection++;
+      }
+   }
+   setSelected(currentSelection);
+}
+
+
+ $(document).keydown(function(e) {
+	 var keyCode = (window.event) ? e.which : e.keyCode;
+
+      switch(keyCode) { 
+         // User pressed "up" arrow
+         case 38:
+            navigate('up');
+         break;
+         // User pressed "down" arrow
+         case 40:
+            navigate('down');
+         break;
+         // User pressed "enter"
+         case 13:
+            if($("#city").is(":focus") && currentUrl != '') {
+              return selectC(currentUrl);
+            }
+         break;
+		 default:
+		  if($("#city").is(":focus"))
+	 		getCity();
+		 // else 
+		  	//searchJ();
+		
+		break;
+      }
+   });
+   
+function changeStates()
+{
+	country = $("#country").val();
+	$.get('/seeker_ajx.php?t=1&s='+ country, function(data) {
+		var nopt='<option value="">All States</option>';
+		if(country!="US") 
+			nopt='<option value="">All Provinces</option>';
+			
+		$("select#state").html(nopt+data);	
+	});
+	
+	/*if(country!="US") 
+	{	*/
+		$("#city").val("All Cities");
+		$("#city").attr("disabled","disabled");
+	//}
+}
+
+</script>
+
+</head>
+<body onLoad="changePic()">
+<div class="contianer">
+  <div class="top"><img src="/images/hdr5.jpg"  width="969" height="200" alt="Find a mechanic" title="Find a Mechanic"/></div>
+  <div class="nav bg2"> 
+        
+           	<a href="/"><span>Home</span></a> <span class="line"></span>
+    	<a href="/login.php"><span>Login</span></a> <span class="line"></span>
+    	<a href="/jobs"><span>Job Search</span></a> <span class="line"></span>
+    	<a href="/emp.php"><span>Employers</span></a> <span class="line"></span>
+    	<a href="/advert.php"><span>Job Seekers</span></a> <span class="line"></span>
+      
+    
+    	<a href="/contact.php"><span>Contact Us</span></a> <span class="line"></span>
+    	<a href="/fandq.php"><span>FAQ'S</span></a>
+     
+            </div>
+  <div class="content" style="padding-bottom:0px;">
+    <div id="jobs" class="left" style="background:none; padding-top:15px; position:relative;
+ border-right:1px solid #BBB; overflow:auto; height:100%; background:url('/images/vsbar.png') right repeat-y;"> 
+      <table style="margin-left:26px;">
+
+         <form name="frmsearch" action="" onSubmit="return false;" method="post" id="form">
+          <tr>
+            <td><div class="title">Job Search</div>
+</td>
+          </tr>     
+           <tr>
+            <td><select name="country" id="country" class="textbox" style="width:150px;" onChange="changeStates();">
+            	<option value="US" selected >United States</option>
+				<option value="CA" >Canada</option>
+				</select>
+			</td>    
+           <tr>
+            <td><select name="state_prefix" id="state" class="textbox" onChange="return okCity();">
+            	<option value="">All States</option><option value="AL" >Alabama</option><option value="AK" >Alaska</option><option value="AZ" >Arizona</option><option value="AR" >Arkansas</option><option value="CA" >California</option><option value="CO" >Colorado</option><option value="CT" >Connecticut</option><option value="DE" >Delaware</option><option value="DC" >District Of Columbia</option><option value="FL" >Florida</option><option value="GA" >Georgia</option><option value="HI" >Hawaii</option><option value="ID" >Idaho</option><option value="IL" >Illinois</option><option value="IN" >Indiana</option><option value="IA" >Iowa</option><option value="KS" >Kansas</option><option value="KY" >Kentucky</option><option value="LA" >Louisiana</option><option value="ME" >Maine</option><option value="MD" >Maryland</option><option value="MA" >Massachusetts</option><option value="MI" >Michigan</option><option value="MN" >Minnesota</option><option value="MS" >Mississippi</option><option value="MO" >Missouri</option><option value="MT" >Montana</option><option value="NE" >Nebraska</option><option value="NV" >Nevada</option><option value="NH" >New Hampshire</option><option value="NJ" >New Jersey</option><option value="NM" >New Mexico</option><option value="NY" >New York</option><option value="NC" >North Carolina</option><option value="ND" >North Dakota</option><option value="OH" >Ohio</option><option value="OK" >Oklahoma</option><option value="OR" >Oregon</option><option value="PA" >Pennsylvania</option><option value="RI" >Rhode Island</option><option value="SC" >South Carolina</option><option value="SD" >South Dakota</option><option value="TN" >Tennessee</option><option value="TX" >Texas</option><option value="UT" >Utah</option><option value="VT" >Vermont</option><option value="VA" >Virginia</option><option value="WA" >Washington</option><option value="WV" >West Virginia</option><option value="WI" >Wisconsin</option><option value="WY" >Wyoming</option>				</select>
+			</td>
+          </tr>
+          <tr>
+            <td><input name="city" id="city" class="textbox"  type="text" value="All Cities"  disabled="disabled" style="width:155px;" onClick="if(this.value=='All Cities') this.value='';" onBlur="$('#cityd').hide(500); if(this.value=='') this.value='All Cities';" autocomplete="off"  >
+            <div style="position:relative;">
+               <div id="cityd">
+             </div>
+             </div>
+             </td>
+          </tr> <tr>
+            <td>
+ 				<select name="category" class="textbox"  id="category" style="width:160px!important" onChange="getTitle();" >
+              	<option value="MA==">All Job Categories</option>
+                <option value="QWZ0ZXJtYXJrZXQgIFJlcA==" >Aftermarket  Rep</option><option value="QWdyaWN1bHR1cmFsIE1lY2hhbmlj" >Agricultural Mechanic</option><option value="QXV0by9MaWdodCBUcnVjayBNZWNoYW5pYw==" >Auto/Light Truck Mechanic</option><option value="Qm9keSBTaG9wIEpvYnM=" >Body Shop Jobs</option><option value="Q2FsbCBDZW50ZXIgQWdlbnQ=" >Call Center Agent</option><option value="Q29tcGFjdG9yIE1lY2hhbmlj" >Compactor Mechanic</option><option value="Q3VzdG9tZXIgU2VydmljZQ==" >Customer Service</option><option value="RGllc2VsIFRydWNrL0VxdWlwbWVudCBNZWNoYW5pYw==" >Diesel Truck/Equipment Mechanic</option><option value="RW52aXJvbm1lbnRhbCBUZWNobmljaWFu" >Environmental Technician</option><option value="RVBHIChQb3dlciBHZW5lcmF0aW9uKSBNZWNoYW5pYw==" >EPG (Power Generation) Mechanic</option><option value="RzIgTGljZW5zZWQgU21vZyBUZWNobmljaWFu" >G2 Licensed Smog Technician</option><option value="R2FzIFBsYW50IFRlY2huaWNpYW4=" >Gas Plant Technician</option><option value="THViZSBUaXJlIE1pbm9yIFJlcGFpciBUZWNo" >Lube Tire Minor Repair Tech</option><option value="TWFpbnRlbmFuY2UgTWFuYWdlcg==" >Maintenance Manager</option><option value="TWFpbnRlbmFuY2UgTWVjaGFuaWM=" >Maintenance Mechanic</option><option value="TWFyaW5lL0JvYXQgTWVjaGFuaWM=" >Marine/Boat Mechanic</option><option value="TW90b3JjeWNsZSAgTWVjaGFuaWM=" >Motorcycle  Mechanic</option><option value="T3RoZXIgU2hvcCBTdGFmZg==" >Other Shop Staff</option><option value="UGFydHMgRGVwYXJ0bWVudCBKb2Jz" >Parts Department Jobs</option><option value="UGxhbnQgTWFpbnRlbmFuY2UgTWVjaGFuaWM=" >Plant Maintenance Mechanic</option><option value="UG9ydGVyIC0gRGV0YWlsIExvdA==" >Porter - Detail Lot</option><option value="UmVmcmlnZXJhdGVkIFRlY2huaWNpYW4=" >Refrigerated Technician</option><option value="U2VydmljZSBBZHZpc29y" >Service Advisor</option><option value="U2VydmljZSBDb25zdWx0YW50IC0gU2FsZXM=" >Service Consultant - Sales</option><option value="U2VydmljZSBFbXBsb3llZQ==" >Service Employee</option><option value="U2VydmljZSBNYW5hZ2Vycw==" >Service Managers</option><option value="U2VydmljZSBXcml0ZXI=" >Service Writer</option><option value="VHJhaWxlciBUZWNobmljaWFu" >Trailer Technician</option><option value="VHJhbnNtaXNzaW9uIEluc3RhbGxlcg==" >Transmission Installer</option><option value="VHJhbnNtaXNzaW9uIE1lY2hhbmljL1JlYnVpbGRlcg==" >Transmission Mechanic/Rebuilder</option>          	  </select> 
+            
+            </td>
+            </tr>
+          <tr>
+            <td>
+            <select name="title" class="textbox" id = "title" style="width:160px!important" >
+               
+                <option value="">All Job Types</option>            </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><a href="#" class="myButton" style="margin-top:10px; margin-left:30px;" onClick="return searchJ();"><span>Search</span></a></td>
+          </tr>
+          
+                    <tr>
+          <td align="center"  colspan="2"><a href="/signup_seeker.php" style="margin-top:20px; margin-left:30px; font-size:16px; text-decoration:underline" class="job">Get an account</a></td>
+          </tr>
+                    <tr>
+          <td align="left">
+         <div style="margin-top:15px;"> 
+                 
+  <a href="http://www.findamechanic.com/s_job.php?contact_company=65260" title="View jobs posted by this company" style="margin-top:15px; margin-left:0;"><img src="/advert_image/248.jpg" title="View jobs posted by this company"  alt="View jobs posted by this company" width="160" style="border:1px solid #225; border-radius:10px;" class="banner"  /></a> 
+                  
+  <a href="http://www.findamechanic.com/s_job.php?contact_company=41957" title="View jobs posted by this company" style="margin-top:15px; margin-left:0;"><img src="/advert_image/108.jpg" title="View jobs posted by this company"  alt="View jobs posted by this company" width="160" style="border:1px solid #225; border-radius:10px;" class="banner"  /></a> 
+                  
+  <a href="http://www.findamechanic.com/s_job.php?contact_company=66654" title="View jobs posted by this company" style="margin-top:15px; margin-left:0;"><img src="/advert_image/259.jpg" title="View jobs posted by this company"  alt="View jobs posted by this company" width="160" style="border:1px solid #225; border-radius:10px;" class="banner"  /></a> 
+                  
+  <a href="http://www.findamechanic.com/s_job.php?contact_company=66932" title="View jobs posted by this company" style="margin-top:15px; margin-left:0;"><img src="/advert_image/271.jpg" title="View jobs posted by this company"  alt="View jobs posted by this company" width="160" style="border:1px solid #225; border-radius:10px;" class="banner"  /></a> 
+             </div>
+    </td>
+    </tr>
+    <tr>
+    <td style="height:40px;">&nbsp;</td></tr>
+          </form>
+        </table>
+
+   
+    
+    </div>
+    <div style="float:left; margin:5px 0 25px 15px; width:735px;" id ="results">
+         <div style="float:right">  <div id="pag">
+      <ul id="pag"> <li><a href="/jobs" class="on"><span>1</span></a></li><li><a href="/jobs/1"><span>2</span></a></li><li><a href="/jobs/2"><span>3</span></a></li><li><a href="/jobs/3"><span>4</span></a></li><li><a href="/jobs/4"><span>5</span></a></li><li><a href="/jobs/5"><span>6</span></a></li><li><a href="/jobs/6"><span>7</span></a></li><li><a href="/jobs/25"><span style="position:relative;bottom:1px;">&#187; (26)</span></a></li> </ul>
+   </div></div>
+   	  <h2 style="color:#A00; margin-left:10px; font-size:20px;float:left;">1,255 Mechanic Jobs in US</h2>
+		<table cellspacing="0" cellpadding="2" border="0" class="jobstable">
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Lube Tire Minor Repair Tech-Wanted-in-WA-Seattle-651158.html">Lube Tire Minor Repair Tech - Seattle, WA, 98188</a>
+        <div style="margin-top:12px; color:#555">...</div>    
+        <div style="margin-top:10px"><b>AVIS BUDGET GROUP</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=46263" title="Avis Budget Group"> <img src="/temp_img/foo7rda3F" alt="Avis Budget Group" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Lube Tire Minor Repair Tech-Wanted-in-CA-South San Francisco-588695.html">Lube Tire Minor Repair Tech - South San Francisco, CA, 94080</a>
+        <div style="margin-top:12px; color:#555">Â ...</div>    
+        <div style="margin-top:10px"><b>AVIS BUDGET GROUP</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=46263" title="Avis Budget Group"> <img src="/temp_img/foo7rda3F" alt="Avis Budget Group" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-TX-Texarkana-753516.html">Diesel Truck/Equipment Mechanic - Texarkana, TX, 75501     </a>
+        <div style="margin-top:12px; color:#555">Technicians are the key to keeping our business rolling!&nbsp...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-IA-Fairfield-753498.html">Diesel Truck/Equipment Mechanic - Fairfield, IA, 52556     </a>
+        <div style="margin-top:12px; color:#555">Mechanics&nbsp;are the key to keeping our business rolling!&n...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-FL-Ormond Beach-753550.html">Diesel Truck/Equipment Mechanic - Ormond Beach, FL, 32174     </a>
+        <div style="margin-top:12px; color:#555">2nd Shift (2pm to 11:30pm)...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-TN-Johnson City-753564.html">Diesel Truck/Equipment Mechanic - Johnson City, TN, 37601     </a>
+        <div style="margin-top:12px; color:#555">Heavy equipment operators are responsible for the safe operation of various heavy equip...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-PA-Greencastle-753576.html">Diesel Truck/Equipment Mechanic - Greencastle, PA, 17225     </a>
+        <div style="margin-top:12px; color:#555">Heavy equipment operators are responsible for the safe operation of various heavy equip...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Gas Plant Technician-Wanted-in-NY-Fairport-753526.html">Gas Plant Technician - Fairport, NY, 14450     </a>
+        <div style="margin-top:12px; color:#555">At Waste Management the Gas Technician ...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-WI-Fond du Lac-753511.html">Diesel Truck/Equipment Mechanic - Fond du Lac, WI, 54935     </a>
+        <div style="margin-top:12px; color:#555">Technicians are the key to keeping our business rolling!&nbsp...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Plant Maintenance Mechanic-Wanted-in-TX-Houston-753479.html">Plant Maintenance Mechanic - Houston, TX, 77035     </a>
+        <div style="margin-top:12px; color:#555">Our Plant Maintenance Technician repairs and maintains equipment for the site. This a...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Gas Plant Technician-Wanted-in-FL-Pompano Beach-753527.html">Gas Plant Technician - Pompano Beach, FL, 33073     </a>
+        <div style="margin-top:12px; color:#555">At Waste Management the Gas Technician ...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-WV-Bridgeport-753585.html">Diesel Truck/Equipment Mechanic - Bridgeport, WV, 26330     </a>
+        <div style="margin-top:12px; color:#555">Heavy equipment operators are responsible for the safe operation of various heavy equip...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-VA-Manassas-753586.html">Diesel Truck/Equipment Mechanic - Manassas, VA, 20110     </a>
+        <div style="margin-top:12px; color:#555">Heavy equipment operators are responsible for the safe operation of various heavy equip...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-IN-South Bend-753628.html">Diesel Truck/Equipment Mechanic - South Bend, IN, 46614     </a>
+        <div style="margin-top:12px; color:#555">***$100 Monthly Tool Allowance***...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-PA-Philadelphia-613806.html">Diesel Truck/Equipment Mechanic - Philadelphia, PA, 19153</a>
+        <div style="margin-top:12px; color:#555">Bentley Truck Services, Inc. is currently recruiting for Experienced Diesel Technicians to support our consistantly grow...</div>    
+        <div style="margin-top:10px"><b>BENTLEY TRUCK SERVICES,INC.</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68048" title="Bentley Truck Services,Inc."> <img src="/images/bentley.jpg" alt="Bentley Truck Services,Inc." style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-PA-Philadelphia-613804.html">Diesel Truck/Equipment Mechanic - Philadelphia, PA, 19153</a>
+        <div style="margin-top:12px; color:#555">Bentley Truck Services, Inc. is currently recruiting for Experienced Diesel Technicians to support our consistantly grow...</div>    
+        <div style="margin-top:10px"><b>BENTLEY TRUCK SERVICES, INC.</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68048" title="Bentley Truck Services, Inc."> <img src="/images/bentley.jpg" alt="Bentley Truck Services, Inc." style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-NJ-Swedesboro-613805.html">Diesel Truck/Equipment Mechanic - Swedesboro, NJ, 08085</a>
+        <div style="margin-top:12px; color:#555">Bentley Truck Services, Inc. is currently recruiting for Experienced Diesel Technicians to support our consistantly grow...</div>    
+        <div style="margin-top:10px"><b>BENTLEY TRUCK SERVICES, INC.</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68048" title="Bentley Truck Services, Inc."> <img src="/images/bentley.jpg" alt="Bentley Truck Services, Inc." style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Porter - Detail Lot-Wanted-in-CO-Denver-624945.html">Porter - Detail Lot - Denver, CO, 80249</a>
+        <div style="margin-top:12px; color:#555">...</div>    
+        <div style="margin-top:10px"><b>AVIS BUDGET GROUP</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=46263" title="Avis Budget Group"> <img src="/temp_img/foo7rda3F" alt="Avis Budget Group" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Store Service Manager-Wanted-in-FL-Lakeland-682039.html">Store/Service Manager - Lakeland, FL, 33813</a>
+        <div style="margin-top:12px; color:#555">The Store Manager manages and directs the operation of a Tire Kingdom retail store engaged in selling tires and related ...</div>    
+        <div style="margin-top:10px"><b>TBC TIRE KINGDOM</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=41273" title="TBC Tire Kingdom"> <img src="/images/tirelogo.jpg" alt="TBC Tire Kingdom" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Auto Light Truck Mechanic-Wanted-in-MA-NATICK-647149.html">Auto/Light Truck Mechanic - NATICK, MA, 01760</a>
+        <div style="margin-top:12px; color:#555">Midas Auto Service is looking for full time automotive technicians in their Natick Ma store. ASE undercar specialist pre...</div>    
+        <div style="margin-top:10px"><b>MIDAS OF NATICK</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68822" title="Midas of Natick"> <img src="/images/midas.jpg" alt="Midas of Natick" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Maintenance Mechanic-Wanted-in-MD-Baltimore-647089.html">Maintenance Mechanic - Baltimore, MD, 21227</a>
+        <div style="margin-top:12px; color:#555">McClung-Logan Equipment Company has been in business since 1939 and is a full service equipment dealership with eight br...</div>    
+        <div style="margin-top:10px"><b>MCCLUNG-LOGAN EQUIPMENT COMPANY</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68810" title="McClung-Logan Equipment Company"> <img src="/images/powerequip.jpg" alt="McClung-Logan Equipment Company" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-CO-Colorado Springs-647091.html">Diesel Truck/Equipment Mechanic - Colorado Springs, CO, 80906</a>
+        <div style="margin-top:12px; color:#555">Since 1936 Power Equipment Company has been a distributor of heavy construction and aggregate equipment serving the cons...</div>    
+        <div style="margin-top:10px"><b>POWER EQUIPMENT COMPANY</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68810" title="Power Equipment Company"> <img src="/images/powerequip.jpg" alt="Power Equipment Company" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Advisor-Wanted-in-CT-Norwalk-647090.html">Service Advisor - Norwalk, CT, 06854</a>
+        <div style="margin-top:12px; color:#555">MarineMax is seeking a Service Advisor that will provide support to the Service Manager, Service Team and Customers! ...</div>    
+        <div style="margin-top:10px"><b>MARINEMAX</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=67135" title="MarineMax"> <img src="/images/marinemax.jpg" alt="MarineMax" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Employee-Wanted-in-NC-Morrisville-752823.html">Service Employee - Morrisville, NC, 27560</a>
+        <div style="margin-top:12px; color:#555">***A candidate has been pre-identified but all are encouraged to apply.***
+Position Summary: 
+In this position you would...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-General Auto Body Shop Jobs-Wanted-in-CT-East Hartford-752800.html">General Auto Body Shop Jobs - East Hartford, CT, 06138</a>
+        <div style="margin-top:12px; color:#555">Position Summary: 
+A Penske Body Shop Technician III will, under supervision, perform minor component repair or replacem...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Consultant - Sales-Wanted-in-PA-King Of Prussia-752817.html">Service Consultant - Sales - King Of Prussia, PA, 19406</a>
+        <div style="margin-top:12px; color:#555">Position Summary: 
+As a Rental Sales Representative you will have responsibility for business development through the ma...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Auto Light Truck Mechanic-Wanted-in-KY-Louisville-752780.html">Auto/Light Truck Mechanic - Louisville, KY, 40210</a>
+        <div style="margin-top:12px; color:#555">Location: Louisville, KY   Job Title: Diesel / Automotive Mechanic - Level I   Summary: Perform routine ...</div>    
+        <div style="margin-top:10px"><b>FIRST TRANSIT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=69330" title="First Transit"> <img src="/images/nologo.jpg" alt="First Transit" style="margin:5px 0; width:130px; max-height:80px; border:0;"/> </a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-KY-Louisville-752779.html">Diesel Truck/Equipment Mechanic - Louisville, KY, 40210</a>
+        <div style="margin-top:12px; color:#555">Location: Louisville, KY   Job Title: Diesel / Automotive Mechanic - Level I   Summary: Perform routine ...</div>    
+        <div style="margin-top:10px"><b>FIRST TRANSIT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=69330" title="First Transit"> <img src="/images/nologo.jpg" alt="First Transit" style="margin:5px 0; width:130px; max-height:80px; border:0;"/> </a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-AZ-Mesa-752778.html">Diesel Truck/Equipment Mechanic - Mesa, AZ, 85215</a>
+        <div style="margin-top:12px; color:#555">First Vehicle Services is Now Hiring!   Location: Mesa, AZ or Tempe, AZ   Job Title: Technician Level I...</div>    
+        <div style="margin-top:10px"><b>FIRST TRANSIT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=69330" title="First Transit"> <img src="/images/nologo.jpg" alt="First Transit" style="margin:5px 0; width:130px; max-height:80px; border:0;"/> </a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-WY-Rock Springs-5476.html">Diesel Truck/Equipment Mechanic - Rock Springs, WY, 82901</a>
+        <div style="margin-top:12px; color:#555">Since 1919, Halliburton has been opening Worlds of Opportunity around the globe. We're one of the world's largest and mo...</div>    
+        <div style="margin-top:10px"><b>HALLIBURTON</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=44873" title="Halliburton"> <img src="/images/hall.jpg" alt="Halliburton" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-CO-Aurora-681313.html">Diesel Truck/Equipment Mechanic - Aurora, CO, 80018     </a>
+        <div style="margin-top:12px; color:#555">Our Heavy Equipment&nbsp;Technicians&nbsp;are responsible for performing major servicing and repa...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Consultant - Sales-Wanted-in-PA-Cranberry Township-647082.html">Service Consultant - Sales - Cranberry Township, PA, 16066</a>
+        <div style="margin-top:12px; color:#555">...</div>    
+        <div style="margin-top:10px"><b>PENN POWER GROUP</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=68111" title="Penn Power Group"> <img src="/images/penn.jpg" alt="Penn Power Group" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-District Service Manager-Wanted-in-FL-Orlando-681387.html">District Service Manager - Orlando, FL, 32806</a>
+        <div style="margin-top:12px; color:#555">Position Summary:Must have experience in running a maintenance shop, supervising technicians and diesel/heavy equipment ...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Consultant - Sales-Wanted-in-OH-Cincinnati-681395.html">Service Consultant - Sales - Cincinnati, OH, 45217</a>
+        <div style="margin-top:12px; color:#555">Weâre looking for a dynamic sales executive with 5 or more years of executive level sales experience or experience in ...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Auto Light Truck Mechanic-Wanted-in-NC-Durham-681397.html">Auto/Light Truck Mechanic - Durham, NC, 27701</a>
+        <div style="margin-top:12px; color:#555"> Automotive and Tire Technicians in the Durham Metro Area  The Technician position inspects, diagnoses, prepa...</div>    
+        <div style="margin-top:10px"><b>TBC MERCHANTS TIRE KINGDOM</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=41273" title="TBC Merchants Tire Kingdom"> <img src="/images/tirelogo.jpg" alt="TBC Merchants Tire Kingdom" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Store Service Manager-Wanted-in-NC-Raleigh-681398.html">Store/Service Manager - Raleigh, NC, 27604</a>
+        <div style="margin-top:12px; color:#555">The Store Manager manages and directs the operation of a Tire Kingdom retail store engaged in selling tires and related ...</div>    
+        <div style="margin-top:10px"><b>TBC MERCHANTS TIRE KINGDOM</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=41273" title="TBC Merchants Tire Kingdom"> <img src="/images/tirelogo.jpg" alt="TBC Merchants Tire Kingdom" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Customer Service Representative-Wanted-in-TX-Houston-624280.html">Customer Service Representative - Houston, TX, 77061</a>
+        <div style="margin-top:12px; color:#555">...</div>    
+        <div style="margin-top:10px"><b>AVIS BUDGET GROUP</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=46263" title="Avis Budget Group"> <img src="/temp_img/foo7rda3F" alt="Avis Budget Group" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Lube Tire Minor Repair Tech-Wanted-in-MD-Annapolis-728184.html">Lube Tire Minor Repair Tech - Annapolis, MD, 21401</a>
+        <div style="margin-top:12px; color:#555">Merchant's Tire and Auto has an immediate opportunity for a General Service/Entry Level Automotive Service Technician at...</div>    
+        <div style="margin-top:10px"><b>MERCHANT'S TIRE AND AUTO</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=41273" title="Merchant's Tire and Auto"> <img src="/images/tirelogo.jpg" alt="Merchant's Tire and Auto" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Store Service Manager-Wanted-in-PA-Whitehall-699869.html">Store/Service Manager - Whitehall, PA, 18052</a>
+        <div style="margin-top:12px; color:#555">NTB-National Tire and Battery has an immediate opportunity for an experienced Automotive Service Manager to join our tea...</div>    
+        <div style="margin-top:10px"><b>NATIONAL TIRE AND BATTERY</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=41273" title="National Tire and Battery"> <img src="/images/tirelogo.jpg" alt="National Tire and Battery" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/27/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Auto Light Truck Mechanic-Wanted-in-FL-Sarasota-716227.html">Auto/Light Truck Mechanic - Sarasota, FL, 34232</a>
+        <div style="margin-top:12px; color:#555">ASE Mechanic...</div>    
+        <div style="margin-top:10px"><b>TIRE KINGDOM</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=41273" title="Tire Kingdom"> <img src="/images/tirelogo.jpg" alt="Tire Kingdom" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Porter - Detail Lot-Wanted-in-LA-Kenner-646259.html">Porter - Detail Lot - Kenner, LA, 70062</a>
+        <div style="margin-top:12px; color:#555">...</div>    
+        <div style="margin-top:10px"><b>AVIS BUDGET GROUP</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=46263" title="Avis Budget Group"> <img src="/temp_img/foo7rda3F" alt="Avis Budget Group" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-IL-Galesburg-751556.html">Diesel Truck/Equipment Mechanic - Galesburg, IL, 61401     </a>
+        <div style="margin-top:12px; color:#555">Technicians are the key to keeping our business rolling!&nbsp...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-OH-Newark-751553.html">Diesel Truck/Equipment Mechanic - Newark, OH, 43055     </a>
+        <div style="margin-top:12px; color:#555">Technicians are the key to keeping our business rolling!&nbsp...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-DE-Wilmington-751560.html">Diesel Truck/Equipment Mechanic - Wilmington, DE, 19804     </a>
+        <div style="margin-top:12px; color:#555">Technicians are the key to keeping our business rolling!&nbsp...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-MI-Jackson-751619.html">Diesel Truck/Equipment Mechanic - Jackson, MI, 49201     </a>
+        <div style="margin-top:12px; color:#555">Heavy equipment operators are responsible for the safe operation of various heavy equip...</div>    
+        <div style="margin-top:10px"><b>WASTE MANAGEMENT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=48886" title="Waste Management"> <img src="/images/wastemg.jpg" alt="Waste Management" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Consultant - Sales-Wanted-in-CO-Aurora-716190.html">Service Consultant - Sales - Aurora, CO, 80017</a>
+        <div style="margin-top:12px; color:#555">Weâre looking for a dynamic sales executive with 5 or more years of executive level sales experience or experience in ...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Service Consultant - Sales-Wanted-in-AZ-Phoenix-716178.html">Service Consultant - Sales - Phoenix, AZ, 85067</a>
+        <div style="margin-top:12px; color:#555">Weâre looking for a dynamic sales executive with 5 or more years of executive level sales experience or experience in ...</div>    
+        <div style="margin-top:10px"><b>PENSKE</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=26451" title="Penske"> <img src="/images/logo_trans.gif" alt="Penske" style="margin:5px 0;  max-height:80px; width:130px; border:0;"/></a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-TX-Austin-750861.html">Diesel Truck/Equipment Mechanic - Austin, TX, 78758</a>
+        <div style="margin-top:12px; color:#555">First Transit is Now Hiring!   Location:  Austin, TX  Job Title: Diesel Technician   Summary: Pe...</div>    
+        <div style="margin-top:10px"><b>FIRST TRANSIT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=69322" title="First Transit"> <img src="/images/nologo.jpg" alt="First Transit" style="margin:5px 0; width:130px; max-height:80px; border:0;"/> </a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" bgcolor="#f0f4ff">
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Auto Light Truck Mechanic-Wanted-in-KY-Louisville-750860.html">Auto/Light Truck Mechanic - Louisville, KY, 40210</a>
+        <div style="margin-top:12px; color:#555">First Vehicle Services is Now Hiring!  Location: Louisville, KY  Job Title: Diesel / Automotive Mechanic...</div>    
+        <div style="margin-top:10px"><b>FIRST TRANSIT</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=69322" title="First Transit"> <img src="/images/nologo.jpg" alt="First Transit" style="margin:5px 0; width:130px; max-height:80px; border:0;"/> </a></td>											
+  	    </tr>
+        <tr class = "company" bgcolor="#f0f4ff">
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                <tr class = "company" >
+     
+        <td rowspan="2" valign="top" class="jobs"   style="" >
+        <a class="job" style="font-size:16px; text-decoration:underline;" href="/Mechanic-Job-Diesel Truck Equipment Mechanic-Wanted-in-CO-Frisco-750859.html">Diesel Truck/Equipment Mechanic - Frisco, CO, 80443</a>
+        <div style="margin-top:12px; color:#555">First Vehicle Services is Now Hiring!  Location: Frisco, CO  Job Title: Diesel Technician   Summ...</div>    
+        <div style="margin-top:10px"><b>FIRST VEHICLE SERVICES</b></div>
+        </td>
+
+    <td valign="top"  style="border-bottom:0; padding-bottom:0; " align="center" width="150"><a href="/s_job.php?contact_company=69322" title="First Vehicle Services"> <img src="/images/nologo.jpg" alt="First Vehicle Services" style="margin:5px 0; width:130px; max-height:80px; border:0;"/> </a></td>											
+  	    </tr>
+        <tr class = "company" >
+          <td valign="bottom"  style=" padding-top:0; " align="center"  width="150"><strong>Added: 08/26/2013</strong></td>
+        </tr>
+                </table>
+	</div>
+       <div style="position:relative; bottom:15px;"><div id="pag">
+      <ul id="pag"> <li><a href="/jobs" class="on"><span>1</span></a></li><li><a href="/jobs/1"><span>2</span></a></li><li><a href="/jobs/2"><span>3</span></a></li><li><a href="/jobs/3"><span>4</span></a></li><li><a href="/jobs/4"><span>5</span></a></li><li><a href="/jobs/5"><span>6</span></a></li><li><a href="/jobs/6"><span>7</span></a></li><li><a href="/jobs/25"><span style="position:relative;bottom:1px;">&#187; (26)</span></a></li> </ul>
+   </div></div>
+ 
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="footer" style="padding:0;">
+<table border="0" style="width:550px; text-align:center; margin-left:auto;margin-right:auto; padding:0;" cellpadding="0" cellspacing="0"><tr>
+
+
+<td>
+|   <a href="/termsuse.php">Terms of Use</a>   |   <a href="/privacy.php">Privacy Policy</a>   | <br />
+<b>Copyright &copy; 2013 FindaMechanic.com - all rights reserved</b>
+</td>
+<td><a href="http://www.facebook.com/pages/Find-A-Mechanic/359462944085398"><img src="images/fbsmall.jpg" height="43" style="margin-top:2px; position:relative;left:10px;"></a></td><td><a href="https://twitter.com/#!/findamechanic2"><img src="images/twitter.jpg" height="43" style="margin-top:2px; position:relative;left:10px;"></a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20339731-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="http://s.crystalfd.com/c.qy" type="text/javascript"></script>
+</body>
+</html>
+
+
+        

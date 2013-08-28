@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="http://cms.autorepairlocal.com/static/images/favicon_autorepair.ico" />
+<link rel="stylesheet" href="http://cms.autorepairlocal.com/static/global.css" type="text/css" charset="utf-8" />
+<title>Washington Classic Car Repair, Restoration - Classic Auto Restore Shops, Services - WA</title>
+<meta name="description" content="Search classic car repairs in Washington." />
+<link rel="stylesheet" href="http://cms.autorepairlocal.com/static/state.css" type="text/css" charset="utf-8" />
+<script type="text/javascript" src="http://cms.autorepairlocal.com/static/jquery.js"></script>
+<script type="text/javascript">
+<!--
+if (typeof XMLHttpRequest == "undefined")
+{
+XMLHttpRequest = function() {
+try { return new ActiveXObject("Msxml2.XMLHTTP.6.0") } catch(e) {}
+try { return new ActiveXObject("Msxml2.XMLHTTP.3.0") } catch(e) {}
+try { return new ActiveXObject("Msxml2.XMLHTTP") } catch(e) {}
+try { return new ActiveXObject("Microsoft.XMLHTTP") } catch(e) {}
+throw new Error( "This browser does not support XMLHttpRequest." );
+};
+}
+function elem(id)
+{
+return document.getElementById(id);
+}
+function hide(id)
+{
+var e = elem(id);
+if (e) e.style.display = "none";
+}
+function show(id, opt_display)
+{
+var display = "";
+if (typeof opt_display != "undefined") display = opt_display;
+var e = elem(id);
+if (e) e.style.display = display;
+}
+function ajaxSubmit(dest, data)
+{
+var xmlreq = new XMLHttpRequest();
+xmlreq.open("POST", dest, false);
+xmlreq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xmlreq.send(data);
+return xmlreq;
+}
+function ajaxFormSubmit(form, opt_dest, opt_extras)
+{
+var dest = form.action;
+if (typeof opt_dest != "undefined") dest = opt_dest;
+var vars = [];
+if (typeof opt_extras != "undefined") vars = opt_extras;
+for (var i = 0; i < form.elements.length; i++)
+{
+var e = form.elements[i];
+if (e.type != "checkbox" || e.checked == true)
+{
+vars.push(e.name + "=" + encodeURIComponent(e.value));
+}
+}
+return ajaxSubmit(dest, vars.join("&"));
+}
+function clearInstructions(id)
+{
+var e = elem(id);
+if (e.value == "zip code")
+{
+e.value = "";
+e.maxLength = 5;
+e.style.color = "#54534A";
+}
+}
+function showMoreDeals()
+{
+$("#moredeals").slideDown(300);
+elem("deal3").className = "deal";
+elem("deallink").innerHTML = "<a href=\"javascript:showLessDeals();\">see less deals</a>";
+}
+function showLessDeals()
+{
+$("#moredeals").slideUp(300, function() { elem("deal3").className = "deal lastdeal"; });
+elem("deallink").innerHTML = "<a href=\"javascript:showMoreDeals();\">see more deals</a>";
+}
+function showMoreFooter()
+{
+hide("morefooterlink");
+show("morefooterreplace");
+$("#morefooter").slideDown(300);
+}
+function GetDeals()
+{
+elem("dealsbox").innerHTML = ajaxFormSubmit(elem("dealzipcode")).responseText;
+}
+function validateZip(form, e)
+{
+if (typeof e == "undefined") e = "zipcode";
+var zipFilter = /^([0-9]{5})$/;
+if (!zipFilter.test(elem(e).value)) return false;
+window.location = form.action + "?zip=" + elem(e).value;
+return false;
+}
+var phone_field_length=0;
+function TabNext(obj,event,len,next_field)
+{
+if (event == "down")
+{
+phone_field_length=obj.value.length;
+}
+else if (event == "up")
+{
+if (obj.value.length != phone_field_length)
+{
+phone_field_length=obj.value.length;
+if (phone_field_length == len)
+{
+next_field.focus();
+}
+}
+}
+}
+function fixEvent(e)
+{
+if ( e.pageX == null && e.clientX != null ) {
+var de = document.documentElement, b = document.body;
+e.pageX = e.clientX + (de && de.scrollLeft || b.scrollLeft || 0);
+e.pageY = e.clientY + (de && de.scrollTop || b.scrollTop || 0);
+}
+return e;
+}
+function showTooltip(e, s)
+{
+var t = elem("tooltip");
+t.innerHTML = "<b>" + s + "</b>";
+e = fixEvent(e || window.event);
+t.style.top = (e.pageY + 2) + "px";
+t.style.left = (e.pageX + 2) + "px";
+show("tooltip");
+}
+function hideTooltip()
+{
+hide("tooltip");
+}
+var openFaq = 0;
+function showFaq(id)
+{
+if (openFaq != 0)
+{
+$("#ans" + openFaq).slideUp("200");
+elem("faq" + openFaq).className = "arrow";
+}
+if (openFaq != id)
+{
+$("#ans" + id).slideDown("200");
+elem("faq" + id).className = "arrow down";
+openFaq = id;
+}
+else openFaq = 0;
+}
+//-->
+</script>
+<script type="text/javascript"><!--
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-9442404-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+// -->
+</script>
+</head>
+<body >
+<div id="container">
+<div id="tooltip" style="display:none;position:absolute;background:white;padding:10px;border:1px solid black"></div>
+<div id="header">
+<table id="logo">
+<tr><td valign="middle"><a id="logolink" href="/"><img src="http://cms.autorepairlocal.com/static/images/logo_autorepair.png" alt="AutoRepairLocal.com" /></a></td></tr>
+</table>
+<ul>
+<li class="first"><a  href="/">Home</a></li>
+<li><a  href="/resources/">Repair Resources</a></li>
+<li><a  href="/about/">Auto Shop Resources</a></li>
+</ul>
+<form action="/search" onsubmit="return validateZip(this)">
+<table id="searchinside" cellpadding="0" cellspacing="0">
+<tr>
+<td class="text firstcol">find auto repair</td>
+<td><input type="text" name="zip" id="zipcode" onfocus="clearInstructions('zipcode');" value="zip code" /></td>
+<td class="lastcol"><input type="image" name="submit" id="submit" src="http://cms.autorepairlocal.com/static/images/home_search_button-go.png" /></td>
+</tr>
+</table>
+</form>
+</div>
+<div id="content">
+<div id="directoryleft">
+<div class="box">
+<div class="inside">
+<h1 class="findtitle">
+Find Classic Car Restoration and Repair Near You in Washington
+</h1>
+<p>
+Search AutoRepairLocal.com for an up-to-date and complete listing of classic car repairs in Washington. Type in your zipcode to find classic car restoration shops near you.
+</p>
+<form id="servicenearyou" action="/repair/classic/search" onsubmit="return validateZip(this, 'zipcode2')">
+<div>
+<div class="service">
+search classic car repairs in WA
+</div>
+<input type="text" name="zip" id="zipcode2" class="results" onfocus="clearInstructions('zipcode2');" value="zip code" />
+<input type="image" name="submit" id="submitstate" value="" src="http://cms.autorepairlocal.com/static/images/home_search_button-go.png" />
+</div>
+</form>
+</div>
+<div class="bottom"><!-- spacer --></div>
+</div>
+<div class="box">
+<div class="inside">
+<h3>Featured Classic Car Repairs in Washington</h3>
+<div class="featured">
+<a href="/profile/n-r-automotive-burien-washington.html">N &amp; R Automotive</a>
+<p>Burien, WA</p>
+<p>206-209-0913</p>
+<p class="desc">N and R Automotive offers full service car repair for many types of vehicles. We are conveniently located in Burien, Washington and serve customers from the surrounding area.    Our technicians use the latest technology, including computer diagnos<img src="http://cms.autorepairlocal.com/static/images/cotd.png" width="9" height="2" /></p>
+</div>
+</div>
+<div class="bottom"><!-- spacer --></div>
+</div>
+<div class="box">
+<div class="inside">
+<h1 class="stateh1">
+Washington Classic Car Repairs
+</h1>
+Businesses that offer classic car repairs in WA list with AutoRepairLocal.com. We'll show you which local WA business is nearest to you if you enter your zip code or click on your city or neighborhood.
+<h3 class="stateh3" style="margin-top:10px;">Browse By City</h3>
+<table class="browsecity" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td>
+<ul class="state">
+<li><a href="/repair/classic/wa/auburn/">Auburn</a></li>
+<li><a href="/repair/classic/wa/bainbridge-island/">Bainbridge Island</a></li>
+<li><a href="/repair/classic/wa/bellevue/">Bellevue</a></li>
+<li><a href="/repair/classic/wa/bellingham/">Bellingham</a></li>
+<li><a href="/repair/classic/wa/burien/">Burien</a></li>
+</ul>
+</td>
+<td>
+<ul class="state">
+<li><a href="/repair/classic/wa/everett/">Everett</a></li>
+<li><a href="/repair/classic/wa/green-acres/">Green Acres</a></li>
+<li><a href="/repair/classic/wa/kirkland/">Kirkland</a></li>
+<li><a href="/repair/classic/wa/lakewood/">Lakewood</a></li>
+<li><a href="/repair/classic/wa/lynnwood/">Lynnwood</a></li>
+</ul>
+</td>
+<td class="last">
+<ul class="state">
+<li><a href="/repair/classic/wa/puyallup/">Puyallup</a></li>
+<li><a href="/repair/classic/wa/seattle/">Seattle</a></li>
+<li><a href="/repair/classic/wa/suquamish/">Suquamish</a></li>
+<li><a href="/repair/classic/wa/tacoma/">Tacoma</a></li>
+<li><a href="/repair/classic/wa/tenino/">Tenino</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h3 class="stateh3">Browse By Neighborhood in Seattle</h3>
+<table class="browsecity" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td>
+<ul class="state">
+<li><a href="/repair/classic/wa/seattle/ballard/">Ballard</a></li>
+<li><a href="/repair/classic/wa/seattle/beacon-hill/">Beacon Hill</a></li>
+<li><a href="/repair/classic/wa/seattle/belltown/">Belltown</a></li>
+<li><a href="/repair/classic/wa/seattle/bitter-lake/">Bitter Lake</a></li>
+<li><a href="/repair/classic/wa/seattle/broadview/">Broadview</a></li>
+<li><a href="/repair/classic/wa/seattle/bryant/">Bryant</a></li>
+<li><a href="/repair/classic/wa/seattle/capitol-hill/">Capitol Hill</a></li>
+<li><a href="/repair/classic/wa/seattle/central-district/">Central District</a></li>
+<li><a href="/repair/classic/wa/seattle/columbia-city/">Columbia City</a></li>
+<li><a href="/repair/classic/wa/seattle/downtown/">Downtown</a></li>
+<li><a href="/repair/classic/wa/seattle/eastlake/">Eastlake</a></li>
+<li><a href="/repair/classic/wa/seattle/first-hill/">First Hill</a></li>
+<li><a href="/repair/classic/wa/seattle/fremont/">Fremont</a></li>
+<li><a href="/repair/classic/wa/seattle/georgetown/">Georgetown</a></li>
+<li><a href="/repair/classic/wa/seattle/green-lake/">Green Lake</a></li>
+</ul>
+</td>
+<td>
+<ul class="state">
+<li><a href="/repair/classic/wa/seattle/greenwood/">Greenwood</a></li>
+<li><a href="/repair/classic/wa/seattle/haller-lake/">Haller Lake</a></li>
+<li><a href="/repair/classic/wa/seattle/international-district/">International District</a></li>
+<li><a href="/repair/classic/wa/seattle/lake-city/">Lake City</a></li>
+<li><a href="/repair/classic/wa/seattle/laurelhurst/">Laurelhurst</a></li>
+<li><a href="/repair/classic/wa/seattle/madison-park/">Madison Park</a></li>
+<li><a href="/repair/classic/wa/seattle/madrona-leschi/">Madrona/Leschi</a></li>
+<li><a href="/repair/classic/wa/seattle/magnolia/">Magnolia</a></li>
+<li><a href="/repair/classic/wa/seattle/maple-leaf/">Maple Leaf</a></li>
+<li><a href="/repair/classic/wa/seattle/matthews-beach/">Matthews Beach</a></li>
+<li><a href="/repair/classic/wa/seattle/meadowbrook/">Meadowbrook</a></li>
+<li><a href="/repair/classic/wa/seattle/montlake/">Montlake</a></li>
+<li><a href="/repair/classic/wa/seattle/mt.-baker/">Mt. Baker</a></li>
+<li><a href="/repair/classic/wa/seattle/northgate/">Northgate</a></li>
+<li><a href="/repair/classic/wa/seattle/phinney-ridge/">Phinney Ridge</a></li>
+</ul>
+</td>
+<td class="last">
+<ul class="state">
+<li><a href="/repair/classic/wa/seattle/pioneer-square/">Pioneer Square</a></li>
+<li><a href="/repair/classic/wa/seattle/queen-anne/">Queen Anne</a></li>
+<li><a href="/repair/classic/wa/seattle/rainier-beach/">Rainier Beach</a></li>
+<li><a href="/repair/classic/wa/seattle/rainier-valley/">Rainier Valley</a></li>
+<li><a href="/repair/classic/wa/seattle/ravenna/">Ravenna</a></li>
+<li><a href="/repair/classic/wa/seattle/roosevelt/">Roosevelt</a></li>
+<li><a href="/repair/classic/wa/seattle/sodo/">SODO</a></li>
+<li><a href="/repair/classic/wa/seattle/sand-point/">Sand Point</a></li>
+<li><a href="/repair/classic/wa/seattle/seward-park/">Seward Park</a></li>
+<li><a href="/repair/classic/wa/seattle/university-district/">University District</a></li>
+<li><a href="/repair/classic/wa/seattle/wallingford/">Wallingford</a></li>
+<li><a href="/repair/classic/wa/seattle/wedgwood-view-ridge/">Wedgwood/View Ridge</a></li>
+<li><a href="/repair/classic/wa/seattle/west-seattle/">West Seattle</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="bottom"><!-- spacer --></div>
+</div>
+</div>
+<div id="directoryright">
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footerinside">
+<div id="footerbottom">
+<p id="links"><a href="/">AutoRepairLocal.com Home</a> <span>|</span> <a href="/apps/login">Login</a> <span>|</span> <a href="/terms">Terms and Conditions</a> <span>|</span> <a href="/privacypolicy">Privacy Policy</a></p>
+<p class="copyright">Copyright &copy; 2013 AutoRepairLocal. All Rights Reserved.</p>
+<div class="clear"><!-- spacer --></div>
+<div style="text-align: center; margin-top: 10px;">AutoRepairLocal.com is a directory of advertisers and is a Felix Calls LLC company. Businesses pay to be featured and receive phone calls from customers.</div>
+</div>
+</div>
+</div>
+</body>
+</html>

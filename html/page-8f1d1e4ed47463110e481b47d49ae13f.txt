@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Motorcycle and Automotive Spare Parts Philippines</title>
+
+<meta name="generator" content="WordPress 3.5.1" /> <!-- leave this for stats -->
+
+<link rel="stylesheet" href="http://www.sparepartsphilippines.com/wp-content/themes/deepblue/style.css" type="text/css" media="screen" />
+<!--[if lt IE 7]>
+  <link rel="stylesheet" href="http://www.sparepartsphilippines.com/wp-content/themes/deepblue/lt-ie7.css" type="text/css" media="screen" />
+<![endif]-->
+<!--[if lte IE 7]>
+  <link rel="stylesheet" href="http://www.sparepartsphilippines.com/wp-content/themes/deepblue/lte-ie7.css" type="text/css" media="screen" />
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Motorcycle and Automotive Spare Parts Philippines RSS Feed" href="http://www.sparepartsphilippines.com/feed/" /><link rel="pingback" href="http://www.sparepartsphilippines.com/xmlrpc.php" />
+<script type="text/javascript" src="http://www.sparepartsphilippines.com/wp-content/themes/deepblue/hover.js"></script>
+
+<!--we need this for plugins-->
+<link rel="alternate" type="application/rss+xml" title="Motorcycle and Automotive Spare Parts Philippines &raquo; Spare Parts and Accessories Comments Feed" href="http://www.sparepartsphilippines.com/automotive-parts/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.sparepartsphilippines.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='external-links-css'  href='http://www.sparepartsphilippines.com/wp-content/plugins/sem-external-links/sem-external-links.css?ver=20090903' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.sparepartsphilippines.com/wp-content/plugins/business-directory//main.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.sparepartsphilippines.com/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.sparepartsphilippines.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.sparepartsphilippines.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Linking Policy' href='http://www.sparepartsphilippines.com/contact-us/linking-policy/' />
+<meta name="generator" content="WordPress 3.5.1" />
+
+<!-- All in One SEO Pack 1.6.15.3 by Michael Torbert of Semper Fi Web Design[284,318] -->
+<meta name="description" content="Automotive Spare Parts and motorcycle spare parts list dealers, wholesalers and auto parts retailers in the Philippines" />
+<link rel="canonical" href="http://www.sparepartsphilippines.com/" />
+<!-- /all in one seo pack -->
+<script type='text/javascript' src='http://www.sparepartsphilippines.com/wp-includes/js/tw-sack.min.js?ver=1.6.1'></script>
+		<script>
+			function bizdir_add_listing(name,email,cName,description,keywords,website,cEmail,phone) { //Add Form Ajax Call
+				//Deactivate submit button and display processing message
+				document.getElementById('bizdir_submit').disabled = true;
+				var submit_message = document.getElementById('bizdir_submit_message');
+				submit_message.className = "bizdir_message";
+				submit_message.innerHTML = "Submitting Form, Please Wait...";
+				//Clear inputs with Auto Text
+				bizdir_clearAllAutoFill();
+				//Build SACK Call
+				var mysack = new sack("http://www.sparepartsphilippines.com/wp-content/plugins/business-directory/requests.php");
+				mysack.execute = 1;
+				mysack.method = 'POST';
+				mysack.setVar("action","AddListing");
+				mysack.setVar("category_id", document.getElementById("bizdir_category_id").value);
+				mysack.setVar("name",document.getElementById("bizdir_name").value);
+				mysack.setVar("email",document.getElementById("bizdir_email").value);
+				mysack.setVar("cName",document.getElementById("bizdir_cName").value);
+				mysack.setVar("description",document.getElementById("bizdir_description").value);
+				mysack.setVar("keywords",document.getElementById("bizdir_keywords").value);
+				mysack.setVar("website",document.getElementById("bizdir_website").value);
+				mysack.setVar("cEmail",document.getElementById("bizdir_cEmail").value);
+				mysack.setVar("phone",document.getElementById("bizdir_phone").value);
+				mysack.setVar("street1",document.getElementById("bizdir_street1").value);
+				mysack.setVar("street2",document.getElementById("bizdir_street2").value);
+				mysack.setVar("city",document.getElementById("bizdir_city").value);
+				mysack.setVar("state",document.getElementById("bizdir_state").value);
+				mysack.setVar("zip",document.getElementById("bizdir_zip").value);
+				mysack.setVar("country",document.getElementById("bizdir_country").value);
+				mysack.onError = function() { alert('An ajax error occured while adding your listing. Please reload the page and try again.') };
+				mysack.runAJAX();//excecute
+				return true;
+			}
+			
+			function bizdir_search_listings() { //Search Ajax Call
+				var search_term = document.getElementById('bizdir_search_term');
+				if(search_term.value == "" || search_term.value == null)
+					return;
+				//Deactivate submit button and display processing message
+				document.getElementById('bizdir_search').disabled = true;
+				var submit_message = document.getElementById('bizdir_messages');
+				submit_message.className = "bizdir_message";
+				submit_message.innerHTML = "Searching Listings, Please Wait...";
+				//Build SACK Call
+				var mysack = new sack("http://www.sparepartsphilippines.com/wp-content/plugins/business-directory/requests.php");
+				mysack.execute = 1;
+				mysack.method = 'POST';
+				mysack.setVar("action","SearchListings");
+				mysack.setVar("searchTerms",search_term.value);
+				mysack.onError = function() { alert('An ajax error occured while searching. Please reload the page and try again.') };
+				mysack.runAJAX();//excecute
+				return true;
+			}
+			
+			function bizdir_change_listings_page(offset) { //Jump to the appropriate page in the directory Ajax Call
+				//Build SACK Call
+				var mysack = new sack("http://www.sparepartsphilippines.com/wp-content/plugins/business-directory/requests.php");
+				mysack.execute = 1;
+				mysack.method = 'POST';
+				mysack.setVar("action","ChangePage");
+				mysack.setVar("offset",offset);
+				mysack.onError = function() { alert('An ajax error occured. Please reload the page and try again.') };
+				mysack.runAJAX();//excecute
+				return true;
+			}
+
+            function bizdir_sort_categories(category) { //Jump to the appropriate page in the directory Ajax Call
+				//Build SACK Call
+                var category = category.value;
+                var mysack = new sack("http://www.sparepartsphilippines.com/wp-content/plugins/business-directory/requests.php");
+				mysack.execute = 1;
+				mysack.method = 'POST';
+				mysack.setVar("action","SearchListings");
+                mysack.setVar('category',category);
+				mysack.onError = function() { alert('An ajax error occured. Please reload the page and try again.') };
+				mysack.runAJAX();//excecute
+				return true;
+			}
+		</script>
+	            <style type="text/css">
+				ul.legalfooter li{
+					list-style:none;
+					float:left;
+					padding-right:20px;
+				}
+				.accept{
+					display:none;
+					border: 1px solid #000;
+					background:#000;
+					color:#fff;
+					border-radius:3px;
+					-moz-border-radius:3px;
+					-webkit-border-radius:3px;
+					padding:5px;
+				} 
+			</style>
+            <link rel="stylesheet" type="text/css" href="http://www.sparepartsphilippines.com/wp-content/plugins/wp-recaptcha/recaptcha.css" />
+<!-- Protected by WP-SpamFree v2.1.1.1 :: JS BEGIN -->
+<script type="text/javascript" src="http://www.sparepartsphilippines.com/wp-content/plugins/wp-spamfree/js/wpsf-js.php"></script> 
+<!-- Protected by WP-SpamFree v2.1.1.1 :: JS END -->
+
+</head>
+<body>
+
+
+
+
+<div id="header">
+<div class="clearboth">
+
+
+
+
+
+
+</div>
+
+    <div class="title"><a  href="http://www.sparepartsphilippines.com" title="Motorcycle and Automotive Spare Parts Philippines">Motorcycle and Automotive Spare Parts Philippines</a></div>
+    <div class="description">Motorcycle | Automotive Spare Parts Dealers | Certified Automotive Mechanics | Certified Motorcycle Mechanics | Philippines</div>
+
+<!--create the searchfield-->
+<div class="searchform">
+<form method="get" id="searchform" action="http://www.sparepartsphilippines.com">
+<input type="text" value="Search on this blog..." name="s" class="s" onfocus="if (this.value == 'Search on this blog...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search on this blog...';}"/>
+<input type="image" class="button" src="http://www.sparepartsphilippines.com/wp-content/themes/deepblue/images/button-submit.jpg" alt="Submit button" />
+</form>
+</div>
+<!--searchform.php end-->
+
+	<div id="menu">
+	<ul>
+		<li class=""><a  href="http://www.sparepartsphilippines.com">Home</a></li>		
+		<li class="page_item page-item-14"><a  href="http://www.sparepartsphilippines.com/certified-auto-mechanics-philippines/" title="Certified Auto Mechanics Philippines">Auto Mechanics</a></li>
+<li class="page_item page-item-15"><a  href="http://www.sparepartsphilippines.com/certified-motocycle-mechanics/" title="Certified Motorcycle Mechanics Philippines">Motorcycle Mechanics</a></li>
+<li class="page_item page-item-25"><a  href="http://www.sparepartsphilippines.com/contact-us/" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-8"><a  href="http://www.sparepartsphilippines.com/philippines-spare-parts-blog/" title="Philippines Spare Parts Blog">Spare Parts Blog</a></li>
+<li class="page_item page-item-2 current_page_item"><a  href="http://www.sparepartsphilippines.com/" title="Automobile - Spare Parts and Accessories">Parts and Accessories</a></li>
+	</ul>
+	</div>
+
+	<div class="feeds">
+		<span class="rss"><a  href="http://www.sparepartsphilippines.com/feed/"><img src="http://www.sparepartsphilippines.com/wp-content/themes/deepblue/images/rss.gif"></img></a></span>
+	</div>
+
+</div>
+<div id="container">
+<!--header.php end-->
+<!--page.php-->
+<div id="content">
+	
+	<!--loop-->	
+			
+	<!--post title-->
+
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7593199406516189";
+/* 468x60, created 4/13/10 */
+google_ad_slot = "6663993166";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center>
+
+
+
+
+	<h1 id="post-2">Spare Parts and Accessories</h1>
+	<!--post with more link -->
+	<div class="addthis_toolbox addthis_default_style " addthis:url='http://www.sparepartsphilippines.com/' addthis:title='Spare Parts and Accessories '  ><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet"></a><a class="addthis_button_google_plusone" g:plusone:size="medium"></a><a class="addthis_counter addthis_pill_style"></a></div><h2>Automobile &#8211; Spare Parts &amp; Accessories for the Philippines</h2>
+<p>trade opportunities, manufacturers, suppliers, Mechanical Repair Shops, Certified Philippine Mechanics, Parts Distributor outlets of spare parts, automotive, motorcycle, services and sales in the Philippines.</p>
+<p>Get a free listing for your company&#8230;no charge for Filipino Business listings for auto parts, motorcycle parts, motorcycle dealers, auto mechanics, and certified repair centers listings.</p>
+<p>We are # 1 on the internet for spare parts Philippines so get your free listing for your business today!</p>
+<link rel='stylesheet' href='http://www.sparepartsphilippines.com/wp-content/plugins/business-directory/main.css' type='text/css' media='screen'/><form name='search' onSubmit='bizdir_search_listings(); return false;'><b>Search  the Business Directory:</b> <input type='text' id='bizdir_search_term'/><input type='submit' id='bizdir_search' value='Search'/> </form><form name='sort'><b>Search by Category:</b> <select id='categories' onChange='bizdir_sort_categories(this.options[this.selectedIndex]); return false;' bizdir_autofill='CategoryInfo'><option value='0'>--Select Category--</option><option value='2'>Automotive Accessories</option><option value='4'>Automotive Spare Parts Dealers</option><option value='7'>Cebu auto mechanics</option><option value='24'>Cebu Auto Parts</option><option value='23'>Cebu Boat Builders</option><option value='25'>Cebu Motorcycle Parts</option><option value='22'>Diesel Engine Parts</option><option value='8'>Honda Motorcycle Parts</option><option value='11'>Kawasaki Motorcycle Parts</option><option value='12'>Manila Auto Mechanics</option><option value='13'>Manila Auto Parts</option><option value='14'>Manila Motorcycle Mechanics</option><option value='15'>Manila Motorcycle Parts</option><option value='10'>marine repair</option><option value='17'>Mindanao Auto Parts</option><option value='18'>Mindanao Motorcycle Mechanics</option><option value='19'>Mindanao Motorcycle Parts</option><option value='26'>Motorcycle Accessories</option><option value='3'>motorcycle parts</option><option value='1'>other</option><option value='21'>Philippines Automotive Parts</option><option value='5'>Philippines Boat Mechanics</option><option value='6'>Philippines Boat Repair</option><option value='20'>Philippines Motorcycle Parts</option><option value='16'>The name of the category...</option></select></form><div style='display:inline;' id='bizdir_messages'></div><br/><hr/><div id='bizdir_directory' style='width:100%'><div style='margin:3px 0 8px 0;padding-bottom:2px;border-bottom:1px solid black;'><b>Pages:</b>&nbsp;&nbsp;1&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(30)'>2</a>&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(60)'>3</a>&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(90)'>4</a>&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(120)'>5</a></div><table width='100%' border='0' cellspacing='0' cellpadding='0' id='bizdir_directory'><tr><td><b>AHG Motorcycle Parts and Accessories</b><p>AHG Motorcycle Parts and Accessories is a supplier in wholesale and retail services of motorcycle parts and accessories.</p></td></tr><tr><td><b><a  href="http://www.alfardan.com.qa" class="bizdir_linked_title external external_icon" target="_blank" rel="nofollow">Alfardan Marine Services</a></b><p>We are one of the biggest groups of companies here in Qatar.</p></td></tr><tr><td><b>Cebu Automechanika</b><p>Owner of Cebu Automechanika has the right technical knowledge and experiences for car repair. John Enad is a liscense mechanical engineer..    Personal Profile:  EDUCATION:                   BSME -----            U.V. Main Campus DT Automotive---CSCST    Main Campus TECHNICAL:                            Cebu Automechanika-----  Owner/Manager Solaris Autotech  ------ VP Technical  Honda Cars Cebu--Service Advisor/tech  IPI Cebu --------Motor Pool Mechanic   Isuzu Southern Motors  --  Mechanic</p></td></tr><tr><td><b>ceejam</b><p>business</p></td></tr><tr><td><b>cfao</b><p>Dear sir,Do you sell  Yamaha genuine spare parts?We want to order urgently, could you send you best prices for the parts number below (qty required 100 units by items) for the YBR125G=&gt; Please also inform us if the spare parts are available:94700-008695VL-E1181-005VL-E1351-105VL-E4450-0093822-148133D9-W2533-005VL-F5445-005VL-F53C0-004P2-F6311-002B9-F6335-103D9-H3311-103D9-H333A-003D9-H334A-005VL-H4314-202B9-H3550-103D9-H4714-103D9-H4721-105VL-H3912-005VL-H3922-20</p></td></tr><tr><td><b><a  href="http://www.ecochest.com/customboats/" class="bizdir_linked_title external external_icon" target="_blank" rel="nofollow">Emings Boat Builders, Fine Custom Built Philippines Boats</a></b><p>Emings Boat Builders, Fine Custom Built Philippines Boats. We deliver boats anywhere in the world! Emings boat building, fine hand crafted low cost Philippines boats.</p></td></tr><tr><td><b>general santos city,magsaysay avenue</b><p>im planning to open a motorcycle parts im looking for a supplie,hope you can help me to my new business.i&#039;ve already have rented a place and its ready for to open anytime soon.</p></td></tr><tr><td><b>Hyper drive motorcycle parts</b><p>New player in the motorcycle parts business.I came from the refuted pharmaceutical (multinational) company for 24 years.My partner/brother is a professional motorcycle mechanic for almost 30 years.</p></td></tr><tr><td><b>Jen Mariel Store</b><p>We are opening a motor spare parts and accessories store in sampaloc, manila. in need of supplier. please send your price lists and details. thanks</p></td></tr><tr><td><b>Jetski Repair shop</b><p>I need two guys who are very skilled with &quot;Seadoo&quot; and &quot;Yamaha&quot; Jetskies and jetboats.Must have good experience with maintenance and repaid (mechanical + electronics)Good english is a must.To work in a private owned repair shop.Interested parties please contact via e-mail: alexkaferbock@hotmail.com</p></td></tr><tr><td><b>Jitter</b><p>We have a store in Makati selling motorcycle spare parts and accessories and we are looking for a reliable supplier. Please email us your price list and parts available including delivery time etc. Thanks</p></td></tr><tr><td><b>L and J</b><p>in need of motorcycle accessories and parts suppliers</p></td></tr><tr><td><b><a  href="http://www.weilite.com.cn" class="bizdir_linked_title external external_icon" target="_blank" rel="nofollow">Liyuan Power Supply Co., Ltd.</a></b><p>Liyuan Motorcycle Battery Co., Ltd was founded in 2005 and produce motorcycle battery. Nowadays, with a total investment of 25 million RMB and covering two 2-floors buildings, As quite a part of our staff come from different renown battery factories, Liyuan is one of the most professional producers of motorcycle battery in China. We are the contracting supplier of big motorcycle factories such as Piaggio, Dayun, SYM etc. Our email is joe@weilite.com.cn</p></td></tr><tr><td><b>PAE group.com</b><p>government contractor</p></td></tr><tr><td><b>private</b><p>supplier of motorcycle parts</p></td></tr><tr><td><b>RCS General Merchandized</b><p>Motor Cycle Parts &amp; Accessories</p></td></tr><tr><td><b>supersaw</b><p>we sell motorcycle recapped tires at very affordable price...dealers are welcome!</p></td></tr><tr><td><b>top s4</b><p>pls send me ur pricelist of motorcycle parts soon..im going to put up motorcycle store..starting capital 200k.</p></td></tr><tr><td><b>top s4</b><p>need po pricelist ng motorparts, starting capital 200k.</p></td></tr><tr><td><b>valdez spare patrs</b><p>155 Honda rs Yamaha scooters wave Honda motorcycle spare parts dealer.</p></td></tr></table><div style='margin:3px 0 3px 0;padding:2px 0 2px 0;border:1px solid black;border-left:0;border-right:0;'><b>Pages:</b>&nbsp;&nbsp;1&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(30)'>2</a>&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(60)'>3</a>&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(90)'>4</a>&nbsp;&nbsp;<a style='cursor:pointer' onClick='bizdir_change_listings_page(120)'>5</a></div></div><a  href="http://businessdirectory.squarecompass.com/" target="_blank" class="bizdir_notes_grey external external_icon" rel="nofollow">Powered by Business Directory for Wordpress</a><hr/>
+<p>Ad your business for free on our website.</p>
+<link rel='stylesheet' href='http://www.sparepartsphilippines.com/wp-content/plugins/business-directory/main.css' type='text/css' media='screen'/><hr/><form id='bizdir_add_form' method='POST' width='100%'><table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td id='bizdir_messages' colspan='2'></td></tr><tr><td class='bizdir_form_text'>Your Name *</td><td class='bizdir_form_input'><input type='text' id='bizdir_name' class='bizdir_input_style' bizdir_autofill='YourInfo' maxlength='YourInfo' onFocus='bizdir_clearAutoFill("bizdir_name", "YourInfo");'onClick='bizdir_clearAutoFill("bizdir_name", "YourInfo");'/></td></tr><tr><td class='bizdir_form_text'>Category*</td><td class='bizdir_form_input'><select id='bizdir_category_id' bizdir_autofill='CategoryInfo' onChange='this.setAttribute("selected_value",this.value);' selected_value='' class='bizdir_input_select'><option value='0'>--Select Category--</option><option value='2'>Automotive Accessories</option><option value='4'>Automotive Spare Parts Dealers</option><option value='7'>Cebu auto mechanics</option><option value='24'>Cebu Auto Parts</option><option value='23'>Cebu Boat Builders</option><option value='25'>Cebu Motorcycle Parts</option><option value='22'>Diesel Engine Parts</option><option value='8'>Honda Motorcycle Parts</option><option value='11'>Kawasaki Motorcycle Parts</option><option value='12'>Manila Auto Mechanics</option><option value='13'>Manila Auto Parts</option><option value='14'>Manila Motorcycle Mechanics</option><option value='15'>Manila Motorcycle Parts</option><option value='10'>marine repair</option><option value='17'>Mindanao Auto Parts</option><option value='18'>Mindanao Motorcycle Mechanics</option><option value='19'>Mindanao Motorcycle Parts</option><option value='26'>Motorcycle Accessories</option><option value='3'>motorcycle parts</option><option value='1'>other</option><option value='21'>Philippines Automotive Parts</option><option value='5'>Philippines Boat Mechanics</option><option value='6'>Philippines Boat Repair</option><option value='20'>Philippines Motorcycle Parts</option><option value='16'>The name of the category...</option></select></td></tr><tr><td class='bizdir_form_text'>Your Email *</td><td class='bizdir_form_input'><input type='text' id='bizdir_email' class='bizdir_input_style' bizdir_autofill='YourInfo' maxlength='YourInfo' onFocus='bizdir_clearAutoFill("bizdir_email", "YourInfo");'onClick='bizdir_clearAutoFill("bizdir_email", "YourInfo");'/></td></tr><tr><td class='bizdir_form_text'>Organization Name *</td><td class='bizdir_form_input'><input type='text' id='bizdir_cName' class='bizdir_input_style' bizdir_autofill='CompanyInfo' maxlength='CompanyInfo' onFocus='bizdir_clearAutoFill("bizdir_cName", "CompanyInfo");'onClick='bizdir_clearAutoFill("bizdir_cName", "CompanyInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. Description *</td><td class='bizdir_form_input'><textarea id='bizdir_description' class='bizdir_input_text_area' bizdir_autofill='Description' onFocus='bizdir_clearAutoFill("bizdir_description","Description");'onClick='bizdir_clearAutoFill("bizdir_description","Description");'></textarea></td></tr><tr><td class='bizdir_form_text'>Keywords</td><td class='bizdir_form_input'><input type='text' id='bizdir_keywords' class='bizdir_input_style' bizdir_autofill='Keywords' maxlength='Keywords' onFocus='bizdir_clearAutoFill("bizdir_keywords", "Keywords");'onClick='bizdir_clearAutoFill("bizdir_keywords", "Keywords");'/></td></tr><tr><td class='bizdir_form_text'>Org. Website</td><td class='bizdir_form_input'><input type='text' id='bizdir_website' class='bizdir_input_style' bizdir_autofill='CompanyInfo' maxlength='CompanyInfo' onFocus='bizdir_clearAutoFill("bizdir_website", "CompanyInfo");'onClick='bizdir_clearAutoFill("bizdir_website", "CompanyInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. Phone</td><td class='bizdir_form_input'><input type='text' id='bizdir_phone' class='bizdir_input_style' bizdir_autofill='CompanyInfo' maxlength='CompanyInfo' onFocus='bizdir_clearAutoFill("bizdir_phone", "CompanyInfo");'onClick='bizdir_clearAutoFill("bizdir_phone", "CompanyInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. Email</td><td class='bizdir_form_input'><input type='text' id='bizdir_cEmail' class='bizdir_input_style' bizdir_autofill='CompanyInfo' maxlength='CompanyInfo' onFocus='bizdir_clearAutoFill("bizdir_cEmail", "CompanyInfo");'onClick='bizdir_clearAutoFill("bizdir_cEmail", "CompanyInfo");'/></td></tr><tr><td class='bizdir_form_text'>&nbsp;</td><td class='bizdir_form_input'><small>* Provide at least one form of contact.</small></td><tr/><tr><td class='bizdir_form_text'>Org. Address</td><td class='bizdir_form_input'><input type='text' id='bizdir_street1' class='bizdir_input_style' bizdir_autofill='GeoInfo' maxlength='GeoInfo' onFocus='bizdir_clearAutoFill("bizdir_street1", "GeoInfo");'onClick='bizdir_clearAutoFill("bizdir_street1", "GeoInfo");'/></td></tr><tr><td class='bizdir_form_text'>&nbsp;</td><td class='bizdir_form_input'><input type='text' id='bizdir_street2' class='bizdir_input_style' bizdir_autofill='GeoInfo' maxlength='GeoInfo' onFocus='bizdir_clearAutoFill("bizdir_street2", "GeoInfo");'onClick='bizdir_clearAutoFill("bizdir_street2", "GeoInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. City</td><td class='bizdir_form_input'><input type='text' id='bizdir_city' class='bizdir_input_style' bizdir_autofill='GeoInfo' maxlength='GeoInfo' onFocus='bizdir_clearAutoFill("bizdir_city", "GeoInfo");'onClick='bizdir_clearAutoFill("bizdir_city", "GeoInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. State/Province</td><td class='bizdir_form_input'><input type='text' id='bizdir_state' class='bizdir_input_style' bizdir_autofill='GeoInfo' maxlength='GeoInfo' onFocus='bizdir_clearAutoFill("bizdir_state", "GeoInfo");'onClick='bizdir_clearAutoFill("bizdir_state", "GeoInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. Zip Code</td><td class='bizdir_form_input'><input type='text' id='bizdir_zip' class='bizdir_input_style' bizdir_autofill='GeoInfo' maxlength='GeoInfo' onFocus='bizdir_clearAutoFill("bizdir_zip", "GeoInfo");'onClick='bizdir_clearAutoFill("bizdir_zip", "GeoInfo");'/></td></tr><tr><td class='bizdir_form_text'>Org. Country</td><td class='bizdir_form_input'><input type='text' id='bizdir_country' class='bizdir_input_style' bizdir_autofill='GeoInfo' maxlength='GeoInfo' onFocus='bizdir_clearAutoFill("bizdir_country", "GeoInfo");'onClick='bizdir_clearAutoFill("bizdir_country", "GeoInfo");'/></td></tr><td class='bizdir_form_text'>&nbsp;</td><td class='bizdir_form_input'><input type='submit' id='bizdir_submit' value='Submit Listing' onClick='bizdir_add_listing(); return false;'/> <span id='bizdir_submit_message'>&nbsp;</span></td></tr><tr><td class='bizdir_form_text'>&nbsp;</td><td class='bizdir_form_input bizdir_notes'>* required</td></tr></table></form><a  href="http://businessdirectory.squarecompass.com/" target="_blank" class="bizdir_notes_grey external external_icon" rel="nofollow">Powered by Business Directory for Wordpress</a><hr/>
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url='http://www.sparepartsphilippines.com/' addthis:title='Spare Parts and Accessories ' ><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a></div><hr />
+<br />
+
+<center><SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/httpwwwphil00-20/8018/3d81f10c-72ee-4267-b660-88334b0846fb"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fhttpwwwphil00-20%2F8018%2F3d81f10c-72ee-4267-b660-88334b0846fb&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT></center>
+
+
+
+
+	<!--if you paginate pages-->
+		
+	<!--end of post and end of loop-->
+		
+</div>
+
+<!--page.php end-->
+<!--include sidebar-->
+<!--sidebar.php-->
+<div id="sidebar">
+
+<div class="ads">
+</div>
+
+<div id="sidebarwrap">
+	<div id="popular">
+	<ul>
+		<li>
+		<h2>Popular Articles</h2>
+		<ul>
+    	    			<li><a  href="http://www.sparepartsphilippines.com/search-engine-optimization/increase-website-traffic-in-2012/">Increase Website Traffic in 2012</a></li>
+				<li><a  href="http://www.sparepartsphilippines.com/top-franchise/best-franchise/">Garage Storage Franchise Monkey Bars Garage Storage Business</a></li>
+				<li><a  href="http://www.sparepartsphilippines.com/seo/seo-price/">SEO Price SEO Cost,  Prices For WordPress SEO Services</a></li>
+				<li><a  href="http://www.sparepartsphilippines.com/social-networking/facebook-like-button/">Facebook Like Button</a></li>
+				<li><a  href="http://www.sparepartsphilippines.com/why-wordpress/22-percent-of-domains-in-the-us-are-running-wordpress/">22 Percent of Domains in the US are running WordPress</a></li>
+				</ul>
+		</li>
+	</ul>
+	<div id="popular-bottom"></div>
+	</div>
+
+	<!--l_sidebar.php-->
+<div id="l_sidebar">
+	<ul>
+	<li id="pages-3" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+		<ul>
+			<li class="page_item page-item-14"><a  href="http://www.sparepartsphilippines.com/certified-auto-mechanics-philippines/" title="Certified Auto Mechanics Philippines">Auto Mechanics</a></li>
+<li class="page_item page-item-15"><a  href="http://www.sparepartsphilippines.com/certified-motocycle-mechanics/" title="Certified Motorcycle Mechanics Philippines">Motorcycle Mechanics</a></li>
+<li class="page_item page-item-25"><a  href="http://www.sparepartsphilippines.com/contact-us/" title="Contact Us">Contact Us</a>
+<ul class='children'>
+	<li class="page_item page-item-75"><a  href="http://www.sparepartsphilippines.com/contact-us/disclaimer/">Disclaimer</a></li>
+	<li class="page_item page-item-78"><a  href="http://www.sparepartsphilippines.com/contact-us/linking-policy/">Linking Policy</a></li>
+	<li class="page_item page-item-74"><a  href="http://www.sparepartsphilippines.com/contact-us/privacy-policy/">Privacy Policy</a></li>
+	<li class="page_item page-item-73"><a  href="http://www.sparepartsphilippines.com/contact-us/terms-of-use/">Terms of Use</a></li>
+	<li class="page_item page-item-76"><a  href="http://www.sparepartsphilippines.com/contact-us/testimonials-disclosure/">Testimonials Disclosure</a></li>
+</ul>
+</li>
+<li class="page_item page-item-8"><a  href="http://www.sparepartsphilippines.com/philippines-spare-parts-blog/" title="Philippines Spare Parts Blog">Spare Parts Blog</a></li>
+<li class="page_item page-item-2 current_page_item"><a  href="http://www.sparepartsphilippines.com/" title="Automobile - Spare Parts and Accessories">Parts and Accessories</a></li>
+		</ul>
+		</li>
+		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widgettitle">Recent Automotive News</h2>
+		<ul>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/search-engine-optimization/increase-website-traffic-in-2012/" title="Increase Website Traffic in 2012">Increase Website Traffic in 2012</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/top-franchise/best-franchise/" title="Garage Storage Franchise Monkey Bars Garage Storage Business">Garage Storage Franchise Monkey Bars Garage Storage Business</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/seo/seo-price/" title="SEO Price SEO Cost,  Prices For WordPress SEO Services">SEO Price SEO Cost,  Prices For WordPress SEO Services</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/social-networking/facebook-like-button/" title="Facebook Like Button">Facebook Like Button</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/why-wordpress/22-percent-of-domains-in-the-us-are-running-wordpress/" title="22 Percent of Domains in the US are running WordPress">22 Percent of Domains in the US are running WordPress</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/cebu-motorcycle-parts/cebu-spare-motorcycle-parts/" title="Cebu Spare Motorcycle Parts">Cebu Spare Motorcycle Parts</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/auto-parts/find-auto-parts-in-the-usa/" title="Find Auto Parts in the USA">Find Auto Parts in the USA</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/boat-mechanics/manila-certified-marine-boat-mechanics/" title="Manila Certified Marine Boat Mechanics">Manila Certified Marine Boat Mechanics</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/boat-mechanics/cebu-marine-certified-boat-mechanics/" title="Cebu Marine Certified Boat Mechanics">Cebu Marine Certified Boat Mechanics</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/cebu-auto-mechanics/cebu-certified-auto-mechanics/" title="Cebu Certified Auto Mechanics">Cebu Certified Auto Mechanics</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/honda-parts/motorcycle-part-and-scooter-part-supplier-in-philippines/" title="motorcycle part and scooter part supplier in Philippines">motorcycle part and scooter part supplier in Philippines</a>
+						</li>
+					<li>
+				<a  href="http://www.sparepartsphilippines.com/automotive-accessories/parts-and-accessories/" title="Suzuki Toyota Honda Parts and Accessories">Suzuki Toyota Honda Parts and Accessories</a>
+						</li>
+				</ul>
+		</li>
+<li id="text-4" class="widget widget_text">			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7593199406516189";
+/* Page Ad Large Square */
+google_ad_slot = "3442636945";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+		</li>
+	        <li id="wp-cumulus" class="widget wp_cumulus_widget">							<h2 class="widgettitle">Tags</h2>
+						<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/swfobject/ --><script type="text/javascript" src="http://www.sparepartsphilippines.com/wp-content/plugins/wp-cumulus/swfobject.js"></script><div id="wpcumuluswidgetcontent5000159"><p><a  href="http://www.sparepartsphilippines.com/tag/22-percent/" class="tag-link-62" title="1 topic" style="font-size: 8pt;">22 Percent</a>
+<a  href="http://www.sparepartsphilippines.com/tag/accessories/" class="tag-link-12" title="1 topic" style="font-size: 8pt;">Accessories</a>
+<a  href="http://www.sparepartsphilippines.com/tag/and-suzuki-spare-parts/" class="tag-link-47" title="1 topic" style="font-size: 8pt;">and Suzuki Spare Parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/auto-parts-in-the-usa/" class="tag-link-44" title="1 topic" style="font-size: 8pt;">Auto Parts in the USA</a>
+<a  href="http://www.sparepartsphilippines.com/tag/bmw-motorcycle-parts/" class="tag-link-17" title="1 topic" style="font-size: 8pt;">BMW motorcycle parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/boat-mechanic/" class="tag-link-41" title="1 topic" style="font-size: 8pt;">boat mechanic</a>
+<a  href="http://www.sparepartsphilippines.com/tag/boat-mechanics/" class="tag-link-35" title="1 topic" style="font-size: 8pt;">Boat Mechanics</a>
+<a  href="http://www.sparepartsphilippines.com/tag/boat-repair/" class="tag-link-36" title="2 topics" style="font-size: 22pt;">boat repair</a>
+<a  href="http://www.sparepartsphilippines.com/tag/cebu/" class="tag-link-38" title="1 topic" style="font-size: 8pt;">cebu</a>
+<a  href="http://www.sparepartsphilippines.com/tag/cebu-auto-mechanics/" class="tag-link-21" title="1 topic" style="font-size: 8pt;">Cebu auto mechanics</a>
+<a  href="http://www.sparepartsphilippines.com/tag/domains-us-wordpress/" class="tag-link-63" title="1 topic" style="font-size: 8pt;">Domains US WordPress</a>
+<a  href="http://www.sparepartsphilippines.com/tag/effective-seo/" class="tag-link-70" title="1 topic" style="font-size: 8pt;">Effective SEO</a>
+<a  href="http://www.sparepartsphilippines.com/tag/effective-seo-services/" class="tag-link-71" title="2 topics" style="font-size: 22pt;">effective SEO services</a>
+<a  href="http://www.sparepartsphilippines.com/tag/expert-wordpress-seo-services/" class="tag-link-72" title="1 topic" style="font-size: 8pt;">Expert WordPress SEO Services</a>
+<a  href="http://www.sparepartsphilippines.com/tag/facebook-likes-button/" class="tag-link-69" title="1 topic" style="font-size: 8pt;">Facebook Likes Button</a>
+<a  href="http://www.sparepartsphilippines.com/tag/fair-seo-prices/" class="tag-link-73" title="1 topic" style="font-size: 8pt;">Fair SEO Prices</a>
+<a  href="http://www.sparepartsphilippines.com/tag/honda/" class="tag-link-10" title="1 topic" style="font-size: 8pt;">Honda</a>
+<a  href="http://www.sparepartsphilippines.com/tag/honda-motorcycle-parts/" class="tag-link-19" title="1 topic" style="font-size: 8pt;">Honda Motorcycle Parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/honda-spare-parts/" class="tag-link-46" title="1 topic" style="font-size: 8pt;">Honda Spare Parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/increase-website-traffic/" class="tag-link-87" title="1 topic" style="font-size: 8pt;">Increase website Traffic</a>
+<a  href="http://www.sparepartsphilippines.com/tag/increase-your-business/" class="tag-link-88" title="1 topic" style="font-size: 8pt;">Increase your business</a>
+<a  href="http://www.sparepartsphilippines.com/tag/jargon/" class="tag-link-68" title="1 topic" style="font-size: 8pt;">Jargon</a>
+<a  href="http://www.sparepartsphilippines.com/tag/kawasaki-motorcycle-parts/" class="tag-link-18" title="1 topic" style="font-size: 8pt;">Kawasaki motorcycle Parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/manila/" class="tag-link-40" title="1 topic" style="font-size: 8pt;">Manila</a>
+<a  href="http://www.sparepartsphilippines.com/tag/marine-repair/" class="tag-link-37" title="2 topics" style="font-size: 22pt;">marine repair</a>
+<a  href="http://www.sparepartsphilippines.com/tag/monkey-bars-garage-storage-franchise/" class="tag-link-81" title="1 topic" style="font-size: 8pt;">Monkey Bars Garage Storage Franchise</a>
+<a  href="http://www.sparepartsphilippines.com/tag/organic-search-results/" class="tag-link-89" title="1 topic" style="font-size: 8pt;">organic search results</a>
+<a  href="http://www.sparepartsphilippines.com/tag/parts/" class="tag-link-11" title="1 topic" style="font-size: 8pt;">Parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/philippines/" class="tag-link-39" title="1 topic" style="font-size: 8pt;">philippines</a>
+<a  href="http://www.sparepartsphilippines.com/tag/promoting-your-web-site/" class="tag-link-65" title="1 topic" style="font-size: 8pt;">promoting your web site</a>
+<a  href="http://www.sparepartsphilippines.com/tag/seo-marketing/" class="tag-link-74" title="1 topic" style="font-size: 8pt;">SEO Marketing</a>
+<a  href="http://www.sparepartsphilippines.com/tag/seo-price/" class="tag-link-75" title="1 topic" style="font-size: 8pt;">SEO Price</a>
+<a  href="http://www.sparepartsphilippines.com/tag/seo-professional/" class="tag-link-90" title="1 topic" style="font-size: 8pt;">SEO professional</a>
+<a  href="http://www.sparepartsphilippines.com/tag/seo-service/" class="tag-link-76" title="1 topic" style="font-size: 8pt;">SEO service</a>
+<a  href="http://www.sparepartsphilippines.com/tag/seo-services/" class="tag-link-77" title="1 topic" style="font-size: 8pt;">SEO Services</a>
+<a  href="http://www.sparepartsphilippines.com/tag/social-media-marketing/" class="tag-link-67" title="1 topic" style="font-size: 8pt;">Social Media Marketing</a>
+<a  href="http://www.sparepartsphilippines.com/tag/social-networking/" class="tag-link-66" title="2 topics" style="font-size: 22pt;">Social Networking</a>
+<a  href="http://www.sparepartsphilippines.com/tag/suzuki/" class="tag-link-8" title="1 topic" style="font-size: 8pt;">Suzuki</a>
+<a  href="http://www.sparepartsphilippines.com/tag/suzuki-motorcycle-parts/" class="tag-link-20" title="1 topic" style="font-size: 8pt;">Suzuki Motorcycle Parts</a>
+<a  href="http://www.sparepartsphilippines.com/tag/toyota/" class="tag-link-9" title="1 topic" style="font-size: 8pt;">Toyota</a>
+<a  href="http://www.sparepartsphilippines.com/tag/whats-seo-price/" class="tag-link-78" title="1 topic" style="font-size: 8pt;">Whats SEO Price</a>
+<a  href="http://www.sparepartsphilippines.com/tag/wordpress-seo/" class="tag-link-79" title="1 topic" style="font-size: 8pt;">WordPress SEO</a>
+<a  href="http://www.sparepartsphilippines.com/tag/yamaha-spare-parts/" class="tag-link-45" title="1 topic" style="font-size: 8pt;">Yamaha Spare Parts</a>	<a  href="http://www.sparepartsphilippines.com/category/auto-parts/" title="View all posts filed under Auto Parts">Auto Parts</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/automotive-accessories/" title="View all posts filed under Automotive Accessories">Automotive Accessories</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/bmw-parts/" title="View all posts filed under BMW Parts">BMW Parts</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/boat-mechanics/" title="View all posts filed under Boat Mechanics">Boat Mechanics</a> (2)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/cebu-auto-mechanics/" title="View all posts filed under Cebu auto mechanics">Cebu auto mechanics</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/cebu-motorcycle-parts/" title="View all posts filed under Cebu Motorcycle Parts">Cebu Motorcycle Parts</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/honda-parts/" title="View all posts filed under Honda Parts">Honda Parts</a> (2)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/kawasaki-parts/" title="View all posts filed under Kawasaki Parts">Kawasaki Parts</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/motorcycle-parts/" title="View all posts filed under Motorcycle Parts">Motorcycle Parts</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/search-engine-optimization/" title="View all posts filed under Search Engine Optimization">Search Engine Optimization</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/seo/" title="View all posts filed under SEO">SEO</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/social-networking/" title="View all posts filed under Social Networking">Social Networking</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/suzuki-parts/" title="View all posts filed under Suzuki Parts">Suzuki Parts</a> (2)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/top-franchise/" title="View all posts filed under Top Franchise">Top Franchise</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/toyota-parts/" title="View all posts filed under Toyota Parts">Toyota Parts</a> (1)<br />
+	<a  href="http://www.sparepartsphilippines.com/category/why-wordpress/" title="View all posts filed under why wordpress">why wordpress</a> (1)<br />
+</p><p>WP Cumulus Flash tag cloud by <a  href="http://www.roytanck.com" class="external external_icon" rel="nofollow">Roy Tanck</a> and <a  href="http://lukemorton.co.uk/" class="external external_icon" rel="nofollow">Luke Morton</a> requires <a  href="http://www.macromedia.com/go/getflashplayer" class="external external_icon" rel="nofollow">Flash Player</a> 9 or better.</p></div><script type="text/javascript">var widget_so7257173 = new SWFObject("http://www.sparepartsphilippines.com/wp-content/plugins/wp-cumulus/tagcloud.swf?r=3207731", "tagcloudflash", "345", "300", "9", "#eaf4ff");widget_so7257173.addParam("allowScriptAccess", "always");widget_so7257173.addVariable("tcolor", "0x333333");widget_so7257173.addVariable("tcolor2", "0x333333");widget_so7257173.addVariable("hicolor", "0xblue");widget_so7257173.addVariable("tspeed", "100");widget_so7257173.addVariable("distr", "true");widget_so7257173.addVariable("mode", "both");widget_so7257173.addVariable("tagcloud", "%3Ctags%3E%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2F22-percent%2F%27+class%3D%27tag-link-62%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3E22+Percent%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Faccessories%2F%27+class%3D%27tag-link-12%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EAccessories%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fand-suzuki-spare-parts%2F%27+class%3D%27tag-link-47%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eand+Suzuki+Spare+Parts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fauto-parts-in-the-usa%2F%27+class%3D%27tag-link-44%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EAuto+Parts+in+the+USA%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fbmw-motorcycle-parts%2F%27+class%3D%27tag-link-17%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EBMW+motorcycle+parts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fboat-mechanic%2F%27+class%3D%27tag-link-41%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eboat+mechanic%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fboat-mechanics%2F%27+class%3D%27tag-link-35%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EBoat+Mechanics%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fboat-repair%2F%27+class%3D%27tag-link-36%27+title%3D%272+topics%27+style%3D%27font-size%3A+22pt%3B%27%3Eboat+repair%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fcebu%2F%27+class%3D%27tag-link-38%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ecebu%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fcebu-auto-mechanics%2F%27+class%3D%27tag-link-21%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ECebu+auto+mechanics%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fdomains-us-wordpress%2F%27+class%3D%27tag-link-63%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EDomains+US+WordPress%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Feffective-seo%2F%27+class%3D%27tag-link-70%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EEffective+SEO%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Feffective-seo-services%2F%27+class%3D%27tag-link-71%27+title%3D%272+topics%27+style%3D%27font-size%3A+22pt%3B%27%3Eeffective+SEO+services%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fexpert-wordpress-seo-services%2F%27+class%3D%27tag-link-72%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EExpert+WordPress+SEO+Services%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Ffacebook-likes-button%2F%27+class%3D%27tag-link-69%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EFacebook+Likes+Button%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Ffair-seo-prices%2F%27+class%3D%27tag-link-73%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EFair+SEO+Prices%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fhonda%2F%27+class%3D%27tag-link-10%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EHonda%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fhonda-motorcycle-parts%2F%27+class%3D%27tag-link-19%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EHonda+Motorcycle+Parts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fhonda-spare-parts%2F%27+class%3D%27tag-link-46%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EHonda+Spare+Parts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fincrease-website-traffic%2F%27+class%3D%27tag-link-87%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EIncrease+website+Traffic%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fincrease-your-business%2F%27+class%3D%27tag-link-88%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EIncrease+your+business%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fjargon%2F%27+class%3D%27tag-link-68%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EJargon%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fkawasaki-motorcycle-parts%2F%27+class%3D%27tag-link-18%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EKawasaki+motorcycle+Parts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fmanila%2F%27+class%3D%27tag-link-40%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EManila%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fmarine-repair%2F%27+class%3D%27tag-link-37%27+title%3D%272+topics%27+style%3D%27font-size%3A+22pt%3B%27%3Emarine+repair%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fmonkey-bars-garage-storage-franchise%2F%27+class%3D%27tag-link-81%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EMonkey+Bars+Garage+Storage+Franchise%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Forganic-search-results%2F%27+class%3D%27tag-link-89%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Eorganic+search+results%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fparts%2F%27+class%3D%27tag-link-11%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EParts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fphilippines%2F%27+class%3D%27tag-link-39%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Ephilippines%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fpromoting-your-web-site%2F%27+class%3D%27tag-link-65%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3Epromoting+your+web+site%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fseo-marketing%2F%27+class%3D%27tag-link-74%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESEO+Marketing%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fseo-price%2F%27+class%3D%27tag-link-75%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESEO+Price%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fseo-professional%2F%27+class%3D%27tag-link-90%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESEO+professional%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fseo-service%2F%27+class%3D%27tag-link-76%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESEO+service%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fseo-services%2F%27+class%3D%27tag-link-77%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESEO+Services%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fsocial-media-marketing%2F%27+class%3D%27tag-link-67%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESocial+Media+Marketing%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fsocial-networking%2F%27+class%3D%27tag-link-66%27+title%3D%272+topics%27+style%3D%27font-size%3A+22pt%3B%27%3ESocial+Networking%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fsuzuki%2F%27+class%3D%27tag-link-8%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESuzuki%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fsuzuki-motorcycle-parts%2F%27+class%3D%27tag-link-20%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3ESuzuki+Motorcycle+Parts%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Ftoyota%2F%27+class%3D%27tag-link-9%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EToyota%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fwhats-seo-price%2F%27+class%3D%27tag-link-78%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EWhats+SEO+Price%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fwordpress-seo%2F%27+class%3D%27tag-link-79%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EWordPress+SEO%3C%2Fa%3E%0A%3Ca+href%3D%27http%3A%2F%2Fwww.sparepartsphilippines.com%2Ftag%2Fyamaha-spare-parts%2F%27+class%3D%27tag-link-45%27+title%3D%271+topic%27+style%3D%27font-size%3A+8pt%3B%27%3EYamaha+Spare+Parts%3C%2Fa%3E%3C%2Ftags%3E");widget_so7257173.addVariable("categories", "%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fauto-parts%2F%22+title%3D%22View+all+posts+filed+under+Auto+Parts%22%3EAuto+Parts%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fautomotive-accessories%2F%22+title%3D%22View+all+posts+filed+under+Automotive+Accessories%22%3EAutomotive+Accessories%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fbmw-parts%2F%22+title%3D%22View+all+posts+filed+under+BMW+Parts%22%3EBMW+Parts%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fboat-mechanics%2F%22+title%3D%22View+all+posts+filed+under+Boat+Mechanics%22%3EBoat+Mechanics%3C%2Fa%3E+%282%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fcebu-auto-mechanics%2F%22+title%3D%22View+all+posts+filed+under+Cebu+auto+mechanics%22%3ECebu+auto+mechanics%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fcebu-motorcycle-parts%2F%22+title%3D%22View+all+posts+filed+under+Cebu+Motorcycle+Parts%22%3ECebu+Motorcycle+Parts%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fhonda-parts%2F%22+title%3D%22View+all+posts+filed+under+Honda+Parts%22%3EHonda+Parts%3C%2Fa%3E+%282%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fkawasaki-parts%2F%22+title%3D%22View+all+posts+filed+under+Kawasaki+Parts%22%3EKawasaki+Parts%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fmotorcycle-parts%2F%22+title%3D%22View+all+posts+filed+under+Motorcycle+Parts%22%3EMotorcycle+Parts%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fsearch-engine-optimization%2F%22+title%3D%22View+all+posts+filed+under+Search+Engine+Optimization%22%3ESearch+Engine+Optimization%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fseo%2F%22+title%3D%22View+all+posts+filed+under+SEO%22%3ESEO%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fsocial-networking%2F%22+title%3D%22View+all+posts+filed+under+Social+Networking%22%3ESocial+Networking%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fsuzuki-parts%2F%22+title%3D%22View+all+posts+filed+under+Suzuki+Parts%22%3ESuzuki+Parts%3C%2Fa%3E+%282%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Ftop-franchise%2F%22+title%3D%22View+all+posts+filed+under+Top+Franchise%22%3ETop+Franchise%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Ftoyota-parts%2F%22+title%3D%22View+all+posts+filed+under+Toyota+Parts%22%3EToyota+Parts%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A%09%3Ca+href%3D%22http%3A%2F%2Fwww.sparepartsphilippines.com%2Fcategory%2Fwhy-wordpress%2F%22+title%3D%22View+all+posts+filed+under+why+wordpress%22%3Ewhy+wordpress%3C%2Fa%3E+%281%29%3Cbr+%2F%3E%0A");widget_so7257173.write("wpcumuluswidgetcontent5000159");</script>	        </li>
+		<li id="text-5" class="widget widget_text"><h2 class="widgettitle">Hit Counter</h2>
+			<div class="textwidget"><center><!-- Site Meter XHTML Strict 1.0 -->
+<script type="text/javascript" src="http://s36.sitemeter.com/js/counter.js?site=s36spareparts">
+</script>
+<!-- Copyright (c)2009 Site Meter -->
+</center></div>
+		</li>
+<li id="wp-spamfree-counter" class="widget widget_spamfree"><h2 class="widgettitle">Spam</h2>
+	
+	<style type="text/css">
+	#spamfree_counter_sm_wrap {color:#ffffff;text-decoration:none;width:120px;}
+	#spamfree_counter_sm {background:url(http://www.sparepartsphilippines.com/wp-content/plugins/wp-spamfree/counter/spamfree-counter-sm-bg-1.png) no-repeat top left;height:50px;width:120px;overflow:hidden;border-style:none;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-weight:bold;line-height:100%;text-align:center;padding-top:11px;}
+	</style>
+	
+	<div id="spamfree_counter_sm_wrap" >
+		<div id="spamfree_counter_sm" >
+		<strong style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-weight:bold;line-height:100%;text-align:center;text-decoration:none;border-style:none;"><a  href="http://www.polepositionmarketing.com/library/wp-spamfree/" style="color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-weight:bold;text-decoration:none;border-style:none;" rel="external nofollow" title="Protected by WP-SpamFree - WordPress Spam Plugin" class="external external_icon"><span style="color:#ffffff;font-size:18px;line-height:100%;font-family:Arial,Helvetica,sans-serif;font-weight:bold;text-decoration:none;border-style:none;">158</span><br /><span style="color:#ffffff;font-size:10px;line-height:120%;font-family:Arial,Helvetica,sans-serif;font-weight:bold;text-decoration:none;border-style:none;">SPAM BLOCKED</span></a></strong>		</div>
+	</div>
+	
+	</li>
+	</ul>
+</div>
+<!--l_sidebar.php end-->	<!--r_sidebar.php-->
+<div id="r_sidebar">
+	<ul>
+	<li id="linkcat-2" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a  href="http://www.philippinesgift.net/" title="Best Apple Online Store &#8211; Shopping Online iPhones, Laptop and Gadgets" target="_blank" class="external external_icon" rel="nofollow">Apple Online Store</a></li>
+<li><a  href="http://www.bloggingdirectory.org/" title="Blogging Directory" class="external external_icon" rel="nofollow">Blogging Directory</a></li>
+<li><a  href="http://www.boholwebdesign.com" title="Web Design for Resorts, Web Design for Hotels, Web design for business. SEO Marketing and Cheap Web Hosting Services." class="external external_icon" rel="nofollow">Bohol Web Design</a></li>
+<li><a  href="http://www.cebuairsoft.info/" title="Cebu Airsoft" class="external external_icon" rel="nofollow">Cebu Airsoft</a></li>
+<li><a  href="http://www.cebuexpat.com/" title="Cebu blog  Life around Cebu and events" class="external external_icon" rel="nofollow">Cebu Expat – Cebu blog</a></li>
+<li><a  href="http://www.colorblender.com/" title="ColorBlender – your free online tool for color matching and palette design!" class="external external_icon" rel="nofollow">ColorBlender</a></li>
+<li><a  href="http://www.flausedcars.com" title="Florida Used Cars auto classifieds helps you find quality pre-owned Florida cars for sale in our used car classified network; search by model, color, bodystyle or price." class="external external_icon" rel="nofollow">Florida Used Cars For Sale</a></li>
+<li><a  href="http://www.localclassifiedsfree.net" title="Free Local Miami Clasifieds Free Local New York Classifieds Free Utah Classifieds" class="external external_icon" rel="nofollow">Local Classifieds Free!</a></li>
+<li><a  href="http://www.mattwilkie.co.uk/" title="Matt Wilkie Blog &#8211; On-Line Developer" class="external external_icon" rel="nofollow">Matt Wilkie Blog</a></li>
+<li><a  href="http://www.myhottropics.com/" title="Cooking and recipe blog" class="external external_icon" rel="nofollow">MyHotTropics</a></li>
+<li><a  href="http://www.tropicalpenpals.com/" title="Philippines Blogs" class="external external_icon" rel="nofollow">Philippines Blogs</a></li>
+<li><a  href="http://www.retirephilippines.com/" title="Retirement to the Philippines information for Expats and foreign nationals RetirePhilippines.com RSS Feed  " class="external external_icon" rel="nofollow">Retirement to the Philippines</a></li>
+<li><a  href="http://www.containerliving.net/" title="Shipping container home ideas and concepts" class="external external_icon" rel="nofollow">Shipping container homes</a></li>
+<li><a  href="http://www.tropicalgarden.org/" title="Sustainable living and tropical gardening TropicalGarden.org" class="external external_icon" rel="nofollow">Sustainable living</a></li>
+<li><a  href="http://www.tropicalhome.net/" title="Tropical homes designs and ideas" class="external external_icon" rel="nofollow">Tropical homes designs</a></li>
+<li><a  href="http://www.utahfreeclassifieds.net/" title="Utah Wyoming, free utahfreeclassifieds.net Web site" class="external external_icon" rel="nofollow">Utah Wyoming, free Classifieds</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-48" class="widget widget_links"><h2 class="widgettitle">Spare Parts Classifieds</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a  href="http://www.partsph.com/" title="Find any part for any thing. Spare parts fee classifieds" target="_blank" class="external external_icon" rel="nofollow">Philippines Spare Parts spareparts.cp</a></li>
+
+	</ul>
+</li>
+
+<li id="statpress" class="widget widget_statpress"><h2 class="widgettitle">StatPress</h2>
+Visits today: 3<br />
+total: 34662<br />
+visiters: 2<br />
+</li>
+<li id="categories-3" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-15"><a  href="http://www.sparepartsphilippines.com/category/auto-parts/" title="View all posts filed under Auto Parts">Auto Parts</a>
+</li>
+	<li class="cat-item cat-item-4"><a  href="http://www.sparepartsphilippines.com/category/automotive-accessories/" title="View all posts filed under Automotive Accessories">Automotive Accessories</a>
+</li>
+	<li class="cat-item cat-item-16"><a  href="http://www.sparepartsphilippines.com/category/bmw-parts/" title="View all posts filed under BMW Parts">BMW Parts</a>
+</li>
+	<li class="cat-item cat-item-35"><a  href="http://www.sparepartsphilippines.com/category/boat-mechanics/" title="View all posts filed under Boat Mechanics">Boat Mechanics</a>
+</li>
+	<li class="cat-item cat-item-21"><a  href="http://www.sparepartsphilippines.com/category/cebu-auto-mechanics/" title="View all posts filed under Cebu auto mechanics">Cebu auto mechanics</a>
+</li>
+	<li class="cat-item cat-item-30"><a  href="http://www.sparepartsphilippines.com/category/cebu-motorcycle-parts/" title="View all posts filed under Cebu Motorcycle Parts">Cebu Motorcycle Parts</a>
+</li>
+	<li class="cat-item cat-item-5"><a  href="http://www.sparepartsphilippines.com/category/honda-parts/" title="View all posts filed under Honda Parts">Honda Parts</a>
+</li>
+	<li class="cat-item cat-item-14"><a  href="http://www.sparepartsphilippines.com/category/kawasaki-parts/" title="View all posts filed under Kawasaki Parts">Kawasaki Parts</a>
+</li>
+	<li class="cat-item cat-item-13"><a  href="http://www.sparepartsphilippines.com/category/motorcycle-parts/" title="View all posts filed under Motorcycle Parts">Motorcycle Parts</a>
+</li>
+	<li class="cat-item cat-item-91"><a  href="http://www.sparepartsphilippines.com/category/search-engine-optimization/" title="View all posts filed under Search Engine Optimization">Search Engine Optimization</a>
+</li>
+	<li class="cat-item cat-item-80"><a  href="http://www.sparepartsphilippines.com/category/seo/" title="View all posts filed under SEO">SEO</a>
+</li>
+	<li class="cat-item cat-item-66"><a  href="http://www.sparepartsphilippines.com/category/social-networking/" title="View all posts filed under Social Networking">Social Networking</a>
+</li>
+	<li class="cat-item cat-item-7"><a  href="http://www.sparepartsphilippines.com/category/suzuki-parts/" title="View all posts filed under Suzuki Parts">Suzuki Parts</a>
+</li>
+	<li class="cat-item cat-item-82"><a  href="http://www.sparepartsphilippines.com/category/top-franchise/" title="View all posts filed under Top Franchise">Top Franchise</a>
+</li>
+	<li class="cat-item cat-item-6"><a  href="http://www.sparepartsphilippines.com/category/toyota-parts/" title="View all posts filed under Toyota Parts">Toyota Parts</a>
+</li>
+	<li class="cat-item cat-item-64"><a  href="http://www.sparepartsphilippines.com/category/why-wordpress/" title="View all posts filed under why wordpress">why wordpress</a>
+</li>
+		</ul>
+</li>
+	</ul>
+</div>
+<!--r_sidebar.php end-->	<div class="sidebar-bot"></div>
+</div>
+
+</div>
+<!--sidebar.php end--><!--include footer-->
+<div class="clearboth"></div>
+</div>
+<div class="container-bot-bg"></div>
+<div id="footer">
+<!--footer.php-->
+<div id="footer-wrap">
+
+<h4>Cant Find the Spare Parts that your looking for?
+Please Contact US</h4>
+	
+Copyright Motorcycle and Automotive Spare Parts Philippines                 
+<!--necessary-->
+<script type="text/javascript">
+
+var addthis_config = {"data_track_clickback":true,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300"};
+var addthis_product = 'wpp-3.0.2';
+</script><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=eef7de3d7d7b7c27fd9d08368b8911d8"></script><script type="text/javascript"></script><script type='text/javascript' src='http://www.sparepartsphilippines.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.25.0-2013.01.18'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.sparepartsphilippines.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.sparepartsphilippines.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.3.3'></script>
+<!--wp_footer--></div>
+
+<center><script type="text/javascript"><!--
+google_ad_client = "pub-7593199406516189";
+/* 728x90, created 4/4/10 */
+google_ad_slot = "7672462089";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center>
+
+
+</div>
+</body>
+</html>

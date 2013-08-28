@@ -1,0 +1,591 @@
+<html><head><title>Wagon Automotive - Company profile & brands</title>
+<meta NAME="DESCRIPTION" CONTENT="Rapport global sur Wagon Automotive. Global social, financial and environmental data, advertising and influence. ">
+<meta NAME="KEYWORDS" CONTENT="Wagon Automotive, Wagon Automotive, home, news articles, headquarters, phone, mail, web site, brand, ad, logo, advertising budget, environnement, pollution, financial information, sales, profits, social, employees, job cuts, ceo compensation, stock-options, shareholders, affiliates, corruption, lobby, donation, subsidy, production sites, plants, locations">
+<html><head>
+<META HTTP-EQUIV="Content-Language" content="EN">
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL=StyleSheet HREF="/style2.css" TYPE="text/css">
+<script type="text/javascript">
+<!--
+if (document.all) { navi="IE" } else {
+if (document.layers) { navi="NN" } else {
+if (document.getElementById) { navi="N6"} } }
+s= "http://www.transnationale.org/" 
+
+if ((location.hostname.lastIndexOf('transnationale.org')=="-1") && (location.pathname.lastIndexOf('translate')=="-1")) { 
+document.location.replace ? document.location.replace(s) : document.location.href = (s) ;
+ }
+
+
+function Validator(theForm) {
+var valid="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_@."
+
+for (var i=0; i<theForm.Email.value.length; i++) {
+if (valid.indexOf(theForm.Email.value.charAt(i)) < 0) {
+alert("!! Your e-mail address contains an invalid character !!");
+theForm.Email.focus();
+return false;
+} }
+
+if (theForm.Email.value.indexOf("@",0)<0) {
+alert("!! Your e-mail address is not valid !!");
+theForm.Email.focus();
+return false;
+} }
+
+function clearText(thefield){
+if (thefield.defaultValue==thefield.value)
+thefield.value = ""
+}
+
+function Get_Cookie(name) {
+var start = document.cookie.toUpperCase().indexOf(" "+name+"=")+1;
+var len = start+name.length+1;
+if ((!start) && (name != document.cookie.toUpperCase().substring(0,name.length))) return null;
+if (start == -1) return null;
+var end = document.cookie.indexOf(";",len);
+if (end == -1) end = document.cookie.length;
+return unescape(document.cookie.substring(len,end)); }
+
+function Set_Cookie(name,value,path,domain) {
+document.cookie = name + "=" + escape(value) +
+( (expires) ? ";expires=" + expires.toGMTString() : "") +
+( (path) ? ";path=" + path : "") + 
+( (domain) ? ";domain=" + domain : ""); }
+
+var now = new Date();
+expires = new Date(now.getTime() + 10 * 365 * 24 * 60 * 60 * 1000); 
+now.setTime(now.getTime()+((now.getTimezoneOffset()+60)*60*1000))
+var member
+member = 0
+
+//if (location.pathname.lastIndexOf('companies') !="-1") {
+	if ((Get_Cookie("PAIEMENT") == 'O') || (Get_Cookie("PAIEMENT") == 'o')) { 
+		if (document.cookie.toUpperCase().lastIndexOf("ABOPRO") != "-1") {
+			if (Get_Cookie("ABOPRO") > now.getTime()) {
+				member = 1;
+			}
+		} else { 
+		
+			var p=location.pathname.substring(location.pathname.lastIndexOf('companies')+10,location.pathname.lastIndexOf('.php'));
+			var pco=p
+			// for ( i=0; i<p.length; i++ ) { 
+			// pco = pco.replace("_","%255F");
+			// }
+			pco=pco.toUpperCase()
+			
+			if (document.cookie.toUpperCase().lastIndexOf("P"+pco) != "-1") {
+				if (Get_Cookie("P"+pco) > now.getTime()) {
+					member = 1
+				}
+			}
+		}
+	}
+//}
+
+
+document.write('<style type="text\/css">');
+//if (member!=1) {
+//document.write('.public {display:block; width:100%;margin: 0; overflow: no;border:0;}');
+//document.write('.member {display:none; width:100%; margin: 0; overflow: no;border:0;}');
+//} else {
+//document.write('#complet{display:none;}');
+document.write('.public {display:none; width:100%;margin: 0; overflow: no;border:0;}');
+document.write('.member {display:block; width:100%; margin: 0; overflow: no;border:0;}');
+//}
+document.write('<\/style>');
+
+
+	/*
+	* Montre / Cache un div
+	*/
+	function DivStatus( nom, numero )
+		{
+			var divID = nom + numero;
+			var hdivID = 'h'+nom+numero;
+			if ( document.getElementById && document.getElementById( divID ) ) // Pour les navigateurs récents
+				{
+					Pdiv = document.getElementById( divID );
+					hPdiv = document.getElementById( hdivID );
+					PcH = true;
+		 		}
+			else if ( document.all && document.all[ divID ] ) // Pour les veilles versions
+				{
+					Pdiv = document.all[ divID ];
+					hPdiv = document.all[ hdivID ];
+					PcH = true;
+				}
+			else if ( document.layers && document.layers[ divID ] ) // Pour les très veilles versions
+				{
+					Pdiv = document.layers[ divID ];
+					hPdiv = document.layers[ hdivID ];
+					PcH = true;
+				}
+			else
+				{
+					
+					PcH = false;
+				}
+			if ( PcH )
+				{
+					Pdiv.className = ( Pdiv.className == 'cachediv' ) ? '' : 'cachediv';
+					if ( Pdiv.className == 'cachediv' ) {
+						hPdiv.className = 'inactive';
+					} else {
+						hPdiv.className = 'active';
+					}
+				}
+		}
+		
+
+	/*
+	* Cache un div 
+	*/
+	function Hide( nom, numero )
+		{
+			
+			var divID = nom + numero;
+			var hdivID = 'h'+nom+numero;
+						
+			if ( document.getElementById && document.getElementById( divID ) ) // Pour les navigateurs récents
+				{
+					Pdiv = document.getElementById( divID );
+					hPdiv = document.getElementById( hdivID );
+					PcH = true;
+		 		}
+			else if ( document.all && document.all[ divID ] ) // Pour les veilles versions
+				{
+					Pdiv = document.all[ divID ];
+					hPdiv = document.all[ hdivID ];
+					PcH = true;
+				}
+			else if ( document.layers && document.layers[ divID ] ) // Pour les très veilles versions
+				{
+					Pdiv = document.layers[ divID ];
+					hPdiv = document.layers[ hdivID ];
+					PcH = true;
+				}
+			else
+				{
+					
+					PcH = false;
+				}
+					Pdiv.className = 'cachediv';
+					
+					if (hPdiv.className != 'off') {hPdiv.className = 'inactive';}
+		}
+function Validation(theForm) {
+if (theForm.commentaire_titre.value=='') {
+alert("This field must be filled !!");
+theForm.commentaire_titre.focus();
+return false;
+}
+
+if (theForm.commentaire_auteur.value=='') {
+alert("This field must be filled !!");
+theForm.commentaire_auteur.focus();
+return false;
+} 
+
+if (theForm.commentaire_texte.value=='') {
+alert("This field must be filled !!");
+theForm.commentaire_texte.focus();
+return false;
+}
+}
+
+//-->
+</script>
+
+
+</head><body style="background-color:#4a4a4a;">
+<div style="top: 6px;left: 6px;position: absolute;width: 98%;margin:0;">
+	
+<div style="position: absolute;left:0;width: 260px;">
+
+<table width=260 border=0 cellspacing=0 cellpadding=3 align=left>
+
+<tr><td class=tdossier bgcolor=#5d009d>
+<nobr>
+
+<form method="get" action="http://www.transnationale.org/gsearch.php" target="_top" class=goo>
+<input type="hidden" name="domains" value="www.transnationale.org"></input>
+<label for="sbi" style="display: none">Enter your search terms</label>
+<label for="sbb" style="display: none">Submit search form</label>
+<font style="font-size:10pt;">SEARCH&nbsp</font><input type="radio" name="sitesearch" value="" id="ss0" class> web</input>
+<label for="ss0" title="Search the Web"></label>
+<input type="radio" name="sitesearch" value="www.transnationale.org" checked id="ss1">site</input>
+<label for="ss1" title="Search www.transnationale.org"></label>
+</td></tr><tr><td class=tp bgcolor=#cea7ff>
+<input type="text" name="q" size="31" maxlength="255" value=" Find a company, a brand" id="sbi" onFocus=clearText(this) class=go></input>
+<input type="submit" name="sa" value="OK" id="sbb" class=go></input>
+<input type="hidden" name="client" value="pub-2642534665785160"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="channel" value="6290198667"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="flav" value="0005"></input>
+<input type="hidden" name="sig" value="NuXwWEvBGZspbgPc"></input>
+<input type="hidden" name="cof" value="GALT:#cea7ff;GL:1;DIV:#4a4a4a;VLC:FF6600;AH:center;BGC:4a4a4a;LBGC:4a4a4a;ALC:FFB42D;LC:FFB42D;T:FFFFFF;GFNT:e8dbef;GIMP:cea7ff;LH:26;LW:304;L:http://www.transnationale.org/images/trans2.gif;S:http://www.transnationale.org;FORID:11"></input>
+<input type="hidden" name="hl" value="en"></input>
+</form>
+
+
+</nobr></td></tr>
+
+<tr height=5><td></td></tr>
+
+<tr><td class=tdossier bgcolor=#FFAC04><a href="/default.php#entr" class=struc style="font-size:10pt;">COMPANIES</a><br>
+</td></tr><tr><td bgcolor=#FFFED7 class=td style="border-left: 0px solid #2E2E2E; border-right: 0px solid #2E2E2E; border-bottom: 0px solid #2E2E2E;">
+Discover the reality of companies and brands!<br>
+
+<ul style="margin: 2px 0; padding: 2px 0 2px 1.5em;list-style-type:square;">
+<li>Find by <b>name</b> :
+<a href="/rating/companies_0.php">0-9</a> <a href="/rating/companies_a.php">A</a> <a href="/rating/companies_b.php">B</a><a href="/rating/companies_c.php"> C</a> <a href="/rating/companies_d.php">D</a><a href="/rating/companies_e.php"> E</a> <a href="/rating/companies_f.php">F</a> <a href="/rating/companies_g.php">G</a> <a href="/rating/companies_h.php">H</a> <a href="/rating/companies_i.php">I</a> <a href="/rating/companies_j.php">J</a> <a href="/rating/companies_k.php">K</a>
+<a href="/rating/companies_l.php"> L</a> <a href="/rating/companies_m.php">M</a> <a href="/rating/companies_n.php">N</a> <a href="/rating/companies_o.php">O</a> <a href="/rating/companies_p.php">P</a> <a href="/rating/companies_q.php">Q</a> <a href="/rating/companies_r.php">R</a> <a href="/rating/companies_s.php">S</a> <a href="/rating/companies_t.php">T</a> <a href="/rating/companies_u.php">U</a> <a href="/rating/companies_v.php">V</a> <a href="/rating/companies_w.php">W</a> <a href="/rating/companies_x.php">X</a> <a href="/rating/companies_y.php">Y</a> <a href="/rating/companies_z.php">Z</a>
+</li><li> by <b>country</b> : <a href="/countries/usa.php">United States</a>, <a href="/countries/gbr.php">Great Britain</a>, <a href="/countries/can.php">Canada</a>, <a href="/countries/aus.php">Australia</a> [<a href="/epays.php">+</a>]
+<br><a href="/epays.php"><img src="/images/mappemonde_mini.gif" border="1" height="126" width="239"></a>
+</li><li>by <b>top manager</b> :
+	<a href="/manager/manager_a.php">A </a>
+<a href="/manager/manager_b.php">B </a>
+<a href="/manager/manager_c.php">C </a>
+<a href="/manager/manager_d.php">D </a>
+<a href="/manager/manager_e.php">E </a>
+<a href="/manager/manager_f.php">F </a>
+<a href="/manager/manager_g.php">G </a>
+<a href="/manager/manager_h.php">H </a>
+<a href="/manager/manager_i.php">I </a>
+<a href="/manager/manager_j.php">J </a>
+<a href="/manager/manager_k.php">K </a>
+<a href="/manager/manager_l.php">L </a>
+<a href="/manager/manager_m.php">M </a>
+<a href="/manager/manager_n.php">N </a>
+<a href="/manager/manager_n.php">O </a>
+<a href="/manager/manager_p.php">P </a>
+<a href="/manager/manager_q.php">Q </a>
+<a href="/manager/manager_r.php">R </a>
+<a href="/manager/manager_s.php">S </a>
+<a href="/manager/manager_t.php">T </a>
+<a href="/manager/manager_u.php">U </a>
+<a href="/manager/manager_v.php">V </a>
+<a href="/manager/manager_w.php">W </a>
+<a href="/manager/manager_x.php">X </a>
+<a href="/manager/manager_y.php">Y </a>
+<a href="/manager/manager_z.php">Z </a>
+</li><li>The world's <a href="/countries/majors.php">largest companies</a>
+
+</li><li> by <b>thema</b>, in 2008 [previous month +] : 
+	<br><a href="/rating/soci2008.php" class=soci>Restructuring and labor conditions</a> [<a href="/news.php#empl">+</a>], <a href="/rating/homm2008.php" class=soci>Human rights and money laundering</a> [<a href="/news.php#homm">+</a>]
+	<br><a href="/rating/envi2008.php" class=envi>Pollution</a> [<a href="/news.php#envi">+</a>]
+	<br><a href="/rating/deli2008.php" class=deli>Financial delinquency</a> [<a href="/news.php#deli">+</a>], <a href="/rating/para2008.php" class=deli>more frequent offshore locations</a>, <a href="/rating/mana2008.php" class=deli>best paid top managers</a> [<a href="/news.php#mana">+</a>]
+	<br><a href="/rating/infl2008.php" class=infl>Influence:corruption/lobby</a> [<a href="/news.php#infl">+</a>]
+	<br><a href="/rating/imag2008.php" class=imag>Information: dubious practice</a> [<a href="/news.php#imag">+</a>]
+	</li>
+</ul></td></tr>
+
+<tr height=5><td></td></tr>
+
+<tr><td class=tdossier bgcolor=#808080>
+<a href="/aide.php" class=struc style="font-size:10pt;">TRANSNATIONALE.ORG</a>
+</td></tr><tr><td bgcolor=#e4e5e4 class=td>
+
+Free and independant information on large corporations
+
+<ul style="margin: 2px 0; padding: 2px 0 2px 1.5em;list-style-type:square;">
+	
+<li><a href="/aide.php#why">Why use this site?</a>
+</li><li><a href="/aide.php#utile">How to use it?
+</li><li><a href="/contact.php">Contact us</a> - <a href="/members/abo.php">Support this project</a>
+
+</td></tr>
+</table></div>
+
+<div style="width:616px; height:100% !important; height:700px; margin: 0 172px 0 272px; padding:0 2px 0 2px;">
+<table cellpadding=0 cellmargin=0><!-- google_ad_section_start --><tr><td><table width=100% class=entr><tr><td><h1>
+Wagon Automotive
+</h1>
+<tr><td width=100% class=td><span class=item> <a href="../countries/gbr.php" title="United Kingdom">United Kingdom</a> <img src="../countries/gbr.gif" alt="United Kingdom" width=30 border=0> <a href="http://www.company-analytics.org/company/wagon_automotive.php"> analytics <img src="/images/external.png" border=0></a></td></tr></table>
+<table width=100% cellpadding=0 cellspacing=0><tr><td width=50% valign=top style="padding-right:8px">
+<hr class=hr>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2642534665785160";
+/* En fiche top 234 */
+google_ad_slot = "2065941212";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></td><td width=50% valign=top>
+<hr class=hr><table class=rfonce><TD nowrap><h2>Brands</h2></td></table><TABLE cellSpacing=0 cellPadding=1 width=300 class=fonce border=0><tr><td><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=clair><tr class=td><td WIDTH=100% ><div class=le>name<img src="../images/bas.gif" border=0></div><div class=ri>click to compare prices</div></td></tr></table><div class=marq style="height:50px;; "><table class=fond><tr class=tr>
+</td></tr><tr class=td><td class=td><a target="_blank" href="http://www.ethishop.org/brands/wagon_automotive-wagon_automotive.php">Wagon Automotive</a></td></tr></table></div><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=clair><tr class=td><td WIDTH=100% ><div class=bas>» Shop local, ethical and at the best price on <a href="http://www.ethishop.org">Ethishop <img src="/images/external.png" border=0></a></div></td></tr></table></td></tr></TABLE>
+</td></tr><tr><td colspan=2 width=100% valign=top>
+<table border=0 width=100% cellspacing=0 cellpadding=3 align=left style="margin-top:10px;" bgcolor=#89b503><tr><td>
+<h2>« Ethical » rating of Wagon Automotive 
+, group 
+<a href=".php"></a>
+and subsidiaries
+</h2></td></tr>
+<tr><td>
+<span id="empl"><span class="note"><a class=struc href="/aide.php#empl">Jobs</a> -<a href="javascript:Hide( 'thmana', '1' );javascript:DivStatus( 'thsoci', '1' );javascript:Hide( 'thenvi', '1' );javascript:Hide( 'thhomm', '1' );" class=struc>17%<span class=notes> /1998</span></a></span></span>
+</td></tr><tr><td class=tp>[click on the rating for the method or on the number for the data]
+</td></tr></table>
+</td></tr>
+</td></tr><tr><td width=100% colspan=2 valign=top>
+<hr class=hr style="clear:both;">
+<ul class=theme id="th">
+<li id=hth1 class=off><h2>Shareholders</h2></li>
+<li id=hth2 class=inactive><h2><a href="javascript:Hide( 'th', '1' );javascript:DivStatus( 'th', '2' );javascript:Hide( 'th', '3' );javascript:Hide( 'th', '4' );">Business & market (1)</a></h2></li>
+<li id=hth3 class=inactive><h2><a href="javascript:Hide( 'th', '1' );javascript:Hide( 'th', '2' );javascript:DivStatus( 'th', '3' );javascript:Hide( 'th', '4' );">Subsidiaries (1)</a></h2></li>
+<li id=hth4 class=off><h2>Locations & production</h2></li>
+</ul>
+<div name="th1" id="th1" class="cachediv">
+
+</div><div name="th2" id="th2" class="cachediv">
+<TABLE cellSpacing=0 cellPadding=1 width=100% class=clair border=0><tr><td><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=clair><tr class=td><td WIDTH=6% ><nobr>year<img src="../images/haut.gif" border=0></nobr></td><td WIDTH=94% colspan=2><div class=le>business</div><div class=ri>source</div></td></tr></table><table class=fond><tr class=tr><td WIDTH=6% >2008</td><td WIDTH=80% >Wagon Automotive is bankrupt.</td><td WIDTH=14% align=right><span class=src title="Les Echos 09/12/2008 ">Les Echos</span></td></tr></TABLE><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=clair><tr class=td><td WIDTH=100% ><div class=bas>» <a href="http://www.transnationale.org/gsearch.php?domains=www.transnationale.org&sitesearch=&q=Wagon Automotive+business+description+profile&sa=OK&client=pub-2642534665785160&forid=1&channel=6290198667&ie=ISO-8859-1&oe=ISO-8859-1&flav=0002&sig=NuXwWEvBGZspbgPc&cof=GALT%3A%23CEA7FF%3BGL%3A1%3BDIV%3A%234A4A4A%3BVLC%3AFF6600%3BAH%3Acenter%3BBGC%3A4A4A4A%3BLBGC%3A4A4A4A%3BALC%3AFFB42D%3BLC%3AFFB42D%3BT%3AFFFFFF%3BGFNT%3AE8DBEF%3BGIMP%3ACEA7FF%3BLH%3A26%3BLW%3A304%3BL%3Ahttp%3A%2F%2Fwww.transnationale.org%2Fimages%2Ftrans2.gif%3BS%3Ahttp%3A%2F%2Fwww.transnationale.org%3BFORID%3A11&hl=en">More business descriptions</a> and <a href="http://www.transnationale.org/gsearch.php?domains=www.transnationale.org&sitesearch=&q=Wagon Automotive+%22market+share%22&sa=OK&client=pub-2642534665785160&forid=1&channel=6290198667&ie=ISO-8859-1&oe=ISO-8859-1&flav=0002&sig=NuXwWEvBGZspbgPc&cof=GALT%3A%23CEA7FF%3BGL%3A1%3BDIV%3A%234A4A4A%3BVLC%3AFF6600%3BAH%3Acenter%3BBGC%3A4A4A4A%3BLBGC%3A4A4A4A%3BALC%3AFFB42D%3BLC%3AFFB42D%3BT%3AFFFFFF%3BGFNT%3AE8DBEF%3BGIMP%3ACEA7FF%3BLH%3A26%3BLW%3A304%3BL%3Ahttp%3A%2F%2Fwww.transnationale.org%2Fimages%2Ftrans2.gif%3BS%3Ahttp%3A%2F%2Fwww.transnationale.org%3BFORID%3A11&hl=en">market shares</a> for Wagon Automotive.</div></td></tr></table></td></tr></TABLE>
+</div><div name="th3" id="th3" class="cachediv">
+<TABLE cellSpacing=0 cellPadding=1 width=300 class=clair border=0><tr><td><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=clair><tr class=td><td WIDTH=50% >subsidiary</td><td width=10% >country</td><td width=15% >%</td><td class=25% align=right>source</td></tr></table><table class=fond><tr class=tr><td WIDTH=50% ><A HREF="../companies/oxford_automotive.php">Oxford Automotive Inc.</a> </td><td WIDTH=10% ><a href="../countries/usa.php" title="United States of America"><img src="../countries/usa.gif" alt="United States of America" width=30 border=0></a><td WIDTH=15% align=right>100</td><td WIDTH=25% align=right><span class=src title="AFP 17/11/2006 L'équipementier Wagon Automotive annonce 900 suppressions de postes">AFP</span></td></tr></table><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=clair><tr class=td><td WIDTH=100% ><div class=bas>» <a href="http://www.transnationale.org/gsearch.php?domains=www.transnationale.org&sitesearch=&q=%22Wagon Automotive%22+subsidiary&sa=OK&client=pub-2642534665785160&forid=1&channel=6290198667&ie=ISO-8859-1&oe=ISO-8859-1&flav=0002&sig=NuXwWEvBGZspbgPc&cof=GALT%3A%23CEA7FF%3BGL%3A1%3BDIV%3A%234A4A4A%3BVLC%3AFF6600%3BAH%3Acenter%3BBGC%3A4A4A4A%3BLBGC%3A4A4A4A%3BALC%3AFFB42D%3BLC%3AFFB42D%3BT%3AFFFFFF%3BGFNT%3AE8DBEF%3BGIMP%3ACEA7FF%3BLH%3A26%3BLW%3A304%3BL%3Ahttp%3A%2F%2Fwww.transnationale.org%2Fimages%2Ftrans2.gif%3BS%3Ahttp%3A%2F%2Fwww.transnationale.org%3BFORID%3A11&hl=en">More subsidiaries</a> of Wagon Automotive</div></td></tr></table></td></tr></TABLE>
+</div><div name="th4" id="th4" class="cachediv">
+
+</div>
+<hr class=hr style="clear:both;">
+<ul class=theme id="thmana">
+<li id=hthmana1 class=off><h2>Executives</h2></li>
+</ul><ul class=theme id="thsoci">
+<li id=hthsoci1 class=inactive><h2><a href="javascript:Hide( 'thmana', '1' );javascript:DivStatus( 'thsoci', '1' );javascript:Hide( 'thenvi', '1' );javascript:Hide( 'thhomm', '1' );">Labor conditions (4)</a></h2></li>
+</ul><ul class=theme id="thenvi">
+<li id=hthenvi1 class=off><h2>Environmental impact</h2></li>
+</ul><ul class=theme id="thhomm">
+<li id=hthhomm1 class=off><h2>Human impact</h2></li>
+</ul>
+<div name="thmana1" id="thmana1" class="cachediv" style="clear:both;-padding-top:3px;">
+
+</div>
+<div name="thsoci1" id="thsoci1" class="cachediv" style="clear:both;-padding-top:3px;">
+<div class=member>
+<TABLE cellSpacing=0 cellPadding=1 width=100% class=socic border=0><tr><td><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=socic><tr class=td><td WIDTH=7% ><nobr>year<img src="../images/haut.gif" border=0></nobr></td><td WIDTH=14% ><div class=le>employees</div><div class=ri><></div></td><td WIDTH=79% colspan=2><div class=le> social impact : country</div><div class=ri>source</div></td></tr></table><table class=fond><tr class=tsoci><td WIDTH=7% >2008</td><td WIDTH=14% ><div class=le>6300</div></td><td WIDTH=76% > </td><td WIDTH=3% align=right><span class=src title="Les Echos 08/12/2008 ">Les Echos</span></td></tr></table><table class=fond><tr class=td><td WIDTH=7% >2006</td><td WIDTH=14% ><div class=le>7600</div><div class=ri>-900 </div></td><td WIDTH=76% ><div class=le><i>Merger/Acquisition</i>: Wagon Auto rerorganizes its french, british, belgian and german sites due to "tough industry environment". Measures intended to safeguard the competitiveness of the group in a difficult sectoral environment marked by the prolongation of the crisis passed through by the majority of its automobile customers and by the increase in the competition of the countries at low cost of labour.: </div></td><td WIDTH=3% align=right><span class=src title="AFP 17/11/2006 L'équipementier Wagon Automotive annonce 900 suppressions de postes">AFP</span></td></tr></table><table class=fond><tr class=tsoci><td WIDTH=7% >2006</td><td WIDTH=14% ><div class=ri>-140 </div></td><td WIDTH=76% ><div class=le><i>Internal restructuring</i>:  <a class=soci href="../countries/fra.php">France</a><td WIDTH=3% align=right><span class=src title="Les Echos 24/05/2006 Wagon Automotive: 140 emplois supprimés sur 3 sites français">Les Echos</span></td></tr></table><table class=fond><tr class=td><td WIDTH=7% >2006</td><td WIDTH=14% ><div class=ri>-210 </div></td><td WIDTH=76% ><div class=le><i>Internal restructuring</i>:  <a class=soci href="../countries/fra.php">France</a><td WIDTH=3% align=right><span class=src title="Les Echos 30/01/2006 Wagon Automotive s'apprête à supprimer">Les Echos</span></td></tr></table><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=socic><tr class=td><td WIDTH=100% ><div class=bas>» <a class=struc href="http://www.transnationale.org/gsearch.php?domains=www.transnationale.org&sitesearch=&q=%22Wagon Automotive%22+restructuring+OR+layoff+OR+%22job+cuts%22&sa=OK&client=pub-2642534665785160&forid=1&channel=6290198667&ie=ISO-8859-1&oe=ISO-8859-1&flav=0002&sig=NuXwWEvBGZspbgPc&cof=GALT%3A%23CEA7FF%3BGL%3A1%3BDIV%3A%234A4A4A%3BVLC%3AFF6600%3BAH%3Acenter%3BBGC%3A4A4A4A%3BLBGC%3A4A4A4A%3BALC%3AFFB42D%3BLC%3AFFB42D%3BT%3AFFFFFF%3BGFNT%3AE8DBEF%3BGIMP%3ACEA7FF%3BLH%3A26%3BLW%3A304%3BL%3Ahttp%3A%2F%2Fwww.transnationale.org%2Fimages%2Ftrans2.gif%3BS%3Ahttp%3A%2F%2Fwww.transnationale.org%3BFORID%3A11&hl=en">More restructuring</a> at Wagon Automotive<br>» <a class=struc href="/rating/soci2008.php">Layoff plans and labour conditions in 2007</a></div></td></tr></table></td></tr></TABLE>
+</div><div class=public>
+<TABLE cellSpacing=0 cellPadding=1 width=100% class=socic border=0><tr><td><table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=socic><tr class=td><td WIDTH=7% ><nobr>year<img src="../images/haut.gif" border=0></nobr></td><td WIDTH=14% ><div class=le>employees</div><div class=ri><></div></td><td WIDTH=79% colspan=2><div class=le> social impact : country</div><div class=ri>source</div></td></tr></table>
+<table class=fond><tr class=tsoci><td WIDTH=100% class=td><a href="../members/abo.php">&nbsp;<b>4</b> informations, access to subscribers</font></a></td></tr></TABLE>
+<table BORDER=0 CELLSPACING=0 cellpadding=1 width=100% class=socic><tr class=td><td WIDTH=100% ><div class=bas>» <a class=struc href="http://www.transnationale.org/gsearch.php?domains=www.transnationale.org&sitesearch=&q=%22Wagon Automotive%22+restructuring+OR+layoff+OR+%22job+cuts%22&sa=OK&client=pub-2642534665785160&forid=1&channel=6290198667&ie=ISO-8859-1&oe=ISO-8859-1&flav=0002&sig=NuXwWEvBGZspbgPc&cof=GALT%3A%23CEA7FF%3BGL%3A1%3BDIV%3A%234A4A4A%3BVLC%3AFF6600%3BAH%3Acenter%3BBGC%3A4A4A4A%3BLBGC%3A4A4A4A%3BALC%3AFFB42D%3BLC%3AFFB42D%3BT%3AFFFFFF%3BGFNT%3AE8DBEF%3BGIMP%3ACEA7FF%3BLH%3A26%3BLW%3A304%3BL%3Ahttp%3A%2F%2Fwww.transnationale.org%2Fimages%2Ftrans2.gif%3BS%3Ahttp%3A%2F%2Fwww.transnationale.org%3BFORID%3A11&hl=en">More restructuring</a> at Wagon Automotive<br>» <a class=struc href="/rating/soci2008.php">Layoff plans and labour conditions in 2007</a></div></td></tr></table></td></tr></TABLE>
+</div></div>
+<div name="thenvi1" id="thenvi1" class="cachediv" style="clear:both;-padding-top:3px;">
+<div class=member>
+
+</div><div class=public>
+</div></div>
+<div name="thhomm1" id="thhomm1" class="cachediv" style="clear:both;-padding-top:3px;">
+<div class=member>
+
+</div><div class=public>
+</div></div>
+<hr class=hr style="clear:both;">
+<ul class=theme id="thfina">
+<li id=thfina1 class=off><h2>Financials</h2></li>
+</ul><ul class=theme id="thinfl">
+<li id="hthinfl1" class=off><h2>Lobbying & corruption</h2></li>
+</ul><ul class=theme id="thsubv">
+<li id="hthsubv1" class=off><h2>Subsidy</h2></li>
+</ul><ul class=theme id="thimag">
+<li id="hthimag1" class=off><h2>Advertising & marketing</h2></li>
+</ul>
+<div name="thfina1" id="thfina1" class="cachediv" style="clear:both;-padding-top:3px;">
+<div class=member>
+
+</div><div class=public>
+</div></div>
+<div name="thinfl1" id="thinfl1" class="cachediv" style="clear:both;-padding-top:3px;">
+<div class=member>
+
+</div><div class=public>
+</div></div>
+<div name="thsubv1" id="thsubv1" class="cachediv" style="clear:both;-padding-top:3px;">
+<div class=member>
+
+</div><div class=public>
+</div></div>
+<div name="thimag1" id="thimag1" class="cachediv" style="clear:both;-padding-top:3px;">
+
+</div>
+</td></tr></table>
+<!-- google_ad_section_end -->
+
+
+<hr class=hr><script language="JavaScript" type="text/JavaScript">
+function WMOpen(f,nom, h, w, scroll) {
+  var PosLeft = screen.width;
+  var PosTop = screen.height;
+  PosLeft = ((PosLeft/2)-((w+10)/2))
+  PosTop = ((PosTop/2)-((h+29)/2))
+  var myPopup = window.open(f, nom, 'resizable=no,scrollbars=' + scroll + ',left=' + PosLeft + ',top=' + PosTop + ',menubar=no,width=' + w + ',height=' + h);
+  if(myPopup.focus){myPopup.focus();}
+}
+
+var Nb_Paragraphe = 0;
+function collapse(iDiv) {
+	if (document.getElementById('L'+iDiv).style.display=='none') { 
+		document.getElementById('L'+iDiv).style.display = 'block';  
+		document.getElementById('D'+iDiv).style.display = 'none';  
+	}
+	else { 
+		document.getElementById('L'+iDiv).style.display = 'none'; 
+		document.getElementById('D'+iDiv).style.display = 'block'; 
+	}
+	for (var i=1;i<=Nb_Paragraphe;i++) {
+		if (i!=iDiv) { 
+			document.getElementById('L'+i).style.display = 'none'; 
+			document.getElementById('D'+i).style.display = 'block'; 
+		}
+		
+	}
+}
+function incremente(champ, id, ouinon){
+	if (document.getElementById('click'+id).value == "no"){
+		x = document.getElementById(champ).innerHTML;
+		document.getElementById(champ).innerHTML = parseInt(x) + 1;
+		document.getElementById('click'+id).value = "yes";
+		WMOpen('../commentaires/incremente.php?id='+id+'&ouinon='+ouinon, 0, 0);
+	}
+	else {
+		alert("Vous avez déjà voté pour ce commentaire.");
+	}
+}
+</script>
+
+
+
+<a name="comment"></a><span class="commentaire_h" align="left"><nobr>Your contributions (0)</nobr></span>
+
+<!-- &nbsp;<span><a class="commentaire_lien_tri" href="/companies/wagon_automotive.php?order=date">order by date</a> - <a  class="commentaire_lien_tri" href="/companies/wagon_automotive.php?order=pert">order by relevance</a></span>-->
+
+<div class="commentaire_global" align="left">
+
+
+	<div align="left" style="margin-left:5px;"><a href="javascript:collapse('post');"><span class="commentaire_titre"><img src="/images/fl1.gif" border=0> Contribute</span></a></div>
+
+<div class="commentaire_reagir" align="left" style="display:none" id="Lpost">
+	
+<div>
+	
+	<form name="postcomment" action="wagon_automotive.php" method="post" onSubmit="return Validation(this);">
+	<table>
+		<tr>
+		<td rowspan=5><table><tr><td valign=top><span class="commentaire_reagir">Information*</span></td> <td colspan=3><textarea name="commentaire_texte" cols="25" rows="6"></textarea></td></tr></table></td>
+		</tr>
+		<tr>
+			<td><span class="commentaire_reagir">Name (or nickname)*</td><td><input type="text" name="commentaire_auteur" size="15" maxlength="50"/><br /></td>
+		</tr>
+		<tr>
+						<td><span class="commentaire_reagir">Email</td><td><input type="text" name="commentaire_email" size="15" maxlength="100"/><br /></td>
+		</tr>
+		<tr>
+			<td><span class="commentaire_reagir">Title*</span></td><td><input type="text" name="commentaire_titre" size="15" maxlength="100"/><br /></td>
+		</tr>
+		<tr>
+						<td><span class="commentaire_reagir">Link to document online</td><td><input type="text" name="commentaire_url" size="15" maxlength="100"/><br /></td>
+		</tr>
+		</table><table>
+		<tr>
+			<td colspan="3"><span class="commentaire_reagir">Alert me of answers by email</span><input type="checkbox" value="1" name="commentaire_abonnement" checked></td>
+			</td><td><span class="commentaire_reagir">* required field</span></td>
+		</tr>
+		<tr>
+		<td class="commentaire_reagir" colspan=2>Please copy the antispam code:</td><td><input type="text" name="code"></td><td><table><tr><td><img id='cryptogram' src='../crypt/cryptographp.php?cfg=0&PHPSESSID=e5189f8947e041c21e7f666537ff71ed'></td><td><a title='' style="cursor:pointer" onclick="javascript:document.images.cryptogram.src='../crypt/cryptographp.php?cfg=0&PHPSESSID=e5189f8947e041c21e7f666537ff71ed&'+Math.round(Math.random(0)*1000)+1"><img src="../crypt/images/reload.png"></a></td></tr></table></td>
+		</tr>
+		<tr>
+			<td colspan="4" align="center"><input type="submit" value="OK" style="background-color: #cea7ff; font-family: Arial; font-size: 9pt; font-weight: bold; border:none;"/>
+				<input type="hidden" name="entreprise" value="wagon_automotive" />
+				<input type="hidden" name="commentaire_ip" value="199.16.172.157" />
+			</td>
+		</tr>
+				<tr><td class=td><img src="/images/fl1.gif" border=0> <a href="/comment.php">All contributions</a></td></tr>
+
+	</table>
+	</form>
+</div>
+</div>
+
+</div>
+<hr class=hr>
+
+<div style="width:100%; text-align:center; align:center; " >
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_pub="tnc341";</script>
+<a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+<font size=2>
+&nbsp;<a href="http://www.transnationale.org/" target="_top"><img src="/images/dr_anglais.gif" border=0 height=18 width=34></a>
+&nbsp;<a href="http://es.transnationale.org/" target="_top"><img src="/images/dr_espagnol.gif" border="0" width=34 height=18 alt="en español"></a>
+&nbsp;<a href="http://fr.transnationale.org/" target="_top"><img src="/images/dr_francais.gif" border="0" width=34 height=18 alt="en français"></a>
+&nbsp;<a href="http://it.transnationale.org/" target="_top"><img src="/images/dr_italien.gif" border=0 width=34 height=18 alt="in italiano"></a>
+<br>
+
+ <font color=#808080>translate this page in <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Car&hl=en&ie=UTF8">arabic</a> <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Czh-CN&hl=en&ie=UTF8">chinese</a> <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Cnl&hl=en&ie=UTF8">dutch</a> <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Cde&hl=en&ie=UTF8">german</a> <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Cja&hl=en&ie=UTF8">japanese</a> <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Cko&hl=en&ie=UTF8">korean</a> <a class=struc href="http://www.google.com/translate?u=http%3A%2F%2Fwww.transnationale.org%2Fcompanies%2Fwagon_automotive.php&langpair=en%7Cru&hl=en&ie=UTF8">russian</a>
+
+</font><br><a href="/aide.php#legal" class=struc>Legal notice</a><font color=white> © T&C 1999-2010
+</font></div>
+
+</div>
+
+<div style="position: absolute;left:892px;top:0;width: 170px;">
+<style type="text/css">
+a.ad:hover {background-color:#4a4a4a ;}
+</style>
+
+<table width=200 border=0 cellspacing=0 cellpadding=0 align=left>
+<tr><td class=tdossier bgcolor=#5d009d>
+<font style="font-size:10pt;">&nbsp;CONTRIBUTIONS</font>
+</td></tr><tr><td>
+
+
+
+<div class="commentaire_global" align="left">
+<div class="commentaire">
+<div class="commentaire_pair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/johnson_johnson.php">Johnson johnson</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/johnson_johnson.php#comment">Johnson & Johnson will pay $78 million to settle U.S. and UK charges that it paid bribes and kickbac</a> -  16 April 2011 at 18h50</span></a></div>
+</div>
+<div class="commentaire_impair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/koch_industries.php">Koch industries</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/koch_industries.php#comment">consumer</a> -  14 April 2011 at 21h38</span></a></div>
+</div>
+<div class="commentaire_pair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/artemis.php">Artemis</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/artemis.php#comment">President, Coulson Realty Group</a> -  18 February 2011 at 00h38</span></a></div>
+</div>
+<div class="commentaire_impair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/nestle.php">Nestle</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/nestle.php#comment">Add Product Name: Allen's "Fantales"</a> -  20 December 2010 at 22h46</span></a></div>
+</div>
+<div class="commentaire_pair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/cominak_compagnie_miniere_d_akouta.php">Cominak compagnie miniere d akouta</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/cominak_compagnie_miniere_d_akouta.php#comment">Meme</a> -  17 November 2010 at 15h15</span></a></div>
+</div>
+<div class="commentaire_impair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/alstom.php">Alstom</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/alstom.php#comment">Allegation of intellectual property violation</a> -  20 October 2010 at 09h19</span></a></div>
+</div>
+<div class="commentaire_pair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/unilever.php">Unilever</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/unilever.php#comment">mr</a> -  6 January 2010 at 10h26</span></a></div>
+</div>
+<div class="commentaire_impair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/marathon_oil_group.php">Marathon oil group</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/marathon_oil_group.php#comment">Marathon Oil/Angola</a> -  15 December 2009 at 15h31</span></a></div>
+</div>
+<div class="commentaire_pair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/marathon_oil_group.php">Marathon oil group</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/marathon_oil_group.php#comment">Dude</a> -  15 December 2009 at 15h28</span></a></div>
+</div>
+<div class="commentaire_impair">
+<div align="left"><span class="commentaire_titre"><a href="/companies/acsa_argentina.php">Acsa argentina</a></span>&nbsp;&nbsp;&nbsp;<span class="commentaire"><a href="/companies/acsa_argentina.php#comment">Mr.</a> -  26 November 2009 at 19h16</span></a></div>
+</div>
+
+<div class="commentaire_pair">
+<img src="/images/fl1.gif" border=0> <a href="/comment.php">All the contributions</a>
+</div>
+</div></div></td></tr></table>
+
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-322621-1";
+urchinTracker();
+</script>
+</div></body></html>

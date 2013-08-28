@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<TITLE>Bob Taylor's Classic Autos</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Classic, Muscle cars, street rods, collectibles, antiques, corvettes, investments, hot rods, street machines, dream cars, chevrolet, Chevelle, camaro, ford, pontiac, mitsubishi, mustangs, vipers, prowlers, AC Cobra, Porsche, Deloria, Trans Am, Cutlass, Monte Carlo,pickups, Jeeps, Anglia, belalir, impala">
+<meta name="description" content="If we do not have it in inventory, we will try to find it for you!  Don't invest in wall street, invest in Classic Auto">
+<meta NAME="robots" CONTENT="index,follow">
+<meta NAME="rating" CONTENT="Safe For Kids">
+<meta NAME="Classification" CONTENT="Automotive">
+<meta NAME="revisit-after" content="7 days">
+<meta NAME="distribution" content="Global">
+
+<link rel="stylesheet" href="common/style.css" />
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function ListCars(cartype)
+	{
+    document.viewForm.choice.value=cartype;
+		document.viewForm.submit();
+	}
+var theImagesL = new Array() 
+theImagesL[0] = 'frontL1.jpg'
+theImagesL[1] = 'frontL2.jpg'
+theImagesL[2] = 'frontL3.jpg'
+theImagesL[3] = 'frontL4.jpg'
+theImagesL[4] = 'frontL5.jpg'
+
+
+var i = 0
+var p = theImagesL.length;
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+   preBuffer[i] = new Image()
+   preBuffer[i].src = theImagesL[i]
+}
+//get a random number
+var whichImageL = Math.round(Math.random()*(p-1));
+
+function showImageL(){
+document.write('<img src="images/'+theImagesL[whichImageL]+'" WIDTH=254 HEIGHT=186>');
+}
+
+var theImagesR = new Array() 
+theImagesR[0] = 'frontR1.jpg'
+theImagesR[1] = 'frontR2.jpg'
+theImagesR[2] = 'frontR3.jpg'
+theImagesR[3] = 'frontR4.jpg'
+theImagesR[4] = 'frontR5.jpg'
+
+
+var j = 0
+var q = theImagesR.length;
+var preBuffer = new Array()
+for (j = 0; j < q; j++){
+   preBuffer[j] = new Image()
+   preBuffer[j].src = theImagesR[j]
+}
+//get a random number
+var whichImageR = Math.round(Math.random()*(q-1));
+
+function showImageR(){
+document.write('<img src="images/'+theImagesR[whichImageR]+'" WIDTH=254 HEIGHT=186>');
+}
+-->
+</script>
+<!-- <bgsound src="409.wav" loop="0"> -->
+</HEAD>
+<BODY BGCOLOR=#000000 link="red" vlink="red">
+<form name='viewForm' action='ListCars.asp' method='get'>
+<input type='hidden' name='choice'></form>
+<table width="100%" height="100%" border=0>
+  <tr>
+	  <td align="center" valign="middle">
+		  <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+ WIDTH="600" HEIGHT="230" id="holder" ALIGN="">
+ <PARAM NAME=movie VALUE="holder.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#000000> <EMBED src="holder.swf" quality=high bgcolor=#000000  WIDTH="600" HEIGHT="230" NAME="holder" ALIGN=""
+ TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+</OBJECT>
+<br><br>&nbsp;&nbsp;
+	<a href="sales.aspx"  class="frontbottom">Enter</a>
+    </td>
+	</tr>
+</table>
+</BODY>
+</HTML>

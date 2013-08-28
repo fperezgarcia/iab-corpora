@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Zip Code Login by AAA Ohio
+</title>
+	<link href="http://www0.ohio.aaa.com/stylesheets/main.css?1375823364" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://www2.ohio.aaa.com/stylesheets/secondary.css?1314789034" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://www1.ohio.aaa.com/javascripts/jquery-msgbox/javascript/msgbox/jquery.msgbox.css?1360002651" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://www1.ohio.aaa.com/javascripts/jquery.lightbox/1.5.8/themes/default/jquery.lightbox.css?1331069133" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://www0.ohio.aaa.com/javascripts/jquery-snowfall/1.5/style.css?1323979295" media="screen" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" media="screen" rel="stylesheet" type="text/css" />
+ <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="javascript/lightbox-evolution/themes/default/jquery.lightbox.ie6.css" />
+ <![endif]-->
+	<script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="http://www1.ohio.aaa.com/javascripts/all.js?1366730443" type="text/javascript"></script>
+<script type="text/javascript" src="https://chat.ohio.aaa.com/SightMaxAgentInterface/sightmax.smjs?accountID=1&siteID=1&queueID=5&jquery=True&json=True&v=0"></script>
+	
+
+
+
+<script type="text/javascript">
+	    var _gaq = _gaq || [];
+    	_gaq.push(['_setAccount', 'UA-741983-3']);
+    	_gaq.push(['_trackPageview']);
+		function recordOutboundLink(link, category, action) {
+    		_gat._getTrackerByName()._trackEvent(category, action);
+    		setTimeout('document.location = "' + link.href + '"', 100);
+  		}
+</script>
+
+
+
+ <script language=javascript>
+ // UPDATED RELEASE 57
+var popurl = "www.aaa.com/stop";
+var popWidth = 800;
+var popHeight = 800;
+var inTextDefault = 'Click Here';
+var defaultOutOf = 5;
+var permcookie = 'surveypermcookie';
+var sesscookie = 'surveysessioncookie';
+var dhtmlcookie = 'dhtmlsessioncookie';
+var domain;
+var dropboxleft=200 //set left position of box (in px)
+var dropboxtop=200 //set top position of box (in px)
+var dropspeed=15 //set speed of drop animation (larger=faster)
+var ie=document.all
+var dom=document.getElementById
+var movewindowid;
+var movewindowYval=100;
+var dropspeed=3;
+
+function displaySurvey(){
+  if (!dom&&!ie) {
+    return
+  }
+  surveywindow=document.getElementById("SurveyRequest");			
+  surveywindow.style.visibility="visible";		    
+  surveywindow.style.left=dropboxleft;		    
+  surveywindow.style.top=dropboxtop + 28;   		    
+  surveyheader=document.getElementById("SurveyHeader");			
+  surveyheader.style.visibility="visible";		    
+  surveyheader.style.left=dropboxleft;		    
+  surveyheader.style.top=dropboxtop;
+  movewindowYval = movewindowYval + parseInt(surveywindow.style.top);
+  movewindowid=setInterval("movewindow()",75);
+}
+function hideSurvey()
+{
+	surveywindow.style.visibility="hidden";  		    
+	surveyheader.style.visibility="hidden"; 		  
+}
+function showSurvey()
+{   		    
+	surveywindow.style.visibility="visible";
+	surveyheader.style.visibility="visible";
+}
+
+function movewindow()
+{
+	if (parseInt(surveywindow.style.top)<movewindowYval)
+	{
+		surveywindow.style.top=parseInt(surveywindow.style.top)+parseInt(dropspeed)+"px";
+		surveyheader.style.top=parseInt(surveyheader.style.top)+parseInt(dropspeed)+"px";
+	}
+	else
+	{
+		clearInterval(movewindowid);
+	}
+}
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = ""
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) {
+      offset += search.length
+      end = document.cookie.indexOf(";", offset)
+      if (end == -1)
+        end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+    }
+  }
+  return returnvalue;
+}
+
+function setSurveyDHTML(OutOfNumber,inDomain, inLeft, inTop) {
+  if (inLeft==undefined)
+  {
+    // do nothing
+  } else {
+    dropboxleft = inLeft;
+  }
+  if (inTop==undefined)
+  {
+    // do nothing
+  } else {
+    dropboxtop = inTop;
+  }
+  if (inDomain==undefined)
+  {
+     inDomain='aaa.com';
+  }
+  domain=inDomain
+  if (domain=='DEFAULT')
+  {
+    domain=undefined;
+  }
+  if (OutOfNumber==undefined)
+  {
+    OutOfNumber=defaultOutOf;
+  }
+  if (get_cookie(sesscookie)==sesscookie + '.showsurvey=NO')
+  { // DO NOTHING
+  } 
+  else if (get_cookie(sesscookie)==sesscookie +'.showsurvey=YES')
+  {
+    if (get_cookie(permcookie)==permcookie + '.invited=YES')
+    {
+      writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+    } else {
+      // do nothing because popups should not have showsurvey=yes
+    }
+  } else {
+    if (get_cookie(permcookie)==permcookie + '.invited=YES')
+    {
+      writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+    } else {
+      var randomnumber=Math.floor(Math.random()*OutOfNumber);
+      if (randomnumber==0)
+      {
+        writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+        if (domain==undefined)
+        {
+          writePermCookie();
+        } else {
+          writePermCookie(domain);
+        }
+        displaySurvey();
+      } else {
+        writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+      } 
+    }
+  }
+}
+
+function doDHTMLWindow(OutOfNumber,inDomain,writeCookie, inLeft, inTop) {
+  if (inLeft==undefined)
+  {
+    // do nothing
+  } else {
+    dropboxleft = inLeft;
+  }
+  if (inTop==undefined)
+  {
+    // do nothing
+  } else {
+    dropboxtop = inTop;
+  }
+  if (inDomain==undefined)
+  {
+     inDomain='aaa.com';
+  }
+  if (writeCookie==undefined) {
+    writeCookie = 'YES';
+  }
+  domain=inDomain
+  if (domain=='DEFAULT')
+  {
+    domain=undefined;
+  }
+  if (OutOfNumber==undefined)
+  {
+    OutOfNumber=defaultOutOf;
+  }
+  domain=inDomain
+  if (domain=='DEFAULT')
+  {
+    domain=undefined;
+  }
+
+  if (get_cookie(dhtmlcookie)==dhtmlcookie + '.show=NO')
+  { // DO NOTHING
+  } else {
+      var randomnumber=Math.floor(Math.random()*OutOfNumber);
+      if (randomnumber==0)
+      {
+        if (writeCookie=='YES')
+          writeDHTMLCookie(dhtmlcookie + '.show=NO',domain);
+        displaySurvey();
+      } 
+  }
+}
+
+
+
+
+
+
+function setSurveyLink(inURL,inText,OutOfNumber,inDomain)
+{
+  if (inDomain==undefined)
+  {
+     inDomain='aaa.com';
+  }
+  domain=inDomain
+  if (domain=='DEFAULT')
+  {
+    domain=undefined;
+  }
+  if (inText==undefined)
+  {
+    inText = inTextDefault;
+  }
+  if (OutOfNumber==undefined)
+  {
+    OutOfNumber=defaultOutOf;
+  }
+  if (inURL==undefined)
+  {
+    alert('Configuration Error');
+  } else {
+    if (get_cookie(sesscookie)==sesscookie + '.showsurvey=NO')
+    { // DO NOTHING
+    } 
+    else if (get_cookie(sesscookie)==sesscookie +'.showsurvey=YES')
+    {
+      if (get_cookie(permcookie)==permcookie + '.invited=YES')
+      {
+        writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+      } else {
+        loadHTML(inURL,inText,domain);
+      }
+    } else {
+      if (get_cookie(permcookie)==permcookie + '.invited=YES')
+      {
+        writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+      } else {
+        var randomnumber=Math.floor(Math.random()*OutOfNumber);
+        if (randomnumber==0)
+        {
+          writeSessionCookie(sesscookie + '.showsurvey=YES',domain);
+          loadHTML(inURL,inText,domain);
+        } else {
+          writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+        } 
+      }
+    }
+  }
+}
+
+function setSurvey(inURL,inWidth,inHeight,OutOfNumber,isPopUp,inDomain)
+{
+  if (inURL==undefined)
+  {
+    alert('Configuration Error');
+  }
+  if (inWidth==undefined)
+  {
+    inWidth =600;
+  }
+
+  if (inHeight==undefined)
+  {
+    inHeight =450;
+  }
+
+  if (OutOfNumber==undefined)
+  {
+    OutOfNumber = defaultOutOf;
+  }
+  if (inDomain==undefined)
+  {
+     inDomain='aaa.com';
+  }
+  if (isPopUp==undefined)
+  {
+     isPopUp='NO';
+  }
+
+  domain=inDomain
+  if (domain=='DEFAULT')
+  {
+    domain=undefined;
+  }
+
+  popurl = inURL;
+  popWidth = inWidth;
+  popHeight = inHeight;
+
+    if (get_cookie(permcookie)==permcookie + '.invited=YES')
+    {
+    	writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+    } else {
+    	
+      var randomnumber=Math.floor(Math.random()*OutOfNumber);
+    if (randomnumber==0)
+      {
+        writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+		if (isPopUp == 'YES')
+        { 
+          	loadPopUp(domain);
+        } else {
+          	loadPopUnder(domain);
+        }
+      } else {
+        writeSessionCookie(sesscookie + '.showsurvey=NO',domain);
+      } 
+    }
+
+}
+
+function loadPopUp(inDomain)
+{
+  if (inDomain==undefined)
+  {
+    writePermCookie();
+  } else {
+    writePermCookie(inDomain);
+  }
+  winpops=window.open(popurl,"","width=" +popWidth+",height="+popHeight+",status,scrollbars,resizable");
+  //winpops.focus();
+}
+
+function loadPopUnder(inDomain)
+{
+  if (inDomain==undefined)
+  {
+    writePermCookie();
+  } else {
+    writePermCookie(inDomain);
+  }
+  winpops=window.open(popurl,"","width=" +popWidth+",height="+popHeight+",status,scrollbars,resizable");
+  winpops.blur();
+  window.focus();
+}
+
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = ""
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) {
+      offset += search.length
+      end = document.cookie.indexOf(";", offset)
+      if (end == -1)
+        end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+    }
+  }
+  return returnvalue;
+}
+
+
+function loadHTML(inURL,inText,inDomain)
+{
+  if (inDomain==undefined)
+  {
+    document.write('<BR><a href=' + inURL + ' onclick=javascript:writePermCookie() target=_new>' + inText + '</a>');
+  } else {
+    document.write('<BR><a href=' + inURL + ' onclick=javascript:writePermCookie("' + inDomain + '") target=_new>' + inText + '</a>');
+  }
+}
+
+function writeSessionCookie (cookieValue,inDomain) {
+  if (inDomain==undefined)
+  {
+    document.cookie = sesscookie + "=" + cookieValue + "; path=/";
+  } else {
+    document.cookie = sesscookie + "=" + cookieValue + "; path=/; domain=" + inDomain;
+  }
+}
+
+function writeDHTMLCookie (cookieValue,inDomain) {
+  if (inDomain==undefined)
+  {
+    document.cookie = dhtmlcookie + "=" + cookieValue + "; path=/";
+  } else {
+    document.cookie = dhtmlcookie + "=" + cookieValue + "; path=/; domain=" + inDomain;
+  }
+}
+
+function writePermCookie (inDomain) {
+  var expdate = new Date();
+  expdate.setTime(expdate.getTime() +  (15768000000)); 
+  if (inDomain==undefined)
+  {
+    document.cookie=permcookie + "=" + permcookie + ".invited=YES; path=/; expires=" + expdate.toGMTString();
+  } else {
+    document.cookie=permcookie + "=" + permcookie + ".invited=YES; path=/; domain=" + inDomain + "; expires=" + expdate.toGMTString();
+  }
+}
+ 
+ </script>
+
+
+	<meta content="authenticity_token" name="csrf-param" />
+<meta content="73l+U/elkJvPry+S/ITv/OwMeZKDj5wPj5xk2FwoFCM=" name="csrf-token" />
+	
+	<style>
+		input.FancyText {
+			font-weight: bold;
+			font-size: 24px; /* or larger */
+			height: 1em; /* or larger */
+			width: 80px; /* or larger */
+		}
+	</style>
+
+
+	<!--http://stackoverflow.com/questions/807408/showing-loading-animation-in-center-of-page-while-making-a-call-to-action-method-->
+	    <script type="text/javascript">
+	    var spinnerVisible = false;
+	    function showProgress() {
+	        if (!spinnerVisible) {
+	            $("#loaderDiv").fadeIn("fast");
+	            spinnerVisible = true;
+	        }
+	    };
+	    function hideProgress() {
+	        if (spinnerVisible) {
+	            var spinner = $("#loaderDiv");
+	            spinner.stop();
+	            spinner.fadeOut("fast");
+	            spinnerVisible = false;
+	        }
+	    };
+	</script>
+		
+<style>
+	#loaderDiv{
+		position: fixed;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 10000;
+		background: url('/images/translucent_bg.png');
+	}
+	#outermost{
+	}
+</style>
+
+<script>
+
+$(document).ready(function() {
+		// only show the survey IF the have the zip code filter already satisfied
+	 setSurvey('/survey/invitation.html','400','180','2','YES','aaa.com');
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+});
+
+function check_for_valid_zip(data,user_zip){
+	
+	//alert("parsing ajax call...")
+	if (data == null)
+	{
+		alert("NULL from ajax response!");
+		return;
+	}
+	if ( data.location.zip_code )
+	{
+		// this cookie could very well NOT be the users zip - so keep it named 'zip_code_filter'
+		setCookie('zip_code_filter',user_zip,1825)
+		$.msgbox("<p><span style='font-size:24pt;'>Thank you.</span></p>  <p>Welcome to your club's website, Ohio.AAA.com.</p>", {type: "info"});
+		return
+	}
+	else
+	{
+		//alert("no match message...")
+		$.msgbox("<span style='font-size:18pt;line-height:120%;'>We are sorry... <br/> </span> <span style='font-size:14pt;line-height:120%;'>AAA Ohio does not provide service in your area.</span><br/><br/><span style='font-size:10pt'>Click <b>Try Again</b></span> below if you like to try your zip code again.<br/><br/><span style='font-size:10pt'>Click <b>Find My Club</b></span> below and we will take you to the AAA.com website, where you can enter your zip and be directed to your local club.", {
+		  type: "confirm",
+		  buttons : [
+		    {type: "submit", value: "Try Again"},
+		    {type: "submit", value: "Find My Club"},
+		  ]
+		}, function(result) {
+			if( result == 'Find My Club')
+			{
+				document.location='http://www.aaa.com/stop';
+			}
+			else
+			{
+				//alert("wanted to try it again...")
+				document.location = document.URL;
+			}
+			
+		});
+	}
+	
+	
+	// for (var counter in data )
+	// {
+	// 	if ( data[counter].location.zip_code == user_zip)
+	// 	{
+	// 		setCookie('zip',true,1460)
+	// 		return
+	// 	}
+	// }
+	
+	//document.location='http://www.aaa.com/stop';
+}
+
+</script>
+
+<script>
+var cookieEnabled=(navigator.cookieEnabled)? true : false
+
+//if not IE4+ nor NS6+
+if (typeof navigator.cookieEnabled=="undefined" && !cookieEnabled){ 
+document.cookie="testcookie"
+cookieEnabled=(document.cookie.indexOf("testcookie")!=-1)? true : false
+}
+
+if (!cookieEnabled)
+{
+	if (document.URL.indexOf('/error-pages/enable-cookies.html') == -1 && document.URL.indexOf('/help') == -1)
+	{
+		document.location="/error-pages/enable-cookies.html";
+	}
+}
+
+/*
+$(document).ready(function() {
+	$(document).snowfall({round : true, minSize : 2, maxSize : 5, flakeCount: 25});
+})
+*/
+
+</script>
+
+<script>
+	function setCookie(c_name,value,exdays)
+	{
+		var exdate=new Date();
+		exdate.setDate(exdate.getDate() + exdays);
+		var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString() + ";domain=.ohio.aaa.com;path=/");
+		document.cookie=c_name + "=" + c_value;
+	}
+
+	function getCookie(c_name)
+	{
+	var i,x,y,ARRcookies=document.cookie.split(";");
+	for (i=0;i<ARRcookies.length;i++)
+	{
+	  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+	  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+	  x=x.replace(/^\s+|\s+$/g,"");
+	  if (x==c_name)
+	    {
+	    return unescape(y);
+	    }
+	  }
+	}
+
+</script>
+
+
+
+
+<link rel="stylesheet" href="/menu/css/megamenu.css" type="text/css" media="screen" /><!-- Mega Menu Stylesheet -->
+<script type="text/javascript" src="/menu/js/megamenu_plugins.js"></script><!-- Mega Menu Plugins -->
+<script type="text/javascript" src="/menu/js/megamenu.js"></script><!-- Mega Menu Script -->
+<script>
+$(document).ready(function($){
+	$('.megamenu').megaMenuCompleteSet({
+		menu_speed_show : 300, // Time (in milliseconds) to show a drop down
+		menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
+		menu_speed_delay : 200, // Time (in milliseconds) before showing a drop down
+		menu_effect : 'hover_fade', // Drop down effect, choose between 'hover_fade', 'hover_slide', etc.
+		menu_click_outside : 0, // Clicks outside the drop down close it (1 = true, 0 = false)
+		menu_show_onload : 0 // Drop down to show on page load (type the number of the drop down, 0 for none)
+	});
+});
+</script>
+
+  <script>
+         $(function(){
+             $('.aad-div').tabSlideOut({
+                 tabHandle: '.handle',                              //class of the element that will be your tab
+                 pathToTabImage: '/images/ds_cruising_tab.png',          //path to the image for the tab (optionaly can be set using css)
+                 imageHeight: '163px',                               //height of tab image
+                 imageWidth: '160px',                               //width of tab image                     
+                 tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
+                 speed: 300,                                        //speed of animation
+                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                 topPos: '260px',                                   //position from the top
+                 fixedPosition: true                               //options: true makes it stick(fixed position) on scroll
+             });
+         });
+
+         </script>
+
+		
+</head>
+
+<!-- load up the navigation needed to render all the partials and put vars into request -->
+
+<body>
+	
+
+	<!-- need this for chat server -->
+			<div id="imageformac"></div>
+	<!-- end for chat server -->
+
+	<div id="loaderDiv" style="display:none;"><img src="/images/ajax-loader.gif" style="position: fixed;top: 50%;left: 50%;"></div>
+
+	<div id="outermost">
+
+		<div id="bgOuter">
+			<img src="/images/backgrounds/clean_road.jpg" width="100%" height="100%" alt="">
+		</div>
+		
+		<div id="outer">
+			<!-- Top Header -->
+
+				<div id="header">
+	
+		<ul id="status_tab">
+		
+			<li id="status"><p>Welcome Guest</p></li>
+			<li><a href="https://memberships.ohio.aaa.com/accounts/login"><img src="/images/tab_login.png"/></a></li>
+
+	
+		</ul>
+		<ul id="contact">
+			<li>
+					<a href="https://memberships.ohio.aaa.com/memberships/join" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>we are loading your join page.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>this process can take 15-20 seconds.  </p> <p> you will be forwarded once your data is retrieved. </p> <p> please wait...</p>', {type : 'info'});showProgress();">join</a>
+			</li>
+			
+				
+			
+			<li><span>|</span></li>
+			<li><a href="/help">contact us</a></li>
+			<li><span>|</span></li>
+			<li>888.222.6446</li>
+			<li><span>|</span></li>
+			<li><a href="/help/locations.html">store locations</a></li>
+			<li style="margin-left: 15px;"><a target="_blank" href="http://AAA.com/Facebook" style="border-bottom: none !important;"><img src="/images/facebook_icon.png"/></a></li>
+			<li style="margin-left: 10px;"><a target="_blank" href="http://AAA.com/Twitter" style="border-bottom: none !important;"><img src="/images/twitter_icon.png"/></a></li>
+		</ul>
+
+        <form action="/apps/search/search-results.html">
+            <input type="text" name="q" id="txtBoxSearch" value="Search" onfocus="this.value=(this.value==this.defaultValue)?'':this.value;return true;"/>
+            <div id="searchGoBtn"><button value="submit" class="submitBtn" type="submit"><span>Go!</span></button></div>
+		</form>
+	</div> 
+			
+			<div id="wrapper"><!-- Shadow & Blue -->
+				<!-- top nav -->
+				<!-- Navigation -->
+	
+
+		
+		
+<script>
+function hoverState(dropdownclass, topSection){
+$("."+dropdownclass).mouseenter(function(){
+  $("#"+topSection).css("background-position","bottom left");
+}); 
+
+$("."+dropdownclass).mouseleave(function(){
+  $("#"+topSection).css("background-position","top right");
+}); 
+
+$("#"+topSection).mouseenter(function(){
+  $("#"+topSection).css("background-position","bottom left");
+}); 
+
+$("#"+topSection).mouseleave(function(){
+  $("#"+topSection).css("background-position","top right");
+}); 
+
+}
+</script>
+
+	 
+<div class="megamenu_container "><!-- Begin Menu Container -->
+    <ul class="megamenu"><!-- Begin Mega Menu -->
+     <!-- Begin Home Item -->
+      <li><a href="/"><img src="/images/nav/nav_home.png" border="0" /></a></li>       
+      <!-- End Home Item -->
+        
+        <!-- Begin Member Discounts  onmouseover="hoverState('on', 'discounts');" onmouseout="hoverState('off', 'discounts');"  -->
+        <li onmouseover="hoverState('dropdiscounts', 'discounts');"><a href="/member-discounts" id="discounts" class="nope"></a>
+        	<div class="drop3columns dropcontent dropdiscounts">
+        	    <div class="col_3">
+                	<ul class="topNav">
+                		<li class="noBorderTop levelone"><a href="/member-discounts/"><strong>Member Discounts Overview</strong></a></li>
+						<li class="levelone"><a href="/member-discounts/hot-deals.html">Hot Deals</a></li>
+                		<li class="levelone"><a href="/member-discounts/new-partners.html">Newest Partners</a></li>
+                		<li class="levelone"><a href="/member-discounts/forms/suggest-a-partner.html">Suggest a Partner</a></li>
+                		<li class="levelone"><a href="http://eshop.ohio.aaa.com/index.php/">Shop Online</a></li>
+                		<li class="noBorderTop leveltwo"><a href="http://eshop.ohio.aaa.com/index.php/attraction-tickets.html">Attraction Tickets</a></li>
+                		<li class="noBorderTop leveltwo"><a href="http://eshop.ohio.aaa.com/index.php/luggage-and-bags.html">Luggage</a></li>
+						<li class="levelone"><a href="http://www.aaa.com/memberdeals" target="_blank">Daily Deals</a></li>
+                	</ul>
+                </div>
+		 	</div>
+		</li>
+        <!-- End Member Discounts -->
+        
+               
+        <!-- Begin Cars and Driving -->
+        <li onmouseover="hoverState('dropcars', 'cars');"><a href="/cars-and-driving" id="cars" class="nope"></a>
+              <div class="drop3columns dropcontent dropcars">
+        	    <div class="col_3">
+                	<ul class="topNav">
+						<li class="noBorderTop levelone"><a href="/cars-and-driving/"><strong>Cars &amp; Driving Overview</strong></a></li>
+                		<li class="levelone"><a href="/cars-and-driving/roadside-assistance.html">Roadside Assistance</a></li>
+						<li class="levelone"><a href="/cars-and-driving/car-buying-resource.html">Car Buying</a></li>
+						<li class="noBorderTop leveltwo"><a href="/financial/auto-loans.html">AAA Auto Loans</a></li>
+	                	<li class="levelone"><a href="/cars-and-driving/car-maintenance/index.html">Car Maintenance & Repair</a></li>
+	                	<li class="noBorderTop leveltwo"><a href="/cars-and-driving/car-maintenance/repair.html">Approved Repair Facilities</a></li>
+	                	<li class="noBorderTop leveltwo"><a href="/cars-and-driving/car-maintenance/car-care-plus.html">Car Care Plus Facilities</a></li>
+						<li class="noBorderTop leveltwo"><a href="/cars-and-driving/forms/ask-a-tech.html">Ask A Tech</a></li>
+	                	
+	                	<li class="levelone"><a href="/cars-and-driving/toolbox.html">Drivers Toolbox </a></li>
+						<li class="levelone"><a href="http://teendriving.aaa.com" target="_blank">Keys2Drive: The AAA Guide to Teen Driver Safety</a></li>
+	                	<li class="levelone"><a href="/cars-and-driving/traffic-safety.html">Traffic Safety</a></li>
+	                	<li class="levelone"><a href="/cars-and-driving/government-affairs.html">Government Affairs</a></li>
+                	</ul>
+                </div>
+		 	</div>
+        </li>
+        <!-- End Cars and Driving -->
+        
+	                	
+        <!-- Begin Road Trips-->
+        <li onmouseover="hoverState('droproadTrips', 'roadTrips');">
+        	<a href="/road-trips" id="roadTrips" class="nope"></a>
+            <div class="drop3columns dropcontent droproadTrips">
+        	    <div class="col_3">
+                	<ul class="topNav">
+						<li class="noBorderTop levelone"><a href="/road-trips/"><strong>Road Trips Overview</strong></a></li>
+                		<li class="levelone"><a href="/road-trips/triptik.html">TripTik Routings</a></li>
+                		<li class="levelone"><a href="/road-trips/tourbooks-maps.html">Tourbooks & Maps</a></li>
+                		<li class="levelone"><a href="/road-trips/fuel-prices.html">Fuel Prices</a></li>
+                	</ul>
+                </div>
+		 	</div>          
+         </li>
+        <!-- End Road Trips -->
+        
+     
+        
+        
+         <!-- Begin Travel Planning -->
+        <li onmouseover="hoverState('travel', 'travel');">
+        	<a href="/travel-planning" id="travel" class="nope"></a>
+            
+
+            <div class="drop6columns dropcontent drop travel" style="background-color: #004083 !important; background-image: none !important;">
+        	<div style="padding: 0px 5px 0px 10px;">
+        	<table style="width: 460px;">
+				<tr>
+        			<td colspan="2"><ul class="topNav2col"><li class="noBorderTop levelone2col"><a href="/travel-planning/"><strong>Travel Planning Overview</strong></a></li></ul></td>
+        		</tr>
+        	<tr>
+        		<td style="width: 226px; border-right: 1px solid #809cbd;vertical-align: top;">
+        			<ul class="topNav2col" style="margin-right: 10px;">
+                		<li class="levelone2col"><a href="/travel-planning/hotels.html">Hotels</a></li>
+                		<li class="levelone2col"><a href="/travel-planning/flights.html">Flights</a></li>
+                		<li class="levelone2col"><a href="/travel-planning/car-rental.html">Car Rental</a></li>
+                		<li class="levelone2col"><a href="/travel-planning/cruises.html">Cruises</a></li>
+                		<li class="levelone2col"><a href="/travel-planning/vacations/index.html">Vacations</a></li>
+                		<li class="noBorderTop leveltwo2col"><a href="/travel-planning/vacations/packages/packages-us-and-canada.html">US & Canada</a></li>
+                		<li class="noBorderTop leveltwo2col"><a href="/travel-planning/vacations/packages/packages-caribbean-and-mexico.html">The Caribbean & Mexico</a></li>
+                		<li class="noBorderTop leveltwo2col"><a href="/travel-planning/vacations/packages/packages-europe.html">Europe</a></li>
+                		<li class="noBorderTop leveltwo2col"><a href="/travel-planning/vacations/packages/packages-worldwide.html">Worldwide</a></li>
+
+                 	</ul>
+        		</td>
+        		<td style="width: 226px;vertical-align: top; ">
+       				<ul class="topNav2col" style="margin-left: 10px;">
+						<li class="levelone2col"><a href="/travel-planning/disney.html">Disney</a></li>
+						<li class="levelone2col"><a href="/travel-planning/hot-deals.html">Hot Deals & Special Offers</a></li>
+						<li class="levelone2col"><a href="/travel-planning/activities.html">Sightseeing &amp; Excursions</a></li>
+						<li class="levelone2col"><a href="/travel-planning/honeymoon.html">Honeymoon Resources </a></li>
+						<li class="levelone2col"><a href="/travel-planning/aaa-escorted-trips.html">Escorted Trips</a></li>
+						<li class="levelone2col"><a href="/travel-planning/travel-guides.html">AAA Travel Guides</a></li>
+                		<li class="levelone2col"><a href="/travel-planning/travel-events.html">Travel Events</a></li>
+                		<li class="levelone2col"><a href="/financial/foreign-currency.html">Foreign Currency</a></li>
+                	</ul>
+         		</td>
+        	</tr>
+        	</table>
+        	</div>
+			</div>
+         </li>
+        <!-- End Travel Planning -->
+        
+        
+        
+        
+         <!-- Begin Insurance -->
+        <li onmouseover="hoverState('dropinsurance', 'insurance');">
+        	<a href="/insurance" id="insurance" class="nope"></a>
+	        	<div class="drop3columns dropcontent dropinsurance">
+	        	    <div class="col_3">
+	                	<ul class="topNav">
+						<li class="noBorderTop levelone"><a href="/insurance/"><strong>Insurance Overview</strong></a></li>
+	                		<li class="levelone"><a href="/insurance/auto.html">Auto</a></li>
+	                		<li class="levelone"><a href="/insurance/home.html">Home</a></li>
+	                		<li class="levelone"><a href="/insurance/life.html">Life</a></li>
+	                		<li class="levelone"><a href="/insurance/specialty-insurance.html">Specialty Coverage</a></li>
+							<li class="levelone"><a href="/insurance/forms/business.html">Business Insurance</a></li>
+	                		<li class="levelone"><a href="/insurance/policy-service.html">Policy Service</a></li>
+	                	</ul>
+	                </div>
+			 	</div>  
+	         </li>
+        <!-- End Insurance -->
+
+		
+
+     
+       <li onmouseover="hoverState('dropmembership', 'membership');">
+        	<a href="/membership" id="membership" class="nope"></a>
+        	<div class="drop6columns align_right dropcontent dropmembership" style="background-color: #004083 !important; background-image: none !important;">
+        	<div style="padding: 0px 5px 0px 10px;">
+        	<table style="width: 460px;">
+        		<tr>
+        		<td colspan="2"><ul class="topNav2col"><li class="noBorderTop levelone2col"><a href="/membership/"><strong>Membership Overview</strong></a></li></ul></td>
+        		
+        	</tr>
+			<!-- <tr style="border-bottom: 1px solid #809cbd;">
+        		<td colspan="2"><ul class="topNav2col"><li class="noBorderTop levelone2col"><a href="/membership/2012GiftBOGO.html"> <strong>Buy One Gift Membership, Get One Free</strong></a></li></ul></td>
+        		
+        	</tr> -->
+			
+			<tr style="border-bottom: 1px solid #809cbd;">
+        		<td><h4>About Membership</h4></td>
+        		<td><h4>My Membership</h4></td>
+        	</tr>
+        	<tr>
+        		<td style="width: 226px; border-right: 1px solid #809cbd;vertical-align: top;">
+        			<ul class="topNav2col" style="margin-right: 10px;">
+                		<li class="noBorderTop levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/join"><icon class="icon-road icon-white"></icon>Join</a></li>
+                		<li class="levelone2col"><a href="/membership/benefits-pricing/index.html">Benefits & Pricing</a>
+                			<li class="noBorderTop leveltwo2col"><a href="/membership/benefits-pricing/classic.html">Classic (from $56 per year)</a></li>
+                		<li class="noBorderTop leveltwo2col"><a href="/membership/benefits-pricing/plus.html">Plus (from $96 per year)</a></li>
+                		<li class="noBorderTop leveltwo2col"><a href="/membership/benefits-pricing/premier.html">Premier (from $136 per year)</a></li>
+                		<!-- <li class="levelone2col"><a href="#">RV / Motorcycle</a></li> -->
+                		<li class="levelone2col"><a href="/membership/benefits-pricing/index.html">Price Comparison</a></li>
+						<li class="levelone2col"><a href="https://eshop.ohio.aaa.com/index.php/aaa-foundation-for-traffic-safety.html" target="_blank"><icon class="icon-heart icon-white"></icon>Donate to the AAA Foundation for Traffic Safety</a></span></li>
+                 	</ul>
+        		</td>
+        		
+				
+				<td style="width: 226px;vertical-align: top; ">
+        			<ul class="topNav2col" style="margin-left: 10px;">	
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/renew" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-refresh icon-white"></icon>Renew Membership</a></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/change_membership_level" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-edit icon-white"></icon>Change Benefit Level</a></span></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships//auto-renew/manage" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-edit icon-white"></icon>Manage Auto Renew</a></span></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/print-membership-cards" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-print icon-white"></icon>Print AAA Cards</a></span></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/request_aaa_card" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-envelope icon-white"></icon>Request a Card</a></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/add_a_driver" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-plus-sign icon-white"></icon>Add a Driver</a></span></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are loading your membership.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded once your data is retrieved. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-edit icon-white"></icon>Edit Information</a></span></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/gift" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>We are perparing your gift form.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p>You will be forwarded to the form in just a few seconds. </p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-gift icon-white"></icon>Give AAA</a></span></li>
+						<li class="levelone2col"><a href="https://memberships.ohio.aaa.com/memberships/gift/renew" onclick="$.msgbox('<p> <span style=\'font-size:14pt;\'><br/><br/><i>we are preparing the gift renewal pages.</i></p> <p> <img src=\'/images/ajax-loader.gif\'>  </P> <p>This process can take 15-20 seconds.  </p> <p> You will be forwarded in just a few seconds.</p> <p>Please wait...</p>', {type : 'info'});showProgress();"><icon class="icon-gift icon-white"></icon>Renew a Gift Membership</a></li>
+						
+					</ul>
+        		
+       				
+					
+					
+					<!--  <ul class="topNav2col" style="margin-left: 10px;">
+                		<li class="noBorderTop levelone2col"><a href="http://memberships.ohio.aaa.com/memberships/renew">Renew</a></li>
+                		<li class="levelone2col"><a href="http://memberships.ohio.aaa.com/memberships/change_membership_level">Upgrade</a></li>
+						<li class="levelone2col"><a href="/membership/downgrade.html">Downgrade</a></li>
+						<li class="levelone2col"><a href="/membership/add-a-driver.html">Add a Driver</a></li>
+						<li class="levelone2col"><a href="/membership/remove-a-driver.html">Remove a Driver</a></li>
+						<li class="leveltwo2col"><a href="http://memberships.ohio.aaa.com/memberships" style="margin-left: 15px !important;">Check Account Status</a></li>
+						<li class="noBorderTop leveltwo2col"><a href="http://memberships.ohio.aaa.com/memberships" style="margin-left: 15px !important;">Edit Account Information</a></li>
+						<li class="noBorderTop leveltwo2col"><a href="http://memberships.ohio.aaa.com/memberships/print-membership-cards" style="margin-left: 15px !important;">Print a Temporary Card</a></li>
+						<li class="noBorderTop leveltwo2col"><a href="http://memberships.ohio.aaa.com/memberships/request_aaa_card" style="margin-left: 15px !important;">Request a Replacement Card</a></li> -->
+                	</ul>
+         		</td>
+        	</tr>
+        	<!-- <tr>
+        		<td colspan="2">	<a href="/membership/2012GiftBOGO.html"><img alt="Buy one get one free!" height="70" src="http://www3.ohio.aaa.com/images/dropdown_art2.png?1351877160" style="margin: 0px 0px 0px 10px;" width="450" /></a></td>
+        	</tr> -->
+        	
+        	</table>
+        	</div>
+           	</div>
+        </li>
+
+
+        <li onmouseover="hoverState('drophelp', 'drop');">
+        	<a href="/help" id="help" class="nope"></a>
+        	<div class="drop3columns align_right dropcontent drophelp">
+        	    <div class="col_3">
+                	<ul class="topNav">
+						<li class="noBorderTop levelone"><a href="/help/"><strong>Help Overview</strong></a></li>
+						<li class="levelone"><a href="/help/">Contact AAA</a></li>
+                		<li class="levelone"><a href="/cars-and-driving/roadside-assistance.html">Emergency Roadside Assistance</a></li>
+                		<li class="levelone"><a href="/help/locations.html">Locations</a></li>
+						<li class="levelone"><a href="http://conversations.ohio.aaa.com/events/" target="_blank">Events</a></li>
+						<li class="levelone"><a href="http://conversations.ohio.aaa.com/" target="_blank">Conversations</a></li>
+                	</ul>
+                </div>
+		 	</div>         
+		 </li>
+    
+    </ul>
+<!-- End Mega Menu -->
+
+
+</div><!-- End Menu Container -->
+<!-- End Navigation -->
+			
+
+	
+		
+		
+		
+				
+		 
+				
+						
+				<!-- Top Sub Nav -->
+				<style>
+.lnTable{
+	margin: 0px 0px 0px 12px;
+}
+.lnTable td{
+	vertical-align: top;
+	padding: 0px 0px 8px 0px;				 
+	line-height: 15px !important;
+
+}
+
+.lnTable a{
+	 /* color: #0088CC !important; */
+	 color: #666 !important;
+	 font-size:.9em;
+}
+
+
+.lnTable a:hover{
+	text-decoration: underline;
+}		
+
+</style>
+
+<!-- Sub Navigation -->
+<div id="subNavigation">
+	
+		<!-- <div style="padding: 0px; margin: 0px 0px 5px 0px; text-align: center;">
+			<a href="#"  onclick="javascript:document.location.href='http://memberships.ohio.aaa.com/accounts/login';"><img src="/images/login_button.png" width="127" height="28"></a>
+		</div> -->
+	
+	<h4><a href="/home"></a> </h4>
+	
+	
+		
+		<div class="leftnavmembership">
+			<h4>AAA Membership Center</h4>
+			<table class="lnTable">
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/join" target=""><icon class="icon-road"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/join" target="">Join AAA</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/renew" target=""><icon class="icon-refresh"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/renew" target="">Renew My Membership</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/change_membership_level" target=""><icon class="icon-edit"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/change_membership_level" target="">Change Benefit Level</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/" target=""><icon class="icon-edit"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/" target="">Manage Auto Renew</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/print-membership-cards" target=""><icon class="icon-print"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/print-membership-cards" target="">Print AAA Cards</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/request_aaa_card" target=""><icon class="icon-envelope"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/request_aaa_card" target="">Request a Card</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/add_a_driver" target=""><icon class="icon-plus-sign"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/add_a_driver" target="">Add a Driver</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/" target=""><icon class="icon-edit"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/" target="">Edit Information</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/gift" target=""><icon class="icon-gift"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/gift" target="">Give AAA</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/gift/renew" target=""><icon class="icon-gift"></icon></a></td>
+							<td><a href="https://memberships.ohio.aaa.com/memberships/gift/renew" target="">Renew a Gift Membership</a></td>
+						</tr>
+			
+			
+			
+						<tr>
+							<td><a href="http://eshop.ohio.aaa.com/index.php/aaa-foundation-for-traffic-safety.html" target="_blank"><icon class="icon-heart"></icon></a></td>
+							<td><a href="http://eshop.ohio.aaa.com/index.php/aaa-foundation-for-traffic-safety.html" target="_blank">Donate to the AAA Foundation for Traffic Safety</a></td>
+						</tr>
+			
+			
+			</table>
+		</div>
+	
+	
+		
+		
+		
+	<hr>
+ 		<h3 style="margin-bottom: 0px;">Related Links</h3>
+		<ul style="margin-bottom: 15px;">
+				<li><a href="/insurance/auto.html" target=""> Auto Insurance </a></li>
+				<li><a href="/travel-planning/hotels.html" target=""> Hotels </a></li>
+				<li><a href="/membership/benefits-pricing/index.html" target=""> Membership Benefits &amp; Pricing </a></li>
+				<li><a href="http://eshop.ohio.aaa.com" target="_blank"> Shop Online </a></li>
+				<li><a href="/financial/visa.html" target=""> AAA Member Rewards Visa </a></li>
+		</ul> 
+	<hr>
+	
+
+	
+	
+	<!-- <div class="white-box" style="width: 100%; height: 15px; margin-top: -9px; margin-left: 0px !important; background-color: #EEEEEE !important;">
+		<a href="#" onclick="openLiveHelp();" alt="Chat Online"><img src="/images/chat_online.png" id="chat_image" alt="Chat_online" style="margin: -10px 0px 0px 12px !important;"></a>
+	</div> -->
+
+<div style="width: 100%; margin: -20px 0px 0px -1px !important; background-color: #FFFFFF !important;" class="white-box">
+<!-- Chat tag for Account AAA Ohio (ID: 1), Site ohio.aaa.com (ID: 1), Queue Membership (ID: 5)  -->
+<div class="chat-wrapper" id="chatQ5">
+	<table cellpadding="0" cellspacing="0" border='0'><tr><td>
+		<a href="javascript: var e = window.open('https://chat.ohio.aaa.com/SightMaxAgentInterface/PreChatSurvey.aspx?aq3=4&aq2=3&aq1=2&accountID=1&siteID=1&queueID=5&skipsurvey=false',
+			'chatWindow','width=490,height=404,resizable=0,scrollbars=no,menubar=no,status=no');"
+			onmouseout="top.status=''; return true;"
+			onmousedown="top.status='Chat with a company representative';return true;"
+			onmouseover="top.status='Chat with a company representative';return true;">
+		<img border=0 src="https://chat.ohio.aaa.com/SightMaxAgentInterface/chat.smgif?accountID=1&siteID=1&queueID=5"
+			alt="Live chat by SightMax"></a></td></tr>
+	</table>
+</div>
+<!-- end of chat tag -->
+</div>     
+
+
+	<div class="white-box" style="width: 100%; height: 35px; margin-top: 0px; margin-left: 0px !important; background-color: #FFFFFF !important;">
+		<a href="http://conversations.ohio.aaa.com/" target="_blank" alt="Conversations"><img src="/images/newsroom_ad.png" id="conversations_image" alt="Conversations" style="margin: -15px 0px 0px 0px !important;width:140px; height:54px;"></a>
+	</div>
+	     
+
+
+
+
+
+
+	<h3 style="margin-bottom: 0px;">AAA Tools</h3>
+	<ul>
+			<li><a href="https://memberships.ohio.aaa.com/memberships/renew" target=""> <span>+ </span> Join/Renew </a></li>
+			<li><a href="/road-trips/triptik.html" target=""> <span>+ </span> TripTik Travel Planner </a></li>
+			<li><a href="/cars-and-driving/roadside-assistance.html" target=""> <span>+ </span> Emergency Roadside Assistance </a></li>
+			<li><a href="/member-discounts" target=""> <span>+ </span> Member Discounts </a></li>
+			<li><a href="/help/locations.html" target=""> <span>+ </span> AAA Store Locator </a></li>
+	</ul>
+					
+			
+						 <hr>
+						<h3 style="margin-bottom: 0px;">Top Searches</h3>
+						<ul id="othersSearched">
+								<li><a href="/apps/search/search-results.html?q=Disney" target=""> Disney </a></li>
+								<li><a href="/apps/search/search-results.html?q=car+rental" target=""> Car Rental </a></li>
+								<li><a href="/apps/search/search-results.html?q=all+inclusive" target=""> All Inclusive </a></li>
+								<li><a href="/apps/search/search-results.html?q=universal+studios" target=""> Universal Studios </a></li>
+								<li><a href="/apps/search/search-results.html?q=cedar+point" target=""> Cedar Point </a></li>
+						</ul> 
+						
+    <hr>
+	
+	<form action="/apps/search/search-results.html">
+		<input type="text" name="q" onfocus="this.value=(this.value==this.defaultValue)?'':this.value;return true;" value="Search">
+		<button type="submit" class="submitBtn" value="submit"><span>Go!</span></button>
+	</form>
+
+</div>
+ <!-- @nav_to_load -->
+	
+				<div id="contentWrapper"> <!-- Content Wrapper... holds right side/content area -->
+					<div style="margin: 32px 0px -10px 15px;">
+						<a href="/member-discounts/turbo/index.html"><img alt="TURBO Movie Tickets" class="" height="110" src="http://www3.ohio.aaa.com/images/turbo/turbo-banner.jpg?1371915825" style="" width="780" /></a>
+					</div>
+					
+					
+<p class="clearfix"></p><p class="clearfix"></p>
+
+
+<!--Opens Widget-->
+	<div class="content full">
+		<h2>Welcome to the Website for AAA Ohio</h2>
+		<p> &nbsp; </p>
+		<p style="text-align:center;">AAA is a national association of regional and local clubs.<br>Your local AAA club is best able to provide you with the products and services you need.</p>  
+		<p style="font-weight: bold; text-align:center;">Please provide your zip code below to be directed to your local club.</p>
+	
+		
+		<div style="text-align:center;">
+			<form accept-charset="UTF-8" action="/locations/zip_code_login_processing" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="73l+U/elkJvPry+S/ITv/OwMeZKDj5wPj5xk2FwoFCM=" /></div>
+			<input id="return_url" name="return_url" type="hidden" value="/cars-and-driving/roadside-assistance.html" />
+			<input class="FancyText" id="id" name="id" type="text" />
+			<button type="submit" class="submitBtn" value="submit"><span>Submit Zip Code</span></button>
+</form>		</div>
+	
+		<br /><br /><br />
+	
+	</div>
+
+
+					
+
+
+
+
+				</div>
+	
+			</div>
+			<!-- Footer Nav -->
+			<div id="footer">
+	<div class="column">
+    	<h4><a href="/cars-and-driving">Automotive</a></h4>
+    	<ul>
+    		<li><a href="/cars-and-driving/car-maintenance/repair.html">AAA Car Care Plus</a></li>
+        	<li><a href="/cars-and-driving/car-maintenance/repair.html">Approved Auto Repair</a></li>
+        	<li><a href="/cars-and-driving/car-buying-resource.html">Car Buying Resources</a></li>
+        	<li><a href="/cars-and-driving/car-maintenance/index.html">Car Maintenance &amp; Repair</a></li>
+        	<li><a href="/cars-and-driving/roadside-assistance.html">Roadside Assistance</a></li>
+        	<li><a href="/cars-and-driving/toolbox.html">Your Driving Toolbox</a></li>
+    	</ul>
+    	<h4><a href="/road-trips">TripTiks &amp; Maps</a></h4>
+    	<ul>
+    		<li><a href="/road-trips/triptik.html">TripTiks</a></li>
+        	<li><a href="/road-trips/tourbooks-maps.html">Maps</a></li>
+        	<li><a href="/road-trips/tourbooks-maps.html">TourBook Guides</a></li>
+			<li><a href="/road-trips/fuel-prices.html">Fuel Prices</a></li>
+    	</ul>
+    	<h4><a href="/cars-and-driving/traffic-safety.html">Traffic Safety Programs</a></h4>
+   </div>
+   	<div class="column">
+    	<h4><a href="/member-discounts">Discounts</a></h4>
+    	<ul>
+    		<li><a href="http://eshop.ohio.aaa.com/index.php/attraction-tickets.html" target="_blank">Attraction Tickets</a></li>
+        	<li><a href="/member-discounts">Everyday Savings</a></li>
+        	<li><a href="/member-discounts/hot-deals.html">Hot Deals</a></li>
+        	<li><a href="http://eshop.ohio.aaa.com/index.php/luggage-and-bags.html" target="_blank">Luggage</a></li>
+			<li><a href="http://www.aaa.com/memberdeals" target="_blank">Member Deals Daily Offers</a></li>
+        	<li><a href="/member-discounts/new-partners.html">New Savings Partners</a></li>
+			<li><a href="http://eshop.ohio.aaa.com/index.php" target="_blank">Shop Online</a></li>
+        	<li><a href="/member-discounts/forms/suggest-a-partner.html">Suggest A Partner</a></li>
+    	</ul>
+    	<h4><a href="/financial/index.html">Financial</a></h4>
+    	<ul>
+			<li><a href="/financial/visa.html">AAA Member Rewards Visa</a></li>
+        	<li><a href="/financial/auto-loans.html">AAA Auto Loans</a></li>
+			<li><a href="/financial/travel-money.html">AAA Travel Money</a></li>
+			<li><a href="/financial/foreign-currency.html">Foreign Currency</a></li>
+			<li><a href="/financial/deposit-programs.html">AAA Deposit Programs</a></li>
+    	</ul>
+	</div>
+   	<div class="column">
+    	<h4><a href="/help">Help</a></h4>
+    	<ul>
+    		<li><a href="/help/locations.html">AAA Store Locations</a></li>
+        	<li><a href="/help">Call AAA</a></li>
+        	<!-- <li><a href="/help">Chat Online</a></li> -->
+        	<li><a href="/help">Email</a></li>
+        	<li><a href="/cars-and-driving/roadside-assistance.html">Roadside Assistance</a></li>
+    	</ul>
+		<h4><a href="/travel-planning">Travel</a></h4>
+    	<ul>
+    		<li><a href="/travel-planning/hotels.html">Hotels</a></li>
+        	<li><a href="/travel-planning/flights.html">Flights</a></li>
+        	<li><a href="/travel-planning/car-rental.html">Car Rental</a></li>
+        	<li><a href="/travel-planning/cruises.html">Cruises</a></li>
+        	<li><a href="/travel-planning/vacations/index.html">Vacations</a></li>
+			<li><a href="/travel-planning/disney.html">Disney</a></li>
+			<li><a href="/travel-planning/honeymoon.html">Honeymoon Resources</a></li>
+        	<li><a href="/travel-planning/hot-deals.html">Hot Deals & Special Offers</a></li>
+			<li><a href="/travel-planning/aaa-escorted-trips.html">Escorted Trips</a></li>
+    	</ul>
+	
+    	
+		
+   </div>
+   <div class="column">
+    	<h4><a href="/membership">Membership</a></h4>
+    	<ul>
+    		<li><a href="/membership/benefits-pricing/index.html">Benefits & Pricing</a></li>
+        	<li><a href="/membership/give-aaa.html">Give AAA</a></li>
+        	<li><a href="/membership/index.html">Join</a></li>
+        	<li><a href="https://memberships.ohio.aaa.com/accounts">My Account</a></li>
+        	<li><a href="/membership/renew.html">Renew</a></li>
+    	</ul>
+    	<h4><a href="/insurance">Insurance</a></h4>
+    	<ul>
+    		<li><a href="/insurance/auto.html">Auto</a></li>
+        	<li><a href="/insurance/home.html">Home</a></li>
+        	<li><a href="/insurance/life.html">Life</a></li>
+        	<li><a href="/insurance/policy-service.html">Policy Service</a></li>
+        	<li><a href="/insurance/specialty-insurance.html">Specialty Coverage</a></li>
+			<li><a href="/insurance/forms/business.html">Business Insurance</a></li>
+    	</ul>
+		<h4><a href="/cars-and-driving/government-affairs.html">Government Affairs</a></h4>
+   </div>
+    
+   <br />
+	<div id="finePrint" style="text-align:center;margin-bottom:10px;"> 	
+		<ul style="text-align:center;">	
+			<li><a href="/policy/privacy-policy.html">Privacy Policy</a></li>
+    	    <li><a href="/policy/terms-of-service.html">Terms of Service</a></li>
+    	    <li><a href="/policy/territory-map.html">Territory Map</a></li>
+    	    <li><a href="http://newsroom.aaa.com" target="_blank">National News Room</a></li>
+			<li><a href="http://conversations.ohio.aaa.com" target="_blank">Local News Room</a></li>
+			<li><a href="http://exchange.aaa.com" target="_blank">Public Affairs</a></li>
+    	    <li><a href="/help/careers/index.html">Careers</a></li>
+    	</ul>
+
+
+<p>This website serves AAA members residing in the 38-county service area of AAA Ohio Auto Club.<br>If you are not a resident of our <a href="/policy/territory-map.html">service area</a>, please visit <a href="http://www.aaa.com/stop">www.AAA.com/stop</a> to visit the website for your area.</p>
+		<p>&nbsp;</p>
+<p>AAA Ohio Auto Club  |  90 E. Wilson Bridge Rd.  |  Worthington  |  Ohio  |  43085<br>888.222.6446<br>Copyright &copy; AAA Ohio Auto Club. All rights reserved.</p>
+
+    </div>
+</div> 
+		</div>
+	</div>
+	
+<div class="" style="z-index: 999; position: absolute; right: 0px;top: 100px;">
+     <a href="#" onclick="$.msgbox('<div style=\'width: 390px;margin-left:-80px;margin-top: 30px;\'><h2 style=\'text-align: center;clear: left;\'>I would like to</h2><div style=\'float: left; width: 190px;border-right: 1px solid #CCC; height: 90px; padding: 10px 0px 10px 0px;\'><strong>Add a driver to my current AAA membership.</strong>	<div style=\'text-align: center; padding: 10px 0px 10px 0px\'><form name=\'f101\' action=\'https://memberships.ohio.aaa.com/memberships/add_a_driver\'><p><button value=\'submit\' class=\'submitBtn\' type=\'submit\' id=\'btnGive\'><span>Go/Login</span></button></p></form></div></div><div style=\'float: right; width: 180px; padding: 10px 0px 10px 0px;\'><strong>Join AAA now and add additional drivers.</strong><div style=\'text-align: center; padding: 10px 0px 10px 0px\'><form name=\'f102\' action=\'https://memberships.ohio.aaa.com/memberships/join\'><p><button value=\'submit\' class=\'submitBtn\' type=\'submit\' id=\'btnGive\'><span>Join Now</span></button></p></form></div></div><div style=\'float: left; clear:left; width: 390px; padding: 10px 0px 10px 0px;font-size: .8em;line-height:12px;\'>*$49 offer is good for new individual Classic AAA Ohio Auto Club membership. Half price associate membership offer is valued at a $17.50 discount for each new Associate member added to a new or existing AAA Ohio Auto Club membership.  All membership level upgrades for both primary and associate members will be at full price.  Associate members must be at same membership level as primary membership and must reside in the same household as primary member. Offer expires September 15, 2013.</div></div>', {type : 'info',  buttons : [{type: 'cancel', value: 'Close'}  ]});"><img src="/images/BackToSchoolSign.png" width="190" height="505" alt="Back to School"  title="Back to School"></a>
+</div> 
+
+<!-- <div class="aad-div" style="z-index: 999; width: 302px;">
+    <a class="handle" href="/membership/add-a-driver.html" alt="Add a Driver $25" title="Add a Driver $25">Add a Driver $25</a>
+     <a href="/membership/add-a-driver.html"><img src="/images/aad_slide.png" width="302" height="386" alt="Give your loved ones the same protection you trust"  title="Give your loved ones the same protection you trust"></a>
+</div> 
+
+
+<div class="aad-div" style="z-index: 999; width: 291px;">
+    <a class="handle" alt="DS Cruising" title="AAA Great Vacations" style="margin-top: 0px !important;"></a>
+     <img src="/images/cruising_pullout.png" width="291" height="398" alt="Destination Showcase Cruising"  title="DS cruising"  usemap="#GVE_Map">
+</div> -->
+
+
+<map name="GVE_Map" id="GVE_Map">
+  <area shape="rect" coords="74,300,234,339" href="http://ohio.aaa.com/travel-planning/forms/destination-showcase-cruising-rsvp.html" alt="RSVP Online"  target="_blank"/>
+  <area shape="rect" coords="75,340,234,378" href="http://ohio.aaa.com/travel-planning/cruises.html" alt="Search Cruises" target="_blank" />
+</map>
+
+<script type="text/javascript">  (function() {
+    var ga = document.createElement('script');     
+	ga.type = 'text/javascript'; 
+	ga.async = true;
+    ga.src = ('https:'   == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>

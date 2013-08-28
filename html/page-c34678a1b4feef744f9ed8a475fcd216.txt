@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta name="pageStart" content="1377646460522" />
+<!-- TMP-Head, searchsolidstatestorage.techtarget.com, generated at 19:34:20 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<!-- vSolo -->
+<title>Auto tiering vs. caching in hybrid storage systems</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="Marc Staimer looks at how auto tiering and caching provide similar benefits in hybrid storage systems, but are radically different technologies with different capabilities and use cases."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://searchsolidstatestorage.techtarget.com/tip/Auto-tiering-vs-caching-in-hybrid-storage-systems" />
+<link rel="alternate" type="application/rss+xml" title="SearchSolidStateStorage.com: ContentSyndication" href="http://searchsolidstatestorage.techtarget.com/rss/ContentSyndication.xml" />
+<link rel="alternate" type="application/rss+xml" title="SearchSolidStateStorage.com: Enterprise IT tips and expert advice" href="http://whatis.techtarget.com/rss/Enterprise-IT-tips-and-expert-advice.xml" />
+<link rel="stylesheet" type="text/css" href="http://cdn.ttgtmedia.com/rms/ux/css/global.css" id="stylesheetGlobal" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://cdn.ttgtmedia.com/rms/ux/css/searchsolidstatestorage_new.css" id="stylesheetSiteSpecific" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://cdn.ttgtmedia.com/rms/ux/css/tt_thickbox_reg.css" id="stylesheetGlobal" media="screen" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="http://cdn.ttgtmedia.com/rms/ux/css/ieBugFixes.css" media="screen" />
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://users.techtarget.com/registration/js/userreg-lib.js"></script>
+<script type="text/javascript" src="http://admin.brightcove.com/js/experience_util.js"></script>
+
+<script type="text/javascript">
+	var taxes=[];
+	var adIdString = '2240112712,316066,2240112715,306662';
+	if(adIdString != null && adIdString != "null"){
+		var adIds = adIdString.split(",");
+		for (var i = 0; i < adIds.length; i++) {
+			taxes[i]=adIds[i];
+		}
+	}
+	
+	google_ad_client = 'ca-pub-6050985421795229';
+	google_ad_channel = 'Other';
+	google_ad_output = 'js';
+	google_max_num_ads = 5;
+	
+	var ENV_name = 'PROD';
+	var ENV_isStage = false;
+	var ENV_mediaHost = 'http://cdn.ttgtmedia.com/rms/ux';
+	var ENV_clicktrackHost = 'http://clicktrack.techtarget.com';	
+	var SITE_name = 'searchSolidStateStorage';
+	var SITE_v5sid = '228';
+	var SITE_domain = '.techtarget.com';
+	var SITE_bitpipeHost = 'searchsolidstatestorage.bitpipe.com';
+	var SITE_logoutURL = 'http://users.techtarget.com/registration/searchsolidstatestorage/Logout.page';
+	var SITE_hostName = 'techtarget';
+	var networkPopupURL = 'http://www.techtarget.com/html/it_pro_list.html';
+	var regFromUrl = document.location;
+	var SITE_memberUpdateFlag = 'off';
+	var SITE_memberUpdateURL = 'http://searchsolidstatestorage.techtarget.com/memberUpdateCheck';
+	var interstitialSwitch = true;
+	var isHome = false;
+	var is404 = false;
+	var accountAbbr = 'ssldststr';
+	var zone = 'TIPS'; 
+	var gci = '2240188232'; 
+	var tax = '2240112712'; 
+	var clu = '2240113694'; 
+	var defaultTax = '2240188232';
+	
+	var taxNameWithOutSpecialChars = 'Solidstatestoragetechnology';
+	var isSponsored = false;
+	
+	var PAGE_cltIsVendorOnly = 1;
+	</script>
+
+<!-- BEGIN: gpt ad includes -->
+<script type="text/javascript" src="http://cdn.ttgtmedia.com/rms/ux/javascript/vgn-gpt-1.0.min.js"></script>
+<!-- END: gpt ad includes -->
+
+<!-- BEGIN: chartbeat head includes -->
+<script type='text/javascript'>
+var _sf_startpt=(new Date()).getTime();
+var _sf_async_config={};
+_sf_async_config.uid = 41935;
+_sf_async_config.domain = 'techtargetnetwork.com';
+_sf_async_config.sections = 'ssldststr, ssldststr - Solid state storage technology';
+_sf_async_config.authors = 'Marc Staimer, TIPS, ssldststr - TIPS';
+_sf_async_config.useCanonical = true;
+</script>
+<!-- END: chartbeat head includes -->
+
+<!-- BEGIN: Google Analytics -->
+<script type="text/javascript">
+	var SITE_gaAccountID = "UA-19046353-32";
+	var gaPageTrackUrl = "/page/etpk_Topics-2240112577/ptpk_Solid state storage technology-2240112712/true/TIPS/content/cid_2240188232/date_20130717/mem_55/clst_SSD-2240113694/rtpk_Solid-state storage technology-1538778/idx_0";
+	var memberStatus = "NOT_MEMBER";
+</script>
+<script type="text/javascript" src="http://cdn.ttgtmedia.com/rms/ux/javascript/googleAnalytics.min.js?date=20130827"></script>
+<!-- END: Google Analytics -->
+
+
+<script type="text/javascript">
+var isMboxJsIncluded = false;
+var isMboxEnabled = false;
+</script>
+<script type="text/javascript">
+isMboxJsIncluded =true;
+</script>
+<script type="text/javascript" src="http://cdn.ttgtmedia.com/js/mbox.js">
+</script>
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script></head>
+<body id="tips">
+<script type="text/javascript">
+if (typeof jQuery == "function") jQuery(document).trigger("onbodyopen");
+
+function tt_mboxCreate(mboxName){
+	if(typeof isMboxJsIncluded != "undefined" && typeof isMboxEnabled != "undefined"){
+		if(isMboxJsIncluded && isMboxEnabled){
+			mboxCreate(mboxName);
+		}
+	}
+}
+</script>
+<div class="mboxDefault"></div>
+	<script type="text/javascript">
+		isMboxEnabled = true;
+		tt_mboxCreate('global_searchSolidStateStorage');
+	</script>
+<div id="adjInterstitial"><script type="text/javascript">GPT.display("adjInterstitial");</script></div><div id="premiumContentPromoContainer"></div>
+
+<script language="JavaScript" type="text/javascript">
+  // map of variables should be named based on the
+  // name of the containing div id above
+  var premiumContentPromoContainer_variables = new Object();
+
+  premiumContentPromoContainer_variables['FromURL'] = location.href;
+  premiumContentPromoContainer_variables['AppCode'] = '111';
+  premiumContentPromoContainer_variables['AdId'] = '2240188232';
+
+  // first argument:  site name
+  // second argument: name of containing div
+  // third argument:  action (inlineregister, inlineactivate, inlineoptin)
+  executeInlineByPage("searchSolidStateStorage", "premiumContentPromoContainer", "inlineoptin", "5");
+</script>
+<div id="header">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- TTBC-TMP-LoginBand, searchsolidstatestorage.techtarget.com, generated at 23:10:56 Mon Aug 26, 2013 , by vappma12.techtarget.com -->
+
+
+
+<div id="universalBar">
+	<div id="universalBarCompress">
+		<div id="seoKeyword"></div>
+		<div id="membershipLinks">
+			<ul>
+				<li id="mlLogin"><a href="http://users.techtarget.com/registration/searchsolidstatestorage/LoginRegister.page">Login</a></li>
+				<li id="mlRegister"><a href="http://users.techtarget.com/registration/searchsolidstatestorage/Register.page">Become a member</a></li>
+				
+				<li id="mlRss"><a href="/rss"><span></span>RSS</a></li>
+				<li id="mlNetwork"><a href="/?vgnextfmt=portfolio" class="ttNetworkLinks">Part of the TechTarget network</a></li>
+			</ul>
+			
+			
+			
+			<script type="text/javascript">
+				if (typeof regFromUrl == "undefined")
+					var regFromUrl = document.location;
+				$("#mlLogin a").attr("href", "http://users.techtarget.com/registration/searchsolidstatestorage/LoginRegister.page?fromURL=" + encodeURIComponent(regFromUrl));
+				$("#mlRegister a").attr("href", "http://users.techtarget.com/registration/searchsolidstatestorage/Register.page?fromURL=" + encodeURIComponent(regFromUrl));
+			</script>
+		</div>
+	</div>
+</div>
+
+<!-- TTBC-TMP-Header, searchsolidstatestorage.techtarget.com, generated at 12:00:30 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<div id="headerLogo">
+	<div id="headerLogoCompress">
+		<a href="/">SearchSolidStateStorage.com</a>
+		<span id="headerTechtargetLogo"></span>
+	</div>
+</div>
+<div id="headerNavigation">
+	<div id="headerNavigationCompress">
+		<div class="megaMenu">
+<ul>
+<li class="mmNavItem">
+	<a href="http://searchsolidstatestorage.techtarget.com/news" class="mmNavLink">News</a>
+	<div class="mmContent">
+		<ul class="mmContentCols makeCols">
+			<li class="mmContentLinkList">
+	<h5>Latest Headlines</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/news/2240204140/DIMM-connected-flash-further-blurs-the-line-between-storage-and-memory">
+					DIMM-connected flash further blurs the line between storage and memory</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/news/2240203724/Skyera-plans-to-pack-500-TB-into-1U-flash-array">
+					Skyera plans to pack 500 TB into 1U flash array</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/news/2240203664/Coraid-optimizes-EtherDrive-for-use-as-flash-array">
+					Coraid optimizes EtherDrive for use as flash array</a>
+			</li>
+		<li class="viewAll"><a href="http://searchsolidstatestorage.techtarget.com/news">View All News</a></li>
+	</ul>
+	</li>
+	<li class="mmColTypeFeaturedVendor">
+	<h5>Featured</h5>
+	<div class="carousel">
+			<div class="carouselWindow">
+				<ul class="listTypeCarousel">
+					<li>
+							<h4><a href="http://searchstorage.techtarget.com/ezine/Storage-magazine/SearchStorages-best-data-storage-products-of-2012?Offer=NewsMegaMenu">
+								Storage Magazine</a>
+							</h4>
+							
+							<a href="http://searchstorage.techtarget.com/ezine/Storage-magazine/SearchStorages-best-data-storage-products-of-2012?Offer=NewsMegaMenu">
+									<img alt="" src="http://cbimages.ed4.net/techtarget/3364_512302.jpg" width="360" height="100" />
+								</a>								
+							<p><p>Download this year’s exclusive "<b><span style=" text-decoration: underline;">Products of the
+Year</span></b>" issue of <i>Storage</i> magazine to discover which storage products were ranked as
+the “best of the best” by our panel of expert judges.</p>...</p>
+							<a class="viewAll" href="http://searchstorage.techtarget.com/ezine/Storage-magazine/SearchStorages-best-data-storage-products-of-2012?Offer=NewsMegaMenu" >
+											Download Now!</a>
+									</li>
+					</ul>
+			</div>
+		</div>
+	</li>
+</ul>
+	</div>
+	</li>
+<li class="mmNavItem">
+	<a href="http://searchsolidstatestorage.techtarget.com/eproducts" class="mmNavLink">Premium<br />Editorial</a>
+	<div class="mmContent">
+		<ul class="mmContentCols makeCols">
+			<li class="mmContentLinkList">
+	<h5>E-Books</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchstorage.techtarget.com/ebook/Better-Data-Protection-Strategies-with-CDP-and-Deduplication">
+					Better data protection strategies with CDP and deduplication</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchstorage.techtarget.com/ebook/Getting-Started-with-IT-Disaster-Recovery-Planning">
+					Getting started with IT disaster recovery planning</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchstorage.techtarget.com/ebook/Virtual-backup-solutions-for-the-enterprise">
+					Virtual backup solutions for the enterprise</a>
+			</li>
+		<li class="viewAll"><a href="http://searchsolidstatestorage.techtarget.com/ebooks">View All E-Books</a></li>
+	</ul>
+	</li>
+	<li class="mmContentLinkList">
+	<h5>E-Zines</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchstorage.techtarget.com/ezine/Storage-magazine/">
+					Storage magazine</a>
+			</li>
+		<li class="viewAll"><a href="http://searchsolidstatestorage.techtarget.com/ezines">View All E-Zines</a></li>
+	</ul>
+	</li>
+	<li class="mmContentLinkList">
+	<h5>E-Handbooks</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchstorage.techtarget.com/ehandbook/State-of-the-art-data-backup-applications">
+					State-of-the-art data backup applications</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchstorage.techtarget.com/ehandbook/Scale-out-storage-systems-deep-dive">
+					Scale-out storage systems deep dive</a>
+			</li>
+		<li class="viewAll"><a href="http://searchsolidstatestorage.techtarget.com/ehandbooks">View All E-Handbooks</a></li>
+	</ul>
+	</li>
+	</ul>
+	</div>
+	</li>
+<li class="mmNavItem">
+	<a href="http://searchsolidstatestorage.techtarget.com/resources" class="mmNavLink">Solid State Storage<br/>Topics</a>
+	<div class="mmContent">
+		<ul class="mmContentCols makeCols">
+			<li class="mmColTypeTopics mmColSubcol">
+	<h5>Topics</h5>
+	<ul class="makeCols">
+		<li>
+			<h6><a href="http://searchsolidstatestorage.techtarget.com/resources/Solid-state-storage-implementation">SSD implementation</a></h6>
+				<p><a href="http://searchsolidstatestorage.techtarget.com/resources/Solid-state-cache-appliance-implementations">Solid state cache appliances</a>, <a href="http://searchsolidstatestorage.techtarget.com/resources/Server-based-SSD-implementations">Server-based solid state</a>, <a href="http://searchsolidstatestorage.techtarget.com/resources/SSD-array-implementations">Solid state arrays</a>, <a href="http://searchsolidstatestorage.techtarget.com/resources/Laptop-SSD-desktop-SSD-and-other-implementations">Endpoint solid state storage</a></p>
+				</li>
+			<li>
+			<h6><a href="http://searchsolidstatestorage.techtarget.com/resources/Solid-state-storage-technology">SSD technology</a></h6>
+				</li>
+			<li>
+			<h6><a href="http://searchsolidstatestorage.techtarget.com/resources/SSD-utility-and-application-tools">SSD applications</a></h6>
+				</li>
+			</ul>
+	</li>
+<li class="mmContentLinkList">
+	<h5>Hot Topics</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/resources/erver-based-SSD-implementations">
+					PCIe SSDs</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/resources/SSD-array-implementations">
+					SSD arrays</a>
+			</li>
+		</ul>
+	</li>
+	</ul>
+	</div>
+	</li>
+<li class="mmNavItem">
+	<a href="http://searchsolidstatestorage.techtarget.com/tips" class="mmNavLink">Expert<br/>Advice</a>
+	<div class="mmContent">
+		<ul class="mmContentCols makeCols">
+			<li class="mmContentLinkList">
+	<h5>Tips</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/tip/Fact-or-fiction-Flash-SSD-storage-is-faster-than-HDD-storage">
+					Fact or fiction? Flash SSD storage is faster than HDD storage</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/tip/Does-SSD-and-caching-everywhere-create-a-performance-bottleneck">
+					Does SSD and caching everywhere create a performance bottleneck?</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/tip/Are-the-advantages-of-solid-state-storage-worth-the-investment">
+					Are the advantages of solid-state storage worth the investment?</a>
+			</li>
+		<li class="viewAll"><a href="http://searchsolidstatestorage.techtarget.com/tips">View All Tips</a></li>
+	</ul>
+	</li>
+	<li class="mmContentLinkList">
+	<h5>Answers</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/answer/Top-mistakes-users-make-when-switching-from-HDD-to-SSD-storage">
+					Top mistakes users make when switching from HDD to SSD storage</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/answer/The-importance-of-NVMe-and-SCSI-Express-for-PCIe-SSD-development">
+					The importance of NVMe and SCSI Express for PCIe SSD development</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.techtarget.com/answer/Why-is-persistent-cache-important">
+					Why is persistent cache important?</a>
+			</li>
+		<li class="viewAll"><a href="http://searchsolidstatestorage.techtarget.com/answers">View All Answers</a></li>
+	</ul>
+	</li>
+	</ul>
+	</div>
+	</li>
+<li class="mmNavItem">
+	<a href="http://searchsolidstatestorage.bitpipe.com" class="mmNavLink">White<br/>Papers</a>
+	<div class="mmContent">
+		<ul class="mmContentCols makeCols">
+			<li class="mmContentLinkList">
+	<h5>Research Library</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.bitpipe.com">
+					White Papers</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.bitpipe.com/webcasts">
+					Business Webcasts</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://searchsolidstatestorage.bitpipe.com/itdownloads">
+					Downloads</a>
+			</li>
+		<li class="poweredBy"><a href="http://searchsolidstatestorage.bitpipe.com" class="poweredByBitpipe removedAdsParams">Powered by Bitpipe.com</a></li>
+	</ul>
+	</li>
+	</ul>
+	</div>
+	</li>
+<li class="mmNavItem">
+	<a href="http://storagedecisions.techtarget.com/?Offer=MTJuly19SDMain" class="mmNavLink">Storage Decisions<br />Events</a>
+	<div class="mmContent">
+		<ul class="mmContentCols makeCols">
+			<li class="mmContentLinkList">
+	<h5>Conferences</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/chicago/index.html?Offer=MTJuly19SDCHI">
+					Chicago</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/newyork/index.html?Offer=MTJuly19SDNY">
+					New York</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/sanfrancisco/index.html?Offer=MTJuly19SDSF">
+					San Francisco</a>
+			</li>
+		</ul>
+	</li>
+	<li class="mmContentLinkList">
+	<h5>Regional Seminars</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/seminars/Backup_DataProtection.html?Offer=MegaMenuBackup">
+					New Rules of Backup/Data Protection</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/seminars/storage_virtualization.html?Offer=MegaMenuVirt">
+					Storage for Virtual Environments</a>
+			</li>
+		</ul>
+	</li>
+	<li class="mmContentLinkList">
+	<h5>Executive Dinners</h5><ul class="mmContentLinkList">
+	<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/dinners/index.html?Offer=MegaMenuMediaandEntertainment&section=2">
+					Storage for Media & Entertainment</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/dinners/index.html?Offer=MegaMenuCloud&section=4">
+					Cloud Storage</a>
+			</li>
+		<li >
+				<a class="removedAdsParams" 
+				href="http://storagedecisions.techtarget.com/dinners/index.html?Offer=MegaMenuBigData&section=3">
+					Big Data</a>
+			</li>
+		</ul>
+	</li>
+	</ul>
+	</div>
+	</li>
+</ul>
+</div>
+<div id="headerNavigationSearch" class="navigationSearch">
+			<form action="/search/query" method="get" id="headerNavigationSearchForm">
+				<fieldset>
+					<label for="headerNavigationSearchTextbox" class="navigationSearchLabel">Search this site</label>
+					<input type="hidden" name="start" value="0" />
+					<input type="hidden" name="filter" value="1" />
+					<input type="text" name="q" id="headerNavigationSearchTextbox" class="navigationSearchBox" />
+					<input type="submit" value="Search" id="headerNavigationSearchSubmit" class="navigationSearchSubmitButton" />
+				</fieldset>
+			</form>
+		</div>
+</div>
+</div>
+
+</div>
+<div id="content">
+<div id="contentCompress">
+<!-- TMP-ContentHeader, searchsolidstatestorage.techtarget.com, generated at 09:45:34 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<div id="leaderboardPlacement">
+	<div id="leaderboard"><script type="text/javascript">GPT.display("leaderboard");</script></div></div>
+<div id="breadcrumbs">
+<ul>
+<li class="home"><a href="/">Home</a></li>
+<li>					
+		<a href="http://searchsolidstatestorage.techtarget.com/resources">Topics</a>
+		</li>
+<li>					
+		<a href="http://searchsolidstatestorage.techtarget.com/resources/Solid-state-storage-technology">Solid state storage technology</a>
+		</li>
+<li><em>Auto tiering vs. caching in hybrid storage systems</em></li>
+</ul>				
+</div>
+<div id="articleLeftAd"><script type="text/javascript">GPT.display("articleLeftAd");</script></div><div id="article">
+<span class="decoration decorationTopLeft"></span>
+<span class="decoration decorationBottomRight"></span>
+<!-- ItemRegion, searchsolidstatestorage.techtarget.com, generated at 09:45:34 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<div id="articleHeader">
+	<div id="eyebrow"><p>Tip</p></div>
+<div id="headline">
+<h1>Auto tiering vs. caching in hybrid storage systems</h1>
+</div>
+<div id="articleToolbar">
+<div id="byline">
+<span class="author"><a href="http://searchstorage.techtarget.com/expert/Marc-Staimer" class="author">Marc Staimer</a>
+	</span>
+</div>
+<div id="contentTools">
+<ul>
+	<li id="contentTools-email"><a href="#" title="Email a Friend">E-Mail</a>
+		<form id="emailAFriend" name="emailAFriend" method="post" action="/email-a-friend"
+			style="display: none">
+			<fieldset>
+				<input name="subject" type="hidden" />
+				<input name="fullurl" type="hidden" />
+			</fieldset>
+		</form>
+	</li>
+	<li id="contentTools-print"><a href="http://searchsolidstatestorage.techtarget.com/tip/Auto-tiering-vs-caching-in-hybrid-storage-systems?vgnextfmt=print" title="Print This Page">Print</a></li>
+	<li id="contentTools-textSizeSmall" class="activeSize"><a href="#" title="Change Font Size" class="textSizer">A</a></li>
+	<li id="contentTools-textSizeMedium"><a href="#" title="Change Font Size" class="textSizer">AA</a></li>
+	<li id="contentTools-textSizeLarge"><a href="#" title="Change Font Size" class="textSizer">AAA</a></li>
+	<li id="socialMedia-linkedInButton" class=""><a href="#" title="Add to LinkedIn" class="linkedInButton">LinkedIn</a></li>
+	<li id="socialMedia-facebook" title="Add to Facebook"><a href="#">Facebook</a></li>
+	<li id="socialMedia-twitter"><a href="#" title="Add to Twitter">Twitter</a></li>
+	<li id="socialMedia-addThis"><a href="#" class="addthis_button">Share This</a></li><li id="contentTools-rss" title="RSS Feeds"><a href="http://searchsolidstatestorage.techtarget.com/rss/ContentSyndication.xml">RSS</a></li>
+	<li id="contentTools-reprints"><a href="http://reprints.ygsgroup.com/m/techtarget" title="Reprints">Reprints</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="articleBody">
+<!-- ItemRegion, searchsolidstatestorage.techtarget.com, generated at 09:45:35 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<p style=" text-align: left;"><a
+href="http://searchstorage.techtarget.com/tip/Using-hybrid-storage">Hybrid storage systems</a> that
+do not offer some variation of auto tiering or caching are as rare as a Bigfoot sighting. They
+might still exist, but not for much longer. The reason for that is the vast</p><!-- BEGIN: inline registration form -->
+<div id="inlineRegistration">
+		<ul>
+		<style>
+.inlineReg_new form input {width:250px;}
+.inlineReg_new .inlineRegHeader h4 {font-size:19px}
+</style>
+<style>								
+#inlineRegistration .inlineRegHeader h4 {float:left;font-size:21px;margin:0;overflow:hidden;}
+#inlineRegistration .callToAction {float:right;}
+#inlineRegistration .callToAction a {background:none;text-transform:none;text-indent:0;text-align:center;text-decoration:none;color:#333;font-size:12px;font-weight:bold;height:17px;padding:0 5px;width:59px;border:1px solid #999999;
+background-color: #cccccc;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#efefef), to(#cccccc));
+background-image: -webkit-linear-gradient(top, #efefef, #cccccc);
+background-image:    -moz-linear-gradient(top, #efefef, #cccccc);
+background-image:     -ms-linear-gradient(top, #efefef, #cccccc);
+background-image:      -o-linear-gradient(top, #efefef, #cccccc);
+filter: progid:DXImageTransform.Microsoft.gradient (startColorstr=#efefef, endColorstr=#cccccc,gradientType='0');} 
+#inlineRegistration .callToAction a:hover {
+background-color: #cccccc;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cccccc), to(#e5e5e5));
+background-image: -webkit-linear-gradient(top, #cccccc, #e5e5e5);
+background-image:    -moz-linear-gradient(top, #cccccc, #e5e5e5);
+background-image:     -ms-linear-gradient(top, #cccccc, #e5e5e5);
+background-image:      -o-linear-gradient(top, #cccccc, #e5e5e5);
+filter: progid:DXImageTransform.Microsoft.gradient (startColorstr=#cccccc, endColorstr=#e5e5e5,gradientType='0');} 
+#inlineRegistration  form {margin: 0px 0 10px 0;}
+#inlineRegistration  ul li {display:inline;}
+#inlineRegistration  input[type="submit"] {margin: 10px 0 0 0; padding: 4px 0; align:left;}
+</style>
+
+    <div class="inlineReg_new">
+      <div class="inlineRegHeader">
+        <h4>Requires Free Membership to View</h4>
+        <div class="callToAction">
+          <nobr><a href="http://users.techtarget.com/registration/searchsolidstatestorage/LoginRegister" style="line-height:1.5em">Login</a></nobr>
+        </div>
+      </div>
+    <div class="inlineRegBody">
+        <form action="http://users.techtarget.com/registration/searchsolidstatestorage/InlineRegisterActivate.page" name="inlineregform" id="inlineregform" method="post">
+          <fieldset>
+            <ul>
+<li >
+								<label for="dgUser#email"><span style="line-height:1.5em">E-mail Address:</span>&nbsp;</label>
+								<input type="text" maxlength="100" size="25" value=""  name="dgUser#email" id="Email"/>
+							</li>
+							<input type="hidden" name="general_permission" id="GeneralPermission" value="1707267" />
+						<input type="hidden" name="appCD" id="AppCode" value="55" />
+						<input type="hidden" name="fromURL" id="FromURL" value="http://searchsolidstatestorage.techtarget.com/tip/Auto-tiering-vs-caching-in-hybrid-storage-systems?utm_medium=EM&amp;asrc=EM_ERU_23208481&amp;utm_campaign=20130827_ERU Transmission for 08/27/2013 (UserUniverse: 532993)_myka-reports@techtarget.com&amp;utm_source=ERU&amp;src=5157449" />
+						<input type="hidden" name="guideContentId" id="ContentId" value="" />
+						<input type="hidden" name="ad_id" id="AdId" value="2240188232" />
+						<input type="hidden" name="type" id="Page-Type" value="inlineregister" />
+						<input type="hidden" name="pageNumber" id="Page-Number" value="1" />
+						<input type="hidden" name="general_permission_global" id="GeneralPermissionGlobal" value="1078335, 975515, 457097, 430809, 1151303" />
+						<input type="hidden" name="dgUser#country" id="Country" value="" />
+						<input type="hidden" name="dgUser#province" id="State/Province" value="" />
+						<input type="hidden" name="dgUser#city" id="City" value="" />
+						</ul><input type="submit" value="Keep Reading"  class="submit primaryButton" style="margin-left:140px"onclick='var ce=["dgUser#email"]; return vRequired(this,ce,"Please enter your Email Address") && vEmail(this,ce,"");' />
+						  </fieldset>
+</form><ul style="margin-left:140px">
+  <li class="inlineRegFormFooter">
+    <p>By submitting you agree to receive email communications from <br>TechTarget and its partners.
+    <a href="http://www.techtarget.com/html/privacy_policy.html" target="_blank">Privacy Policy</a> 
+    <a href="http://searchsolidstatestorage.techtarget.com/about/copyright" target="_blank">Terms of Use</a>.</p>
+  </li>
+  <li class="safeHarbor">
+    <img src="http://cdn.ttgtmedia.com/rms/onlineImages/inlineReg_Test4_safeHarborLogo.png" border="0" alt="Safe Harbor" width="75"></li>
+</ul>
+      </div>
+    </div></ul>
+		</div>
+	<!-- END: inline registration form -->
+<div id="adPsl" class="splash adSplash on">
+	<div id="vendorOffer"><script type="text/javascript">GPT.display("vendorOffer");</script></div></div>
+<img src="http://cdn.ttgtmedia.com/rms/ux/digitalguide/images/spacer.gif" width="1" height="900" />
+	<p><p style=" text-align: left;"></p> difference in <a
+href="http://searchstorage.techtarget.com/definition/hard-disk-drive">hard disk drive</a> (HDD) and
+<a href="http://searchstorage.techtarget.com/definition/solid-state-drive">solid-state drive</a>
+(SSD) performance. SSDs provide up to 1,000 times more <a
+href="http://searchsolidstatestorage.techtarget.com/definition/IOPS-Input-Output-Operations-Per-Second">IOPS</a>
+than HDDs. Systems require auto tiering or caching to make the most of this increased performance.
+These conceptually provide similar benefits, while in fact, they are radically different
+technologies with different capabilities and use cases.</p>
+
+<h3><b>Auto tiering</b></h3>
+
+<p>Auto tiering requires a little historical perspective for an accurate understanding. It was
+originally developed to take advantage of the performance and cost differences between 15,000-,
+10,000-, 7,200-, and 5,400-rpm HDDs.</p>
+
+<p>The underlying principle of auto tiering is that as data ages, its value declines. Data is
+primarily accessed in the first 72 hours after it's created. That access falls precipitously from
+that point forward, becoming less and less frequent until after 30 days, when data is accessed
+occasionally at most. At that point, the data has become "passive" or "cold."</p>
+
+<p>As data's value declines over time, it makes fiscal sense to move it to a lower-performing and
+lower-cost storage tier. Doing so manually is tedious, repetitive, difficult and labor-intensive.
+In other words, it doesn't get done. <a
+href="http://searchstorage.techtarget.com/tutorial/New-wave-of-automated-tiering-software-eases-migration-adds-control">Automated
+tiering</a> moves data based on such policies as data age, frequency of access, last time accessed
+and even response time over time.</p>
+
+<p>Early auto tiering data movement used to be based on whole LUNs (volumes) of data or file
+shares. That's a lot of data movement, with wildly disparate results. A single file access could
+affect a lot of data. Data movement today is based on much smaller atomic units, such as sub-LUNs;
+extents (series of grouped blocks also known as chunks, chunklets or slices); files; objects;
+partial files; or partial objects.</p>
+
+<p>When <a
+href="http://searchsolidstatestorage.techtarget.com/tip/The-paradigm-shift-to-100-flash-SSD-storage-systems-has-begun">flash
+SSDs</a> became practical, cost-effective and pervasive in storage systems, many thought auto
+tiering would be an ideal fit because of the high cost of flash SSDs. It hasn't quite worked out as
+well as was expected. Flash SSDs are a vastly different technology from HDDs. They have different
+issues such as write/erase cycles, electron leakage, <a
+href="http://searchsolidstatestorage.techtarget.com/definition/wear-leveling">wear leveling</a>,
+error detection and correction coding, and more.</p>
+
+<p>Performance and cost differences between SSDs and HDDs also tend to limit the number of tiers in
+a system to two. This causes more frequent data movement both downward and upward to best take
+advantage of those relatively expensive SSDs. However, this constant data movement has two
+downsides that are important to consider.</p>
+
+<p>First, auto tiering is a reactive technology, meaning that it moves data based on historical
+trends, not real-time status. (There are exceptions, such as XtremIO's auto tiering, which moves
+data in real time based on previously recorded application patterns.) Mission-critical or
+high-performance data utilizes SSDs as the target storage. As the data ages out, it is moved to
+HDDs. When recalled, it is moved back. This increases the wear and tear on SSDs and decreases their
+lifecycle.</p>
+
+<p>Second, moving data between tiers is CPU-intensive. This has little impact on system performance
+when the gating performance bottleneck is the HDD, but it is a very different story with SSDs:
+There the bottleneck shifts to the storage processor.</p>
+
+<h3><b>Caching</b></h3>
+
+<p>There are basically two types of <a
+href="http://whatis.techtarget.com/definition/caching">caching</a>: <a
+href="http://whatis.techtarget.com/definition/write-back">write back</a> and <a
+href="http://whatis.techtarget.com/definition/write-through">write through</a>. Write-back caching
+acknowledges writes as they occur. In other words, it takes ownership of the writes. The data stays
+in the cache or is moved (often referred to as "draining") to lower-performing, lower-cost media
+based on such policies as frequency of access, last access, age of the data and so forth. Data can
+also be moved back into the cache based on similar policies. Some data can also be pinned in the
+cache regardless of the policy. Pinned data is often database hot files, indexes, even
+metadata.</p>
+
+<p>Write-through cache writes the data to HDDs first. Data is then brought into the cache via a
+smart algorithm tracking the reads and placing hot data as defined by policy into the SSD cache.
+Write-through cache frequently takes advantage of read-ahead performance gains when workloads are
+sequential. However, read-ahead caching actually degrades performance when workloads are highly
+randomized, as with virtual servers and desktops.</p>
+
+<p>Write-through policies are similar to write-back cache policies, but whereas write-back decides
+what data to purge from the cache, write-through decides what data to put into the cache. The key
+difference is that write-through cache neither accepts the original write of the data nor
+acknowledges it. And just as with write-back caching, write-through caching can pin hot data in the
+cache.</p>
+
+<p>Write-back cache is much less common than write-through cache because more writes land on the
+SSDs, increasing the write-erase cycles and shortening the SSDs' viable wear life. It also tends to
+require a bit more <a
+href="http://searchsolidstatestorage.techtarget.com/definition/solid-state-drive-SSD-capacity">SSD
+capacity</a>.</p>
+
+<p>Both types of caching typically have smaller capacities than auto tiering does. This leads to
+more cache misses, because read requests must go back to the HDDs for their data.</p>
+
+<h3><b>Conclusions</b></h3>
+
+<p>Whether auto tiering is better than caching -- or vice versa -- is in the eye of the beholder.
+Auto tiering performance is best when data movement is highly predictable. There is not a lot of
+back-and-forth thrashing. Some examples include moving older snapshots or transactional data from
+SSDs to HDDs after the close of a quarter. Additional SSD capacity may be required to minimize the
+need to move data to a lower-performing tier as frequently. This is an upfront expense, but can
+increase the <a
+href="http://searchsolidstatestorage.techtarget.com/video/Schulz-Using-RAID-can-prolong-SSD-lifespan">SSD
+lifespan</a> over time.</p>
+
+<p>Caching in general should provide better performance for real-time workload adjustments, random
+I/O, transactional applications, and server and <a
+href="http://searchvirtualdesktop.techtarget.com/definition/desktop-virtualization">desktop
+virtualization</a>. Caching should also create less wear and tear on the SSDs, based on
+much-reduced writes, thus increasing SSD life.</p>
+
+<p>Some hybrid storage vendors offer auto tiering, whereas others offer caching. A few offer
+both.</p>
+
+<p>One very important note about flash-SSD lifespan issues: It has only been recently that these
+issues have begun to crop up. There have been few market-reported <a
+href="http://searchsolidstatestorage.techtarget.com/definition/single-level-cell-SLC-flash">SLC</a>
+and <a href="http://searchsolidstatestorage.techtarget.com/definition/enterprise-MLC-eMLC">eMLC</a>
+wear-life issues. However, with deployments of <a
+href="http://searchsolidstatestorage.techtarget.com/definition/multi-level-cell-MLC">MLC</a>, they
+have become much more prominent.</p>
+
+<p>Before deciding which technology works best for you, examine your workloads, then test both
+technologies under realistic conditions. Select the one that better meets your requirements and
+perceived requirements while meeting your budget.</p>
+
+<p><b>About the author:</b><i><br />
+Marc Staimer is founder, senior analyst and CDS of Dragon Slayer Consulting in Beaverton, Ore. He
+can be reached at </i><a
+href="mailto:marcstaimer@comcast.net"><i>marcstaimer@comcast.net</i></a><i>.</i></p><!-- Begin Dig Deeper: this is above the inline-reg split -->
+<!-- TMP-RightColTop, searchsolidstatestorage.techtarget.com, generated at 09:45:35 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<!-- ItemRegion, searchsolidstatestorage.techtarget.com, generated at 09:45:35 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<div id="relatedContent" class="open">
+	<h4>More News and Tutorials</h4>
+	<div id="relatedContentShow">
+		<div class="articleColumns">
+			<ul class="columnCount2">
+			<li>
+						<div class="splash columnSplash" id="alsoRead">
+							<h4>Articles</h4>
+	<ul class="listTypeTooltip">
+		<li><span class="tooltipText" title="Choosing hybrid SSD-HDD storage systems over all-SSD storage systems comes down to IOPS, throughput, capacity, functionality and, of course, cost."></span><a href="http://searchsolidstatestorage.techtarget.com/tip/How-to-decide-between-hybrid-SSD-HDD-and-100-SSD-systems">How to decide between hybrid SSD-HDD and 100% SSD systems</a></li>
+		<li><span class="tooltipText" title="Proximal Data enters crowded solid-state caching software market with AutoCache, which installs on a VMware hypervisor."></span><a href="http://searchsolidstatestorage.techtarget.com/news/2240160028/Proximal-Data-launches-solid-state-caching-software-for-VMs">Proximal Data launches solid-state caching software for VMs</a></li>
+		<li><span class="tooltipText" title="Marc Staimer looks at using SSDs for write caching and explains why most storage SSD caching is write-through and not write-back."></span><a href="http://searchsolidstatestorage.techtarget.com/tip/Problems-with-using-SSDs-for-write-caching-and-how-to-avoid-them">Problems with using SSDs for write caching and how to avoid them</a></li>
+		<li><span class="tooltipText" title="Learn how to use storage tiering most effectively with the newest developments involving automation and solid-state drives."></span><a href="http://searchstorage.techtarget.com/feature/Tiered-storage-model-Five-new-developments">Tiered storage model: Five new developments</a></li>
+		<li><span class="tooltipText" title="Auto tiering is a key technology for today’s storage professionals to understand, especially if you have SSDs. Find out what auto tiering does and why it’s important."></span><a href="http://searchstorage.techtarget.com/podcast/Auto-tiering-an-important-technology-in-todays-storage-industry">Auto tiering crucial to storage efficiency</a></li>
+		</ul>
+</div>
+					</li>
+					<li>
+						<div class="splash columnSplash" id="relatedTags">
+							<div class="sponsoredArticles">
+		<h3>Sponsored Articles</h3>
+		<ul>
+			<li><a href="http://searchstorage.techtarget.com/NetAppSponsoredNews/NetApp-Flash-Pool-and-Flash-Cache-A-Deep-Dive">NetApp Flash Pool and Flash Cache: A Deep Dive</a></li>
+				<p>
+				Sponsored by NetApp</p>
+			<li><a href="http://searchstorage.techtarget.com/NetAppSponsoredNews/Five-Strategies-for-Using-Flash-in-Your-Next-Storage-Project">Five Strategies for Using Flash in Your Next Storage Project</a></li>
+				<p>
+				Sponsored by NetApp</p>
+			<li><a href="http://searchstorage.techtarget.com/NetAppSponsoredNews/The-Benefits-of-Caching-Software-for-Server-Side-Flash-Storage">The Benefits of Caching Software for Server-Side Flash Storage</a></li>
+				<p>
+				Sponsored by NetApp</p>
+			<li><a href="http://searchstorage.techtarget.com/NetAppSponsoredNews/When-to-Consider-an-All-Flash-Array">When to Consider an All-Flash Array</a></li>
+				<p>
+				Sponsored by NetApp</p>
+			<li><a href="http://searchstorage.techtarget.com/NetAppSponsoredNews/Three-Reasons-to-Update-Your-Next-Storage-RFP">Three Reasons to Update Your Next Storage RFP</a></li>
+				<p>
+				Sponsored by NetApp</p>
+			</ul>
+	</div>
+</div>
+					</li>
+					</ul>
+		</div>
+	</div>
+	<div id="relatedContentHide">
+			<div class="articleColumns">
+					<ul class="columnCount1">
+						<li>
+							<div class="splash columnSplash" id="relatedGlossaryTerms">
+								<h4>Related glossary terms</h4>
+								<p class="columnSplashMore">Terms for Whatis.com - the <a href="http://whatis.techtarget.com">technology online dictionary</a></p>
+								<ul class="listTypeBullet">
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/solid-state-drive-SSD-capacity">solid state drive (SSD) capacity</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/stand-alone-solid-state-storage-SSS">stand-alone solid state storage (SSS)</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/solid-state-module-SSM">solid state module (SSM)</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/RAM-based-solid-state-drive-SSD">RAM-based solid state drive (SSD)</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/client-solid-state-drive-SSD">client solid state drive (SSD)</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/queue-depth">queue depth</a></li>
+								<li><a href="http://whatis.techtarget.com/reference/Fast-Guide-to-RAM">Fast Guide to RAM</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/flash-cache">flash cache</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/fab-fabrication">semiconductor fab</a></li>
+								<li><a href="http://searchsolidstatestorage.techtarget.com/definition/flash-cache-appliance">flash cache appliance</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+<!-- End Dig Deeper: this is below the inline-reg split -->
+
+<div id="dateline"><p>This was first published in July 2013</p></div>
+<!-- End of body -->
+</div>
+<div id="articleFooter">
+	</div>
+<!-- Column FIFA start -->
+	   
+
+
+
+
+
+
+
+
+	
+	
+		
+			
+				<div id="comments" data-comment-forum-id="194" data-comment-reference-id="262373f410eef310VgnVCM1000000d01c80aRCRD" 
+					data-comment-url="http://searchsolidstatestorage.techtarget.com/tip/Auto-tiering-vs-caching-in-hybrid-storage-systems">
+					<h4>Join the conversation<a href="#" class="button primaryButton commentsModalOpen">Comment</a></h4>
+					
+					<div id="commentsCol1">		
+						<div id="commentsShare">		
+							<h5>Share</h5>	
+							<div class="socialMediaButtons" data-smb-layout="vertical" data-smb-sites="twitter,facebook,linkedin,googleplus,addthis"></div>			
+						</div>
+						
+						<div id="commentsPollResults"></div>		
+					</div>
+					
+					<div id="commentsCol2">	
+						<h5>Comments</h5>	
+						<ol id="commentsList" class="listTypeComments"></ol>	
+					</div>	
+				
+					<div id="commentsModal">		
+						<div id="commentsModalPollResults">
+							<h4>Results</h4>
+						</div>
+				
+						<div id="commentsModalHeader">
+							<h4>Contribute to the conversation</h4>
+							<div id="commentsModalMessaging">
+								<span class="requiredFieldIndicator">All fields are required. Comments will appear at the bottom of the article.</span>
+							</div>
+						</div>
+						
+						<form action="/vgn-ext-templating/techtarget/comments/add.json" method="post" id="commentsModalForm" name="commentsModalForm">
+							<input type="hidden" name="forumId" value="194">
+							<input type="hidden" name="reference_id" value="262373f410eef310VgnVCM1000000d01c80aRCRD">
+							<ol>
+							<li>
+								<label for="commentsModalFormMessage">Comment:</label>
+								<textarea rows="5" cols="20" id="commentsModalFormMessage" name="message" tabindex="1"></textarea>
+							</li>
+							<li>
+								<div id="commentsModalFormRecaptcha"></div>
+							</li>
+							</ol>		
+							<button type="submit" id="commentsModalFormSubmit" class="button primaryButton">Submit</button>
+						</form>
+					</div>		
+				</div>
+			
+			
+				
+	
+
+
+<!-- end of Column FIFA -->
+	
+<div id="disclaimer">
+<p><strong>Disclaimer:</strong> 
+Our Tips Exchange is a forum for you to share technical advice and expertise with your peers and to learn from other enterprise IT professionals. TechTarget provides the infrastructure to facilitate this sharing of information. However, we cannot guarantee the accuracy or validity of the material submitted. You agree that your use of the Ask The Expert services and your reliance on any questions, answers, information or other materials received through this Web site is at your own risk.</p>
+</div> 
+<div class="pageNav">
+		<a href="#content" class="backToTop">Back to top</a>
+	</div>
+</div>
+<div id="sidebar">
+	 
+
+
+
+
+
+
+<!-- null, searchsolidstatestorage.techtarget.com, generated at 19:34:20 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+
+
+	
+<!-- TMP-RightCol, searchsolidstatestorage.techtarget.com, generated at 19:34:20 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+
+
+
+<div id="bigAd1"><script type="text/javascript">GPT.display("bigAd1");</script></div>
+
+
+<div id="cltAd"><script type="text/javascript">GPT.display("cltAd");</script></div>
+
+
+<div id="bigAd2"><script type="text/javascript">GPT.display("bigAd2");</script></div>
+
+
+
+<div class="splash seoSplash" id="seoLinks">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- TMP-RightColTop, searchsolidstatestorage.techtarget.com, generated at 19:34:20 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<div id="relatedContentTechnical" class="splash editorialSplash relatedContentSplash">
+	<div class="splashHeader"><h4>You May Also Be Interested In...</h4></div>
+	<div class="splashBody">
+		<h5>More Background</h5>
+<ul class="listTypeTooltip">
+	<li><span class="tooltipText" title="Flash cache is the temporary storage of data on NAND flash memory chips to enable requests for data to be fulfilled with greater speed."></span><a class="removedAdsParams" href="http://searchsolidstatestorage.techtarget.com/definition/flash-cache">
+		flash cache</a>
+		</li>
+	<li><span class="tooltipText" title="No longer a luxury item for well-heeled data centers, SSD technologies are more affordable than ever and come in a variety of form factors with a choice of deployment options."></span><a class="removedAdsParams" href="http://searchsolidstatestorage.techtarget.com/feature/Best-practices-for-SSD-technologies">
+		Best practices for SSD technologies</a>
+		</li>
+	</ul>
+<h5>More Details</h5>
+<ul class="listTypeTooltip">
+	<li><span class="tooltipText" title="In this Expert Answer, Leah Schoeb of Evaluator Group discusses the top three mistakes people make when switching from HDD to SSD storage."></span><a class="removedAdsParams" href="http://searchsolidstatestorage.techtarget.com/answer/Top-mistakes-users-make-when-switching-from-HDD-to-SSD-storage">
+		Top mistakes users make when switching from HDD to SSD storage</a>
+		</li>
+	<li><span class="tooltipText" title="Marc Staimer looks at using SSDs for write caching and explains why most storage SSD caching is write-through and not write-back."></span><a class="removedAdsParams" href="http://searchsolidstatestorage.techtarget.com/tip/Problems-with-using-SSDs-for-write-caching-and-how-to-avoid-them">
+		Problems with using SSDs for write caching and how to avoid them</a>
+		</li>
+	</ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN: inline optin form -->
+	<div id="emailUpdates" class="developerSplash">
+	<script language="JavaScript" type="text/javascript">
+		var emailUpdates_variables = new Object();
+		emailUpdates_variables['FromURL'] = location.href;
+		emailUpdates_variables['AppCode'] = '110';
+		emailUpdates_variables['AdId'] = '2240188232';
+		
+		executeInlineByPage('searchSolidStateStorage', 'emailUpdates', 'inlineoptin', '1');
+	</script>
+	</div>
+<!-- END: inline optin form -->
+
+</div>
+<!-- TMP-ContentFooter, searchsolidstatestorage.techtarget.com, generated at 23:10:56 Mon Aug 26, 2013 , by vappma12.techtarget.com -->
+<div id="footerAdsPlacement">
+<script type="text/javascript">
+	var cl_exclusive = "N";
+
+	function ss(w){window.status=w;return true;}
+	function cs(){window.status='';}
+	function ga(o,e){
+		if (document.getElementById){
+			a=o.id.substring(1);
+			p="";
+			g=e.target;
+			if(g){
+				t=g.id;f=g.parentNode;
+					if(f)p=f.id;
+				}
+			else{t=e.srcElement.id;}
+			if(t==a||p==a)
+				return;
+			location.href=document.getElementById(a).href;
+		}
+	}
+
+	function google_ad_request_done(google_ads) {
+		if (google_ads.length > 0) {
+			document.write(['<a name="marketplace_top"></a>',
+				'<div id="adGoogleFooter" class="splash adSplash on">',
+			    '<div class="adSplashContent">',
+			    '<h4><a href="https://www.google.com/adsense/support/bin/request.py?contact=abg_afc">Ads by Google</a></h4>',
+			    '<ul>',
+			    (function (ads) {
+				    var arr = [];
+				    for (var i = 0; i < ads.length; i++) {
+						arr.push(['<li>',
+							'<a href="' + ads[i].url + '" class="openInNewWindow">' + ads[i].line1 + '</a>',
+							ads[i].line2 + '<br/>',
+							ads[i].line3,
+							'<a href="' + ads[i].url + '" class="agtUrl openInNewWindow">' + ads[i].visible_url + '</a>',
+					    	'</li>'
+					    	].join(""));
+				    }
+				    return arr.join("\n");	    			
+				})(google_ads),
+				'</ul>',
+			    '</div>',
+			    '</div>'
+				].join("\n")
+			);
+		}
+	}
+
+	if (cl_exclusive != "Y") {
+		var google_max_num_ads = 4;
+		document.write('<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></\script>');
+	}
+</script>
+</div>
+
+</div>
+</div>
+<div id="footer">
+<!-- TMP-Footer, searchsolidstatestorage.techtarget.com, generated at 16:36:39 Tue Aug 27, 2013 , by vappma12.techtarget.com -->
+<div id="footerNavigation">
+	<div id="footerNavigationCompress">
+		<div class="megaMenu">
+			<script type="text/javascript">
+				(function ($) {
+					var mm = $("#headerNavigation .megaMenu");
+					if (mm.length > 0) {
+						$("#footerNavigation .megaMenu").html(mm.html());
+					} else {
+						$(document).ready(function ($) {
+							$("#footerNavigation .megaMenu").html($("#headerNavigation .megaMenu").html());
+						});
+					}
+				})(jQuery);
+			</script>
+		</div>
+<div id="footerNavigationSearch" class="navigationSearch">
+			<form action="/search/query" method="get" id="footerNavigationSearchForm">
+				<fieldset>
+					<label for="footerNavigationSearchTextbox" class="navigationSearchLabel">Search this site</label>
+					<input type="hidden" name="start" value="0" />
+					<input type="hidden" name="filter" value="1" />
+					<input type="text" name="q" id="footerNavigationSearchTextbox" class="navigationSearchBox" />
+					<input type="submit" value="Search" id="footerNavigationSearchSubmit" class="navigationSearchSubmitButton" />
+				</fieldset>
+			</form>
+		</div>
+</div>
+</div>
+<div id="footerCompress">
+<div id="relatedSites">
+<h5>More from Related TechTarget Sites</h5>
+	
+	<ul id="relatedSitesNav" class="listTypeTab">
+		<li>
+					<a href="#rsh-tab0">Virtual Storage</a>
+				</li>
+			<li>
+					<a href="#rsh-tab1">Cloud Storage</a>
+				</li>
+			<li>
+					<a href="#rsh-tab2">Disaster Recovery</a>
+				</li>
+			<li>
+					<a href="#rsh-tab3">Data Backup</a>
+				</li>
+			<li>
+					<a href="#rsh-tab4">Storage</a>
+				</li>
+			<li>
+					<a href="#rsh-tab5">Storage UK</a>
+				</li>
+			<li>
+					<a href="#rsh-tab6">Storage Channel</a>
+				</li>
+			</ul>
+	
+	<ul id="relatedSitesHeadlines" class="listTypeTabContent">
+		<li id="rsh-tab0">
+					<div class="rshLogo">
+						<a class="searchvirtualstorage" href="http://searchvirtualstorage.techtarget.com">Virtual Storage</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchvirtualstorage.techtarget.com/news/2240204172/VMware-Virtual-SAN-Flash-Read-Cache-Virsto-highlight-storage-plans">
+											VMware Virtual SAN, Flash Read Cache, Virsto highlight storage plans</a>
+									</h6>
+							<p>
+								VMware Virtual SAN, VMware vSphere Flash Read Cache and Virsto play big roles in VMware's software-defined storage strategy.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchvirtualstorage.techtarget.com/news/2240204166/VMworld-2013-storage-product-launches-cover-arrays-flash-and-cloud">
+											VMworld 2013 storage product launches cover arrays, flash and cloud</a>
+									</h6>
+							<p>
+								Quantum, Fusion-io, Nimble Storage and Brocade are among the vendors to launch storage products at VMworld 2013.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchvirtualstorage.techtarget.com/news/2240204073/Dell-boosts-Foglights-virtual-storage-management-support">
+											Dell boosts Foglight's virtual storage management support</a>
+									</h6>
+							<p>
+								Dell's Foglight for Storage Management includes support for more arrays and performance monitoring.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			<li id="rsh-tab1">
+					<div class="rshLogo">
+						<a class="searchcloudstorage" href="http://searchcloudstorage.techtarget.com">CloudStorage</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchcloudstorage.techtarget.com/news/2240203969/Cloud-insurance-How-much-protection-does-it-provide">
+											Cloud insurance: How much protection does it provide?</a>
+									</h6>
+							<p>
+								Cloud insurance is becoming more popular, according to brokers, mainly because of concerns over security and service-level agreement shortcomings.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchcloudstorage.techtarget.com/podcast/Cloud-based-nearline-storage-adds-features-to-adapt-to-big-data-needs">
+											Cloud-based nearline storage adds features to adapt to big data needs</a>
+									</h6>
+							<p>
+								Cloud-based nearline data storage adds erasure coding, makes file data Hadoop-ready to adapt to exabyte-scale requirements of passive data.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchcloudstorage.techtarget.com/news/2240203166/Nasuni-adds-cloud-mirror-for-multi-site-disaster-recovery">
+											Nasuni adds cloud mirror for multi-site disaster recovery</a>
+									</h6>
+							<p>
+								Cloud storage controller vendor Nasuni incorporates a cloud mirror option that lets customers keep updated data on two clouds for disaster recovery.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			<li id="rsh-tab2">
+					<div class="rshLogo">
+						<a class="searchdisasterrecovery" href="http://searchdisasterrecovery.techtarget.com">searchDisasterRecovery</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchdisasterrecovery.techtarget.com/news/2240204058/HotLink-unveils-Amazon-Web-Services-BC-DR-solution-to-protect-VMware">
+											HotLink unveils Amazon Web Services BC/DR solution to protect VMware</a>
+									</h6>
+							<p>
+								HotLink DR Express offers a plug-in BC/DR solution that leverages Amazon Web Services to protect VMware vSphere virtual machines.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchdisasterrecovery.techtarget.com/answer/Hot-site-disaster-recovery-testing">
+											Hot site disaster recovery testing</a>
+									</h6>
+							<p>
+								Jon Toigo of Toigo Partners International discusses specific considerations for hot-site disaster recovery testing in this Expert Answer.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchdisasterrecovery.techtarget.com/news/2240203849/FalconStor-moves-to-facilitate-data-mobility-for-DR">
+											FalconStor moves to facilitate data mobility for DR</a>
+									</h6>
+							<p>
+								FalconStor enhances data mobility platform with the goal of giving customers better control over disaster recovery automation.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			<li id="rsh-tab3">
+					<div class="rshLogo">
+						<a class="searchdatabackup" href="http://searchdatabackup.techtarget.com">searchDataBackup</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchdatabackup.techtarget.com/tip/Pros-and-cons-of-the-integrated-data-backup-appliance">
+											Pros and cons of the integrated data backup appliance</a>
+									</h6>
+							<p>
+								Data center backup solutions are complicated; hence, the integrated data backup appliance. George Crump examines whether it is the right approach.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchdatabackup.techtarget.com/answer/Common-misconceptions-about-replication-backup-today">
+											Common misconceptions about replication, backup today</a>
+									</h6>
+							<p>
+								Jason Buffington of ESG outlines common misconceptions about replication and backup today in this Expert Answer.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchdatabackup.techtarget.com/news/2240203908/Metalogix-expands-StoragePoint-automated-backup-retention-functions">
+											Metalogix expands StoragePoint automated backup, retention functions</a>
+									</h6>
+							<p>
+								Metalogix has announced the latest version of StoragePoint includes expanded automated backup and retention capabilities for the SharePoint platform.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			<li id="rsh-tab4">
+					<div class="rshLogo">
+						<a class="searchstorage" href="http://searchstorage.techtarget.com">searchStorage</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchstorage.techtarget.com/news/2240204071/Continuity-Softwares-risk-detection-line-adds-SAN-configuration-app">
+											Continuity Software's risk detection line adds SAN configuration app</a>
+									</h6>
+							<p>
+								Continuity Software's AvailabilityGuard enterprise suite of risk detection products now scans FC switches with the addition of SAN configuration app.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchstorage.techtarget.com/news/2240203919/Imation-Nexsan-takes-hybrid-unified-model-to-enterprise">
+											Imation Nexsan takes hybrid unified model to enterprise</a>
+									</h6>
+							<p>
+								Imation improves its flash caching for the Nexsan NST6000 as it attempts to make its unified storage system better suited for mission-critical apps.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchstorage.techtarget.com/news/2240203615/Photobucket-expands-environment-with-NetApps-clustered-Data-Ontap">
+											Photobucket expands environment with NetApp's clustered Data Ontap</a>
+									</h6>
+							<p>
+								Image hosting website Photobucket provides services to customers with the addition of NetApp's clustered Data Ontap to its 17-petabyte data center.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			<li id="rsh-tab5">
+					<div class="rshLogo">
+						<a class="searchstorageuk" href="http://searchstorage.techtarget.co.uk">searchStorageUK</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchstorage.techtarget.co.uk/opinion/Dell-cloud-storage-plans-remain-hazy">
+											Dell cloud storage plans remain hazy</a>
+									</h6>
+							<p>
+								News of a Nirvanix partnership filled in some details about Dell's cloud storage strategy, but the company still treats its cloud plans as a secret.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchstorage.techtarget.co.uk/podcast/Storage-Radio-Riverbed-Whitewater-appliance-chases-enterprise">
+											Storage Radio: Riverbed Whitewater appliance chases enterprise</a>
+									</h6>
+							<p>
+								In our latest Storage Radio podcast, SearchStorage.com editors discuss the Riverbed Whitewater cloud data backup appliance for enterprise backups.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchstorage.techtarget.co.uk/tip/Finding-data-deduplication-solutions-for-DR">
+											Finding data deduplication solutions for DR</a>
+									</h6>
+							<p>
+								Deduplication is an important strategy for disaster recovery. Learn more about data dedupe solutions  in this expert tip by Paul Kirvan.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			<li id="rsh-tab6">
+					<div class="rshLogo">
+						<a class="searchstoragechannel" href="http://searchstoragechannel.techtarget.com">searchStorageChannel</a>
+					</div>
+					
+					<ul class="rshCols">
+						<li >
+							<h6>
+								<a href="http://searchstoragechannel.techtarget.com/feature/Hitachi-Data-Systems-Partner-Program-Checklist">
+											Hitachi Data Systems Partner Program Checklist</a>
+									</h6>
+							<p>
+								Learn the benefits of becoming a Hitachi Data Systems reseller partner with our Partner Program Checklist.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchstoragechannel.techtarget.com/feature/Yosemite-Technologies-Partner-Program-Checklist">
+											Yosemite Technologies Partner Program Checklist</a>
+									</h6>
+							<p>
+								Learn the benefits of becoming a Yosemite Technologies reseller partner with our Partner Program Checklist.</p>
+						</li>
+						
+			
+						
+						<li >
+							<h6>
+								<a href="http://searchstoragechannel.techtarget.com/feature/CommVault-Inc-Partner-Program">
+											CommVault, Inc. Partner Program</a>
+									</h6>
+							<p>
+								Learn about data management software vendor CommVault, Inc.'s partner program in this standardized checklist.</p>
+						</li>
+						
+			
+						
+						</ul>
+				</li>
+			</ul>	
+<span id="footerTechtargetLogo"></span>
+</div>
+</div>
+<div id="footerMiscLinks">
+	<div id="footerMiscLinksCompress">
+		<div id="footerCopyright">
+			All Rights Reserved,<a href="/about/copyright">Copyright 2012 - 2013</a>, TechTarget</div>
+		<ul>
+		<li><a href="/about">About Us</a></li>
+			<li><a href="/about/contact">Contact Us</a></li>
+			<li><a href="/about/index">Site Index</a></li>
+			<li><a href="http://www.techtarget.com/html/privacy_policy.html">Privacy policy</a></li>
+			<li><a href="/about/advertising">Advertisers</a></li>
+			<li><a href="/about/partners">Business partners</a></li>
+			<li><a href="/events">Events</a></li>
+			<li><a href="http://www.techtarget.com/mediakit/">Media kit</a></li>
+			<li><a href="http://www.techtarget.com/">TechTarget Corporate site</a></li>
+			<li><a href="http://reprints.ygsgroup.com/m/techtarget">Reprints</a></li>
+			<li><a href="/archive">Archive</a></li><li><a href="/sitemap">Site map</a></li>
+</ul>
+	</div>
+</div>
+</div>
+
+
+
+<script>
+
+var date = new Date();
+date.setTime(date.getTime()+(5*365*24*60*60*1000));
+var expires = "expires="+date.toGMTString();
+
+
+
+</script><!-- key: /template/vgn-ext-templating/techtarget/v2/templates/eocTip/onBodyClose -->
+<script type="text/javascript" src="http://cdn.ttgtmedia.com/rms/ux/javascript/ss-combined.min.js"></script><script type='text/javascript'>
+	// chartbeat config set in the head
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+           'js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+<script type="text/javascript">
+if (typeof jQuery == "function") jQuery(document).trigger("onclosebody");
+</script>
+
+<!-- Google Code for Remarketing tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1070110249;
+var google_conversion_label = "RRsgCOW4tgMQqayi_gM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1070110249/?value=0&label=RRsgCOW4tgMQqayi_gM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for Remarketing tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1072226410;
+var google_conversion_label = "x3P_CIql1gMQ6sCj_wM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1072226410/?value=0&label=x3P_CIql1gMQ6sCj_wM&guid=ON&script=0"/>
+</div>
+</noscript>
+<!-- 
+Region/Component Load time
+===============
+TMP-Head=306
+TMP-LoginBand=5
+TMP-Header=3
+TMP-ContentHeader=2
+itemRegion:eocTip=20
+TTJC-TMP-Comments=16
+TMP-RightColTop=21
+TMP-HotTopics=1
+TMP-RightCol=6
+TMP-ContentFooter=2
+TMP-Footer=4
+End-Of-Page=1
+
+TOTAL PAGE LOAD TIME=387
+ --> 
+<!-- Request Serving Server : vappma12.techtarget.com-->
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" + "js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","1068cf12f6","313780","ZQMAYxdYXUBSAkFbClxJLFgXVFJfWhtQVjBAD00dSk1aQxxPHw==",0,411,new Date().getTime(),"","","","",""]);</script></body>
+</html>

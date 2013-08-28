@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="http://cms.autorepairlocal.com/static/images/favicon_autorepair.ico" />
+<link rel="stylesheet" href="http://cms.autorepairlocal.com/static/global.css" type="text/css" charset="utf-8" />
+<title>Kentucky Emergency Roadside Assistance - Emergency Car Repair Service - KY</title>
+<meta name="description" content="Search emergency roadside assistance in Kentucky." />
+<link rel="stylesheet" href="http://cms.autorepairlocal.com/static/state.css" type="text/css" charset="utf-8" />
+<script type="text/javascript" src="http://cms.autorepairlocal.com/static/jquery.js"></script>
+<script type="text/javascript">
+<!--
+if (typeof XMLHttpRequest == "undefined")
+{
+XMLHttpRequest = function() {
+try { return new ActiveXObject("Msxml2.XMLHTTP.6.0") } catch(e) {}
+try { return new ActiveXObject("Msxml2.XMLHTTP.3.0") } catch(e) {}
+try { return new ActiveXObject("Msxml2.XMLHTTP") } catch(e) {}
+try { return new ActiveXObject("Microsoft.XMLHTTP") } catch(e) {}
+throw new Error( "This browser does not support XMLHttpRequest." );
+};
+}
+function elem(id)
+{
+return document.getElementById(id);
+}
+function hide(id)
+{
+var e = elem(id);
+if (e) e.style.display = "none";
+}
+function show(id, opt_display)
+{
+var display = "";
+if (typeof opt_display != "undefined") display = opt_display;
+var e = elem(id);
+if (e) e.style.display = display;
+}
+function ajaxSubmit(dest, data)
+{
+var xmlreq = new XMLHttpRequest();
+xmlreq.open("POST", dest, false);
+xmlreq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xmlreq.send(data);
+return xmlreq;
+}
+function ajaxFormSubmit(form, opt_dest, opt_extras)
+{
+var dest = form.action;
+if (typeof opt_dest != "undefined") dest = opt_dest;
+var vars = [];
+if (typeof opt_extras != "undefined") vars = opt_extras;
+for (var i = 0; i < form.elements.length; i++)
+{
+var e = form.elements[i];
+if (e.type != "checkbox" || e.checked == true)
+{
+vars.push(e.name + "=" + encodeURIComponent(e.value));
+}
+}
+return ajaxSubmit(dest, vars.join("&"));
+}
+function clearInstructions(id)
+{
+var e = elem(id);
+if (e.value == "zip code")
+{
+e.value = "";
+e.maxLength = 5;
+e.style.color = "#54534A";
+}
+}
+function showMoreDeals()
+{
+$("#moredeals").slideDown(300);
+elem("deal3").className = "deal";
+elem("deallink").innerHTML = "<a href=\"javascript:showLessDeals();\">see less deals</a>";
+}
+function showLessDeals()
+{
+$("#moredeals").slideUp(300, function() { elem("deal3").className = "deal lastdeal"; });
+elem("deallink").innerHTML = "<a href=\"javascript:showMoreDeals();\">see more deals</a>";
+}
+function showMoreFooter()
+{
+hide("morefooterlink");
+show("morefooterreplace");
+$("#morefooter").slideDown(300);
+}
+function GetDeals()
+{
+elem("dealsbox").innerHTML = ajaxFormSubmit(elem("dealzipcode")).responseText;
+}
+function validateZip(form, e)
+{
+if (typeof e == "undefined") e = "zipcode";
+var zipFilter = /^([0-9]{5})$/;
+if (!zipFilter.test(elem(e).value)) return false;
+window.location = form.action + "?zip=" + elem(e).value;
+return false;
+}
+var phone_field_length=0;
+function TabNext(obj,event,len,next_field)
+{
+if (event == "down")
+{
+phone_field_length=obj.value.length;
+}
+else if (event == "up")
+{
+if (obj.value.length != phone_field_length)
+{
+phone_field_length=obj.value.length;
+if (phone_field_length == len)
+{
+next_field.focus();
+}
+}
+}
+}
+function fixEvent(e)
+{
+if ( e.pageX == null && e.clientX != null ) {
+var de = document.documentElement, b = document.body;
+e.pageX = e.clientX + (de && de.scrollLeft || b.scrollLeft || 0);
+e.pageY = e.clientY + (de && de.scrollTop || b.scrollTop || 0);
+}
+return e;
+}
+function showTooltip(e, s)
+{
+var t = elem("tooltip");
+t.innerHTML = "<b>" + s + "</b>";
+e = fixEvent(e || window.event);
+t.style.top = (e.pageY + 2) + "px";
+t.style.left = (e.pageX + 2) + "px";
+show("tooltip");
+}
+function hideTooltip()
+{
+hide("tooltip");
+}
+var openFaq = 0;
+function showFaq(id)
+{
+if (openFaq != 0)
+{
+$("#ans" + openFaq).slideUp("200");
+elem("faq" + openFaq).className = "arrow";
+}
+if (openFaq != id)
+{
+$("#ans" + id).slideDown("200");
+elem("faq" + id).className = "arrow down";
+openFaq = id;
+}
+else openFaq = 0;
+}
+//-->
+</script>
+<script type="text/javascript"><!--
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-9442404-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+// -->
+</script>
+</head>
+<body >
+<div id="container">
+<div id="tooltip" style="display:none;position:absolute;background:white;padding:10px;border:1px solid black"></div>
+<div id="header">
+<table id="logo">
+<tr><td valign="middle"><a id="logolink" href="/"><img src="http://cms.autorepairlocal.com/static/images/logo_autorepair.png" alt="AutoRepairLocal.com" /></a></td></tr>
+</table>
+<ul>
+<li class="first"><a  href="/">Home</a></li>
+<li><a  href="/resources/">Repair Resources</a></li>
+<li><a  href="/about/">Auto Shop Resources</a></li>
+</ul>
+<form action="/search" onsubmit="return validateZip(this)">
+<table id="searchinside" cellpadding="0" cellspacing="0">
+<tr>
+<td class="text firstcol">find auto repair</td>
+<td><input type="text" name="zip" id="zipcode" onfocus="clearInstructions('zipcode');" value="zip code" /></td>
+<td class="lastcol"><input type="image" name="submit" id="submit" src="http://cms.autorepairlocal.com/static/images/home_search_button-go.png" /></td>
+</tr>
+</table>
+</form>
+</div>
+<div id="content">
+<div id="directoryleft">
+<div class="box">
+<div class="inside">
+<h1 class="findtitle">
+Find Emergency Roadside Assistance Service Near You in Kentucky
+</h1>
+<p>
+Search AutoRepairLocal.com for an up-to-date and complete listing of emergency roadside assistance in Kentucky. Type in your zipcode to find emergency roadside service near you.
+</p>
+<form id="servicenearyou" action="/repair/emergency/search" onsubmit="return validateZip(this, 'zipcode2')">
+<div>
+<div class="service">
+search emergency roadside assistance in KY
+</div>
+<input type="text" name="zip" id="zipcode2" class="results" onfocus="clearInstructions('zipcode2');" value="zip code" />
+<input type="image" name="submit" id="submitstate" value="" src="http://cms.autorepairlocal.com/static/images/home_search_button-go.png" />
+</div>
+</form>
+</div>
+<div class="bottom"><!-- spacer --></div>
+</div>
+<div class="box">
+<div class="inside">
+<h3>Featured Emergency Roadside Assistance in Kentucky</h3>
+<div class="featured">
+<a href="/profile/aamco-transmissions-complete-car-care-springfield-ohio.html">Aamco Transmissions Complete Car Care</a>
+<p>Springfield, OH</p>
+<p>937-505-0964</p>
+<p class="desc">Aamco transmissions &amp; complete car care    Our aamco center features the best variety of high quality and affordably priced automotive services and repairs, including transmission services and repairs, fluid and filter services, brake inspections <img src="http://cms.autorepairlocal.com/static/images/cotd.png" width="9" height="2" /></p>
+</div>
+</div>
+<div class="bottom"><!-- spacer --></div>
+</div>
+<div class="box">
+<div class="inside">
+<h1 class="stateh1">
+Kentucky Emergency Roadside Assistance
+</h1>
+Businesses that offer emergency roadside assistance in KY list with AutoRepairLocal.com. We'll show you which local KY business is nearest to you if you enter your zip code or click on your city or neighborhood.
+<h3 class="stateh3" style="margin-top:10px;">Browse By City</h3>
+<table class="browsecity" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td>
+<ul class="state">
+<li><a href="/repair/emergency/ky/fort-thomas/">Fort Thomas</a></li>
+<li><a href="/repair/emergency/ky/lexington/">Lexington</a></li>
+</ul>
+</td>
+<td>
+<ul class="state">
+<li><a href="/repair/emergency/ky/louisville/">Louisville</a></li>
+<li><a href="/repair/emergency/ky/simpsonville/">Simpsonville</a></li>
+</ul>
+</td>
+<td class="last">
+<ul class="state">
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="bottom"><!-- spacer --></div>
+</div>
+</div>
+<div id="directoryright">
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footerinside">
+<div id="footerbottom">
+<p id="links"><a href="/">AutoRepairLocal.com Home</a> <span>|</span> <a href="/apps/login">Login</a> <span>|</span> <a href="/terms">Terms and Conditions</a> <span>|</span> <a href="/privacypolicy">Privacy Policy</a></p>
+<p class="copyright">Copyright &copy; 2013 AutoRepairLocal. All Rights Reserved.</p>
+<div class="clear"><!-- spacer --></div>
+<div style="text-align: center; margin-top: 10px;">AutoRepairLocal.com is a directory of advertisers and is a Felix Calls LLC company. Businesses pay to be featured and receive phone calls from customers.</div>
+</div>
+</div>
+</div>
+</body>
+</html>

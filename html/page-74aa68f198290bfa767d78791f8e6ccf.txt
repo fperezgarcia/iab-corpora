@@ -1,0 +1,478 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+
+<title>California Automotive Schools &amp; Motorcycle Mechanic Training Schools</title>
+
+<meta name="description" content="Guide to California automotive schools offering a broad range of training in automotive and motorcycle technology and much more.">
+
+<meta name="keywords" content="california automotive schools">
+
+<LINK REL=STYLESHEET TYPE='text/css' HREF='http://www.trade-schools.net/css.css'>
+<link href="/content/themes/jquery-ui/css/custom-theme/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />
+<link href="/content/zip-search.css" type="text/css" rel="stylesheet" />
+<link href="/scripts/fancybox/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" media="screen" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/scripts/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script> 
+<script src="/scripts/jquery.metadata.js" type="text/javascript"></script> 
+<script src="/scripts/jquery.watermark.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js" type="text/javascript"></script>
+<script src="/scripts/Library.js" type="text/javascript"></script>
+<script src="/scripts/zipsearch-widget.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		if (document.compatMode != 'CSS1Compat' && $.browser.msie) {
+			$(".invalidZipCode").css("width", "220px");
+		}
+		ZipSearch_Initialize();
+		var isiPad = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null;
+		if (!isiPad) { FancyBoxInit(); }
+		else
+		{
+		    $("a.fancybox").click(function () {
+		        if (typeof _gaq != 'undefined') {
+		            var fullPath = window.location.pathname.toLowerCase();
+		            var fancyBoxUrl = typeof $(this).attr('href') != 'undefined' ? getParameterByNameFromUrl($(this).attr('href'), 'DCSext.ts_url') : '';
+		            var pathLabel = fancyBoxUrl != '' ? fullPath + ' - ' + fancyBoxUrl : fullPath;
+		            _gaq.push(['_trackEvent', 'Fancybox Popup', 'iOS Click', pathLabel]);
+		        }
+		    });
+		}
+		$('.submitButton').hover(function () { $(this).addClass("submitButtonHover"); }, function () { $(this).removeClass("submitButtonHover"); });
+		$(".accordion").accordion({ autoHeight: false, collapsible: true, active: false });
+		//hover fix for ie6
+		$('ul.subMenu').hide();
+		$('ul.menu li').hover(function () { $('ul.subMenu', this).show(); }, function () { $('ul.subMenu', this).hide(); });
+
+		$(window).bind('pageshow', function (event) {
+			console.log('pageshow fired');
+			$('.submitButton').attr("disabled", false);
+		});
+
+		var zipSearchViewModel = new ZipSearchViewModel();
+		ko.applyBindings(zipSearchViewModel);
+		$(".zip-search-zip-code").watermark('[Enter your Zip Code]');		
+		$("#sidebar .zip-search-zip-code").watermark('[Enter your Zip Code]');
+		$(".zip-search-search-button").hover(function () {
+		    $(this).addClass("searchButtonHover");
+		}, function () { $(this).removeClass("searchButtonHover"); });
+	});
+</script>
+
+<!--THE FOLLOWING SCRIPT IS REQUIRED TO FIX IE9 LACK OF SUPPORT FOR GRADIENTS AND ROUNDER CORNERS-->
+<!--[if gte IE 9]>
+    <style type="text/css">
+        .classroomtype label,.classroomtype label:hover,.classroomtype .selected,.classroomtype .selected:hover{filter:none}
+    </style>
+    <![endif]-->
+<!--[if lte IE 9]>
+	<style type="text/css">
+        .main-content-zip-search .zip-search-search-button-spacer{display:inline!important}.zip-search-control{font-size:17px!important}
+    </style>
+    <![endif]-->
+    <!--[if IE 8]>
+	<style type="text/css"> 
+        #container #sidebar .zip-search-innerbox .zip-search .zip-search-zip-code{height:22px!important}.find-more-schools-zip-search h1{font-size:23px}#fullContent .zip-search-innerbox ol li{width:205px}#fullContent .zip-search-innerbox .category,#fullContent .zip-search-innerbox .subcategory{width:180px}#fullContent .zip-search-innerbox .zip-search-zip-code{width:145px}#header .zip-search-innerbox .zip-search .classroomtype{margin-top:0!important;margin-left:52px!important}.main-content-zip-search .zip-search-innerbox .zip-search-zip-code{width:145px}.main-content-zip-search .zip-search-innerbox .category,.main-content-zip-search .zip-search-innerbox .subcategory{width:175px}.main-content-zip-search .zip-search-innerbox ol li{margin-left:5px}#sidebar .zip-search-innerbox .zip-search .zip-search-zip-code{height:20px!important}       
+    </style>
+    <![endif]-->
+    <!--[if lte IE 8]>
+	<style type="text/css">
+     .zip-search-innerbox .zip-search .zip-search-zip-code{padding-top:4px;height:22px!important}
+     </style>
+    <![endif]-->
+    <!--[if lte IE 7]>
+	<style type="text/css"> 
+     .input-append .add-on,.input-prepend .add-on{margin-top:1px}#header .zip-search-innerbox .zip-search{height:86px}#header .zip-search-innerbox .zip-search ol li{float:none}#header .zip-search-innerbox .zip-search .classroomtype{margin-top:-30px!important;margin-left:280px!important}#header .zip-search-innerbox .zip-search .category{}#header .zip-search-innerbox .zip-search .subcategory{margin-left:10px}#header .zip-search-innerbox .zip-search .input-prepend{margin-top:-22px}#header .zip-search-innerbox .zip-search .zip-search-search-button{margin-top:-57px;margin-left:476px}#sidebar .zip-search-innerbox .zip-search ol{list-style-position:outside;margin-left:20px;padding-left:20px}
+    </style>
+    <![endif]-->
+    
+</head>
+
+<BODY>
+<table align="center" cellspacing="0" cellpadding="0" border="0" width="760">
+<tr>
+<td bgcolor="99cc00"><img src="http://www.trade-schools.net/graphics/point_gray.gif"></td>
+<td>
+<table align="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="333366">
+<tr>
+<td rowspan="2"><a href="http://www.trade-schools.net"><img src="http://www.trade-schools.net/graphics/1.gif" alt="Trade Schools, Colleges & Universities - Home" width="63" height="45"></a></td>
+<td><img src="http://www.trade-schools.net/graphics/2.gif" width="697" height="26"></td>
+</tr>
+<tr>
+<td class="subtitle">Automotive Schools in California</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr bgcolor="ffffff">
+<td><img src="http://www.trade-schools.net/graphics/point_white.gif"><br />
+</td></tr>
+
+<tr bgcolor="000000"><td><img src="http://www.trade-schools.net/graphics/point_black.gif"><br />
+</td></tr>
+
+<tr bgcolor="ffffff"><td><table width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td align="center"><a href="http://www.trade-schools.net">Trade Schools &amp; Vocational Colleges</a> |
+<a href="http://www.trade-schools.net/directory/automotive-schools-directory.asp">Automotive Schools &amp; Colleges</a> |
+<a href="http://www.trade-schools.net/locations/california-schools-directory.asp">California Schools</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr bgcolor="000000"><td><img src="http://www.trade-schools.net/graphics/point_black.gif"><br /></td></tr>
+<tr bgcolor="ffffff"><td><img src="http://www.trade-schools.net/graphics/point_white.gif"><br /></td></tr>
+<tr><td><img src="http://www.trade-schools.net/graphics/header-automotive.jpg"></td></tr>
+<tr bgcolor="000000"><td><img src="http://www.trade-schools.net/graphics/point_black.gif"><br /></td></tr>
+<tr bgcolor="ffffff"><td><img src="http://www.trade-schools.net/graphics/point_white.gif"><br /></td></tr>
+<tr bgcolor="000000"><td><img src="http://www.trade-schools.net/graphics/point_black.gif"><br /></td></tr>
+
+
+<tr bgcolor="ffffff">
+<td colspan="3">
+<table width="100%" cellspacing="10" cellpadding="0" border="0" align="center">
+
+<tr valign="top">
+<td>
+<table width="485" cellspacing="5" cellpadding="0" border="0">
+<tr valign="top" id="tableHeader"><td rowspan="50">&nbsp;
+</td>
+
+
+
+
+
+<td>
+
+</td>
+
+<td>
+
+<p>
+<span class="breadcrumb">
+<a href="http://www.trade-schools.net" class="breadcrumb">Trade Schools &amp; Colleges</a> >
+<a href="http://www.trade-schools.net/directory/trade-schools-directory.asp" class="breadcrumb">Skilled Trades Schools</a> >
+<a href="http://www.trade-schools.net/directory/automotive-schools-directory.asp" class="breadcrumb">Automotive Schools</a> >
+<br />Automotive Schools in California
+</span>
+</p>
+
+<div class="sharing-buttons">
+	<div style="float: left; padding-top: 10px; overflow: hidden; width: 75px;">
+		<div class="g-plusone" data-size="medium"></div>
+	</div>
+
+	<div style="float: left; padding-top: 10px; overflow: hidden; width: 85px;">
+		<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+	</div>
+
+	<div style="float: left; padding-top: 10px; overflow: hidden; width: 95px;">
+		<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+	</div>
+
+	<div style="float: left; padding-top: 10px; overflow: hidden; width: 55px;">
+		<a href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark">
+			<img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+	</div>
+
+	<div style="float: left; padding-top: 10px;">
+		<span class='st_sharethis_hcount' displaytext='Share'></span>
+	</div>
+
+	<div class="clearer">
+		&nbsp;
+	</div>
+</div>
+
+<br />
+<h1>California Automotive &amp; Motorcycle Schools</h1>
+
+<p>
+<span class="blurb">Whether you want to become proficient in automotive technology, collision repair, or motorcycle technology, you can find an excellent program right in California at one of the schools listed below! In an automotive technology program, you can learn to work on vehicles of all shapes and sizes, giving them new life.</span></p>
+
+<p><span class="blurb">If two wheels is more your style, consider becoming a motorcycle mechanic and keep people's bikes running at peak performance. If you find yourself drooling over the cars in Monster Garage and Pinks, street rod and custom fabrication may be the program for you.</span></p>
+
+<p><span class="blurb">Look at your options below and select the program and school that is right for you!<br /><br /></span></p></td></tr>
+
+
+<tr><td colspan="2" background="http://www.trade-schools.net/graphics/dotline_h.gif"><img src="http://www.trade-schools.net/graphics/dotline_h.gif" /></td></tr>
+<tr valign="top" data-schoolid="336"><td><img src="http://www.trade-schools.net/graphics/arrow.gif" /></td>
+<td><h3 class="schoolName"><a href="http://www.trade-schools.net/wyotech/default.asp" class="title">WyoTech</a></h3> <span class="title">
+<br />Fremont, California
+<br />Long Beach, California
+</span>
+<span class="blurb">
+<li>Advanced Automotive Diagnostics</li>
+<li>Applied Service Management</li>
+<li>Automotive Technology</li>
+<li>Motorcycle Technology</li>
+</span>
+<p><a href="http://www.trade-schools.net/wyotech/form.aspx" rel="nofollow"><img border="0" alt="Request Information" src="http://www.trade-schools.net/graphics/request-info-button-horizontal.gif" /></a></p>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" background="http://www.trade-schools.net/graphics/dotline_h.gif">
+<img src="http://www.trade-schools.net/graphics/dotline_h.gif" /></td></tr>
+<tr valign="top" data-schoolid="106"><td><img src="http://www.trade-schools.net/graphics/arrow.gif" /></td>
+<td>
+<h3 class="schoolName"><a href="http://www.trade-schools.net/uei/default.asp" class="title">UEI College</a></h3>
+<span class="title">
+<br />Gardena, California
+</span>
+<span class="blurb">
+<li>Automotive Technician</li>
+</span>
+<p><a href="http://www.trade-schools.net/uei/form.aspx" rel="nofollow"><img border="0" alt="Request Information" src="http://www.trade-schools.net/graphics/request-info-button-horizontal.gif" /></a></p>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" background="http://www.trade-schools.net/graphics/dotline_h.gif">
+<img src="http://www.trade-schools.net/graphics/dotline_h.gif" /></td></tr>
+<tr valign="top" data-schoolid="300"><td><img src="http://www.trade-schools.net/graphics/arrow.gif" /></td>
+<td>
+<h3 class="schoolName"><a href="http://www.trade-schools.net/universal-technical-institute/default.asp" class="title">Universal Technical Institute</a></h3>
+<span class="title">
+<br />Los Angeles, California
+<br />Sacramento, California
+</span>
+<span class="blurb">
+<li>Automotive Technology</li>
+<li>Collision Repair &amp; Refinish Technology</li>
+<li>Diesel &amp; Industrial Technology</li>
+</span>
+<p><a href="http://www.trade-schools.net/universal-technical-institute/form.aspx" rel="nofollow"><img border="0" alt="Request Information" src="http://www.trade-schools.net/graphics/request-info-button-horizontal.gif" /></a></p>
+</td>
+</tr>
+
+
+<tr id="tableFooter"><td colspan="3">
+<div id="Footer">
+<hr />
+<div class="logo"><a href="http://www.beelineweb.com" rel="nofollow" target="_blank"><img src="http://www.trade-schools.net/graphics/bee_line_logo.gif" alt="Beelineweb.com" border="0" width="150" height="48"></a></div>
+<p>&copy; 2001 - 2013  Beelineweb.com</p>
+
+<p>
+&nbsp;</p>
+</div>
+</td></tr>
+
+
+</table>
+</td>
+<td background="http://www.trade-schools.net/graphics/dotline_v.gif" width="1">
+<img src="http://www.trade-schools.net/graphics/dotline_v.gif" border="0">
+</td>
+<td width="210" id="sidebar">
+<div class="zip-search-outerbox">
+    <div class="zip-search-innerbox">
+        <div class="zip-search-innerbox-title">
+            <img src="http://www.trade-schools.net/graphics/ts-logo-tiny.png" alt="">
+            Find a School
+        </div>
+        <form action="/Search.aspx" method="get" class="zip-search">
+            <ol>
+                <li>
+                    <div class="input-prepend">
+                        <span class="add-on">
+                            <i class="icon-map-marker"></i>
+                        </span>
+                        <input type="text" class="zip-search-zip-code" name="z" data-bind="value: zipCode, valueUpdate: 'afterkeydown', css: zipCodeStatus">
+                    </div>
+                    <div class="invalidZipCode" style="display: none;" data-bind="visible: showInvalidZipCodeLabel(true)">
+                        Please enter a valid zip code.<br />
+                    </div>
+                </li>
+                <li data-bind="visible: categoryVisible" style="display: none;">
+                    <select class="category" data-bind="options: categories, value: category, optionsText: 'Name', optionsValue: 'ID', optionsCaption: categoryPrompt, visible: categoryVisible"></select>
+                    <select class="subcategory" data-bind="options: subCategories, value: subCategory, optionsText: 'Name', optionsValue: 'ID', optionsCaption: subCategoryPrompt, visible: subCategoryVisible"></select>
+                </li>
+                <li data-bind="visible: classroomTypeVisible" style="display: none;">
+                    <div class="classroomtype" data-bind="visible: classroomTypeVisible">
+                        <input type="radio" name="classroomType" value="1" data-bind="checked: classroomType" /><label data-bind="    classroomTypeLabel: 'Campus', click: setClassroomType.bind($data, 1)">Campus</label>
+                        <input type="radio" name="classroomType" value="2" data-bind="checked: classroomType" /><label data-bind="    classroomTypeLabel: 'Online', click: setClassroomType.bind($data, 2)">Online</label>
+                        <input type="radio" name="classroomType" value="3" data-bind="checked: classroomType" /><label data-bind="    classroomTypeLabel: 'Both', click: setClassroomType.bind($data, 3)">Both</label>
+                    </div>
+                </li>
+                <li>
+                    <input class="zip-search-search-button" type="submit" value="" data-bind="click: executeSearch, enable: searchButtonEnabled(true)"></li>
+            </ol>
+            <br class="clearer">           
+        </form>
+    </div>
+</div>
+<table cellspacing="7" cellpadding="0" border="0">
+<tr valign="top"><td colspan="2">
+<span class="title">California Automotive Programs</span></td></tr>
+
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/automobile-diagnostics-schools.asp" class="program">Advanced Automobile Diagnostics</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/ase-certification.asp" class="program">ASE Certification</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/auto-body-schools.asp" class="program">Auto Body Schools</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/automotive-management-training.asp" class="program">Automotive Management</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/automotive-mechanic-training.asp" class="program">Automotive Mechanic</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/automotive-service-technician.asp" class="program">Automotive Service Technician</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/automotive-technology.asp" class="program">Automotive Technology</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/collision-repair-schools.asp" class="program">Collision Repairs</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/diesel-mechanic-school-directory.asp" class="program">Diesel Mechanic Schools</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/motorcycle-repair-schools-directory.asp" class="program">Motorcycle Repair Schools</a></td></tr>
+
+<tr valign="top">
+<td><img src="http://www.trade-schools.net/graphics/square.gif" width="6" height="11" alt="" /></td>
+<td><a href="http://www.trade-schools.net/directory/california-skilled-trades.asp" class="program">Skilled Trades</a></td></tr>
+
+</table>
+
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td bgcolor="99cc00">
+<img src="http://www.trade-schools.net/graphics/point_gray.gif">
+</td>
+</tr>
+<tr>
+<td bgcolor="99cc00" colspan="3">
+<img src="http://www.trade-schools.net/graphics/point_gray.gif">
+</td>
+</tr>
+</table>
+
+<!--BEGIN Scripts for SharingButtons-->
+<script type="text/javascript">
+	(function () {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();
+</script>
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.async = true;
+	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function (d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+	if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.async = true; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); }
+}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
+<script type="text/javascript">var switchTo5x = false;</script>
+<script>(function (d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+    js.async = true;   
+    js.onload=stCB;
+	js.src = "http://w.sharethis.com/button/buttons.js";
+	fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'sharethis-jssdk'));
+    function stCB(){
+    stLight.options({ publisher: "b7d3bb91-dc5f-4dcf-8aa3-e00b99e101a1", doNotHash: true, doNotCopy: true, hashAddressBar: false, onhover: false });
+    }
+    </script>
+<!--END Scripts for SharingButtons-->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+_gaq.push(['_setAccount', 'UA-30213250-1']);
+_gaq.push(['_setSiteSpeedSampleRate', 50]);
+_gaq.push(['_trackPageview']);
+setTimeout("_gaq.push(['_trackEvent', '15_seconds', 'read'])",15000);
+
+(function () {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2012 Webtrends Inc.  All rights reserved. -->
+<!-- Version: 9.4.0 -->
+<!-- Tag Builder Version: 3.3  -->
+<!-- Created: 1/27/2012 5:59:32 PM -->
+<script src="/webtrends/webtrends.js" type="text/javascript"></script>
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+<!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+<!-- ----------------------------------------------------------------------------------- -->
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//sdc.beelineweb.com/dcslv9yhxvynjbt26j28kgp8u_2w8d/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.trade-schools.net"/></div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
+
+</body>
+</html>

@@ -1,0 +1,712 @@
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <script type="text/javascript">
+    var locationObj = window.location;
+      var fileref=document.createElement("link");
+      var managePolicyURL = "https://www.21st.com/esauth/login.do?method=initLogin";
+	  var billingURL = "https://www.21st.com/esauth/QuickPayLanding.do?method=initPaymentLogin";
+	  var claimsURL = "https://www.21stautoclaims.com";
+	window.onload = function() {      
+		var locationObj = window.location;
+    	var fileref=document.createElement("link");
+    	fileref.setAttribute("rel", "canonical");
+   		fileref.setAttribute("href", locationObj);
+   		// alert(locationObj);
+   		 document.getElementsByTagName("head")[0].appendChild(fileref);
+   	     onloadbody();
+   	 	}
+	</script>	
+	<script type="text/javascript" src="/insurance-information/js/jquery.js"></script>
+<head>
+
+<meta http-equiv="pragma" content="no-cache, no-store, must-revalidate, max-age=0, s-max-age=0, proxy-revalidate" />
+<meta  http-equiv="expires" content="0" />
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate, max-age=0, s-max-age=0, proxy-revalidate" />
+	
+
+
+
+
+
+
+
+
+
+	<title>21st Roadside Assistance | 21st Century Car Insurance</title>
+<meta name="description" content="Just call the 21st Roadside Assistance Hotline at (800)281-5407 to take advantage of this great service, exclusively for 21st Century Insurance policyholders - at no additional cost!"/>
+<meta name="keywords" content="21st century, 21st century insurance, auto insurance quote, 21st Roadside Assistance, 24-hour roadside assistance"/>
+	<link rel="stylesheet" href="/insurance-information/webpub/en/pages/css/reset.css" />
+	<link rel="stylesheet" href="/insurance-information/webpub/en/pages/css/resource.css" type="text/css" media="all" charset="utf-8" />
+	<link rel="stylesheet" href="/insurance-information/webpub/en/pages/css/modal.css" type="text/css" media="all" charset="utf-8" />
+	<link rel="icon" href="/favicon.ico" type="image/icon" />	
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" href="/insurance-information/webpub/en/pages/css/ie.css" type="text/css" media="all" charset="utf-8" />
+	<![endif]-->
+	
+</head>
+
+<body class="resource homeowner">
+	<div id="content-wrapper">			
+		<!-- header global  -->									
+			
+
+
+
+
+	
+	<!-- header global  -->
+
+	<div id="hdr-wrapper">
+
+    <div id="hdr">
+
+        <div id="logo">
+            <a href="/"><img alt="21st Century Insurance" height="66" src="/insurance-information/webpub/en/pages/img/21st-century-insurance.gif" width="183"></a>
+        </div>
+
+
+        <ul id="contact">
+
+            <li class="first">
+                <a href="/about-21st-century-auto-insurance-company/">About Us</a>
+            </li>
+
+
+            <li>
+                <a href="/contact-21st-century-insurance.htm">Contact Us</a>
+            </li>
+
+
+            <li class="first">
+                <script src="http://www.google.com/jsapi" type="text/javascript"></script><script type="text/javascript">
+  google.load('search', '1');
+  google.setOnLoadCallback(function() {
+   google.search.CustomSearchControl.attachAutoCompletion(
+      '015186652454699452498:ydzg-7ifmai',
+      document.getElementById('q'),
+      'cse-search-box');
+  });
+</script>
+
+                <form action="/search-results.htm" id="cse-search-box">
+
+                    <div>
+                        <input name="cx" type="hidden" value="015186652454699452498:ydzg-7ifmai"><input name="cof" type="hidden" value="FORID:11;NB:1"><input name="ie" type="hidden" value="UTF-8"><span style=" position: relative; top: -8px;"><input autocomplete="off" id="q" name="q" size="31" type="text"></span><span style=" margin-left: 3px;"><input alt="Search" name="sa" src="/insurance-information/webpub/en/pages/img/common/search_button.gif" type="image"></span>
+                    </div>
+
+                </form>
+
+            </li>
+
+        </ul>
+
+
+        <ul id="nav">
+
+            <li id="get-quote">
+                <a class="braunav" href="#">Get an Auto Insurance Quote</a> 
+
+
+                <div class="ui-menu-item">
+                    <a class="close" href="#">Close</a> 
+
+
+                    <div class="ui-menu-content">
+
+                        <form action="#" id="zipcode-quote">
+
+                            <p>
+                                <label>Enter your ZIP Code</label>
+                            </p>
+
+
+                            <fieldset>
+                                <span class="text"><input class="zipcode" id="quick-zipcode" maxlength="5" name="quick-zipcode" type="text" value="ZIP Code"></span><button class="no-go" onclick="submitForQuote('quick-zipcode');" type="button">Go<span></span></button>
+                            </fieldset>
+
+
+                            <div id="headerZip" style=" display: none;">
+                                <label class="error">Please enter a valid ZIP Code</label>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </li>
+
+
+            <li>
+                <a class="braunav" href="https://www.21st.com/esauth/login.do?method=initLogin" id="manage-policy">Manage Your Auto Policy</a>
+            </li>
+
+
+            <li id="info-center">
+                <a href="/auto-insurance-information/" class="braunav">Insurance Information Center</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+	
+	<!-- end global header  -->
+		
+		
+
+	<!-- start header -->
+		
+<ProductHeader>
+    <div id="information_bar">
+
+        <h1>Additional Insurance Products</h1>
+
+    </div>
+</ProductHeader>
+
+
+
+	<!-- end header -->
+ 				
+		<!-- header end  -->
+		
+		<div class="i">
+			<div class="ii">
+				<div id="bdy">
+					<div id="article">
+						
+						
+						 
+						   <div class="column main right">
+						        
+
+
+
+
+
+
+
+
+
+ 	 
+ 	 <div class="column main right">
+  
+  
+      
+  
+ <ul id="backtrack">
+  
+  
+	
+   	 <li>
+   	 	 
+   		 <a href="/insurance-products/">
+  	  
+  	  Additional Products</a>
+    
+   	 </li>
+   	 	
+   		 <li>&#62;</li>
+  		 
+	
+  
+	
+   	 <li>
+   	 
+  	  21st Roadside Assistance</a>
+    
+   	 </li>
+   	 
+	
+  
+     </ul> 
+  
+
+	<!-- body -->
+
+	
+	
+ <div class="article">
+
+    <div class="header">
+
+        <h1>21st Roadside Assistance</h1>
+
+    </div>
+
+
+    <h2>
+        <img alt="21st Roadside Assistance" height="235" src="/insurance-information/webpub/en/pages/img/common/Security_Advantage_590x235.jpg" width="590"></h2>
+
+
+    <h2>21st Roadside Assistance is there for you!</h2>
+
+
+    <p>That&rsquo;s why, at 21st Century Insurance, our customers are automatically enrolled in the exclusive 21st Roadside Assistance program.</p>
+
+
+    <p>21st Roadside Assistance provides a great benefit at no additional cost:</p>
+
+
+    <ul class="bullets">
+
+        <li>
+
+            <p>
+                <b>24-Hour Roadside Assistance:</b> <i>No more risking injury while fixing your car on dangerous roadways</i> &ndash; Call <b>(800) 439-5587</b> as soon as you need roadside assistance and we will have a provider dispatched to you. 21st Roadside Assistance provides towing, lock-out service and much more, available to you 24/7, for each car you insure with 21st Century Insurance!</p>
+
+        </li>
+
+    </ul>
+
+
+    <p>Just call the 21st Roadside Assistance Hotline at <b>(800) 439-5587</b> to take advantage of this great service, exclusively for 21st Century Insurance policyholders - at no additional cost!</p>
+
+
+    <p>Every covered vehicle on your policy is automatically protected with the full benefits of this program.</p>
+
+
+    <p style=" font-size: x-small;">
+        <b>24-Hour Roadside Assistance - Terms and Conditions</b>
+    </p>
+
+
+    <p style=" font-size: x-small;">* Service provided by and/or through Cross County Motor Club, Inc. (Medford, MA 02155), except in AK, CA, HI, WI, and WY where services are provided by and/ or through Cross Country Motor Club of California, Inc. (Medford, MA 02155).</p>
+
+
+    <p style=" font-size: x-small;">* Service applies to licensed four-wheel private passenger cars, pickup trucks and vans listed on your 21st Century Auto Policy at the time of disablement. If you purchase a vehicle within 30 days prior to the time of disablement, service applies only if the vehicle is listed on your 21st Century Auto Policy.</p>
+
+
+    <p style=" font-size: x-small;">* Service does not apply to motorcycles, or &ldquo;stored&rdquo; vehicles.</p>
+
+
+    <p style=" font-size: x-small;">* Service limited to five service calls per vehicle per calendar year.</p>
+
+
+    <p style=" font-size: x-small;">* Service applies to labor only. Parts (tires, batteries, belts, etc.) and gasoline are not included.</p>
+
+
+    <p style=" font-size: x-small;">* Coverage is provided for up to $75 ($80 in TX, $100 in NC) in roadside services.</p>
+
+
+    <p style=" font-size: x-small;">* Accidents and comprehensive losses are not covered.</p>
+
+
+    <p style=" font-size: x-small;">* Although every attempt will be made to provide prompt Roadside Assistance at any time of day and in any location in the U.S. and Canada, 21st Roadside Assistance cannot guarantee 100% service within a specified time frame in all circumstances.</p>
+
+
+    <p style=" font-size: x-small;">* You will be notified if these services are discontinued or modified.</p>
+
+
+    <p style=" font-size: x-small;">* California 21st Century Casualty Ins Co. customers must purchase this separately.</p>
+
+
+    <p style=" font-size: x-small;">* AAA and OnStar customers do not receive this benefit.</p>
+
+</div>
+
+<p>
+    <script src="https://auto.21st.com/AutoQuote/webpub/esales/en/pages/js/ntpagetag.js" type="text/javascript"></script>
+</p>
+
+	
+
+	
+   	
+
+<HomeownersRentersBottom>
+    <div>&nbsp;</div>
+</HomeownersRentersBottom>
+
+
+
+   
+
+ </div>
+
+ 
+ <script type="text/javascript">
+function printpage()
+	{ 
+	  var urltoPrint = "/print.do?view=/insurance-information/webpub/en/pages/html/products/Security_Advantage.htm";
+ 		 window.location.href = urltoPrint;
+ 	}
+
+
+</script>
+ 
+ 
+	
+ 
+						   </div>
+						 <div class="column left">
+						     <!-- left bar  body -->
+					    	 	
+
+
+
+
+
+
+
+
+
+	<ul class="section_nav">
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/homeowners-insurance.htm">Homeowners Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/renters-insurance.htm">Renters Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/mobile-home-insurance.htm">Manufactured/Mobile Home Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/specialty-homeowners-insurance.htm">Specialty Homeowners Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/flood-insurance.htm">Flood Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/auto-mechanical-breakdown-insurance.htm">Auto Mechanical Breakdown Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/antique-auto-insurance.htm">Antique Auto Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/motorcycle-insurance.htm">PowerSports: Motorcycle and ATV Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/family-boaters-insurance.htm">PowerSports: Boaters Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/personal-watercraft-insurance.htm">PowerSports: Personal Watercraft Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/personal-umbrella-insurance.htm">Personal Umbrella Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/life-insurance.htm">Life Insurance</a>
+        </h2>
+
+    </li>
+
+
+    <li>
+
+        <h2>
+            <a href="/insurance-products/roadside-assistance.htm">21st Roadside Assistance</a>
+        </h2>
+
+    </li>
+
+</ul>
+
+	
+
+
+
+
+	
+
+
+
+ 
+						     <!-- end left bar  body -->
+		    		   
+		    		   </div>
+						  
+				   </div>
+						
+					<div id="help">
+						<!-- common right -->
+								
+
+
+
+
+
+
+
+
+<div class="option" id="freequote">
+
+        <div class="top">
+
+            <h2>Get a <strong>Free</strong> Auto Insurance Quote:</h2>
+
+
+            <p>You're just a click away from seeing how 21st Century can save you money on your auto insurance.</p>
+
+        </div>
+
+
+        <form action="#" id="zipcode-left">
+
+            <fieldset>
+                <label>Enter your ZIP Code</label> 
+
+
+                <div id="left-zipcode_e" style=" display: none;">
+                    <label class="error">Please enter a valid ZIP Code</label>
+                </div>
+
+                <span class="text"><input class="zipcode" id="left-zipcode" maxlength="5" name="left-zipcode" type="text" value="ZIP Code"></span> <a class="button alt go zipcode-check" href="#" onclick="submitForQuote('left-zipcode')"></a>
+            </fieldset>
+
+        </form>
+
+    </div>	
+
+    		 
+		            	<!-- common right -->
+					</div>		
+			  </div>
+			</div>
+		</div>
+		<div id="ftr-wrapper">
+		  
+
+
+
+
+
+	<div id="ftr">
+
+    <div class="section">
+
+        <div class="link-set">
+
+            <h2>Services</h2>
+
+
+            <ul>
+
+                <li>
+                    <a href="/retrieve-auto-insurance-quote.htm">Retrieve a Quote</a>
+                </li>
+
+
+                <li>
+                    <a href="https://www.21st.com/esauth/drcLogin.do" id="manage-policy-ft">Manage Your Auto Policy</a>
+                </li>
+
+
+                <li>
+                    <a href="https://www.21stautoclaims.com/CWP/web/jsp/CWPLandingPage.faces" id="claimsLink">Claims Services</a>
+                </li>
+
+
+                <li>
+                    <a href="https://www.21st.com/esauth/QuickPayLanding.do?method=initPaymentLogin" id="billingLink">Pay Your Insurance Bill</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="link-set" style=" width: 157px;">
+
+            <h2>About Us</h2>
+
+
+            <ul>
+
+                <li>
+                    <a href="/about-21st-century-auto-insurance-company/">About Us</a>
+                </li>
+
+
+                <li>
+                    <a href="/insurance-products/">Additional Insurance Products</a>
+                </li>
+
+
+                <li>
+                    <a href="/contact-21st-century-insurance.htm">Contact Us</a>
+                </li>
+
+
+                <li>
+                    <a href="/auto-insurance-jobs-and-careers.htm">Insurance Careers</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="link-set" style=" width: 163px;">
+
+            <h2>Legal</h2>
+
+
+            <ul>
+
+                <li>
+                    <a href="/auto-insurance-information/what-21st-century-insurance-affiliated-insurance-companies-are-used-to-write-auto-insurance-direct-to-the-consumer.htm">Underwriting Companies by State</a>
+                </li>
+
+
+                <li>
+                    <a href="/terms-of-use.htm">Terms of Use</a>
+                </li>
+
+
+                <li>
+                    <a href="/auto-insurance-privacy-security.htm">Privacy &amp; Security</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <p>Insurance underwritten by affiliated and non-affiliated companies of 21st Century Insurance, Wilmington, DE. Copyright &copy; 2012 <a href="/21st-century-farmers-insurance.htm" target="_blank" title="Farmers Insurance">Farmers Insurance</a>.</p>
+
+    </div>
+
+
+    <script src="/insurance-information/webpub/en/pages/js/global-tags.js" type="text/javascript"></script><script src="/insurance-information/webpub/en/pages/js/rc-tags.js" type="text/javascript"></script>
+</div>
+	
+ 
+			<!-- end footer  -->
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/insurance-information/js/jquery.ui.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/jquery.masked.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/jquery.validate.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/roundies.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/modal.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/initialize.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/swfobject.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/advisor.js"></script>
+	<script type="text/javascript" src="/insurance-information/js/custom.js"></script>
+
+	<script type="text/javascript" src="/insurance-information/js/onloadbody.js"></script>
+	
+
+<script type="text/javascript">
+ 
+	function submitForQuote(comingFrom) {
+	//  alert("divToDisplay" + comingFrom);
+		    
+	   var divToDisplay = comingFrom +"_e";
+	    if(comingFrom == "quick-zipcode")
+	      divToDisplay = "headerZip";
+	//    alert("divToDisplay" + divToDisplay);
+		    
+	  //  var toURL ="http://d01.auto.pld.aig.com/AutoQuote/startQuote.do?method=startQuote" ;
+	      var toURL = "https://www.21st.com/AutoQuote/startQuote.do?method=startQuote";
+	    
+		 var zip= document.getElementById(comingFrom).value;
+	//	alert(zip.value);
+		  var zip_error = 0;
+		
+		if (IsNumeric(zip) == "false" || zip.length < 5 )
+			{
+				zip_error = 1;
+			}		
+		   
+		    if(zip_error == 1)
+		    {
+		      showTarget(divToDisplay,true) ;
+		     }else{
+		      showTarget(divToDisplay,false) ;		    
+		      toURL = toURL + "&postalCode=" + zip;		        
+		      window.location.href=toURL;
+				
+			}
+		}
+			
+ 
+
+  </script>	
+</body>
+</html>

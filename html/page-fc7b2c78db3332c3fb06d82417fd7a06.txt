@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="ctl00_Head1"><title>
+	Classic Car &amp; Collector Insurance from Classic Auto Insurance
+</title><link rel="stylesheet" type="text/css" href="/CMSPages/GetResource.ashx?stylesheetfile=/ClassicAuto/css/screen.css" media="screen" /><link rel="stylesheet" type="text/css" href="/CMSPages/GetResource.ashx?stylesheetfile=/ClassicAuto/css/print.css" media="print" />
+    <script type="text/javascript" src="/ClassicAuto/scripts/jquery-1.7.1.min.js"></script>
+    <script src="/ClassicAuto/scripts/swfobject.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/CMSPages/GetResource.ashx?stylesheetfile=/nivo-slider/nivo-slider.css" type="text/css" media="screen" /><meta name="description" content="Classic Auto Insurance has more than 15 years of experience and can provide you quality & affordable classic car insurance for your collector cars." /> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="pragma" content="no-cache" /> 
+<meta http-equiv="content-style-type" content="text/css" /> 
+<meta http-equiv="content-script-type" content="text/javascript" /> 
+ 
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $ = jQuery;
+			$('#siteLogo').hide();
+            $('#ctl00_cmsmenuGlobal td:first').before("<td class='CMSMenuItem' id='topNavHome' onclick='javascript:document.location.href=/'><a href='/'><table cellpadding='0' cellspacing='0'><tr><td id=\"tdIconHouse\"><a href='/'><img src='/images/2012/icon_house.png' id='iconHouse' alt='' /></a></td><td><a href='/' style='color:#999'>&nbsp;<span>HOME</span></a></td></tr></table></a>");
+            //$('#ctl00_cmsmenuFooter td:first').before("<td class='CMSMenuItem' style='border-left-width:0px;z-index:9999'><a href='/' style='font-weight:normal;color:#ccc'>HOME</a>&nbsp;</td>");
+            $('#ctl00_cmsmenuFooter td:first').css("border-left-width", "0px !important");
+            $('table[id$="-subMenu"]').addClass("subMenu");
+            if (document.location.href.toLowerCase().indexOf("/what-we-insure") != -1) {
+                $("#subNav").addClass("whatWeInsure");
+            }
+
+            var pageName = document.location.href.substr(document.location.href.lastIndexOf("/") + 1, document.location.href.length).toLowerCase();
+            if (pageName.indexOf(".aspx") != -1) {
+                pageName = pageName.substr(0, pageName.indexOf(".aspx") + 5);
+            }
+            if (pageName == "/" || pageName == "") {
+                $("#topNavHome").addClass("active");
+                $("#iconHouse").attr("src", "/images/2012/icon_house-hover.png");
+            }
+            else if (pageName == "private-client-services") {
+                $("#imgQuoteBanner").attr("src", $("#imgQuoteBanner").attr("src").replace("red", "blue"));
+            }
+
+            $("#topNavHome").hover(function () {
+                if (pageName == "private-client-services") {
+                    $("#iconHouse").attr("src", "/images/2012/icon_house-hover-blue.png");
+                } else {
+                    $("#iconHouse").attr("src", "/images/2012/icon_house-hover.png");
+                }
+                $(this).find("span").css("color", "#fff");
+            }, function () {
+                if (!$("#topNavHome").hasClass("active")) {
+                    $("#iconHouse").attr("src", "/images/2012/icon_house.png");
+                    $(this).find("span").css("color", "#999");
+                }
+            });
+
+            $("#widget").attr("style", "margin:0px;padding-bottom:0px;");
+            $('#topNav').show();
+			if (navigator.userAgent.indexOf("Safari") != -1 && navigator.platform.indexOf("Mac") != -1)
+			{
+				$('#siteLogo').attr("style", "margin-top:18px");
+			}
+			$('#siteLogo').show();
+        });
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-169140-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#banner').css("background", "url('" + $('#slider img').attr("src") + "') no-repeat top left");
+        });
+    </script>
+    <style type="text/css">
+        #contentContainer{padding-top:68px}
+    </style>
+</head>
+<body class="LTR ENUS ContentBody" >
+    <form method="post" action="/" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl00_manScript_HiddenField" id="ctl00_manScript_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTAyNTM3MDEwD2QWAmYPZBYEZg9kFggCAQ8WAh4EaHJlZgVFL0NNU1BhZ2VzL0dldFJlc291cmNlLmFzaHg/c3R5bGVzaGVldGZpbGU9L0NsYXNzaWNBdXRvL2Nzcy9zY3JlZW4uY3NzZAICDxYCHwAFRC9DTVNQYWdlcy9HZXRSZXNvdXJjZS5hc2h4P3N0eWxlc2hlZXRmaWxlPS9DbGFzc2ljQXV0by9jc3MvcHJpbnQuY3NzZAIDDxYCHgRUZXh0ZWQCBQ8WAh8ABUYvQ01TUGFnZXMvR2V0UmVzb3VyY2UuYXNoeD9zdHlsZXNoZWV0ZmlsZT0vbml2by1zbGlkZXIvbml2by1zbGlkZXIuY3NzZAIBEGRkFgoCBw8WAh8BBUg8aW1nIHNyYz0iL2ltYWdlcy8yMDEyL2xvZ29fY2xhc3NpYy1hdXRvLWluc3VyYW5jZS5wbmciIGlkPSJzaXRlTG9nbyIgLz5kAgsPZBYCAgEPZBYIZg9kFgJmD2QWAmYPFQEHYmFubmVyMWQCAQ9kFgJmD2QWAmYPFQEHYmFubmVyMmQCAg9kFgJmD2QWAmYPFQEHYmFubmVyM2QCAw9kFgJmD2QWAmYPFQEHYmFubmVyNGQCDQ9kFgICBQ9kFgZmD2QWAmYPZBYCZg8VAwowOC8yNi8yMDEzGi9ibG9nL2dyb3cteW91ci1jb2xsZWN0aW9uQkhvdyB0byBHcm93IFlvdXIgQ2xhc3NpYyBDYXIgQ29sbGVjdGlvbiAmYW1wOyBLZWVwIFlvdXIgQ29zdHMgRG93bmQCAQ9kFgJmD2QWAmYPFQMKMDgvMjMvMjAxMyEvYmxvZy90aW1lLWZvci1jYXJtZWwtYXJ0b21vYmlsaWEmSXQgSXMgVGltZSBmb3IgdGhlIENhcm1lbCBBcnRvbW9iaWxpYSBkAgIPZBYCZg9kFgJmDxUDCjA4LzIxLzIwMTMQL2Jsb2cvcmFyZS1maW5kcyFSYXJlIEZpbmRzIGluIFZpbnRhZ2UgTXVzY2xlIENhcnNkAhEPFgIfAQUmPGRpdiBpZD0ic3BlY2lhbEltYWdlQ2FyIj4mbmJzcDs8L2Rpdj5kAhUPFgIfAQUEMjAxM2RkeYwSRResesXhPJSej7VkYbxXjwh6fw1Wbt2UzO1lGuw=" />
+</div>
+
+<input type="hidden" name="lng" id="lng" value="en-US" />
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fskmmenu.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //<![CDATA[
+function MOvercmsmenuGlobal(layout,sender,image,menuid,leftImage,rightImage,overStyle, browser, uniqueId){
+skm_mousedOverMenu('ctl00_cmsmenuGlobal',sender, document.getElementById(menuid), layout, image, leftImage, rightImage, overStyle, browser, uniqueId,false);
+}
+
+function CSubcmsmenuGlobal(URL){
+skm_closeSubMenus(document.getElementById('ctl00_cmsmenuGlobal')); try { location.href=URL; } catch (ex) {}
+}
+//]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+function MOvercmsmenuFooter(layout,sender,image,menuid,leftImage,rightImage,overStyle, browser, uniqueId){
+skm_mousedOverMenu('ctl00_cmsmenuFooter',sender, document.getElementById(menuid), layout, image, leftImage, rightImage, overStyle, browser, uniqueId,false);
+}
+
+function CSubcmsmenuFooter(URL){
+skm_closeSubMenus(document.getElementById('ctl00_cmsmenuFooter')); try { location.href=URL; } catch (ex) {}
+}
+//]]>
+</script>
+<script src="/ScriptResource.axd?d=N7ayLPRi122pV3G64XevYCFD8AkdjSdaPNZxYn0RFSHlJdbtWdHM9pqmKhogWBJruai6rtXCJF-1hT-qmn4vNKbVIu1WULdIyUKBph421vvajkmguXplu3XIJylz3Ptr0&amp;t=34d147fd" type="text/javascript"></script>
+        <div id="CMSHeaderDiv">
+	<!-- -->
+</div>
+
+        
+
+        <div id="mainContainer">
+            <div id="siteContainer">
+                <div id="topNav" style="display:none">
+                    <div id="ctl00_cmsmenuGlobal_table" class="tblTopnav">
+	<table class="CMSMenu" cellspacing="0" cellpadding="0" id="ctl00_cmsmenuGlobal-001-subMenu" style="border-collapse:collapse;display:none;z-index:1002;">
+		<tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-001-subMenu-000" onclick="CSubcmsmenuGlobal(&#39;/my-policy/policy-changes&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-001-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Policy Changes</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-001-subMenu-001" onclick="CSubcmsmenuGlobal(&#39;/my-policy/claims&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-001-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Claims</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-001-subMenu-002" onclick="CSubcmsmenuGlobal(&#39;/my-policy/faq&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-001-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">FAQ</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-001-subMenu-003" onclick="CSubcmsmenuGlobal(&#39;/my-policy/roadside-assistance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-001-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Roadside Assistance</td>
+		</tr>
+	</table><table class="CMSMenu" cellspacing="0" cellpadding="0" id="ctl00_cmsmenuGlobal-003-subMenu" style="border-collapse:collapse;display:none;z-index:1004;">
+		<tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-000" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/antique-car-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Antique Car Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-001" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/classic-motorcycle-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Classic Motorcycle Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-002" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/classic-truck-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Classic Truck Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-003" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/collector-car-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Collector Car Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-004" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/exotic-car-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Exotic Car Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-005" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/hot-rod-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Hot Rod Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-006" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/luxury-car-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Luxury Car Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-007" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/muscle-car-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Muscle Car Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-008" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/street-rod-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Street Rod Insurance</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003-subMenu-009" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure/vintage-car-insurance&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-003-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Vintage Car Insurance</td>
+		</tr>
+	</table><table class="CMSMenu" cellspacing="0" cellpadding="0" id="ctl00_cmsmenuGlobal-005-subMenu" style="border-collapse:collapse;display:none;z-index:1006;">
+		<tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-005-subMenu-000" onclick="CSubcmsmenuGlobal(&#39;/contact/about-us&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-005-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">About Us</td>
+		</tr><tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-005-subMenu-001" onclick="CSubcmsmenuGlobal(&#39;/contact/blog&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(true, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal-005-subMenu&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this,&#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Blog</td>
+		</tr>
+	</table><table class="CMSMenu" cellspacing="0" cellpadding="0" id="ctl00_cmsmenuGlobal" style="border-collapse:collapse;z-index:1000;">
+		<tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-000" onclick="CSubcmsmenuGlobal(&#39;/quote-landing&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(false, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Instant Quote</td><td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-001" onclick="CSubcmsmenuGlobal(&#39;/my-policy&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(false, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">My Policy</td><td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-002" onclick="CSubcmsmenuGlobal(&#39;/agents&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(false, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Agents</td><td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-003" onclick="CSubcmsmenuGlobal(&#39;/what-we-insure&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(false, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">What We Insure</td><td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-004" onclick="CSubcmsmenuGlobal(&#39;/private-client-services&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(false, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Private Client Services</td><td class="CMSMenuItem" id="ctl00_cmsmenuGlobal-005" onclick="CSubcmsmenuGlobal(&#39;/contact&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuGlobal(false, this,&#39;&#39;,&#39;ctl00_cmsmenuGlobal&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuGlobal&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Contact</td>
+		</tr>
+	</table>
+</div>
+                </div>
+                <div id="header">
+                    <a href="/">
+                    <img src="/images/2012/logo_classic-auto-insurance.png" id="siteLogo" />
+                    </a>
+                    <table id="tblHeader" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td id="tdLogo">&nbsp;</td>
+                        <td id="tdTagline">
+                            <div>When you're on the road, we're in the passenger seat with collector car insurance.</div>
+                        </td>
+                        <td id="tdContact">
+                            <div id="phoneNumber">888-901-1338</div>
+                            
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                
+    <div id="banner">
+        <div id="slider" class="nivoSlider">
+            
+<img src="/home-banner-images/banner1" alt="" style="display:none" />
+
+<img src="/home-banner-images/banner2" alt="" style="display:none" />
+
+<img src="/home-banner-images/banner3" alt="" style="display:none" />
+
+<img src="/home-banner-images/banner4" alt="" style="display:none" />
+
+        </div>
+    </div>
+    <div id="bannerQuote">
+        <a href="/quote-landing">&nbsp;</a>
+    </div>
+
+                <div id="contentContainer">
+                    <table id="tblContentContainer" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <div id="pageContent">
+                                
+    <h1>The Classic Car Insurance Difference from Classic Auto</h1>
+    <table id="tbl2Columns" cellpadding="0" cellspacing="0">
+		<tr>
+			<td id="tdLeftSide">
+                <div style="color: rgb(51, 51, 51);">
+	At Classic Auto Insurance Agency, we provide affordable <strong>classic and collector car insurance</strong>. We provide tailored collector car insurance policies to protect your investments, whether they are antique trucks, vintage vehicles, exotic cars, classic muscle cars, street rods, or classic motorcycles. Our standard <strong>classic car insurance</strong> plans include agreed value and roadside assistance as well as next term mileage rollover.<br />
+	<br />
+	Classic Auto can save you money with our competitively priced premiums and discounts for car club membership and large collections. We offer tiered mileage plans (1000, 3000, or 6000 miles) to customize your policy as well as multiple deductible and payment plan options. Our experienced customer service representatives can assist you in our online chat, over the phone, or via email.<br />
+	<br />
+	Here are just a few of the vehicles we insure with our specialty collector insurance plans:<br />
+	&nbsp;</div>
+<ul>
+	<li style="color: rgb(51, 51, 51);">
+		<a href="/what-we-insure/antique-car-insurance">Antique Car Insurance</a></li>
+	<li style="color: rgb(51, 51, 51);">
+		<a href="/what-we-insure/classic-motorcycle-insurance">Classic Motorcycle Insurance</a></li>
+	<li style="color: rgb(51, 51, 51);">
+		<a href="/what-we-insure/collector-car-insurance">Collector Car Insurance</a></li>
+	<li style="color: rgb(51, 51, 51);">
+		<a href="/what-we-insure/hot-rod-insurance">Hot Rod Insurance</a></li>
+	<li style="color: rgb(51, 51, 51);">
+		<a href="/what-we-insure/exotic-car-insurance">Exotic Car Insurance</a></li>
+</ul>
+<br />
+<h2>
+	Private Client Services</h2>
+Classic Auto offers this service for customers that need optimized asset protection and collector car insurance. We offer the highest limits available to cover automobile, high end homeowners, art, jewelry, personal aircraft, yachts, to personal excess, kidnap and ransom coverage.<br />
+<br />
+<ul>
+	<li>
+		For those customers that need optimized asset protection</li>
+	<li>
+		Offers the highest limits available and covers all of your needs</li>
+	<li>
+		Our account executive will help determine the best line of protection for your most valued assets</li>
+</ul>
+<br />
+<!-- Google Code for Classic Car Insurance --><!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup --><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1070674247;
+var google_conversion_label = "TdPbCIOq4AIQx-LE_gM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script><script type="text/javascript" src="/www.googleadservices.com/pagead/conversion.js">
+</script><noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="/googleads.g.doubleclick.net/pagead/viewthroughconversion/1070674247/?value=0&amp;label=TdPbCIOq4AIQx-LE_gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+				<h2>Latest Blog Posts</h2>
+				<ul class="blogTop3">
+					
+<li>
+		08/26/2013 - <a href="/blog/grow-your-collection">How to Grow Your Classic Car Collection &amp; Keep Your Costs Down</a>
+</li>
+<li>
+		08/23/2013 - <a href="/blog/time-for-carmel-artomobilia">It Is Time for the Carmel Artomobilia </a>
+</li>
+<li>
+		08/21/2013 - <a href="/blog/rare-finds">Rare Finds in Vintage Muscle Cars</a>
+</li>
+				</ul>
+                <br />
+<div>
+	<h2 align="center">
+		Our Partners</h2>
+	<table align="center" cellpadding="10" cellspacing="10" style="margin-right: auto; margin-left: auto;">
+		<tbody>
+			<tr>
+				<td style="text-align: center;">
+					<br />
+					<a href="http://www.amig.com" target="_blank"><img alt="" src="/images/logo_american-modern.jpg" style="width: 78px; height: 101px;" /></a></td>
+				<td style="text-align: center;">
+					<a href="http://www.trustedchoice.com" target="_blank"><img alt="" src="/images/logo_trusted-choice.jpg" style="width: 90px; height: 95px;" /></a></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center;">
+					<a href="http://www.chartisinsurance.com/US-personal-private-client-insurance_295_182870.html" target="_blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a><a href="http://www.chartisinsurance.com/US-personal-private-client-insurance_295_182870.html" target="_blank"><img alt="" src="/images/logo_chartis.jpg" style="width: 115px; height: 34px;" /></a><br />
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<br />
+
+			</td>
+			<td id="tdRightSide">
+				<div id="scUGZe">&nbsp;</div>
+                <div id="sdUGZe"></div>
+				<script type="text/javascript">
+				    var seUGZe = document.createElement("script");
+				    seUGZe.type = "text/javascript";
+				    var seUGZes = (location.protocol.indexOf("https") == 0 ? "https" : "http") + "://image.providesupport.com/js/caia8481/safe-standard.js?ps_h=UGZe&ps_t=" + new Date().getTime() + "&online-image=http%3A//www.classicins.com/images/btn_chat-live.png&offline-image=http%3A//www.classicins.com/images/btn_chat-live-off.png";
+				    setTimeout("seUGZe.src=seUGZes;document.getElementById('sdUGZe').appendChild(seUGZe)", 1);
+                </script>
+                <noscript>
+                    <div style="display:inline">
+                        <a href="http://www.providesupport.com?messenger=caia8481">Live Help Desk</a>
+                    </div>
+                </noscript>
+
+				<a class="twitter-timeline" data-chrome="nofooter transparent" href="https://twitter.com/ClassicAutoIns" data-widget-id="349172523428089856">Tweets by @ClassicAutoIns</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<br /><br /><br />
+
+                <div style="color: rgb(153, 153, 153);">
+	We insure: Classic Cars, <a href="http://www.classicins.com/what-we-insure/collector-car-insurance">Collector Cars</a>, <a href="http://www.classicins.com/what-we-insure/antique-car-insurance">Antique Cars</a>, Kit Cars, <a href="http://www.classicins.com/what-we-insure/muscle-car-insurance">Muscle Cars</a>, <a href="http://www.classicins.com/what-we-insure/classic-truck-insurance">Classic Trucks</a>, Collectible Cars, <a href="http://www.classicins.com/what-we-insure/classic-motorcycle-insurance">Classic Motorcycles</a>, Custom Cars, Street Rods <a href="/what-we-insure">and much more!</a><br />
+	&nbsp;</div>
+
+			</td>
+		</tr>
+    </table>
+
+                                <div id="contentBottom">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="siteFooter">
+            <div id="specialImageCar">&nbsp;</div>
+            <div id="socialMediaIcons">
+                <a href="http://www.facebook.com/pages/Indianapolis-IN/Classic-Auto-Insurance/276755568951" target="_blank"><img src="/images/2012/logo_facebook.png" alt="Facebook" title="Facebook" /></a>&nbsp;
+                <a href="https://twitter.com/ClassicAutoIns" target="_blank"><img src="/images/2012/logo_twitter.png" alt="Twitter" title="Twitter" /></a>&nbsp;
+                <a href="https://plus.google.com/105482346412214063407" target="_blank"><img src="/images/2012/logo_google-plus.png" alt="Google Plus" title="Google Plus" /></a>&nbsp;
+                <a href="http://www.linkedin.com/company/2785272" target="_blank"><img src="/images/2012/logo_linked-in.png" alt="LinkedIn" title="LinkedIn" /></a>&nbsp;
+                <a href="https://pinterest.com/classicautoins" target="_blank"><img src="/images/2012/logo_pinterest.png" alt="Pinterest" title="Pinterest" /></a>
+            </div>
+            <div id="siteFooterContent">
+                <div id="ctl00_cmsmenuFooter_table" class="tblfooternav">
+	<table class="CMSMenu" cellspacing="0" cellpadding="0" id="ctl00_cmsmenuFooter" style="border-collapse:collapse;z-index:1000;">
+		<tr>
+			<td class="CMSMenuItem" id="ctl00_cmsmenuFooter-000" onclick="CSubcmsmenuFooter(&#39;/quote-landing&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuFooter(false, this,&#39;&#39;,&#39;ctl00_cmsmenuFooter&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuFooter&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Instant Quote</td><td class="CMSMenuItem" id="ctl00_cmsmenuFooter-001" onclick="CSubcmsmenuFooter(&#39;/my-policy&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuFooter(false, this,&#39;&#39;,&#39;ctl00_cmsmenuFooter&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuFooter&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">My Policy</td><td class="CMSMenuItem" id="ctl00_cmsmenuFooter-002" onclick="CSubcmsmenuFooter(&#39;/agents&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuFooter(false, this,&#39;&#39;,&#39;ctl00_cmsmenuFooter&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuFooter&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Agents</td><td class="CMSMenuItem" id="ctl00_cmsmenuFooter-003" onclick="CSubcmsmenuFooter(&#39;/what-we-insure&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuFooter(false, this,&#39;&#39;,&#39;ctl00_cmsmenuFooter&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuFooter&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">What We Insure</td><td class="CMSMenuItem" id="ctl00_cmsmenuFooter-004" onclick="CSubcmsmenuFooter(&#39;/private-client-services&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuFooter(false, this,&#39;&#39;,&#39;ctl00_cmsmenuFooter&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuFooter&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Private Client Services</td><td class="CMSMenuItem" id="ctl00_cmsmenuFooter-005" onclick="CSubcmsmenuFooter(&#39;/contact&#39;);" onmousedown="this.className=&#39;CMSMenuItemMouseDown&#39;;" onmouseup="this.className=&#39;CMSMenuItemMouseUp&#39;;" onmouseover="MOvercmsmenuFooter(false, this,&#39;&#39;,&#39;ctl00_cmsmenuFooter&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);this.className=&#39;CMSMenuItemMouseOver&#39;;" onmouseout="skm_mousedOutMenu(&#39;ctl00_cmsmenuFooter&#39;, this, &#39;&#39;,&#39;CMSMenuItem&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;);" style="cursor:pointer;">Contact</td>
+		</tr>
+	</table>
+</div>
+                <p><a href="/privacy-policy-statement" style="border-left-width:0px">Privacy Statement</a>&nbsp;<a href="/site-map">Site Map</a>&nbsp;<a href="/contact/blog">Blog</a><br />
+                &copy;&nbsp;2013&nbsp;Classic Auto Insurance&nbsp;&nbsp;|&nbsp;<a href="http://www.bitwisesolutions.com" target"_blank" style="font-weight:bold;text-transform:none;border-left-width:0px">Indianapolis Web Design and Development</a> by BitWise Solutions</p>
+            </div>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+<script type="text/javascript">skm_registerMenu('ctl00_cmsmenuGlobal',new skm_styleInfo('','','','','','','','','',''),new skm_styleInfo('','','','','','','','','',''),2,false);</script><script type="text/javascript">skm_registerMenu('ctl00_cmsmenuFooter',new skm_styleInfo('','','','','','','','','',''),new skm_styleInfo('','','','','','','','','',''),2,false);</script></form>
+    <map name="FollowUs" id="FollowUs">
+        <area alt="" coords="44,34,125,64" href="http://www.facebook.com" target="_blank" />
+        <area alt="" coords="43,72,125,94" href="http://www.twitter.com" target="_blank" />
+    </map>
+    <script type="text/javascript" src="/nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        jQuery(function(){
+            $ = jQuery;
+            $('#slider').nivoSlider({ effect: 'boxRain', pauseTime: 4000, pauseOnHover: true });
+        });
+    </script>
+</body>
+</html>

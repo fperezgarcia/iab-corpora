@@ -1,0 +1,608 @@
+
+
+<html>
+<head>
+<title>Orange County Offroad & Auto Repair in Huntington Beach, CA - Car Repair, General Truck Repair, Off Road Automobiles, Except Recreational Vehicles, Oil Change, </title>
+
+
+<meta name="description" content="Orange County Offroad & Auto Repair in Huntington Beach, CA - Car Repair, General Truck Repair, Off Road Automobiles, Except Recreational Vehicles, Oil Change,  - Car Repair, General Truck Repair, Off Road Automobiles, Except Recreational Vehicles, Oil Change, Transmission Repair - (714) 847-2800 - Serving the Santa Ana, CA area.">
+<meta name="keywords" content="Car Repair, General Truck Repair, Off Road Automobiles, Except Recreational Vehicles, Oil Change, Transmission Repair">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/bright.css">
+<script type="text/javascript" src="/include-mt/inc-javascript.asp?no-tags=true"></script>
+
+
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+
+
+var g_map = null;
+var g_marker = null;
+var g_infoWindow = null;
+var g_address_attempt = 1;
+
+function initializeMap() {
+
+	var geocodeOptions = {       
+		 address: '17871+Sampson+Lane+Huntington+Beach+CA+92647'
+	};     
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode(geocodeOptions, geocodeCallback);
+} // initializeMap
+
+function geocodeCallback(results, status) {
+//	alert(status);
+	if (status == google.maps.GeocoderStatus.OK) {
+		var latlng = results[0].geometry.location;
+
+		var mapOptions = {       
+			 zoom: 13
+			,center: latlng
+			,mapTypeId: google.maps.MapTypeId.ROADMAP
+			,mapTypeControl: false
+		};     
+		g_map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	
+		var markOptions = {
+			 map: g_map
+			,position: latlng
+			,draggable: true
+			,flat: true
+		};
+		g_marker = new google.maps.Marker(markOptions);
+	
+		var infoWindowOptions = {       
+			 maxWidth: 220
+			,content: '<b>Orange County Offroad & Auto Repair</b><br>' + '17871 Sampson Lane<br>Huntington Beach, CA 92647'
+		};
+		g_infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+		window.setTimeout('showInfoWindow();', 1000); // initially show the info window.  Have to setTimeout so the map will slide to adjust for the info window.
+		google.maps.event.addListener(g_marker, 'click', showInfoWindow); // re-show info window when clicked.
+
+		g_map.setCenter(results[0].geometry.location);
+	}
+	else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+		if (g_address_attempt < 2) {
+			g_address_attempt++;
+
+			var geocodeOptions = {       
+				 address: 'Huntington Beach CA 92647'
+			};
+			var geocoder = new google.maps.Geocoder();
+			geocoder.geocode(geocodeOptions, geocodeCallback);
+		}
+	}
+	else {
+		// some other problem.
+//		alert("Geocode was not successful for the following reason: " + status);
+	}
+} // geocodeCallback
+
+
+function showInfoWindow() {
+	g_infoWindow.open(g_map, g_marker);
+} // showInfoWindow
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+function doSnapshotChange() {
+	return window.confirm("This will fetch a new snapshot of your website which may take several seconds.\n\nIf you'd like to instead hide your snapshot click the \"Edit Main Info\" button in the Control Panel above.\n\nClick OK to continue fetching a new snapshot.  *NOTE* You may have to refresh your browser page afterwards to see the new image.");
+}
+
+</script>
+
+<style>
+	H1 {MARGIN-TOP: 14px; font-size:24px;}
+</style>
+</head>
+
+
+	<body onLoad="initializeMap();">
+
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="headerTop">
+	
+	
+		
+		<style>
+			H1 {MARGIN-TOP: 17px;}
+		</style>
+		
+	
+		<a href="/"><img src="http://images.businesslistfaq.com/spacer.gif" width=130 height="85" border=0 align="left" /></a>
+		
+		
+			<h1 style=font-size:26px;>Orange County Offroad & Auto Repair</h1>
+			
+					<h4>Car Repair, General Truck Repair, Off Road Automobiles, Except Recreational Vehicles, Oil Change, <br />
+							Orange County Biz List - Orange County, CA</h4>
+			
+	
+	</td>
+  </tr>
+  <tr>
+    <td class="headerBottom">
+
+
+<div class="topmenu">
+
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	  <tr>
+		<td class="navlocal">
+		
+	
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.orangecountybizlist.com" class="nav">Home</a>
+			&nbsp;|&nbsp;&nbsp;<a href="/aboutus.asp" class="nav">About</a>
+			&nbsp;|&nbsp;&nbsp;<a href="/faq" class="nav">FAQ's</a>
+			
+			&nbsp;|&nbsp;&nbsp;<a href="/listing-explain.asp" class="nav">Advertise</a>
+			<!--&nbsp;|&nbsp;&nbsp;<a href="/directory/tellafriend.asp" class="nav">Tell a Friend</a>-->
+			
+			
+			
+			&nbsp;|&nbsp;
+			<a href="/login/?login_redirect=%2Fbusiness%2F5044260%2Ehtm" class="nav" rel="nofollow"><u>Returning User Login</u></a>
+			&nbsp;|&nbsp;
+			<a href="/directory/add.asp?xAction=add" class="nav" rel="nofollow"><u>Add Your Business for Free!</u></a>
+			
+			
+		</td>
+		<td align="right" class="nav"><b>142,954 visitors per year since 2007</b>&nbsp;&nbsp;</td>
+	  </tr>
+	</table>
+	
+</div>
+	
+
+</td></tr></table>
+</td></tr></table>
+
+
+
+
+<table width="980" cellpadding="0" cellspacing="0" align="center" border="0"><tr><td class="BodyContainerTable">
+
+
+
+	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	<tr><td class="searchbar">
+
+				<!-- SiteSearch Google -->
+	
+	<style>
+		.googsearch {
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			padding: 5px;
+			background: -moz-linear-gradient(top, #F6F6F6 0%, white 25%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F6F6F6), color-stop(25%,white));
+			border: solid #666 1px;
+			border-radius: 4px;
+			moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+	</style>
+	
+	
+	
+	<table border="0" width="100%"><tr><td>
+		<table border="0"><form method="get" action="http://www.orangecountybizlist.com/search.asp" target="_top">
+		<tr><td colspan="2" height="2"></td></tr>
+		<tr><td nowrap="nowrap" valign="top" align="left" height="32" width=5>
+		
+		</td>
+		<td nowrap="nowrap"><b style="font-size:16px;">Search: </b>
+		<input type="hidden" name="domains" value="www.orangecountybizlist.com"></input>
+		<label for="sbi"></label>
+		<input class="googsearch" type="text" name="q" size="31" maxlength="255" value="" id="sbi" style="padding-top:3px;height:24px;width:205px;"></input>
+		<label for="sbb" style="display: none">Submit search form</label>
+		<input type="submit" name="sa" value="Search" id="sbb" style="padding:3px;"></input>
+			&nbsp;&nbsp;
+		<input type="radio" name="sitesearch" value="www.orangecountybizlist.com" checked id="ss1"></input>
+		<label for="ss1" title="Search www.orangecountybizlist.com"><font color="#000000"><b style="font-size:11px;margin-left:-3px;">This Site</b></font></label>
+		<input type="radio" name="sitesearch" value="" id="ss0"></input>
+		<label for="ss0" title="Search the Web"><font color="#000000"><b style="font-size:11px;margin-left:-3px;"">web</b></font></label>
+		
+		<input type="hidden" name="client" value="pub-7964507695778716"></input>
+		<input type="hidden" name="forid" value="1"></input>
+		<input type="hidden" name="channel" value="3545370698"></input>
+		<input type="hidden" name="ie" value="ISO-8859-1"></input>
+		<input type="hidden" name="oe" value="ISO-8859-1"></input>
+		<input type="hidden" name="cof" value="GALT:#333333;GL:1;DIV:#FFFFFF;VLC:663399;AH:center;BGC:FFFFFF;LBGC:FFFFFF;ALC:000000;LC:000000;T:000000;GFNT:000000;GIMP:000000;LH:50;LW:349;L:;S:http://;FORID:11"></input>
+		<input type="hidden" name="hl" value="en"></input>
+		
+		
+		
+		</td></tr></form></table>
+	</td><td align=right style="padding-right:28px;">
+	
+		
+	</td></tr></table>
+	
+	
+	<!-- SiteSearch Google -->
+	
+	</td><td width="200"><a href="/directory/add.asp?xAction=add" rel="nofollow"><img src="http://images.businesslistfaq.com/promote-your-business250.gif" width="250" height="57" border="0" /></a></td>
+	</tr></table>
+	
+
+
+<br>
+
+
+
+
+
+<table width="100%" align=center border=0 cellpadding=0 cellspacing=0><tr>
+
+<td width="10"></td>
+
+<td valign=top>
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="336" valign=top>
+			
+			
+
+
+	<div style="margin:5px 0 15px 0;">
+	
+	
+		
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-7964507695778716";
+			/* Business List End Page 336x280 */
+			google_ad_slot = "3771586864";
+			google_ad_width = 336;
+			google_ad_height = 280;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		
+		
+	 </div>
+	
+
+
+<!-- LARGE PHOTOS -->
+<div class="ProfilePhotos">
+
+<!-- THUMBNAILS -->	
+	
+
+
+	<!-- GOOGLE MAP -->
+	
+		<br><div id="map" style="width: 336px; height: 270px; border: 1px #CCCCCC solid;"></div><br>
+	
+
+	<!-- WEB SNAP SHOT -->
+	
+		<a href="http://www.ocoffroadandautorepair.net" target="_blank"><img src="/WebSnapShots/o/c/ocoffroadandautorepair.net.jpg" border="1"></a><br>
+		
+
+
+	
+	<!-- Snapshot: [o\c\ocoffroadandautorepair.net.jpg]<br> -->
+	<!--Show Snapshot: [Yes]<br> -->
+	
+
+</div>
+
+</td>
+
+<td width=10>&nbsp;</td>
+
+
+<td valign="top">
+		
+		
+		
+		
+	
+		
+		
+		
+	
+		
+			
+		
+<!-- START PROFILE -->
+<div class="profileH2">
+<h2>Orange County Offroad & Auto Repair</h2>
+</div><br>
+
+
+
+<div style="margin-left:5px;">
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+
+		<div style="margin-left:5px">
+        <b>Orange County Offroad & Auto Repair</b><br>
+
+		<b>17871 Sampson Lane<br>Huntington Beach, CA 92647</b><br>
+        
+
+		<!-- IS THIS YOUR LISTING -->
+		
+        
+		</div>
+        
+</td><td width=20></td><td valign="top">
+
+	
+		<b>Phone Number: (714) 847-2800</b><br>
+	
+			<b>Web Address: <a href="http://www.ocoffroadandautorepair.net" target="_blank">www.ocoffroadandautorepair.net</a></b><br>
+		
+
+</td></tr></table>
+	
+	<div style="margin-left:5px">
+						
+						
+	<br>
+
+	<b>Categories: &nbsp;</b><b><a href="/specific/Car-Repair.htm" style="font-size:11px;font-family:verdana;">Car Repair</a></b>, <b><a href="/specific/General-truck-repair.htm" style="font-size:11px;font-family:verdana;">General Truck Repair</a></b>, <b><a href="/specific/Off_road-automobiles,-except-recreational-vehicles.htm" style="font-size:11px;font-family:verdana;">Off Road Automobiles, Except Recreational Vehicles</a></b>, <b><a href="/specific/Oil-Change.htm" style="font-size:11px;font-family:verdana;">Oil Change</a></b>, <b><a href="/specific/Transmission-Repair.htm" style="font-size:11px;font-family:verdana;">Transmission Repair</a></b>
+    </div>
+					
+</div>
+					
+<br>
+
+		<style>
+		.TabContentArea {
+			border-width: 0px 0px 0px 0px;
+			border-color: #CCCCCC;
+			border-style: solid;
+			background-color: #ffffff;
+			padding: 10px 20px 20px 10px;
+		}
+		</style>
+		
+		<table width="614" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td class="TabContentArea">
+
+				<!-- DESCRIPTION -->
+	
+	
+
+	
+		<b>Automotive Repair Shop</b><br><br>
+	
+		<span itemprop="description">We Specialize in truck, Jeep, and SUV repair and customizing. We also service and repair all makes and models of vehicles. Were a family run repair facility that is dedicated to doing the job right the first time. Our ASE Certified Master technician has over 17 years of experience in repair of all makes and models. We use Alldata, Mitchell, and Snap-On diagnostic equipment. Since we are a small shop we pride our selves on excellent customer service. We offer free diagnostic on all check engine lights and running problems. If you have any questions please feel free to contact us at 714-847-2800.</span><br>
+	
+	<br>
+	
+	
+		<script type="text/javascript"><!--
+		google_ad_client = "pub-7964507695778716";
+		/* 468x60, created 8/22/09 for business.asp */
+		google_ad_slot = "0600503943";
+		google_ad_width = 468;
+		google_ad_height = 60;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	
+	
+	
+	<br><br>
+	
+	
+	<!-- KEYWORDS -->
+	
+		<br><b>Keywords:</b> Car Repair, Truck, Jeep, SUV, Transmission, Lift Kits, Off-Road, Oil Change, Auto Repair, Gears, Brakes, Belts and Hoses, Shocks, Lube and Filter, Engine Conversion, Check Engine Light, Mufflers, Radiators, Fuel Pumps, Coolant leaks,<br><br>
+	
+
+
+<!-- THUMBS UP RATING -->
+<table class="Thumbs" align="right"><tr><td><span class="ClickToRate">Click to Rate:</span>&nbsp;&nbsp;
+<a href="/review.asp?uid=5044260&rating=thumbsup&company_name=Orange County Offroad & Auto Repair"><img src="http://images.businesslistfaq.com/thumbs-up.jpg" width="21" height="26" hspace="3" border="0" align="middle"></a>
+<a href="/review.asp?uid=5044260&rating=thumbsdown&company_name=Orange County Offroad & Auto Repair"><img src="http://images.businesslistfaq.com/thumbs-down.jpg" width="21" height="25" hspace="3" border="0" align="middle"></a><br>
+<span class="ThumbScore">0 thumbs up, 0 thumbs down</span>
+</td></tr></table>
+
+
+
+<b>Customer Reviews for Orange County Offroad & Auto Repair</b><br /><br />
+
+
+	Be the first to review Orange County Offroad & Auto Repair - Use the thumbs to get started!
+<br /><br /><br>
+
+			
+
+<table border="0" cellpadding="2" cellspacing="0">
+
+		<tr><td colspan=2><b style="font-size:18px;">Interview Q&amp;A</b>
+		
+		</td></tr>
+		<tr><td colspan=2 height="10"></td></tr>
+
+
+
+
+		<tr>
+			<td style="font-size:14px;"><b>How long have you been in business?</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:12px; padding-top:5px;">Almost 2 years</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+
+
+
+		<tr>
+			<td style="font-size:14px;"><b>How many locations do you have and do you have plans to expand?</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:12px; padding-top:5px;">1 Location</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+
+
+
+		<tr>
+			<td style="font-size:14px;"><b>What type of payments do you accept?</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:12px; padding-top:5px;">We accept all major credit cards, cash and checks</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+
+
+
+		<tr>
+			<td style="font-size:14px;"><b>Which areas do you service?</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:12px; padding-top:5px;">We service all makes and models of cars, trucks and SUVS</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+
+
+
+		<tr>
+			<td style="font-size:14px;"><b>Who owns your company or runs daily operations?</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:12px; padding-top:5px;">Peter Tremper owns and runs the daily operations</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+
+
+
+		<tr>
+			<td style="font-size:14px;"><b>What are your hours of operation?</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:12px; padding-top:5px;">Monday - Friday 8:00 - 5:00
+Saturday by Appoinment</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+
+
+</table>
+
+
+<div style="border:solid #c0c0c0 1px;padding: 10px;">
+	<table cellpadding="0" cellspacing="0"><tr><td><img src="http://images.businesslistfaq.com/icon_email.gif" border="0" /></td><td width=5></td><td>
+	<b style="font-size:14px">Contact Orange County Offroad & Auto Repair:</b></td></tr></table><img src="http://images.businesslistfaq.com/spacer.gif" height="3" width="3" /><br />
+
+	<table>
+	<form name="contactform" method="post" action="/category/business.asp?uid=5044260&function=contact">
+	<input type="hidden" name="contactmade" value="Yes" />
+	
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	document.write("<in" + "put type='hidden' name='spambuster' value='o" + "n' />");
+	//-->
+	</script>
+	
+	<tr><td><b>Your Name: </b></td><td><input name="yourname" size=30 /></td></tr>
+	<tr><td><b>Your Email: </b></td><td><input name="youremail" size=30 /></td></tr>
+	<tr><td valign="top"><b>Message: </b></td><td><textarea cols="40" rows="3" name="yourmessage"></textarea></td></tr>
+	<tr><td></td><td><input type="button" name="button1" value="Submit" onclick="contactform.submit();"/></td></tr>
+	</form>
+	</table>
+</div>
+
+<br>
+			
+		
+								
+			</td>
+		  </tr>
+		</table>
+
+	
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-size: 9px'><a rel='nofollow' href='/category/flag.asp?uid=5044260' title='Report as Inappropriate or Incorrect'>Problem with this listing? Please report it</a></span><br>
+					
+					
+
+					
+			</td>
+          </tr>
+        </table>
+
+
+
+
+
+</td>
+
+<td width=5 class="menubodyseperator"></td>
+
+
+
+
+</tr></table>
+
+
+
+<hr size=1 class="dashed">
+
+
+<table width="100%" align=center style="margin-top:10px"><tr><td align=center height=40>
+
+&copy;2013&nbsp;OrangeCountyBizList.com
+&nbsp; | &nbsp;
+<a href="/privacypolicy.asp">Privacy Policy</a>
+&nbsp; | &nbsp;
+<a href="/faq/">FAQ</a>
+&nbsp; | &nbsp;
+<a href="/contact.asp">Contact</a>
+
+
+	<br>This site has been visited 637,094 times
+
+
+</td></tr></table>
+
+
+
+
+</body></html>
+
